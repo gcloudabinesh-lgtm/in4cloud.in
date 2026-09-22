@@ -1,0 +1,54 @@
+/* Font Awesome icon sizing — overrides the sprite-era width/height rules so
+   FA glyphs (which scale via font-size) render at the intended pixel sizes. */
+
+.ico {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  line-height: 1;
+  vertical-align: middle;
+  flex-shrink: 0;
+  font-size: 18px;
+  font-style: normal;
+}
+
+.btn .ico,
+.check-grid li .ico,
+.benefit-list li .ico,
+.form-status .ico,
+.float-pop a .ico,
+.text-link .ico,
+.mobile-nav-link .ico,
+.site-map-note .ico,
+.soft-note .ico { font-size: 18px; }
+
+.icon-badge .ico,
+.search-form .ico { font-size: 20px; line-height: 0; }
+.back-top .ico { font-size: 20px; line-height: 1; }
+
+.icon-badge .ico { display: block; line-height: 1; }
+
+.category-head .icon-badge .ico { font-size: 20px; }
+
+.btn-text .ico,
+.trust-item .ico,
+.footer-col .contact-row .ico { font-size: 17px; }
+
+.form-note .ico,
+.contact-card-foot .map-link .ico { font-size: 16px; }
+
+.nav-link .ico,
+.geo-chip .ico,
+.phone-geo .ico,
+.hero-caption .ico { font-size: 15px; }
+
+.mega-links a .ico,
+.mobile-sub-links a .ico { font-size: 16px; }
+
+.module-arrow .ico { font-size: 14px; }
+
+.float-contact .fc-toggle .ico { font-size: 24px; }
+
+.phone-wrap .thumb .ico { font-size: 26px; }
+
+.pill .ico { color: var(--green-600); font-size: 18px; }

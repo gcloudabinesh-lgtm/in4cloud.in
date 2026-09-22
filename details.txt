@@ -1,0 +1,2873 @@
+You are a senior UI/UX designer, conversion strategist, frontend architect, and full-stack web developer.
+
+Build a complete, production-quality, MULTI-PAGE corporate website for:
+
+IN4 CloudHR
+A product by In4 Solution Pvt Ltd
+
+REFERENCE WEBSITE FOR VISUAL DIRECTION:
+https://gcloud.net.in/in4hr/in4hrms.html
+
+IMPORTANT:
+Use the reference website only as inspiration for:
+- visual cleanliness
+- spacing
+- CTA placement
+- lead-generation structure
+- modern SaaS presentation
+- cards
+- typography hierarchy
+- hero layout
+- conversion flow
+
+DO NOT simply clone the reference page.
+
+The new website must feel more premium, polished, modern, trustworthy and comprehensive.
+
+The website must be a real multi-page website with individual routes, not one long single-page website pretending to be multi-page.
+
+==================================================
+1. SOURCE OF TRUTH
+==================================================
+
+Use the supplied product deck:
+
+"IN4 CloudHR Productdeck.pdf"
+
+as the PRIMARY AND AUTHORITATIVE SOURCE OF PRODUCT CONTENT.
+
+Also use the supplied logo:
+
+"In4 Cloud Logo_Jun2025_v1-01 (2).jpg.jpeg"
+
+Do not change, redraw, distort, recolor or recreate the logo unnecessarily.
+
+CRITICAL CONTENT RULE:
+
+DO NOT invent:
+- customer counts
+- pricing
+- certifications
+- percentages
+- savings claims
+- ROI numbers
+- awards
+- statistics
+- integrations
+- customer testimonials
+- implementation timelines
+- support guarantees
+- AI features
+- client claims
+- security certifications
+- feature capabilities
+
+unless explicitly supported by the supplied PDF.
+
+Do NOT blindly copy unsupported marketing claims from the reference landing page.
+
+Use the PDF's actual product information.
+
+==================================================
+2. BRAND POSITIONING
+==================================================
+
+Brand:
+IN4 CloudHR
+
+Company:
+In4 Solution Pvt Ltd
+
+Official tagline:
+"From Biometric to Payslip—Simplified"
+
+Primary positioning:
+
+IN4 CloudHR is a unified cloud-based HRMS platform backed by over 18 years of leadership in biometric attendance and automation.
+
+The platform combines hardware-level biometric attendance expertise with scalable cloud-based HRMS capabilities.
+
+It supports real-world workforce operations across attendance, HRMS, payroll, leave, employee management, mobile access and related workforce processes.
+
+The brand should visually communicate:
+
+- reliability
+- simplicity
+- workforce intelligence
+- modern HR technology
+- accuracy
+- automation
+- professional enterprise software
+- ease of use
+
+==================================================
+3. VISUAL DESIGN SYSTEM
+==================================================
+
+Create a fresh enterprise SaaS UI based on the IN4 CloudHR logo.
+
+Primary brand colours should be derived from the supplied logo:
+
+Purple:
+Use approximately #6528F7 / #6C2CF5 range
+
+Green:
+Use approximately #72BF44 / #76C442 range
+
+Supporting palette:
+- White
+- Off-white
+- Very light lavender
+- Very light green
+- Dark charcoal
+- Neutral grey
+
+Avoid making every section purple.
+
+Use lots of white space.
+
+Design aesthetic:
+
+- premium SaaS
+- clean
+- modern
+- sophisticated
+- bright
+- minimal
+- corporate
+- conversion-focused
+- visually engaging
+- not overly decorative
+
+Use subtle gradients such as:
+purple → violet
+green → lime
+very light lavender → white
+
+Avoid excessive glassmorphism.
+
+Avoid cheesy stock HR visuals wherever possible.
+
+Use:
+- product dashboard visuals
+- phone mockups
+- HR/workforce illustrations
+- abstract SaaS elements
+- maps/geolocation visuals
+- biometric icons
+- payroll illustrations
+- data visualisations
+- tasteful animated shapes
+
+Use actual product screenshots from the Product Deck where practical.
+
+==================================================
+4. TYPOGRAPHY
+==================================================
+
+Use a premium modern sans-serif Google Font.
+
+Recommended:
+- Inter
+- Manrope
+- Plus Jakarta Sans
+
+Suggested hierarchy:
+
+H1:
+50–64px desktop
+36–42px tablet
+32–38px mobile
+
+H2:
+38–48px desktop
+
+Body:
+16–18px
+
+Use:
+font-weight 600–800 for headings
+comfortable line-height
+short readable paragraphs
+
+Avoid huge amounts of text in one block.
+
+==================================================
+5. WEBSITE STRUCTURE
+==================================================
+
+Build these routes:
+
+/
+Home
+
+/about
+About IN4 CloudHR
+
+/features
+All Features
+
+/attendance-management
+Attendance Management
+
+/employee-management
+Employee Management
+
+/leave-management
+Leave Management
+
+/payroll-management
+Payroll Management
+
+/mobile-app
+Mobile App
+
+/reports-analytics
+Reports & Analytics
+
+/industries
+Industries
+
+/contact
+Contact / Schedule Demo
+
+Optional if it improves UX:
+
+/features/[module]
+
+But the major pages above must remain accessible as individual pages.
+
+==================================================
+6. GLOBAL HEADER
+==================================================
+
+Create a clean sticky header.
+
+Left:
+IN4 CloudHR logo
+
+Navigation:
+
+Home
+Product
+    Employee Management
+    Attendance Management
+    Leave Management
+    Payroll Management
+    Mobile App
+    Reports & Analytics
+
+Features
+Industries
+About
+Contact
+
+Primary CTA:
+"Schedule a Demo"
+
+Desktop:
+dropdown mega menu for Product
+
+Mobile:
+clean slide-in menu / accordion
+
+Header behaviour:
+- transparent/light at top if appropriate
+- transitions into solid white on scroll
+- subtle shadow when scrolled
+- smooth transition
+- sticky
+
+==================================================
+7. HOME PAGE
+==================================================
+
+Design a premium SaaS homepage.
+
+------------------------------
+SECTION 1 — HERO
+------------------------------
+
+Left content:
+
+Eyebrow:
+"Unified Cloud HRMS"
+
+H1 options:
+
+"From Biometric to Payslip—Simplified"
+
+or
+
+"One Platform for Smarter Workforce Management"
+
+Supporting text should accurately communicate:
+
+IN4 CloudHR combines biometric attendance expertise with a scalable cloud HRMS platform to manage employees, attendance, leave, payroll and workforce operations from one unified system.
+
+Primary CTA:
+Schedule a Free Demo
+
+Secondary CTA:
+Explore Features
+
+Add trust/support points such as:
+
+✓ Cloud (SaaS)
+✓ On-Premise
+✓ Mobile App
+✓ Multi-location Workforce Management
+
+Do not add unsupported numbers.
+
+Right side:
+
+Create an impressive product-composition visual using:
+- HR dashboard mockup
+- phone attendance screen
+- attendance analytics card
+- payroll card
+- employee card
+- geo-fencing indicator
+
+Use tasteful subtle animation:
+- floating cards
+- gentle mouse parallax
+- animated status dots
+- floating gradients
+
+Do not create distracting animation.
+
+------------------------------
+SECTION 2 — BRAND INTRODUCTION
+------------------------------
+
+Heading:
+"Built on 18+ Years of Attendance & Automation Expertise"
+
+Content:
+
+"We believe payroll, access, and operations start with accurate attendance — and we’ve mastered that first."
+
+Explain that In4 Solution has over 18 years of leadership in biometric attendance and automation and now provides a unified suite of cloud-based HRMS software.
+
+Use a split visual layout.
+
+------------------------------
+SECTION 3 — KEY HIGHLIGHTS
+------------------------------
+
+Heading:
+"Built for Modern Workforce Operations"
+
+Create 5 premium feature cards:
+
+1.
+ISO Standards Compliance
+Compliance with ISO standards helps ensure privacy and safety of user data.
+
+Be careful:
+Do NOT claim a specific ISO certification number unless present in supplied source.
+
+2.
+Employee Self Service
+Reduce employee dependency on HR teams.
+
+3.
+Flexible Deployment
+Cloud (SaaS), On-Premise and Mobile App access.
+
+4.
+Multi-location Workforce Management
+Manage geographically dispersed employees.
+
+5.
+Dynamic Workflows
+Role-based access and configurable workflows.
+
+Cards should have:
+icon
+title
+one short paragraph
+hover animation
+
+------------------------------
+SECTION 4 — ONE PLATFORM
+------------------------------
+
+Headline:
+"One Platform. Endless Workforce Solutions."
+
+Create visually attractive module grid using the actual modules in the product deck:
+
+- Recruitment Module
+- Onboarding Module
+- Employee Management
+- Letter Management
+- Attendance Management
+- Leave Management
+- Payroll Management
+- Statutory Compliance
+- Geo Marking & Fencing
+- Performance Management
+- Reports and Analytics
+- Exit Management
+- Notification Centre
+- Employee Self Service
+- Training Development
+- Expense & Reimbursement
+
+Create 4 columns desktop,
+2 columns tablet,
+1–2 columns mobile.
+
+Use custom outline icons.
+
+On hover:
+- card raises slightly
+- icon gains purple/green highlight
+- small arrow appears
+
+Do not use huge descriptions here.
+
+------------------------------
+SECTION 5 — CORE PRODUCT AREAS
+------------------------------
+
+Create alternating sections for:
+
+Employee Management
+Attendance
+Leave
+Payroll
+Mobile App
+Reports & Analytics
+
+Each block should include:
+small label
+heading
+3–5 key benefits
+product screenshot/illustration
+"Explore Module →"
+
+Use alternating left/right layout.
+
+------------------------------
+SECTION 6 — WEB + MOBILE
+------------------------------
+
+Heading:
+"Manage Your Workforce Anywhere"
+
+Two-column presentation.
+
+WEB PORTAL
+
+"Centralized management interface for administrators and personalized access for employees. Powerful tools for data analysis and system configuration."
+
+MOBILE APPLICATION
+
+"On-the-go access for supervisors and employees with quick approvals and real-time attendance tracking."
+
+Show:
+Laptop mockup + phone mockup.
+
+------------------------------
+SECTION 7 — INDUSTRIES
+------------------------------
+
+Heading:
+"Built for Diverse Workforce Environments"
+
+Use the official industry verticals:
+
+- IT / ITES
+- Education
+- Healthcare
+- News & Media
+- Facility Management
+- Financial and Banking
+- Manufacturing
+- Hospitality
+- Realty and Construction
+- Retail
+- Logistics
+- Agriculture
+
+Create modern icon grid.
+
+CTA:
+Explore Industries
+
+------------------------------
+SECTION 8 — RECENT CLIENTS
+------------------------------
+
+Heading:
+"Recent Clients"
+
+Use ONLY client logos available in the supplied deck/assets.
+
+If high-quality logo assets cannot be extracted safely, create a clean placeholder component and clearly mark where the actual supplied client logos should be inserted.
+
+Do not invent client names.
+
+------------------------------
+SECTION 9 — LEAD GENERATION FORM
+------------------------------
+
+Create a premium conversion section similar in structure to the reference website.
+
+Heading:
+"See IN4 CloudHR in Action"
+
+Subheading:
+"Tell us about your organization and our team will contact you to understand your workforce requirements."
+
+Above or next to form show:
+
+1
+Submit Form
+
+2
+Quick Callback
+
+3
+Live Demo
+
+FORM FIELDS:
+
+Full Name *
+Company Name & Size *
+Phone Number *
+Work Email Address *
+
+CTA:
+"Submit & Schedule My Demo"
+
+Add:
+"We respect your privacy. Your details will only be used to respond to your enquiry."
+
+Do not fake successful submissions.
+
+Implement proper validation.
+
+------------------------------
+SECTION 10 — FINAL CTA
+------------------------------
+
+Full-width premium purple CTA.
+
+Heading:
+"Ready to Simplify Your Workforce Management?"
+
+Text:
+"Bring employee management, attendance, leave, payroll and workforce insights together in one connected HRMS."
+
+Buttons:
+Schedule a Demo
+Contact Us
+
+==================================================
+8. EMPLOYEE MANAGEMENT PAGE
+==================================================
+
+URL:
+/employee-management
+
+Hero:
+"Comprehensive Employee Management"
+
+Use these exact product areas:
+
+MULTI LOCATION SUPPORT
+Manage employees across multiple locations or branches from a single dashboard.
+
+EMPLOYEE MANAGEMENT
+Centralize employee data including:
+- personal details
+- employment history
+- job roles
+- compensation
+- employee profiles
+- document storage
+- data editing
+- secure access controls
+
+CAREER TRACKING
+Track:
+- active status
+- leave status
+- resignation
+- promotions
+- terminations
+- transitions to permanent positions
+
+BULK UPLOAD CAPABILITIES
+Efficiently add and update employee information using bulk upload features.
+
+EMPLOYEE ENGAGEMENT
+Share organization policies, documents, events and notifications.
+
+INTERACTIVE DASHBOARD
+Support proactive, data-driven decisions using workforce information such as:
+- headcount
+- region
+- age group
+- gender
+- other workforce demographics available in the system
+
+Add relevant dashboard screenshot from product deck.
+
+CTA:
+Schedule Employee Management Demo
+
+==================================================
+9. ATTENDANCE MANAGEMENT PAGE
+==================================================
+
+URL:
+/attendance-management
+
+Headline:
+"Attendance That Works for Everyone."
+
+Use these supported features:
+
+- Customized Time and Attendance Policies
+- Late-coming penalties
+- Early-going rules
+- Multiple Shift Schedule Management
+- Shift charts
+- Automatic Shift Rotations
+- Night shift handling
+- Manual Punch Requests
+- Approve / Reject missed punch requests
+- Overtime Policies
+- Permission Policies
+- Bulk or individual overtime applications
+- Biometric integrations with major OEM brands
+- Real-time Attendance Monitoring
+- Digital Attendance
+- Geo Fencing
+- GPS Tagging
+- Field Employee Attendance
+- Daily attendance reports
+- Weekly attendance reports
+- Monthly attendance reports
+- Absenteeism analysis
+- Punctuality analysis
+- Overtime analysis
+- Attendance support for labour-law and audit requirements
+
+Create an interactive conceptual attendance dashboard.
+
+Geo-fencing visual can show:
+employee phone
+location pin
+virtual boundary
+verified attendance
+
+DO NOT state specific geo-fence radius unless the supplied deck explicitly provides one.
+
+==================================================
+10. LEAVE MANAGEMENT PAGE
+==================================================
+
+URL:
+/leave-management
+
+Hero:
+"Flexible Leave Management Without the Manual Work"
+
+Sections:
+
+LEAVE POLICY MANAGEMENT
+- Unlimited customizable leave types
+- Leave quotas
+- Pro-rata leave calculation
+
+YEAR-END OPERATIONS
+- Leave carry-forward
+- Leave lapse
+- Leave encashment options
+
+REAL-TIME STATUS UPDATES
+Notifications for:
+- approved
+- rejected
+- pending requests
+
+HOLIDAY OPERATIONS
+- Company calendar integration
+- Region-specific holidays
+
+LEAVE APPLICATION
+Employees can apply online with:
+- dates
+- leave type
+- reason
+
+APPROVAL WORKFLOW
+Automated routing to appropriate approvers.
+
+Add workflow visualization:
+
+Employee
+↓
+Leave Application
+↓
+Manager Approval
+↓
+HR / Configured Approver
+↓
+Status Notification
+
+==================================================
+11. PAYROLL MANAGEMENT PAGE
+==================================================
+
+URL:
+/payroll-management
+
+Hero:
+"Payroll Connected Directly to Your Workforce Data"
+
+Structure content into 5 areas.
+
+EMPLOYEE COMPENSATION MANAGEMENT
+
+- Salary structure setup
+- Basic pay
+- Allowances
+- Bonuses
+- Deductions
+- Dynamic pay scales
+- Role/location/grade-based structures
+- Increment management
+
+COMPLIANCE AND TAX MANAGEMENT
+
+- EPF
+- ESI
+- Gratuity
+- Mandatory deductions
+- EPF / ESI ECR text file generation
+- PT deductions
+- LWF deductions
+
+PAYROLL PROCESSING
+
+- Automated salary calculation
+- Attendance-based payroll
+- Leave-based payroll
+- Deductions
+- Overtime
+- Incentives
+
+REIMBURSEMENTS
+
+- Travel claims
+- Medical reimbursements
+- Benefits administration
+- Health insurance
+- Retirement plans
+- Other benefits
+
+ADVANCED FEATURES
+
+- Employee loan management
+- EMI tracking
+- Salary deductions
+- Payroll analytics
+- Payroll cost insights
+- Year-end processing
+- Annual tax computations
+- Bonuses
+
+Use a premium payroll dashboard visual.
+
+==================================================
+12. MOBILE APP PAGE
+==================================================
+
+URL:
+/mobile-app
+
+Hero:
+"HR Operations in Your Pocket"
+
+Use supported features:
+
+CHECK-IN / OUT
+
+Employees can check in and out using:
+- location
+- time
+- photo capture
+- geo-fencing
+- geo-tagging
+
+PAYROLL DATA
+
+Employees can:
+- view payslips
+- download payslips
+- view tax forms
+- download tax forms
+- submit exemption proof
+- track exemption proof
+
+LEAVE MANAGEMENT
+
+Users can:
+- apply
+- approve
+- reject
+
+Requests include:
+- leave
+- permissions
+- expense claims
+- attendance regularization
+
+ATTENDANCE DATA
+
+Users can view:
+- daily logs
+- monthly attendance summary
+- self attendance
+- team member attendance where access applies
+
+Show an attractive mobile phone device mockup.
+
+==================================================
+13. REPORTS & ANALYTICS PAGE
+==================================================
+
+URL:
+/reports-analytics
+
+Hero:
+"Turn Workforce Data Into Actionable Insight"
+
+Use the supported categories:
+
+PREDEFINED REPORTS
+
+- Employee attendance
+- Punctuality
+- Payroll summaries
+- Salary slips
+- Leave
+- Absence
+- Employee demographics
+- Performance appraisal
+- Training reports
+
+DATA VISUALIZATION
+
+- Interactive charts
+- Bar charts
+- Pie charts
+- HR dashboards
+- Headcount
+- Turnover rates
+- Heatmaps
+- Department-wise absence trends
+
+REAL-TIME DATA
+
+- Reports based on live HR data
+- Automated data synchronization across modules
+
+COMPLIANCE AND AUDIT REPORTS
+
+- Statutory reports
+- PF
+- ESI
+- Audit trails
+
+SCHEDULING AND NOTIFICATIONS
+
+- Automatically generated scheduled reports
+- Email reports
+- Trigger-based notifications
+- Long absence notifications
+
+ANALYTICS INTEGRATION
+
+- Workforce trend forecasting
+- Workforce needs
+- Retention risk assessment
+
+Do not overstate these features beyond the supplied documentation.
+
+==================================================
+14. FEATURES PAGE
+==================================================
+
+URL:
+/features
+
+Create a searchable / categorized feature directory.
+
+Categories:
+
+Core HR
+Attendance
+Leave
+Payroll
+Workforce Mobility
+Analytics
+Employee Services
+Administration
+Talent Lifecycle
+
+Use all modules listed in the product deck.
+
+Each card:
+icon
+title
+one-line summary
+optional link
+
+Add a CTA every 2–3 sections.
+
+==================================================
+15. INDUSTRIES PAGE
+==================================================
+
+URL:
+/industries
+
+Hero:
+"HRMS Built for Diverse Workforce Environments"
+
+Create industry cards for:
+
+IT / ITES
+Education
+Healthcare
+News & Media
+Facility Management
+Financial and Banking
+Manufacturing
+Hospitality
+Realty and Construction
+Retail
+Logistics
+Agriculture
+
+Do not invent detailed industry-specific capabilities unless they can reasonably be tied directly to documented product features.
+
+You may present general product relevance such as:
+
+Multi-location management
+Attendance
+Shift management
+Mobile attendance
+Payroll
+Employee management
+Reports
+
+But do not make unsupported regulatory or operational claims.
+
+==================================================
+16. ABOUT PAGE
+==================================================
+
+URL:
+/about
+
+Headline:
+"Attendance Expertise at the Foundation of Modern HR"
+
+Use this message:
+
+"We believe payroll, access, and operations start with accurate attendance — and we’ve mastered that first."
+
+Explain:
+
+- IN4 CloudHR is a product by In4 Solution Pvt Ltd.
+- In4 Solution has over 18 years of leadership in biometric attendance and automation.
+- The company now offers a unified suite of cloud-based HRMS software.
+- The solutions are designed around real-world workforce needs.
+- The platform is intended to scale with organizations.
+- In4 combines hardware-level biometric precision with cloud-based HRMS capabilities.
+
+Create a visual journey:
+
+Biometric Attendance
+→ Workforce Data
+→ HRMS
+→ Leave
+→ Payroll
+→ Workforce Insights
+
+Do not invent founding year unless verified.
+
+==================================================
+17. CONTACT PAGE
+==================================================
+
+URL:
+/contact
+
+Use these official contact details from the Product Deck:
+
+Priya
+Senior Business Consultant
+
+Phone:
++91 89258 14088
+
+Email:
+Priya@in4solution.com
+
+Address:
+No-4, 2nd Floor,
+Pillaiyar Kovil street,
+Kasi City Park,
+Kasi Estate,
+Ashok Nagar,
+Chennai - 600 083
+
+Website:
+www.in4cloud.in
+
+Display:
+
+Left:
+Contact information
+
+Right:
+Lead form
+
+Form fields:
+Full Name *
+Company Name & Size *
+Phone Number *
+Work Email Address *
+
+Optional:
+Message / Requirements
+
+Primary CTA:
+Schedule My Demo
+
+Phone should be clickable:
+tel:+918925814088
+
+Email:
+mailto:Priya@in4solution.com
+
+Add an embedded map only if an accurate map location can be derived without inventing coordinates.
+
+==================================================
+18. FOOTER
+==================================================
+
+Create an elegant multi-column footer.
+
+Column 1:
+Logo
+Short description:
+"Unified cloud HRMS from biometric attendance to payroll."
+
+Column 2:
+Product
+Employee Management
+Attendance
+Leave
+Payroll
+Mobile App
+Reports
+
+Column 3:
+Company
+About
+Industries
+Contact
+
+Column 4:
+Contact
++91 89258 14088
+Priya@in4solution.com
+Chennai - 600 083
+
+Bottom:
+
+© 2026 In4 CloudHR. All rights reserved.
+
+A product by In4 Solution Pvt Ltd.
+
+Do not include:
+"Generated by Gemini Notebook"
+
+==================================================
+19. LEAD FORM FUNCTIONAL REQUIREMENTS
+==================================================
+
+Build reusable <DemoLeadForm /> component.
+
+Fields:
+
+fullName
+company
+phone
+email
+message optional
+pageSource automatically captured
+
+Validation:
+
+Full name:
+minimum 2 characters
+
+Company:
+required
+
+Phone:
+required
+Indian-friendly input
+support +91
+do not restrict international numbers unnecessarily
+
+Email:
+valid email format
+
+Add:
+honeypot spam field
+
+Show:
+loading state
+success state
+error state
+
+Success text:
+
+"Thank you. Your enquiry has been received. Our team will contact you shortly."
+
+Do NOT simulate form submission if no backend is configured.
+
+Create a clearly separated API/service layer.
+
+Example:
+POST /api/leads
+
+Use environment variables for external CRM/email endpoint.
+
+Never hard-code secrets.
+
+Add:
+.env.example
+
+Possible environment keys:
+
+LEAD_WEBHOOK_URL=
+LEAD_NOTIFICATION_EMAIL=
+NEXT_PUBLIC_SITE_URL=
+
+If webhook is missing:
+return a proper development warning rather than silently pretending the enquiry was submitted.
+
+Make architecture ready for later integration with:
+- Zoho CRM
+- webhook
+- email notification
+
+Do not implement a fake CRM integration.
+
+==================================================
+20. CTA PLACEMENT
+==================================================
+
+Every major page should have:
+
+Top CTA:
+Schedule a Demo
+
+Mid-page CTA
+
+Bottom CTA
+
+Sticky mobile CTA may be used:
+
+"Schedule Demo"
+
+Do not show annoying repeated popups.
+
+No automatic modal on page load.
+
+==================================================
+21. ANIMATION & INTERACTIONS
+==================================================
+
+Implement premium subtle motion.
+
+Use Framer Motion if using React / Next.js.
+
+Animations:
+
+- fade-up section reveals
+- staggered card reveals
+- subtle floating hero cards
+- button hover movement
+- icon hover effect
+- number/metric reveal only where real numbers exist
+- accordion animation
+- mega-menu animation
+- mobile menu transition
+- page transition
+- navbar scroll transition
+
+Smooth scrolling:
+html {
+  scroll-behavior: smooth;
+}
+
+For advanced smooth scrolling, use Lenis only if it does not harm accessibility or mobile performance.
+
+Respect:
+
+prefers-reduced-motion
+
+Do NOT:
+- overanimate
+- make scrolling sluggish
+- use excessive parallax
+- make text fly everywhere
+- make page transitions slow
+
+==================================================
+22. TECH STACK
+==================================================
+
+Preferred stack:
+
+Next.js 15+
+App Router
+TypeScript
+Tailwind CSS
+Framer Motion
+Lucide React icons
+
+Use:
+- reusable React components
+- server components where suitable
+- client components only where interaction requires them
+
+Structure:
+
+app/
+components/
+components/ui/
+components/layout/
+components/forms/
+components/sections/
+data/
+lib/
+public/
+styles/
+
+Use centralized data objects for:
+- modules
+- industries
+- features
+- navigation
+- contact details
+
+Avoid duplicate hard-coded content throughout components.
+
+==================================================
+23. REUSABLE COMPONENTS
+==================================================
+
+Build reusable:
+
+Header
+MegaMenu
+MobileMenu
+Footer
+HeroSection
+SectionHeading
+FeatureCard
+ModuleCard
+IndustryCard
+ScreenshotFrame
+PhoneMockup
+DashboardMockup
+LogoCloud
+CTASection
+DemoLeadForm
+ContactCard
+Breadcrumbs
+FAQAccordion if useful
+ScrollReveal
+Container
+Button
+
+==================================================
+24. RESPONSIVENESS
+==================================================
+
+Design mobile-first.
+
+Test approximately:
+
+360px
+390px
+430px
+768px
+1024px
+1280px
+1440px
+1920px
+
+No:
+horizontal overflow
+cut-off headings
+overlapping text
+tiny buttons
+broken cards
+
+On mobile:
+buttons should have comfortable tap targets
+forms should be one column
+mega menus become accordions
+hero visual stacks naturally
+
+==================================================
+25. ACCESSIBILITY
+==================================================
+
+Follow WCAG-friendly practices.
+
+Use:
+semantic HTML
+
+Correct:
+h1 → h2 → h3 hierarchy
+
+Add:
+alt attributes
+aria labels
+keyboard navigation
+visible focus states
+accessible dropdowns
+accessible form errors
+
+Ensure adequate colour contrast.
+
+Do not rely only on purple/green colour to communicate status.
+
+==================================================
+26. SEO
+==================================================
+
+Create page-specific metadata.
+
+Home title:
+"IN4 CloudHR | HRMS, Attendance & Payroll Management Software"
+
+Description:
+"IN4 CloudHR is a unified HRMS platform for employee management, attendance, leave, payroll, mobile workforce management and reporting."
+
+Create unique metadata for every page.
+
+Include:
+
+canonical URLs
+OpenGraph tags
+Twitter cards
+robots.txt
+sitemap.xml
+favicon support
+
+Use structured data where appropriate:
+
+Organization
+SoftwareApplication
+BreadcrumbList
+ContactPage
+
+Do not insert fabricated review scores or aggregate ratings.
+
+==================================================
+27. PERFORMANCE
+==================================================
+
+Target strong Core Web Vitals.
+
+Use:
+next/image
+lazy loading
+proper image dimensions
+modern image formats where appropriate
+font optimization
+code splitting
+
+Avoid:
+huge JS bundles
+massive video backgrounds
+unnecessary animation libraries
+
+==================================================
+28. VISUAL PRODUCT SCREENSHOTS
+==================================================
+
+The supplied PDF contains examples of:
+
+- Employee Management dashboard/configuration
+- Attendance configurations
+- Leave configurations
+- Payroll configurations
+- Mobile App attendance screen
+- Reports and Analytics screens
+
+Where technically possible, extract/use those visuals as supporting screenshots.
+
+Place screenshots inside premium UI frames rather than simply pasting large raw PDF pages.
+
+Do not crop important UI information incorrectly.
+
+If original higher-resolution assets are unavailable:
+create clearly-marked visual placeholder frames that can later be replaced.
+
+Do NOT invent fake IN4 CloudHR UI and present it as an authentic screenshot.
+
+Conceptual decorative UI components are allowed, but clearly treat them as illustrations rather than actual product screenshots.
+
+==================================================
+29. MICROCOPY
+==================================================
+
+Tone:
+
+Professional
+Straightforward
+Confident
+Enterprise
+Human
+Clear
+
+Avoid:
+
+"Revolutionary"
+"World's No.1"
+"Best HRMS"
+"Guaranteed ROI"
+"Industry-leading" unless supported
+"AI-powered" unless supported
+"Millions of users"
+"Trusted by thousands"
+
+Prefer:
+
+"Manage"
+"Connect"
+"Simplify"
+"Automate"
+"Monitor"
+"Configure"
+"Centralize"
+"Track"
+"Access"
+"Understand"
+
+==================================================
+30. NAVIGATION UX
+==================================================
+
+Desktop navigation must feel premium.
+
+Product dropdown example:
+
+WORKFORCE
+Employee Management
+Attendance Management
+Leave Management
+
+PAYROLL
+Payroll Management
+Statutory Compliance
+
+MOBILITY
+Mobile App
+Geo Marking & Fencing
+
+INSIGHTS
+Reports & Analytics
+
+Footer navigation must match.
+
+Current page should have active state.
+
+==================================================
+31. DESIGN DETAILS
+==================================================
+
+Use generous section spacing:
+
+Desktop:
+96–140px vertically
+
+Tablet:
+72–100px
+
+Mobile:
+56–72px
+
+Cards:
+12–20px radius
+
+Buttons:
+rounded but professional
+approximately 10–14px radius
+
+Use subtle borders:
+#E8E8EE range
+
+Subtle shadows only.
+
+Use background patterns:
+soft grid
+dot pattern
+radial gradient
+very subtle abstract cloud shapes
+
+Do not visually overcrowd the site.
+
+==================================================
+32. INTERESTING HERO VISUAL
+==================================================
+
+Create a central dashboard composition with:
+
+Employee Management
+Attendance
+Payroll
+Leave
+
+and phone mobile attendance.
+
+Visually represent the idea:
+
+Biometric / Mobile Attendance
+↓
+CloudHR
+↓
+Employee Management
+↓
+Leave
+↓
+Payroll
+↓
+Reports
+
+This should make the product proposition understandable within seconds.
+
+==================================================
+33. OPTIONAL FLOATING CONTACT
+==================================================
+
+Create a discreet floating contact control on desktop/mobile.
+
+Options:
+
+Call
+Email
+Schedule Demo
+
+Do not create fake WhatsApp details unless a WhatsApp number is explicitly approved.
+
+Phone:
++91 89258 14088
+
+==================================================
+34. QUALITY EXPECTATION
+==================================================
+
+The website should look like a professionally designed SaaS site comparable in polish to modern B2B software websites.
+
+It must NOT look:
+- AI-generated
+- like a generic Bootstrap template
+- like a school project
+- like a PDF copied into HTML
+- cluttered
+- text-heavy
+
+Focus strongly on:
+
+visual hierarchy
+spacing
+conversion flow
+clarity
+responsive behaviour
+premium presentation
+lead generation
+ease of navigation
+
+==================================================
+35. FINAL DEVELOPMENT PROCESS
+==================================================
+
+Follow this sequence:
+
+1. Inspect the existing project/repository.
+2. Inspect all supplied assets.
+3. Read the complete supplied IN4 CloudHR Product Deck before writing page content.
+4. Create the design system.
+5. Create shared layout components.
+6. Create homepage.
+7. Create individual module pages.
+8. Create industries/about/contact pages.
+9. Implement lead forms.
+10. Add responsive behaviour.
+11. Add animations.
+12. Add metadata/SEO.
+13. Run TypeScript/build checks.
+14. Fix all runtime/build errors.
+15. Test all navigation routes.
+16. Test forms.
+17. Test mobile/tablet/desktop layouts.
+18. Check for horizontal overflow.
+19. Check spelling.
+20. Review every marketing claim against the Product Deck.
+21. Remove unsupported claims.
+22. Make the final site production-ready.
+
+==================================================
+36. CRITICAL FINAL CHECKLIST
+==================================================
+
+Before considering the project complete, verify:
+
+[ ] Real multi-page routes work
+[ ] Logo is correct
+[ ] Purple + green IN4 branding is consistent
+[ ] Website is visually clean
+[ ] Smooth scrolling works
+[ ] Animations are subtle
+[ ] Mobile design works correctly
+[ ] Tablet design works correctly
+[ ] Desktop design works correctly
+[ ] Header is responsive
+[ ] Navigation works
+[ ] Mega menu works
+[ ] Every CTA goes somewhere valid
+[ ] Demo forms validate correctly
+[ ] No fake form submission
+[ ] Contact information is accurate
+[ ] +91 89258 14088 is correct
+[ ] Priya@in4solution.com is correct
+[ ] Address is correct
+[ ] All key product modules are represented
+[ ] Product claims come from the supplied PDF
+[ ] Unsupported reference-site claims are not copied
+[ ] No spelling mistakes
+[ ] No lorem ipsum
+[ ] No placeholder copy in production-facing sections
+[ ] No console errors
+[ ] No TypeScript errors
+[ ] Build succeeds
+[ ] SEO metadata exists
+[ ] sitemap.xml exists
+[ ] robots.txt exists
+[ ] Accessibility basics are implemented
+[ ] Images are optimized
+[ ] Website is fast
+[ ] Overall result looks premium and professional
+
+Now inspect the supplied files and existing codebase and build the complete website.
+
+Do not stop after creating the homepage.
+
+Continue until all routes, responsive layouts, components, forms, navigation, SEO and final quality checks are completed.
+
+You are a senior SaaS website designer, UX strategist, frontend architect and conversion-focused developer.
+
+Create a premium multi-product SaaS website for:
+
+IN4 Solutions
+
+Products:
+
+1. IN4 CloudHR
+   - Payroll HRMS Platform
+
+2. IN4 Visitor Management System
+
+3. IN4 Parking Management System
+
+
+REFERENCE STYLE:
+
+Use modern enterprise SaaS websites as inspiration.
+
+Design direction:
+- Clean
+- Premium
+- Corporate
+- Minimal
+- High conversion
+- Smooth scrolling
+- Modern animations
+- Professional UI
+- Easy navigation
+
+Do NOT create a generic template.
+
+The website should feel like a real enterprise software company website.
+
+==================================================
+BRAND DESIGN SYSTEM
+==================================================
+
+Use IN4 branding.
+
+Primary colours:
+
+Purple:
+#6528F7
+
+Green:
+#76C442
+
+Supporting colours:
+
+White
+Light grey
+Soft lavender
+Dark charcoal
+
+Design style:
+
+- Large clean typography
+- Plenty of whitespace
+- Rounded cards
+- Premium dashboard visuals
+- Product screenshots
+- Modern SaaS illustrations
+- Smooth animations
+
+
+Typography:
+
+Use:
+
+Inter / Manrope / Plus Jakarta Sans
+
+
+==================================================
+WEBSITE STRUCTURE
+==================================================
+
+
+Create:
+
+Main Website:
+
+/
+Home
+
+
+Products:
+
+/cloudhr
+
+Payroll HRMS Landing Page
+
+
+/visitor-management
+
+Visitor Management Landing Page
+
+
+/parking-management
+
+Parking Management Landing Page
+
+
+/company
+
+About
+
+
+/contact
+
+Contact / Demo Request
+
+
+
+==================================================
+GLOBAL HEADER
+==================================================
+
+
+Sticky premium header.
+
+
+Logo:
+
+IN4 Solutions
+
+
+Menu:
+
+Home
+
+Products ▼
+
+    CloudHR Payroll HRMS
+
+    Visitor Management
+
+    Parking Management
+
+
+Industries
+
+Company
+
+Contact
+
+
+Primary CTA:
+
+"Book a Demo"
+
+
+Header behaviour:
+
+- transparent on hero
+- white background after scroll
+- smooth transition
+- mobile hamburger menu
+- dropdown animation
+
+
+==================================================
+HOME PAGE
+==================================================
+
+
+Goal:
+
+Introduce IN4 as a technology solutions company with multiple business automation products.
+
+
+Hero:
+
+Headline:
+
+"Smart Digital Solutions for Modern Businesses"
+
+
+Subheading:
+
+"Powerful software platforms designed to simplify workforce management, visitor operations and parking experiences."
+
+
+CTA:
+
+Book a Demo
+
+Explore Products
+
+
+Hero visual:
+
+Create a premium 3-product ecosystem:
+
+
+CloudHR Dashboard
+
++
+
+Visitor Management Dashboard
+
++
+
+Parking Management Dashboard
+
+
+Connected through a central IN4 ecosystem visual.
+
+
+==================================================
+PRODUCT SECTION
+==================================================
+
+
+Create 3 large product cards:
+
+
+CARD 1
+
+IN4 CloudHR
+
+Payroll HRMS
+
+Description:
+
+"Complete employee management, attendance and payroll solution."
+
+
+Features:
+
+- Employee Management
+- Attendance Management
+- Leave Management
+- Payroll Processing
+- Mobile Access
+- Reports & Analytics
+
+
+CTA:
+
+Explore CloudHR
+
+
+
+CARD 2
+
+Visitor Management System
+
+
+Description:
+
+"Digitize visitor entry, approvals and security management."
+
+
+Features:
+
+- Visitor Registration
+- Digital Check-in
+- Host Notification
+- Visitor Tracking
+- Reports
+- Security Management
+
+
+CTA:
+
+Explore Visitor Management
+
+
+
+CARD 3
+
+Parking Management System
+
+
+Description:
+
+"Smart parking solutions for organized vehicle management."
+
+
+Features:
+
+- Vehicle Registration
+- Parking Allocation
+- Entry & Exit Tracking
+- Digital Parking Records
+- Monitoring Dashboard
+- Reports
+
+
+CTA:
+
+Explore Parking System
+
+
+
+==================================================
+LANDING PAGE 1
+IN4 CLOUDHR PAYROLL HRMS
+==================================================
+
+
+URL:
+
+/cloudhr
+
+
+Purpose:
+
+Generate HRMS demo leads.
+
+
+Hero:
+
+
+Badge:
+
+Cloud HRMS Solution
+
+
+Headline:
+
+"From Biometric to Payslip — Simplified"
+
+
+Supporting text:
+
+"Manage employees, attendance, leave and payroll operations through one connected HRMS platform."
+
+
+CTA:
+
+Schedule HRMS Demo
+
+
+Hero Visual:
+
+Create:
+
+Laptop dashboard
+
+Mobile attendance app
+
+Payroll cards
+
+Employee cards
+
+
+Floating UI animations.
+
+
+--------------------------------------------------
+
+SECTION:
+
+Why IN4 CloudHR?
+
+
+Create 5 feature cards:
+
+
+Employee Management
+
+Manage employee information, profiles and workforce data.
+
+
+Attendance Management
+
+Track attendance, shifts, biometric integration and geo attendance.
+
+
+Leave Management
+
+Simplify leave policies, approvals and tracking.
+
+
+Payroll Management
+
+Automated payroll processing with salary structures, deductions and compliance support.
+
+
+Reports & Analytics
+
+Generate workforce insights and reports.
+
+
+
+--------------------------------------------------
+
+SECTION:
+
+One Platform. Complete Workforce Management.
+
+
+Create module grid:
+
+Recruitment
+
+Onboarding
+
+Employee Management
+
+Attendance
+
+Leave
+
+Payroll
+
+Compliance
+
+Geo Fencing
+
+Performance
+
+Reports
+
+Employee Self Service
+
+Training
+
+Expense Management
+
+
+--------------------------------------------------
+
+SECTION:
+
+Industries
+
+
+Show:
+
+IT
+
+Education
+
+Healthcare
+
+Manufacturing
+
+Retail
+
+Logistics
+
+Hospitality
+
+Construction
+
+
+--------------------------------------------------
+
+SECTION:
+
+Demo Lead Form
+
+
+Fields:
+
+
+Name *
+
+Company Name *
+
+Phone Number *
+
+Email *
+
+Company Size
+
+Message
+
+
+CTA:
+
+Request HRMS Demo
+
+
+==================================================
+LANDING PAGE 2
+VISITOR MANAGEMENT SYSTEM
+==================================================
+
+
+URL:
+
+/visitor-management
+
+
+Purpose:
+
+Convert businesses looking for visitor security solutions.
+
+
+
+Hero:
+
+
+Headline:
+
+"Smart Visitor Management for Secure Workplaces"
+
+
+Supporting text:
+
+"Digitize visitor entry, improve security and create seamless visitor experiences."
+
+
+CTA:
+
+Request Visitor Demo
+
+
+
+Hero Visual:
+
+Modern reception area:
+
+Visitor kiosk
+
+QR scanning
+
+Security dashboard
+
+Reception screen
+
+
+
+--------------------------------------------------
+
+SECTION:
+
+Problems
+
+
+Title:
+
+"Traditional Visitor Entry Creates Challenges"
+
+
+Cards:
+
+
+Manual Registers
+
+Slow visitor entry process.
+
+
+Security Gaps
+
+Limited visitor visibility.
+
+
+Poor Tracking
+
+Difficulty maintaining visitor records.
+
+
+Approval Delays
+
+Manual communication issues.
+
+
+
+--------------------------------------------------
+
+SECTION:
+
+Solution
+
+
+Title:
+
+"Digital Visitor Experience"
+
+
+Features:
+
+
+Visitor Registration
+
+
+Quick digital registration process.
+
+
+Instant Notifications
+
+
+Notify hosts instantly.
+
+
+Visitor Tracking
+
+
+Maintain complete visitor history.
+
+
+Approval Workflow
+
+
+Manage visitor approvals efficiently.
+
+
+Reports
+
+
+Access visitor activity reports.
+
+
+
+--------------------------------------------------
+
+SECTION:
+
+Visitor Journey
+
+
+Create animated flow:
+
+
+Visitor Arrives
+
+↓
+
+Registration
+
+↓
+
+Host Approval
+
+↓
+
+Entry Permission
+
+↓
+
+Visitor Tracking
+
+↓
+
+Exit
+
+
+--------------------------------------------------
+
+SECTION:
+
+Use Cases
+
+
+Industries:
+
+
+Corporate Offices
+
+Hospitals
+
+Educational Institutions
+
+Residential Communities
+
+Factories
+
+Hotels
+
+
+
+--------------------------------------------------
+
+SECTION:
+
+Demo Form
+
+
+Fields:
+
+
+Name
+
+Company
+
+Phone
+
+Email
+
+Requirement
+
+
+CTA:
+
+Book Visitor Management Demo
+
+
+
+==================================================
+LANDING PAGE 3
+PARKING MANAGEMENT SYSTEM
+==================================================
+
+
+URL:
+
+/parking-management
+
+
+
+Purpose:
+
+Generate parking software leads.
+
+
+
+Hero:
+
+
+Headline:
+
+"Smart Parking Management Made Simple"
+
+
+Supporting text:
+
+"Manage vehicle entry, parking allocation and parking operations digitally."
+
+
+CTA:
+
+Request Parking Demo
+
+
+
+Hero Visual:
+
+
+Parking dashboard
+
+Vehicle tracking
+
+Entry gate system
+
+Digital parking map
+
+
+
+--------------------------------------------------
+
+SECTION:
+
+Parking Challenges
+
+
+Cards:
+
+
+Vehicle Congestion
+
+Manual parking coordination.
+
+
+Space Management
+
+Difficulty tracking availability.
+
+
+Security Issues
+
+Limited vehicle visibility.
+
+
+Manual Records
+
+Paper-based tracking problems.
+
+
+
+--------------------------------------------------
+
+SECTION:
+
+Smart Parking Solution
+
+
+Features:
+
+
+Vehicle Registration
+
+
+Maintain digital vehicle records.
+
+
+Parking Allocation
+
+
+Assign parking spaces efficiently.
+
+
+Entry & Exit Tracking
+
+
+Monitor vehicle movement.
+
+
+Parking Dashboard
+
+
+Real-time operational visibility.
+
+
+Reports
+
+
+Generate parking usage reports.
+
+
+
+--------------------------------------------------
+
+SECTION:
+
+How It Works
+
+
+Visual timeline:
+
+
+Vehicle Registration
+
+↓
+
+Entry Verification
+
+↓
+
+Parking Allocation
+
+↓
+
+Vehicle Monitoring
+
+↓
+
+Exit Tracking
+
+
+
+--------------------------------------------------
+
+SECTION:
+
+Benefits
+
+
+Cards:
+
+
+Better Organization
+
+Improved Security
+
+Faster Entry
+
+Digital Records
+
+Easy Monitoring
+
+
+--------------------------------------------------
+
+SECTION:
+
+Industries
+
+
+Corporate Parks
+
+Hospitals
+
+Universities
+
+Residential Communities
+
+Commercial Buildings
+
+Industrial Facilities
+
+
+
+--------------------------------------------------
+
+SECTION:
+
+Lead Form
+
+
+Fields:
+
+
+Name
+
+Company
+
+Phone
+
+Email
+
+Parking Requirement
+
+
+CTA:
+
+Schedule Parking Demo
+
+
+
+==================================================
+CONTACT PAGE
+==================================================
+
+
+Create common demo request page.
+
+
+Headline:
+
+"Let's Discuss Your Digital Transformation Needs"
+
+
+Form:
+
+
+Full Name
+
+Company
+
+Phone
+
+Email
+
+Interested Product:
+
+
+Dropdown:
+
+CloudHR
+
+Visitor Management
+
+Parking Management
+
+
+Message
+
+
+
+==================================================
+FOOTER
+==================================================
+
+
+Columns:
+
+
+Products
+
+CloudHR
+
+Visitor Management
+
+Parking Management
+
+
+Company
+
+About
+
+Contact
+
+
+Contact:
+
+IN4 Solutions
+
+
+CTA:
+
+Book a Demo
+
+
+
+==================================================
+ANIMATION REQUIREMENTS
+==================================================
+
+
+Use Framer Motion.
+
+
+Animations:
+
+
+Hero fade-up
+
+Floating dashboard cards
+
+Smooth section reveal
+
+Card hover animation
+
+Button animation
+
+Navbar transition
+
+Page transitions
+
+
+Keep animations subtle.
+
+Do not make the website distracting.
+
+
+
+==================================================
+TECH STACK
+==================================================
+
+
+Use:
+
+
+Next.js 15
+
+TypeScript
+
+Tailwind CSS
+
+Framer Motion
+
+Lucide Icons
+
+
+Structure:
+
+
+app/
+
+components/
+
+sections/
+
+forms/
+
+data/
+
+public/
+
+
+Create reusable components:
+
+
+Header
+
+Footer
+
+Hero
+
+FeatureCard
+
+ProductCard
+
+DemoForm
+
+CTASection
+
+DashboardMockup
+
+
+
+==================================================
+LEAD FORM SYSTEM
+==================================================
+
+
+Create reusable DemoForm component.
+
+
+Validation:
+
+Name required
+
+Company required
+
+Phone required
+
+Email validation
+
+
+Prepare API structure:
+
+
+POST /api/leads
+
+
+Support future integration with:
+
+Zoho CRM
+
+Email notification
+
+Webhook
+
+
+Do not fake submissions.
+
+
+
+==================================================
+SEO
+==================================================
+
+
+Create metadata for every page.
+
+
+CloudHR:
+
+Title:
+
+IN4 CloudHR | Payroll HRMS Software
+
+
+Visitor:
+
+IN4 Visitor Management System | Smart Visitor Security Solution
+
+
+Parking:
+
+IN4 Parking Management System | Smart Parking Software
+
+
+
+Create:
+
+robots.txt
+
+sitemap.xml
+
+OpenGraph metadata
+
+
+
+==================================================
+QUALITY CHECK
+==================================================
+
+
+Before completion:
+
+
+✓ All 3 landing pages complete
+
+✓ Responsive mobile design
+
+✓ Smooth scrolling
+
+✓ Premium SaaS look
+
+✓ Fast loading
+
+✓ SEO ready
+
+✓ Proper navigation
+
+✓ Lead forms working
+
+✓ No placeholder content
+
+✓ No spelling mistakes
+
+✓ Production-ready code
+
+
+Build the complete website, not just UI mockups.

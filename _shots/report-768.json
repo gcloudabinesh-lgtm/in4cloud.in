@@ -1,0 +1,492 @@
+﻿{
+ "viewport": {
+  "innerWidth": 752,
+  "innerHeight": 805,
+  "docScrollW": 737
+ },
+ "overflowEls": [
+  {
+   "tag": "LABEL",
+   "cls": "hp-field",
+   "pos": "absolute",
+   "l": -9999,
+   "r": -9999
+  },
+  {
+   "tag": "INPUT",
+   "cls": "hp-field",
+   "pos": "absolute",
+   "l": -9999,
+   "r": -9995
+  },
+  {
+   "tag": "DIV",
+   "cls": "mobile-menu",
+   "pos": "fixed",
+   "l": 745,
+   "r": 1165
+  },
+  {
+   "tag": "DIV",
+   "cls": "mobile-menu-head",
+   "pos": "static",
+   "l": 745,
+   "r": 1165
+  },
+  {
+   "tag": "A",
+   "cls": "logo",
+   "pos": "static",
+   "l": 765,
+   "r": 980
+  },
+  {
+   "tag": "IMG",
+   "cls": "logo-mark",
+   "pos": "static",
+   "l": 765,
+   "r": 980
+  },
+  {
+   "tag": "BUTTON",
+   "cls": "mobile-menu-close",
+   "pos": "static",
+   "l": 1103,
+   "r": 1145
+  },
+  {
+   "tag": "I",
+   "cls": "ico fa-solid fa-xmark",
+   "pos": "static",
+   "l": 1115,
+   "r": 1133
+  },
+  {
+   "tag": "DIV",
+   "cls": "mobile-menu-body",
+   "pos": "static",
+   "l": 745,
+   "r": 1165
+  },
+  {
+   "tag": "BUTTON",
+   "cls": "mobile-nav-link acc-trigger",
+   "pos": "static",
+   "l": 765,
+   "r": 1145
+  },
+  {
+   "tag": "I",
+   "cls": "ico ico-chev fa-solid fa-chevron-down",
+   "pos": "static",
+   "l": 1119,
+   "r": 1137
+  },
+  {
+   "tag": "DIV",
+   "cls": "mobile-sub",
+   "pos": "static",
+   "l": 765,
+   "r": 1145
+  },
+  {
+   "tag": "DIV",
+   "cls": "mobile-sub-inner",
+   "pos": "static",
+   "l": 765,
+   "r": 1145
+  },
+  {
+   "tag": "DIV",
+   "cls": "mobile-sub-links",
+   "pos": "static",
+   "l": 765,
+   "r": 1145
+  },
+  {
+   "tag": "A",
+   "cls": "",
+   "pos": "static",
+   "l": 799,
+   "r": 1137
+  },
+  {
+   "tag": "I",
+   "cls": "ico fa-solid fa-cloud",
+   "pos": "static",
+   "l": 809,
+   "r": 825
+  },
+  {
+   "tag": "A",
+   "cls": "",
+   "pos": "static",
+   "l": 799,
+   "r": 1137
+  },
+  {
+   "tag": "I",
+   "cls": "ico fa-solid fa-user-check",
+   "pos": "static",
+   "l": 809,
+   "r": 825
+  },
+  {
+   "tag": "A",
+   "cls": "",
+   "pos": "static",
+   "l": 799,
+   "r": 1137
+  },
+  {
+   "tag": "I",
+   "cls": "ico fa-solid fa-square-parking",
+   "pos": "static",
+   "l": 809,
+   "r": 825
+  },
+  {
+   "tag": "A",
+   "cls": "mobile-nav-link",
+   "pos": "static",
+   "l": 765,
+   "r": 1145
+  },
+  {
+   "tag": "I",
+   "cls": "ico fa-solid fa-house",
+   "pos": "static",
+   "l": 773,
+   "r": 791
+  },
+  {
+   "tag": "A",
+   "cls": "mobile-nav-link",
+   "pos": "static",
+   "l": 765,
+   "r": 1145
+  },
+  {
+   "tag": "I",
+   "cls": "ico fa-solid fa-briefcase",
+   "pos": "static",
+   "l": 773,
+   "r": 791
+  },
+  {
+   "tag": "A",
+   "cls": "mobile-nav-link",
+   "pos": "static",
+   "l": 765,
+   "r": 1145
+  },
+  {
+   "tag": "I",
+   "cls": "ico fa-solid fa-building",
+   "pos": "static",
+   "l": 773,
+   "r": 791
+  },
+  {
+   "tag": "A",
+   "cls": "mobile-nav-link",
+   "pos": "static",
+   "l": 765,
+   "r": 1145
+  },
+  {
+   "tag": "I",
+   "cls": "ico fa-solid fa-phone",
+   "pos": "static",
+   "l": 773,
+   "r": 791
+  },
+  {
+   "tag": "DIV",
+   "cls": "mobile-menu-cta",
+   "pos": "static",
+   "l": 745,
+   "r": 1165
+  },
+  {
+   "tag": "A",
+   "cls": "btn btn-primary btn-block",
+   "pos": "static",
+   "l": 765,
+   "r": 1145
+  }
+ ],
+ "header": {
+  "innerH": 76,
+  "logo": {
+   "x": 30,
+   "y": 14,
+   "w": 215,
+   "h": 48,
+   "top": 14,
+   "l": 30,
+   "r": 245,
+   "btm": 62
+  },
+  "nav": {
+   "x": 0,
+   "y": 0,
+   "w": 0,
+   "h": 0,
+   "top": 0,
+   "l": 0,
+   "r": 0,
+   "btm": 0
+  },
+  "actions": {
+   "x": 661,
+   "y": 15,
+   "w": 46,
+   "h": 46,
+   "top": 15,
+   "l": 661,
+   "r": 707,
+   "btm": 61
+  },
+  "logoCenterOff": 0,
+  "navCenterOff": -38,
+  "actionsCenterOff": 0,
+  "navDisplay": "none",
+  "ctaDisplay": "none"
+ },
+ "hero": {
+  "grid": {
+   "x": 0,
+   "y": 107,
+   "w": 737,
+   "h": 934,
+   "top": 107,
+   "l": 0,
+   "r": 737,
+   "btm": 1041
+  },
+  "content": {
+   "x": 30,
+   "y": 635,
+   "w": 677,
+   "h": 406,
+   "top": 635,
+   "l": 30,
+   "r": 707,
+   "btm": 1041
+  },
+  "visual": {
+   "x": 30,
+   "y": 115,
+   "w": 677,
+   "h": 480,
+   "top": 115,
+   "l": 30,
+   "r": 707,
+   "btm": 595
+  },
+  "contentCenterOff": 264,
+  "visualCenterOff": -219
+ },
+ "trust": [
+  {
+   "label": "Cloud Payroll HRMS",
+   "iconCenterFromTop": 12
+  },
+  {
+   "label": "Visitor Management",
+   "iconCenterFromTop": 12
+  },
+  {
+   "label": "Smart Parking",
+   "iconCenterFromTop": 12
+  },
+  {
+   "label": "One Technology Partner",
+   "iconCenterFromTop": 12
+  }
+ ],
+ "eco": {
+  "eco-float-a": {
+   "overL": false,
+   "overR": false,
+   "overT": false,
+   "overB": false
+  },
+  "eco-float-b": {
+   "overL": false,
+   "overR": false,
+   "overT": false,
+   "overB": false
+  },
+  "eco-hub": {
+   "overL": false,
+   "overR": false,
+   "overT": false,
+   "overB": false
+  },
+  "eco-caption": {
+   "overL": false,
+   "overR": false,
+   "overT": false,
+   "overB": false
+  },
+  "eco-panel": {
+   "overL": false,
+   "overR": false,
+   "overT": false,
+   "overB": false
+  }
+ },
+ "productCards": [
+  {
+   "h": 570,
+   "top": 1342,
+   "ctaBtm": 1879
+  },
+  {
+   "h": 570,
+   "top": 1342,
+   "ctaBtm": 1879
+  },
+  {
+   "h": 570,
+   "top": 1938,
+   "ctaBtm": 2475
+  }
+ ],
+ "industryIcon": [
+  -6,
+  -6,
+  -6,
+  -6,
+  -6,
+  -6,
+  -6,
+  -6
+ ],
+ "industryRows": [
+  3938,
+  4157,
+  4375
+ ],
+ "starCellTops": [
+  3180,
+  3336,
+  3492
+ ],
+ "footer": {
+  "cols": [
+   {
+    "title": "Products",
+    "h4Off": 48,
+    "liOff": 81
+   },
+   {
+    "title": "Company",
+    "h4Off": 263,
+    "liOff": 296
+   },
+   {
+    "title": "Contact",
+    "h4Off": 263,
+    "liOff": 296
+   }
+  ],
+  "brandLogo": {
+   "x": 30,
+   "y": 7063,
+   "w": 322,
+   "h": 72,
+   "top": 7063,
+   "l": 30,
+   "r": 352,
+   "btm": 7135
+  }
+ },
+ "contactAlign": [
+  {
+   "tag": "A",
+   "iconTop": 3,
+   "textTop": 0
+  },
+  {
+   "tag": "A",
+   "iconTop": 3,
+   "textTop": 0
+  },
+  {
+   "tag": "ADDRESS",
+   "iconTop": 3,
+   "textTop": 0
+  },
+  {
+   "tag": "A",
+   "iconTop": 3,
+   "textTop": 0
+  }
+ ],
+ "fb": {
+  "copyright": {
+   "x": 30,
+   "y": 7559,
+   "w": 245,
+   "h": 22,
+   "top": 7559,
+   "l": 30,
+   "r": 275,
+   "btm": 7581
+  },
+  "prod": {
+   "x": 382,
+   "y": 7559,
+   "w": 325,
+   "h": 22,
+   "top": 7559,
+   "l": 382,
+   "r": 707,
+   "btm": 7581
+  },
+  "centerDiff": 0
+ },
+ "formFields": [
+  {
+   "leftOff": 0,
+   "w": 615
+  },
+  {
+   "leftOff": 0,
+   "w": 298
+  },
+  {
+   "leftOff": 0,
+   "w": 298
+  },
+  {
+   "leftOff": 0,
+   "w": 615
+  },
+  {
+   "leftOff": 0,
+   "w": 615
+  },
+  {
+   "leftOff": 0,
+   "w": 615
+  }
+ ],
+ "formRow": {
+  "companyTop": 5926,
+  "phoneTop": 5926,
+  "diff": 0
+ },
+ "leadGrid": {
+  "leftTopOff": 0,
+  "cardTopOff": 795
+ },
+ "ctaBand": {
+  "padRight": 38,
+  "bandW": 677
+ },
+ "ctaDividerCenterDiff": 118
+}

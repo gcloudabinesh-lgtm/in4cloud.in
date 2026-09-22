@@ -1,0 +1,110 @@
+/* ---- Buttons & links ---- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 15px 28px;
+  border-radius: var(--r-md);
+  border: 1px solid transparent;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 15.5px;
+  font-weight: 700;
+  line-height: 1;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: transform 0.25s var(--ease), box-shadow 0.25s var(--ease),
+    background-color 0.25s var(--ease), color 0.25s var(--ease),
+    border-color 0.25s var(--ease);
+}
+
+.btn .ico { width: 18px; height: 18px; }
+
+.btn-primary {
+  background: var(--grad-purple);
+  color: #fff;
+  box-shadow: var(--shadow-purple);
+}
+
+.btn-primary:hover {
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 16px 38px rgba(101, 40, 247, 0.38);
+}
+
+.btn-green {
+  background: var(--grad-green);
+  color: #14300a;
+  box-shadow: var(--shadow-green);
+}
+
+.btn-green:hover { color: #14300a; transform: translateY(-2px); }
+
+.btn-ghost {
+  background: var(--bg);
+  border-color: var(--border);
+  color: var(--ink-800);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-ghost:hover {
+  border-color: var(--purple-200);
+  color: var(--purple-700);
+  background: var(--purple-50);
+  transform: translateY(-2px);
+}
+
+.btn-inverse {
+  background: #fff;
+  color: var(--purple-700);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+}
+
+.btn-inverse:hover { color: var(--purple-700); transform: translateY(-2px); }
+
+.btn-outline-white {
+  background: transparent;
+  border-color: rgba(255, 255, 255, 0.45);
+  color: #fff;
+}
+
+.btn-outline-white:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+.btn-sm { padding: 11px 20px; font-size: 14px; border-radius: 11px; }
+.btn-lg { padding: 18px 34px; font-size: 16px; border-radius: 16px; }
+.btn-block { width: 100%; }
+
+.btn-text {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 14.5px;
+  font-weight: 700;
+  color: var(--purple-700);
+}
+.btn-text .ico { width: 17px; height: 17px; transition: transform 0.25s var(--ease); }
+.btn-text:hover { color: var(--purple-600); }
+.btn-text:hover .ico { transform: translateX(4px); }
+
+.text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--purple-600);
+}
+
+.text-link .ico {
+  width: 18px;
+  height: 18px;
+  transition: transform 0.25s var(--ease);
+}
+
+.text-link:hover .ico { transform: translateX(4px); }
