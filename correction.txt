@@ -1,0 +1,26 @@
+In4 Solution - Client Website Review Changes
+This document outlines the website restructuring, UI modifications, and functional updates requested during the solution review meeting. The changes primarily focus on transitioning the website positioning from a physical hardware focus to a modern SaaS/Cloud HRMS platform.
+Global UI & Navigation Changes
+Update the main theme color to a consistent gradient matching the logo so it does not appear miscolored (e.g., blue) on certain devices or laptops.
+Remove the word "Home" from the top navigation menu. Clicking the company logo should seamlessly redirect users to the home page.
+Remove the "Contact" page as a separate top-level main menu tab.
+Move the "About Us" and "Contact" pages under the "Company" dropdown menu to streamline the header.
+Ensure essential contact details, including phone numbers, are prominently visible directly on the "Book Demo" page.
+Remove the dedicated "Industries" page from the main navigation menu.
+Add a new "Resources" page (originally discussed as "Blogs") to serve content and improve SEO performance.
+Add a dedicated "Pricing" page that visually displays the different subscription tiers (e.g., Free, Core, Premium).
+Products Menu Restructuring
+Redesign the "Products" dropdown menu to be module-based and easier to scan.
+Use "HRMS" (or Cloud HR & Payroll) as a primary heading, and list all related sub-modules (Leave Management, Attendance, Payroll, etc.) cleanly underneath it without nested complexity.
+List "Canteen", "Visitor", "Parking", and "AI-based Analytics" as separate, distinct modules without placing them under unnecessary umbrella terms like the "3-in-1" concept.
+Home Page Redesign
+Eliminate all references and imagery related to physical hardware products. The core focus and visual language must strictly highlight the SaaS/Cloud software platform.
+Update the main header text and Call to Action (CTA) using the provided Word document (e.g., updating the headline to "Modern HR & Workplace Platform for Growing Enterprises").
+Replace the static, grid-style layout of client logos with a continuous, moving slider (marquee) that displays about 6 to 7 client logos at a time.
+Add a metrics and statistics section to establish authority. Highlight achievements such as "18+ years experience", "15+ modules", "1000+ dealer networks", and a "4-hour response time".
+Display the core software modules as individual, clickable feature boxes or cards that redirect users to their specific respective product pages.
+Integrate a "Biometric Integrations" section explaining that the software modules seamlessly connect with third-party biometric hardware devices. Ensure any links or logos here do not navigate away to competitor or third-party manufacturer websites.
+Retain a dedicated section on the home page highlighting the different industries served by the software (e.g., IT/ITES, Education, Healthcare, Manufacturing).
+Footer Updates
+Add the company's full physical address and relevant social media profile links to the footer.
+Include visual "Get it on Google Play" and "Download on the App Store" application download buttons in the footer area.

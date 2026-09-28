@@ -1,6 +1,6 @@
 /* IN4 Solutions — shared site shell (header + products menu + mobile menu + footer).
    Injected once per page so markup is never duplicated across pages.
-   Relies on: Font Awesome 6 (CDN), site.js (contact/config). */
+   Relies on Font Awesome 6 (CDN), site.js (contact/config). */
 (function () {
   "use strict";
 
@@ -14,7 +14,9 @@
     "visitor-management.html": "visitor",
     "parking-management.html": "parking",
     "company.html": "company",
-    "contact.html": "contact"
+    "contact.html": "contact",
+    "resources.html": "resources",
+    "pricing.html": "pricing"
   }[currentFile] || "home";
 
   const isProductPage = ["cloudhr", "visitor", "parking"].indexOf(pageKey) !== -1;
@@ -48,33 +50,46 @@
     '<a class="logo" href="index.html" aria-label="IN4 Solutions — Home">' + logoMark + "</a>" +
     '<nav class="nav" aria-label="Primary">' +
     '<ul class="nav-list">' +
-    navLink("index.html", "Home", "home") +
     '<li class="has-mega' + (isProductPage ? " open" : "") + '">' +
     '<button class="nav-link nav-trigger" type="button" aria-haspopup="true" aria-expanded="false">' +
     'Products<i class="ico fa-solid fa-chevron-down" aria-hidden="true"></i></button>' +
     '<div class="mega-menu" role="menu">' +
     '<div class="mega-inner">' +
-    '<div class="mega-col"><span class="mega-title">Products</span><div class="mega-links">' +
-    '<a href="cloudhr.html"><i class="ico fa-solid fa-cloud" aria-hidden="true"></i> CloudHR Payroll HRMS</a>' +
+    '<div class="mega-col"><span class="mega-title">HRMS — Cloud HR &amp; Payroll</span><div class="mega-links">' +
+    '<a href="cloudhr.html"><i class="ico fa-solid fa-cloud" aria-hidden="true"></i> HRMS Overview</a>' +
+    '<a href="cloudhr.html#modules"><i class="ico fa-solid fa-user-plus" aria-hidden="true"></i> Onboarding</a>' +
+    '<a href="cloudhr.html#modules"><i class="ico fa-solid fa-fingerprint" aria-hidden="true"></i> Attendance Management</a>' +
+    '<a href="cloudhr.html#modules"><i class="ico fa-solid fa-calendar-check" aria-hidden="true"></i> Leave Management</a>' +
+    '<a href="cloudhr.html#modules"><i class="ico fa-solid fa-money-check-dollar" aria-hidden="true"></i> Payroll Processing</a>' +
+    '<a href="cloudhr.html#modules"><i class="ico fa-solid fa-shield-halved" aria-hidden="true"></i> Compliance</a>' +
+    '<a href="cloudhr.html#modules"><i class="ico fa-solid fa-chart-bar" aria-hidden="true"></i> Reports &amp; Analytics</a>' +
+    '<a href="cloudhr.html#modules"><i class="ico fa-solid fa-mobile-screen" aria-hidden="true"></i> Employee Self Service</a>' +
+    "</div></div>" +
+    '<div class="mega-col"><span class="mega-title">Workplace Modules</span><div class="mega-links">' +
     '<a href="visitor-management.html"><i class="ico fa-solid fa-user-check" aria-hidden="true"></i> Visitor Management</a>' +
     '<a href="parking-management.html"><i class="ico fa-solid fa-square-parking" aria-hidden="true"></i> Parking Management</a>' +
+    '<a href="cloudhr.html#modules"><i class="ico fa-solid fa-utensils" aria-hidden="true"></i> Canteen Management</a>' +
+    '<a href="cloudhr.html#modules"><i class="ico fa-solid fa-robot" aria-hidden="true"></i> AI-based Analytics</a>' +
     "</div></div>" +
     '<div class="mega-col"><span class="mega-title">Company</span><div class="mega-links">' +
     '<a href="company.html"><i class="ico fa-solid fa-building" aria-hidden="true"></i> About IN4 Solutions</a>' +
-    '<a href="index.html#industries"><i class="ico fa-solid fa-briefcase" aria-hidden="true"></i> Industries</a>' +
     '<a href="contact.html"><i class="ico fa-solid fa-envelope" aria-hidden="true"></i> Contact</a>' +
-    "</div></div>" +
-    '<div class="mega-col"><span class="mega-title">Get Started</span><div class="mega-links">' +
-    '<a href="contact.html#lead"><i class="ico fa-solid fa-calendar-check" aria-hidden="true"></i> Book a Demo</a>' +
-    '<a href="contact.html"><i class="ico fa-solid fa-comments" aria-hidden="true"></i> Talk to Sales</a>' +
+    '<a href="resources.html"><i class="ico fa-solid fa-book-open" aria-hidden="true"></i> Resources</a>' +
+    '<a href="pricing.html"><i class="ico fa-solid fa-tag" aria-hidden="true"></i> Pricing</a>' +
     "</div></div>" +
     "</div>" +
-    '<div class="mega-foot"><p>Three platforms. One technology partner.</p>' +
+    '<div class="mega-foot"><p>Modular cloud platform. One technology partner.</p>' +
     '<a class="text-link" href="contact.html#lead">Request a demo<i class="ico fa-solid fa-arrow-right" aria-hidden="true"></i></a></div>' +
     "</div></li>" +
-    '<li><a href="index.html#industries" class="nav-link">Industries</a></li>' +
-    navLink("company.html", "Company", "company") +
-    navLink("contact.html", "Contact", "contact") +
+    navLink("resources.html", "Resources", "resources") +
+    navLink("pricing.html", "Pricing", "pricing") +
+    '<li class="has-dropdown">' +
+    '<button class="nav-link nav-trigger" type="button" aria-haspopup="true" aria-expanded="false">' +
+    'Company<i class="ico fa-solid fa-chevron-down" aria-hidden="true"></i></button>' +
+    '<div class="dropdown-menu" role="menu">' +
+    '<a href="company.html"><i class="ico fa-solid fa-building" aria-hidden="true"></i> About Us</a>' +
+    '<a href="contact.html"><i class="ico fa-solid fa-envelope" aria-hidden="true"></i> Contact</a>' +
+    "</div></li>" +
     "</ul></nav>" +
     '<div class="header-actions">' +
     '<a href="contact.html#lead" class="btn btn-primary btn-sm header-cta">Book a Demo</a>' +
@@ -93,22 +108,26 @@
     '<button class="mobile-nav-link acc-trigger" type="button" aria-expanded="false" aria-controls="m-acc-product">' +
     'Products<i class="ico ico-chev fa-solid fa-chevron-down" aria-hidden="true"></i></button>' +
     '<div class="mobile-sub" id="m-acc-product"><div class="mobile-sub-inner"><div class="mobile-sub-links">' +
-    '<a href="cloudhr.html"><i class="ico fa-solid fa-cloud" aria-hidden="true"></i> CloudHR Payroll HRMS</a>' +
+    '<a href="cloudhr.html"><i class="ico fa-solid fa-cloud" aria-hidden="true"></i> HRMS — Cloud HR &amp; Payroll</a>' +
     '<a href="visitor-management.html"><i class="ico fa-solid fa-user-check" aria-hidden="true"></i> Visitor Management</a>' +
     '<a href="parking-management.html"><i class="ico fa-solid fa-square-parking" aria-hidden="true"></i> Parking Management</a>' +
+    '<a href="cloudhr.html#modules"><i class="ico fa-solid fa-utensils" aria-hidden="true"></i> Canteen Management</a>' +
+    '<a href="cloudhr.html#modules"><i class="ico fa-solid fa-robot" aria-hidden="true"></i> AI-based Analytics</a>' +
     "</div></div></div>" +
-    '<a class="mobile-nav-link"' + mlActive("index.html", "home") + ' href="index.html">' +
-    '<i class="ico fa-solid fa-house" aria-hidden="true"></i> Home</a>' +
-    '<a class="mobile-nav-link" href="index.html#industries">' +
-    '<i class="ico fa-solid fa-briefcase" aria-hidden="true"></i> Industries</a>' +
-    '<a class="mobile-nav-link"' + mlActive("company.html", "company") + ' href="company.html">' +
-    '<i class="ico fa-solid fa-building" aria-hidden="true"></i> Company</a>' +
-    '<a class="mobile-nav-link"' + mlActive("contact.html", "contact") + ' href="contact.html">' +
-    '<i class="ico fa-solid fa-phone" aria-hidden="true"></i> Contact</a>' +
+    '<a class="mobile-nav-link"' + mlActive("resources.html", "resources") + ' href="resources.html">' +
+    '<i class="ico fa-solid fa-book-open" aria-hidden="true"></i> Resources</a>' +
+    '<a class="mobile-nav-link"' + mlActive("pricing.html", "pricing") + ' href="pricing.html">' +
+    '<i class="ico fa-solid fa-tag" aria-hidden="true"></i> Pricing</a>' +
+    '<button class="mobile-nav-link acc-trigger" type="button" aria-expanded="false" aria-controls="m-acc-company">' +
+    'Company<i class="ico ico-chev fa-solid fa-chevron-down" aria-hidden="true"></i></button>' +
+    '<div class="mobile-sub" id="m-acc-company"><div class="mobile-sub-inner"><div class="mobile-sub-links">' +
+    '<a href="company.html"><i class="ico fa-solid fa-building" aria-hidden="true"></i> About Us</a>' +
+    '<a href="contact.html"><i class="ico fa-solid fa-envelope" aria-hidden="true"></i> Contact</a>' +
+    "</div></div></div>" +
     "</div>" +
     '<div class="mobile-menu-cta">' +
     '<a href="contact.html#lead" class="btn btn-primary btn-block">Book a Demo</a>' +
-    '<p style="font-size:12.5px;color:var(--text-muted);margin-top:12px;text-align:center">Smart digital solutions for modern businesses.</p>' +
+    '<p style="font-size:12.5px;color:var(--text-muted);margin-top:12px;text-align:center">Modern HR &amp; Workplace Platform</p>' +
     "</div></div>" +
     '<div class="menu-backdrop" id="menu-backdrop"></div>';
 
@@ -117,17 +136,33 @@
     '<div class="container footer-top">' +
     '<div class="footer-brand">' +
     '<a class="logo" href="index.html">' + logoMark + "</a>" +
-    "<p>Smart digital solutions for workforce, visitor and parking operations.</p>" +
+    "<p>Modern HR &amp; Workplace Platform for Growing Enterprises.</p>" +
     '<p style="margin-top:10px;font-size:13px">A business automation division of ' + S.company + ".</p>" +
+    '<div class="footer-social">' +
+    '<a href="https://www.facebook.com/in4solution" target="_blank" rel="noopener" aria-label="Facebook"><i class="ico fa-brands fa-facebook-f" aria-hidden="true"></i></a>' +
+    '<a href="https://www.linkedin.com/company/in4solution" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="ico fa-brands fa-linkedin-in" aria-hidden="true"></i></a>' +
+    '<a href="https://twitter.com/in4solution" target="_blank" rel="noopener" aria-label="Twitter / X"><i class="ico fa-brands fa-x-twitter" aria-hidden="true"></i></a>' +
+    '<a href="https://www.instagram.com/in4solution" target="_blank" rel="noopener" aria-label="Instagram"><i class="ico fa-brands fa-instagram" aria-hidden="true"></i></a>' +
+    '<a href="https://www.youtube.com/@in4solution" target="_blank" rel="noopener" aria-label="YouTube"><i class="ico fa-brands fa-youtube" aria-hidden="true"></i></a>' +
+    "</div>" +
+    '<div class="footer-apps">' +
+    '<a href="https://play.google.com/store/apps/details?id=com.in4solution" target="_blank" rel="noopener" class="app-badge" aria-label="Get it on Google Play">' +
+    '<i class="ico fa-brands fa-google-play" aria-hidden="true"></i><span><small>GET IT ON</small>Google Play</span></a>' +
+    '<a href="https://apps.apple.com/app/in4-solution/id1234567890" target="_blank" rel="noopener" class="app-badge" aria-label="Download on the App Store">' +
+    '<i class="ico fa-brands fa-apple" aria-hidden="true"></i><span><small>Download on the</small>App Store</span></a>' +
+    "</div>" +
     "</div>" +
     '<div class="footer-col"><h4 class="foot-trigger" role="button" tabindex="0" aria-expanded="false">Products<i class="ico fa-solid fa-chevron-down foot-caret" aria-hidden="true"></i></h4><ul>' +
-    '<li><a href="cloudhr.html">CloudHR Payroll HRMS</a></li>' +
+    '<li><a href="cloudhr.html">HRMS — Cloud HR &amp; Payroll</a></li>' +
     '<li><a href="visitor-management.html">Visitor Management</a></li>' +
     '<li><a href="parking-management.html">Parking Management</a></li>' +
+    '<li><a href="cloudhr.html#modules">Canteen Management</a></li>' +
+    '<li><a href="cloudhr.html#modules">AI-based Analytics</a></li>' +
     "</ul></div>" +
     '<div class="footer-col"><h4 class="foot-trigger" role="button" tabindex="0" aria-expanded="false">Company<i class="ico fa-solid fa-chevron-down foot-caret" aria-hidden="true"></i></h4><ul>' +
     '<li><a href="company.html">About</a></li>' +
-    '<li><a href="index.html#industries">Industries</a></li>' +
+    '<li><a href="resources.html">Resources</a></li>' +
+    '<li><a href="pricing.html">Pricing</a></li>' +
     '<li><a href="contact.html">Contact</a></li>' +
     "</ul></div>" +
     '<div class="footer-col contact-col"><h4 class="foot-trigger" role="button" tabindex="0" aria-expanded="false">Contact<i class="ico fa-solid fa-chevron-down foot-caret" aria-hidden="true"></i></h4><ul>' +

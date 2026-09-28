@@ -231,6 +231,64 @@ a.nav-link.active::after {
 
 .mega-foot p { font-size: 13.5px; color: var(--text-muted); }
 
+/* ---- Dropdown menu (Company) ---- */
+.has-dropdown { position: relative; }
+
+.dropdown-menu {
+  position: absolute;
+  top: calc(100% + 14px);
+  right: 0;
+  min-width: 200px;
+  background: #fff;
+  border: 1px solid var(--border-soft);
+  border-radius: var(--r-lg);
+  box-shadow: var(--shadow-lg);
+  padding: 10px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(12px);
+  transition: opacity 0.28s var(--ease), transform 0.28s var(--ease),
+    visibility 0.28s var(--ease);
+  z-index: 70;
+}
+
+.has-dropdown.open .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .has-dropdown:hover .dropdown-menu,
+  .has-dropdown:focus-within .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+}
+
+.dropdown-menu a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  color: var(--text-body);
+  font-size: 14.5px;
+  font-weight: 500;
+}
+
+.dropdown-menu a .ico {
+  width: 16px;
+  height: 16px;
+  color: var(--purple-500);
+}
+
+.dropdown-menu a:hover {
+  background: var(--purple-50);
+  color: var(--purple-700);
+}
+
 /* ---- Mobile menu ---- */
 .mobile-menu {
   position: fixed;

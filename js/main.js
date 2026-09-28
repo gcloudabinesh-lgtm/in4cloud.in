@@ -1,258 +1,206 @@
-/* IN4 Solutions — global interactions.
-   Runs after the shell/header/footer are injected.
-   Includes: scroll header state, mobile menu, mega menu, reveals,
-   accordions, back-to-top, floating contact, feature search/filter,
-   and lead form boot. Respects prefers-reduced-motion. */
+/* IN4 Solutions — main interactions: dropdowns, mobile menu, marquee, counters, FAQ */
 (function () {
   "use strict";
 
-  const REDUCED = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-  function initHeaderScroll() {
-    const header = document.getElementById("site-header");
-    const onScroll = function () {
-      if (header) header.classList.toggle("scrolled", window.scrollY > 8);
-    };
-    window.addEventListener("scroll", onScroll, { passive: true });
-    onScroll();
-  }
-
-  function initMobileMenu() {
-    const toggle = document.getElementById("nav-toggle");
-    const menu = document.getElementById("mobile-menu");
-    const backdrop = document.getElementById("menu-backdrop");
-    const closeBtn = document.getElementById("mobile-close");
-
-    function setOpen(open, focusClose) {
-      if (!menu || !toggle) return;
-      toggle.classList.toggle("open", open);
-      toggle.setAttribute("aria-expanded", String(open));
-      menu.classList.toggle("open", open);
-      menu.setAttribute("aria-hidden", String(!open));
-      if (backdrop) backdrop.classList.toggle("open", open);
-      document.body.style.overflow = open ? "hidden" : "";
-      if (open && focusClose && closeBtn) closeBtn.focus();
-    }
-
-    if (toggle) toggle.addEventListener("click", function () { setOpen(true, true); });
-    if (backdrop) backdrop.addEventListener("click", function () { setOpen(false); });
-    if (closeBtn) closeBtn.addEventListener("click", function () { setOpen(false); if (toggle) toggle.focus(); });
-
-    document.addEventListener("keydown", function (e) {
-      if (e.key === "Escape") setOpen(false);
-    });
-
-    // close when any anchor is clicked
-    if (menu) {
-      menu.querySelectorAll("a").forEach(function (a) {
-        a.addEventListener("click", function () { setOpen(false); });
-      });
-    }
-
-    // accordion behaviour within the mobile menu
-    if (menu) {
-      menu.querySelectorAll(".acc-trigger").forEach(function (trigger) {
-        trigger.addEventListener("click", function () {
-          const expanded = trigger.getAttribute("aria-expanded") === "true";
-          trigger.setAttribute("aria-expanded", String(!expanded));
-          const sub = document.getElementById(trigger.getAttribute("aria-controls"));
-          if (sub) sub.classList.toggle("open", !expanded);
-        });
-      });
-    }
-  }
-
-  function initMegaMenu() {
-    const mega = document.querySelector(".has-mega");
-    if (!mega) return;
-    const trigger = mega.querySelector(".nav-trigger");
-    if (!trigger) return;
-
-    function setOpen(open) {
-      mega.classList.toggle("open", open);
-      trigger.setAttribute("aria-expanded", String(open));
-    }
-
-    trigger.addEventListener("click", function (e) {
+  /* ---- Dropdown toggles (Company menu) ---- */
+  document.querySelectorAll(".has-dropdown > .nav-trigger").forEach(function (btn) {
+    btn.addEventListener("click", function (e) {
       e.stopPropagation();
-      setOpen(!mega.classList.contains("open"));
-    });
+      var parent = btn.closest(".has-dropdown");
+      var isOpen = parent.classList.contains("open");
 
-    document.addEventListener("click", function (e) {
-      if (!mega.contains(e.target)) setOpen(false);
-    });
-
-    document.addEventListener("keydown", function (e) {
-      if (e.key === "Escape") { setOpen(false); trigger.focus(); }
-    });
-
-    mega.querySelectorAll("a").forEach(function (a) {
-      a.addEventListener("focus", function () { setOpen(true); });
-    });
-  }
-
-  function initReveals() {
-    const els = document.querySelectorAll(".reveal");
-    if (!("IntersectionObserver" in window) || REDUCED) {
-      els.forEach(function (el) { el.classList.add("is-visible"); });
-      return;
-    }
-    const io = new IntersectionObserver(
-      function (entries) {
-        entries.forEach(function (entry) {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("is-visible");
-            io.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
-    );
-    els.forEach(function (el, i) {
-      if (!el.style.getPropertyValue("--rd")) {
-        el.style.setProperty("--rd", Math.min(i * 60, 420) + "ms");
-      }
-      io.observe(el);
-    });
-  }
-
-  function initBackTop() {
-    const btn = document.getElementById("back-top");
-    if (!btn) return;
-    const onScroll = function () {
-      btn.classList.toggle("show", window.scrollY > 600);
-    };
-    window.addEventListener("scroll", onScroll, { passive: true });
-    onScroll();
-    btn.addEventListener("click", function () {
-      window.scrollTo({ top: 0, behavior: REDUCED ? "auto" : "smooth" });
-    });
-  }
-
-  function initFloatContact() {
-    const box = document.getElementById("float-contact");
-    const toggle = document.getElementById("fc-toggle");
-    if (!box || !toggle) return;
-    toggle.addEventListener("click", function () {
-      const open = box.classList.toggle("open");
-      toggle.setAttribute("aria-expanded", String(open));
-    });
-    document.addEventListener("click", function (e) {
-      if (!box.contains(e.target)) {
-        box.classList.remove("open");
-        toggle.setAttribute("aria-expanded", "false");
-      }
-    });
-  }
-
-  function initCounters() {
-    const els = document.querySelectorAll(".counter-num[data-count]");
-    if (!els.length) return;
-    const DURATION = 1400;
-    function run(el) {
-      const target = parseFloat(el.getAttribute("data-count")) || 0;
-      const suffix = el.getAttribute("data-suffix") || "";
-      if (REDUCED || !("requestAnimationFrame" in window)) {
-        el.textContent = target + suffix;
-        return;
-      }
-      const start = performance.now();
-      function frame(now) {
-        const p = Math.min((now - start) / DURATION, 1);
-        const eased = 1 - Math.pow(1 - p, 3);
-        el.textContent = Math.round(target * eased) + suffix;
-        if (p < 1) requestAnimationFrame(frame);
-      }
-      requestAnimationFrame(frame);
-    }
-    if (!("IntersectionObserver" in window)) {
-      els.forEach(run);
-      return;
-    }
-    const io = new IntersectionObserver(
-      function (entries) {
-        entries.forEach(function (entry) {
-          if (entry.isIntersecting) {
-            run(entry.target);
-            io.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.4 }
-    );
-    els.forEach(function (el) { io.observe(el); });
-  }
-
-  function initFooterAccordions() {
-    const mq = window.matchMedia("(max-width: 720px)");
-    const triggers = document.querySelectorAll(".footer-col .foot-trigger");
-    if (!triggers.length) return;
-    triggers.forEach(function (trigger) {
-      function toggle() {
-        const col = trigger.closest(".footer-col");
-        if (!col) return;
-        const open = col.classList.toggle("open");
-        trigger.setAttribute("aria-expanded", String(open));
-      }
-      trigger.addEventListener("click", function (e) {
-        if (mq.matches) toggle();
+      // Close all dropdowns and mega menus
+      document.querySelectorAll(".has-dropdown.open, .has-mega.open").forEach(function (el) {
+        el.classList.remove("open");
+        var trigger = el.querySelector(".nav-trigger");
+        if (trigger) trigger.setAttribute("aria-expanded", "false");
       });
-      trigger.addEventListener("keydown", function (e) {
-        if (mq.matches && (e.key === "Enter" || e.key === " ")) {
-          e.preventDefault();
-          toggle();
+
+      if (!isOpen) {
+        parent.classList.add("open");
+        btn.setAttribute("aria-expanded", "true");
+      }
+    });
+  });
+
+  /* ---- Mega menu toggle ---- */
+  document.querySelectorAll(".has-mega > .nav-trigger").forEach(function (btn) {
+    btn.addEventListener("click", function (e) {
+      e.stopPropagation();
+      var parent = btn.closest(".has-mega");
+      var isOpen = parent.classList.contains("open");
+
+      document.querySelectorAll(".has-dropdown.open, .has-mega.open").forEach(function (el) {
+        el.classList.remove("open");
+        var trigger = el.querySelector(".nav-trigger");
+        if (trigger) trigger.setAttribute("aria-expanded", "false");
+      });
+
+      if (!isOpen) {
+        parent.classList.add("open");
+        btn.setAttribute("aria-expanded", "true");
+      }
+    });
+  });
+
+  /* Close menus when clicking outside */
+  document.addEventListener("click", function () {
+    document.querySelectorAll(".has-dropdown.open, .has-mega.open").forEach(function (el) {
+      el.classList.remove("open");
+      var trigger = el.querySelector(".nav-trigger");
+      if (trigger) trigger.setAttribute("aria-expanded", "false");
+    });
+  });
+
+  /* Close menus on Escape */
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") {
+      document.querySelectorAll(".has-dropdown.open, .has-mega.open").forEach(function (el) {
+        el.classList.remove("open");
+        var trigger = el.querySelector(".nav-trigger");
+        if (trigger) trigger.setAttribute("aria-expanded", "false");
+      });
+      var mm = document.getElementById("mobile-menu");
+      if (mm && mm.classList.contains("open")) {
+        mm.classList.remove("open");
+        mm.setAttribute("aria-hidden", "true");
+        var backdrop = document.getElementById("menu-backdrop");
+        if (backdrop) backdrop.classList.remove("open");
+      }
+    }
+  });
+
+  /* ---- Mobile menu ---- */
+  var navToggle = document.getElementById("nav-toggle");
+  var mobileMenu = document.getElementById("mobile-menu");
+  var mobileClose = document.getElementById("mobile-close");
+  var backdrop = document.getElementById("menu-backdrop");
+
+  function openMobile() {
+    if (mobileMenu) {
+      mobileMenu.classList.add("open");
+      mobileMenu.setAttribute("aria-hidden", "false");
+    }
+    if (backdrop) backdrop.classList.add("open");
+    if (navToggle) navToggle.classList.add("open");
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeMobile() {
+    if (mobileMenu) {
+      mobileMenu.classList.remove("open");
+      mobileMenu.setAttribute("aria-hidden", "true");
+    }
+    if (backdrop) backdrop.classList.remove("open");
+    if (navToggle) navToggle.classList.remove("open");
+    document.body.style.overflow = "";
+  }
+
+  if (navToggle) {
+    navToggle.addEventListener("click", function () {
+      if (mobileMenu && mobileMenu.classList.contains("open")) {
+        closeMobile();
+      } else {
+        openMobile();
+      }
+    });
+  }
+  if (mobileClose) mobileClose.addEventListener("click", closeMobile);
+  if (backdrop) backdrop.addEventListener("click", closeMobile);
+
+  /* ---- Mobile accordions ---- */
+  document.querySelectorAll(".mobile-nav-link.acc-trigger").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var expanded = btn.getAttribute("aria-expanded") === "true";
+      btn.setAttribute("aria-expanded", String(!expanded));
+      var target = document.getElementById(btn.getAttribute("aria-controls"));
+      if (target) target.classList.toggle("open");
+    });
+  });
+
+  /* ---- Animated counters ---- */
+  function animateCount(el) {
+    var target = parseInt(el.getAttribute("data-count"), 10);
+    var suffix = el.getAttribute("data-suffix") || "";
+    var duration = 1800;
+    var start = null;
+
+    function step(ts) {
+      if (!start) start = ts;
+      var progress = Math.min((ts - start) / duration, 1);
+      var eased = 1 - Math.pow(1 - progress, 3);
+      el.textContent = Math.round(eased * target) + suffix;
+      if (progress < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+
+  var counters = document.querySelectorAll(".counter-num, .metric-num");
+  if ("IntersectionObserver" in window && counters.length) {
+    var counterObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          animateCount(entry.target);
+          counterObserver.unobserve(entry.target);
         }
       });
+    }, { threshold: 0.4 });
+    counters.forEach(function (c) { counterObserver.observe(c); });
+  } else {
+    counters.forEach(function (c) {
+      var target = c.getAttribute("data-count") || "0";
+      var suffix = c.getAttribute("data-suffix") || "";
+      c.textContent = target + suffix;
     });
   }
 
-  function initFeatureFilter() {
-    const input = document.getElementById("feature-search");
-    const cards = Array.prototype.slice.call(document.querySelectorAll("[data-feature-card]"));
-    if (!input || !cards.length) return;
-    const empty = document.getElementById("feature-no-results");
-    input.addEventListener("input", function () {
-      const q = input.value.trim().toLowerCase();
-      let visible = 0;
-      cards.forEach(function (card) {
-        const hay = (card.textContent || "").toLowerCase();
-        const show = !q || hay.indexOf(q) !== -1;
-        card.style.display = show ? "" : "none";
-        if (show) visible += 1;
+  /* ---- Header scroll state ---- */
+  var header = document.getElementById("site-header");
+  if (header) {
+    var onScroll = function () {
+      header.classList.toggle("scrolled", window.scrollY > 8);
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+  }
+
+  /* ---- Back to top ---- */
+  var backTop = document.getElementById("back-top");
+  if (backTop) {
+    window.addEventListener("scroll", function () {
+      backTop.classList.toggle("show", window.scrollY > 500);
+    }, { passive: true });
+    backTop.addEventListener("click", function () {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  }
+
+  /* ---- Reveal on scroll ---- */
+  var revealEls = document.querySelectorAll(".reveal");
+  if ("IntersectionObserver" in window && revealEls.length) {
+    var revealObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          revealObserver.unobserve(entry.target);
+        }
       });
-      if (empty) empty.hidden = visible !== 0;
-    });
+    }, { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
+    revealEls.forEach(function (el) { revealObserver.observe(el); });
+  } else {
+    revealEls.forEach(function (el) { el.classList.add("is-visible"); });
   }
 
-  function initAnchors() {
-    // Log any dead internal links at load time (debug aid, harmless in prod).
-    document.querySelectorAll("a[href]").forEach(function (a) {
-      const href = a.getAttribute("href");
-      if (href && href.indexOf(".html#") !== -1) {
-        const file = href.split("#")[0];
-        const frag = href.split("#")[1];
-        if (window.location.href.split("#")[0].endsWith("/" + file)) return;
+  /* ---- Footer dropdown toggles (mobile) ---- */
+  document.querySelectorAll(".foot-trigger").forEach(function (trigger) {
+    trigger.addEventListener("click", function () {
+      if (window.innerWidth > 860) return;
+      var expanded = trigger.getAttribute("aria-expanded") === "true";
+      trigger.setAttribute("aria-expanded", String(!expanded));
+      var list = trigger.nextElementSibling;
+      if (list) {
+        list.style.display = expanded ? "none" : "flex";
       }
     });
-  }
-
-  function boot() {
-    initHeaderScroll();
-    initMobileMenu();
-    initMegaMenu();
-    initReveals();
-    initBackTop();
-    initFloatContact();
-    initFeatureFilter();
-    initCounters();
-    initFooterAccordions();
-    initAnchors();
-    if (window.IN4LeadForms) window.IN4LeadForms();
-  }
-
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", boot);
-  } else {
-    boot();
-  }
+  });
 })();
