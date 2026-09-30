@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" fill="none">
+  <rect width="400" height="300" rx="16" fill="#F8F7FF"/>
+  <rect x="20" y="20" width="360" height="260" rx="12" fill="#fff" stroke="#E5E0F0" stroke-width="1.5"/>
+  <!-- Device body -->
+  <rect x="120" y="40" width="160" height="220" rx="16" fill="#2D2B55"/>
+  <rect x="130" y="50" width="140" height="180" rx="8" fill="#3D3B6B"/>
+  <!-- Screen -->
+  <rect x="140" y="60" width="120" height="100" rx="6" fill="#1A1840"/>
+  <!-- Fingerprint icon on screen -->
+  <g transform="translate(200, 110)" stroke="#72BF44" stroke-width="2" fill="none" stroke-linecap="round">
+    <path d="M-20,-15 C-20,-25 -10,-30 0,-30 C10,-30 20,-25 20,-15 C20,-5 15,0 15,10 C15,20 10,25 0,25 C-10,25 -15,20 -15,10" opacity="0.4"/>
+    <path d="M-15,-10 C-15,-20 -8,-25 0,-25 C8,-25 15,-20 15,-10 C15,0 12,5 12,12 C12,20 8,22 0,22 C-8,22 -12,20 -12,12" opacity="0.6"/>
+    <path d="M-10,-5 C-10,-15 -5,-18 0,-18 C5,-18 10,-15 10,-5 C10,5 8,10 8,15 C8,18 4,20 0,20 C-4,20 -8,18 -8,15" opacity="0.8"/>
+    <path d="M-5,0 C-5,-8 -2,-10 0,-10 C2,-10 5,-8 5,0 C5,8 3,12 3,15" opacity="1"/>
+  </g>
+  <!-- Status text -->
+  <text x="200" y="145" text-anchor="middle" fill="#72BF44" font-family="sans-serif" font-size="10" font-weight="600">VERIFIED</text>
+  <!-- Scanner area -->
+  <rect x="155" y="175" width="90" height="50" rx="8" fill="#1A1840" stroke="#72BF44" stroke-width="1.5" stroke-opacity="0.5"/>
+  <rect x="170" y="185" width="60" height="30" rx="4" fill="none" stroke="#72BF44" stroke-width="1" stroke-opacity="0.3"/>
+  <line x1="175" y1="200" x2="225" y2="200" stroke="#72BF44" stroke-width="1.5" stroke-linecap="round" stroke-opacity="0.6"/>
+  <!-- Connection lines -->
+  <g stroke="#6528F7" stroke-width="1.5" stroke-dasharray="4 3" opacity="0.4">
+    <line x1="120" y1="80" x2="60" y2="60"/>
+    <line x1="120" y1="150" x2="50" y2="150"/>
+    <line x1="120" y1="220" x2="60" y2="240"/>
+    <line x1="280" y1="80" x2="340" y2="60"/>
+    <line x1="280" y1="150" x2="350" y2="150"/>
+    <line x1="280" y1="220" x2="340" y2="240"/>
+  </g>
+  <!-- Left icons -->
+  <g transform="translate(45, 55)">
+    <rect width="30" height="30" rx="8" fill="#EDE9FE"/>
+    <text x="15" y="20" text-anchor="middle" font-size="14">👆</text>
+  </g>
+  <g transform="translate(35, 140)">
+    <rect width="30" height="30" rx="8" fill="#DCFCE7"/>
+    <text x="15" y="20" text-anchor="middle" font-size="14">🪪</text>
+  </g>
+  <g transform="translate(45, 225)">
+    <rect width="30" height="30" rx="8" fill="#EDE9FE"/>
+    <text x="15" y="20" text-anchor="middle" font-size="14">📱</text>
+  </g>
+  <!-- Right icons -->
+  <g transform="translate(325, 55)">
+    <rect width="30" height="30" rx="8" fill="#DCFCE7"/>
+    <text x="15" y="20" text-anchor="middle" font-size="14">😊</text>
+  </g>
+  <g transform="translate(325, 140)">
+    <rect width="30" height="30" rx="8" fill="#EDE9FE"/>
+    <text x="15" y="20" text-anchor="middle" font-size="14">📊</text>
+  </g>
+  <g transform="translate(325, 225)">
+    <rect width="30" height="30" rx="8" fill="#DCFCE7"/>
+    <text x="15" y="20" text-anchor="middle" font-size="14">🔒</text>
+  </g>
+</svg>

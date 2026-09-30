@@ -282,7 +282,7 @@
 }
 
 /* ---- Product showcase cards (home) ---- */
-.product-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; }
+.product-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 26px; }
 
 .product-card {
   display: flex;

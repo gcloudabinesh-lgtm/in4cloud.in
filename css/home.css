@@ -128,10 +128,19 @@
 
 /* Module cards grid */
 .module-cards-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  display: flex;
   gap: 16px;
   margin-top: 28px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 8px;
+  scrollbar-width: thin;
+}
+
+.module-cards-grid .module-card {
+  flex: 0 0 260px;
+  scroll-snap-align: start;
 }
 
 .module-card {
@@ -472,8 +481,8 @@
   .metrics-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-  .module-cards-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .module-cards-grid .module-card {
+    flex: 0 0 220px;
   }
 }
 
@@ -482,8 +491,8 @@
     grid-template-columns: 1fr 1fr;
     gap: 16px;
   }
-  .module-cards-grid {
-    grid-template-columns: 1fr;
+  .module-cards-grid .module-card {
+    flex: 0 0 200px;
   }
   .marquee-group {
     gap: 40px;

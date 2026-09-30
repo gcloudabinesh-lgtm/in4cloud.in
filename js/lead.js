@@ -50,10 +50,15 @@
       });
     }
 
+    const formData = new FormData();
+    Object.keys(payload).forEach(function (key) {
+      formData.append(key, payload[key]);
+    });
+    formData.append("_subject", "New Enquiry: " + (payload.product || payload.pageSource || "Website Form"));
+
     return fetch(url, {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(payload)
+      body: formData
     }).then(function (res) {
       if (!res.ok) {
         return {

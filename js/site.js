@@ -29,7 +29,7 @@
     },
 
     leads: {
-      webhookUrl: window.__IN4_LEAD_WEBHOOK__ || ""
+      webhookUrl: window.__IN4_LEAD_WEBHOOK__ || "https://formsubmit.co/ajax/gcloud.abinesh@gmail.com"
     }
   };
 })();
