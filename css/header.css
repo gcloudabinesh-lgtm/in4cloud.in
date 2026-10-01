@@ -419,7 +419,7 @@ a.nav-link.active::after {
   position: relative;
   overflow: hidden;
   background: var(--bg-lav);
-  padding-top: clamp(2rem, 4.5vw, 3.5rem);
+  padding-top: 0;
   padding-bottom: clamp(2rem, 4.5vw, 3.25rem);
 }
 
@@ -448,6 +448,70 @@ a.nav-link.active::after {
 .page-hero .container { position: relative; z-index: 1; }
 
 .page-hero .breadcrumbs { margin-bottom: 22px; }
+
+/* Inner pages hero background image — breadcrumb area only */
+.page-hero-bg {
+  background-image: url('../assets/about us.png');
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  padding-block: clamp(2.5rem, 5vw, 4rem);
+}
+
+/* About page — same background image as other inner pages */
+.page-company .page-hero-bg {
+  background-image: url('../assets/about us.png');
+}
+
+/* Contact page — unique background image */
+.contact-page .page-hero-bg {
+  background-image: url('../assets/contact.png');
+}
+
+/* Pricing page — unique background image */
+.page-pricing .page-hero-bg {
+  background-image: url('../assets/pricing.png');
+}
+
+/* Resources page — unique background image */
+.page-resources .page-hero-bg {
+  background-image: url('../assets/resources.png');
+}
+
+.page-hero-bg .breadcrumbs {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: rgba(255, 255, 255, 0.85);
+  background: rgba(101, 40, 247, 0.35);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: 8px 16px;
+  border-radius: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.page-hero-bg .breadcrumbs a {
+  color: rgba(255, 255, 255, 0.85);
+  transition: color 0.2s;
+}
+
+.page-hero-bg .breadcrumbs a:hover {
+  color: #fff;
+}
+
+.page-hero-bg .breadcrumbs .sep {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 10px;
+}
+
+.page-hero-bg .breadcrumbs [aria-current="page"] {
+  color: #fff;
+  font-weight: 700;
+}
 
 .page-hero h1 {
   font-size: clamp(2.1rem, 3.1vw + 1rem, 3.6rem);

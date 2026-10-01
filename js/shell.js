@@ -13,7 +13,7 @@
     "cloudhr.html": "cloudhr",
     "visitor-management.html": "visitor",
     "parking-management.html": "parking",
-    "company.html": "company",
+    "about.html": "company",
     "contact.html": "contact",
     "resources.html": "resources",
     "pricing.html": "pricing"
@@ -72,7 +72,7 @@
     '<a href="cloudhr.html#modules"><i class="ico fa-solid fa-robot" aria-hidden="true"></i> AI-based Analytics</a>' +
     "</div></div>" +
     '<div class="mega-col"><span class="mega-title">Company</span><div class="mega-links">' +
-    '<a href="company.html"><i class="ico fa-solid fa-building" aria-hidden="true"></i> About IN4 Solutions</a>' +
+    '<a href="about.html"><i class="ico fa-solid fa-building" aria-hidden="true"></i> About IN4 Solutions</a>' +
     '<a href="contact.html"><i class="ico fa-solid fa-envelope" aria-hidden="true"></i> Contact</a>' +
     '<a href="resources.html"><i class="ico fa-solid fa-book-open" aria-hidden="true"></i> Resources</a>' +
     '<a href="pricing.html"><i class="ico fa-solid fa-tag" aria-hidden="true"></i> Pricing</a>' +
@@ -87,7 +87,7 @@
     '<button class="nav-link nav-trigger" type="button" aria-haspopup="true" aria-expanded="false">' +
     'Company<i class="ico fa-solid fa-chevron-down" aria-hidden="true"></i></button>' +
     '<div class="dropdown-menu" role="menu">' +
-    '<a href="company.html"><i class="ico fa-solid fa-building" aria-hidden="true"></i> About Us</a>' +
+    '<a href="about.html"><i class="ico fa-solid fa-building" aria-hidden="true"></i> About Us</a>' +
     '<a href="contact.html"><i class="ico fa-solid fa-envelope" aria-hidden="true"></i> Contact</a>' +
     "</div></li>" +
     "</ul></nav>" +
@@ -121,7 +121,7 @@
     '<button class="mobile-nav-link acc-trigger" type="button" aria-expanded="false" aria-controls="m-acc-company">' +
     'Company<i class="ico ico-chev fa-solid fa-chevron-down" aria-hidden="true"></i></button>' +
     '<div class="mobile-sub" id="m-acc-company"><div class="mobile-sub-inner"><div class="mobile-sub-links">' +
-    '<a href="company.html"><i class="ico fa-solid fa-building" aria-hidden="true"></i> About Us</a>' +
+    '<a href="about.html"><i class="ico fa-solid fa-building" aria-hidden="true"></i> About Us</a>' +
     '<a href="contact.html"><i class="ico fa-solid fa-envelope" aria-hidden="true"></i> Contact</a>' +
     "</div></div></div>" +
     "</div>" +
@@ -160,7 +160,7 @@
     '<li><a href="cloudhr.html#modules">AI-based Analytics</a></li>' +
     "</ul></div>" +
     '<div class="footer-col"><h4 class="foot-trigger" role="button" tabindex="0" aria-expanded="false">Company<i class="ico fa-solid fa-chevron-down foot-caret" aria-hidden="true"></i></h4><ul>' +
-    '<li><a href="company.html">About</a></li>' +
+    '<li><a href="about.html">About</a></li>' +
     '<li><a href="resources.html">Resources</a></li>' +
     '<li><a href="pricing.html">Pricing</a></li>' +
     '<li><a href="contact.html">Contact</a></li>' +
