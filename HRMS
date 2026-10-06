@@ -1,0 +1,633 @@
+IMPORTANT CORRECTION PROMPT
+
+Update the existing HRMS product page.
+
+CHANGE PAGE / URL:
+Use HRMS naming instead of CloudHR.
+
+Target page:
+hrms.html
+
+Update all internal references, navigation links, breadcrumbs, CTA links, page title references and related anchors so this product is presented as:
+
+HRMS
+
+Do NOT keep “CloudHR” as the primary product/page name unless it is required in legacy code comments or internal compatibility.
+
+==================================================
+DESIGN DIRECTION CORRECTION
+==================================================
+
+The previous layout still feels too AI-generated, repetitive and template-like.
+
+I need the page to feel like it was designed manually by a strong product/UI designer.
+
+GOAL:
+Create a premium, human-designed enterprise HRMS product page with a more editorial, intentional and polished layout.
+
+The design should feel:
+- crafted
+- premium
+- asymmetric
+- balanced
+- visually intelligent
+- not generic
+- not template-based
+- not “AI card grid”
+- not overly decorative
+
+Think:
+high-end SaaS product website
++
+enterprise HR platform
++
+editorial web design
++
+strong product storytelling
+
+==================================================
+AVOID AI-GENERATED VISUAL PATTERNS
+==================================================
+
+DO NOT:
+- use repeated 3-card or 4-card grids in every section
+- put every feature inside rounded rectangles
+- use random floating glass circles
+- use unnecessary gradients in every section
+- add decorative blobs everywhere
+- use the same icon + heading + paragraph structure repeatedly
+- create symmetrical layouts in every section
+- overuse centered text
+- overuse generic “glassmorphism”
+- use random stock-style people illustrations
+- use oversized abstract illustrations with no product relevance
+- use excessive scroll animations
+- use decorative UI that does not explain the HRMS product
+
+No more than 1–2 major sections should use a conventional card grid.
+
+==================================================
+HUMAN-DESIGNED LAYOUT PRINCIPLES
+==================================================
+
+Use:
+- intentional asymmetry
+- editorial spacing
+- mixed content widths
+- alternating left/right compositions
+- image-led sections
+- large typography paired with compact content
+- clear visual hierarchy
+- connected process flows
+- timeline layouts
+- large dashboard moments
+- selective feature bands
+- meaningful visual anchors
+- subtle alignment changes between sections
+- strong use of whitespace
+
+Not every section needs a border or container.
+
+Some sections should feel open and editorial.
+
+==================================================
+PAGE STRUCTURE
+==================================================
+
+Use the same real client PDF content already provided.
+
+Do not rewrite the approved product content unless needed for minor grammar cleanup.
+
+Use this page structure:
+
+1. Hero
+2. Flexible & Customized HR Solutions
+3. Complete HRMS Ecosystem
+4. HRMS for Different Business Sizes
+5. Attendance Management
+6. Central Employee Dashboard
+7. Pro-Bot AI Chatbot
+8. Leave Management
+9. Dynamic Payroll
+10. Training Management
+11. Performance & Appraisal
+12. Reports & Analytics
+13. ERP Integration
+14. Mobile Employee Self-Service
+15. Final Demo CTA
+
+==================================================
+1. HERO — PREMIUM EDITORIAL PRODUCT LAYOUT
+==================================================
+
+Do NOT use a generic left-text / right-image box.
+
+Create a more premium composition.
+
+Suggested desktop direction:
+
+Large H1 on left taking about 55–60% width.
+
+Small product descriptor above.
+
+Description below with narrow readable width.
+
+CTA buttons aligned naturally below.
+
+On the right:
+Use a layered real product visual:
+- HR dashboard
+- mobile screen
+- attendance interface
+- payroll/leave snippets
+
+Use product UI screenshots if available.
+
+Allow the visual to slightly overlap the hero background rhythm, but do not make it look like random floating cards.
+
+Keep the hero clean.
+
+Headline:
+Complete HRMS Solution – From Attendance to Payroll
+
+Supporting line:
+Skip the Hassle of Multiple Tools – Manage HR in One Place.
+
+Primary CTA:
+Book a Free Demo
+
+Secondary CTA:
+Explore HRMS
+
+==================================================
+2. FLEXIBLE & CUSTOMIZED HR SOLUTIONS
+==================================================
+
+Do not make this a card section.
+
+Use an editorial statement section.
+
+Left:
+Large heading and short body copy.
+
+Right:
+A structured visual that communicates:
+Cloud
+On-Premise
+Customized Workflows
+
+Use a simple connected diagram instead of cards.
+
+Allow a large amount of whitespace.
+
+==================================================
+3. COMPLETE HRMS ECOSYSTEM
+==================================================
+
+This section must feel custom-designed.
+
+Do NOT create 16 cards.
+
+Use a large central product dashboard screenshot or HRMS hub.
+
+Around or beside it, group capabilities in clean text clusters.
+
+Use the actual client features:
+- Dashboard
+- Onboarding
+- Attendance Management
+- Leave Management
+- Dynamic Payroll
+- Geomarking & Fencing
+- Shift Scheduling
+- Appraisal Management
+- Performance Management
+- Employee Self Service
+- Training & Development
+- Exit Management
+- Notification Alerts
+- Recruitment
+- Chatbot (Pro-Bot)
+- Reports & Analytics
+
+Recommended layout:
+left column = grouped capability index
+right column = large product screenshot
+
+Use subtle numbered groups or category labels.
+Avoid icon overload.
+
+==================================================
+4. HRMS FOR DIFFERENT BUSINESS SIZES
+==================================================
+
+Make this section visual and editorial.
+
+Do not use three equal cards.
+
+Create a progressive horizontal composition:
+
+SMEs
+→ Growing Businesses
+→ Large Enterprises / Specific Industries
+
+Use three differently sized content areas rather than equal boxes.
+
+Use typography and spacing to visually communicate scale.
+
+Content should still come from the client PDF.
+
+==================================================
+5. ATTENDANCE MANAGEMENT
+==================================================
+
+Make this one of the strongest product sections.
+
+Use a dashboard screenshot or visual on one side.
+
+Use a vertical capability rail on the other side.
+
+Include:
+- biometric integration
+- time and attendance policies
+- manual punch
+- approve/reject requests
+- daily/weekly/monthly summaries
+- overtime / absenteeism patterns
+- multiple shifts
+- automatic shift rotation
+- geo-fencing
+- GPS tagging
+- field employee attendance
+
+Do not turn these into cards.
+
+Use:
+thin separators
+small labels
+clean hierarchy
+one flowing content column
+
+==================================================
+6. CENTRAL EMPLOYEE DASHBOARD
+==================================================
+
+Use a full-width dashboard showcase.
+
+The dashboard visual should be the hero of this section.
+
+Use only 3 compact callouts around the dashboard:
+- Multi-Location Support
+- Employee Overview
+- Event Updates
+
+No cards.
+
+Use subtle pointers / lines / annotations if needed.
+
+==================================================
+7. PRO-BOT AI CHATBOT
+==================================================
+
+Do not create generic AI graphics.
+
+Make it feel like an actual HR assistant.
+
+Use:
+chat window
+sample HR interaction
+employee query interface
+small supporting benefit text
+
+Benefits:
+- 24/7 HR Assistance
+- Employee Self Service
+- Reduce HR Workload
+
+Use an asymmetric conversational layout.
+
+==================================================
+8. LEAVE MANAGEMENT
+==================================================
+
+Use an actual workflow layout:
+
+Apply Leave
+→ Policy Check
+→ Approval
+→ Status
+→ Entitlement Update
+
+Place the client features along this journey:
+- Leave Policy Management
+- Flexible Leave Options
+- Real-Time Leave Status Updates
+- Leave Application & Notifications
+- Group Leave Policy Management
+
+Use thin line / step design.
+Do not use cards.
+
+==================================================
+9. DYNAMIC PAYROLL
+==================================================
+
+Create a payroll pipeline.
+
+Input:
+Attendance
+Leave
+Overtime
+Incentives
+
+↓
+
+Processing:
+Salary Calculation
+Tax & Compliance
+Compensation
+Reimbursements
+Loans
+
+↓
+
+Output:
+Payroll
+
+Use the client-approved payroll content.
+
+Make this feel technical and enterprise-grade, not decorative.
+
+==================================================
+10. TRAINING MANAGEMENT
+==================================================
+
+Use an employee learning journey.
+
+Suggested visual:
+Enrollment
+→ Schedule
+→ Learning Progress
+→ Certificate
+→ Feedback
+
+Integrate:
+- Track Skill Development
+- Automated Scheduling & Reminders
+- Certificate & Feedback Management
+- Easy Enrollment & Nomination
+- Trainer Management
+
+Use large typography with a single product screenshot.
+
+==================================================
+11. PERFORMANCE & APPRAISAL
+==================================================
+
+Use a structured appraisal timeline.
+
+01 Appraisal Cycle
+02 KRA/KPI Setup
+03 Self & Manager Review
+04 HR Finalization
+05 Increment Letters & History
+
+Do not use cards.
+
+Use a strong vertical timeline on desktop with alternating content sides.
+
+On mobile:
+single-column timeline.
+
+==================================================
+12. REPORTS & ANALYTICS
+==================================================
+
+Make this visually data-heavy.
+
+Use:
+large analytics screenshot
+filters panel
+report previews
+
+Include:
+- Prebuilt Reports
+- Customizable Reports Using Filter
+- PASI/SPF Report Generation
+- WPS Report Generation
+
+Use two content zones:
+visual
++
+compact report descriptions
+
+Avoid unnecessary decoration.
+
+==================================================
+13. ERP INTEGRATION
+==================================================
+
+Make this section look like a systems architecture diagram.
+
+Center:
+HRMS
+
+Connected to:
+Tally
+SAP
+Oracle
+Custom ERP
+
+Then show flow toward:
+HR
+Finance
+Payroll
+Reports
+
+Use clean lines and labels.
+
+No cards.
+
+==================================================
+14. MOBILE EMPLOYEE SELF-SERVICE
+==================================================
+
+Use 2–3 real mobile mockups if available.
+
+Feature list:
+- Checkin/Checkout
+- Leave Management
+- Access Payroll
+- Performance Insights
+- Enhance Employee Experience
+- Real-Time Notifications
+- Arabic & English support
+
+Use an open layout with mobile screens as the main visual.
+
+==================================================
+15. FINAL CTA
+==================================================
+
+Do not use a small centered card.
+
+Create a full-width closing section.
+
+Use:
+large heading
+short copy
+primary CTA
+secondary CTA
+subtle HRMS dashboard/mobile composition
+
+Heading:
+Book a Free Demo Now
+
+Supporting text:
+For more details, we’re here to guide you with a complete product walkthrough.
+
+Primary CTA:
+Book a Free Demo
+
+Secondary CTA:
+Contact Us
+
+==================================================
+COLOR / VISUAL SYSTEM
+==================================================
+
+Continue the current IN4 Solutions brand.
+
+Use:
+- white
+- very light lavender
+- violet
+- indigo
+- restrained soft blue
+- subtle gradients only where needed
+
+Do NOT copy the green visual identity from the PDF.
+
+Do NOT introduce a new brand palette.
+
+==================================================
+TYPOGRAPHY
+==================================================
+
+Use typography more intentionally.
+
+Desktop:
+- larger editorial H1
+- strong H2 hierarchy
+- narrower paragraph widths
+- more contrast between heading and body
+- small eyebrow labels
+
+Avoid:
+- every heading centered
+- same heading size everywhere
+- too much text inside containers
+
+Use clamp() for responsive scaling.
+
+==================================================
+SPACING
+==================================================
+
+Improve spacing to feel hand-crafted.
+
+Do not use the same top/bottom padding for every section.
+
+Some major product sections can have more breathing room.
+Smaller transition sections can be tighter.
+
+Maintain rhythm, but do not make it mechanically repetitive.
+
+==================================================
+RESPONSIVE REQUIREMENTS
+==================================================
+
+Fully responsive for:
+
+1440px
+1280px
+1024px
+834px
+768px
+430px
+390px
+375px
+360px
+320px
+
+On tablet:
+- simplify complex diagrams
+- switch alternating layouts cleanly
+- avoid awkward image/text squeezing
+
+On mobile:
+- all split sections become single column
+- timelines become vertical
+- diagrams become stacked
+- product screenshots scale to width
+- no horizontal scrolling
+- no overlaps
+- minimum 16px side padding
+- buttons stay touch-friendly
+- do not hide important client content just to simplify layout
+
+==================================================
+URL / PAGE NAMING
+==================================================
+
+Rename the page to:
+
+hrms.html
+
+Update:
+- navigation link
+- breadcrumb
+- internal page links
+- canonical references if present
+- sitemap references if present
+- page title / meta references where applicable
+
+Page visible name:
+HRMS
+
+Do not use “CloudHR” as the primary visible page name.
+
+==================================================
+CODE QUALITY
+==================================================
+
+Before changing anything:
+
+1. Inspect the current HRMS/CloudHR page.
+2. Inspect shared styles and layout components.
+3. Reuse existing global styles where possible.
+4. Avoid duplicate CSS.
+5. Do not introduce a new framework.
+6. Keep existing JS working.
+7. Preserve header/footer.
+8. Keep accessibility intact.
+
+After implementation test:
+
+- desktop
+- tablet
+- mobile
+- no horizontal scroll
+- no broken links
+- no overlapping
+- no repeated generic card pattern
+- no fake product claims
+- page feels visually premium and intentional
+
+Finally report:
+- files changed
+- old URL → new URL changes
+- sections redesigned
+- CSS added
+- responsive changes
+- assets/screenshots still needed

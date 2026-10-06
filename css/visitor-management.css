@@ -1,0 +1,276 @@
+/* ============ Visitor Management — page-specific layouts ============ */
+
+/* --- Hero layered visual --- */
+.vm-hero-visual { position: relative; }
+.vm-hero-stack { position: relative; display: grid; gap: 14px; }
+.vm-float {
+  position: absolute;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  box-shadow: var(--shadow-md);
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink-800);
+  animation: floatY 6s ease-in-out infinite;
+}
+.vm-float .ico { width: 20px; height: 20px; color: var(--purple-600); }
+.vm-float.qr { top: -18px; right: -14px; animation-delay: .8s; }
+.vm-float.pass { bottom: 56px; left: -22px; animation-delay: 1.6s; }
+.vm-float.park { bottom: -18px; right: 8px; animation-delay: 2.4s; }
+@media (max-width: 1023px) {
+  .vm-float.qr { right: 0; }
+  .vm-float.pass { left: 0; }
+}
+@media (max-width: 520px) {
+  .vm-float { padding: 9px 12px; font-size: 12px; }
+  .vm-float.pass { bottom: 40px; }
+}
+
+/* --- Section 2: two visitor journeys --- */
+.vm-journeys { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.vm-journey {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  box-shadow: var(--shadow-sm);
+  padding: clamp(1.4rem, 2.4vw, 2rem);
+}
+.vm-journey h3 { font-size: 18px; font-weight: 800; margin-bottom: 6px; }
+.vm-journey > p { font-size: 14.5px; color: var(--text-muted); margin-bottom: 18px; }
+.vm-journey-media {
+  border-radius: var(--r-md);
+  background: linear-gradient(160deg, var(--purple-50), #fff);
+  border: 1.5px dashed var(--purple-200);
+  aspect-ratio: 16 / 10;
+  margin-bottom: 18px;
+  overflow: hidden;
+}
+.vm-journey-media img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.vm-steps { position: relative; display: flex; flex-direction: column; }
+.vm-steps::before {
+  content: "";
+  position: absolute;
+  left: 21px;
+  top: 22px;
+  bottom: 22px;
+  width: 2px;
+  background: linear-gradient(180deg, var(--purple-200), var(--green-100));
+  border-radius: 2px;
+}
+.vm-step { position: relative; display: flex; align-items: flex-start; gap: 14px; padding: 10px 0; }
+.vm-step .icon-badge { width: 44px; height: 44px; border-radius: 13px; flex-shrink: 0; transition: transform .25s var(--ease), background .25s var(--ease); }
+.vm-step .icon-badge.purple .ico { color: #fff; }
+.vm-step:hover .icon-badge { transform: scale(1.08); }
+.vm-step strong { display: block; font-family: "Plus Jakarta Sans", sans-serif; font-size: 15px; color: var(--ink-800); margin-bottom: 2px; }
+.vm-step span { font-size: 13.5px; color: var(--text-muted); }
+
+/* --- Section 3: horizontal contractor workflow --- */
+.vm-flow { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; counter-reset: vmflow; }
+.vm-stage {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  box-shadow: var(--shadow-sm);
+  padding: 26px 24px;
+  position: relative;
+  transition: transform .3s var(--ease), box-shadow .3s var(--ease), border-color .3s var(--ease);
+}
+.vm-stage:hover { transform: translateY(-5px); box-shadow: var(--shadow-md); border-color: var(--purple-200); }
+.vm-stage::before {
+  content: attr(data-step);
+  display: inline-grid;
+  place-items: center;
+  width: 42px; height: 42px;
+  border-radius: 50%;
+  background: var(--grad-purple);
+  color: #fff;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 800;
+  font-size: 15px;
+  margin-bottom: 16px;
+}
+.vm-stage h3 { font-size: 17px; margin-bottom: 6px; }
+.vm-stage > p { font-size: 14.5px; color: var(--text-muted); margin-bottom: 16px; }
+.vm-stage .benefit-list { margin-bottom: 0; }
+.vm-flow-arrow { align-self: center; color: var(--purple-300); font-size: 20px; }
+
+/* --- Section 4: benefits split --- */
+.vm-benefits { display: grid; grid-template-columns: 1fr 1.4fr; gap: clamp(2rem, 5vw, 4rem); align-items: start; }
+.vm-brow {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--border-soft);
+  transition: padding-left .25s var(--ease);
+}
+.vm-brow:first-child { padding-top: 0; }
+.vm-brow:last-child { border-bottom: 0; }
+.vm-brow:hover { padding-left: 8px; }
+.vm-brow .icon-badge { width: 46px; height: 46px; border-radius: 13px; flex-shrink: 0; }
+.vm-brow h3 { font-size: 16.5px; margin-bottom: 4px; }
+.vm-brow p { font-size: 14.5px; color: var(--text-muted); }
+
+/* --- Section 5: integration split (visual left) --- */
+.vm-int-block + .vm-int-block { margin-top: 26px; padding-top: 26px; border-top: 1px solid var(--border-soft); }
+.vm-int-block h3 { font-size: 17px; margin-bottom: 6px; display: flex; align-items: center; gap: 10px; }
+.vm-int-block h3 .icon-badge { width: 38px; height: 38px; border-radius: 11px; }
+.vm-int-block > p { font-size: 14.5px; color: var(--text-muted); margin-bottom: 14px; }
+
+/* --- Section 6: industries showcase --- */
+.vm-showcase { display: grid; grid-template-columns: 1fr 1.2fr; gap: clamp(2rem, 5vw, 4rem); align-items: center; }
+.vm-facility {
+  border-radius: var(--r-xl);
+  background: linear-gradient(160deg, #ece4ff, #ffffff 55%, #e9e4ff);
+  border: 1px solid var(--purple-100);
+  min-height: 340px;
+  display: grid;
+  place-items: center;
+  position: relative;
+  overflow: hidden;
+}
+.vm-facility::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(closest-side at 70% 20%, rgba(101,40,247,.12), transparent 70%);
+}
+.vm-facility-icons { display: grid; grid-template-columns: repeat(2, 64px); gap: 18px; position: relative; }
+.vm-facility-icons .icon-badge { width: 64px; height: 64px; border-radius: 18px; background: #fff; color: var(--purple-600); box-shadow: var(--shadow-sm); }
+.vm-facility-icons .icon-badge .ico { width: 26px; height: 26px; }
+.vm-irow {
+  display: grid;
+  grid-template-columns: 44px 44px 1fr;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 16px;
+  border-radius: var(--r-md);
+  border: 1px solid transparent;
+  transition: background .25s var(--ease), border-color .25s var(--ease), transform .25s var(--ease);
+}
+.vm-irow + .vm-irow { border-top: 1px solid var(--border-soft); }
+.vm-irow:hover { background: #fff; border-color: var(--purple-100); transform: translateX(4px); }
+.vm-irow.active { background: #fff; border-color: var(--purple-200); box-shadow: var(--shadow-sm); }
+.vm-irow .num { font-family: "Plus Jakarta Sans", sans-serif; font-weight: 800; color: var(--purple-300); font-size: 15px; }
+.vm-irow .icon-badge { width: 44px; height: 44px; border-radius: 12px; }
+.vm-irow h3 { font-size: 15.5px; margin-bottom: 2px; }
+.vm-irow p { font-size: 13.5px; color: var(--text-muted); }
+
+/* --- Section 7: asymmetric features --- */
+.vm-asym { display: grid; grid-template-columns: 1.15fr 1fr; gap: 22px; }
+.vm-big {
+  background: linear-gradient(160deg, var(--purple-50), #fff 60%);
+  border: 1px solid var(--purple-100);
+  border-radius: var(--r-lg);
+  padding: clamp(1.6rem, 3vw, 2.4rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 28px;
+}
+.vm-big .icon-badge { width: 58px; height: 58px; border-radius: 17px; }
+.vm-big .icon-badge .ico { width: 26px; height: 26px; }
+.vm-big h3 { font-size: clamp(1.3rem, 1.6vw, 1.6rem); margin: 18px 0 10px; }
+.vm-big p { font-size: 15.5px; color: var(--text-body); max-width: 40ch; }
+.vm-big-visual { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.vm-big-visual span {
+  background: #fff;
+  border: 1px solid var(--purple-100);
+  border-radius: var(--r-md);
+  padding: 14px 10px;
+  text-align: center;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--purple-700);
+}
+.vm-big-visual .ico { display: block; margin: 0 auto 6px; color: var(--purple-600); width: 20px; height: 20px; }
+.vm-side { display: flex; flex-direction: column; }
+.vm-srow { display: flex; gap: 16px; align-items: flex-start; padding: 20px 0; border-bottom: 1px solid var(--border-soft); }
+.vm-srow:first-child { padding-top: 0; }
+.vm-srow:last-child { border-bottom: 0; padding-bottom: 0; }
+.vm-srow .icon-badge { width: 46px; height: 46px; border-radius: 13px; flex-shrink: 0; }
+.vm-srow h3 { font-size: 16px; margin-bottom: 4px; }
+.vm-srow p { font-size: 14px; color: var(--text-muted); }
+
+/* --- Section 8: numbered timeline --- */
+.vm-timeline { position: relative; display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+.vm-timeline::before {
+  content: "";
+  position: absolute;
+  top: 23px;
+  left: 8%;
+  right: 8%;
+  height: 2px;
+  background: linear-gradient(90deg, var(--purple-200), var(--purple-400), var(--purple-200));
+}
+.vm-tstep { text-align: center; padding: 0 8px; position: relative; }
+.vm-tstep .num {
+  width: 48px; height: 48px;
+  margin: 0 auto 14px;
+  border-radius: 50%;
+  background: #fff;
+  border: 2px solid var(--purple-300);
+  color: var(--purple-600);
+  display: grid;
+  place-items: center;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 800;
+  font-size: 15px;
+  position: relative;
+  z-index: 1;
+  transition: background .25s var(--ease), color .25s var(--ease);
+}
+.vm-tstep:hover .num { background: var(--grad-purple); color: #fff; border-color: transparent; }
+.vm-tstep h3 { font-size: 15.5px; margin-bottom: 6px; }
+.vm-tstep p { font-size: 13.5px; color: var(--text-muted); }
+@media (min-width: 900px) {
+  .vm-timeline { padding-bottom: 26px; align-items: start; }
+}
+
+/* --- Full-width final CTA --- */
+.vm-cta { position: relative; overflow: hidden; padding: clamp(3.5rem, 7vw, 6rem) 0; background: linear-gradient(135deg, #4b1fd6 0%, #6528f7 45%, #8f6bff 100%); }
+.vm-cta-bg { position: absolute; inset: 0; background: radial-gradient(closest-side at 12% 20%, rgba(255,255,255,.18), transparent 60%), radial-gradient(closest-side at 88% 80%, rgba(151,215,95,.22), transparent 62%), repeating-linear-gradient(115deg, rgba(255,255,255,.05) 0 2px, transparent 2px 26px); }
+.vm-cta-inner { position: relative; z-index: 1; display: grid; grid-template-columns: 1.25fr 1fr; gap: clamp(2rem, 5vw, 4rem); align-items: center; }
+.vm-cta-copy .eyebrow { color: #c9bdff; }
+.vm-cta-copy .eyebrow::before { background: #97d75f; }
+.vm-cta-copy h2 { color: #fff; font-size: clamp(1.9rem, 3vw, 3.1rem); font-weight: 800; letter-spacing: -0.025em; margin: 12px 0 16px; }
+.vm-cta-copy p { color: rgba(255,255,255,.85); font-size: 16.5px; max-width: 52ch; }
+.vm-cta-actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 30px; }
+.vm-cta-side { display: flex; flex-direction: column; gap: 14px; }
+.vm-cta-card { display: flex; align-items: center; gap: 14px; background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.2); backdrop-filter: blur(6px); border-radius: var(--r-lg); padding: 16px 18px; color: #fff; transition: transform .25s var(--ease), background .25s var(--ease); }
+.vm-cta-card:hover { transform: translateX(-6px); background: rgba(255,255,255,.16); }
+.vm-cta-card .icon-badge { width: 42px; height: 42px; border-radius: 12px; }
+.vm-cta-card strong { display: block; font-family: "Plus Jakarta Sans", sans-serif; font-size: 15px; }
+.vm-cta-card span { font-size: 13px; color: rgba(255,255,255,.75); }
+@media (max-width: 900px) {
+  .vm-cta-inner { grid-template-columns: 1fr; }
+}
+
+/* --- Tinted section variants --- */
+.section-ice { background: linear-gradient(180deg, #f4f7ff, #ffffff); }
+.section-soft { background: linear-gradient(180deg, #ffffff, var(--bg-lav) 30%, var(--bg-lav) 70%, #ffffff); }
+
+/* --- Responsive --- */
+@media (max-width: 1023px) {
+  .vm-journeys { grid-template-columns: 1fr; }
+  .vm-flow { grid-template-columns: 1fr; }
+  .vm-benefits { grid-template-columns: 1fr; }
+  .vm-showcase { grid-template-columns: 1fr; }
+  .vm-asym { grid-template-columns: 1fr; }
+  .vm-timeline { grid-template-columns: repeat(2, 1fr); }
+  .vm-timeline::before { display: none; }
+  .vm-tstep:nth-child(even) { transform: none; }
+  .vm-facility { min-height: 260px; }
+}
+@media (max-width: 640px) {
+  .vm-timeline { grid-template-columns: 1fr; gap: 26px; }
+  .vm-irow { grid-template-columns: 34px 40px 1fr; gap: 12px; padding: 16px 10px; }
+  .vm-irow .icon-badge { width: 40px; height: 40px; }
+  .vm-big-visual { grid-template-columns: 1fr; }
+  .vm-steps::before { left: 21px; }
+}

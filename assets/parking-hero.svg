@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" fill="none" role="img" aria-label="ANPR camera identifying a number plate at a parking gate with boom barrier">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="640" y2="480" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#EEF4FF"/>
+      <stop offset="1" stop-color="#E7DEFF"/>
+    </linearGradient>
+    <linearGradient id="barrier" x1="0" y1="0" x2="1" y2="0">
+      <stop stop-color="#6528F7"/>
+      <stop offset="1" stop-color="#9779FF"/>
+    </linearGradient>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#6528F7" flood-opacity="0.16"/>
+    </filter>
+  </defs>
+
+  <rect width="640" height="480" rx="28" fill="url(#bg)"/>
+  <circle cx="560" cy="70" r="80" fill="#FFFFFF" fill-opacity="0.35"/>
+  <circle cx="70" cy="430" r="66" fill="#FFFFFF" fill-opacity="0.28"/>
+
+  <!-- Road -->
+  <rect x="0" y="368" width="640" height="112" rx="0" fill="#DAD2F8"/>
+  <rect x="0" y="368" width="640" height="6" fill="#C9BEF0"/>
+  <g fill="#FFFFFF" fill-opacity="0.7">
+    <rect x="60" y="420" width="56" height="8" rx="4"/>
+    <rect x="170" y="420" width="56" height="8" rx="4"/>
+    <rect x="420" y="420" width="56" height="8" rx="4"/>
+    <rect x="530" y="420" width="56" height="8" rx="4"/>
+  </g>
+
+  <!-- Car -->
+  <g filter="url(#soft)">
+    <path d="M120 340c6-30 22-46 56-46h64c30 0 48 14 58 40l10 20v22h-20a22 22 0 0 0-44 0H174a22 22 0 0 0-44 0h-10v-36z" fill="#6528F7"/>
+  </g>
+  <path d="M164 302h66c24 0 40 10 50 32H150c6-16 8-24 14-32z" fill="#CDE3FF"/>
+  <circle cx="166" cy="378" r="16" fill="#241B3F"/><circle cx="166" cy="378" r="7" fill="#8F7BFF"/>
+  <circle cx="252" cy="378" r="16" fill="#241B3F"/><circle cx="252" cy="378" r="7" fill="#8F7BFF"/>
+  <rect x="292" y="322" width="16" height="26" rx="8" fill="#FFD66B"/>
+
+  <!-- Number plate -->
+  <rect x="128" y="330" width="52" height="18" rx="5" fill="#FFFFFF" stroke="#C9BDFF" stroke-width="2"/>
+  <text x="154" y="343" text-anchor="middle" font-family="Arial, sans-serif" font-weight="bold" font-size="11" fill="#241B3F">TN 07</text>
+
+  <!-- ANPR camera pole -->
+  <rect x="392" y="150" width="10" height="220" rx="5" fill="#B9AEE8"/>
+  <rect x="372" y="128" width="60" height="34" rx="10" fill="#241B3F"/>
+  <circle cx="404" cy="145" r="9" fill="#6528F7"/>
+  <circle cx="404" cy="145" r="4" fill="#8F7BFF"/>
+  <path d="M372 140l-18 8v10l18 4z" fill="#241B3F"/>
+
+  <!-- Camera scan beam -->
+  <path d="M360 148L150 330h44L376 158z" fill="#6528F7" fill-opacity="0.10"/>
+
+  <!-- Boom barrier -->
+  <rect x="456" y="268" width="26" height="102" rx="12" fill="#4C3AD6"/>
+  <rect x="462" y="250" width="14" height="24" rx="7" fill="#241B3F"/>
+  <g transform="rotate(-4 462 262)">
+    <rect x="462" y="252" width="132" height="18" rx="9" fill="url(#barrier)"/>
+    <rect x="492" y="252" width="14" height="18" fill="#FFFFFF" fill-opacity="0.85"/>
+    <rect x="532" y="252" width="14" height="18" fill="#FFFFFF" fill-opacity="0.85"/>
+    <rect x="572" y="252" width="14" height="18" fill="#FFFFFF" fill-opacity="0.85"/>
+  </g>
+
+  <!-- Dashboard card -->
+  <g filter="url(#soft)">
+    <rect x="88" y="72" width="196" height="96" rx="16" fill="#FFFFFF"/>
+  </g>
+  <rect x="106" y="92" width="86" height="8" rx="4" fill="#6528F7"/>
+  <rect x="106" y="110" width="150" height="6" rx="3" fill="#E4DBFF"/>
+  <rect x="106" y="126" width="120" height="6" rx="3" fill="#F0EBFF"/>
+  <circle cx="252" cy="122" r="18" fill="#F0EBFF"/>
+  <path d="M243 122l6 6 12-12" stroke="#6528F7" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+</svg>

@@ -1,0 +1,625 @@
+CORRECTION / DESIGN REFINEMENT PROMPT
+
+The page structure and content are correct, but the current design looks too repetitive because almost every section is using the same card layout.
+
+Redesign the page to feel more premium, creative and visually varied while preserving:
+- all client-approved content
+- existing IN4 branding
+- existing header
+- existing footer
+- breadcrumb
+- shared CSS
+- existing functionality
+- current responsive behavior
+- existing buttons and navigation
+
+IMPORTANT:
+DO NOT change the approved content.
+DO NOT add new claims or features.
+DO NOT rebuild the whole website.
+Only improve the layout and visual presentation of visitor-management.html.
+
+==================================================
+MAIN DESIGN PROBLEM TO FIX
+==================================================
+
+Right now too many sections look like:
+[card] [card] [card] [card]
+
+This makes the page monotonous.
+
+I want each major section to have a DIFFERENT visual composition.
+
+Do not make every section a grid of equal cards.
+
+Use a combination of:
+- split layouts
+- large feature panels
+- timeline layouts
+- connected workflow layouts
+- image + content sections
+- numbered process sections
+- alternating left/right layouts
+- icon + text rows
+- horizontal feature bands
+- dashboard mockups
+- visual diagrams
+- sticky or highlighted feature panels
+- asymmetric grids
+- layered background shapes
+- highlighted stats-style feature blocks without fake numbers
+
+The whole page must still look like ONE design system.
+
+==================================================
+GLOBAL VISUAL DIRECTION
+==================================================
+
+Style:
+Premium enterprise SaaS
+Clean
+Modern
+Professional
+Creative
+Not over-designed
+
+Brand colors:
+- white
+- very light lavender
+- soft violet
+- purple
+- indigo
+- subtle blue accents
+
+Use:
+- soft gradients only when useful
+- large white space
+- rounded corners selectively
+- subtle shadows
+- thin borders
+- soft glow
+- light glass effect selectively
+- simple icons
+- restrained decorative shapes
+- connecting lines where relevant
+
+Avoid:
+- card overload
+- identical 3-column / 4-column layouts repeatedly
+- excessive glassmorphism
+- excessive floating circles
+- too many curves
+- huge empty decorative sections
+- random stock photos
+- dark-heavy backgrounds
+- excessive animation
+
+==================================================
+SECTION-BY-SECTION LAYOUT CORRECTION
+==================================================
+
+1. HERO SECTION
+Do NOT use a card container.
+
+Use a premium 2-column hero.
+
+LEFT:
+- eyebrow
+- H1
+- description
+- CTA buttons
+
+RIGHT:
+Create a layered visual composition showing:
+- visitor check-in
+- QR pass
+- host notification
+- parking access
+- visitor dashboard
+
+Use floating interface panels over a soft lavender visual background.
+
+The hero should feel spacious and premium.
+
+Desktop:
+approximately 55% content / 45% visual.
+
+Mobile:
+content first
+visual below
+
+==================================================
+2. SEAMLESS VISITOR ACCESS
+==================================================
+
+Do NOT show two ordinary feature cards.
+
+Create a split interactive-style layout.
+
+LEFT:
+Large visual area showing a visitor journey:
+Pre-Approved Visitor
+→ Registration
+→ Approval
+→ QR Code
+→ Check-In
+→ Parking
+
+RIGHT:
+Walk-In Visitor flow:
+Arrival
+→ Host Notification
+→ Registration
+→ Check-In
+→ Check-Out
+→ Feedback
+
+Use a vertical or horizontal connected process design.
+
+Each step can use small icons and labels.
+
+On desktop:
+show both visitor journeys side-by-side or in an asymmetric layout.
+
+On mobile:
+stack both flows vertically.
+
+==================================================
+3. CONTRACTOR MANAGEMENT
+==================================================
+
+Do NOT use three equal cards.
+
+Create a numbered workflow / stepper section.
+
+Layout:
+
+01
+Company Registration
+
+↓ connecting line
+
+02
+Visitor Pass Application
+
+↓ connecting line
+
+03
+Check-In & Check-Out
+
+Desktop:
+Use a horizontal process with three large stages connected by arrows or lines.
+
+Alternative:
+Use a left-side vertical timeline with content and a dashboard/mobile mockup on the right.
+
+Mobile:
+convert naturally to a vertical timeline.
+
+Use the exact approved content under each stage.
+
+==================================================
+4. BENEFITS OF PRO-VISIT
+==================================================
+
+Do NOT use four boxed cards.
+
+Create a creative 2x2 benefit composition around a central visual or statement.
+
+Example desktop layout:
+
+Enhanced Security           Seamless Operations
+
+             [central visual]
+
+Improved Visitor Experience Data-Driven Insights
+
+Alternative:
+Use a large left-side heading with four horizontal benefit rows on the right.
+
+Each benefit:
+icon + title + short description
+
+Minimal container styling.
+Do not box every item.
+
+==================================================
+5. USER-FRIENDLY INTERFACE & SEAMLESS INTEGRATION
+==================================================
+
+Use a premium split layout.
+
+LEFT:
+Large product interface visual:
+- laptop dashboard
+- mobile app
+- small floating interface elements
+
+RIGHT:
+Content divided into two clean sections:
+
+Intuitive Design
+
+and
+
+Seamless Integration
+
+Do not place them inside ordinary cards.
+
+Use:
+- icon
+- heading
+- short description
+- checklist
+
+Add subtle vertical separator or alternating visual hierarchy.
+
+Desktop:
+visual 55%
+content 45%
+
+Tablet/mobile:
+visual first or content first depending on readability.
+
+==================================================
+6. REAL-WORLD APPLICATIONS
+==================================================
+
+Avoid four repetitive cards.
+
+Create a visual industry showcase.
+
+Desktop option:
+Use a 2-column layout.
+
+LEFT:
+Large industry image / abstract facility visual.
+
+RIGHT:
+Four stacked application rows:
+01 Corporate Offices
+02 Healthcare Facilities
+03 Educational Institutions
+04 Government Buildings
+
+Each row:
+industry icon
+title
+one-line description
+
+Highlight the active/first row subtly.
+
+Alternative:
+Use a clean four-column icon strip without full card boxes.
+
+Mobile:
+use vertically stacked rows.
+
+==================================================
+7. KEY FEATURES & BENEFITS
+==================================================
+
+Use a different layout from the Benefits section.
+
+Create one large highlighted feature on the left:
+
+Enhanced Security
+
+Then three smaller supporting features on the right:
+- Seamless Check-In
+- Real-Time Parking Updates
+- User-Friendly Interface
+
+Use an asymmetric grid.
+
+Example desktop structure:
+
+-------------------------------
+|                             |
+| Enhanced Security           |
+| large visual feature        |
+|                             |
+|-------------------|---------|
+| Seamless Check-In | Parking |
+|-------------------|---------|
+| User-Friendly Interface     |
+-------------------------------
+
+Do not make all four identical.
+
+Mobile:
+stack in logical order.
+
+==================================================
+8. OUR APPROACH
+==================================================
+
+Do NOT use four cards.
+
+Create a premium numbered timeline.
+
+01 Security-First Design
+02 User-Centric Approach
+03 Scalable Solutions
+04 Ongoing Support
+
+Desktop:
+horizontal timeline with a single connecting line.
+
+Each step:
+large number
+title
+short description
+
+Use subtle alternating vertical offsets to make it visually interesting.
+
+Tablet:
+2x2 process layout.
+
+Mobile:
+vertical timeline.
+
+==================================================
+9. FINAL CTA
+==================================================
+
+Use one strong full-width CTA band.
+
+Not a normal card.
+
+Use:
+- soft purple gradient
+- abstract background pattern
+- heading
+- description
+- primary CTA
+- secondary CTA
+- optional subtle facility/visitor illustration on the right
+
+Keep it visually clean.
+
+==================================================
+SECTION TRANSITIONS
+==================================================
+
+Improve visual flow between sections.
+
+Do not separate every section using the same white background.
+
+Alternate subtly:
+
+Section 1:
+white / gradient hero
+
+Section 2:
+very light lavender
+
+Section 3:
+white
+
+Section 4:
+soft lavender tint
+
+Section 5:
+white
+
+Section 6:
+very light blue/lavender tint
+
+Section 7:
+white
+
+Section 8:
+soft gradient tint
+
+Section 9:
+purple CTA
+
+Use subtle background shapes or thin separators where needed.
+
+Do not overuse waves.
+
+==================================================
+RESPONSIVE REQUIREMENTS
+==================================================
+
+The page must be fully responsive for:
+
+Desktop:
+1440px+
+1280px
+1024px
+
+Tablet:
+768px
+834px
+
+Mobile:
+430px
+390px
+375px
+360px
+320px
+
+Do not design only for desktop.
+
+==================================================
+DESKTOP RESPONSIVE RULES
+==================================================
+
+Use a max-width content container consistent with the existing website.
+
+Avoid sections becoming too wide.
+
+Maintain readable text lengths.
+
+Do not stretch cards/components unnecessarily.
+
+Ensure visuals do not overflow.
+
+==================================================
+TABLET RESPONSIVE RULES
+==================================================
+
+At tablet widths:
+- convert complex multi-column layouts into 2 columns
+- reduce visual size
+- maintain comfortable section spacing
+- prevent text wrapping awkwardly
+- keep CTA buttons accessible
+- timelines may become 2x2
+
+==================================================
+MOBILE RESPONSIVE RULES
+==================================================
+
+On mobile:
+
+All complex layouts must become single-column.
+
+Important:
+- no horizontal scrolling
+- no fixed large widths
+- no content clipping
+- no overlapping text
+- no oversized illustrations
+- no tiny body text
+
+Use approximately:
+16px horizontal page padding minimum.
+
+Headings must scale using clamp().
+
+Suggested approach:
+
+font-size: clamp(...)
+
+Avoid hardcoded heading sizes that break mobile screens.
+
+Buttons:
+- full width where appropriate
+- minimum 44px touch height
+
+Cards / panels:
+width: 100%
+
+Images:
+max-width: 100%;
+height: auto;
+
+Use object-fit carefully.
+
+==================================================
+CSS REQUIREMENTS
+==================================================
+
+Reuse existing website styles first.
+
+Only add page-specific CSS where required.
+
+Use CSS Grid and Flexbox.
+
+Prefer:
+grid-template-columns
+minmax()
+auto-fit / auto-fill where useful
+clamp()
+gap
+aspect-ratio
+
+Avoid excessive:
+position:absolute
+
+Only use absolute positioning for decorative visuals.
+
+Do not position core textual content absolutely.
+
+==================================================
+LAYOUT QUALITY CHECKS
+==================================================
+
+After redesigning, test visually at:
+
+1440px
+1280px
+1024px
+768px
+430px
+390px
+375px
+360px
+
+Check:
+
+1. No horizontal scroll.
+2. No text clipping.
+3. No overlapping elements.
+4. No broken timelines.
+5. Buttons remain visible.
+6. Images stay proportional.
+7. Spacing remains consistent.
+8. Sections do not become too tall unnecessarily.
+9. Heading hierarchy remains clear.
+10. All PDF-approved content remains present.
+
+==================================================
+MICRO-INTERACTIONS
+==================================================
+
+Add very subtle interactions only:
+
+- card/panel hover lift
+- icon glow
+- button hover
+- timeline active point
+- slight visual movement
+
+Use CSS transitions around:
+200ms–300ms.
+
+Do NOT add heavy animations.
+
+Respect:
+
+@media (prefers-reduced-motion: reduce)
+
+==================================================
+FINAL GOAL
+==================================================
+
+The page should NOT look like a template made of repeated cards.
+
+It should feel like a professionally designed enterprise SaaS product page where every section presents information differently but still follows the same IN4 design language.
+
+Think:
+
+premium SaaS landing page
++
+enterprise visitor management product
++
+clean physical-to-digital facility workflow
+
+The visitor journey and physical operations should be visually understandable.
+
+The final page must feel more creative, more premium and more engaging while remaining professional.
+
+==================================================
+IMPORTANT IMPLEMENTATION INSTRUCTION
+==================================================
+
+Before changing code:
+
+1. Inspect the current visitor-management.html.
+2. Identify which sections currently use repetitive cards.
+3. Inspect reusable project CSS.
+4. Refactor those sections rather than rebuilding the entire page.
+5. Preserve header/footer and shared components.
+
+After implementation report:
+
+- files modified
+- sections redesigned
+- responsive changes made
+- CSS classes added
+- assets/images required
+- anything that still needs manual review

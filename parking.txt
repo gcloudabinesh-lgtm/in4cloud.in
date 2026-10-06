@@ -1,0 +1,612 @@
+You are working inside the existing IN4 Solutions website project.
+
+Main website:
+https://gcloudabinesh-lgtm.github.io/in4cloud.in/
+
+Target page:
+parking-management.html
+
+Client content source:
+Pro-Parking-Smart-Management-System (1).pdf
+
+IMPORTANT:
+Use the uploaded PDF as the authoritative content source.
+
+Do NOT invent:
+- features
+- percentages
+- integrations
+- statistics
+- workflows
+- pricing
+- claims
+
+Use the actual client content from the PDF.
+
+Preserve the current IN4 Solutions:
+- header
+- navigation
+- breadcrumb
+- footer
+- typography
+- global CSS
+- brand colors
+- button styles
+- spacing system
+- responsive system
+- scripts
+- contact/demo functionality
+
+Do NOT redesign the complete website.
+Only redesign and update the parking-management.html page.
+
+==================================================
+MAIN DESIGN REQUIREMENT
+==================================================
+
+Do NOT make every section look like equal cards.
+
+No more than 2 major sections should use a conventional card grid.
+
+Every other section should use a different visual composition:
+- split layout
+- horizontal timeline
+- process flow
+- asymmetric grid
+- image + text
+- dashboard showcase
+- workflow diagram
+- connected steps
+- full-width feature bands
+- sticky visual + scrolling content
+- numbered process
+
+The page should feel like a premium enterprise SaaS product page.
+
+==================================================
+1. HERO SECTION
+==================================================
+
+Eyebrow:
+Parking Management
+
+H1:
+Smart Parking Management System
+
+Description:
+Revolutionizing parking operations with intelligent ANPR technology, automated barrier control, and real-time management dashboards.
+
+Secondary description:
+Designed for malls, hospitals, airports, corporate campuses, and gated communities seeking efficient, scalable parking solutions.
+
+Use the exact meaning of this PDF content.
+
+Primary CTA:
+Request Parking Demo
+
+Secondary CTA:
+Explore Solutions
+
+Hero design:
+2-column layout.
+
+LEFT:
+- eyebrow
+- H1
+- description
+- CTA buttons
+
+RIGHT:
+Create a premium parking visual showing:
+- vehicle
+- ANPR camera
+- number plate recognition
+- boom barrier
+- parking gate
+- dashboard
+- real-time parking interface
+
+Do not use unrelated stock imagery.
+
+Use:
+- white
+- lavender
+- purple
+- blue
+- soft gradients
+- premium 3D or dashboard-style visual
+
+Mobile:
+content first
+visual below
+
+==================================================
+2. THREE FLEXIBLE SOLUTIONS
+==================================================
+
+Heading:
+Three Flexible Solutions for Every Facility
+
+Intro:
+Pro-Parking adapts to your operational needs with three distinct variants, each powered by advanced ANPR cameras, boom barrier control, and comprehensive real-time dashboards.
+
+Do NOT use three ordinary cards.
+
+Create a visual comparison / selector layout.
+
+Desktop idea:
+Left side:
+3 vertically stacked variant selectors
+
+Right side:
+Large changing-style illustration/dashboard panel.
+
+Variant 1:
+Automated Flow
+
+Description:
+Staff-managed operations with QR tokens and manual payment collection. Perfect for malls, hospitals, and offices requiring human oversight.
+
+Variant 2:
+Semi-Automated Flow
+
+Description:
+Reduced manual work with automated detection and app-based notifications. Ideal for corporate campuses and gated communities.
+
+Variant 3:
+AI Automated Flow
+
+Description:
+Complete automation with self-service payment kiosks and whitelisting capabilities. Built for airports, smart cities, and large-scale facilities.
+
+On mobile:
+stack the three variants vertically.
+
+==================================================
+3. VARIANT 1 – AUTOMATED FLOW
+==================================================
+
+Heading:
+Variant 1: Automated Flow
+
+Do NOT use cards.
+
+Use a horizontal connected process timeline on desktop.
+
+Steps:
+
+01
+Entry Detection
+
+ANPR camera automatically captures license plate as vehicle enters facility.
+
+02
+QR Token Generation
+
+Plate displayed on kiosk, QR token printed with unique number and check-in timestamp.
+
+03
+Exit Processing
+
+Staff scans QR code, system calculates charges based on exact stay duration.
+
+04
+Payment & Exit
+
+Payment collected via cash or card, barrier opens automatically upon confirmation.
+
+Bottom callout:
+
+Best suited for:
+Premises requiring staff-managed exits such as shopping malls, hospitals, and corporate offices. Includes VIP/guest waiver options and overstay alerts.
+
+Design:
+- process line
+- numbered stages
+- vehicle/ANPR visual
+- QR ticket
+- payment
+- barrier exit
+
+Mobile:
+vertical timeline.
+
+==================================================
+4. VARIANT 2 – SEMI-AUTOMATED FLOW
+==================================================
+
+Heading:
+Variant 2: Semi-Automated Flow
+
+Use a split layout.
+
+LEFT:
+large visual or dashboard screenshot/mockup.
+
+RIGHT:
+vertical process flow.
+
+Step 1:
+Smart Entry Detection
+
+ANPR detects license plate and displays custom welcome message on Android TV/display screen with automatic check-in recording.
+
+Step 2:
+Exit Recognition
+
+Exit ANPR detects departing vehicle, Pro-Parking app shows popup with stay duration and calculated charges.
+
+Step 3:
+Payment Processing
+
+Staff collects payment, updates system status, exit display shows personalized greeting message before barrier opens.
+
+Bottom highlighted text:
+
+Ideal for:
+Corporate offices, gated communities, and hospitals seeking reduced manual workload while maintaining staff oversight for payment collection and customer service.
+
+Do not make each step a separate box.
+Use a clean connected sequence.
+
+==================================================
+5. VARIANT 3 – AI AUTOMATED EXCELLENCE
+==================================================
+
+Heading:
+Variant 3: AI Automated Excellence
+
+Create a premium automation workflow.
+
+Desktop:
+Use a central timeline with alternating content above and below.
+
+Step 1:
+Automated Entry
+
+ANPR captures plate and records check-in time with zero human intervention.
+
+Step 2:
+Smart Tracking
+
+System continuously monitors parking duration and calculates real-time charges.
+
+Step 3:
+Self-Service Exit
+
+Exit kiosk generates QR for mobile wallet or card payment, barrier opens instantly.
+
+Step 4:
+Advanced Controls
+
+VIP whitelisting, blacklist restrictions, and comprehensive operational reporting.
+
+Bottom statement:
+
+Perfect for:
+Airports, smart cities, and large campuses requiring complete automation and scalability without compromising security or revenue tracking.
+
+Use a futuristic automation visual:
+- ANPR
+- self-service kiosk
+- parking analytics
+- payment
+- whitelist / blacklist
+- barrier control
+
+Mobile:
+vertical flow.
+
+==================================================
+6. WHY CHOOSE PRO-PARKING
+==================================================
+
+Heading:
+Why Choose Pro-Parking?
+
+Do NOT use four identical cards.
+
+Use a two-column editorial layout.
+
+LEFT:
+Large heading + supporting visual.
+
+RIGHT:
+Four stacked feature rows with icons.
+
+Feature 1:
+Ultimate Flexibility
+
+Choose from normal, semi-automated, or fully automated flows to match your operational requirements and budget constraints.
+
+Feature 2:
+Seamless Integration
+
+Works flawlessly with ANPR cameras, payment kiosks, boom barriers, mobile apps, and existing facility management systems.
+
+Feature 3:
+Revenue Assurance
+
+Transparent, automated fee calculation eliminates human error and ensures accurate billing for every parking session.
+
+Feature 4:
+Scalable & Secure
+
+From small office buildings to massive airport complexes, scales effortlessly while maintaining enterprise-grade security.
+
+Bottom statement:
+Transform your parking operations today with Pro-Parking's intelligent management system.
+
+==================================================
+7. READY TO REVOLUTIONIZE YOUR PARKING
+==================================================
+
+Eyebrow:
+Ready to Revolutionize Your Parking
+
+Heading:
+Transform Your Facility Today
+
+Description:
+Join forward-thinking facilities worldwide who've eliminated parking headaches while maximizing revenue and operational efficiency.
+
+IMPORTANT:
+Use the following claims exactly as supplied by the client PDF.
+Do not modify the numbers.
+
+Feature 1:
+Reduce operational costs by up to 60%
+
+Supporting text:
+Minimize staff requirements while maximizing throughput.
+
+Feature 2:
+Eliminate revenue leakage completely
+
+Supporting text:
+Transparent tracking and automated calculations.
+
+Feature 3:
+Scale seamlessly as you grow
+
+Supporting text:
+Future-proof technology that adapts to your expansion.
+
+CTA text:
+Contact us today to discover which Pro-Parking variant perfectly fits your facility's unique requirements.
+
+Use:
+Primary button:
+Request Parking Demo
+
+Secondary button:
+Contact Us
+
+Use a strong full-width CTA section instead of a standard card.
+
+==================================================
+VISUAL STORYTELLING
+==================================================
+
+The page should visually explain this journey:
+
+Vehicle arrives
+→ ANPR identifies plate
+→ barrier / entry system responds
+→ parking duration is tracked
+→ dashboard receives information
+→ fee is calculated
+→ QR / kiosk / payment processing
+→ exit authorization
+→ barrier opens
+
+Use this physical-to-digital workflow throughout the page.
+
+==================================================
+DESIGN DIRECTION
+==================================================
+
+Keep the same IN4 Solutions brand language.
+
+Use:
+- white background
+- very light lavender
+- violet
+- indigo
+- soft blue
+- subtle gradients
+- clean 3D parking visuals
+- dashboard mockups
+- thin borders
+- rounded corners selectively
+- subtle shadows
+- modern icons
+- generous white space
+
+Avoid:
+- excessive cards
+- repeated 3-column grids
+- too much glassmorphism
+- too many floating circles
+- excessive waves
+- heavy dark backgrounds
+- random stock photos
+- unrelated people imagery
+- fake numbers
+- invented integrations
+
+==================================================
+SECTION BACKGROUND RHYTHM
+==================================================
+
+Use different subtle backgrounds to avoid repetition.
+
+Hero:
+white / light lavender gradient
+
+Flexible Solutions:
+very light lavender
+
+Variant 1:
+white
+
+Variant 2:
+light blue-lavender tint
+
+Variant 3:
+white
+
+Why Choose:
+very light lavender
+
+Final CTA:
+purple / indigo gradient
+
+Do not make every section look identical.
+
+==================================================
+RESPONSIVE REQUIREMENTS
+==================================================
+
+Fully responsive for:
+
+Desktop:
+1440px+
+1280px
+1024px
+
+Tablet:
+834px
+768px
+
+Mobile:
+430px
+390px
+375px
+360px
+320px
+
+==================================================
+DESKTOP RULES
+==================================================
+
+- Maintain current site max-width container.
+- Avoid overly long text lines.
+- Use balanced 50/50 or 55/45 split sections.
+- Use horizontal timelines where appropriate.
+- Keep dashboard visuals proportional.
+- Do not allow content to stretch edge-to-edge unnecessarily.
+
+==================================================
+TABLET RULES
+==================================================
+
+- Convert 3-column layouts into 2 columns where needed.
+- Horizontal workflows can become 2-column or vertical.
+- Reduce decorative visuals.
+- Maintain readable spacing.
+
+==================================================
+MOBILE RULES
+==================================================
+
+All complex layouts must become single-column.
+
+Requirements:
+- no horizontal scrolling
+- no overlapping
+- no clipped text
+- no fixed-width content blocks
+- no oversized images
+- no absolute positioning for core content
+- buttons should remain touch-friendly
+
+Use:
+width: 100%;
+max-width: 100%;
+height: auto;
+
+Use clamp() for heading font sizes.
+
+Recommended horizontal mobile padding:
+16px to 20px.
+
+CTA buttons can become full-width on small screens.
+
+==================================================
+CSS / CODE REQUIREMENTS
+==================================================
+
+Before coding:
+1. Inspect parking-management.html.
+2. Inspect global CSS.
+3. Inspect existing reusable section classes.
+4. Reuse current header/footer components.
+5. Reuse existing buttons and typography.
+6. Reuse existing spacing variables/tokens if available.
+
+Use:
+- CSS Grid
+- Flexbox
+- minmax()
+- clamp()
+- gap
+- aspect-ratio
+- object-fit
+
+Avoid:
+- excessive inline styles
+- duplicate CSS
+- unnecessary new frameworks
+- absolute positioning for content
+
+==================================================
+CONTENT ACCURACY
+==================================================
+
+Use the PDF wording as the source.
+
+Do not remove any of these:
+- ANPR
+- QR token generation
+- automated barriers
+- real-time dashboards
+- staff-managed flow
+- semi-automated flow
+- AI automated flow
+- Android TV/display welcome message
+- self-service payment kiosk
+- mobile wallet/card payment
+- VIP whitelisting
+- blacklist restrictions
+- operational reporting
+- revenue assurance
+- scalability
+- enterprise-grade security
+
+==================================================
+FINAL IMPLEMENTATION CHECK
+==================================================
+
+After implementation, verify:
+
+1. No broken HTML.
+2. No horizontal scroll.
+3. Header/footer unchanged.
+4. All client PDF content is present.
+5. All three parking variants are clearly differentiated.
+6. No repeated equal-card layout across every section.
+7. Timelines work on desktop and mobile.
+8. CTA buttons work.
+9. Images scale correctly.
+10. No content overlaps at 320px.
+11. No unnecessary CSS duplication.
+12. All sections visually match IN4 Solutions.
+
+Finally provide:
+- files changed
+- sections updated
+- CSS classes added
+- responsive changes made
+- image assets required
+- assumptions made
