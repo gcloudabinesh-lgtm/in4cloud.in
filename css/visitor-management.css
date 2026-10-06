@@ -1,4 +1,4 @@
-/* ============ Visitor Management — page-specific layouts ============ */
+﻿/* ============ Visitor Management â€” page-specific layouts ============ */
 
 /* --- Hero layered visual --- */
 .vm-hero-visual { position: relative; }
@@ -233,10 +233,10 @@
 }
 
 /* --- Full-width final CTA --- */
-.vm-cta { position: relative; overflow: hidden; padding: clamp(3.5rem, 7vw, 6rem) 0; background: linear-gradient(135deg, #4b1fd6 0%, #6528f7 45%, #8f6bff 100%); }
+.vm-cta { position: relative; overflow: hidden; padding: clamp(3.5rem, 7vw, 6rem) 0; background: linear-gradient(135deg, #4c1dc8 0%, #6528f7 45%, #8f6bff 100%); }
 .vm-cta-bg { position: absolute; inset: 0; background: radial-gradient(closest-side at 12% 20%, rgba(255,255,255,.18), transparent 60%), radial-gradient(closest-side at 88% 80%, rgba(151,215,95,.22), transparent 62%), repeating-linear-gradient(115deg, rgba(255,255,255,.05) 0 2px, transparent 2px 26px); }
 .vm-cta-inner { position: relative; z-index: 1; display: grid; grid-template-columns: 1.25fr 1fr; gap: clamp(2rem, 5vw, 4rem); align-items: center; }
-.vm-cta-copy .eyebrow { color: #c9bdff; }
+.vm-cta-copy .eyebrow { color: #FFFFFF; }
 .vm-cta-copy .eyebrow::before { background: #97d75f; }
 .vm-cta-copy h2 { color: #fff; font-size: clamp(1.9rem, 3vw, 3.1rem); font-weight: 800; letter-spacing: -0.025em; margin: 12px 0 16px; }
 .vm-cta-copy p { color: rgba(255,255,255,.85); font-size: 16.5px; max-width: 52ch; }

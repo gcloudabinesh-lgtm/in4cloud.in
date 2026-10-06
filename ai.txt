@@ -1,0 +1,929 @@
+IMPORTANT: CREATE / UPDATE AI VIDEO ANALYTICS PRODUCT PAGE
+
+You are working inside the existing IN4 Solutions website project.
+
+Main website:
+https://gcloudabinesh-lgtm.github.io/in4cloud.in/
+
+TARGET PRODUCT:
+AI-Based Video Analytics
+
+TARGET URL / FILE:
+ai-video-analytics.html
+
+If an existing video analytics page already exists, update that page instead of creating a duplicate.
+
+==================================================
+MOST IMPORTANT DESIGN REQUIREMENT
+==================================================
+
+I do NOT want an AI-generated-looking website.
+
+The previous pages became too repetitive because every section looked like:
+icon + heading + paragraph inside a rounded card.
+
+DO NOT DO THAT.
+
+Create a premium, human-designed enterprise technology product page.
+
+The design should look like it was intentionally designed by a professional UI/UX designer.
+
+Think:
+
+Premium enterprise SaaS
++
+AI computer vision platform
++
+Security technology
++
+Editorial product storytelling
+
+The page should feel:
+- premium
+- sophisticated
+- confident
+- clean
+- highly intentional
+- visually balanced
+- modern
+- enterprise-grade
+
+NOT:
+- generic AI landing page
+- template-looking
+- excessive glassmorphism
+- repeated cards
+- random futuristic graphics
+- neon cyberpunk
+- excessive gradients
+- AI-generated decorative blobs
+
+==================================================
+CONTENT SOURCE
+==================================================
+
+Use the uploaded PDF:
+
+"Pro-AI-Based-Video-Analytics-Transforming-Surveillance-into-Real-Time-Intelligence (1).pdf"
+
+The PDF is the authoritative content source.
+
+Do NOT invent:
+- features
+- statistics
+- accuracy percentages
+- certifications
+- integrations
+- use cases
+- security claims
+- technical specifications
+
+Use the actual PDF content.
+
+IMPORTANT:
+The PDF contains "iProAT Solutions" branding.
+
+For this website:
+Use the CONTENT from the PDF,
+but use the EXISTING IN4 Solutions branding and design system.
+
+Do not copy the PDF's original visual design.
+
+==================================================
+PAGE POSITIONING
+==================================================
+
+Primary product name:
+
+AI-Based Video Analytics
+
+Main positioning:
+
+Transforming Surveillance into Real-Time Intelligence
+
+Supporting idea:
+
+Turning passive surveillance into actionable intelligence.
+
+Traditional CCTV is reactive and mainly records footage for review after incidents.
+
+The AI solution transforms existing surveillance into a proactive, intelligent and fast security solution.
+
+Most importantly:
+It works with existing cameras, so the complete camera infrastructure does not need to be replaced.
+
+Keep this message prominent in the hero.
+
+==================================================
+1. HERO — PREMIUM PRODUCT INTRODUCTION
+==================================================
+
+Do NOT create a generic two-column hero with a stock image.
+
+Create a strong editorial hero.
+
+Desktop composition:
+
+LEFT:
+Small eyebrow:
+AI VIDEO ANALYTICS
+
+Large H1:
+AI-Based Video Analytics
+
+Supporting headline:
+Transforming Surveillance into Real-Time Intelligence
+
+Short supporting text:
+Turning passive surveillance into actionable intelligence.
+
+Additional content:
+Traditional CCTV systems are fundamentally reactive — recording footage that can only be reviewed after incidents occur.
+
+Our AI-powered video analytics transforms surveillance into a proactive, intelligent, and fast security solution.
+
+Use existing cameras without requiring a complete system replacement.
+
+CTA:
+Request a Demo
+
+Secondary CTA:
+Explore Capabilities
+
+RIGHT:
+Create a sophisticated real-time surveillance interface.
+
+Visual should show:
+- CCTV camera feed
+- AI detection bounding boxes
+- face recognition
+- people detection
+- vehicle detection
+- safety/PPE detection
+- real-time alert
+- analytics overlay
+
+Do NOT create random futuristic HUD graphics.
+
+The visual must look like an actual security analytics product.
+
+==================================================
+2. SURVEILLANCE IS EVOLVING
+==================================================
+
+Do not make this a card section.
+
+Create a strong BEFORE → AFTER visual story.
+
+LEFT:
+Traditional CCTV
+
+Show:
+Camera
+↓
+Recording
+↓
+Incident
+↓
+Manual Review
+
+Label:
+Reactive Surveillance
+
+RIGHT:
+AI Video Analytics
+
+Show:
+Camera
+↓
+AI Analysis
+↓
+Detection
+↓
+Real-Time Alert
+↓
+Action
+
+Label:
+Proactive Intelligence
+
+Between them:
+a subtle transformation arrow.
+
+This should visually explain the product value immediately.
+
+==================================================
+3. VIDEO ANALYTICS CAPABILITIES
+==================================================
+
+Heading:
+Intelligence From Every Frame
+
+Do NOT use a 3x3 card grid.
+
+There are multiple capabilities in the PDF:
+
+1. Facial Recognition
+2. PPE Detection
+3. Vehicle Counting
+4. Drowsiness Detection
+5. People Counting
+6. Object Detection
+7. Animal Detection & Classification
+8. Unauthorized Access Detection
+
+Create a visually sophisticated capability index.
+
+Recommended layout:
+
+LEFT:
+Large vertical numbered navigation:
+
+01 Facial Recognition
+02 PPE Detection
+03 Vehicle Counting
+04 Drowsiness Detection
+05 People Counting
+06 Object Detection
+07 Animal Detection
+08 Unauthorized Access
+
+RIGHT:
+Large visual area that changes conceptually for each capability.
+
+If actual interactive tabs are implemented, keep JavaScript lightweight.
+
+If not interactive, create an editorial stacked layout.
+
+DO NOT create eight identical cards.
+
+==================================================
+4. FACIAL RECOGNITION
+==================================================
+
+Create a dedicated feature section.
+
+Heading:
+Facial Recognition
+
+Purpose:
+Identify or verify individuals in real-time.
+
+Use these capabilities:
+
+- Detects faces even in crowds or low-light environments.
+- Compares against customizable databases such as employees, VIPs and watchlists.
+- Triggers real-time alerts on unauthorized or unknown persons.
+- Tracks attendance or entry/exit logs automatically.
+
+Visual:
+Realistic security camera scene with multiple people.
+
+Show:
+- face detection boxes
+- identity labels
+- authorized / unknown indicators
+- subtle confidence-style interface only if it does NOT introduce fake numerical claims
+
+Do not invent accuracy percentages.
+
+==================================================
+5. PPE DETECTION
+==================================================
+
+Create a visually strong industrial safety section.
+
+Heading:
+PPE Detection
+
+Supporting:
+Ensure workplace safety compliance.
+
+Visual:
+Construction / manufacturing environment.
+
+Show detection of:
+- helmets
+- vests
+- gloves
+- masks
+- goggles
+- other safety equipment
+
+Include:
+Instant Alerts
+
+Explain:
+Immediate notifications when PPE violations are detected in hazardous zones.
+
+Industry applications:
+- construction
+- manufacturing
+- warehousing
+- chemical facilities
+
+Use an image-led composition.
+
+Do not make this a card grid.
+
+==================================================
+6. VEHICLE COUNTING
+==================================================
+
+Heading:
+Vehicle Counting
+
+Purpose:
+Monitor traffic flow, parking usage, and congestion.
+
+Create a real-world traffic / parking analytics visual.
+
+Show:
+Entry
+→ Detection
+→ Classification
+→ Count
+→ Analytics
+
+Vehicle categories:
+- cars
+- trucks
+- motorcycles
+- bicycles
+- buses
+
+IMPORTANT:
+The PDF explicitly states:
+98% precision
+
+Use this claim exactly as supplied by the client.
+
+Also include:
+- smart city planning
+- parking optimization
+- traffic management
+- data export for analysis
+- integration with other smart systems
+
+Do not invent other accuracy numbers.
+
+==================================================
+7. DROWSINESS DETECTION
+==================================================
+
+Create a driver safety section.
+
+Heading:
+Drowsiness Detection
+
+Supporting:
+Prevent fatigue-related incidents.
+
+Use a large driver/camera visual.
+
+Show the AI monitoring:
+
+- eye closure duration and blink patterns
+- yawning frequency and mouth movements
+- head position changes and nodding
+- facial muscle relaxation indicators
+
+Then show:
+
+AI Detection
+→ Threshold Reached
+→ Safety Alert
+
+Use cases:
+- professional drivers and transportation workers
+- heavy machinery operators
+- night shift security personnel
+
+Do not make these cards.
+
+Use a safety workflow.
+
+==================================================
+8. PEOPLE COUNTING
+==================================================
+
+Heading:
+People Counting
+
+Purpose:
+Understand human movement and crowd density.
+
+Use a large crowd / facility visual.
+
+Show:
+Entry
+Exit
+Movement
+Zone Density
+
+Content:
+
+Real-Time Counting
+Tracks people entering, exiting, or moving through designated zones.
+
+Data Applications:
+- facility planning
+- staff allocation
+- queue management
+- conversion rate analysis
+
+Safety Monitoring:
+Automatic alerts for over-capacity situations or abnormal crowd formations.
+
+Use a large number/analytics visual only if it represents actual detected people and does not introduce fabricated statistics.
+
+==================================================
+9. OBJECT DETECTION
+==================================================
+
+Heading:
+Object Detection
+
+Purpose:
+Recognize and classify objects in a scene.
+
+The PDF says the AI can identify thousands of different objects.
+
+Use this exact concept.
+
+Create three visual zones:
+
+SECURITY
+- weapons
+- abandoned bags
+- suspicious packages
+
+RETAIL
+- shopping carts
+- merchandise
+- product displays
+
+INDUSTRIAL
+- tools
+- equipment
+- inventory
+- safety barriers
+
+Then explain:
+
+Real-time inventory monitoring
++
+Immediate threat alerts
+
+Use a large computer vision scene instead of cards.
+
+==================================================
+10. ANIMAL DETECTION & CLASSIFICATION
+==================================================
+
+Heading:
+Animal Detection & Classification
+
+Purpose:
+Monitor and manage animal presence in key zones.
+
+Include:
+- identifies various animals with high accuracy, including dogs and cats
+- classifies species
+- distinguishes between animals
+- tracks movement patterns
+- logs frequency of appearances
+
+Use cases:
+Airport Safety
+Prevents runway incursions
+
+Agricultural
+Protects livestock and crops
+
+Perimeter Security
+Reduces false alarms
+
+Design:
+large visual with detection labels.
+
+Do not create three cards.
+
+==================================================
+11. UNAUTHORIZED ACCESS DETECTION
+==================================================
+
+Make this one of the strongest security sections.
+
+Heading:
+Unauthorized Access Detection
+
+Purpose:
+Secure restricted or sensitive zones.
+
+Create a visual security workflow:
+
+01
+Zone Definition
+
+Create virtual boundaries around sensitive areas with customizable parameters.
+
+↓
+
+02
+Movement Detection
+
+Instantly identify human presence within restricted zones.
+
+↓
+
+03
+Identity Verification
+
+Cross-reference with facial recognition to determine authorization status.
+
+↓
+
+04
+Alert Dispatch
+
+Send real-time notifications to security teams through multiple channels.
+
+Desktop:
+Use a large restricted-zone camera visualization beside the workflow.
+
+Mobile:
+Convert into a vertical timeline.
+
+==================================================
+12. ONE INTELLIGENT SECURITY LAYER
+==================================================
+
+Create a synthesis section.
+
+Instead of another feature grid, show how all capabilities work together.
+
+Central:
+AI Video Analytics Engine
+
+Connected inputs:
+Existing Cameras
+
+Connected intelligence:
+- Face
+- PPE
+- Vehicles
+- Drowsiness
+- People
+- Objects
+- Animals
+- Unauthorized Access
+
+Output:
+Real-Time Intelligence
+
+Then:
+Alerts
+Analytics
+Operational Decisions
+Security Response
+
+This should look like a professionally designed architecture diagram.
+
+Do not make it look like a generic AI network graphic.
+
+==================================================
+13. INTELLIGENCE THAT NEVER SLEEPS
+==================================================
+
+Use the PDF's summary concept.
+
+Heading:
+Intelligence That Never Sleeps
+
+Content:
+
+Each feature automates what humans do manually — but with greater speed, consistency, and reliability across 24/7 operations.
+
+Our comprehensive solution enhances safety, efficiency, and situational awareness across your entire organization.
+
+All analytics integrate with existing camera systems, making deployment fast and cost-effective with minimal disruption.
+
+Design:
+Large statement typography.
+
+Below it:
+24/7
+Speed
+Consistency
+Reliability
+
+Do NOT invent numerical statistics.
+
+Use typography rather than four cards.
+
+==================================================
+14. NEXT STEPS
+==================================================
+
+Heading:
+Transform Your Surveillance Today
+
+Create a 4-step implementation journey.
+
+01
+Free Consultation
+
+Schedule a no-obligation assessment of your current surveillance infrastructure.
+
+02
+Custom Solution Design
+
+Receive a tailored implementation plan based on your specific security needs.
+
+03
+Seamless Implementation
+
+Experience minimal disruption with our proven integration methodology.
+
+04
+Ongoing Support
+
+Benefit from continuous updates, training, and technical assistance.
+
+Design:
+Horizontal journey on desktop.
+
+Vertical timeline on mobile.
+
+Do not use four cards.
+
+==================================================
+15. FINAL CTA
+==================================================
+
+Create a strong premium closing section.
+
+Heading:
+Transform Your Surveillance Today
+
+Supporting text:
+Move from passive surveillance to real-time intelligence with AI-powered video analytics.
+
+Primary CTA:
+Request a Demo
+
+Secondary CTA:
+Contact Us
+
+Visual:
+Subtle camera + AI analytics interface.
+
+Do not make the CTA a small centered rounded box.
+
+Use a full-width premium section.
+
+==================================================
+VISUAL DESIGN SYSTEM
+==================================================
+
+The existing IN4 Solutions website uses a light premium technology aesthetic.
+
+Maintain that.
+
+Use:
+- white
+- very light lavender
+- soft violet
+- indigo
+- subtle blue
+- restrained gradients
+- thin borders
+- premium typography
+- generous whitespace
+
+Do NOT copy the PDF's original dark visual theme.
+
+The PDF is the CONTENT SOURCE.
+
+The IN4 website is the DESIGN SOURCE.
+
+==================================================
+HUMAN-DESIGNED LAYOUT RULE
+==================================================
+
+Every section must NOT have the same visual structure.
+
+Use a deliberate rhythm:
+
+Hero
+→ editorial
+
+Surveillance evolution
+→ comparison
+
+Capabilities
+→ index/navigation
+
+Facial Recognition
+→ image + content
+
+PPE
+→ full-width visual
+
+Vehicle Counting
+→ analytics flow
+
+Drowsiness
+→ safety workflow
+
+People Counting
+→ data visualization
+
+Object Detection
+→ application composition
+
+Animal Detection
+→ image + use cases
+
+Unauthorized Access
+→ security timeline
+
+System Intelligence
+→ architecture diagram
+
+Summary
+→ typography-led
+
+Next Steps
+→ timeline
+
+CTA
+→ full-width visual
+
+This variation is REQUIRED.
+
+==================================================
+RESPONSIVE DESIGN
+==================================================
+
+Must work perfectly at:
+
+1440px
+1280px
+1024px
+834px
+768px
+430px
+390px
+375px
+360px
+320px
+
+Desktop:
+- use wide compositions
+- maintain strong whitespace
+- use large product visuals
+- avoid excessive text width
+
+Tablet:
+- convert complex multi-column layouts carefully
+- preserve hierarchy
+- reduce decorative elements
+
+Mobile:
+- all complex diagrams become vertical
+- all split sections become single-column
+- capability index becomes accordion or vertical list
+- images become full-width
+- no horizontal scroll
+- no clipped content
+- no overlapping
+- no tiny text
+- buttons remain easy to tap
+- minimum 16px side padding
+
+Use:
+CSS Grid
+Flexbox
+clamp()
+minmax()
+gap
+aspect-ratio
+object-fit
+
+Avoid absolute positioning for core content.
+
+==================================================
+IMAGES / VISUAL ASSETS
+==================================================
+
+If the project already contains suitable assets, reuse them.
+
+If images need to be created, they should follow these concepts:
+
+1. AI surveillance control room
+2. CCTV camera with computer vision overlays
+3. facial recognition in a crowd
+4. industrial PPE detection
+5. vehicle counting at entrance
+6. driver drowsiness detection
+7. people counting in a facility
+8. object detection scene
+9. animal detection
+10. restricted-zone intrusion detection
+11. AI video analytics dashboard
+
+Images must feel:
+realistic
+premium
+enterprise
+technology-focused
+
+Avoid:
+generic AI robots
+humanoid AI
+random holograms
+cyberpunk neon
+unrelated stock photography
+
+==================================================
+SEO
+==================================================
+
+Page title:
+AI-Based Video Analytics | IN4 Solutions
+
+H1:
+AI-Based Video Analytics
+
+Use only one H1.
+
+Use H2 for major sections.
+
+Use H3 for sub-features where appropriate.
+
+Create descriptive image alt text.
+
+Do not keyword-stuff.
+
+==================================================
+CODE QUALITY
+==================================================
+
+Before coding:
+
+1. Inspect existing project structure.
+2. Find current product page patterns.
+3. Inspect shared CSS.
+4. Inspect header/footer.
+5. Reuse existing components.
+6. Reuse existing variables.
+7. Do not introduce another CSS framework.
+8. Do not duplicate existing CSS unnecessarily.
+
+After coding:
+
+Test:
+- desktop
+- tablet
+- mobile
+- 320px minimum width
+
+Verify:
+- no horizontal scroll
+- no overlapping
+- no broken links
+- no missing sections
+- no repeated card-heavy layout
+- no invented content
+- no broken header/footer
+- all CTA buttons work
+- all images scale correctly
+
+==================================================
+FINAL DESIGN QUALITY TEST
+==================================================
+
+Before considering the page complete, ask:
+
+"Does this look like a human professional designer intentionally designed each section?"
+
+If the answer is NO:
+refine the spacing, hierarchy, composition and visual storytelling.
+
+The page should NOT look like:
+"AI generated landing page with cards."
+
+It should look like:
+"A premium enterprise security technology product website."
+
+Finally report:
+- files modified
+- URL changes
+- sections created/updated
+- CSS added
+- responsive changes
+- assets used
+- assets still required
+- any assumptions made

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-label="Pre-approved visitor scanning a QR code at check-in">
+  <rect width="640" height="400" fill="#f6f2ff"/>
+  <rect x="220" y="120" width="200" height="150" rx="14" fill="#ffffff" stroke="#e7dcff"/>
+  <rect x="245" y="150" width="60" height="60" rx="6" fill="none" stroke="#6528f7" stroke-width="4"/>
+  <path d="M245 132v18M321 132v18M245 228v-18M321 228v-18" stroke="#6528f7" stroke-width="4" stroke-linecap="round"/>
+  <rect x="325" y="150" width="70" height="10" rx="5" fill="#cbb8ff"/>
+  <rect x="325" y="172" width="52" height="10" rx="5" fill="#e7dcff"/>
+  <rect x="245" y="232" width="150" height="14" rx="7" fill="#e7dcff"/>
+  <circle cx="160" cy="150" r="26" fill="#9779ff"/>
+  <path d="M120 260 q40-60 80 0" fill="#cbb8ff"/>
+  <circle cx="500" cy="150" r="24" fill="#72bf44"/>
+  <path d="M464 258 q36-56 72 0" fill="#c5ecab"/>
+  <path d="M120 330h400" stroke="#e7dcff" stroke-width="6" stroke-linecap="round"/>
+</svg>

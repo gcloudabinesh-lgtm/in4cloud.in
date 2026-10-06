@@ -1,4 +1,4 @@
-/* ============ Parking Management — page-specific layouts ============ */
+﻿/* ============ Parking Management â€” page-specific layouts ============ */
 
 .section-ice { background: linear-gradient(180deg, #f4f7ff, #ffffff); }
 .section-soft { background: linear-gradient(180deg, #ffffff, var(--bg-lav) 30%, var(--bg-lav) 70%, #ffffff); }
@@ -41,7 +41,7 @@
 .pk-stage p { font-size: 13.5px; color: var(--text-muted); }
 .pk-callout {
   margin-top: 34px; background: #fff; border: 1px solid var(--border);
-  border-left: 4px solid #6528F7; border-radius: var(--r-md);
+  border-left: 4px solid var(--purple-600); border-radius: var(--r-md);
   padding: 18px 22px; font-size: 15px; color: var(--text-body);
 }
 .pk-callout strong { color: var(--purple-700); }
@@ -73,7 +73,7 @@
 .pk-alt-step.down .body { grid-row: 3; }
 
 /* --- Section 6: editorial why --- */
-.pk-why { display: grid; grid-template-columns: 1fr 1.3fr; gap: clamp(2rem, 5vw, 4rem); align-items: start; }
+.pk-why { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(2rem, 5vw, 4rem); align-items: center; }
 .pk-frow { display: flex; align-items: flex-start; gap: 16px; padding: 20px 0; border-bottom: 1px solid var(--border-soft); transition: padding-left .25s var(--ease); }
 .pk-frow:first-child { padding-top: 0; }
 .pk-frow:last-of-type { border-bottom: 0; }
@@ -83,10 +83,10 @@
 .pk-frow p { font-size: 14.5px; color: var(--text-muted); margin: 0; }
 
 /* --- Final CTA band --- */
-.pk-cta { position: relative; overflow: hidden; padding: clamp(3.5rem, 7vw, 6rem) 0; background: linear-gradient(135deg, #4b1fd6 0%, #6528f7 45%, #8f6bff 100%); }
+.pk-cta { position: relative; overflow: hidden; padding: clamp(3.5rem, 7vw, 6rem) 0; background: linear-gradient(135deg, #4c1dc8 0%, var(--purple-600) 45%, #8f6bff 100%); }
 .pk-cta::before { content: ""; position: absolute; inset: 0; background: radial-gradient(closest-side at 12% 20%, rgba(255,255,255,.18), transparent 60%), radial-gradient(closest-side at 88% 80%, rgba(151,215,95,.22), transparent 62%), repeating-linear-gradient(115deg, rgba(255,255,255,.05) 0 2px, transparent 2px 26px); }
 .pk-cta-inner { position: relative; z-index: 1; max-width: 820px; margin-inline: auto; text-align: center; }
-.pk-cta-inner .eyebrow { color: #c9bdff; }
+.pk-cta-inner .eyebrow { color: #FFFFFF; }
 .pk-cta-inner .eyebrow::before { background: #97d75f; }
 .pk-cta-inner h2 { color: #fff; font-size: clamp(1.9rem, 3vw, 3rem); font-weight: 800; letter-spacing: -0.025em; margin: 12px 0 14px; }
 .pk-cta-inner > p { color: rgba(255,255,255,.85); font-size: 16.5px; }

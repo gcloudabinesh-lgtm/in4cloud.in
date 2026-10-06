@@ -1,0 +1,467 @@
+You are working on the existing IN4 Cloud website project.
+
+TASK:
+Create / redesign a premium product page for:
+
+AI-Based Camera Attendance System
+
+IMPORTANT:
+Use the uploaded client PDF as the PRIMARY CONTENT SOURCE.
+Do not invent unrelated features.
+Use the PDF content accurately, but rewrite only where needed for clean website presentation.
+Do not copy the PDF's old dark presentation style.
+Create a modern, premium, human-designed enterprise SaaS layout.
+
+MAIN OBJECTIVE:
+Build a responsive product landing page for an AI-Based Camera Attendance System that uses existing camera infrastructure to track attendance using AI facial recognition.
+
+CORE PRODUCT MESSAGE:
+Transform attendance management using AI-powered camera-based attendance tracking.
+
+The system should communicate that organizations can leverage their existing camera infrastructure to improve:
+- Attendance accuracy
+- Efficiency
+- Security
+- Automated attendance recording
+- Centralized monitoring
+- HR/payroll integration
+
+==================================================
+DESIGN DIRECTION
+==================================================
+
+Use the existing IN4 Cloud website branding and design system.
+
+Design should feel:
+- Premium
+- Enterprise
+- Modern
+- Minimal
+- Human-designed
+- Professional
+- Technology-focused
+- Trustworthy
+
+AVOID:
+- Every section inside boxed cards
+- Excessive rounded cards
+- Repetitive 3-column card layouts
+- Generic AI-generated SaaS layouts
+- Too many gradients
+- Heavy glassmorphism
+- Random decorative blobs
+- Huge empty spacing
+- Overuse of icons
+
+Instead use:
+- Split-screen sections
+- Editorial layouts
+- Large typography
+- Alternating image/text sections
+- Timeline/process layouts
+- Feature strips
+- Comparison/stat sections
+- Sticky visual sections where suitable
+- Full-width content bands
+- Subtle borders and shadows
+- Clean enterprise spacing
+
+Keep the page fully responsive on:
+Desktop
+Laptop
+Tablet
+Mobile
+
+==================================================
+SECTION 1 — HERO
+==================================================
+
+Create a strong premium hero section.
+
+Eyebrow:
+AI-Powered Attendance Management
+
+H1:
+AI-Based Camera Attendance System
+
+Supporting text:
+Transform your attendance management with an AI-powered solution that leverages your existing camera infrastructure to track and manage attendance with greater efficiency, accuracy, and security.
+
+CTA buttons:
+Primary: Schedule a Demo
+Secondary: Explore Features
+
+Visual:
+Use a premium enterprise visual showing:
+- Office camera / CCTV
+- AI face detection overlays
+- Employee entering workplace
+- Attendance dashboard preview
+
+Do NOT make the hero look like a cybersecurity website.
+It should clearly communicate attendance management.
+
+Add a small trust/value strip under the hero:
+- Existing Camera Infrastructure
+- Real-Time Recognition
+- Automated Attendance
+- Centralized Management
+
+==================================================
+SECTION 2 — EXISTING INFRASTRUCTURE
+==================================================
+
+Heading:
+Seamless Integration with Existing Infrastructure
+
+Intro:
+Organizations can use their current camera setup without depending on major additional hardware investments.
+
+Present these 3 points:
+
+1. Cost-Effective Solution
+Use current camera infrastructure and reduce the need for new hardware purchases.
+
+2. Quick Implementation
+Install the software and begin attendance tracking with minimal downtime.
+
+3. Versatile Application
+Support flexible integration with different camera types and brands.
+
+Design:
+Use an asymmetric layout.
+Left: large content.
+Right: CCTV / camera infrastructure illustration.
+Do NOT use three equal cards.
+
+==================================================
+SECTION 3 — HOW FACIAL RECOGNITION WORKS
+==================================================
+
+Heading:
+Advanced Real-Time Facial Recognition
+
+Create a horizontal or vertical 4-step process.
+
+STEP 01 — Capture
+High-resolution cameras capture facial features in real time as employees enter.
+
+STEP 02 — Analysis
+AI algorithms analyze and match faces against the employee database.
+
+STEP 03 — Record
+Attendance is automatically logged and employee records are updated.
+
+STEP 04 — Notify
+Managers can receive real-time notifications for attendance anomalies or unauthorized access attempts.
+
+Design:
+Use a premium timeline / process flow.
+On desktop: horizontal.
+On mobile: vertical.
+
+==================================================
+SECTION 4 — PERFORMANCE IN REAL ENVIRONMENTS
+==================================================
+
+Heading:
+Reliable Performance in Various Environments
+
+Present these capabilities:
+
+Lighting Adaptability
+Performs in bright sunlight, dim indoor environments, and varying lighting conditions.
+
+Angle Flexibility
+Recognizes faces from different angles and accommodates different camera placements and employee movement.
+
+Crowd Handling
+Processes multiple faces simultaneously, making it suitable for high-traffic areas and rush hours.
+
+Design:
+Use one large workplace visual with these points positioned alongside it.
+Avoid 3 boxed cards.
+
+==================================================
+SECTION 5 — CENTRALIZED ATTENDANCE DASHBOARD
+==================================================
+
+Heading:
+Centralized Attendance Management Dashboard
+
+Intro:
+Give administrators a clear, centralized view of attendance information.
+
+Feature points:
+
+Real-Time Overview
+View attendance patterns and trends across the organization.
+
+Customizable Reports
+Generate reports for selected time periods, departments, or individuals.
+
+User-Friendly Interface
+Provide easy navigation and fast access to important attendance information.
+
+Mobile Accessibility
+Enable attendance management access through mobile devices.
+
+Design:
+Large dashboard mockup on one side.
+Text features on the other.
+Use dashboard UI visual hierarchy rather than cards.
+
+==================================================
+SECTION 6 — SECURITY
+==================================================
+
+Heading:
+Enhanced Security Features
+
+Include:
+
+Dual-Purpose Monitoring
+Track attendance while also strengthening premises monitoring.
+
+Authorized Access Only
+Reduce proxy attendance by ensuring authorized personnel are recorded.
+
+Anomaly Detection
+Use AI to flag unusual attendance patterns or suspicious activity for review.
+
+Design:
+Use dark or contrast section only if it fits the current IN4 brand.
+Keep it elegant, not overly dramatic.
+
+==================================================
+SECTION 7 — HR SYSTEM INTEGRATION
+==================================================
+
+Heading:
+Seamless HR System Integration
+
+Add 3 connected workflow items:
+
+Data Sync
+Attendance data can sync with existing HR management software.
+
+Payroll Processing
+Use accurate attendance information to streamline payroll workflows.
+
+Performance Analytics
+Support employee performance evaluation with attendance and punctuality metrics.
+
+Design:
+Show connected flow:
+Camera Attendance
+↓
+Attendance Engine
+↓
+HRMS
+↓
+Payroll / Reports
+
+Use connector lines and minimal icons.
+
+==================================================
+SECTION 8 — DATA PRIVACY & COMPLIANCE
+==================================================
+
+Heading:
+Data Privacy and Compliance
+
+Create a clean enterprise-style feature table or structured list.
+
+Feature | Benefit
+
+End-to-End Encryption
+Protect sensitive data during transmission and storage.
+
+Customizable Settings
+Configure the system according to specific compliance requirements.
+
+Regular Audits
+Support ongoing compliance with data protection standards.
+
+Consent Management
+Help manage employee consent for data collection.
+
+Do not claim legal certifications not mentioned in the client PDF.
+
+==================================================
+SECTION 9 — SCALABILITY
+==================================================
+
+Heading:
+Scalability for Growing Organizations
+
+Include:
+
+Flexible Expansion
+Add new cameras or locations as the organization grows.
+
+Multi-Site Support
+Manage attendance across multiple offices or campuses from a single platform.
+
+Cloud-Based Architecture
+Use cloud infrastructure to support scalability and reduce on-premise infrastructure requirements.
+
+Design:
+Use full-width enterprise architecture graphic or multi-location network visualization.
+
+==================================================
+SECTION 10 — APPLICATIONS
+==================================================
+
+Heading:
+Versatile Applications
+
+Use 3 industry use cases:
+
+Corporate Offices
+Streamline attendance for large office environments with multiple entry points.
+
+Educational Institutions
+Improve attendance tracking and student safety in schools and universities.
+
+Manufacturing Facilities
+Manage shift-based employees in industrial environments with 24/7 operations.
+
+Design:
+Use real-world images, not cartoon illustrations if the site already uses realistic visuals.
+
+==================================================
+SECTION 11 — KEY BENEFITS
+==================================================
+
+Heading:
+Key Benefits
+
+Show:
+
+Time Savings
+Reduce manual attendance tracking and free staff for higher-priority work.
+
+Cost Reduction
+Reduce new hardware investment by leveraging existing camera infrastructure.
+
+Improved Accuracy
+Reduce manual errors and maintain precise attendance records.
+
+Data-Driven Insights
+Use real-time attendance information to support better decisions and resource planning.
+
+Design:
+Use large typography + short benefit summaries.
+Avoid standard icon cards.
+
+==================================================
+SECTION 12 — FINAL CTA
+==================================================
+
+Heading:
+Transform Your Attendance Management Today
+
+Add 3 supporting points:
+
+Schedule a Demo
+See the AI-Based Camera Attendance System in action.
+
+Custom Integration Plan
+Create an implementation approach based on the organization's operational requirements.
+
+Ongoing Support
+Provide continuous assistance and updates to maintain system performance.
+
+Primary CTA:
+Schedule a Demo
+
+Secondary CTA:
+Contact Us
+
+Use the existing website's actual contact details and CTA links.
+DO NOT use the Way Track Systems contact details from the PDF.
+
+==================================================
+NAVIGATION / URL
+==================================================
+
+Create/update the product page with an SEO-friendly URL such as:
+
+/ai-camera-attendance/
+
+or follow the current website routing convention if a suitable route already exists.
+
+Add the page to the relevant product/navigation structure if required.
+
+==================================================
+SEO
+==================================================
+
+Suggested SEO title:
+AI-Based Camera Attendance System | IN4 Cloud
+
+Suggested meta description:
+AI-powered camera attendance system using existing CCTV infrastructure for facial recognition, real-time attendance, HR integration and centralized monitoring.
+
+Primary keyword:
+AI Camera Attendance System
+
+Secondary keywords:
+AI-Based Attendance System
+Camera Attendance System
+Facial Recognition Attendance System
+CCTV Attendance System
+AI Employee Attendance
+Automated Attendance Management
+
+Use a single H1 only.
+
+Use proper H2 and H3 hierarchy.
+
+Add descriptive image alt text.
+
+==================================================
+RESPONSIVENESS
+==================================================
+
+Desktop:
+- Spacious premium layout
+- Max content width around 1200–1320px
+- Strong visual hierarchy
+- Balanced split sections
+
+Tablet:
+- Collapse complicated two-column areas cleanly
+- Keep comfortable spacing
+- Maintain readable typography
+
+Mobile:
+- Single-column structure
+- No horizontal overflow
+- Buttons full-width where useful
+- Timeline becomes vertical
+- Dashboard visuals scale properly
+- Tables become stacked responsive rows
+- Maintain minimum readable text sizes
+
+==================================================
+DEVELOPMENT REQUIREMENTS
+==================================================
+
+Before coding:
+1. Inspect the existing project structure.
+2. Identify the current page/component architecture.
+3. Reuse the site's header, footer, buttons, typography, spacing, and existing reusable components.
+4. Do not unnecessarily rewrite unrelated files.
+5. Preserve existing routes and functionality.
+6. Follow the project's existing CSS / framework conventions.
+7. Ensure semantic HTML and accessibility.
+8. Add meaningful alt text.
+9. Keep code clean and maintainable.
+10. Test desktop, tablet, and mobile layouts.
+
+IMPORTANT:
+The final page must feel like it was intentionally designed by a professional UI/UX designer, not assembled from repetitive AI-generated cards.
+
+Use the client PDF as the content source, but visually transform it into a premium IN4 Cloud product page.

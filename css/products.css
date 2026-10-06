@@ -282,7 +282,32 @@
 }
 
 /* ---- Product showcase cards (home) ---- */
-.product-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 26px; }
+.product-grid {
+  display: flex;
+  gap: 26px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  padding: 6px 4px 18px;
+  margin: 0 -4px;
+  scrollbar-width: none;
+}
+.product-grid::-webkit-scrollbar { display: none; }
+.product-grid .product-card {
+  flex: 0 0 calc((100% - 52px) / 3);
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+}
+.product-grid .product-card .prod-cta { margin-top: auto; }
+
+.prod-dots { display: flex; justify-content: center; gap: 8px; margin-top: 8px; }
+.prod-dot {
+  width: 9px; height: 9px; border-radius: 50%; border: 0; padding: 0; cursor: pointer;
+  background: var(--purple-200); transition: all .25s var(--ease);
+}
+.prod-dot.active { background: var(--purple-600); width: 26px; border-radius: 6px; }
+.prod-dot:hover { background: var(--purple-400); }
 
 .product-card {
   display: flex;
@@ -556,7 +581,7 @@
 
 /* ---- Responsive ---- */
 @media (max-width: 1024px) {
-  .product-grid { grid-template-columns: repeat(2, 1fr); }
+  .product-grid .product-card { flex: 0 0 calc((100% - 26px) / 2); }
   .solution-grid { grid-template-columns: repeat(2, 1fr); }
   .module-pill-grid { grid-template-columns: repeat(3, 1fr); }
   .company-gallery { grid-template-columns: repeat(2, 1fr); }
@@ -571,7 +596,7 @@
 }
 
 @media (max-width: 720px) {
-  .product-grid { grid-template-columns: 1fr; }
+  .product-grid .product-card { flex: 0 0 100%; }
   .solution-grid { grid-template-columns: 1fr; }
   .module-pill-grid { grid-template-columns: repeat(2, 1fr); }
   .eco-stage { min-height: 470px; }

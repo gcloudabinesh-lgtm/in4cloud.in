@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-label="IP camera scanning an employee face to mark attendance">
+  <rect width="640" height="400" fill="#f6f2ff"/>
+  <rect x="90" y="80" width="120" height="60" rx="16" fill="#6528f7"/>
+  <circle cx="150" cy="140" r="14" fill="#7b4bff"/>
+  <path d="M150 154 v40" stroke="#6528f7" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="360" cy="160" r="34" fill="#cbb8ff"/>
+  <path d="M310 270 q50-70 100 0" fill="#9779ff"/>
+  <rect x="316" y="118" width="88" height="100" rx="8" fill="none" stroke="#6528f7" stroke-width="3" stroke-dasharray="8 6"/>
+  <path d="M316 104 v14 M404 104 v14 M316 232 v-14 M404 232 v-14" stroke="#6528f7" stroke-width="3" stroke-linecap="round"/>
+  <rect x="300" y="300" width="120" height="16" rx="8" fill="#e7dcff"/>
+  <path d="M470 120h70M470 160h50M470 200h70" stroke="#cbb8ff" stroke-width="10" stroke-linecap="round"/>
+</svg>
