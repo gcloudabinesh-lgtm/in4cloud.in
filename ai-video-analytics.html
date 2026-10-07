@@ -281,25 +281,70 @@
     <!-- ============ 6. VEHICLE COUNTING ============ -->
     <section class="va-sec" aria-labelledby="veh-title">
       <div class="va-wrap">
-        <p class="va-eyebrow reveal">Capability 03</p>
-        <h2 class="va-title reveal" id="veh-title">Vehicle Counting</h2>
-        <p class="va-sub reveal">Monitor traffic flow, parking usage, and congestion at your sites.</p>
-        <div class="va-pipeline reveal" style="--rd:.06s">
-          <span class="va-pipe-node">Entry</span><span class="va-pipe-arrow">→</span>
-          <span class="va-pipe-node">Detection</span><span class="va-pipe-arrow">→</span>
-          <span class="va-pipe-node">Classification</span><span class="va-pipe-arrow">→</span>
-          <span class="va-pipe-node">Count</span><span class="va-pipe-arrow">→</span>
-          <span class="va-pipe-node">Analytics</span>
+        <div class="va-split">
+          <div>
+            <p class="va-eyebrow reveal">Capability 03</p>
+            <h2 class="va-title reveal" id="veh-title">Vehicle Counting</h2>
+            <p class="va-sub reveal">Monitor traffic flow, parking usage, and congestion at your sites.</p>
+            <div class="va-pipeline reveal" style="--rd:.06s">
+              <span class="va-pipe-node">Entry</span><span class="va-pipe-arrow">→</span>
+              <span class="va-pipe-node">Detection</span><span class="va-pipe-arrow">→</span>
+              <span class="va-pipe-node">Classification</span><span class="va-pipe-arrow">→</span>
+              <span class="va-pipe-node">Count</span><span class="va-pipe-arrow">→</span>
+              <span class="va-pipe-node">Analytics</span>
+            </div>
+            <div class="va-tags reveal" style="--rd:.1s">
+              <span class="va-tag">Cars</span><span class="va-tag">Trucks</span><span class="va-tag">Motorcycles</span><span class="va-tag">Bicycles</span><span class="va-tag">Buses</span>
+            </div>
+            <div class="va-stat-callout reveal" style="--rd:.14s">
+              <b>98%</b><span>counting precision, with data export for analysis and integration with other smart systems.</span>
+            </div>
+            <ul class="va-list reveal" style="--rd:.18s; max-width:720px">
+              <li><i class="fa-solid fa-circle-check"></i>Smart city planning, parking optimization and traffic management.</li>
+            </ul>
+          </div>
+          <div class="va-frame reveal" style="--rd:.1s">
+            <svg viewBox="0 0 640 400" role="img" aria-label="Traffic camera view of a road with vehicles detected, classified and counted as they cross a counting line">
+              <rect width="640" height="400" fill="#26243F"/>
+              <!-- Road in perspective -->
+              <polygon points="230,40 410,40 640,400 0,400" fill="#1E1C36"/>
+              <line x1="230" y1="40" x2="0" y2="400" stroke="#3A3660" stroke-width="3"/>
+              <line x1="410" y1="40" x2="640" y2="400" stroke="#3A3660" stroke-width="3"/>
+              <line x1="320" y1="40" x2="320" y2="400" stroke="#4A4670" stroke-width="3" stroke-dasharray="16 14"/>
+              <!-- Counting line -->
+              <line x1="109" y1="230" x2="531" y2="230" stroke="#7C6EFF" stroke-width="3" stroke-dasharray="10 6"/>
+              <rect x="536" y="219" width="92" height="22" rx="6" fill="#7C6EFF"/>
+              <text x="582" y="234" fill="#fff" font-size="11" font-family="monospace" text-anchor="middle">COUNT LINE</text>
+              <!-- Motorcycle (far, left lane) -->
+              <rect x="250" y="78" width="18" height="34" rx="8" fill="#4A4670"/>
+              <rect x="242" y="70" width="34" height="50" rx="4" fill="none" stroke="#7C6EFF" stroke-width="2"/>
+              <text x="242" y="63" fill="#B9B2E0" font-size="10" font-family="monospace">BIKE · 0.94</text>
+              <!-- Truck (mid, right lane) -->
+              <rect x="368" y="130" width="72" height="78" rx="8" fill="#3A3660"/>
+              <rect x="374" y="135" width="60" height="18" rx="4" fill="#6D68A0"/>
+              <rect x="358" y="120" width="92" height="98" rx="6" fill="none" stroke="#F5A623" stroke-width="2.5"/>
+              <text x="358" y="112" fill="#F5A623" font-size="12" font-family="monospace">TRUCK · 0.96</text>
+              <!-- Car (near, left lane) -->
+              <rect x="150" y="290" width="90" height="60" rx="12" fill="#4A4670"/>
+              <rect x="162" y="298" width="66" height="16" rx="5" fill="#6D68A0"/>
+              <rect x="140" y="280" width="110" height="80" rx="6" fill="none" stroke="#3DD68C" stroke-width="2.5"/>
+              <text x="140" y="272" fill="#3DD68C" font-size="12" font-family="monospace">CAR · 0.98</text>
+              <!-- Bus (near, right lane) -->
+              <rect x="400" y="270" width="100" height="110" rx="12" fill="#3A3660"/>
+              <rect x="410" y="278" width="80" height="20" rx="5" fill="#6D68A0"/>
+              <rect x="390" y="260" width="120" height="130" rx="6" fill="none" stroke="#3DD68C" stroke-width="2.5"/>
+              <text x="390" y="252" fill="#3DD68C" font-size="12" font-family="monospace">BUS · 0.97</text>
+              <!-- Live count panel -->
+              <rect x="20" y="20" width="176" height="96" rx="10" fill="#141226" fill-opacity=".9" stroke="#4A4670"/>
+              <text x="36" y="44" fill="#8F86C9" font-size="11" font-family="monospace">VEHICLE COUNT · TODAY</text>
+              <text x="36" y="80" fill="#fff" font-size="30" font-weight="700" font-family="sans-serif">1,284</text>
+              <text x="36" y="102" fill="#3DD68C" font-size="11" font-family="monospace">IN 742 · OUT 542</text>
+              <!-- Camera label -->
+              <circle cx="528" cy="30" r="5" fill="#F4536E"/>
+              <text x="540" y="34" fill="#F4536E" font-size="11" font-family="monospace">REC · CAM-02</text>
+            </svg>
+          </div>
         </div>
-        <div class="va-tags reveal" style="--rd:.1s">
-          <span class="va-tag">Cars</span><span class="va-tag">Trucks</span><span class="va-tag">Motorcycles</span><span class="va-tag">Bicycles</span><span class="va-tag">Buses</span>
-        </div>
-        <div class="va-stat-callout reveal" style="--rd:.14s">
-          <b>98%</b><span>counting precision, with data export for analysis and integration with other smart systems.</span>
-        </div>
-        <ul class="va-list reveal" style="--rd:.18s; max-width:720px">
-          <li><i class="fa-solid fa-circle-check"></i>Smart city planning, parking optimization and traffic management.</li>
-        </ul>
       </div>
     </section>
 

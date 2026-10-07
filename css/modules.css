@@ -74,7 +74,7 @@
   max-width: 100%;
 }
 
-.site-map-note .ico { width: 18px; height: 18px; color: var(--green-600); margin-top: 2px; }
+.site-map-note .ico { width: 18px; height: 18px; color: var(--purple-600); margin-top: 2px; }
 
 /* highlight band inside feature block */
 .soft-note {

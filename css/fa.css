@@ -26,7 +26,7 @@
 .search-form .ico { font-size: 20px; line-height: 0; }
 .back-top .ico { font-size: 20px; line-height: 1; }
 
-.icon-badge .ico { display: block; line-height: 1; }
+.icon-badge .ico { display: flex; align-items: center; justify-content: center; line-height: 1; text-align: center; }
 
 .category-head .icon-badge .ico { font-size: 20px; }
 
@@ -51,4 +51,4 @@
 
 .phone-wrap .thumb .ico { font-size: 26px; }
 
-.pill .ico { color: var(--green-600); font-size: 18px; }
+.pill .ico { color: var(--purple-600); font-size: 18px; }

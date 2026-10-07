@@ -57,7 +57,7 @@
   margin-bottom: 20px;
 }
 
-.hero-badge .ico { color: var(--green-600); }
+.hero-badge .ico { color: var(--purple-600); }
 
 .inner-hero-visual { position: relative; min-height: 460px; }
 
@@ -381,7 +381,7 @@
 .product-card .prod-list li .ico {
   width: 17px;
   height: 17px;
-  color: var(--green-600);
+  color: var(--purple-600);
   flex-shrink: 0;
   margin-top: 3px;
 }

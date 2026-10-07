@@ -72,7 +72,7 @@ textarea.form-input { resize: vertical; min-height: 110px; }
   margin-top: 16px;
 }
 
-.form-note .ico { width: 16px; height: 16px; color: var(--green-600); flex-shrink: 0; margin-top: 2px; }
+.form-note .ico { width: 16px; height: 16px; color: var(--purple-600); flex-shrink: 0; margin-top: 2px; }
 
 .form-status {
   display: none;

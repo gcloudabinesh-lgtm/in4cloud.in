@@ -99,7 +99,7 @@
   color: var(--charcoal);
 }
 
-.trust-item .ico { width: 17px; height: 17px; color: var(--green-600); }
+.trust-item .ico { width: 17px; height: 17px; color: var(--purple-600); }
 
 /* ---- Hero visual composition (illustrative UI) ---- */
 .hero-visual { position: relative; min-height: 540px; }
@@ -249,9 +249,9 @@
 }
 
 .icon-badge.purple { background: var(--grad-purple); }
-.icon-badge.green { background: var(--grad-green); color: #14300a; }
+.icon-badge.green { background: var(--grad-purple); color: #fff; }
 .icon-badge.soft-purple { background: var(--purple-50); color: var(--purple-600); }
-.icon-badge.soft-green { background: var(--green-50); color: var(--green-700); }
+.icon-badge.soft-green { background: var(--purple-50); color: var(--purple-600); }
 
 .fc-status {
   display: inline-flex;
@@ -326,7 +326,7 @@
   color: var(--green-700);
 }
 
-.phone-geo .ico { width: 15px; height: 15px; color: var(--green-600); }
+.phone-geo .ico { width: 15px; height: 15px; color: var(--purple-600); }
 
 .phone-check {
   display: flex;

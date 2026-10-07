@@ -90,7 +90,7 @@
 
 .footer-col.contact-col ul { gap: 14px; }
 .footer-col .contact-row { display: flex; gap: 11px; align-items: flex-start; }
-.footer-col .contact-row .ico { width: 17px; height: 17px; color: var(--green-400); flex-shrink: 0; margin-top: 3px; }
+.footer-col .contact-row .ico { width: 17px; height: 17px; color: var(--purple-400); flex-shrink: 0; margin-top: 3px; }
 .footer-col .contact-row a, .footer-col .contact-row span { font-size: 14.5px; color: #a8a5c9; line-height: 1.6; }
 .footer-col .contact-row a:hover { color: #fff; }
 .footer-col address { font-style: normal; }

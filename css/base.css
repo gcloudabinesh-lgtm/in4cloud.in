@@ -198,7 +198,7 @@ kbd, code, pre { font-family: ui-monospace, "Cascadia Code", Menlo, monospace; }
   box-shadow: var(--shadow-sm);
 }
 
-.pill .ico { color: var(--green-600); }
+.pill .ico { color: var(--purple-600); }
 
 .grid {
   display: grid;

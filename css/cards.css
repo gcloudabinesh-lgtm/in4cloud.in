@@ -90,12 +90,6 @@
   transition: color 0.3s var(--ease), background 0.3s var(--ease), transform 0.3s var(--ease);
 }
 
-.industry-card:nth-child(4n) .icon-badge,
-.industry-card:nth-child(4n+1) .icon-badge {
-  background: var(--green-50);
-  color: var(--green-700);
-}
-
 .industry-card:hover .icon-badge {
   background: var(--grad-purple);
   color: #fff;
@@ -152,7 +146,7 @@
 .benefit-list { display: flex; flex-direction: column; gap: 12px; margin-bottom: 28px; }
 
 .benefit-list li { display: flex; align-items: flex-start; gap: 12px; font-size: 15.5px; color: var(--text-body); }
-.benefit-list li .ico { width: 18px; height: 18px; color: var(--green-600); flex-shrink: 0; margin-top: 3px; }
+.benefit-list li .ico { width: 18px; height: 18px; color: var(--purple-600); flex-shrink: 0; margin-top: 3px; }
 .benefit-list li strong { color: var(--ink-800); font-weight: 700; }
 
 .core-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
@@ -192,7 +186,7 @@
 /* ---- Feature list (two-column checklists) ---- */
 .check-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 26px; }
 .check-grid li { display: flex; gap: 10px; font-size: 15px; color: var(--text-body); align-items: flex-start; }
-.check-grid li .ico { width: 18px; height: 18px; color: var(--green-600); flex-shrink: 0; margin-top: 3px; }
+.check-grid li .ico { width: 18px; height: 18px; color: var(--purple-600); flex-shrink: 0; margin-top: 3px; }
 
 /* ---- Marquee-free logo cloud ---- */
 .logo-cloud { display: grid; gap: 16px; }

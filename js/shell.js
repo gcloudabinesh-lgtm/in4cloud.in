@@ -70,7 +70,6 @@
     '<div class="mega-col"><span class="mega-title">Workplace Modules</span><div class="mega-links">' +
     '<a href="visitor-management.html"><i class="ico fa-solid fa-user-check" aria-hidden="true"></i> Visitor Management</a>' +
     '<a href="parking-management.html"><i class="ico fa-solid fa-square-parking" aria-hidden="true"></i> Parking Management</a>' +
-    '<a href="hrms.html#modules"><i class="ico fa-solid fa-utensils" aria-hidden="true"></i> Canteen Management</a>' +
     '<a href="ai-video-analytics.html"><i class="ico fa-solid fa-video" aria-hidden="true"></i> AI-Based Video Analytics</a>' +
     "</div></div>" +
     '<div class="mega-col"><span class="mega-title">Company</span><div class="mega-links">' +
@@ -113,7 +112,6 @@
     '<a href="hrms.html"><i class="ico fa-solid fa-cloud" aria-hidden="true"></i> HRMS â€” Cloud HR &amp; Payroll</a>' +
     '<a href="visitor-management.html"><i class="ico fa-solid fa-user-check" aria-hidden="true"></i> Visitor Management</a>' +
     '<a href="parking-management.html"><i class="ico fa-solid fa-square-parking" aria-hidden="true"></i> Parking Management</a>' +
-    '<a href="hrms.html#modules"><i class="ico fa-solid fa-utensils" aria-hidden="true"></i> Canteen Management</a>' +
     '<a href="ai-video-analytics.html"><i class="ico fa-solid fa-video" aria-hidden="true"></i> AI-Based Video Analytics</a>' +
     "</div></div></div>" +
     '<a class="mobile-nav-link"' + mlActive("resources.html", "resources") + ' href="resources.html">' +
