@@ -3,6 +3,53 @@
    Extends the shared design system (base/buttons/cards/forms/hero).
    ========================================================================== */
 
+/* ---- Dark section text overrides ---- */
+.section-dark .eyebrow {
+  color: var(--purple-300);
+}
+
+.section-dark .section-title {
+  color: #fff;
+}
+
+.section-dark .section-lead {
+  color: rgba(255,255,255,0.6);
+}
+
+.section-dark .product-card {
+  background: rgba(255,255,255,0.05);
+  border-color: rgba(255,255,255,0.1);
+}
+
+.section-dark .product-card:hover {
+  background: rgba(255,255,255,0.08);
+  border-color: rgba(255,255,255,0.2);
+}
+
+.section-dark .product-card h3 {
+  color: #fff;
+}
+
+.section-dark .product-card p {
+  color: rgba(255,255,255,0.55);
+}
+
+.section-dark .prod-eyebrow {
+  color: var(--purple-300);
+}
+
+.section-dark .prod-dot {
+  background: rgba(255,255,255,0.2);
+}
+
+.section-dark .prod-dot:hover {
+  background: rgba(255,255,255,0.4);
+}
+
+.section-dark .prod-dot.active {
+  background: var(--purple-400);
+}
+
 /* ---- Gradient text helpers ---- */
 .grad-green {
   background: var(--grad-green);

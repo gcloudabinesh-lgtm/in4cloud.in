@@ -17,7 +17,6 @@
       phoneHref: "tel:+918925814088",
       email: "Priya@in4solution.com",
       emailHref: "mailto:Priya@in4solution.com",
-      website: "www.in4solution.com",
       addressLines: [
         "No-4, 2nd Floor, Pillaiyar Kovil street,",
         "Kasi City Park, Kasi Estate, Ashok Nagar,",

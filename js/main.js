@@ -2,27 +2,6 @@
 (function () {
   "use strict";
 
-  /* ---- Dropdown toggles (Company menu) ---- */
-  document.querySelectorAll(".has-dropdown > .nav-trigger").forEach(function (btn) {
-    btn.addEventListener("click", function (e) {
-      e.stopPropagation();
-      var parent = btn.closest(".has-dropdown");
-      var isOpen = parent.classList.contains("open");
-
-      // Close all dropdowns and mega menus
-      document.querySelectorAll(".has-dropdown.open, .has-mega.open").forEach(function (el) {
-        el.classList.remove("open");
-        var trigger = el.querySelector(".nav-trigger");
-        if (trigger) trigger.setAttribute("aria-expanded", "false");
-      });
-
-      if (!isOpen) {
-        parent.classList.add("open");
-        btn.setAttribute("aria-expanded", "true");
-      }
-    });
-  });
-
   /* ---- Mega menu toggle ---- */
   document.querySelectorAll(".has-mega > .nav-trigger").forEach(function (btn) {
     btn.addEventListener("click", function (e) {
@@ -203,4 +182,70 @@
       }
     });
   });
+/* ---- Hero headline typewriter ----
+     Splits the gradient phrase into per-character spans and reveals them one
+     by one. The original text stays in the DOM (aria-hidden) plus a
+     visually-hidden copy for screen readers, so the h1 is never lost. */
+  var typedEls = document.querySelectorAll("[data-typewriter]");
+  var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  if (typedEls.length && !reduceMotion) {
+    var runTyping = function (el) {
+      var text = el.textContent;
+      var caret = el.parentElement ? el.parentElement.querySelector(".hero-caret") : null;
+      var chars = [];
+      var i;
+
+      el.textContent = "";
+      for (i = 0; i < text.length; i++) {
+        var span = document.createElement("span");
+        span.className = "tk-c";
+        span.textContent = text.charAt(i);
+        el.appendChild(span);
+        chars.push(span);
+      }
+
+      if (caret) caret.classList.add("is-on");
+
+      var idx = 0;
+      var tick = function () {
+        if (idx >= chars.length) {
+          if (caret) caret.classList.remove("is-on");
+          el.setAttribute("data-typed", "done");
+          return;
+        }
+        chars[idx].classList.add("is-in");
+        idx++;
+        window.setTimeout(tick, 62 + Math.random() * 58);
+      };
+
+      window.setTimeout(tick, 240);
+    };
+
+    if ("IntersectionObserver" in window) {
+      /* Observe the headline block, not the inline span — the span collapses
+         to zero width once its characters are hidden, so it can never satisfy
+         a positive intersection threshold. */
+      var typeObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (!entry.isIntersecting) return;
+          typeObserver.unobserve(entry.target);
+          entry.target.querySelectorAll("[data-typewriter]").forEach(function (el) {
+            if (el.getAttribute("data-typed") !== "done") runTyping(el);
+          });
+        });
+      }, { threshold: 0.35 });
+
+      var seen = [];
+      typedEls.forEach(function (el) {
+        var host = el.closest("h1, .hero-title") || el;
+        if (seen.indexOf(host) === -1) {
+          seen.push(host);
+          typeObserver.observe(host);
+        }
+      });
+    } else {
+      Array.prototype.forEach.call(typedEls, runTyping);
+    }
+  }
 })();

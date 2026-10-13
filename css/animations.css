@@ -11,6 +11,21 @@
   transform: translateY(0);
 }
 
+/* Slide in from the right edge (used on right-hand split media) */
+.reveal-right {
+  transform: translateX(56px);
+}
+
+.reveal-right.is-visible {
+  transform: translateX(0);
+}
+
+@media (max-width: 900px) {
+  .reveal-right {
+    transform: translateX(0);
+  }
+}
+
 @keyframes floatY {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-12px); }
@@ -28,6 +43,10 @@
     opacity: 1;
     transform: none;
     transition: none;
+  }
+
+  .reveal-right {
+    transform: none;
   }
 
   *,

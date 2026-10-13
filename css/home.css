@@ -5,7 +5,7 @@
   padding-block: 3rem;
   border-top: 1px solid var(--border-soft);
   border-bottom: 1px solid var(--border-soft);
-  background: linear-gradient(180deg, #fafafc 0%, #ffffff 100%);
+  background: var(--bg-lav);
 }
 
 .marquee {
@@ -27,12 +27,12 @@
 
 .marquee::before {
   left: 0;
-  background: linear-gradient(90deg, #fff 0%, rgba(255,255,255,0.8) 40%, transparent 100%);
+  background: linear-gradient(90deg, var(--bg-lav) 0%, rgba(247,245,255,0.8) 40%, transparent 100%);
 }
 
 .marquee::after {
   right: 0;
-  background: linear-gradient(-90deg, #fff 0%, rgba(255,255,255,0.8) 40%, transparent 100%);
+  background: linear-gradient(-90deg, var(--bg-lav) 0%, rgba(247,245,255,0.8) 40%, transparent 100%);
 }
 
 .marquee-track {
@@ -469,6 +469,200 @@
   margin-bottom: 16px;
 }
 
+/* ---- Section divider for alternating sections ---- */
+.section-white {
+  border-top: 1px solid var(--border-soft);
+  border-bottom: 1px solid var(--border-soft);
+}
+
+/* ---- Testimonials ---- */
+.testimonials-section {
+  position: relative;
+}
+
+.testimonials-section::before {
+  content: "";
+  position: absolute;
+  top: 10%;
+  left: -5%;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(closest-side, rgba(101, 40, 247, 0.06), transparent 70%);
+  pointer-events: none;
+}
+
+.testimonials-section::after {
+  content: "";
+  position: absolute;
+  bottom: 10%;
+  right: -5%;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(closest-side, rgba(114, 191, 68, 0.06), transparent 70%);
+  pointer-events: none;
+}
+
+.testimonial-carousel {
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+.testimonial-track {
+  display: flex;
+  gap: 24px;
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.testimonial-track .testimonial-card {
+  flex: 0 0 calc((100% - 72px) / 4);
+  min-width: 0;
+}
+
+.testimonial-dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 36px;
+  position: relative;
+  z-index: 1;
+}
+
+.testimonial-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: none;
+  background: var(--border);
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.3s var(--ease);
+}
+
+.testimonial-dot:hover {
+  background: var(--purple-300);
+}
+
+.testimonial-dot.active {
+  background: var(--purple-600);
+  width: 32px;
+  border-radius: 999px;
+}
+
+.testimonial-card {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 24px 22px;
+  background: #fff;
+  border: 1px solid var(--border-soft);
+  border-radius: var(--r-xl);
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.35s var(--ease), box-shadow 0.35s var(--ease), border-color 0.35s var(--ease);
+  position: relative;
+  overflow: hidden;
+}
+
+.testimonial-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--grad-purple);
+  opacity: 0;
+  transition: opacity 0.35s var(--ease);
+}
+
+.testimonial-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--purple-200);
+}
+
+.testimonial-card:hover::before {
+  opacity: 1;
+}
+
+.testimonial-stars {
+  display: flex;
+  gap: 2px;
+  color: #fbbf24;
+  font-size: 14px;
+}
+
+.testimonial-stars .ico {
+  width: 14px;
+  height: 14px;
+}
+
+.testimonial-quote {
+  flex: 1;
+  position: relative;
+}
+
+.testimonial-quote::before {
+  content: "\201C";
+  position: absolute;
+  top: -6px;
+  left: -2px;
+  font-size: 40px;
+  font-family: "Plus Jakarta Sans", serif;
+  color: var(--purple-100);
+  line-height: 1;
+  pointer-events: none;
+}
+
+.testimonial-quote p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text-body);
+  position: relative;
+  z-index: 1;
+  font-style: italic;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border-soft);
+}
+
+.testimonial-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 800;
+  font-size: 14px;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.testimonial-author-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.testimonial-author-info strong {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--ink-900);
+}
+
+.testimonial-author-info span {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
 /* Responsive */
 @media (max-width: 1024px) {
   .metrics-grid {
@@ -476,6 +670,12 @@
   }
   .module-cards-grid .module-card {
     flex: 0 0 220px;
+  }
+  .testimonial-track {
+    gap: 20px;
+  }
+  .testimonial-track .testimonial-card {
+    flex: 0 0 calc((100% - 40px) / 2);
   }
 }
 
@@ -494,4 +694,157 @@
   .client-logo {
     font-size: 18px;
   }
+  .testimonial-track {
+    gap: 18px;
+  }
+  .testimonial-track .testimonial-card {
+    flex: 0 0 100%;
+  }
+  .testimonial-card {
+    padding: 24px 20px;
+  }
+}
+
+/* ==========================================================================
+   Homepage module + integration icon alignment
+   --------------------------------------------------------------------------
+   `.icon-badge` has no base display rule anywhere in the codebase, so the
+   badge renders as a block and the glyph falls into its top-left corner
+   (measured 18px off-centre in a 56px badge). The glyph also inherited the
+   body's dark text colour, and the integration badges were being squeezed
+   off-square by flex shrink. Scoped to the homepage because `.product-card`
+   and `.info-list` are also used on about.html.
+   ========================================================================== */
+#products .product-card .icon-badge,
+.integrations .info-list .icon-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+#products .product-card .icon-badge .ico {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1em;
+  height: 1em;
+  font-size: 25px;
+  line-height: 1;
+  color: #fff;
+}
+
+.integrations .info-list .icon-badge .ico {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1em;
+  height: 1em;
+  font-size: 19px;
+  line-height: 1;
+  color: #fff;
+}
+
+/* ==========================================================================
+   Deployment section (moved up from hrms.html)
+   --------------------------------------------------------------------------
+   Same two-column editorial split and the same Cloud / On-Premise / Custom
+   diagram as the HRMS page, re-hosted on the homepage. Class names are
+   homepage-scoped (`deployment-*`) rather than reusing the `hr-*` names,
+   because css/hrms.css is not loaded on index.html.
+   ========================================================================== */
+.deployment-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: center;
+}
+
+.deployment-points {
+  list-style: none;
+  margin: 22px 0 26px;
+  padding: 0;
+  display: grid;
+  gap: 11px;
+}
+
+.deployment-points li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-body);
+}
+
+.deployment-points .ico {
+  color: #6528f7;
+  font-size: 15px;
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+
+.deployment-diagram {
+  background: linear-gradient(160deg, #ece4ff, #fff 60%, #e9efff);
+  border: 1px solid var(--purple-100);
+  border-radius: var(--r-xl);
+  padding: clamp(1.6rem, 3vw, 2.6rem);
+  display: grid;
+  gap: 14px;
+}
+
+.deployment-node {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: #fff;
+  border: 1px solid var(--purple-100);
+  border-radius: var(--r-md);
+  padding: 14px 18px;
+  box-shadow: var(--shadow-sm);
+  transition: transform .25s var(--ease), box-shadow .25s var(--ease), border-color .25s var(--ease);
+}
+
+.deployment-node:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--purple-200);
+}
+
+.deployment-node .icon-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  flex-shrink: 0;
+}
+
+.deployment-node .icon-badge .ico {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1em;
+  height: 1em;
+  font-size: 19px;
+  line-height: 1;
+  color: #fff;
+}
+
+.deployment-node strong {
+  display: block;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 15px;
+  color: var(--ink-800);
+}
+
+.deployment-node span {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+@media (max-width: 1023px) {
+  .deployment-grid { grid-template-columns: 1fr; }
 }

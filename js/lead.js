@@ -33,6 +33,9 @@
     if (!values.email || !EMAIL_RE.test(values.email)) {
       errors.email = "Please enter a valid work email address.";
     }
+    if (values.productRequired && !values.product) {
+      errors.product = "Please select an interested module.";
+    }
     return errors;
   }
 
@@ -111,6 +114,7 @@
           phone: str(form.elements.phone.value),
           email: str(form.elements.email.value),
           product: str(form.elements.product ? form.elements.product.value : ""),
+          productRequired: !!(form.elements.product && form.elements.product.required),
           companySize: str(form.elements.companySize ? form.elements.companySize.value : ""),
           message: str(form.elements.message ? form.elements.message.value : ""),
           pageSource: str(form.elements.pageSource ? form.elements.pageSource.value : "")
@@ -125,7 +129,7 @@
         });
 
         const errors = validate(values);
-        const keys = ["fullName", "company", "phone", "email"];
+        const keys = ["fullName", "company", "phone", "email", "product"];
         let hasError = false;
         keys.forEach(function (k) {
           const inp = form.elements[k];
@@ -181,14 +185,16 @@
       });
 
       // clear per-field error on input
-      ["fullName", "company", "phone", "email"].forEach(function (k) {
+      ["fullName", "company", "phone", "email", "product"].forEach(function (k) {
         const inp = form.elements[k];
         if (!inp) return;
-        inp.addEventListener("input", function () {
+        const clearError = function () {
           inp.classList.remove("has-error");
           const errBox = inp.parentElement.querySelector("[data-error-for]");
           if (errBox) errBox.textContent = "";
-        });
+        };
+        inp.addEventListener("input", clearError);
+        inp.addEventListener("change", clearError);
       });
     });
   }

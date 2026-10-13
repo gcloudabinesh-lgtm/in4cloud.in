@@ -33,8 +33,8 @@
   --ink-700: #221f45;
   --charcoal: #2b2942;
   --text: #1a1833;
-  --text-body: #47436a;
-  --text-muted: #6d6990;
+  --text-body: #3d3a5c;
+  --text-muted: #56527a;
   --border: #e6e4f1;
   --border-soft: #efedf8;
   --bg: #ffffff;
@@ -88,7 +88,7 @@ body {
   font-family: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
   color: var(--text-body);
   background: var(--bg);
-  line-height: 1.65;
+  line-height: 1.7;
   font-size: 16.5px;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
@@ -144,8 +144,21 @@ kbd, code, pre { font-family: ui-monospace, "Cascadia Code", Menlo, monospace; }
 .section { padding-block: var(--space-section); position: relative; }
 .section-sm { padding-block: var(--space-section-sm); }
 .section-alt { background: var(--bg-soft); }
+.section-white { background: #ffffff; }
 .section-lav { background: var(--bg-lav); }
 .section-green { background: var(--bg-green); }
+.section-blue { background: #f0f4ff; }
+.section-peach { background: #fef7f0; }
+.section-mint { background: #f0faf5; }
+.section-rose { background: #fef5f7; }
+
+/* Section icon accent colors */
+.icon-purple { color: var(--purple-600); }
+.icon-green { color: var(--green-600); }
+.icon-blue { color: #3b82f6; }
+.icon-orange { color: #f97316; }
+.icon-teal { color: #14b8a6; }
+.icon-rose { color: #e11d48; }
 
 .eyebrow {
   display: inline-flex;

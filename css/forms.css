@@ -201,11 +201,58 @@ textarea.form-input { resize: vertical; min-height: 110px; }
   box-shadow: var(--shadow-md);
 }
 
+/* ---- Demo steps ----
+   The component had no base rules at all — only a hover transition and a
+   responsive grid override — so `.step-flow` fell back to `display: block`
+   (steps stacked with a 0px gap) and `.step-num` rendered as bare inline
+   text. `.process-step .step-num` in products.css is more specific, so it is
+   unaffected. */
+.step-flow {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
 .step-flow .step {
+  padding: 18px 16px;
+  border-radius: var(--r-md);
+  background: #fff;
+  border: 1px solid var(--border-soft);
+  box-shadow: var(--shadow-sm);
   transition: transform 0.25s var(--ease), box-shadow 0.25s var(--ease);
 }
 
 .step-flow .step:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+
+.step-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  margin-bottom: 12px;
+  border-radius: 50%;
+  background: var(--grad-purple);
+  color: #fff;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.step-flow .step h3 {
+  margin: 0 0 6px;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--ink-900);
+}
+
+.step-flow .step p {
+  margin: 0;
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: var(--text-muted);
+}
 
 .cta-strip {
   margin-top: clamp(2rem, 4vw, 3rem);

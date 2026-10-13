@@ -14,7 +14,8 @@
     "visitor-management.html": "visitor",
     "parking-management.html": "parking",
     "attendance-management.html": "attendance",
-    "ai camera attendance.html": "ai-camera",
+    "canteen-management.html": "canteen",
+    "leave-management.html": "leave",
     "ai-video-analytics.html": "ai-video",
     "about.html": "company",
     "contact.html": "contact",
@@ -22,7 +23,7 @@
     "pricing.html": "pricing"
   }[currentFile] || "home";
 
-  const isProductPage = ["hrms", "visitor", "parking", "attendance", "ai-video", "ai-camera"].indexOf(pageKey) !== -1;
+  const isProductPage = ["hrms", "visitor", "parking", "attendance", "leave", "ai-video", "ai-camera"].indexOf(pageKey) !== -1;
 
   function active(href, key) {
     const isActive = (href && currentFile === href) || pageKey === key;
@@ -58,11 +59,11 @@
     'Products<i class="ico fa-solid fa-chevron-down" aria-hidden="true"></i></button>' +
     '<div class="mega-menu" role="menu">' +
     '<div class="mega-inner">' +
-    '<div class="mega-col"><span class="mega-title">HRMS â€” Cloud HR &amp; Payroll</span><div class="mega-links">' +
+    '<div class="mega-col"><span class="mega-title">HRMS &mdash; Cloud HR &amp; Payroll</span><div class="mega-links">' +
     '<a href="hrms.html"><i class="ico fa-solid fa-cloud" aria-hidden="true"></i> HRMS</a>' +
     '<a href="attendance-management.html"><i class="ico fa-solid fa-fingerprint" aria-hidden="true"></i> Attendance Management</a>' +
-    '<a href="ai camera attendance.html"><i class="ico fa-solid fa-camera-retro" aria-hidden="true"></i> AI Camera Attendance</a>' +
-    '<a href="hrms.html#modules"><i class="ico fa-solid fa-calendar-check" aria-hidden="true"></i> Leave Management</a>' +
+    '<a href="canteen-management.html"><i class="ico fa-solid fa-utensils" aria-hidden="true"></i> Canteen Management</a>' +
+    '<a href="leave-management.html"><i class="ico fa-solid fa-calendar-check" aria-hidden="true"></i> Leave Management</a>' +
     '<a href="hrms.html#modules"><i class="ico fa-solid fa-money-check-dollar" aria-hidden="true"></i> Payroll Processing</a>' +
     '<a href="hrms.html#modules"><i class="ico fa-solid fa-shield-halved" aria-hidden="true"></i> Compliance</a>' +
     '<a href="hrms.html#modules"><i class="ico fa-solid fa-mobile-screen" aria-hidden="true"></i> Employee Self Service</a>' +
@@ -72,25 +73,14 @@
     '<a href="parking-management.html"><i class="ico fa-solid fa-square-parking" aria-hidden="true"></i> Parking Management</a>' +
     '<a href="ai-video-analytics.html"><i class="ico fa-solid fa-video" aria-hidden="true"></i> AI-Based Video Analytics</a>' +
     "</div></div>" +
-    '<div class="mega-col"><span class="mega-title">Company</span><div class="mega-links">' +
-    '<a href="about.html"><i class="ico fa-solid fa-building" aria-hidden="true"></i> About IN4 Solutions</a>' +
-    '<a href="contact.html"><i class="ico fa-solid fa-envelope" aria-hidden="true"></i> Contact</a>' +
-    '<a href="resources.html"><i class="ico fa-solid fa-book-open" aria-hidden="true"></i> Resources</a>' +
-    '<a href="pricing.html"><i class="ico fa-solid fa-tag" aria-hidden="true"></i> Pricing</a>' +
-    "</div></div>" +
     "</div>" +
     '<div class="mega-foot"><p>Modular cloud platform. One technology partner.</p>' +
     '<a class="text-link" href="contact.html#lead">Request a demo<i class="ico fa-solid fa-arrow-right" aria-hidden="true"></i></a></div>' +
     "</div></li>" +
     navLink("resources.html", "Resources", "resources") +
     navLink("pricing.html", "Pricing", "pricing") +
-    '<li class="has-dropdown">' +
-    '<button class="nav-link nav-trigger" type="button" aria-haspopup="true" aria-expanded="false">' +
-    'Company<i class="ico fa-solid fa-chevron-down" aria-hidden="true"></i></button>' +
-    '<div class="dropdown-menu" role="menu">' +
-    '<a href="about.html"><i class="ico fa-solid fa-building" aria-hidden="true"></i> About Us</a>' +
-    '<a href="contact.html"><i class="ico fa-solid fa-envelope" aria-hidden="true"></i> Contact</a>' +
-    "</div></li>" +
+    navLink("about.html", "About Us", "company") +
+    navLink("contact.html", "Contact", "contact") +
     "</ul></nav>" +
     '<div class="header-actions">' +
     '<a href="contact.html#lead" class="btn btn-primary btn-sm header-cta">Book a Demo</a>' +
@@ -109,7 +99,7 @@
     '<button class="mobile-nav-link acc-trigger" type="button" aria-expanded="false" aria-controls="m-acc-product">' +
     'Products<i class="ico ico-chev fa-solid fa-chevron-down" aria-hidden="true"></i></button>' +
     '<div class="mobile-sub" id="m-acc-product"><div class="mobile-sub-inner"><div class="mobile-sub-links">' +
-    '<a href="hrms.html"><i class="ico fa-solid fa-cloud" aria-hidden="true"></i> HRMS â€” Cloud HR &amp; Payroll</a>' +
+    '<a href="hrms.html"><i class="ico fa-solid fa-cloud" aria-hidden="true"></i> HRMS &mdash; Cloud HR &amp; Payroll</a>' +
     '<a href="visitor-management.html"><i class="ico fa-solid fa-user-check" aria-hidden="true"></i> Visitor Management</a>' +
     '<a href="parking-management.html"><i class="ico fa-solid fa-square-parking" aria-hidden="true"></i> Parking Management</a>' +
     '<a href="ai-video-analytics.html"><i class="ico fa-solid fa-video" aria-hidden="true"></i> AI-Based Video Analytics</a>' +
@@ -118,12 +108,10 @@
     '<i class="ico fa-solid fa-book-open" aria-hidden="true"></i> Resources</a>' +
     '<a class="mobile-nav-link"' + mlActive("pricing.html", "pricing") + ' href="pricing.html">' +
     '<i class="ico fa-solid fa-tag" aria-hidden="true"></i> Pricing</a>' +
-    '<button class="mobile-nav-link acc-trigger" type="button" aria-expanded="false" aria-controls="m-acc-company">' +
-    'Company<i class="ico ico-chev fa-solid fa-chevron-down" aria-hidden="true"></i></button>' +
-    '<div class="mobile-sub" id="m-acc-company"><div class="mobile-sub-inner"><div class="mobile-sub-links">' +
-    '<a href="about.html"><i class="ico fa-solid fa-building" aria-hidden="true"></i> About Us</a>' +
-    '<a href="contact.html"><i class="ico fa-solid fa-envelope" aria-hidden="true"></i> Contact</a>' +
-    "</div></div></div>" +
+    '<a class="mobile-nav-link"' + mlActive("about.html", "company") + ' href="about.html">' +
+    '<i class="ico fa-solid fa-building" aria-hidden="true"></i> About Us</a>' +
+    '<a class="mobile-nav-link"' + mlActive("contact.html", "contact") + ' href="contact.html">' +
+    '<i class="ico fa-solid fa-envelope" aria-hidden="true"></i> Contact</a>' +
     "</div>" +
     '<div class="mobile-menu-cta">' +
     '<a href="contact.html#lead" class="btn btn-primary btn-block">Book a Demo</a>' +
@@ -153,9 +141,10 @@
     "</div>" +
     "</div>" +
     '<div class="footer-col"><h4 class="foot-trigger" role="button" tabindex="0" aria-expanded="false">Products<i class="ico fa-solid fa-chevron-down foot-caret" aria-hidden="true"></i></h4><ul>' +
-    '<li><a href="hrms.html">HRMS â€” Cloud HR &amp; Payroll</a></li>' +
+    '<li><a href="hrms.html">HRMS &mdash; Cloud HR &amp; Payroll</a></li>' +
     '<li><a href="visitor-management.html">Visitor Management</a></li>' +
     '<li><a href="parking-management.html">Parking Management</a></li>' +
+    '<li><a href="leave-management.html">Leave Management</a></li>' +
     '<li><a href="hrms.html#modules">Canteen Management</a></li>' +
     '<li><a href="ai-video-analytics.html">AI-Based Video Analytics</a></li>' +
     "</ul></div>" +
@@ -169,7 +158,6 @@
     '<li class="contact-row"><i class="ico fa-solid fa-phone" aria-hidden="true"></i><a href="' + S.contact.phoneHref + '">' + S.contact.phoneDisplay + "</a></li>" +
     '<li class="contact-row"><i class="ico fa-solid fa-envelope" aria-hidden="true"></i><a href="' + S.contact.emailHref + '">' + S.contact.email + "</a></li>" +
     '<li class="contact-row"><i class="ico fa-solid fa-location-dot" aria-hidden="true"></i><address>' + S.contact.addressLines.join("<br>") + "</address></li>" +
-    '<li class="contact-row"><i class="ico fa-solid fa-globe" aria-hidden="true"></i><a href="https://' + S.contact.website + '">' + S.contact.website + "</a></li>" +
     "</ul></div>" +
     "</div>" +
     '<div class="container footer-bottom">' +
