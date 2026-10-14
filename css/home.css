@@ -257,6 +257,49 @@
   box-shadow: var(--shadow-purple);
 }
 
+/* Third tier takes the brand's second colour, so the row reads as three
+   distinct steps (neutral -> purple -> green) instead of two identical white
+   cards flanking the purple one. Green stays an accent only: the body is still
+   light, so the price and feature list remain the loudest elements. */
+.pricing-card.premium {
+  border-color: color-mix(in srgb, var(--in4-green) 42%, transparent);
+  background:
+    radial-gradient(120% 80% at 50% 0%, color-mix(in srgb, var(--in4-green-soft) 90%, #ffffff) 0%, transparent 68%),
+    linear-gradient(180deg, #ffffff 0%, #fbfdf9 100%);
+  box-shadow: 0 2px 6px rgba(24, 22, 50, 0.04), 0 18px 44px rgba(62, 142, 45, 0.12);
+}
+
+/* accent bar across the top edge */
+.pricing-card.premium::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 4px;
+  border-radius: var(--r-lg) var(--r-lg) 0 0;
+  background: linear-gradient(90deg, var(--in4-green) 0%, var(--in4-green-dark) 100%);
+}
+
+.pricing-card.premium:hover {
+  box-shadow: 0 4px 10px rgba(24, 22, 50, 0.05), 0 26px 58px rgba(62, 142, 45, 0.2);
+}
+
+.pricing-card.premium .pricing-head h3 { color: var(--in4-green-dark); }
+
+.pricing-card.premium .pricing-amount .currency,
+.pricing-card.premium .pricing-amount .price { color: var(--in4-green-dark); }
+
+/* green tick marks so the list carries the new accent */
+.pricing-card.premium .pricing-features .ico { color: var(--in4-green-dark); }
+
+.pricing-card.premium .btn-green {
+  color: #14300a;
+  box-shadow: 0 10px 24px rgba(62, 142, 45, 0.28);
+}
+
+.pricing-card.premium .btn-green:hover {
+  box-shadow: 0 14px 30px rgba(62, 142, 45, 0.36);
+}
+
 .popular-badge {
   position: absolute;
   top: -13px;
@@ -885,6 +928,198 @@
 
 .mock-legend-list i:nth-child(2) { width: 72%; }
 .mock-legend-list i:nth-child(3) { width: 54%; }
+
+/* ---- Org chart body (Core HR / HRIS) ---- */
+.mock-tree-body {
+  padding: 20px 18px 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+
+.mock-tree-node {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: min(260px, 100%);
+  padding: 10px 14px;
+  border-radius: 14px;
+  background: #ffffff;
+  border: 1px solid var(--in4-border);
+  box-shadow: 0 8px 18px rgba(17, 24, 39, 0.06);
+}
+
+.mock-tree-node.root {
+  background: color-mix(in srgb, var(--acc, #6C35FF) 10%, #ffffff);
+  border-color: color-mix(in srgb, var(--acc, #6C35FF) 28%, transparent);
+}
+
+.mock-tree-node u {
+  flex: 0 0 auto;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--acc, #6C35FF) 26%, #ffffff);
+}
+
+.mock-tree-node b {
+  flex: 1;
+  height: 7px;
+  border-radius: 4px;
+  background: #ded7f6;
+}
+
+.mock-tree-link {
+  width: 2px;
+  height: 14px;
+  background: var(--in4-border);
+}
+
+.mock-tree-bus {
+  width: 56%;
+  height: 2px;
+  background: var(--in4-border);
+}
+
+.mock-tree-row {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  padding-top: 14px;
+}
+
+.mock-tree-row .mock-tree-node {
+  flex: 1 1 0;
+  min-width: 0;
+  width: auto;
+  padding: 9px 11px;
+}
+
+/* ---- Hiring pipeline body (Recruitment) ---- */
+.mock-pipe-body {
+  padding: 16px;
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.mock-col {
+  flex: 1 1 0;
+  min-width: 0;
+  padding: 10px;
+  border-radius: 14px;
+  background: var(--in4-bg-soft);
+  border: 1px solid var(--in4-border);
+}
+
+.mock-col-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+  margin-bottom: 9px;
+}
+
+.mock-col-head i {
+  width: 34px;
+  height: 7px;
+  border-radius: 4px;
+  background: #ded7f6;
+}
+
+.mock-col-head em {
+  font-style: normal;
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--acc, #6C35FF);
+}
+
+.mock-card {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px;
+  margin-bottom: 7px;
+  border-radius: 11px;
+  background: #ffffff;
+  border: 1px solid var(--in4-border);
+}
+
+.mock-card:last-child { margin-bottom: 0; }
+
+.mock-card u {
+  flex: 0 0 auto;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--acc, #6C35FF) 26%, #ffffff);
+}
+
+.mock-card s {
+  flex: 1;
+  height: 6px;
+  border-radius: 3px;
+  background: #e6e1f7;
+  text-decoration: none;
+}
+
+.mock-col.win {
+  background: color-mix(in srgb, var(--acc, #6C35FF) 12%, #ffffff);
+  border-color: color-mix(in srgb, var(--acc, #6C35FF) 30%, transparent);
+}
+
+/* ---- Course body (Training & Learning) ---- */
+.mock-course-body {
+  padding: 16px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.mock-course {
+  padding: 13px;
+  border-radius: 15px;
+  background: #ffffff;
+  border: 1px solid var(--in4-border);
+}
+
+.mock-course-top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 11px;
+}
+
+.mock-course-top u {
+  flex: 0 0 auto;
+  width: 28px;
+  height: 28px;
+  border-radius: 9px;
+  background: color-mix(in srgb, var(--acc, #6C35FF) 20%, #ffffff);
+}
+
+.mock-course-top b {
+  flex: 1;
+  height: 7px;
+  border-radius: 4px;
+  background: #ded7f6;
+}
+
+.mock-bar {
+  height: 7px;
+  border-radius: 999px;
+  background: #efeafd;
+  overflow: hidden;
+}
+
+.mock-bar b {
+  display: block;
+  height: 100%;
+  width: var(--w, 60%);
+  border-radius: inherit;
+  background: linear-gradient(90deg, var(--acc, #6C35FF), #4B20C8);
+}
 
 /* ==========================================================================
    Biometric integrations — hub-and-spoke visual
@@ -1803,6 +2038,27 @@
   .integrations-hub { min-height: 340px; max-width: 560px; margin: 0 auto; width: 100%; }
 }
 
+/* With eleven modules the vertical selector outgrows the panel beside it, so
+   above the mobile breakpoint it scrolls in place (and keeps the active tab
+   in view — see initTabs) instead of stretching the whole section. */
+@media (min-width: 861px) {
+  .mod-nav {
+    max-height: clamp(430px, 68vh, 660px);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    scrollbar-width: thin;
+    scrollbar-color: #ddd3fb transparent;
+    padding-right: 8px;
+  }
+
+  .mod-nav::-webkit-scrollbar { width: 6px; }
+  .mod-nav::-webkit-scrollbar-track { background: transparent; }
+  .mod-nav::-webkit-scrollbar-thumb {
+    background: #ddd3fb;
+    border-radius: 999px;
+  }
+}
+
 @media (max-width: 860px) {
   .mod-showcase { grid-template-columns: 1fr; }
 
@@ -1924,4 +2180,391 @@
   .dm-panel { animation: none; }
   .tech-node { animation: none; }
   .tech-lines path { animation: none; }
+  .ob-rail::after,
+  .ob-num,
+  .ob-ico { animation: none !important; }
+  .ob-rail::after { transform: scaleX(1); }
+}
+
+/* ==========================================================================
+   Onboarding — "From Setup to Go-Live in 3 Simple Steps"
+   --------------------------------------------------------------------------
+   Layout: a connected strip of pastel step headers sits in one aligned row
+   (chevron tail → next header), and the icon + copy row underneath follows a
+   gentle zig — the middle step drops lower than its neighbours, with a longer
+   dashed drop-line from its header. Two transform layers on every step would
+   be noise, so the header row stays rigid and only the body offsets.
+
+   Colour: one hue per step, drawn from the site's own accent set so the
+   section reads as a single system rather than three random cards —
+   01 deep green, 02 violet, 03 teal. Step 3 uses teal instead of the IN4
+   purple so "Training & Go-Live" reads as its own destination and the row
+   ends on a cool, calm note. Surfaces: white section, one lavender card.
+   ========================================================================== */
+.onboarding {
+  --ob-teal: #0e7490;
+  background: #ffffff;
+  padding-top: clamp(3rem, 6vw, 5rem);
+  padding-bottom: clamp(3rem, 6vw, 5rem);
+}
+
+.onboarding .section-head { margin-bottom: clamp(1.75rem, 3vw, 2.5rem); }
+.onboarding .section-lead { max-width: 58ch; margin-inline: auto; }
+
+/* ---- the large soft container ------------------------------------------- */
+.ob-card {
+  position: relative;
+  padding: clamp(1.75rem, 3.2vw, 3rem) clamp(1.25rem, 3vw, 3.25rem)
+    clamp(1.75rem, 3vw, 2.75rem);
+  background: linear-gradient(158deg, #fbfaff 0%, #f5f2fe 42%, #ffffff 100%);
+  border: 1px solid rgba(108, 53, 255, 0.11);
+  border-radius: 30px;
+  box-shadow:
+    0 1px 3px rgba(24, 22, 50, 0.04),
+    0 26px 60px rgba(75, 32, 200, 0.13);
+  overflow: hidden;
+}
+
+/* inner top highlight — sells the gradient surface as glass, not a flat fill */
+.ob-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.95) 30%,
+    rgba(255, 255, 255, 0.95) 70%,
+    transparent 100%
+  );
+}
+
+/* brand hairline sitting just under the top edge */
+.ob-card::after {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    var(--in4-green) 0%,
+    var(--in4-violet) 50%,
+    var(--ob-teal) 100%
+  );
+  opacity: 0.85;
+}
+
+/* ---- the connector rail behind the headers (sweeps once) ---------------- */
+.ob-rail {
+  position: absolute;
+  z-index: 0;
+  top: calc(clamp(1.75rem, 3.2vw, 3rem) + 27px);
+  left: clamp(1.25rem, 3vw, 3.25rem);
+  right: clamp(1.25rem, 3vw, 3.25rem);
+  height: 2px;
+  border-radius: 2px;
+  background: rgba(108, 53, 255, 0.07);
+  overflow: hidden;
+}
+
+.ob-rail::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(
+    90deg,
+    var(--in4-green) 0%,
+    var(--in4-violet) 50%,
+    var(--ob-teal) 100%
+  );
+  transform-origin: left center;
+  transform: scaleX(0);
+  opacity: 0.5;
+}
+
+.ob-card.is-visible .ob-rail::after { animation: obRail 1.5s var(--ease) 0.35s both; }
+
+@keyframes obRail {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
+/* ---- the 3-step flow ---------------------------------------------------- */
+.ob-flow {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(0.75rem, 1.6vw, 1.5rem);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ob-step { min-width: 0; }
+
+/* pastel header block, chevron-linked to the next step */
+.ob-head {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 13px 20px;
+  border-radius: 15px;
+  background: var(--acc-soft);
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--acc) 16%, transparent);
+}
+
+/* the connector tail — a rotated square so it reads as part of the block */
+.ob-step:not(:last-child) .ob-head::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -11px;
+  z-index: 2;
+  width: 20px;
+  height: 20px;
+  background: var(--acc-soft);
+  transform: translateY(-50%) rotate(45deg);
+  border-radius: 4px;
+}
+
+.ob-num {
+  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+  background: var(--acc);
+  color: #ffffff;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  box-shadow: 0 8px 18px color-mix(in srgb, var(--acc) 28%, transparent);
+}
+
+/* one short, gentle emphasis — not a loop */
+.ob-step.is-visible .ob-num { animation: obPulse 2.6s var(--ease) 0.5s 2 both; }
+
+@keyframes obPulse {
+  0%, 100% { transform: scale(1); }
+  45% { transform: scale(1.07); }
+}
+
+.ob-title {
+  margin: 0;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: clamp(0.98rem, 0.92rem + 0.22vw, 1.125rem);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 1.28;
+  color: var(--in4-navy);
+}
+
+/* ---- icon + copy row: the zig ------------------------------------------
+   Steps 1 and 3 sit on one baseline, step 2 drops 38px below them. The dashed
+   drop-line from each header stretches to match, so the offset reads as part
+   of the flow instead of a misalignment. */
+.ob-body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  padding: 30px 8px 0;
+  text-align: center;
+}
+
+.ob-step:nth-child(2) .ob-body { padding-top: 68px; }
+
+.ob-body::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 8px;
+  width: 2px;
+  height: 14px;
+  border-radius: 2px;
+  background: repeating-linear-gradient(
+    180deg,
+    color-mix(in srgb, var(--acc) 42%, transparent) 0 4px,
+    transparent 4px 9px
+  );
+  transform-origin: top center;
+  transform: translateX(-50%) scaleY(0);
+  opacity: 0;
+}
+
+.ob-step:nth-child(2) .ob-body::before { height: 52px; }
+
+.ob-step.is-visible .ob-body::before {
+  animation: obDrop 0.5s var(--ease) 0.28s both;
+}
+
+@keyframes obDrop {
+  from { opacity: 0; transform: translateX(-50%) scaleY(0); }
+  to { opacity: 1; transform: translateX(-50%) scaleY(1); }
+}
+
+/* deliberately no card or border around each item */
+.ob-ico {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 74px;
+  height: 74px;
+  border-radius: 50%;
+  background: var(--acc-soft);
+  color: var(--acc);
+  font-size: 27px;
+  transition: transform 0.35s var(--ease), box-shadow 0.35s var(--ease);
+}
+
+/* inner dashed ring keeps the circle from reading as a flat disc */
+.ob-ico::after {
+  content: "";
+  position: absolute;
+  inset: 7px;
+  border-radius: 50%;
+  border: 1px dashed color-mix(in srgb, var(--acc) 32%, transparent);
+}
+
+.ob-ico .ico { position: relative; z-index: 1; }
+
+.ob-step.is-visible .ob-ico { animation: obPop 0.65s var(--ease) 0.15s both; }
+
+@keyframes obPop {
+  from { opacity: 0; transform: scale(0.72); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.ob-step:hover .ob-ico {
+  transform: translateY(-4px) scale(1.04);
+  box-shadow: 0 14px 28px color-mix(in srgb, var(--acc) 20%, transparent);
+}
+
+.ob-body p {
+  margin: 0;
+  max-width: 32ch;
+  font-size: var(--fs-sm);
+  line-height: 1.62;
+  color: var(--in4-text-muted);
+}
+
+/* ---- single CTA, centred ----------------------------------------------- */
+.ob-cta {
+  position: relative;
+  z-index: 1;
+  margin-top: clamp(2rem, 3.5vw, 3rem);
+  text-align: center;
+}
+
+.ob-cta .btn {
+  background: linear-gradient(135deg, #6528f7 0%, #7b4bff 55%, #9779ff 100%);
+  box-shadow: 0 14px 30px rgba(101, 40, 247, 0.26);
+}
+
+.ob-cta .btn:hover { box-shadow: 0 18px 40px rgba(101, 40, 247, 0.34); }
+
+/* ==========================================================================
+   Onboarding — responsive
+   --------------------------------------------------------------------------
+   <= 900px  the chevron strip no longer fits, so it becomes a real vertical
+             timeline: left rail, coloured node per step, zig reset to flat
+   ========================================================================== */
+@media (max-width: 900px) {
+  .ob-card { border-radius: 26px; }
+
+  /* the horizontal rail is meaningless once stacked */
+  .ob-rail { display: none; }
+
+  .ob-flow {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 26px;
+    padding-left: 34px;
+  }
+
+  /* left connector line running the full flow */
+  .ob-flow::before {
+    content: "";
+    position: absolute;
+    left: 17px;
+    top: 12px;
+    bottom: 12px;
+    width: 2px;
+    border-radius: 2px;
+    background: linear-gradient(
+      180deg,
+      var(--in4-green) 0%,
+      var(--in4-violet) 50%,
+      var(--ob-teal) 100%
+    );
+    opacity: 0.3;
+  }
+
+  .ob-step { position: relative; }
+
+  .ob-head { padding: 11px 16px; gap: 11px; }
+
+  /* the node that rides the connector line */
+  .ob-head::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -28px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--acc);
+    transform: translateY(-50%);
+    box-shadow: 0 0 0 4px #ffffff, 0 6px 14px color-mix(in srgb, var(--acc) 32%, transparent);
+  }
+
+  /* no chevron tail once stacked */
+  .ob-step .ob-head::after { display: none; }
+
+  .ob-num { width: 34px; height: 34px; border-radius: 11px; font-size: 14px; }
+
+  /* zig and drop-line both flatten on a vertical timeline */
+  .ob-body { padding-top: 16px; }
+  .ob-step:nth-child(2) .ob-body { padding-top: 16px; }
+  .ob-body::before,
+  .ob-step:nth-child(2) .ob-body::before { display: none; }
+
+  .ob-body {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 16px;
+    text-align: left;
+  }
+
+  .ob-ico { width: 54px; height: 54px; font-size: 21px; flex: 0 0 auto; }
+
+  .ob-ico::after { inset: 5px; }
+
+  .ob-body p { max-width: 46ch; }
+}
+
+@media (max-width: 560px) {
+  .ob-card { padding: 1.5rem 1.15rem 1.85rem; border-radius: 22px; }
+  .ob-flow { padding-left: 28px; gap: 22px; }
+  .ob-flow::before { left: 13px; }
+  .ob-head::before { left: -24px; width: 12px; height: 12px; }
+  .ob-title { font-size: 1rem; }
+  .ob-body p { font-size: 0.9rem; }
+  .ob-cta .btn { width: 100%; justify-content: center; }
+}
+
+/* ---- Reduced motion ------------------------------------------------------ */
+@media (prefers-reduced-motion: reduce) {
+  .ob-rail::after,
+  .ob-num,
+  .ob-ico,
+  .ob-body::before { animation: none !important; }
+  .ob-rail::after { transform: scaleX(1); }
+  .ob-body::before { opacity: 1; transform: translateX(-50%) scaleY(1); }
 }

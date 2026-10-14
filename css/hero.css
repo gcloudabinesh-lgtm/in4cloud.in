@@ -427,36 +427,133 @@
   overflow: hidden;
   display: grid;
   grid-template-columns: minmax(0, 1fr);
+  /* pointer parallax (JS writes --tx / --ty) */
+  transform: perspective(1500px) rotateX(var(--tx, 0deg)) rotateY(var(--ty, 0deg));
+  transition: transform 0.45s var(--ease);
 }
 
-/* every slide shares one grid cell — the frame sizes to the tallest one */
+/* ==========================================================================
+   Hero slide deck — motion
+   --------------------------------------------------------------------------
+   Every slide shares one grid cell. An inactive slide rests "parked" off-axis
+   (blur + shift + shrink); the active one plays a keyframe that lands it on
+   the cell, then its label, art and accent glow follow with a small stagger.
+   `data-dir` on the deck flips the travel direction, so stepping backwards
+   mirrors the animation instead of rewinding it.
+   ========================================================================== */
+.hero-slides {
+  --enter-y: 54px;
+  --exit-y: -46px;
+  --hero-dur: 4.2s;
+}
+
+.hero-slides[data-dir="back"] {
+  --enter-y: -54px;
+  --exit-y: 46px;
+}
+
 .hero-slide {
   grid-area: 1 / 1;
+  position: relative;
   margin: 0;
   padding: clamp(1.1rem, 2vw, 1.75rem);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: clamp(0.75rem, 1.5vw, 1.15rem);
+  gap: clamp(0.7rem, 1.4vw, 1.05rem);
   min-width: 0;
+  /* resting (inactive) state */
   opacity: 0;
   visibility: hidden;
-  transform: translateY(8px);
-  transition: opacity 0.65s var(--ease), transform 0.65s var(--ease),
-    visibility 0s linear 0.65s;
+  transform: translateY(var(--exit-y)) scale(0.9);
+  filter: blur(8px);
+  transition: opacity 0.55s var(--ease), transform 0.65s var(--ease),
+    filter 0.55s var(--ease), visibility 0s linear 0.65s;
+}
+
+/* per-slide accent bloom, tinted with that slide's --acc */
+.hero-slide::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -46%;
+  width: 130%;
+  height: 78%;
+  transform: translateX(-50%) scale(0.85);
+  background: radial-gradient(
+    closest-side,
+    color-mix(in srgb, var(--acc, #6C35FF) 40%, transparent),
+    transparent 72%
+  );
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.7s var(--ease), transform 0.9s var(--ease);
 }
 
 .hero-slide.is-active {
   opacity: 1;
   visibility: visible;
   transform: none;
-  transition: opacity 0.65s var(--ease), transform 0.65s var(--ease),
-    visibility 0s linear 0s;
+  filter: none;
+  z-index: 2;
+  animation: heroSlideIn 0.78s var(--ease) both;
+  transition: opacity 0.55s var(--ease), transform 0.65s var(--ease),
+    filter 0.55s var(--ease), visibility 0s linear 0s;
+}
+
+.hero-slide.is-active::after {
+  opacity: 0.6;
+  transform: translateX(-50%) scale(1);
+  animation: heroGlow 6s ease-in-out 0.5s infinite;
+}
+
+@keyframes heroSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(var(--enter-y)) scale(0.9) rotateX(-10deg);
+    filter: blur(12px);
+  }
+  60% { filter: blur(0); }
+  to {
+    opacity: 1;
+    transform: none;
+    filter: blur(0);
+  }
+}
+
+@keyframes heroGlow {
+  0%, 100% { opacity: 0.42; }
+  50% { opacity: 0.75; }
+}
+
+/* slow push-in on the artwork plus a gentle float on the inner image:
+   two stacked transform layers read as depth instead of one flat zoom */
+.hero-slide-art {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  animation: heroKen 9s ease-out both;
+  will-change: transform;
+}
+
+@keyframes heroKen {
+  from { transform: scale(0.96) translateY(10px); }
+  to { transform: scale(1.04) translateY(-6px); }
+}
+
+.hero-slide.is-active .hero-slide-art img {
+  animation: heroFloat 6.5s ease-in-out 0.8s infinite;
+}
+
+@keyframes heroFloat {
+  0%, 100% { transform: translateY(-4px); }
+  50% { transform: translateY(6px); }
 }
 
 /* the illustration sits on its own white "screen" so it reads as product UI */
-.hero-slide img {
+.hero-slide-art img {
   width: auto;
   max-width: 100%;
   height: auto;
@@ -467,6 +564,7 @@
   border: 1px solid var(--in4-border);
   border-radius: 18px;
   box-shadow: 0 16px 34px rgba(17, 24, 39, 0.08);
+  will-change: transform;
 }
 
 .hero-slide-tag {
@@ -482,6 +580,33 @@
   font-weight: 700;
   color: var(--acc, #6C35FF);
   white-space: nowrap;
+  position: relative;
+  z-index: 1;
+}
+
+/* label + caption rise in once the slide has landed */
+.hero-slide.is-active .hero-slide-tag {
+  animation: heroPop 0.6s var(--ease) 0.16s both;
+}
+
+.hero-slide-note {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  max-width: 38ch;
+  text-align: center;
+  font-size: 12.5px;
+  line-height: 1.6;
+  color: #6B628F;
+}
+
+.hero-slide.is-active .hero-slide-note {
+  animation: heroPop 0.6s var(--ease) 0.26s both;
+}
+
+@keyframes heroPop {
+  from { opacity: 0; transform: translateY(10px) scale(0.96); }
+  to { opacity: 1; transform: none; }
 }
 
 .hero-slide-tag .ico { font-size: 13px; width: 1em; height: 1em; }
@@ -489,11 +614,13 @@
 .hero-slide-dots {
   display: flex;
   justify-content: center;
-  gap: 8px;
+  align-items: center;
+  gap: 9px;
   margin-top: 18px;
 }
 
 .hero-slide-dot {
+  position: relative;
   width: 9px;
   height: 9px;
   padding: 0;
@@ -501,14 +628,73 @@
   border-radius: 999px;
   background: var(--in4-border);
   cursor: pointer;
-  transition: width 0.3s var(--ease), background-color 0.3s var(--ease);
+  transition: width 0.35s var(--ease), background-color 0.3s var(--ease),
+    transform 0.3s var(--ease);
 }
 
-.hero-slide-dot:hover { background: #cbb8ff; }
+.hero-slide-dot::before {
+  /* autoplay progress wipe */
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #8B5CF6, #4B20C8);
+  transform: scaleX(0);
+  transform-origin: left center;
+}
+
+.hero-slide-dot:hover { background: #cbb8ff; transform: scale(1.25); }
+
+.hero-slide-dot:focus-visible {
+  outline: 2px solid #6C35FF;
+  outline-offset: 4px;
+}
 
 .hero-slide-dot.active {
-  width: 26px;
-  background: linear-gradient(135deg, #6C35FF, #4B20C8);
+  width: 30px;
+  background: #e7dffd;
+}
+
+.hero-slide-dot.active::before {
+  animation: heroDotFill var(--hero-dur, 4.2s) linear both;
+}
+
+.hero-slide-dot.active:hover { background: #ddd0fb; }
+
+.hero-slide-dots.is-paused .hero-slide-dot.active::before {
+  animation-play-state: paused;
+}
+
+@keyframes heroDotFill {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
+/* module name tooltip on dot hover / keyboard focus */
+.hero-slide-dot::after {
+  content: attr(data-label);
+  position: absolute;
+  bottom: calc(100% + 14px);
+  left: 50%;
+  transform: translateX(-50%) translateY(6px);
+  padding: 6px 11px;
+  border-radius: 9px;
+  background: #241B3F;
+  color: #fff;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s var(--ease), transform 0.25s var(--ease);
+}
+
+.hero-slide-dot:hover::after,
+.hero-slide-dot:focus-visible::after {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
 }
 
 /* ==========================================================================
@@ -679,5 +865,24 @@
   .hero-mgrid-scan { opacity: 0; }
 
   .hero-slide,
-  .hero-slide-dot { transition: none !important; }
+  .hero-slide-dot,
+  .hero-slides,
+  .hero-slide-art,
+  .hero-slide-tag,
+  .hero-slide-note,
+  .hero-slide-art img,
+  .hero-slide::after,
+  .hero-slide-dot::before { transition: none !important; }
+
+  .hero-slide,
+  .hero-slide-art,
+  .hero-slide-art img,
+  .hero-slide-tag,
+  .hero-slide-note,
+  .hero-slide::after,
+  .hero-slide-dot::before { animation: none !important; }
+
+  .hero-slides { transform: none !important; }
+  .hero-slide-dot.active::before { transform: scaleX(1); }
+
 }

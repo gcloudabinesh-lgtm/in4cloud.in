@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" fill="none" role="img" aria-label="Parking gate with an ANPR camera reading a number plate, bay map with free slots and an occupancy ring">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="640" y2="480" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#EEE9FF"/><stop offset="1" stop-color="#E0EFFF"/>
+    </linearGradient>
+    <linearGradient id="car" x1="230" y1="210" x2="450" y2="330" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#7A55EC"/><stop offset="1" stop-color="#4B20C8"/>
+    </linearGradient>
+    <linearGradient id="lot" x1="44" y1="300" x2="292" y2="470" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F4F1FF"/><stop offset="1" stop-color="#E7E0FB"/>
+    </linearGradient>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="170%">
+      <feDropShadow dx="0" dy="10" stdDeviation="13" flood-color="#4B20C8" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+  <style>
+    text{font-family:Arial,Helvetica,sans-serif}
+    .g{transform-box:fill-box;transform-origin:center}
+    .lift{transform-box:fill-box;transform-origin:right bottom;animation:lift 4.6s cubic-bezier(.22,.61,.36,1) infinite}
+    @keyframes lift{0%,12%{transform:rotate(0)}55%,100%{transform:rotate(-52deg)}}
+    .read{animation:read 3.2s ease-in-out infinite}
+    @keyframes read{0%,100%{opacity:.25}45%{opacity:1}}
+    .drive{animation:drive 4.6s cubic-bezier(.45,.05,.55,.95) infinite}
+    @keyframes drive{0%,12%{transform:translateX(-42px)}55%,100%{transform:translateX(0)}}
+    .ring{transform-box:fill-box;transform-origin:center;animation:ring 4.2s cubic-bezier(.22,.61,.36,1) infinite}
+    @keyframes ring{0%{transform:rotate(-90deg);stroke-dashoffset:138}70%,100%{transform:rotate(270deg);stroke-dashoffset:34}}
+    .ping{animation:ping 2.4s ease-out infinite}
+    @keyframes ping{0%{transform:scale(.6);opacity:.85}100%{transform:scale(1.9);opacity:0}}
+    .blink{animation:blink 1.6s steps(1) infinite}
+    @keyframes blink{0%,55%{opacity:1}56%,100%{opacity:.2}}
+    .beam{animation:beam 3.4s ease-in-out infinite}
+    @keyframes beam{0%,100%{opacity:.15}50%{opacity:.5}}
+  </style>
+
+  <rect width="640" height="480" rx="28" fill="url(#bg)"/>
+  <circle cx="586" cy="70" r="70" fill="#FFFFFF" fill-opacity="0.36"/>
+  <circle cx="58" cy="452" r="54" fill="#FFFFFF" fill-opacity="0.3"/>
+
+  <!-- ============ ANPR camera ============ -->
+  <g filter="url(#soft)"><rect x="72" y="52" width="132" height="62" rx="16" fill="#FFFFFF"/></g>
+  <path d="M72 76h132v10H72z" fill="#4B20C8" fill-opacity=".08"/>
+  <rect x="88" y="68" width="42" height="30" rx="9" fill="#241B3F"/>
+  <circle cx="103" cy="83" r="8" fill="#8B5CF6"/><circle cx="107" cy="78" r="3" fill="#C9BCF5"/>
+  <path d="M130 74l18-9v30l-18-9v-12z" fill="#241B3F"/>
+  <text x="188" y="80" text-anchor="end" font-size="10.5" font-weight="bold" fill="#3A2A6B">ANPR</text>
+  <text x="188" y="96" text-anchor="end" font-size="9.5" fill="#A79BD8">plate capture</text>
+  <circle class="blink" cx="196" cy="62" r="5" fill="#4ED18A"/>
+  <path class="beam" d="M124 116L268 300h-96L60 132z" fill="#8B5CF6" fill-opacity=".22"/>
+
+  <!-- ============ gate ============ -->
+  <g filter="url(#soft)"><rect x="500" y="176" width="24" height="200" rx="11" fill="#3A2A6B"/></g>
+  <rect x="488" y="164" width="48" height="22" rx="10" fill="#241B3F"/>
+  <circle cx="512" cy="175" r="6" fill="#8F7BFF"/>
+  <g class="lift g">
+    <rect x="392" y="170" width="130" height="17" rx="8.5" fill="#FFFFFF" filter="url(#soft)"/>
+    <g fill="#E23B57"><rect x="408" y="170" width="18" height="17" rx="7"/><rect x="444" y="170" width="18" height="17" rx="7"/><rect x="480" y="170" width="18" height="17" rx="7"/></g>
+  </g>
+  <circle cx="512" cy="336" r="8" fill="#4ED18A"/>
+  <circle class="ping g" cx="512" cy="336" r="12" fill="#4ED18A" opacity=".5"/>
+
+  <!-- ============ road ============ -->
+  <path d="M44 372h560" stroke="#C9BDF0" stroke-width="4" stroke-linecap="round" stroke-dasharray="18 16"/>
+
+  <!-- ============ car ============ -->
+  <g class="drive g">
+    <path d="M228 268l30-52a30 30 0 0 1 25-15h132a34 34 0 0 1 28 16l30 51z" fill="url(#car)" filter="url(#soft)"/>
+    <path d="M254 262l20-36a16 16 0 0 1 14-7h58v43z" fill="#E6F1FF"/>
+    <path d="M358 219h52a20 20 0 0 1 17 10l22 33h-91v-43z" fill="#DCEBFF"/>
+    <rect x="158" y="264" width="320" height="60" rx="28" fill="url(#car)"/>
+    <rect x="158" y="264" width="320" height="20" rx="10" fill="#FFFFFF" fill-opacity=".14"/>
+    <rect x="292" y="288" width="64" height="22" rx="6" fill="#FFFFFF"/>
+    <text class="read g" x="324" y="303" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#3A2A6B">IN4 1234</text>
+    <rect class="read g" x="256" y="272" width="76" height="54" rx="8" stroke="#22C7D6" stroke-width="3" stroke-dasharray="10 8" fill="none"/>
+    <rect x="170" y="272" width="22" height="12" rx="6" fill="#FFE9A8"/>
+    <rect x="444" y="272" width="22" height="12" rx="6" fill="#FFC4C4"/>
+    <circle cx="230" cy="326" r="30" fill="#241B3F"/><circle cx="230" cy="326" r="12" fill="#C9BCF5"/>
+    <circle cx="410" cy="326" r="30" fill="#241B3F"/><circle cx="410" cy="326" r="12" fill="#C9BCF5"/>
+  </g>
+
+  <!-- ============ bay map ============ -->
+  <g filter="url(#soft)"><rect x="44" y="392" width="252" height="66" rx="18" fill="#FFFFFF"/></g>
+  <text x="60" y="414" font-size="9.5" font-weight="bold" fill="#A79BD8" letter-spacing="1.3">LEVEL 1 · BAYS</text>
+  <g>
+    <rect x="60" y="424" width="34" height="18" rx="7" fill="#E7E0FB"/><text x="77" y="437" text-anchor="middle" font-size="9" fill="#8B7FC4">B1</text>
+    <rect x="102" y="424" width="34" height="18" rx="7" fill="#4B20C8"/><text x="119" y="437" text-anchor="middle" font-size="9" fill="#FFFFFF">B2</text>
+    <rect x="144" y="424" width="34" height="18" rx="7" fill="#4B20C8"/><text x="161" y="437" text-anchor="middle" font-size="9" fill="#FFFFFF">B3</text>
+    <circle class="ping g" cx="200" cy="433" r="13" fill="#7BE0A6" opacity=".6"/>
+    <rect x="186" y="424" width="34" height="18" rx="7" fill="#E8F7E0" stroke="#4ED18A" stroke-width="2"/>
+    <text x="203" y="437" text-anchor="middle" font-size="9" font-weight="bold" fill="#3E8B14">B4</text>
+    <rect x="228" y="424" width="52" height="18" rx="9" fill="#F3EEFF"/>
+    <text x="254" y="437" text-anchor="middle" font-size="9" fill="#8B7FC4">+39</text>
+  </g>
+
+  <!-- ============ occupancy ============ -->
+  <g filter="url(#soft)"><rect x="316" y="392" width="150" height="66" rx="18" fill="#FFFFFF"/></g>
+  <g transform="translate(354,0)">
+    <circle cx="0" cy="425" r="22" stroke="#F0EBFF" stroke-width="10"/>
+    <circle class="ring" cx="0" cy="425" r="22" stroke="#4B20C8" stroke-width="10" stroke-linecap="round" stroke-dasharray="138 138"/>
+  </g>
+  <text x="354" y="429" text-anchor="middle" font-size="11" font-weight="bold" fill="#3A2A6B">68%</text>
+  <text x="388" y="420" font-size="10.5" font-weight="bold" fill="#3A2A6B">42 slots free</text>
+  <text x="388" y="436" font-size="9.5" fill="#A79BD8">312 of 354 occupied</text>
+
+  <!-- ============ slot chip ============ -->
+  <g filter="url(#soft)"><rect x="482" y="392" width="118" height="66" rx="18" fill="#FFFFFF"/></g>
+  <circle cx="512" cy="425" r="16" fill="#E8F7E0"/>
+  <path d="M504 425l6 6 11-11" stroke="#4E9B22" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <text x="536" y="420" font-size="10.5" font-weight="bold" fill="#2E1F63">Slot B4</text>
+  <text x="536" y="436" font-size="9.5" fill="#A79BD8">assigned</text>
+</svg>

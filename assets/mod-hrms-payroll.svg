@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" fill="none" role="img" aria-label="IN4 payroll dashboard showing an employee roster, a payslip with deductions, a provident fund ring and payroll cost bars">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="640" y2="480" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F1ECFF"/><stop offset="1" stop-color="#E2F1FF"/>
+    </linearGradient>
+    <linearGradient id="hdr" x1="40" y1="58" x2="600" y2="110" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#8B5CF6"/><stop offset="1" stop-color="#5B34D6"/>
+    </linearGradient>
+    <linearGradient id="coin" x1="70" y1="404" x2="122" y2="450" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFD469"/><stop offset="1" stop-color="#EE9E1B"/>
+    </linearGradient>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="170%">
+      <feDropShadow dx="0" dy="10" stdDeviation="13" flood-color="#4B20C8" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+  <style>
+    text{font-family:Arial,Helvetica,sans-serif}
+    .g{transform-box:fill-box;transform-origin:center}
+    .bob{animation:bob 4.4s ease-in-out infinite}
+    @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+    .pulse{animation:pulse 2.6s ease-out infinite}
+    @keyframes pulse{0%{transform:scale(.6);opacity:.85}100%{transform:scale(1.9);opacity:0}}
+    .growx{transform-box:fill-box;transform-origin:left center;animation:growx 3.6s cubic-bezier(.22,.61,.36,1) infinite}
+    @keyframes growx{0%{transform:scaleX(0)}55%{transform:scaleX(1)}100%{transform:scaleX(1)}}
+    .ring{transform-box:fill-box;transform-origin:center;animation:ring 3.6s cubic-bezier(.22,.61,.36,1) infinite}
+    @keyframes ring{0%{transform:rotate(-90deg);stroke-dashoffset:176}70%,100%{transform:rotate(270deg);stroke-dashoffset:44}}
+    .bar{transform-box:fill-box;transform-origin:bottom center;animation:bar 3.6s cubic-bezier(.22,.61,.36,1) infinite}
+    @keyframes bar{0%{transform:scaleY(.15)}60%,100%{transform:scaleY(1)}}
+    .scan{animation:scan 5.5s ease-in-out infinite}
+    @keyframes scan{0%,100%{transform:translateX(0);opacity:0}12%{opacity:.5}55%{transform:translateX(560px);opacity:.5}68%{opacity:0}}
+    .twinkle{animation:twinkle 2.2s ease-in-out infinite}
+    @keyframes twinkle{0%,100%{opacity:.35}50%{opacity:1}}
+  </style>
+
+  <rect width="640" height="480" rx="28" fill="url(#bg)"/>
+  <circle cx="572" cy="66" r="74" fill="#FFFFFF" fill-opacity="0.36"/>
+  <circle cx="62" cy="446" r="58" fill="#FFFFFF" fill-opacity="0.3"/>
+
+  <!-- ============ dashboard window ============ -->
+  <g filter="url(#soft)"><rect x="40" y="58" width="560" height="356" rx="24" fill="#FFFFFF"/></g>
+  <path d="M40 82a24 24 0 0 1 24-24h512a24 24 0 0 1 24 24v28H40V82z" fill="url(#hdr)"/>
+  <circle cx="68" cy="84" r="5.5" fill="#FF7A93"/><circle cx="86" cy="84" r="5.5" fill="#FFD166"/><circle cx="104" cy="84" r="5.5" fill="#7BE0A6"/>
+  <text x="124" y="89" font-size="12.5" font-weight="bold" fill="#FFFFFF">IN4 Payroll</text>
+  <text x="196" y="89" font-size="12" fill="#D9CEFF">· October cycle</text>
+  <g filter="url(#soft)"><rect x="470" y="70" width="112" height="29" rx="14.5" fill="#FFFFFF"/></g>
+  <text x="526" y="89" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#5B34D6" letter-spacing="1">RUN PAYROLL</text>
+  <rect x="40" y="110" width="560" height="1.5" fill="#EFEAFB"/>
+
+  <!-- sweeping scan line -->
+  <rect class="scan g" x="40" y="112" width="560" height="3" fill="#8B5CF6" opacity=".35"/>
+
+  <!-- ============ roster ============ -->
+  <rect x="62" y="128" width="168" height="266" rx="16" fill="#FBF9FF" stroke="#EEE8FD"/>
+  <text x="78" y="152" font-size="9.5" font-weight="bold" fill="#A79BD8" letter-spacing="1.4">EMPLOYEES</text>
+  <text x="214" y="152" text-anchor="end" font-size="9.5" font-weight="bold" fill="#6C35FF">248</text>
+
+  <g>
+    <circle cx="92" cy="186" r="15" fill="#7A55EC"/><circle cx="92" cy="181" r="5.5" fill="#FFFFFF" fill-opacity=".9"/><path d="M82 195a10 10 0 0 1 20 0z" fill="#FFFFFF" fill-opacity=".9"/>
+    <rect x="116" y="176" width="74" height="8" rx="4" fill="#E4DBFF"/><rect x="116" y="190" width="50" height="7" rx="3.5" fill="#F0EBFF"/>
+    <circle class="pulse g" cx="212" cy="186" r="8" fill="#4E9B22" opacity=".45"/><circle cx="212" cy="186" r="6" fill="#4E9B22"/>
+  </g>
+  <path d="M76 216h140" stroke="#F1ECFF" stroke-width="2"/>
+  <g>
+    <circle cx="92" cy="250" r="15" fill="#22C7D6"/><circle cx="92" cy="245" r="5.5" fill="#FFFFFF" fill-opacity=".9"/><path d="M82 259a10 10 0 0 1 20 0z" fill="#FFFFFF" fill-opacity=".9"/>
+    <rect x="116" y="240" width="66" height="8" rx="4" fill="#E4DBFF"/><rect x="116" y="254" width="58" height="7" rx="3.5" fill="#F0EBFF"/>
+    <circle class="pulse g" cx="212" cy="250" r="8" fill="#4E9B22" opacity=".45" style="animation-delay:.5s"/><circle cx="212" cy="250" r="6" fill="#4E9B22"/>
+  </g>
+  <path d="M76 280h140" stroke="#F1ECFF" stroke-width="2"/>
+  <g>
+    <circle cx="92" cy="314" r="15" fill="#F0871E"/><circle cx="92" cy="309" r="5.5" fill="#FFFFFF" fill-opacity=".9"/><path d="M82 323a10 10 0 0 1 20 0z" fill="#FFFFFF" fill-opacity=".9"/>
+    <rect x="116" y="304" width="82" height="8" rx="4" fill="#E4DBFF"/><rect x="116" y="318" width="46" height="7" rx="3.5" fill="#F0EBFF"/>
+    <circle class="pulse g" cx="212" cy="314" r="8" fill="#E8A33D" opacity=".5" style="animation-delay:1s"/><circle cx="212" cy="314" r="6" fill="#E8A33D"/>
+  </g>
+  <rect x="76" y="348" width="140" height="32" rx="12" fill="#F4F0FF"/>
+  <path d="M92 364l4 4 8-8" stroke="#6C35FF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="112" y="368" font-size="11" font-weight="bold" fill="#5B34D6">96% verified</text>
+
+  <!-- ============ payslip ============ -->
+  <rect x="248" y="128" width="210" height="266" rx="16" fill="#FFFFFF" stroke="#EEE8FD"/>
+  <text x="266" y="152" font-size="9.5" font-weight="bold" fill="#A79BD8" letter-spacing="1.4">PAYSLIP · OCT</text>
+  <g>
+    <rect x="266" y="172" width="56" height="8" rx="4" fill="#EDE7FF"/><rect x="370" y="170" width="70" height="10" rx="5" fill="#6C35FF"/>
+    <rect x="266" y="204" width="68" height="8" rx="4" fill="#EDE7FF"/><rect x="386" y="202" width="54" height="10" rx="5" fill="#A78BFA"/>
+    <rect x="266" y="236" width="48" height="8" rx="4" fill="#EDE7FF"/><rect x="378" y="234" width="62" height="10" rx="5" fill="#C4B5FD"/>
+  </g>
+  <path d="M266 264h174" stroke="#F1ECFF" stroke-width="2"/>
+  <rect x="260" y="278" width="186" height="46" rx="14" fill="#F5F1FF"/>
+  <text x="278" y="306" font-size="11" font-weight="bold" fill="#A79BD8">NET PAY</text>
+  <text x="428" y="308" text-anchor="end" font-size="15" font-weight="bold" fill="#4B20C8">&#8377; 58,420</text>
+  <rect x="266" y="340" width="174" height="9" rx="4.5" fill="#F0EBFF"/>
+  <rect class="growx" x="266" y="340" width="142" height="9" rx="4.5" fill="#6C35FF"/>
+  <text x="266" y="370" font-size="10.5" fill="#A79BD8">248 of 248 employees disbursed</text>
+
+  <!-- ============ PF ring ============ -->
+  <rect x="476" y="128" width="102" height="126" rx="16" fill="#FFFFFF" stroke="#EEE8FD"/>
+  <circle cx="527" cy="180" r="28" stroke="#F0EBFF" stroke-width="12"/>
+  <circle class="ring" cx="527" cy="180" r="28" stroke="#6C35FF" stroke-width="12" stroke-linecap="round" stroke-dasharray="176 176"/>
+  <text x="527" y="184" text-anchor="middle" font-size="13" font-weight="bold" fill="#4B20C8">PF</text>
+  <text x="527" y="238" text-anchor="middle" font-size="9.5" fill="#A79BD8">Deductions</text>
+
+  <!-- ============ cost bars ============ -->
+  <rect x="476" y="266" width="102" height="128" rx="16" fill="#FFFFFF" stroke="#EEE8FD"/>
+  <text x="490" y="288" font-size="9" font-weight="bold" fill="#A79BD8" letter-spacing="1.2">PAYROLL COST</text>
+  <path d="M490 372h76" stroke="#F1ECFF" stroke-width="2"/>
+  <rect class="bar g" x="492" y="342" width="13" height="30" rx="6" fill="#DDD2FB"/>
+  <rect class="bar g" x="511" y="326" width="13" height="46" rx="6" fill="#B79BF8" style="animation-delay:.15s"/>
+  <rect class="bar g" x="530" y="308" width="13" height="64" rx="6" fill="#8B5CF6" style="animation-delay:.3s"/>
+  <rect class="bar g" x="549" y="292" width="13" height="80" rx="6" fill="#5B34D6" style="animation-delay:.45s"/>
+
+  <!-- ============ floating accents ============ -->
+  <g class="bob g" filter="url(#soft)">
+    <circle cx="96" cy="430" r="32" fill="#FFFFFF"/>
+  </g>
+  <ellipse cx="96" cy="442" rx="24" ry="8" fill="url(#coin)"/>
+  <ellipse cx="96" cy="428" rx="24" ry="8" fill="#FFCE63"/>
+  <ellipse class="bob g" cx="96" cy="414" rx="24" ry="8" fill="url(#coin)"/>
+  <text x="96" y="418" text-anchor="middle" font-size="11" font-weight="bold" fill="#A96D08">INR</text>
+
+  <g filter="url(#soft)"><rect x="200" y="408" width="176" height="46" rx="23" fill="#FFFFFF"/></g>
+  <circle class="pulse g" cx="228" cy="431" r="15" fill="#7BE0A6" opacity=".5"/>
+  <circle cx="228" cy="431" r="14" fill="#E8F7E0"/>
+  <path d="M221 431l5 5 10-10" stroke="#4E9B22" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="250" y="436" font-size="12.5" font-weight="bold" fill="#3A2A6B">Payslip ready</text>
+
+  <g filter="url(#soft)"><rect x="390" y="408" width="182" height="46" rx="23" fill="#FFFFFF"/></g>
+  <circle cx="418" cy="431" r="14" fill="#F0EBFF"/>
+  <path d="M412 431a6 6 0 0 1 11-4" stroke="#6C35FF" stroke-width="3" stroke-linecap="round" fill="none"/>
+  <path d="M424 421v6h-6" stroke="#6C35FF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <text x="440" y="436" font-size="12.5" font-weight="bold" fill="#3A2A6B">Auto-escalation on</text>
+  <circle class="twinkle" cx="558" cy="431" r="4" fill="#7BE0A6"/>
+</svg>

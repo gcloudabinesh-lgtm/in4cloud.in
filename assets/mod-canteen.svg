@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" fill="none" role="img" aria-label="Canteen counter with a menu board, a meal tray with nutrition rings, token dispenser and digital wallet tap">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="640" y2="480" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF6E7"/><stop offset="1" stop-color="#FFE6D8"/>
+    </linearGradient>
+    <linearGradient id="dome" x1="240" y1="110" x2="420" y2="210" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF"/><stop offset="1" stop-color="#F0DFC6"/>
+    </linearGradient>
+    <linearGradient id="board" x1="56" y1="66" x2="216" y2="230" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#3B2A63"/><stop offset="1" stop-color="#241B3F"/>
+    </linearGradient>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="170%">
+      <feDropShadow dx="0" dy="10" stdDeviation="13" flood-color="#C25E12" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+  <style>
+    text{font-family:Arial,Helvetica,sans-serif}
+    .g{transform-box:fill-box;transform-origin:center}
+    .steam{animation:steam 3.6s ease-in-out infinite}
+    @keyframes steam{0%,100%{transform:translateY(4px);opacity:.35}50%{transform:translateY(-10px);opacity:.9}}
+    .spin{transform-box:fill-box;transform-origin:center;animation:spin 4.2s cubic-bezier(.22,.61,.36,1) infinite}
+    @keyframes spin{0%{transform:rotate(-90deg);stroke-dashoffset:176}70%,100%{transform:rotate(270deg);stroke-dashoffset:44}}
+    .wave{animation:wave 1.9s ease-out infinite}
+    @keyframes wave{0%{transform:scale(.6);opacity:.85}100%{transform:scale(1.5);opacity:0}}
+    .slide{transform-box:fill-box;transform-origin:center;animation:slide 3.8s cubic-bezier(.22,.61,.36,1) infinite}
+    @keyframes slide{0%{transform:translateX(-14px);opacity:0}20%,80%{transform:translateX(0);opacity:1}100%{transform:translateX(14px);opacity:0}}
+    .bob{animation:bob 4.6s ease-in-out infinite}
+    @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+    .shimmer{animation:shimmer 2.8s ease-in-out infinite}
+    @keyframes shimmer{0%,100%{opacity:.4}50%{opacity:1}}
+  </style>
+
+  <rect width="640" height="480" rx="28" fill="url(#bg)"/>
+  <circle cx="580" cy="72" r="72" fill="#FFFFFF" fill-opacity="0.4"/>
+  <circle cx="60" cy="444" r="56" fill="#FFFFFF" fill-opacity="0.3"/>
+
+  <!-- ============ menu board ============ -->
+  <g filter="url(#soft)"><rect x="56" y="66" width="164" height="172" rx="18" fill="url(#board)"/></g>
+  <rect x="72" y="82" width="86" height="9" rx="4.5" fill="#F0871E"/>
+  <text x="72" y="106" font-size="9" fill="#B9AEE8" letter-spacing="1.2">TODAY'S MENU</text>
+  <g>
+    <rect x="72" y="118" width="60" height="8" rx="4" fill="#FFFFFF" fill-opacity=".55"/>
+    <rect x="176" y="118" width="28" height="8" rx="4" fill="#F0871E"/>
+    <rect x="72" y="140" width="72" height="8" rx="4" fill="#FFFFFF" fill-opacity=".42"/>
+    <rect x="182" y="140" width="22" height="8" rx="4" fill="#FFB26B"/>
+    <rect x="72" y="162" width="52" height="8" rx="4" fill="#FFFFFF" fill-opacity=".42"/>
+    <rect x="170" y="162" width="34" height="8" rx="4" fill="#FFB26B"/>
+    <rect x="72" y="184" width="66" height="8" rx="4" fill="#FFFFFF" fill-opacity=".42"/>
+    <rect x="180" y="184" width="24" height="8" rx="4" fill="#F0871E"/>
+  </g>
+  <path d="M72 206h132" stroke="#FFFFFF" stroke-opacity=".18" stroke-width="2"/>
+  <text x="72" y="224" font-size="10" font-weight="bold" fill="#FFD9A8">Veg · Non-veg · Jain</text>
+
+  <!-- ============ steam + dome ============ -->
+  <g stroke="#E0A164" stroke-width="6" stroke-linecap="round" fill="none" opacity=".8">
+    <path class="steam g" d="M288 128c-12-14 12-24 0-40"/>
+    <path class="steam g" d="M320 120c-12-14 12-24 0-40" style="animation-delay:.5s"/>
+    <path class="steam g" d="M352 128c-12-14 12-24 0-40" style="animation-delay:1s"/>
+  </g>
+  <path d="M216 206a104 84 0 0 1 208 0z" fill="url(#dome)" filter="url(#soft)"/>
+  <circle cx="320" cy="116" r="10" fill="#EBD6B8"/>
+  <path d="M262 176a66 58 0 0 1 38-38" stroke="#FFFFFF" stroke-width="7" stroke-linecap="round" fill="none" opacity=".9"/>
+
+  <!-- ============ tray ============ -->
+  <g filter="url(#soft)"><rect x="176" y="204" width="288" height="150" rx="32" fill="#FFFFFF"/></g>
+  <rect x="192" y="220" width="256" height="118" rx="24" fill="#FBF4E9"/>
+  <circle cx="250" cy="278" r="42" fill="#FFE6C0" stroke="#F0D8B0" stroke-width="4"/>
+  <path d="M230 278a20 20 0 0 1 40 0z" fill="#F5A623"/>
+  <path d="M244 268c8-6 12 4 4 8" stroke="#D98A18" stroke-width="4" stroke-linecap="round" fill="none"/>
+  <circle cx="330" cy="278" r="42" fill="#E4F2D6" stroke="#CDE5B6" stroke-width="4"/>
+  <circle cx="320" cy="270" r="9" fill="#8CC152"/><circle cx="342" cy="280" r="11" fill="#A5D06A"/><circle cx="322" cy="290" r="7" fill="#8CC152"/>
+  <rect x="386" y="238" width="44" height="82" rx="17" fill="#E6EFFB" stroke="#CBDCF1" stroke-width="4"/>
+  <rect x="398" y="258" width="20" height="9" rx="4.5" fill="#B7CBEA"/>
+  <rect x="398" y="276" width="20" height="9" rx="4.5" fill="#B7CBEA"/>
+
+  <!-- ============ cutlery ============ -->
+  <g filter="url(#soft)"><rect x="106" y="212" width="22" height="126" rx="11" fill="#FFFFFF"/></g>
+  <path d="M117 224v22M109 234v-13a8 8 0 0 1 16 0v13M117 248v78" stroke="#D99A50" stroke-width="4" stroke-linecap="round"/>
+  <ellipse cx="490" cy="252" rx="18" ry="26" fill="#FFFFFF" filter="url(#soft)"/>
+  <path d="M490 278v56" stroke="#D99A50" stroke-width="6" stroke-linecap="round"/>
+
+  <!-- ============ token dispenser ============ -->
+  <g filter="url(#soft)"><rect x="452" y="316" width="146" height="112" rx="20" fill="#FFFFFF"/></g>
+  <text x="470" y="342" font-size="9.5" font-weight="bold" fill="#A79BD8" letter-spacing="1.3">NOW SERVING</text>
+  <rect x="470" y="352" width="110" height="34" rx="12" fill="#FFF3E0"/>
+  <text class="slide g" x="525" y="375" text-anchor="middle" font-size="17" font-weight="bold" fill="#D9761B">A-24</text>
+  <g>
+    <circle cx="486" cy="406" r="5" fill="#F0871E"/>
+    <circle cx="504" cy="406" r="5" fill="#F0871E"/>
+    <circle cx="522" cy="406" r="5" fill="#E4E0F5"/>
+    <circle cx="540" cy="406" r="5" fill="#E4E0F5"/>
+    <circle cx="558" cy="406" r="5" fill="#E4E0F5"/>
+  </g>
+  <text x="470" y="422" font-size="9" fill="#A79BD8">3 min average wait</text>
+
+  <!-- ============ wallet tap card ============ -->
+  <g filter="url(#soft)"><rect x="452" y="52" width="150" height="92" rx="18" fill="#FFFFFF"/></g>
+  <rect x="470" y="70" width="56" height="40" rx="8" fill="#FFF1DC"/>
+  <circle cx="483" cy="82" r="6" fill="#F0A320"/>
+  <rect x="478" y="94" width="40" height="6" rx="3" fill="#F5C780"/>
+  <text x="536" y="86" font-size="10.5" font-weight="bold" fill="#D9761B">Pay</text>
+  <text x="536" y="100" font-size="9" fill="#C7A97F">₹ 120</text>
+  <circle class="wave g" cx="552" cy="82" r="7" fill="none" stroke="#F0871E" stroke-width="3"/>
+  <circle class="wave g" cx="552" cy="82" r="7" fill="none" stroke="#F0871E" stroke-width="3" style="animation-delay:.6s"/>
+  <path d="M568 74a16 16 0 0 1 0 20" stroke="#F0871E" stroke-width="3" stroke-linecap="round" fill="none"/>
+
+  <!-- ============ nutrition card ============ -->
+  <g filter="url(#soft)"><rect x="52" y="330" width="216" height="112" rx="20" fill="#FFFFFF"/></g>
+  <text x="70" y="356" font-size="9.5" font-weight="bold" fill="#A79BD8" letter-spacing="1.3">NUTRITION TRACKED</text>
+  <g transform="translate(96,0)">
+    <circle cx="0" cy="394" r="28" stroke="#F3EDE4" stroke-width="11"/>
+    <circle class="spin" cx="0" cy="394" r="28" stroke="#F0871E" stroke-width="11" stroke-linecap="round" stroke-dasharray="176 176"/>
+  </g>
+  <text x="96" y="398" text-anchor="middle" font-size="11" font-weight="bold" fill="#B4560F">640</text>
+  <text x="96" y="410" text-anchor="middle" font-size="7.5" fill="#C7A97F">KCAL</text>
+  <g>
+    <rect x="140" y="372" width="10" height="10" rx="3" fill="#F0871E"/><text x="156" y="381" font-size="10" fill="#8B7FC4">Carbs 52%</text>
+    <rect x="140" y="394" width="10" height="10" rx="3" fill="#8CC152"/><text x="156" y="403" font-size="10" fill="#8B7FC4">Protein 28%</text>
+    <rect x="140" y="416" width="10" height="10" rx="3" fill="#E8A33D"/><text x="156" y="425" font-size="10" fill="#8B7FC4">Fat 20%</text>
+  </g>
+
+  <circle class="shimmer" cx="596" cy="252" r="5" fill="#F0871E"/>
+</svg>

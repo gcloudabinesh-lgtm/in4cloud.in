@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" fill="none" role="img" aria-label="Reception desk where a pre-approved visitor pass is issued, scanned as a QR code and checked in against an escort checklist">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="640" y2="480" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E9FBFD"/><stop offset="1" stop-color="#E3EDFF"/>
+    </linearGradient>
+    <linearGradient id="band" x1="296" y1="26" x2="344" y2="122" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#22C7D6"/><stop offset="1" stop-color="#1B93C6"/>
+    </linearGradient>
+    <linearGradient id="desk" x1="252" y1="330" x2="392" y2="392" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#5FBECD"/><stop offset="1" stop-color="#2C93AE"/>
+    </linearGradient>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="170%">
+      <feDropShadow dx="0" dy="10" stdDeviation="13" flood-color="#0E8FA6" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+  <style>
+    text{font-family:Arial,Helvetica,sans-serif}
+    .g{transform-box:fill-box;transform-origin:center}
+    .pass{animation:pass 4.6s ease-in-out infinite}
+    @keyframes pass{0%,100%{transform:translateY(-5px) rotate(-1.4deg)}50%{transform:translateY(6px) rotate(1.4deg)}}
+    .check{transform-box:fill-box;transform-origin:center;animation:check 3.4s cubic-bezier(.22,.61,.36,1) infinite}
+    @keyframes check{0%{transform:scale(0);opacity:0}25%{transform:scale(1.15);opacity:1}45%,100%{transform:scale(1);opacity:1}}
+    .feed{animation:feed 2.2s ease-in-out infinite}
+    @keyframes feed{0%,100%{transform:translateY(0)}50%{transform:translateY(5px)}}
+    .wave{animation:wave 2.2s ease-out infinite}
+    @keyframes wave{0%{transform:scale(.7);opacity:.9}100%{transform:scale(1.6);opacity:0}}
+    .dash{stroke-dasharray:6 8;animation:dash 1.7s linear infinite}
+    @keyframes dash{to{stroke-dashoffset:-28}}
+    .blink{animation:blink 1.5s steps(1) infinite}
+    @keyframes blink{0%,60%{opacity:1}61%,100%{opacity:.25}}
+    .bob{animation:bob 4.4s ease-in-out infinite}
+    @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+  </style>
+
+  <rect width="640" height="480" rx="28" fill="url(#bg)"/>
+  <circle cx="76" cy="80" r="62" fill="#FFFFFF" fill-opacity="0.38"/>
+  <circle cx="582" cy="430" r="66" fill="#FFFFFF" fill-opacity="0.3"/>
+
+  <!-- ============ visitor pass on lanyard ============ -->
+  <g class="pass g">
+    <path d="M288 26h64l-12 84h-40l-12-84z" fill="url(#band)"/>
+    <path d="M296 26l32 66M344 26l-32 66" stroke="#FFFFFF" stroke-opacity=".45" stroke-width="5"/>
+    <circle cx="320" cy="120" r="15" fill="#FFFFFF" stroke="#22C7D6" stroke-width="5"/>
+    <g filter="url(#soft)"><rect x="188" y="130" width="252" height="256" rx="22" fill="#FFFFFF"/></g>
+    <path d="M188 152a22 22 0 0 1 22-22h208a22 22 0 0 1 22 22v46H188v-46z" fill="#22C7D6"/>
+    <text x="314" y="170" text-anchor="middle" font-size="14" font-weight="bold" fill="#FFFFFF" letter-spacing="2.5">VISITOR</text>
+    <rect x="264" y="180" width="100" height="6" rx="3" fill="#FFFFFF" fill-opacity=".55"/>
+    <circle cx="240" cy="256" r="34" fill="#DDF4F7"/>
+    <circle cx="240" cy="246" r="13" fill="#5FCBDA"/>
+    <path d="M214 284a26 26 0 0 1 52 0z" fill="#5FCBDA"/>
+    <rect x="294" y="222" width="112" height="10" rx="5" fill="#22C7D6"/>
+    <rect x="294" y="244" width="84" height="8" rx="4" fill="#CDEEF3"/>
+    <rect x="294" y="264" width="62" height="8" rx="4" fill="#E4F7F9"/>
+    <rect x="206" y="308" width="74" height="74" rx="10" fill="#F1FBFC"/>
+    <g fill="#1B93C6">
+      <rect x="214" y="316" width="22" height="22" rx="5"/><rect x="250" y="316" width="22" height="22" rx="5"/><rect x="214" y="352" width="22" height="22" rx="5"/>
+      <rect x="218" y="320" width="14" height="14" rx="3" fill="#F1FBFC"/><rect x="254" y="320" width="14" height="14" rx="3" fill="#F1FBFC"/><rect x="218" y="356" width="14" height="14" rx="3" fill="#F1FBFC"/>
+      <rect x="242" y="316" width="7" height="7" rx="2"/><rect x="242" y="328" width="7" height="7" rx="2"/><rect x="242" y="340" width="7" height="7" rx="2"/>
+      <rect x="254" y="342" width="7" height="7" rx="2"/><rect x="242" y="352" width="7" height="7" rx="2"/><rect x="256" y="360" width="7" height="7" rx="2"/><rect x="242" y="364" width="7" height="7" rx="2"/>
+    </g>
+    <rect x="294" y="308" width="106" height="9" rx="4.5" fill="#22C7D6"/>
+    <rect x="294" y="328" width="78" height="8" rx="4" fill="#CDEEF3"/>
+    <rect x="294" y="346" width="92" height="8" rx="4" fill="#E4F7F9"/>
+    <rect x="294" y="364" width="58" height="8" rx="4" fill="#E4F7F9"/>
+  </g>
+
+  <!-- ============ badge printer (top-left) ============ -->
+  <g filter="url(#soft)"><rect x="44" y="116" width="136" height="92" rx="18" fill="#FFFFFF"/></g>
+  <rect x="60" y="132" width="104" height="12" rx="6" fill="#22C7D6"/>
+  <rect x="60" y="152" width="60" height="8" rx="4" fill="#CDEEF3"/>
+  <rect class="feed g" x="66" y="166" width="92" height="28" rx="6" fill="#F1FBFC" stroke="#CDEEF3" stroke-width="2"/>
+  <path d="M66 190h92" stroke="#22C7D6" stroke-width="2" stroke-dasharray="3 4"/>
+
+  <!-- ============ reception host (left) ============ -->
+  <g class="bob g">
+    <circle cx="110" cy="266" r="25" fill="#FFD9B8"/>
+    <path d="M87 264a23 23 0 0 1 46 0v4H87v-4z" fill="#2F2348"/>
+    <path d="M76 358c8-38 18-54 34-54s26 16 34 54z" fill="#2C93AE"/>
+    <path d="M97 306l13 24 13-24" stroke="#FFFFFF" stroke-opacity=".5" stroke-width="4" fill="none"/>
+  </g>
+  <g filter="url(#soft)"><rect x="40" y="356" width="140" height="56" rx="16" fill="url(#desk)"/></g>
+  <rect x="58" y="376" width="46" height="6" rx="3" fill="#FFFFFF" fill-opacity=".45"/>
+  <rect x="140" y="376" width="26" height="6" rx="3" fill="#FFFFFF" fill-opacity=".45"/>
+
+  <!-- ============ scanner (top-right) ============ -->
+  <g filter="url(#soft)"><rect x="456" y="116" width="142" height="128" rx="22" fill="#FFFFFF"/></g>
+  <text x="527" y="142" text-anchor="middle" font-size="9.5" font-weight="bold" fill="#A79BD8" letter-spacing="1.3">SCAN DESK</text>
+  <rect x="484" y="152" width="86" height="82" rx="12" fill="#EAF9FB"/>
+  <g stroke="#22C7D6" stroke-width="6" stroke-linecap="round" fill="none">
+    <path d="M486 170v-12h12"/><path d="M568 170v-12h-12"/><path d="M486 216v12h12"/><path d="M568 216v12h-12"/>
+  </g>
+  <circle cx="527" cy="193" r="15" fill="#22C7D6"/>
+  <circle class="wave g" cx="527" cy="193" r="17" fill="none" stroke="#22C7D6" stroke-width="3"/>
+  <circle class="blink" cx="590" cy="130" r="5" fill="#4ED18A"/>
+
+  <!-- ============ check-in checklist ============ -->
+  <g filter="url(#soft)"><rect x="456" y="256" width="142" height="142" rx="18" fill="#FFFFFF"/></g>
+  <text x="472" y="282" font-size="9.5" font-weight="bold" fill="#A79BD8" letter-spacing="1.2">CHECK-IN</text>
+  <g>
+    <circle class="check g" cx="482" cy="308" r="10" fill="#E8F7E0"/>
+    <path class="check g" d="M477 308l4 4 7-8" stroke="#4E9B22" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    <rect x="498" y="304" width="84" height="8" rx="4" fill="#DDF4F7"/>
+  </g>
+  <g>
+    <circle class="check g" cx="482" cy="340" r="10" fill="#E8F7E0" style="animation-delay:.25s"/>
+    <path class="check g" d="M477 340l4 4 7-8" stroke="#4E9B22" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" fill="none" style="animation-delay:.25s"/>
+    <rect x="498" y="336" width="70" height="8" rx="4" fill="#DDF4F7"/>
+  </g>
+  <g>
+    <circle class="check g" cx="482" cy="372" r="10" fill="#E8F7E0" style="animation-delay:.5s"/>
+    <path class="check g" d="M477 372l4 4 7-8" stroke="#4E9B22" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" fill="none" style="animation-delay:.5s"/>
+    <rect x="498" y="368" width="76" height="8" rx="4" fill="#DDF4F7"/>
+  </g>
+
+  <!-- ============ connection ============ -->
+  <path class="dash" d="M440 308h14" stroke="#22C7D6" stroke-width="3"/>
+
+  <!-- ============ footer chips ============ -->
+  <g filter="url(#soft)"><rect x="52" y="404" width="180" height="46" rx="23" fill="#FFFFFF"/></g>
+  <circle cx="80" cy="427" r="14" fill="#E8F7E0"/>
+  <path d="M73 427l5 5 10-10" stroke="#4E9B22" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="102" y="432" font-size="12.5" font-weight="bold" fill="#123C4A">Pre-approved</text>
+  <g filter="url(#soft)"><rect x="248" y="404" width="196" height="46" rx="23" fill="#FFFFFF"/></g>
+  <circle cx="276" cy="427" r="14" fill="#EAF9FB"/>
+  <circle cx="272" cy="424" r="4" fill="#22C7D6"/><circle cx="282" cy="424" r="4" fill="#22C7D6"/>
+  <path d="M266 435a10 10 0 0 1 20 0z" fill="#22C7D6"/>
+  <text x="298" y="432" font-size="12.5" font-weight="bold" fill="#123C4A">3 at reception</text>
+  <g filter="url(#soft)"><rect x="460" y="404" width="140" height="46" rx="23" fill="#FFFFFF"/></g>
+  <circle cx="488" cy="427" r="14" fill="#F1FBFC"/>
+  <path d="M483 421v6l5 4" stroke="#1B93C6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <text x="510" y="432" font-size="12.5" font-weight="bold" fill="#123C4A">Avg 40s</text>
+</svg>

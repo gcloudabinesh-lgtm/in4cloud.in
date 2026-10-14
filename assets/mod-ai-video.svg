@@ -1,0 +1,156 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" fill="none" role="img" aria-label="AI video analytics wall showing four camera tiles with object detection boxes, a heat map and a live alert timeline">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="640" y2="480" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#EFE9FF"/><stop offset="1" stop-color="#E1F3FF"/>
+    </linearGradient>
+    <linearGradient id="wall" x1="44" y1="56" x2="450" y2="356" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2E2352"/><stop offset="1" stop-color="#171130"/>
+    </linearGradient>
+    <linearGradient id="heat" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#F5A623"/><stop offset=".5" stop-color="#E23B57"/><stop offset="1" stop-color="#6528F7"/>
+    </linearGradient>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="170%">
+      <feDropShadow dx="0" dy="10" stdDeviation="13" flood-color="#4B20C8" flood-opacity="0.22"/>
+    </filter>
+  </defs>
+  <style>
+    text{font-family:Arial,Helvetica,sans-serif}
+    .g{transform-box:fill-box;transform-origin:center}
+    .scan{animation:scan 3.4s ease-in-out infinite}
+    @keyframes scan{0%,100%{transform:translateY(-40px);opacity:.15}50%{transform:translateY(40px);opacity:.7}}
+    .track{transform-box:fill-box;transform-origin:left center;animation:track 5s ease-in-out infinite}
+    @keyframes track{0%,100%{transform:translateX(-16px)}50%{transform:translateX(16px)}}
+    .pulse{transform-box:fill-box;transform-origin:center;animation:pulse 2.2s ease-out infinite}
+    @keyframes pulse{0%{transform:scale(.7);opacity:.9}100%{transform:scale(1.7);opacity:0}}
+    .blink{animation:blink 1.4s steps(1) infinite}
+    @keyframes blink{0%,55%{opacity:1}56%,100%{opacity:.2}}
+    .heat{animation:heat 3.6s ease-in-out infinite}
+    @keyframes heat{0%,100%{opacity:.45;transform:scale(.9)}50%{opacity:.85;transform:scale(1.08)}}
+    .dash2{animation:dash2 1.7s linear infinite}
+    @keyframes dash2{to{stroke-dashoffset:-28}}
+  </style>
+
+  <rect width="640" height="480" rx="28" fill="url(#bg)"/>
+  <circle cx="586" cy="66" r="66" fill="#FFFFFF" fill-opacity="0.32"/>
+  <circle cx="60" cy="446" r="54" fill="#FFFFFF" fill-opacity="0.28"/>
+
+  <!-- ============ video wall ============ -->
+  <g filter="url(#soft)"><rect x="44" y="56" width="406" height="300" rx="24" fill="url(#wall)"/></g>
+  <rect x="44" y="56" width="406" height="38" rx="24" fill="#3A2E68"/>
+  <rect x="44" y="78" width="406" height="16" fill="#3A2E68"/>
+  <text x="64" y="80" font-size="10.5" font-weight="bold" fill="#FFFFFF">CAMERA WALL · HQ</text>
+  <text x="430" y="80" text-anchor="end" font-size="10" fill="#C9BCF5">4 of 24 feeds</text>
+  <circle class="blink" cx="404" cy="75" r="5" fill="#FF5C7A"/>
+
+  <!-- tile 1 : lobby, person detected -->
+  <g>
+    <rect x="58" y="104" width="180" height="112" rx="12" fill="#241B45"/>
+    <g stroke="#3E2F72" stroke-width="1.5"><path d="M118 104v112M178 104v112M58 132h180M58 160h180M58 188h180"/></g>
+    <rect class="scan g" x="58" y="104" width="180" height="3" fill="#A78BFA"/>
+    <circle cx="128" cy="158" r="13" fill="#FFD9B8"/>
+    <path d="M108 208c6-22 12-30 20-30s14 8 20 30z" fill="#4C3AD6"/>
+    <rect class="dash2" x="102" y="132" width="52" height="80" rx="8" stroke="#7BE0A6" stroke-width="2.5" stroke-dasharray="8 6" fill="none"/>
+    <rect x="100" y="120" width="58" height="15" rx="5" fill="#4E9B22"/>
+    <text x="129" y="131" text-anchor="middle" font-size="8" font-weight="bold" fill="#FFFFFF">PERSON 98%</text>
+    <text x="70" y="120" font-size="8.5" fill="#C9BCF5">LOBBY</text>
+  </g>
+
+  <!-- tile 2 : gate, vehicle -->
+  <g>
+    <rect x="250" y="104" width="186" height="112" rx="12" fill="#241B45"/>
+    <g stroke="#3E2F72" stroke-width="1.5"><path d="M310 104v112M370 104v112M250 132h186M250 160h186M250 188h186"/></g>
+    <rect class="scan g" x="250" y="104" width="186" height="3" fill="#A78BFA" style="animation-delay:.8s"/>
+    <path d="M276 196l14-24a14 14 0 0 1 12-7h58a16 16 0 0 1 13 7l14 24z" fill="#7A55EC"/>
+    <rect x="266" y="192" width="140" height="22" rx="11" fill="#5B34D6"/>
+    <rect class="dash2" x="258" y="160" width="156" height="60" rx="8" stroke="#FFD166" stroke-width="2.5" stroke-dasharray="8 6" fill="none"/>
+    <rect x="256" y="148" width="66" height="15" rx="5" fill="#D9761B"/>
+    <text x="289" y="159" text-anchor="middle" font-size="8" font-weight="bold" fill="#FFFFFF">VEHICLE 94%</text>
+    <text x="262" y="120" font-size="8.5" fill="#C9BCF5">MAIN GATE</text>
+  </g>
+
+  <!-- tile 3 : canteen, crowd -->
+  <g>
+    <rect x="58" y="228" width="180" height="112" rx="12" fill="#241B45"/>
+    <g stroke="#3E2F72" stroke-width="1.5"><path d="M118 228v112M178 228v112M58 256h180M58 284h180M58 312h180"/></g>
+    <rect class="scan g" x="58" y="228" width="180" height="3" fill="#A78BFA" style="animation-delay:1.6s"/>
+    <g fill="#4C3AD6">
+      <circle cx="102" cy="284" r="11"/><path d="M84 328c4-20 10-28 18-28s14 8 18 28z"/>
+      <circle cx="140" cy="292" r="11"/><path d="M122 334c4-20 10-28 18-28s14 8 18 28z"/>
+      <circle cx="178" cy="278" r="11"/><path d="M160 324c4-20 10-28 18-28s14 8 18 28z"/>
+      <circle cx="212" cy="296" r="11"/><path d="M194 336c4-18 10-26 18-26s14 8 18 26z"/>
+    </g>
+    <rect class="dash2" x="78" y="262" width="160" height="78" rx="8" stroke="#A78BFA" stroke-width="2.5" stroke-dasharray="8 6" fill="none"/>
+    <rect x="76" y="250" width="88" height="15" rx="5" fill="#6528F7"/>
+    <text x="120" y="261" text-anchor="middle" font-size="8" font-weight="bold" fill="#FFFFFF">CROWD 12</text>
+    <text x="70" y="244" font-size="8.5" fill="#C9BCF5">CANTEEN</text>
+  </g>
+
+  <!-- tile 4 : heat map -->
+  <g>
+    <rect x="250" y="228" width="186" height="112" rx="12" fill="#241B45"/>
+    <g stroke="#3E2F72" stroke-width="1.5"><path d="M312 228v112M374 228v112M250 256h186M250 284h186M250 312h186"/></g>
+    <ellipse class="heat g" cx="336" cy="292" rx="58" ry="32" fill="url(#heat)" opacity=".6"/>
+    <ellipse class="heat g" cx="330" cy="286" rx="30" ry="18" fill="#F5A623" opacity=".7" style="animation-delay:.5s"/>
+    <text x="262" y="244" font-size="8.5" fill="#C9BCF5">HEAT MAP · FLOOR 2</text>
+    <rect x="372" y="306" width="52" height="24" rx="8" fill="#241B45" fill-opacity=".8"/>
+    <text x="398" y="322" text-anchor="middle" font-size="9" font-weight="bold" fill="#FFD166">HOT ZONE</text>
+  </g>
+
+  <!-- ============ alert timeline ============ -->
+  <g filter="url(#soft)"><rect x="466" y="56" width="140" height="300" rx="20" fill="#FFFFFF"/></g>
+  <text x="484" y="82" font-size="9.5" font-weight="bold" fill="#A79BD8" letter-spacing="1.3">LIVE ALERTS</text>
+  <path d="M492 100v238" stroke="#F1ECFF" stroke-width="3"/>
+  <g>
+    <circle class="pulse g" cx="492" cy="112" r="9" fill="#E23B57" opacity=".5"/><circle cx="492" cy="112" r="6" fill="#E23B57"/>
+    <text x="508" y="110" font-size="10" font-weight="bold" fill="#3A2A6B">Loitering</text>
+    <text x="508" y="124" font-size="9" fill="#A79BD8">Gate · 2m ago</text>
+  </g>
+  <g>
+    <circle class="pulse g" cx="492" cy="166" r="9" fill="#D9761B" opacity=".5" style="animation-delay:.6s"/><circle cx="492" cy="166" r="6" fill="#D9761B"/>
+    <text x="508" y="164" font-size="10" font-weight="bold" fill="#3A2A6B">PPE missing</text>
+    <text x="508" y="178" font-size="9" fill="#A79BD8">Warehouse · 6m</text>
+  </g>
+  <g>
+    <circle class="pulse g" cx="492" cy="220" r="9" fill="#6528F7" opacity=".5" style="animation-delay:1.2s"/><circle cx="492" cy="220" r="6" fill="#6528F7"/>
+    <text x="508" y="218" font-size="10" font-weight="bold" fill="#3A2A6B">Face match</text>
+    <text x="508" y="232" font-size="9" fill="#A79BD8">Watchlist · 9m</text>
+  </g>
+  <g>
+    <circle cx="492" cy="274" r="6" fill="#4ED18A"/>
+    <text x="508" y="272" font-size="10" font-weight="bold" fill="#3A2A6B">Intrusion cleared</text>
+    <text x="508" y="286" font-size="9" fill="#A79BD8">Floor 2 · 14m</text>
+  </g>
+  <rect x="482" y="304" width="108" height="34" rx="12" fill="#F5F1FF"/>
+  <text x="536" y="325" text-anchor="middle" font-size="10" font-weight="bold" fill="#5B34D6">98.6% uptime</text>
+
+  <!-- ============ AI capability chips ============ -->
+  <g filter="url(#soft)"><rect x="44" y="376" width="562" height="72" rx="20" fill="#FFFFFF"/></g>
+  <g>
+    <circle cx="86" cy="412" r="18" fill="#F0EBFF"/>
+    <rect x="94" y="398" width="26" height="26" rx="6" stroke="#6528F7" stroke-width="2.5" fill="none"/>
+    <circle class="track g" cx="107" cy="411" r="4" fill="#6528F7"/>
+    <text x="116" y="408" font-size="11" font-weight="bold" fill="#3A2A6B">Object tracking</text>
+    <text x="116" y="424" font-size="9.5" fill="#A79BD8">multi-object IDs</text>
+  </g>
+  <path d="M232 390v44" stroke="#F1ECFF" stroke-width="2"/>
+  <g>
+    <circle cx="264" cy="412" r="18" fill="#EAF7E4"/>
+    <path d="M254 420a12 12 0 0 1 20 0z" fill="#6DBE45"/><circle cx="264" cy="404" r="5" fill="#6DBE45"/>
+    <text x="294" y="408" font-size="11" font-weight="bold" fill="#3A2A6B">Crowd density</text>
+    <text x="294" y="424" font-size="9.5" fill="#A79BD8">zone heat maps</text>
+  </g>
+  <path d="M406 390v44" stroke="#F1ECFF" stroke-width="2"/>
+  <g>
+    <circle cx="438" cy="412" r="18" fill="#E6F5FF"/>
+    <g stroke="#1B93C6" stroke-width="2.6" fill="none" stroke-linecap="round"><path d="M438 401v7"/><path d="M430 408a9 9 0 0 0 0 9"/><path d="M446 408a9 9 0 0 1 0 9"/></g>
+    <text x="468" y="408" font-size="11" font-weight="bold" fill="#3A2A6B">Face search</text>
+    <text x="468" y="424" font-size="9.5" fill="#A79BD8">watchlist match</text>
+  </g>
+  <path d="M552 390v44" stroke="#F1ECFF" stroke-width="2"/>
+  <g>
+    <circle cx="580" cy="412" r="18" fill="#FFF1DC"/>
+    <path d="M572 418v-6l8-10 8 10v6z" fill="#F0871E"/>
+    <text x="580" y="410" text-anchor="middle" font-size="9.5" font-weight="bold" fill="#B4560F">24</text>
+  </g>
+  <text x="580" y="444" text-anchor="middle" font-size="9" fill="#A79BD8">cameras</text>
+</svg>
