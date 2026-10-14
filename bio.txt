@@ -1,0 +1,291 @@
+You are working on the existing IN4 Cloud homepage.
+
+TASK:
+Update the current “Biometric Integrations” section.
+
+IMPORTANT:
+Do NOT redesign the entire page.
+Keep the current section structure as a premium two-column layout:
+- Left side: content
+- Right side: biometric visual
+
+Do NOT change unrelated sections.
+Do NOT change global branding.
+Keep the existing IN4 Cloud purple + green brand identity.
+
+==================================================
+CURRENT SECTION ISSUE
+==================================================
+
+The current section is too generic and does not communicate IN4 CloudHR’s real biometric strength.
+
+We need to highlight:
+
+- 18 years of biometric expertise
+- IN4 CloudHR is backed by In4 Solutions Pvt Ltd
+- In4 Solutions is a leading distributor/integrator of ZKTeco biometric solutions
+- Direct connection with ZKTeco and eSSL devices
+- No intermediate middleware required for supported devices
+- Live and real-time attendance data
+- Built-in Device Management module
+- Easier biometric/device configuration
+- Support for other major brands such as Hikvision, Matrix, Biomax, etc.
+- Future-ready HRMS transformation with accurate attendance feeding HR and payroll
+
+==================================================
+SECTION LABEL
+==================================================
+
+Keep / update the small eyebrow label to:
+
+INTEGRATIONS
+
+==================================================
+MAIN HEADING
+==================================================
+
+Replace the current heading with:
+
+18 Years of Biometric Mastery, Now in the Cloud
+
+Alternative if heading becomes too long on smaller screens:
+
+Biometric Expertise, Now Built into the Cloud
+
+Use only one heading.
+
+==================================================
+MAIN INTRO CONTENT
+==================================================
+
+Use this optimized content:
+
+Bringing 18 years of biometric attendance expertise into IN4 CloudHR, we combine proven hardware integration with a modern cloud HRMS — because payroll accuracy starts with reliable attendance data.
+
+As a unit of In4 Solutions Pvt Ltd, with deep expertise in ZKTeco biometric solutions, IN4 CloudHR connects directly with supported ZKTeco and eSSL devices to deliver live, real-time attendance data without depending on intermediate systems.
+
+Our built-in Device Management module simplifies biometric configuration, device onboarding, monitoring and synchronization — making it easier for HR and IT teams to manage attendance hardware from a centralized platform.
+
+In addition to ZKTeco and eSSL, IN4 CloudHR supports integrations with several major biometric and access-control brands including Hikvision, Matrix, Biomax and others.
+
+Keep paragraphs concise and easy to scan.
+
+==================================================
+SUPPORTING MESSAGE
+==================================================
+
+Add a short highlighted statement:
+
+From biometric punch to payroll, IN4 CloudHR keeps workforce data accurate, accessible and secure as your organization grows.
+
+==================================================
+FEATURE LIST
+==================================================
+
+Replace the current generic 3 items with these:
+
+1. Direct Biometric Connectivity
+
+Connect supported ZKTeco and eSSL biometric devices directly with IN4 CloudHR for live attendance data and faster synchronization.
+
+Icon:
+Fingerprint / biometric terminal
+
+2. Built-In Device Management
+
+Configure, onboard, monitor and manage biometric devices from within the platform, reducing manual hardware administration.
+
+Icon:
+Device / settings / control panel
+
+3. Real-Time Attendance Sync
+
+Capture employee punches in real time and make attendance data immediately available for HR, leave and payroll workflows.
+
+Icon:
+Sync / live data / clock
+
+4. Multi-Brand Device Integration
+
+Integrate with supported devices from brands such as ZKTeco, eSSL, Hikvision, Matrix, Biomax and other commonly used biometric systems.
+
+Icon:
+Connected devices / integration
+
+==================================================
+CTA
+==================================================
+
+Add one CTA link/button:
+
+Know More →
+
+Label can be:
+
+Explore Built-In Device Management →
+
+Preferred:
+Explore Built-In Device Management →
+
+Link it to the appropriate Device Management / integration page if one exists.
+If no page exists yet, keep the button structure ready without breaking navigation.
+
+==================================================
+RIGHT-SIDE VISUAL
+==================================================
+
+Replace the current generic biometric illustration.
+
+Use real / realistic biometric device visuals.
+
+Visual direction:
+- ZKTeco-style biometric attendance terminals
+- fingerprint readers
+- RFID / access control readers
+- multiple supported device models
+- clean product photography / realistic device render
+- central IN4 CloudHR cloud / platform connection
+- dotted or glowing lines connecting devices to CloudHR
+- show “Live Sync” / “Real-Time Data” concept visually
+
+Do NOT use cartoon people.
+
+Do NOT use fake device names.
+
+Do NOT invent unsupported ZKTeco model numbers.
+
+If actual product images are available in project assets, use those.
+
+If not:
+use realistic generic biometric terminal visuals that resemble professional fingerprint/RFID attendance hardware.
+
+==================================================
+DEVICE MANAGEMENT VISUAL
+==================================================
+
+Inside the right-side composition, also show a small UI panel or floating micro-dashboard representing:
+
+Device Management
+
+Possible UI data:
+- Device Name
+- Location
+- Connection Status
+- Last Sync
+- Online / Offline status
+
+Keep this subtle.
+
+Do NOT overcrowd the visual.
+
+==================================================
+DESIGN STYLE
+==================================================
+
+Maintain the current section’s premium light design.
+
+Background:
+- white / very light lavender
+- subtle technical grid
+- soft purple glow
+- minimal decorative lines
+
+Left side:
+- strong headline
+- concise body copy
+- structured feature list
+- CTA at bottom
+
+Right side:
+- premium biometric hardware visual
+- device-to-cloud connection concept
+- built-in Device Management UI element
+
+==================================================
+CONTENT HIERARCHY
+==================================================
+
+Suggested left-side order:
+
+Eyebrow:
+INTEGRATIONS
+
+H2:
+18 Years of Biometric Mastery, Now in the Cloud
+
+Intro paragraphs
+
+Highlighted line:
+From biometric punch to payroll, IN4 CloudHR keeps workforce data accurate, accessible and secure as your organization grows.
+
+Feature list:
+- Direct Biometric Connectivity
+- Built-In Device Management
+- Real-Time Attendance Sync
+- Multi-Brand Device Integration
+
+CTA:
+Explore Built-In Device Management →
+
+==================================================
+IMPORTANT CONTENT RULES
+==================================================
+
+Do NOT use:
+“Plug & Play” as the main claim.
+
+Instead emphasize:
+- direct device connectivity
+- built-in device management
+- real-time synchronization
+- centralized biometric configuration
+
+Do NOT overclaim universal compatibility.
+
+Use wording like:
+“supports integrations with”
+or
+“connects with supported models from”
+
+instead of:
+“works with all devices”
+
+==================================================
+RESPONSIVE REQUIREMENTS
+==================================================
+
+Desktop:
+- 2-column layout
+- left 48–52%
+- right 48–52%
+- right visual fully visible
+
+Tablet:
+- reduce visual size
+- maintain readable copy
+- stack only if necessary
+
+Mobile:
+- content first
+- visual second
+- feature items stack vertically
+- CTA full-width if needed
+- no horizontal overflow
+
+==================================================
+VISUAL QUALITY
+==================================================
+
+Final result should feel:
+- enterprise-grade
+- hardware + SaaS integrated
+- technically credible
+- premium
+- modern
+- product-focused
+
+Do NOT make this section look like a generic HRMS feature block.
+
+The key message must be:
+
+IN4 CloudHR combines deep biometric hardware expertise with built-in device management and direct real-time attendance integration.

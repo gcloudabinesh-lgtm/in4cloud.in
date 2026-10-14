@@ -53,11 +53,53 @@
   --r-lg: 20px;
   --r-xl: 28px;
 
+  /* ---- IN4 CloudHR canonical design tokens (2026 refresh) ----
+     Single source of truth for every colour used across the homepage.
+     Purple + green stay the dominant brand identity; the remaining hues are
+     functional accents only (attendance, payroll, leave, visitor, parking,
+     analytics, alerts) so the palette never drifts into a rainbow. */
+  --in4-purple: #6C35FF;
+  --in4-purple-dark: #4B20C8;
+  --in4-purple-soft: #F3EEFF;
+
+  --in4-green: #6DBE45;
+  --in4-green-dark: #3E8E2D;
+  --in4-green-soft: #F1F9EC;
+
+  --in4-blue: #3B82F6;
+  --in4-cyan: #22C7D6;
+  --in4-orange: #F59E0B;
+  --in4-pink: #EC4899;
+  --in4-violet: #8B5CF6;
+
+  --in4-navy: #111827;
+  --in4-text-muted: #5F6472;
+
+  --in4-bg-soft: #F8F9FC;
+  --in4-border: #E7E8EE;
+  --in4-dark: #15172E;
+  --in4-dark-purple: #211B46;
+
   /* Layout */
-  --container: 1180px;
+  --container: 1240px;
   --header-h: 76px;
-  --space-section: clamp(2.75rem, 5vw, 4.5rem);
+  --space-section: clamp(2.5rem, 5vw, 4.5rem);
   --space-section-sm: clamp(2rem, 4vw, 3.25rem);
+  --space-head: clamp(1.5rem, 3vw, 2.5rem);
+
+  /* Fluid type scale — every size below interpolates between a phone
+     (360px) and a desktop (1280px+) with no abrupt jumps.
+     Prefer these over one-off px values so the whole page stays fluid. */
+  --fs-body:    clamp(1rem,     0.96rem  + 0.20vw, 1.031rem); /* 16  -> 16.5  */
+  --fs-lead:    clamp(1rem,     0.95rem  + 0.25vw, 1.094rem); /* 16  -> 17.5  */
+  --fs-title:   clamp(1.625rem, 1.05rem + 1.35vw, 2rem);     /* 26  -> 32    */
+  --fs-h3:      clamp(0.938rem, 0.89rem  + 0.24vw, 1.031rem); /* 15  -> 16.5  */
+  --fs-sm:      clamp(0.813rem, 0.78rem  + 0.16vw, 0.906rem); /* 13  -> 14.5  */
+  --fs-xs:      clamp(0.75rem,  0.72rem  + 0.13vw, 0.813rem); /* 12  -> 13    */
+  --fs-eyebrow: clamp(0.688rem, 0.67rem  + 0.13vw, 0.781rem); /* 11  -> 12.5  */
+
+  /* iOS zooms any input under 16px on focus — never go below this */
+  --fs-input: 1rem;
 
   /* Effects */
   --shadow-sm: 0 1px 2px rgba(24, 22, 50, 0.05), 0 4px 14px rgba(24, 22, 50, 0.04);
@@ -89,7 +131,7 @@ body {
   color: var(--text-body);
   background: var(--bg);
   line-height: 1.7;
-  font-size: 16.5px;
+  font-size: var(--fs-body);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   overflow-x: hidden;
@@ -164,7 +206,7 @@ kbd, code, pre { font-family: ui-monospace, "Cascadia Code", Menlo, monospace; }
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  font-size: 12.5px;
+  font-size: var(--fs-eyebrow);
   font-weight: 700;
   letter-spacing: 0.13em;
   text-transform: uppercase;
@@ -179,20 +221,47 @@ kbd, code, pre { font-family: ui-monospace, "Cascadia Code", Menlo, monospace; }
   background: var(--grad-green);
 }
 
-.section-head { max-width: 720px; margin-bottom: clamp(1.5rem, 3vw, 2.5rem); }
-.section-head.center { margin-inline: auto; text-align: center; }
+.section-head { max-width: 720px; margin-bottom: var(--space-head); }
+.section-head.center { max-width: 70%; margin-inline: auto; text-align: center; }
 .section-head.center .section-title,
 .section-head.center .section-lead { margin-inline: auto; }
-.section-head .eyebrow { margin-bottom: 14px; }
+.section-head .eyebrow { margin-bottom: clamp(0.625rem, 1.2vw, 0.875rem); }
 
-.section-title {
-  font-size: clamp(1.9rem, 2.6vw + 1rem, 3rem);
-  font-weight: 800;
+/* 70% of a phone is too narrow for a headline — go full width on small screens */
+@media (max-width: 640px) {
+  .section-head.center { max-width: 100%; }
 }
 
+/* One uniform, fully fluid size shared by every section title on the page,
+   so headings never step up or down between sections. 22px on a phone,
+   ~29px on a tablet, 30px ceiling on desktop. */
+.section-title {
+  font-size: var(--fs-title);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.18;
+}
+
+/* dual-colour section titles — the <em> phrase carries a section-specific accent.
+   Green is deliberately excluded; every accent below is >=3.6:1 on white/lavender. */
+.section-title em {
+  font-style: normal;
+  color: var(--tt-accent, #6C35FF);
+}
+
+.section-title em.a1 { color: #6C35FF; }  /* purple      5.9:1 */
+.section-title em.a2 { color: #8B5CF6; }  /* violet      4.2:1 */
+.section-title em.a3 { color: #3B82F6; }  /* blue        3.7:1 */
+.section-title em.a4 { color: #0E8C9B; }  /* teal        4.0:1 */
+.section-title em.a5 { color: #EC4899; }  /* pink        3.5:1 */
+.section-title em.a6 { color: #C2410C; }  /* burnt orange 5.2:1 */
+.section-title em.a7 { color: #4B20C8; }  /* deep purple 9.0:1 */
+.section-title em.a8 { color: #0891B2; }  /* cyan-blue   3.7:1 */
+
 .section-lead {
-  margin-top: 18px;
-  font-size: 17.5px;
+  margin-top: clamp(0.875rem, 1.6vw, 1.125rem);
+  font-size: var(--fs-lead);
+  line-height: 1.65;
   color: var(--text-body);
   max-width: 58ch;
 }

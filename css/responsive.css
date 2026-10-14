@@ -55,13 +55,81 @@
   .footer-col.open h4 .foot-caret { transform: rotate(180deg); }
   .footer-col ul { max-height: 0; overflow: hidden; }
   .footer-col.open ul { max-height: 320px; padding-bottom: 18px; }
+
+  /* ---- Animated gradient border on the accordion triggers ----
+     A purple→green line sweeps out along the bottom edge of a column heading
+     on hover/focus, then drifts slowly while the column stays open. */
+  .footer-col { transition: border-color 0.45s var(--ease); }
+  .footer-col:hover,
+  .footer-col:focus-within,
+  .footer-col.open { border-bottom-color: rgba(151, 121, 255, 0.34); }
+
+  .footer-col h4 { position: relative; }
+
+  .footer-col h4::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    border-radius: 2px;
+    background-image: linear-gradient(90deg, #7b4bff 0%, #9779ff 32%, #72bf44 68%, #97d75f 100%);
+    background-size: 220% 100%;
+    background-repeat: no-repeat;
+    transform: scaleX(0);
+    transform-origin: left center;
+    opacity: 0;
+    transition: transform 0.55s var(--ease), opacity 0.35s var(--ease);
+  }
+
+  .footer-col:hover h4::after,
+  .footer-col:focus-within h4::after,
+  .footer-col.open h4::after {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+
+  /* slow drift only while the panel is actually open */
+  .footer-col.open h4::after {
+    animation: footEdgeDrift 6s linear infinite;
+  }
+
+  @keyframes footEdgeDrift {
+    from { background-position: 0% 0; }
+    to   { background-position: 100% 0; }
+  }
 }
 
+/* ---- Reduced motion ---- */
+@media (prefers-reduced-motion: reduce) {
+  .footer-col.open h4::after { animation: none; }
+  .footer-col h4::after { transition: none; }
+}
+
+/* ---- Global small-screen safety net ----
+   Captive text, minimum tap targets, and no horizontal overflow on phones. */
 @media (max-width: 560px) {
   .grid-4, .grid-3 { grid-template-columns: 1fr; }
   .form-grid { grid-template-columns: 1fr; }
   .form-grid .span-2 { grid-column: span 1; }
   .page-hero h1 { font-size: clamp(1.75rem, 7vw, 2.2rem); }
+
+  /* headings and paragraphs may use the full column on narrow screens */
+  p { max-width: none; }
+  .section-lead { max-width: none; }
+
+  /* comfortable minimum hit area for every control */
+  .btn { min-height: 44px; }
+  .btn-sm { min-height: 40px; }
+  .form-input { min-height: 44px; }
+
+  /* never let a long word or URL push the page sideways */
+  h1, h2, h3, h4, .section-title, .eyebrow, .pill, .tech-tag {
+    overflow-wrap: break-word;
+    word-break: break-word;
+    hyphens: auto;
+  }
 
   .mobile-menu { width: 100vw; }
 

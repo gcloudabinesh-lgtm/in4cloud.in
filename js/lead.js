@@ -97,6 +97,34 @@
       const status = form.querySelector("[data-lead-status]");
       const statusLoading = form.querySelector('[data-lead-status-loading]');
 
+      const FIELDS = ["fullName", "company", "phone", "email", "product"];
+      let submitted = false;
+
+      function errBoxFor(inp) {
+        return inp ? inp.parentElement.querySelector("[data-error-for]") : null;
+      }
+
+      function setFieldError(inp, message) {
+        if (!inp) return;
+        const box = errBoxFor(inp);
+        inp.classList.add("has-error");
+        inp.setAttribute("aria-invalid", "true");
+        if (box) {
+          box.textContent = message;
+          if (!box.id) box.id = "err-" + inp.name;
+          inp.setAttribute("aria-describedby", box.id);
+        }
+      }
+
+      function clearFieldError(inp) {
+        if (!inp) return;
+        const box = errBoxFor(inp);
+        inp.classList.remove("has-error");
+        inp.removeAttribute("aria-invalid");
+        inp.removeAttribute("aria-describedby");
+        if (box) box.textContent = "";
+      }
+
       form.addEventListener("submit", function (event) {
         event.preventDefault();
 
@@ -122,28 +150,24 @@
 
         // Clear previous status + errors
         if (status) status.className = "form-status";
-        form.querySelectorAll(".form-input").forEach(function (inp) {
-          inp.classList.remove("has-error");
-          const errBox = inp.parentElement.querySelector("[data-error-for]");
-          if (errBox) errBox.textContent = "";
-        });
+        form.querySelectorAll(".form-input").forEach(clearFieldError);
 
         const errors = validate(values);
-        const keys = ["fullName", "company", "phone", "email", "product"];
-        let hasError = false;
-        keys.forEach(function (k) {
+        let firstBad = null;
+        FIELDS.forEach(function (k) {
           const inp = form.elements[k];
           if (!inp) return;
           if (errors[k]) {
-            inp.classList.add("has-error");
-            const errBox = inp.parentElement.querySelector("[data-error-for]");
-            if (errBox) errBox.textContent = errors[k];
-            hasError = true;
+            setFieldError(inp, errors[k]);
+            if (!firstBad) firstBad = inp;
           }
         });
 
-        if (hasError) {
+        if (firstBad) {
+          submitted = true;
           if (status) setStatus(status, "error", "Please correct the highlighted fields.");
+          firstBad.focus({ preventScroll: true });
+          firstBad.scrollIntoView({ behavior: "smooth", block: "center" });
           return;
         }
 
@@ -184,17 +208,46 @@
         });
       });
 
-      // clear per-field error on input
-      ["fullName", "company", "phone", "email", "product"].forEach(function (k) {
+      // Per-field error handling. Messages clear as the user types; after a failed
+      // submit they also re-validate live on blur, so corrections are confirmed.
+      FIELDS.forEach(function (k) {
         const inp = form.elements[k];
         if (!inp) return;
-        const clearError = function () {
-          inp.classList.remove("has-error");
-          const errBox = inp.parentElement.querySelector("[data-error-for]");
-          if (errBox) errBox.textContent = "";
-        };
-        inp.addEventListener("input", clearError);
-        inp.addEventListener("change", clearError);
+
+        inp.addEventListener("input", function () {
+          clearFieldError(inp);
+        });
+
+        inp.addEventListener("blur", function () {
+          if (!submitted) return;
+          const single = validate({
+            fullName: str(form.elements.fullName.value),
+            company: str(form.elements.company.value),
+            phone: str(form.elements.phone.value),
+            email: str(form.elements.email.value),
+            product: str(form.elements.product ? form.elements.product.value : ""),
+            productRequired: !!(form.elements.product && form.elements.product.required)
+          });
+          if (single[k]) {
+            setFieldError(inp, single[k]);
+          } else {
+            clearFieldError(inp);
+          }
+        });
+
+        inp.addEventListener("change", function () {
+          if (!submitted) return;
+          const single = validate({
+            fullName: str(form.elements.fullName.value),
+            company: str(form.elements.company.value),
+            phone: str(form.elements.phone.value),
+            email: str(form.elements.email.value),
+            product: str(form.elements.product ? form.elements.product.value : ""),
+            productRequired: !!(form.elements.product && form.elements.product.required)
+          });
+          if (single[k]) setFieldError(inp, single[k]);
+          else clearFieldError(inp);
+        });
       });
     });
   }

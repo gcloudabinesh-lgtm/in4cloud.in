@@ -170,16 +170,49 @@
     revealEls.forEach(function (el) { el.classList.add("is-visible"); });
   }
 
-  /* ---- Footer dropdown toggles (mobile) ---- */
+  /* ---- Footer dropdown toggles (mobile) ----
+     The <ul> is clipped with `max-height: 0; overflow: hidden` in the 720px
+     media query, so toggling `display` alone leaves it invisible. The reveal
+     is driven by `.open` on the column — see `.footer-col.open ul`.
+     The breakpoint below MUST stay in sync with that CSS query. */
+  var FOOTER_ACC_MAX = 720;
+
   document.querySelectorAll(".foot-trigger").forEach(function (trigger) {
+    var col = trigger.closest(".footer-col");
+    if (!col) return;
+
+    /* drop any stale inline display so the CSS is the single source of truth */
+    var list = trigger.nextElementSibling;
+    if (list) list.style.removeProperty("display");
+
+    function toggleCol() {
+      var isOpen = col.classList.toggle("open");
+      trigger.setAttribute("aria-expanded", String(isOpen));
+    }
+
     trigger.addEventListener("click", function () {
-      if (window.innerWidth > 860) return;
-      var expanded = trigger.getAttribute("aria-expanded") === "true";
-      trigger.setAttribute("aria-expanded", String(!expanded));
-      var list = trigger.nextElementSibling;
-      if (list) {
-        list.style.display = expanded ? "none" : "flex";
+      if (window.innerWidth > FOOTER_ACC_MAX) return;
+      toggleCol();
+    });
+
+    /* h4 is not a native button, so Enter/Space do not fire click on their own */
+    trigger.addEventListener("keydown", function (e) {
+      if (window.innerWidth > FOOTER_ACC_MAX) return;
+      if (e.key === "Enter" || e.key === " " || e.key === "Spacebar") {
+        e.preventDefault();
+        toggleCol();
       }
+    });
+  });
+
+  /* Collapse everything again when the viewport grows back to desktop, so a
+     column left open on a phone does not stay expanded on a tablet. */
+  window.addEventListener("resize", function () {
+    if (window.innerWidth <= FOOTER_ACC_MAX) return;
+    document.querySelectorAll(".footer-col.open").forEach(function (col) {
+      col.classList.remove("open");
+      var t = col.querySelector(".foot-trigger");
+      if (t) t.setAttribute("aria-expanded", "false");
     });
   });
 /* ---- Hero headline typewriter ----
