@@ -54,14 +54,68 @@ section[id], [id="modules"], [id="lead"], [id="features"] { scroll-margin-top: 9
 .hr-eco-index .hr-eco-item:hover { color: var(--purple-700); padding-left: 6px; }
 .hr-eco-index .hr-eco-item b { font-family: "Plus Jakarta Sans", sans-serif; color: var(--purple-300); font-size: 13px; min-width: 24px; }
 
-/* --- Section 4: sizes --- */
+/* --- Section 4: sizes ---
+   Each tier gets its own brand hue on a soft tint, so the three cards read as
+   distinct stages at a glance instead of three identical white boxes. The
+   ramp (green -> violet -> teal) is the same one the onboarding steps use, so
+   the page keeps a single colour language. Hues are set in CSS via nth-child
+   rather than inline styles, so hrms.html and the homepage stay in sync with
+   no markup on either page. */
 .hr-sizes { display: grid; grid-template-columns: 1fr 1.15fr 1.3fr; gap: 18px; align-items: end; }
-.hr-size { background: #fff; border: 1px solid var(--border); border-radius: var(--r-lg); padding: 22px 20px; box-shadow: var(--shadow-sm); }
-.hr-size:nth-child(2) { padding-block: 30px; }
-.hr-size:nth-child(3) { padding-block: 38px; border-color: var(--purple-200); box-shadow: var(--shadow-md); }
-.hr-size span { font-family: "Plus Jakarta Sans", sans-serif; font-weight: 800; color: var(--purple-600); font-size: 13px; letter-spacing: .1em; text-transform: uppercase; }
+
+.hr-size {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid color-mix(in srgb, var(--acc) 20%, transparent);
+  border-radius: var(--r-lg);
+  padding: 22px 20px;
+  background: linear-gradient(168deg, var(--acc-soft) 0%, #ffffff 64%);
+  box-shadow: var(--shadow-sm);
+  transition: transform .3s var(--ease), box-shadow .3s var(--ease), border-color .3s var(--ease);
+}
+
+/* accent bar across the top edge, fading off to the right */
+.hr-size::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 4px;
+  background: linear-gradient(90deg, var(--acc) 0%, color-mix(in srgb, var(--acc) 42%, #ffffff) 100%);
+}
+
+.hr-size:nth-child(1) { --acc: #378223; --acc-soft: #eaf7e3; }
+.hr-size:nth-child(2) { --acc: #7c3aed; --acc-soft: #f1edfe; padding-block: 30px; }
+.hr-size:nth-child(3) { --acc: #0e7490; --acc-soft: #e3f5f9; padding-block: 38px; box-shadow: var(--shadow-md); }
+
+/* hover lifts the card and tints its shadow with its own hue */
+.hr-size:hover {
+  transform: translateY(-4px);
+  border-color: color-mix(in srgb, var(--acc) 42%, transparent);
+  box-shadow: 0 2px 6px rgba(24, 22, 50, .04), 0 18px 40px color-mix(in srgb, var(--acc) 22%, transparent);
+}
+
+.hr-size span { font-family: "Plus Jakarta Sans", sans-serif; font-weight: 800; color: var(--acc); font-size: 13px; letter-spacing: .1em; text-transform: uppercase; }
 .hr-size h3 { font-size: 17px; margin: 10px 0 8px; }
 .hr-size p { font-size: 14px; color: var(--text-muted); margin: 0; }
+
+/* Centred CTA under the three size cards. Deliberately plain markup — the
+   button reuses the site-wide .btn-primary gradient, so only the block needs
+   styling here. Compact on purpose: a small supporting line plus a standard
+   (not .btn-lg) button, so it reads as an aside to the cards, not a
+   competing call to action. */
+.hr-sizes-cta {
+  margin-top: clamp(1.75rem, 3vw, 2.25rem);
+  margin-bottom: clamp(0.25rem, 1vw, 0.75rem);
+  text-align: center;
+}
+
+.hr-sizes-cta p {
+  max-width: 46ch;
+  margin: 0 auto clamp(1rem, 1.6vw, 1.125rem);
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--text-muted);
+}
 
 /* --- Section 5/6/12: dashboard moments --- */
 .hr-dash-moment { background: linear-gradient(160deg, #ece4ff, #fff 60%, #e9efff); border: 1px solid var(--purple-100); border-radius: var(--r-xl); padding: clamp(1.6rem, 3vw, 2.6rem); }
@@ -119,4 +173,13 @@ section[id], [id="modules"], [id="lead"], [id="features"] { scroll-margin-top: 9
   .hr-pipe-arrow { transform: rotate(90deg); justify-self: center; }
   .hr-callouts { grid-template-columns: 1fr; }
   .hr-pointers { grid-template-columns: 1fr; }
+
+  /* Tablet: the CTA stays centred and compact — an inline button is already
+     only as wide as its label, so no cap is needed here. */
+}
+
+@media (max-width: 640px) {
+  /* Phone: nearly full width, with the container's side padding as margins */
+  .hr-sizes-cta .btn { width: 100%; }
+  .hr-sizes-cta p { font-size: 14.5px; }
 }
