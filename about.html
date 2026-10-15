@@ -31,6 +31,7 @@
   <link rel="stylesheet" href="css/modules.css">
   <link rel="stylesheet" href="css/products.css">
   <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/about.css">
   <link rel="stylesheet" href="css/responsive.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
   <link rel="stylesheet" href="css/fa.css">
@@ -39,191 +40,233 @@
   <main id="main">
 
     <!-- ============ PAGE HERO ============ -->
-    <section class="page-hero" aria-labelledby="hero-title">
-      <div class="page-hero-bg">
-        <div class="container">
-          <nav class="breadcrumbs" aria-label="Breadcrumb">
-            <a href="index.html">Home</a><i class="ico fa-solid fa-chevron-right" aria-hidden="true"></i><span>About Us</span>
-          </nav>
-        </div>
+    <section class="page-hero ab-hero" aria-labelledby="hero-title">
+      <div class="hero-bg" aria-hidden="true">
+        <span class="hero-mgrid"></span>
+        <span class="hero-bg-sheen"></span>
+        <span class="hero-orb hero-orb--tr"></span>
+        <span class="hero-orb hero-orb--bl"></span>
+        <span class="hero-orb hero-orb--br"></span>
+        <span class="hero-mote hero-mote--a"></span>
+        <span class="hero-mote hero-mote--b"></span>
+        <span class="hero-mote hero-mote--c"></span>
       </div>
       <div class="container">
-        <div class="inner-hero" style="grid-template-columns:1fr">
-          <div class="inner-hero-copy" style="max-width:820px">
-            <h1 class="reveal" id="hero-title">Business Automation, Built on <span class="grad">Real-World Expertise</span></h1>
-            <p class="lead reveal" style="--rd:.08s">IN4 Solutions is the business automation division of In4 Solution Pvt Ltd. We turn deep experience in biometric attendance, access control and facility operations into connected cloud software teams use every day.</p>
-            <div class="inner-hero-ctas reveal" style="--rd:.14s">
-              <a class="btn btn-primary btn-lg" href="contact.html#lead">Book a Demo<i class="ico fa-solid fa-arrow-right" aria-hidden="true"></i></a>
-              <a class="btn btn-ghost btn-lg" href="index.html#products">Explore Products</a>
-            </div>
+        <div class="inner-hero" style="grid-template-columns:1fr;justify-items:center;text-align:center">
+          <div class="inner-hero-copy" style="max-width:880px">
+            <p class="hero-eyebrow reveal">About Us</p>
+            <h1 class="reveal" id="hero-title" style="--rd:.06s">Business Automation, Built on <span class="grad">Real-World Expertise</span></h1>
+            <p class="lead reveal" style="--rd:.12s">The business automation division of In4 Solution Pvt Ltd — turning 18 years of biometric and access control expertise into connected cloud software.</p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- ============ STATS ============ -->
-    <section class="section-sm">
+    <section class="ab-stats-section" aria-labelledby="stats-title">
       <div class="container">
-        <div class="stat-strip reveal">
-          <div class="stat-cell"><strong>18+</strong><span>Years of automation expertise</span></div>
-          <div class="stat-cell"><strong>3</strong><span>Business automation platforms</span></div>
-          <div class="stat-cell"><strong>1</strong><span>Trusted technology partner</span></div>
+        <h2 class="ab-stats-title" id="stats-title">Proven <span>at Scale</span></h2>
+        <div class="ab-stats reveal">
+          <div class="ab-stat-cell reveal">
+            <span class="ab-stat-cell-icon"><i class="ico fa-solid fa-fingerprint" aria-hidden="true"></i></span>
+            <span class="ab-stat-cell-num counter-num" data-count="18" data-suffix="+">18+</span>
+            <span class="ab-stat-cell-label">Years of automation expertise</span>
+          </div>
+
+          <div class="ab-stat-cell green reveal" style="--rd:.08s">
+            <span class="ab-stat-cell-icon green"><i class="ico fa-solid fa-layer-group" aria-hidden="true"></i></span>
+            <span class="ab-stat-cell-num green counter-num" data-count="3">3</span>
+            <span class="ab-stat-cell-label">Business automation platforms</span>
+          </div>
+
+          <div class="ab-stat-cell cyan reveal" style="--rd:.16s">
+            <span class="ab-stat-cell-icon cyan"><i class="ico fa-solid fa-handshake-angle" aria-hidden="true"></i></span>
+            <span class="ab-stat-cell-num cyan counter-num" data-count="1">1</span>
+            <span class="ab-stat-cell-label">Trusted technology partner</span>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- ============ STORY ============ -->
-    <section class="section" aria-labelledby="story-title">
+    <section class="section ab-story" aria-labelledby="story-title">
       <div class="container">
-        <div class="split">
+        <div class="split ab-story-split">
           <div class="split-copy reveal">
             <p class="eyebrow">Our Story</p>
-            <h2 class="section-title" id="story-title" style="margin-top:14px">From the floor to the cloud</h2>
-            <p style="margin-top:18px">We started where the data lives — on factory floors, reception desks and parking gates. Through years of biometric access systems, attendance devices and facility automation, we saw the same pattern everywhere: hardware worked, but the paperwork around it didn't.</p>
-            <p>IN4 Solutions was built to close that gap. Our software takes the physical signals your organization already generates — attendance punches, visitor visits, vehicle movements — and turns them into clean, accurate, connected digital operations.</p>
-            <ul class="info-list">
-              <li><span class="icon-badge soft-purple"><i class="ico fa-solid fa-building" aria-hidden="true"></i></span><div><strong>Business Automation Division</strong><p>Part of In4 Solution Pvt Ltd with two decades of on-ground implementation experience.</p></div></li>
-              <li><span class="icon-badge soft-green"><i class="ico fa-solid fa-diagram-project" aria-hidden="true"></i></span><div><strong>One Connected Ecosystem</strong><p>Workforce, visitor and parking operations managed through a single partner.</p></div></li>
-              <li><span class="icon-badge soft-purple"><i class="ico fa-solid fa-bolt" aria-hidden="true"></i></span><div><strong>Built Around Physical Operations</strong><p>Every product accounts for sites, shifts, security desks and facility realities.</p></div></li>
+            <h2 class="section-title" id="story-title">From the floor <em>to the cloud</em></h2>
+            <p class="ab-story-lead">We started where the data lives — factory floors, reception desks and parking gates. Hardware worked, but the paperwork around it didn't. IN4 Solutions closes that gap by turning the signals your site already generates — attendance punches, visitor visits, vehicle movements — into clean, connected digital operations.</p>
+            <ul class="info-list ab-story-list">
+              <li>
+                <span class="ab-badge purple"><i class="ico fa-solid fa-building" aria-hidden="true"></i></span>
+                <div><strong>Business Automation Division</strong><p>Part of In4 Solution Pvt Ltd with two decades of on-ground implementation experience.</p></div>
+              </li>
+              <li>
+                <span class="ab-badge green"><i class="ico fa-solid fa-diagram-project" aria-hidden="true"></i></span>
+                <div><strong>One Connected Ecosystem</strong><p>Workforce, visitor and parking operations managed through a single partner.</p></div>
+              </li>
+              <li>
+                <span class="ab-badge teal"><i class="ico fa-solid fa-bolt" aria-hidden="true"></i></span>
+                <div><strong>Built Around Physical Operations</strong><p>Every product accounts for sites, shifts, security desks and facility realities.</p></div>
+              </li>
             </ul>
           </div>
-          <div class="reveal" style="--rd:.1s">
-            <img src="assets/our story.png" alt="Our Story" style="width:100%;border-radius:12px;box-shadow:0 8px 32px rgba(0,0,0,0.12);animation:floatY 6s ease-in-out infinite;" />
-          </div>
+
+          <figure class="ab-story-media reveal reveal-right" style="--rd:.1s">
+            <span class="ab-story-ring" aria-hidden="true"></span>
+            <img src="assets/our story.png" alt="IN4 Solutions story — biometric attendance and access control on a factory floor" loading="lazy" />
+            <figcaption>Biometric attendance and access control on the factory floor — where IN4 began.</figcaption>
+          </figure>
         </div>
       </div>
     </section>
 
-    <!-- ============ PRODUCTS ============ -->
-    <section class="section section-alt" id="products" aria-labelledby="products-title">
+    <!-- ============ WHO WE ARE · 18+ · MISSION & VISION ============ -->
+    <section class="ab-section" aria-labelledby="who-title">
+      <div class="container">
+        <div class="ab-grid">
+
+          <div class="ab-copy reveal">
+            <p class="eyebrow">Who We Are</p>
+            <h2 id="who-title">18+ Years of Trust in <span class="ab-hl">Biometric Innovation</span></h2>
+            <p>For over 18 years, In4 Solution Pvt Ltd has been at the forefront of biometric attendance automation and workforce authentication — building deep expertise in attendance, access control and workforce management.</p>
+            <p>On that foundation we introduced the In4 Cloud Suite: a scalable family of cloud solutions that digitizes HRMS, Visitor Management, Canteen, CRM and Billing — improving accuracy, security, efficiency and workforce visibility through one connected digital ecosystem.</p>
+          </div>
+
+          <div class="ab-visual reveal" style="--rd:.12s">
+            <div class="ab-stat">
+              <span class="ab-stat-num counter-num" data-count="18" data-suffix="+">18+</span>
+              <span class="ab-stat-label">Years of Biometric Innovation</span>
+              <span class="ab-stat-line" aria-hidden="true"></span>
+              <span class="ab-stat-micro">From attendance hardware to connected cloud platforms.</span>
+            </div>
+
+            <!-- Empty image slot. Add the file at the src below and the frame
+                 fills automatically; until then the empty placeholder shows. -->
+            <figure class="ab-photo">
+              <span class="ab-photo-ring" aria-hidden="true"></span>
+              <img src="assets/about-us-team.jpg" alt="IN4 Solutions team and biometric attendance deployments" loading="lazy" />
+              <span class="ab-photo-empty" aria-hidden="true"><i class="ico fa-regular fa-image" aria-hidden="true"></i></span>
+            </figure>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ MISSION & VISION ============ -->
+    <section class="ab-mv" aria-labelledby="mission-title">
+      <div class="container">
+        <div class="ab-mv-grid">
+
+          <article class="ab-pane mission reveal">
+            <span class="ab-deco" aria-hidden="true">“</span>
+            <span class="ab-pane-icon"><span class="ab-pane-icon-inner"><i class="ico fa-solid fa-bullseye" aria-hidden="true"></i></span></span>
+            <p class="eyebrow">Our Mission</p>
+            <h3 id="mission-title">Simplifying Workforce Management Through Smart Technology</h3>
+            <p>At In4 Solution Pvt Ltd, our mission is to simplify workforce management through secure, intelligent and customizable attendance and access-control solutions — improving productivity, streamlining operations and maintaining safer workplaces through reliable technology designed around real-world business requirements.</p>
+          </article>
+
+          <article class="ab-pane vision reveal" style="--rd:.1s">
+            <span class="ab-deco" aria-hidden="true">“</span>
+            <span class="ab-pane-icon"><span class="ab-pane-icon-inner"><i class="ico fa-solid fa-eye" aria-hidden="true"></i></span></span>
+            <p class="eyebrow">Our Vision</p>
+            <h3>Building a Smarter, Safer and More Connected Workplace</h3>
+            <p>We envision a future where organizations of every size and industry can access intelligent solutions that make workforce management seamless, transparent and secure — leading this transformation through continuous innovation, trust and technology.</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+<!-- ============ PLATFORM MODULES (mirrors the home page module list) ============ -->
+    <section class="section section-alt ab-modules-section" id="products" aria-labelledby="products-title">
       <div class="container">
         <div class="section-head center reveal">
           <p class="eyebrow">Platform Modules</p>
-          <h2 class="section-title" id="products-title">One Platform. Every Workplace Need.</h2>
-          <p class="section-lead">Click any module to explore its capabilities and see it in action.</p>
+          <h2 class="section-title" id="products-title">One Platform. <em class="ab-dual">Every Workplace Need.</em></h2>
+          <p class="section-lead">Eleven connected modules covering attendance, HR, payroll, workplace and talent.</p>
         </div>
-        <div class="product-grid">
-          <article class="product-card reveal">
-            <span class="icon-badge purple"><i class="ico fa-solid fa-cloud" aria-hidden="true"></i></span>
-            <span class="prod-eyebrow">HRMS — Cloud HR &amp; Payroll</span>
-            <h3>IN4 HRMS</h3>
-            <p>Complete employee management, attendance, leave and payroll in one connected cloud suite.</p>
-            <ul class="prod-list">
-              <li><i class="ico fa-solid fa-check" aria-hidden="true"></i><span>Employee Management</span></li>
-              <li><i class="ico fa-solid fa-check" aria-hidden="true"></i><span>Attendance Management</span></li>
-              <li><i class="ico fa-solid fa-check" aria-hidden="true"></i><span>Leave Management</span></li>
-              <li><i class="ico fa-solid fa-check" aria-hidden="true"></i><span>Payroll Processing</span></li>
-              <li><i class="ico fa-solid fa-check" aria-hidden="true"></i><span>Employee Self-Service</span></li>
-              <li><i class="ico fa-solid fa-check" aria-hidden="true"></i><span>Reports &amp; Analytics</span></li>
-            </ul>
-            <a class="btn btn-primary btn-block prod-cta" href="hrms.html">Explore HRMS<i class="ico fa-solid fa-arrow-right" aria-hidden="true"></i></a>
-          </article>
-          <article class="product-card green reveal" style="--rd:.08s">
-            <span class="icon-badge green"><i class="ico fa-solid fa-user-check" aria-hidden="true"></i></span>
-            <span class="prod-eyebrow">Workplace Module</span>
-            <h3>Visitor Management</h3>
-            <p>Digitize visitor entry, approvals and security management with a cloud-based system.</p>
-            <ul class="prod-list">
-              <li><i class="ico fa-solid fa-check" aria-hidden="true"></i><span>Visitor Registration</span></li>
-              <li><i class="ico fa-solid fa-check" aria-hidden="true"></i><span>Digital Check-in</span></li>
-              <li><i class="ico fa-solid fa-check" aria-hidden="true"></i><span>Host Notification</span></li>
-              <li><i class="ico fa-solid fa-check" aria-hidden="true"></i><span>Visitor Tracking</span></li>
-              <li><i class="ico fa-solid fa-check" aria-hidden="true"></i><span>Security Management</span></li>
-              <li><i class="ico fa-solid fa-check" aria-hidden="true"></i><span>Reports</span></li>
-            </ul>
-            <a class="btn btn-primary btn-block prod-cta" href="visitor-management.html">Explore Visitor Mgmt<i class="ico fa-solid fa-arrow-right" aria-hidden="true"></i></a>
-          </article>
-          <article class="product-card mixed reveal" style="--rd:.16s">
-            <span class="icon-badge soft-purple"><i class="ico fa-solid fa-square-parking" aria-hidden="true"></i></span>
-            <span class="prod-eyebrow">Workplace Module</span>
-            <h3>Parking Management</h3>
-            <p>Smart parking software for organized vehicle management and real-time monitoring.</p>
-            <ul class="prod-list">
-              <li><i class="ico fa-solid fa-check" aria-hidden="true"></i><span>Vehicle Registration</span></li>
-              <li><i class="ico fa-solid fa-check" aria-hidden="true"></i><span>Parking Allocation</span></li>
-              <li><i class="ico fa-solid fa-check" aria-hidden="true"></i><span>Entry &amp; Exit Tracking</span></li>
-              <li><i class="ico fa-solid fa-check" aria-hidden="true"></i><span>Digital Records</span></li>
-              <li><i class="ico fa-solid fa-check" aria-hidden="true"></i><span>Monitoring Dashboard</span></li>
-              <li><i class="ico fa-solid fa-check" aria-hidden="true"></i><span>Reports</span></li>
-            </ul>
-            <a class="btn btn-primary btn-block prod-cta" href="parking-management.html">Explore Parking<i class="ico fa-solid fa-arrow-right" aria-hidden="true"></i></a>
-          </article>
-          <article class="product-card green reveal" style="--rd:.24s">
-            <span class="icon-badge green"><i class="ico fa-solid fa-utensils" aria-hidden="true"></i></span>
-            <span class="prod-eyebrow">Workplace Module</span>
-            <h3>Canteen Management</h3>
-            <p>Digital canteen ordering, tracking and billing for a seamless employee dining experience.</p>
-            <ul class="prod-list">
-              <li><i class="ico fa-solid fa-check" aria-hidden="true"></i><span>Digital Ordering</span></li>
-              <li><i class="ico fa-solid fa-check" aria-hidden="true"></i><span>Menu Management</span></li>
-              <li><i class="ico fa-solid fa-check" aria-hidden="true"></i><span>Automated Billing</span></li>
-              <li><i class="ico fa-solid fa-check" aria-hidden="true"></i><span>Inventory Tracking</span></li>
-              <li><i class="ico fa-solid fa-check" aria-hidden="true"></i><span>Subsidy Management</span></li>
-              <li><i class="ico fa-solid fa-check" aria-hidden="true"></i><span>Reports &amp; Analytics</span></li>
-            </ul>
-            <a class="btn btn-primary btn-block prod-cta" href="canteen-management.html">Explore Canteen<i class="ico fa-solid fa-arrow-right" aria-hidden="true"></i></a>
-          </article>
-          <article class="product-card green reveal" style="--rd:.24s">
-            <span class="icon-badge green"><i class="ico fa-solid fa-camera-retro" aria-hidden="true"></i></span>
-            <span class="prod-eyebrow">Workplace Module</span>
-            <h3>AI Attendance</h3>
-            <p>AI-based camera attendance tracking with real-time dashboards and HR integration.</p>
-            <ul class="prod-list">
-              <li><i class="ico fa-solid fa-check" aria-hidden="true"></i><span>Face Recognition</span></li>
-              <li><i class="ico fa-solid fa-check" aria-hidden="true"></i><span>Real-Time Tracking</span></li>
-              <li><i class="ico fa-solid fa-check" aria-hidden="true"></i><span>Multi-Site Support</span></li>
-              <li><i class="ico fa-solid fa-check" aria-hidden="true"></i><span>HR Integration</span></li>
-              <li><i class="ico fa-solid fa-check" aria-hidden="true"></i><span>Anomaly Alerts</span></li>
-              <li><i class="ico fa-solid fa-check" aria-hidden="true"></i><span>Reports</span></li>
-            </ul>
-            <a class="btn btn-primary btn-block prod-cta" href="attendance-management.html">Explore Attendance<i class="ico fa-solid fa-arrow-right" aria-hidden="true"></i></a>
-          </article>
-          <article class="product-card mixed reveal" style="--rd:.36s">
-            <span class="icon-badge soft-purple"><i class="ico fa-solid fa-video" aria-hidden="true"></i></span>
-            <span class="prod-eyebrow">Analytics Module</span>
-            <h3>AI-Based Video Analytics</h3>
-            <p>Transform existing surveillance into real-time intelligence with AI-powered video analytics.</p>
-            <ul class="prod-list">
-              <li><i class="ico fa-solid fa-check" aria-hidden="true"></i><span>Facial Recognition</span></li>
-              <li><i class="ico fa-solid fa-check" aria-hidden="true"></i><span>PPE Detection</span></li>
-              <li><i class="ico fa-solid fa-check" aria-hidden="true"></i><span>Vehicle Counting</span></li>
-              <li><i class="ico fa-solid fa-check" aria-hidden="true"></i><span>People Counting</span></li>
-              <li><i class="ico fa-solid fa-check" aria-hidden="true"></i><span>Object &amp; Animal Detection</span></li>
-              <li><i class="ico fa-solid fa-check" aria-hidden="true"></i><span>Unauthorized Access Alerts</span></li>
-            </ul>
-            <a class="btn btn-primary btn-block prod-cta" href="ai-video-analytics.html">Explore Video Analytics<i class="ico fa-solid fa-arrow-right" aria-hidden="true"></i></a>
-          </article>
-          <article class="product-card green reveal" style="--rd:.4s">
-            <span class="icon-badge green"><i class="ico fa-solid fa-location-dot" aria-hidden="true"></i></span>
-            <span class="prod-eyebrow">Attendance Module</span>
-            <h3>Geo Fencing</h3>
-            <p>Location-based attendance and check-ins for accurate, tamper-proof time tracking.</p>
-            <ul class="prod-list">
-              <li><i class="ico fa-solid fa-check" aria-hidden="true"></i><span>Location Check-ins</span></li>
-              <li><i class="ico fa-solid fa-check" aria-hidden="true"></i><span>Geo-boundary Setup</span></li>
-              <li><i class="ico fa-solid fa-check" aria-hidden="true"></i><span>Field Staff Tracking</span></li>
-              <li><i class="ico fa-solid fa-check" aria-hidden="true"></i><span>Live Attendance Map</span></li>
-              <li><i class="ico fa-solid fa-check" aria-hidden="true"></i><span>Tamper-proof Punches</span></li>
-              <li><i class="ico fa-solid fa-check" aria-hidden="true"></i><span>Location Reports</span></li>
-            </ul>
-            <a class="btn btn-primary btn-block prod-cta" href="geo-fencing.html">Explore Geo Fencing<i class="ico fa-solid fa-arrow-right" aria-hidden="true"></i></a>
-          </article>
-          <article class="product-card mixed reveal" style="--rd:.48s">
-            <span class="icon-badge soft-purple"><i class="ico fa-solid fa-arrow-trend-up" aria-hidden="true"></i></span>
-            <span class="prod-eyebrow">HRMS Module</span>
-            <h3>Performance Management</h3>
-            <p>Goal tracking, reviews and appraisals to build a high-performance culture.</p>
-            <ul class="prod-list">
-              <li><i class="ico fa-solid fa-check" aria-hidden="true"></i><span>Goal Setting (OKRs/KPIs)</span></li>
-              <li><i class="ico fa-solid fa-check" aria-hidden="true"></i><span>360° Reviews</span></li>
-              <li><i class="ico fa-solid fa-check" aria-hidden="true"></i><span>Appraisal Workflows</span></li>
-              <li><i class="ico fa-solid fa-check" aria-hidden="true"></i><span>Skill Matrix</span></li>
-              <li><i class="ico fa-solid fa-check" aria-hidden="true"></i><span>Feedback &amp; Recognition</span></li>
-              <li><i class="ico fa-solid fa-check" aria-hidden="true"></i><span>Performance Reports</span></li>
-            </ul>
-            <a class="btn btn-primary btn-block prod-cta" href="performance-management.html">Explore Performance<i class="ico fa-solid fa-arrow-right" aria-hidden="true"></i></a>
-          </article>
-        </div>
+
+        <ul class="ab-modules-grid">
+          <li class="reveal" style="--acc:#8B5CF6;--acc-soft:#F5F3FF">
+            <a href="attendance-management.html">
+              <span class="ab-mod-ico"><i class="ico fa-solid fa-clock-rotate-left" aria-hidden="true"></i></span>
+              <span class="ab-mod-name">Time &amp; Attendance</span>
+              <span class="ab-mod-sub">Attendance Module</span>
+            </a>
+          </li>
+          <li class="reveal" style="--rd:.05s;--acc:#6C35FF;--acc-soft:#F3EEFF">
+            <a href="hrms.html">
+              <span class="ab-mod-ico"><i class="ico fa-solid fa-sitemap" aria-hidden="true"></i></span>
+              <span class="ab-mod-name">Core HR &amp; HRIS</span>
+              <span class="ab-mod-sub">Core HR Module</span>
+            </a>
+          </li>
+          <li class="reveal" style="--rd:.1s;--acc:#4B20C8;--acc-soft:#F1EDFF">
+            <a href="hrms.html">
+              <span class="ab-mod-ico"><i class="ico fa-solid fa-file-invoice-dollar" aria-hidden="true"></i></span>
+              <span class="ab-mod-name">Payroll &amp; Compliance</span>
+              <span class="ab-mod-sub">Payroll Module</span>
+            </a>
+          </li>
+          <li class="reveal" style="--rd:.15s;--acc:#F59E0B;--acc-soft:#FEF6E7">
+            <a href="canteen-management.html">
+              <span class="ab-mod-ico"><i class="ico fa-solid fa-utensils" aria-hidden="true"></i></span>
+              <span class="ab-mod-name">Canteen Management</span>
+              <span class="ab-mod-sub">Workplace Module</span>
+            </a>
+          </li>
+          <li class="reveal" style="--rd:.2s;--acc:#EC4899;--acc-soft:#FDF2F8">
+            <a href="visitor-management.html">
+              <span class="ab-mod-ico"><i class="ico fa-solid fa-user-check" aria-hidden="true"></i></span>
+              <span class="ab-mod-name">Visitor Management</span>
+              <span class="ab-mod-sub">Workplace Module</span>
+            </a>
+          </li>
+          <li class="reveal" style="--rd:.25s;--acc:#22C7D6;--acc-soft:#ECFCFE">
+            <a href="parking-management.html">
+              <span class="ab-mod-ico"><i class="ico fa-solid fa-square-parking" aria-hidden="true"></i></span>
+              <span class="ab-mod-name">Parking Management</span>
+              <span class="ab-mod-sub">Workplace Module</span>
+            </a>
+          </li>
+          <li class="reveal" style="--rd:.3s;--acc:#3B82F6;--acc-soft:#EFF5FF">
+            <a href="ai-video-analytics.html">
+              <span class="ab-mod-ico"><i class="ico fa-solid fa-video" aria-hidden="true"></i></span>
+              <span class="ab-mod-name">AI Analytics</span>
+              <span class="ab-mod-sub">Analytics Module</span>
+            </a>
+          </li>
+          <li class="reveal" style="--rd:.35s;--acc:#14B8A6;--acc-soft:#E7F9F5">
+            <a href="contact.html#lead">
+              <span class="ab-mod-ico"><i class="ico fa-solid fa-user-plus" aria-hidden="true"></i></span>
+              <span class="ab-mod-name">Recruitment</span>
+              <span class="ab-mod-sub">Talent Module</span>
+            </a>
+          </li>
+          <li class="reveal" style="--rd:.4s;--acc:#6DBE45;--acc-soft:#F1F9EC">
+            <a href="performance-management.html">
+              <span class="ab-mod-ico"><i class="ico fa-solid fa-arrow-trend-up" aria-hidden="true"></i></span>
+              <span class="ab-mod-name">Performance Management</span>
+              <span class="ab-mod-sub">Talent Module</span>
+            </a>
+          </li>
+          <li class="reveal" style="--rd:.45s;--acc:#F97316;--acc-soft:#FFF1E8">
+            <a href="contact.html#lead">
+              <span class="ab-mod-ico"><i class="ico fa-solid fa-graduation-cap" aria-hidden="true"></i></span>
+              <span class="ab-mod-name">Training &amp; Learning</span>
+              <span class="ab-mod-sub">Talent Module</span>
+            </a>
+          </li>
+          <li class="reveal" style="--rd:.5s;--acc:#0EA5E9;--acc-soft:#E8F6FE">
+            <a href="geo-fencing.html">
+              <span class="ab-mod-ico"><i class="ico fa-solid fa-location-dot" aria-hidden="true"></i></span>
+              <span class="ab-mod-name">Geo Fencing</span>
+              <span class="ab-mod-sub">Attendance Module</span>
+            </a>
+          </li>
+        </ul>
       </div>
     </section>
 

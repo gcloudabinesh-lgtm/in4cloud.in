@@ -97,12 +97,31 @@
     });
   });
 
+  /* ---- Empty image slots -------------------------------------------------
+     A <figure> whose <img> is missing gets .is-empty, which reveals the styled
+     placeholder instead of a broken image icon. The check on attach matters:
+     a missing file can fail before this deferred script runs, so its error
+     event would already have been dispatched and never heard. */
+  document.querySelectorAll("figure img").forEach(function (img) {
+    var slot = img.closest("figure");
+    if (!slot) return;
+    var markEmpty = function () { slot.classList.add("is-empty"); };
+    img.addEventListener("error", markEmpty);
+    if (img.complete && img.naturalWidth === 0) markEmpty();
+  });
+
   /* ---- Animated counters ---- */
   function animateCount(el) {
     var target = parseInt(el.getAttribute("data-count"), 10);
     var suffix = el.getAttribute("data-suffix") || "";
     var duration = 1800;
     var start = null;
+
+    // Users who ask for reduced motion get the final value immediately.
+    if (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      el.textContent = target + suffix;
+      return;
+    }
 
     function step(ts) {
       if (!start) start = ts;
