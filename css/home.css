@@ -42,7 +42,7 @@
 .marquee-track {
   display: flex;
   width: max-content;
-  animation: marquee-scroll 45s linear infinite;
+  animation: marquee-scroll 34s linear infinite;
 }
 
 .marquee:hover .marquee-track {
@@ -52,8 +52,8 @@
 .marquee-group {
   display: flex;
   align-items: center;
-  gap: 88px;
-  padding-right: 88px;
+  gap: 64px;
+  padding-right: 64px;
 }
 
 /* Every logo file is normalised onto the same 4:1 transparent canvas, so one

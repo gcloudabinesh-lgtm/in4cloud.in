@@ -15,7 +15,8 @@
 .at-stage { text-align: center; padding: 0 6px; position: relative; }
 .at-stage .num { width: 48px; height: 48px; margin: 0 auto 14px; border-radius: 50%; background: #fff; border: 2px solid var(--purple-300); color: var(--purple-600); display: grid; place-items: center; font-family: "Plus Jakarta Sans", sans-serif; font-weight: 800; font-size: 15px; position: relative; z-index: 1; transition: background .25s var(--ease), color .25s var(--ease); }
 .at-stage:hover .num { background: var(--grad-purple); color: #fff; border-color: transparent; }
-.at-stage .icon-badge { margin: 0 auto 10px; background: var(--purple-50); color: var(--purple-600); }
+.at-stage .icon-badge { margin: 0 auto 10px; width: 46px; height: 46px; border-radius: 13px; background: var(--purple-50); color: var(--purple-600); }
+.at-stage .icon-badge .ico { width: 19px; height: 19px; font-size: 19px; line-height: 1; }
 .at-stage h3 { font-size: 15px; margin-bottom: 6px; }
 .at-stage p { font-size: 13.5px; color: var(--text-muted); }
 
