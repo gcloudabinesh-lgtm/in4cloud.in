@@ -744,23 +744,43 @@
 /* ---- Product UI mockup (decorative, drawn in CSS) ---- */
 .mod-visual { min-width: 0; }
 
-/* Real product screenshot variant (Core HR & HRIS panel). No copy column,
-   so the panel stacks and the shot gets the full panel width — that is what
-   keeps the dashboard text large enough to read. */
+/* Real product screenshot variant (Core HR & HRIS panel). --nav-h (published
+   from script) is the module selector's own height, so this card matches the
+   menu beside it. The screenshot runs full width in its natural aspect — the
+   biggest, uncropped view of the dashboard — and scrolls inside its own frame
+   when it is taller than the space that is left. The caption row underneath
+   is a normal footer: always visible, never an overlay, splits 70/30. */
 .mod-panel--shot {
-  grid-template-columns: 1fr;
-  gap: 1.25rem;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: minmax(0, 1fr) auto;
+  align-items: stretch;
+  align-content: stretch;
+  height: var(--nav-h, auto);
+  min-height: var(--nav-h, auto);
+  gap: clamp(0.9rem, 1.4vw, 1.25rem);
 }
 
-.mod-panel--shot .mod-panel-copy {
-  justify-self: start;
+/* 70% copy, 30% action */
+.mod-shot-foot {
+  display: grid;
+  grid-template-columns: 7fr 3fr;
+  align-items: center;
+  gap: 0.5rem 1.5rem;
 }
 
-.mod-panel--shot .mod-cta { margin-top: 0; }
+.mod-shot-foot p {
+  margin: 0;
+}
+
+.mod-shot-foot .btn {
+  justify-self: end;
+  text-align: center;
+}
 
 .mod-visual--shot {
   position: relative;
   margin: 0;
+  min-height: 0;
   display: flex;
   flex-direction: column;
   background: #ffffff;
@@ -770,10 +790,47 @@
   overflow: hidden;
 }
 
+.mod-visual--shot .shot-scroll {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+  scrollbar-color: #cbd5e1 transparent;
+}
+
+.mod-visual--shot .shot-scroll::-webkit-scrollbar { width: 8px; }
+.mod-visual--shot .shot-scroll::-webkit-scrollbar-track { background: transparent; }
+.mod-visual--shot .shot-scroll::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 999px; }
+.mod-visual--shot .shot-scroll::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+
+.mod-visual--shot .shot-scroll:focus-visible {
+  outline: 2px solid var(--acc, #6C35FF);
+  outline-offset: -2px;
+}
+
 .mod-visual--shot img {
   display: block;
   width: 100%;
-  height: auto;
+  height: auto;                     /* full width, natural aspect, no cropping */
+}
+
+/* Narrow screens: the selector is a horizontal scroller, so there is no menu
+   height to match — the card grows freely, the shot stops scrolling and the
+   copy stacks above a start-aligned button. */
+@media (max-width: 860px) {
+  .mod-panel--shot {
+    grid-template-rows: auto auto;
+    height: auto;
+    min-height: 0;
+  }
+
+  .mod-visual--shot .shot-scroll { overflow-y: visible; }
+
+  .mod-shot-foot { grid-template-columns: 1fr; }
+
+  .mod-shot-foot .btn { justify-self: start; }
 }
 
 .mod-visual--shot .shot-bar {
