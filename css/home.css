@@ -744,8 +744,22 @@
 /* ---- Product UI mockup (decorative, drawn in CSS) ---- */
 .mod-visual { min-width: 0; }
 
-/* Real product screenshot variant (used by the Core HR & HRIS panel) */
+/* Real product screenshot variant (Core HR & HRIS panel). No copy column,
+   so the panel stacks and the shot gets the full panel width — that is what
+   keeps the dashboard text large enough to read. */
+.mod-panel--shot {
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+.mod-panel--shot .mod-panel-copy {
+  justify-self: start;
+}
+
+.mod-panel--shot .mod-cta { margin-top: 0; }
+
 .mod-visual--shot {
+  position: relative;
   margin: 0;
   display: flex;
   flex-direction: column;
