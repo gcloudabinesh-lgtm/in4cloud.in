@@ -30,23 +30,18 @@
   <link rel="stylesheet" href="css/footer.css">
   <link rel="stylesheet" href="css/modules.css">
   <link rel="stylesheet" href="css/products.css">
+<link rel="stylesheet" href="css/canteen-management.css">
   <link rel="stylesheet" href="css/animations.css">
   <link rel="stylesheet" href="css/responsive.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
   <link rel="stylesheet" href="css/fa.css">
+<link rel="stylesheet" href="css/demo-modal.css">
 </head>
 <body class="page-canteen">
 <main id="main">
 
     <!-- ============ PAGE HERO ============ -->
     <section class="page-hero" aria-labelledby="hero-title">
-      <div class="page-hero-bg">
-        <div class="container">
-          <nav class="breadcrumbs" aria-label="Breadcrumb">
-            <a href="index.html">Home</a><i class="ico fa-solid fa-chevron-right" aria-hidden="true"></i><span>Canteen Management</span>
-          </nav>
-        </div>
-      </div>
       <div class="container">
         <div class="inner-hero">
           <div class="inner-hero-copy">
@@ -54,7 +49,7 @@
             <h1 class="reveal" id="hero-title">Smart Canteen Management for <span class="grad-green">Modern Workplaces</span></h1>
             <p class="lead reveal" style="--rd:.08s">Digitize canteen ordering, tracking and billing — from menu to payment in one seamless system.</p>
             <div class="inner-hero-ctas reveal" style="--rd:.14s">
-              <a class="btn btn-green btn-lg" href="#lead">Request Canteen Demo<i class="ico fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+              <a class="btn btn-primary btn-lg" href="#lead">Request Demo<i class="ico fa-solid fa-arrow-right" aria-hidden="true"></i></a>
               <a class="btn btn-ghost btn-lg" href="#features">See How It Helps</a>
             </div>
             <ul class="inner-hero-trust reveal" style="--rd:.2s">
@@ -107,7 +102,7 @@
       <div class="container">
         <div class="section-head center reveal">
           <p class="eyebrow">Features</p>
-          <h2 class="section-title" id="features-title">Everything your canteen needs, digitized</h2>
+          <h2 class="section-title" id="features-title">Everything your canteen needs, <em class="ct-dual">digitized</em></h2>
           <p class="section-lead">From ordering to billing — a complete canteen management system for your workplace.</p>
         </div>
         <div class="solution-grid">
@@ -126,7 +121,7 @@
       <div class="container">
         <div class="section-head center reveal">
           <p class="eyebrow">How It Works</p>
-          <h2 class="section-title" id="how-title">From order to serving in four steps</h2>
+          <h2 class="section-title" id="how-title">From order to serving in <em class="ct-dual">four steps</em></h2>
           <p class="section-lead">A streamlined canteen workflow that saves time for everyone.</p>
         </div>
         <div class="process-grid">
@@ -146,7 +141,7 @@
       <div class="container">
         <div class="section-head center reveal">
           <p class="eyebrow">Use Cases</p>
-          <h2 class="section-title" id="usecases-title">Where Canteen Management Fits</h2>
+          <h2 class="section-title" id="usecases-title">Where Canteen Management <em class="ct-dual">Fits</em></h2>
           <p class="section-lead">Any workplace canteen that wants to go digital.</p>
         </div>
         <div class="use-case-grid">
@@ -169,10 +164,10 @@
               <p class="eyebrow" style="color:#D7F2C6">Book a demo</p>
               <h2 id="lead-title">Request a Canteen Management Demo</h2>
               <p>Tell us about your canteen setup and we'll show you how ordering, billing and inventory can go fully digital.</p>
-              <ul style="margin-top:28px;display:flex;flex-direction:column;gap:12px;color:rgba(255,255,255,.9);font-size:15px;list-style:none">
-                <li><i class="ico fa-solid fa-circle-check" style="color:#D7F2C6" aria-hidden="true"></i> Live demo for canteen &amp; facility teams</li>
-                <li><i class="ico fa-solid fa-circle-check" style="color:#D7F2C6" aria-hidden="true"></i> Mobile ordering &amp; kiosk options</li>
-                <li><i class="ico fa-solid fa-circle-check" style="color:#D7F2C6" aria-hidden="true"></i> Guidance on deployment &amp; pricing</li>
+              <ul class="lead-list">
+                <li><i class="ico fa-solid fa-circle-check" aria-hidden="true"></i> Live demo for canteen &amp; facility teams</li>
+                <li><i class="ico fa-solid fa-circle-check" aria-hidden="true"></i> Mobile ordering &amp; kiosk options</li>
+                <li><i class="ico fa-solid fa-circle-check" aria-hidden="true"></i> Guidance on deployment &amp; pricing</li>
               </ul>
             </div>
             <div class="lead-card reveal" style="--rd:.1s">
@@ -182,12 +177,12 @@
                 <input type="hidden" name="pageSource" value="Canteen Management — Request Demo">
                 <input type="hidden" name="product" value="Canteen Management System">
                 <div class="form-grid">
-                  <div class="form-field span-2">
+                  <div class="form-field">
                     <label for="cm-fullName">Name <span class="req">*</span></label>
                     <input class="form-input" id="cm-fullName" name="fullName" type="text" autocomplete="name" placeholder="e.g. Meera Iyer" required>
                     <span class="form-error" data-error-for="fullName" role="alert"></span>
                   </div>
-                  <div class="form-field span-2">
+                  <div class="form-field">
                     <label for="cm-company">Company <span class="req">*</span></label>
                     <input class="form-input" id="cm-company" name="company" type="text" autocomplete="organization" placeholder="e.g. Acme Corp" required>
                     <span class="form-error" data-error-for="company" role="alert"></span>
@@ -207,7 +202,7 @@
                     <textarea class="form-input" id="cm-requirement" name="message" placeholder="e.g. 500 meals/day, 2 canteen counters, need mobile ordering…"></textarea>
                   </div>
                 </div>
-                <button type="submit" class="btn btn-green btn-lg btn-block" data-submit style="margin-top:22px">Request Canteen Demo<i class="ico fa-solid fa-arrow-right" aria-hidden="true"></i></button>
+                <button type="submit" class="btn btn-primary btn-lg btn-block" data-submit style="margin-top:22px">Request Demo<i class="ico fa-solid fa-arrow-right" aria-hidden="true"></i></button>
                 <div class="form-status" data-lead-status aria-live="polite"></div>
                 <p class="form-note"><i class="ico fa-solid fa-circle-check" aria-hidden="true"></i><span>We respect your privacy. Your details will only be used to respond to your enquiry.</span></p>
               </form>
@@ -226,7 +221,7 @@
             <p>See a live demo of digital ordering, billing and inventory management.</p>
           </div>
           <div class="cta-actions">
-            <a class="btn btn-green" href="#lead">Request Canteen Demo<i class="ico fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            <a class="btn btn-primary" href="#lead">Request Demo<i class="ico fa-solid fa-arrow-right" aria-hidden="true"></i></a>
             <a class="btn btn-ghost" href="index.html#products">View All Products</a>
           </div>
         </div>
@@ -237,6 +232,7 @@
   <script defer src="js/site.js"></script>
   <script defer src="js/shell.js"></script>
   <script defer src="js/lead.js"></script>
+<script defer src="js/demo-modal.js"></script>
   <script defer src="js/main.js"></script>
 </body>
 </html>

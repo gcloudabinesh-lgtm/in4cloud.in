@@ -608,6 +608,37 @@
 .lead-band .lead-card { box-shadow: var(--shadow-lg); }
 
 /* ---- Company page ---- */
+/* The contact hero dropped its breadcrumb band (which carried the background
+   photo), so it supplies its own balanced top and bottom spacing. */
+.contact-page .page-hero {
+  padding-top: clamp(3rem, 6vw, 4.75rem);
+  padding-bottom: clamp(3rem, 6vw, 4.75rem);
+}
+
+/* The pricing and resources heroes dropped their breadcrumb bands (which
+   carried the background photos), so they supply their own balanced spacing. */
+.page-pricing .page-hero,
+.page-resources .page-hero {
+  padding-top: clamp(3rem, 6vw, 4.75rem);
+  padding-bottom: clamp(3rem, 6vw, 4.75rem);
+}
+
+/* Contact map — a framed, lazy-loaded embed that sits on the brand surface */
+.contact-map {
+  border-radius: var(--r-xl);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-md);
+  background: var(--bg-lav);
+}
+
+.contact-map iframe {
+  display: block;
+  width: 100%;
+  height: clamp(320px, 45vw, 480px);
+  border: 0;
+}
+
 .company-gallery { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
 
 .core-pill {

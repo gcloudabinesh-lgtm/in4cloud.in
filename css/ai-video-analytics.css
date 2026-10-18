@@ -171,15 +171,6 @@
 .va-jstep p { font-size: 13.5px; color: #6B6590; line-height: 1.6; margin: 0; }
 
 /* final CTA */
-.va-cta { background: radial-gradient(700px 380px at 80% 0%, rgba(231,220,255,.25), transparent 60%), linear-gradient(135deg, #6528F7 0%, #5A1FD8 55%, #4C1DC8 100%); color: #fff; padding: clamp(64px, 8vw, 110px) 0; }
-.va-cta-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: clamp(28px, 5vw, 72px); align-items: center; }
-.va-cta h2 { font-family: "Plus Jakarta Sans", sans-serif; font-size: clamp(30px, 4vw, 50px); margin: 0 0 16px; line-height: 1.15; }
-.va-cta p { color: #E9E4FF; line-height: 1.75; margin: 0 0 28px; max-width: 520px; }
-.va-cta-cards { display: flex; flex-direction: column; gap: 12px; }
-.va-cta-card { display: flex; gap: 14px; align-items: center; background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.14); border-radius: 16px; padding: 16px 18px; }
-.va-cta-card i { color: #A79BFF; font-size: 18px; }
-.va-cta-card strong { display: block; font-size: 14.5px; }
-.va-cta-card span { font-size: 12.5px; color: #E4DEFB; }
 
 /* ---------- responsive ---------- */
 @media (max-width: 1024px) {
@@ -187,7 +178,7 @@
   .va-jstep::before { display: none; }
 }
 @media (max-width: 900px) {
-  .va-hero-grid, .va-split, .va-index, .va-cta-grid { grid-template-columns: 1fr; }
+  .va-hero-grid, .va-split, .va-index { grid-template-columns: 1fr; }
   .va-compare { grid-template-columns: 1fr; }
   .va-flow-arrow { transform: rotate(90deg); margin: 0 auto; }
   .va-zones { grid-template-columns: 1fr; }
@@ -203,4 +194,120 @@
   .va-feed-grid { grid-template-columns: 1fr; }
   .va-nav { grid-template-columns: 1fr; }
   .va-stat-callout { flex-direction: column; gap: 4px; }
+}
+
+/* ==========================================================================
+   AI Video Analytics — brand colour system
+   Same devices as the HRMS / Attendance / Leave / Canteen pages: dual-colour
+   headings, a tapered gradient rule under every section title, blue icon and
+   step plates, glyph centring, and a two-column lead form. The colour code is
+   this module's home page menu tab accent (--acc #3B82F6 / soft #EFF5FF),
+   deepened at the start of the ramp.
+   ========================================================================== */
+
+.va-title em.va-dual,
+.va-hero h1 .grad,
+.va-statement h2 .grad,
+.va-stage-meta h3 {
+  background: linear-gradient(96deg, #1d4ed8 0%, #3b82f6 55%, #93c5fd 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  font-style: normal;
+}
+
+/* ---- Tapered accent rule under every section title ---------------------- */
+.va-title { position: relative; }
+
+.va-title::after {
+  content: "";
+  display: block;
+  width: 148px;
+  max-width: 42%;
+  height: 3px;
+  margin-top: 16px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #1d4ed8 0%, #3b82f6 30%, #60a5fa 62%, #bfdbfe 100%);
+  -webkit-mask-image: linear-gradient(90deg, #000 0%, #000 58%, transparent 100%);
+  mask-image: linear-gradient(90deg, #000 0%, #000 58%, transparent 100%);
+  box-shadow: 0 6px 16px rgba(59, 130, 246, 0.28);
+}
+
+.va-wrap.center .va-title::after,
+.va-sec[data-center] .va-title::after { margin-inline: auto; }
+
+/* ---- Icon plates: gradient tile, white glyph ---------------------------- */
+.va-step-node i,
+.va-pipe-node .ico,
+.page-ai-video .icon-badge {
+  background-image: linear-gradient(135deg, #1d4ed8 0%, #3b82f6 55%, #93c5fd 100%);
+  background-color: transparent;
+  border-color: transparent;
+  color: #ffffff;
+  box-shadow: 0 6px 16px rgba(59, 130, 246, 0.26);
+}
+
+.va-flow-arrow {
+  background: linear-gradient(135deg, #1d4ed8 0%, #3b82f6 55%, #93c5fd 100%);
+  box-shadow: 0 14px 28px -10px rgba(59, 130, 246, 0.45);
+}
+
+.va-list i,
+.va-nav li.active .num { color: #3b82f6; }
+
+.va-tag,
+.va-chip {
+  background: #eff5ff;
+  color: #1d4ed8;
+  border-color: #dbe8fe;
+}
+
+.va-nav li::before { background: #3b82f6; }
+
+/* ---- Glyph sizing and centring ------------------------------------------
+   FA glyphs scale with font-size, so fixed width/height values smaller than
+   the inherited size clipped them. Inside a plate the glyph is a flex box so
+   it centres on the tile. */
+.page-ai-video .ico,
+.va-wrap .ico {
+  width: 1em;
+  height: 1em;
+  line-height: 1;
+  vertical-align: middle;
+}
+
+.va-step-node i .ico,
+.va-list li .ico {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+/* ---- Lead band checklist ------------------------------------------------ */
+.page-ai-video .lead-band .lead-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin: 26px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.page-ai-video .lead-band .lead-list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 15px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.page-ai-video .lead-band .lead-list .ico {
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  font-size: 16px;
+  color: #bfdbfe;
 }

@@ -1,0 +1,168 @@
+/* ==========================================================================
+   Performance Management — page colour system
+   The same devices as the HRMS / Attendance / Leave / Canteen / Visitor /
+   Parking / AI pages: dual-colour headings, a tapered gradient rule under
+   every section title, gradient icon plates, gradient feature and step
+   headings, glyph centring, and a two-column lead form. The colour code is
+   this module's home page menu tab accent (--acc #6DBE45 / soft #F1F9EC),
+   deepened at the start of the ramp.
+   Scoped to .page-performance so no other page is affected.
+   ========================================================================== */
+
+/* ---- Hero: no breadcrumb band, no photo strip ---------------------------
+   The breadcrumb band (which carried the shared background photo) is removed
+   from the markup, so the hero keeps its own top spacing and gets a painted
+   brand background with soft blooms instead. */
+.page-performance .page-hero {
+  padding-top: clamp(2.5rem, 5vw, 4rem);
+  background:
+    radial-gradient(720px 420px at 90% -12%, rgba(109, 190, 69, 0.16), transparent 70%),
+    radial-gradient(620px 420px at 4% 108%, rgba(101, 40, 247, 0.12), transparent 70%),
+    linear-gradient(180deg, #f7fdef 0%, #f9f8ff 58%, #ffffff 100%);
+}
+
+.page-performance .page-hero::before {
+  background: radial-gradient(closest-side, rgba(109, 190, 69, 0.14), transparent 70%);
+}
+
+.page-performance .page-hero::after {
+  background: radial-gradient(closest-side, rgba(101, 40, 247, 0.12), transparent 70%);
+}
+
+/* ---- Dual-colour headings: solid ink + ONE gradient accent phrase -------- */
+.page-performance .section-title em.pr-dual,
+.page-performance .inner-hero-copy h1 .grad,
+.page-performance .feature-card h3,
+.page-performance .process-step h3 {
+  background: linear-gradient(96deg, #3e8e2d 0%, #6dbe45 55%, #c9eda6 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  font-style: normal;
+}
+
+/* use-case chips keep a flat, readable label in the same ramp */
+.page-performance .use-case-chip { color: #33691e; font-weight: 700; }
+
+/* ---- Tapered accent rule under every section title ---------------------- */
+.page-performance .section-title { position: relative; }
+
+.page-performance .section-title::after {
+  content: "";
+  display: block;
+  width: 148px;
+  max-width: 42%;
+  height: 3px;
+  margin-top: 14px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #3e8e2d 0%, #6dbe45 30%, #a5d96f 62%, #e2f5cf 100%);
+  -webkit-mask-image: linear-gradient(90deg, #000 0%, #000 58%, transparent 100%);
+  mask-image: linear-gradient(90deg, #000 0%, #000 58%, transparent 100%);
+  box-shadow: 0 6px 16px rgba(109, 190, 69, 0.28);
+}
+
+.page-performance .section-head.center .section-title::after { margin-inline: auto; }
+
+/* ---- Icon plates: gradient tile, white glyph ---------------------------- */
+.page-performance .icon-badge {
+  background-image: var(--plate, linear-gradient(135deg, #3e8e2d 0%, #6dbe45 55%, #c9eda6 100%));
+  background-color: transparent;
+  border-color: transparent;
+  color: #ffffff;
+  box-shadow: var(--plate-shadow, 0 8px 18px rgba(109, 190, 69, 0.26));
+}
+
+.page-performance .icon-badge .ico {
+  background-image: none;
+  color: #ffffff;
+  -webkit-text-fill-color: #ffffff;
+}
+
+/* ---- How it works: step numbers in the page's primary colour ------------
+   The step discs pick up the same green ramp as the headings, so the section
+   no longer switches to the shared purple used by other pages. */
+.page-performance .process-step .step-num {
+  background: linear-gradient(135deg, #3e8e2d 0%, #6dbe45 55%, #c9eda6 100%);
+  color: #ffffff;
+  box-shadow: 0 8px 18px rgba(109, 190, 69, 0.28);
+}
+
+.page-performance .process-step .step-num:hover {
+  background: linear-gradient(135deg, #2f6f23 0%, #57a336 60%, #a5d96f 100%);
+}
+
+.page-performance .process-arrow { color: #6dbe45; }
+
+/* ---- Use cases: even three-column grid, full container width ------------ */
+.page-performance .use-case-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  max-width: none;
+  width: 100%;
+}
+
+.page-performance .use-case-chip {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+  padding: 16px 22px;
+  border-radius: var(--r-lg);
+  font-size: 15px;
+}
+
+@media (max-width: 900px) {
+  .page-performance .use-case-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 600px) {
+  .page-performance .use-case-grid { grid-template-columns: 1fr; }
+}
+
+/* ---- Glyph sizing and centring ------------------------------------------
+   FA glyphs scale with font-size, so a fixed width/height smaller than the
+   inherited 18px clips them and pushes them off centre. Inside a plate the
+   glyph is a flex box, so it centres on the tile. */
+.page-performance .ico {
+  width: 1em;
+  height: 1em;
+  line-height: 1;
+  vertical-align: middle;
+}
+
+.page-performance .icon-badge .ico {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  text-align: center;
+}
+
+/* ---- Lead band: checklist spacing + tinted tick (HRMS pattern) ---------- */
+.page-performance .lead-band .lead-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin: 26px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.page-performance .lead-band .lead-list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 15px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.page-performance .lead-band .lead-list .ico {
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  font-size: 16px;
+  color: #d7f2c6;
+}

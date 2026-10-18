@@ -32,6 +32,7 @@
   <link rel="stylesheet" href="css/ai-video-analytics.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
   <link rel="stylesheet" href="css/fa.css">
+<link rel="stylesheet" href="css/demo-modal.css">
 </head>
 <body class="page-ai-video">
   <main id="main">
@@ -39,9 +40,6 @@
     <!-- ============ 1. HERO ============ -->
     <section class="va-hero" aria-labelledby="hero-title">
       <div class="va-wrap">
-        <nav class="breadcrumbs" aria-label="Breadcrumb" style="margin-bottom:28px">
-          <a href="index.html">Home</a><i class="ico fa-solid fa-chevron-right" aria-hidden="true"></i><span>AI-Based Video Analytics</span>
-        </nav>
         <div class="va-hero-grid">
           <div>
             <p class="va-eyebrow reveal">AI Video Analytics</p>
@@ -131,7 +129,7 @@
     <section class="va-sec" aria-labelledby="evolve-title">
       <div class="va-wrap">
         <p class="va-eyebrow reveal">Surveillance Is Evolving</p>
-        <h2 class="va-title reveal" id="evolve-title">From Reactive Footage to Proactive Intelligence</h2>
+        <h2 class="va-title reveal" id="evolve-title">From Reactive Footage to <em class="va-dual">Proactive Intelligence</em></h2>
         <p class="va-sub reveal">The same cameras. A completely different security posture.</p>
         <div class="va-compare">
           <div class="va-flow-panel bad reveal">
@@ -171,7 +169,7 @@
     <section class="va-sec va-sec-alt" id="capabilities" aria-labelledby="cap-title">
       <div class="va-wrap">
         <p class="va-eyebrow reveal">Video Analytics Capabilities</p>
-        <h2 class="va-title reveal" id="cap-title">Intelligence From Every Frame</h2>
+        <h2 class="va-title reveal" id="cap-title">Intelligence From <em class="va-dual">Every Frame</em></h2>
         <div class="va-index">
           <ul class="va-nav" id="vaNav" role="tablist" aria-label="Capabilities">
             <li class="active"><button role="tab" aria-selected="true" data-k="face"><span class="num">01</span><span class="lbl">Facial Recognition</span></button></li>
@@ -211,7 +209,7 @@
         <div class="va-split">
           <div>
             <p class="va-eyebrow reveal">Capability 01</p>
-            <h2 class="va-title reveal" id="face-title">Facial Recognition</h2>
+            <h2 class="va-title reveal" id="face-title">Facial <em class="va-dual">Recognition</em></h2>
             <p class="va-sub reveal">Identify or verify individuals in real-time.</p>
             <ul class="va-list reveal" style="--rd:.08s">
               <li><i class="fa-solid fa-circle-check"></i>Detects faces even in crowds or low-light environments.</li>
@@ -245,7 +243,7 @@
         <div class="va-split" style="align-items:end">
           <div>
             <p class="va-eyebrow reveal">Capability 02</p>
-            <h2 class="va-title reveal" id="ppe-title">PPE Detection</h2>
+            <h2 class="va-title reveal" id="ppe-title"><em class="va-dual">PPE Detection</em></h2>
           </div>
           <p class="va-sub reveal">Ensure workplace safety compliance with instant alerts — immediate notifications when PPE violations are detected in hazardous zones.</p>
         </div>
@@ -284,7 +282,7 @@
         <div class="va-split">
           <div>
             <p class="va-eyebrow reveal">Capability 03</p>
-            <h2 class="va-title reveal" id="veh-title">Vehicle Counting</h2>
+            <h2 class="va-title reveal" id="veh-title"><em class="va-dual">Vehicle Counting</em></h2>
             <p class="va-sub reveal">Monitor traffic flow, parking usage, and congestion at your sites.</p>
             <div class="va-pipeline reveal" style="--rd:.06s">
               <span class="va-pipe-node">Entry</span><span class="va-pipe-arrow">→</span>
@@ -352,7 +350,7 @@
     <section class="va-sec va-sec-alt" aria-labelledby="drowsy-title">
       <div class="va-wrap">
         <p class="va-eyebrow reveal">Capability 04</p>
-        <h2 class="va-title reveal" id="drowsy-title">Drowsiness Detection</h2>
+        <h2 class="va-title reveal" id="drowsy-title"><em class="va-dual">Drowsiness Detection</em></h2>
         <p class="va-sub reveal">Prevent fatigue-related incidents before they happen. The AI monitors:</p>
         <div class="va-split" style="margin-top:32px">
           <div class="va-frame reveal">
@@ -389,7 +387,7 @@
     <section class="va-sec" aria-labelledby="people-title">
       <div class="va-wrap">
         <p class="va-eyebrow reveal">Capability 05</p>
-        <h2 class="va-title reveal" id="people-title">People Counting</h2>
+        <h2 class="va-title reveal" id="people-title"><em class="va-dual">People Counting</em></h2>
         <p class="va-sub reveal">Understand human movement and crowd density. Real-Time Counting tracks people entering, exiting, or moving through designated zones.</p>
         <div class="va-split" style="margin-top:32px">
           <div class="va-frame reveal">
@@ -428,7 +426,7 @@
     <section class="va-sec va-sec-alt" aria-labelledby="obj-title">
       <div class="va-wrap">
         <p class="va-eyebrow reveal">Capability 06</p>
-        <h2 class="va-title reveal" id="obj-title">Object Detection</h2>
+        <h2 class="va-title reveal" id="obj-title"><em class="va-dual">Object Detection</em></h2>
         <p class="va-sub reveal">Recognize and classify objects in a scene — from thousands of different object types to real-time inventory monitoring and immediate threat alerts.</p>
         <div class="va-zones reveal" style="--rd:.06s">
           <div class="va-zone-card">
@@ -453,7 +451,7 @@
         <div class="va-split">
           <div>
             <p class="va-eyebrow reveal">Capability 07</p>
-            <h2 class="va-title reveal" id="animal-title">Animal Detection &amp; Classification</h2>
+            <h2 class="va-title reveal" id="animal-title"><em class="va-dual">Animal Detection</em> &amp; Classification</h2>
             <p class="va-sub reveal">Monitor and manage animal presence in key zones.</p>
             <ul class="va-list reveal" style="--rd:.08s">
               <li><i class="fa-solid fa-circle-check"></i>Identifies various animals with high accuracy, including dogs and cats.</li>
@@ -486,7 +484,7 @@
     <section class="va-sec va-sec-alt" aria-labelledby="access-title">
       <div class="va-wrap">
         <p class="va-eyebrow reveal">Capability 08</p>
-        <h2 class="va-title reveal" id="access-title">Unauthorized Access Detection</h2>
+        <h2 class="va-title reveal" id="access-title"><em class="va-dual">Unauthorized Access</em> Detection</h2>
         <p class="va-sub reveal">Secure restricted or sensitive zones with a layered verification workflow.</p>
         <div class="va-split" style="margin-top:36px">
           <div class="va-frame reveal">
@@ -514,7 +512,7 @@
       <div class="va-wrap">
         <div>
           <p class="va-eyebrow reveal">System Intelligence</p>
-          <h2 class="va-title reveal" id="layer-title" style="text-align:left">One Intelligent Security Layer</h2>
+          <h2 class="va-title reveal" id="layer-title" style="text-align:left">One <em class="va-dual">Intelligent Security Layer</em></h2>
         </div>
         <img src="assets/va-system.svg" alt="Existing cameras feeding into a central AI Video Analytics Engine that outputs alerts and analytics" loading="lazy" style="width:100%;max-width:none;height:auto;display:block;margin:0 auto 28px">
         <div class="va-arch reveal" style="--rd:.06s">
@@ -555,7 +553,7 @@
     <section class="va-sec" aria-labelledby="steps-title">
       <div class="va-wrap">
         <p class="va-eyebrow reveal">Next Steps</p>
-        <h2 class="va-title reveal" id="steps-title">Transform Your Surveillance Today</h2>
+        <h2 class="va-title reveal" id="steps-title">Transform Your <em class="va-dual">Surveillance Today</em></h2>
         <div class="va-journey">
           <div class="va-jstep reveal"><span class="va-jnum">01</span><h3>Free Consultation</h3><p>Schedule a no-obligation assessment of your current surveillance infrastructure.</p></div>
           <div class="va-jstep reveal" style="--rd:.06s"><span class="va-jnum">02</span><h3>Custom Solution Design</h3><p>Receive a tailored implementation plan based on your specific security needs.</p></div>
@@ -582,12 +580,12 @@
                 <input type="hidden" name="pageSource" value="AI Video Analytics — Request Demo">
                 <input type="hidden" name="product" value="AI-Based Video Analytics">
                 <div class="form-grid">
-                  <div class="form-field span-2">
+                  <div class="form-field">
                     <label for="va-fullName">Name <span class="req">*</span></label>
                     <input class="form-input" id="va-fullName" name="fullName" type="text" autocomplete="name" placeholder="e.g. Meera Iyer" required>
                     <span class="form-error" data-error-for="fullName" role="alert"></span>
                   </div>
-                  <div class="form-field span-2">
+                  <div class="form-field">
                     <label for="va-company">Company <span class="req">*</span></label>
                     <input class="form-input" id="va-company" name="company" type="text" autocomplete="organization" placeholder="e.g. Acme Corp" required>
                     <span class="form-error" data-error-for="company" role="alert"></span>
@@ -617,29 +615,11 @@
       </div>
     </section>
 
-    <!-- ============ 16. FINAL CTA ============ -->
-    <section class="va-cta" aria-labelledby="cta-title">
-      <div class="va-wrap va-cta-grid">
-        <div>
-          <h2 id="cta-title">Transform Your Surveillance Today</h2>
-          <p>Move from passive surveillance to real-time intelligence with AI-powered video analytics.</p>
-          <div class="va-hero-ctas">
-            <a class="btn btn-inverse btn-lg" href="#lead">Request a Demo<i class="ico fa-solid fa-arrow-right" aria-hidden="true"></i></a>
-            <a class="btn btn-outline-white btn-lg" href="contact.html">Contact Us</a>
-          </div>
-        </div>
-        <div class="va-cta-cards">
-          <div class="va-cta-card"><i class="fa-solid fa-camera"></i><div><strong>Existing cameras, upgraded</strong><span>No complete system replacement needed</span></div></div>
-          <div class="va-cta-card"><i class="fa-solid fa-bell"></i><div><strong>Real-time alerts</strong><span>Notifications through multiple channels</span></div></div>
-          <div class="va-cta-card"><i class="fa-solid fa-chart-line"></i><div><strong>Analytics &amp; decisions</strong><span>Operational decisions and security response</span></div></div>
-        </div>
-      </div>
-    </section>
-
   </main>
   <script defer src="js/site.js"></script>
   <script defer src="js/shell.js"></script>
   <script defer src="js/lead.js"></script>
+<script defer src="js/demo-modal.js"></script>
   <script defer src="js/main.js"></script>
   <script>
     /* Capability index — lightweight tab switcher */

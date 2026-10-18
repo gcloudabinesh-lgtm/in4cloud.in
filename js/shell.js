@@ -1,4 +1,4 @@
-﻿/* IN4 Solutions â€” shared site shell (header + products menu + mobile menu + footer).
+/* IN4 Solutions â€” shared site shell (header + products menu + mobile menu + footer).
    Injected once per page so markup is never duplicated across pages.
    Relies on Font Awesome 6 (CDN), site.js (contact/config). */
 (function () {
@@ -83,7 +83,7 @@
     navLink("contact.html", "Contact", "contact") +
     "</ul></nav>" +
     '<div class="header-actions">' +
-    '<a href="contact.html#lead" class="btn btn-primary btn-sm header-cta">Book a Demo</a>' +
+    '<a href="contact.html#lead" class="btn btn-primary btn-sm header-cta" data-demo-open>Book a Demo</a>' +
     '<button class="nav-toggle" id="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">' +
     '<span></span><span></span><span></span></button>' +
     "</div></div></header>";
@@ -114,7 +114,7 @@
     '<i class="ico fa-solid fa-envelope" aria-hidden="true"></i> Contact</a>' +
     "</div>" +
     '<div class="mobile-menu-cta">' +
-    '<a href="contact.html#lead" class="btn btn-primary btn-block">Book a Demo</a>' +
+    '<a href="contact.html#lead" class="btn btn-primary btn-block" data-demo-open>Book a Demo</a>' +
     '<p style="font-size:12.5px;color:var(--text-muted);margin-top:12px;text-align:center">Modern HR &amp; Workplace Platform</p>' +
     "</div></div>" +
     '<div class="menu-backdrop" id="menu-backdrop"></div>';
@@ -171,14 +171,14 @@
     "<span class=\"pop-title\">Reach IN4 Solutions</span>" +
     '<a href="' + S.contact.phoneHref + '"><i class="ico fa-solid fa-phone" aria-hidden="true"></i> Call us</a>' +
     '<a href="' + S.contact.emailHref + '"><i class="ico fa-solid fa-envelope" aria-hidden="true"></i> Send email</a>' +
-    '<a href="contact.html#lead"><i class="ico fa-solid fa-calendar-day" aria-hidden="true"></i> Book a Demo</a>' +
+    '<a href="contact.html#lead" data-demo-open><i class="ico fa-solid fa-calendar-day" aria-hidden="true"></i> Book a Demo</a>' +
     "</div>" +
     '<button class="fc-toggle" id="fc-toggle" type="button" aria-label="Contact options" aria-expanded="false">' +
     '<i class="ico fa-solid fa-phone" aria-hidden="true"></i></button></div>';
 
   const stickyCta =
     '<div class="sticky-cta" id="sticky-cta">' +
-    '<a href="contact.html#lead" class="btn btn-primary btn-block">Book a Demo</a></div>';
+    '<a href="contact.html#lead" class="btn btn-primary btn-block" data-demo-open>Book a Demo</a></div>';
 
   const skip =
     '<a class="skip-link" href="#main">Skip to content</a>';

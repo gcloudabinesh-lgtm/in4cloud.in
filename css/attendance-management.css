@@ -1,4 +1,43 @@
-﻿/* ============ Attendance â€” page-specific layouts ============ */
+/* ============ Attendance â€” page-specific layouts ============ */
+
+/* ---- Dual-colour headings ----------------------------------------------
+   Headings stay solid ink with ONE accent phrase, and that phrase carries the
+   same three-stop gradient the home page uses for this module's menu tab:
+   #6528f7 -> #7b4bff -> #9779ff (the page's --purple-600 / 500 / 400).
+   Scoped to .page-attendance so other product pages keep their own palette. */
+.page-attendance .section-title em.at-dual,
+.page-attendance .inner-hero-copy h1 .grad {
+  background: linear-gradient(96deg, #6528f7 0%, #7b4bff 55%, #9779ff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  font-style: normal;
+}
+
+/* ---- Accent rule under the headings -------------------------------------
+   A tapered gradient bar in the same three-stop gradient: solid and deeper at
+   the start, fading to nothing at the tip, with a soft brand glow so it reads
+   as a drawn accent rather than a plain border. Centred headings centre it,
+   left-aligned ones hang it from the text. */
+.page-attendance .section-title { position: relative; }
+
+.page-attendance .section-title::after {
+  content: "";
+  display: block;
+  width: 148px;
+  max-width: 42%;
+  height: 3px;
+  margin-top: 14px;
+  border-radius: 999px;
+  background: linear-gradient(90deg,
+    #4c1dc8 0%, #6528f7 26%, #7b4bff 55%, #a98fff 78%, #cbb8ff 100%);
+  -webkit-mask-image: linear-gradient(90deg, #000 0%, #000 58%, transparent 100%);
+  mask-image: linear-gradient(90deg, #000 0%, #000 58%, transparent 100%);
+  box-shadow: 0 6px 16px rgba(101, 40, 247, 0.28);
+}
+
+.page-attendance .section-head.center .section-title::after { margin-inline: auto; }
 
 .at-vsteps { position: relative; display: flex; flex-direction: column; }
 .at-vsteps::before { content: ""; position: absolute; left: 21px; top: 22px; bottom: 22px; width: 2px; background: linear-gradient(180deg, var(--purple-200), #c9d8ff); border-radius: 2px; }
@@ -98,15 +137,7 @@
 .at-big h3 { font-size: clamp(1.3rem, 1.6vw, 1.6rem); margin: 18px 0 10px; }
 .at-big p { font-size: 15.5px; color: var(--text-body); margin: 0; }
 
-.at-cta-actions { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; }
 
-.at-cta { position: relative; overflow: hidden; padding: clamp(3.5rem, 7vw, 6rem) 0; background: linear-gradient(135deg, #4c1dc8 0%, #6528f7 45%, #8f6bff 100%); }
-.at-cta::before { content: ""; position: absolute; inset: 0; background: radial-gradient(closest-side at 12% 20%, rgba(255,255,255,.18), transparent 60%), radial-gradient(closest-side at 88% 80%, rgba(151,215,95,.22), transparent 62%), repeating-linear-gradient(115deg, rgba(255,255,255,.05) 0 2px, transparent 2px 26px); }
-.at-cta-inner { position: relative; z-index: 1; }
-.at-cta-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 30px 0 34px; }
-.at-cta-card { background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.2); backdrop-filter: blur(6px); border-radius: var(--r-lg); padding: 22px 20px; color: #fff; }
-.at-cta-card strong { display: block; font-family: "Plus Jakarta Sans", sans-serif; font-size: 15.5px; margin-bottom: 6px; }
-.at-cta-card span { font-size: 13.5px; color: rgba(255,255,255,.78); }
 
 @media (max-width: 1023px) {
   .at-split { grid-template-columns: 1fr; }
@@ -120,11 +151,92 @@
   .at-matrix-row p { grid-column: 2; }
   .at-apps { grid-template-columns: 1fr; }
   .at-asym { grid-template-columns: 1fr; }
-  .at-cta-grid { grid-template-columns: 1fr; }
   .at-env-icons { grid-template-columns: repeat(2, 60px); }
 }
+
 @media (max-width: 640px) {
   .at-flow-h { grid-template-columns: 1fr; gap: 26px; }
   .at-dash-grid { grid-template-columns: 1fr 1fr; }
   .at-nodes { grid-template-columns: 1fr; }
 }
+
+/* ---- Lead band checklist -------------------------------------------------
+   The Book a demo list on the left: one flex row per point, so the tick sits
+   on the text's centre line with a real gap before the label. */
+.page-attendance .lead-band .lead-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin: 26px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.page-attendance .lead-band .lead-list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 15px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.page-attendance .lead-band .lead-list .ico {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  font-size: 16px;
+  line-height: 1;
+  color: #cbb8ff;
+}
+
+/* ---- Icon plates in the module gradient ---------------------------------
+   Every icon tile on the page repeats the same three-stop gradient the dual
+   headings and the home page menu tab use (#6528f7 -> #7b4bff -> #9779ff),
+   with a white glyph — the icon treatment on the HRMS page. Kept at the end
+   of the file so it wins over the per-section soft tints above.
+   --plate / --plate-shadow let js/hrms-icon-palette.js style override it. */
+.page-attendance .icon-badge {
+  background-image: var(--plate, linear-gradient(96deg, #6528f7 0%, #7b4bff 55%, #9779ff 100%));
+  background-color: transparent;
+  border-color: transparent;
+  color: #ffffff;
+  box-shadow: var(--plate-shadow, 0 8px 18px rgba(101, 40, 247, 0.22));
+}
+
+.page-attendance .icon-badge .ico {
+  background-image: none;
+  color: #ffffff;
+  -webkit-text-fill-color: #ffffff;
+}
+
+/* ---- Glyph sizing and centring ------------------------------------------
+   FA glyphs scale with font-size, so the fixed width/height values below are
+   only honoured when the font-size matches. Everything sizes from 1em now, so
+   no icon is clipped or sits off centre inside its tile. */
+.page-attendance .ico { width: 1em; height: 1em; line-height: 1; vertical-align: middle; }
+
+/* Inside a plate the glyph is a flex box, so it centres on the tile instead of
+   sitting on the text baseline. */
+.page-attendance .icon-badge .ico,
+.page-attendance .at-cloud-hub .ico,
+.page-attendance .at-sec-visual .ico {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  text-align: center;
+}
+
+.page-attendance .at-site .ico { font-size: 16px; }
+.page-attendance .at-stage .icon-badge .ico { font-size: 19px; }
+.page-attendance .at-env-icons .ico { font-size: 26px; }
+.page-attendance .at-cloud-hub .ico { font-size: 34px; }
+.page-attendance .at-sec-visual .ico { font-size: 34px; }
+
+.page-attendance .at-row .icon-badge,
+.page-attendance .at-vstep .icon-badge,
+.page-attendance .at-matrix-row .icon-badge { flex-shrink: 0; }

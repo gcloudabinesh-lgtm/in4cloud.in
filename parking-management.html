@@ -35,19 +35,13 @@
   <link rel="stylesheet" href="css/parking-management.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
   <link rel="stylesheet" href="css/fa.css">
+<link rel="stylesheet" href="css/demo-modal.css">
 </head>
 <body class="page-parking">
   <main id="main">
 
     <!-- ============ 1. HERO ============ -->
     <section class="page-hero" aria-labelledby="hero-title">
-      <div class="page-hero-bg">
-        <div class="container">
-          <nav class="breadcrumbs" aria-label="Breadcrumb">
-            <a href="index.html">Home</a><i class="ico fa-solid fa-chevron-right" aria-hidden="true"></i><span>Parking Management</span>
-          </nav>
-        </div>
-      </div>
       <div class="container">
         <div class="inner-hero">
           <div class="inner-hero-copy">
@@ -77,7 +71,7 @@
     <section class="section section-lav" id="solutions" aria-labelledby="solutions-title">
       <div class="container">
         <div class="section-head center reveal">
-          <h2 class="section-title" id="solutions-title">Three Flexible Solutions for Every Facility</h2>
+          <h2 class="section-title" id="solutions-title">Three <em class="pk-dual">Flexible Solutions</em> for Every Facility</h2>
           <p class="section-lead">Pro-Parking adapts to your operational needs with three distinct variants, each powered by advanced ANPR cameras, boom barrier control, and comprehensive real-time dashboards.</p>
         </div>
         <div class="pk-solutions">
@@ -100,7 +94,7 @@
     <section class="section" aria-labelledby="v1-title">
       <div class="container">
         <div class="section-head center reveal">
-          <h2 class="section-title" id="v1-title">Automated Flow</h2>
+          <h2 class="section-title" id="v1-title"><em class="pk-dual">Automated Flow</em></h2>
         </div>
         <div class="pk-flow-h">
           <div class="pk-stage reveal"><span class="num">01</span><span class="icon-badge"><i class="ico fa-solid fa-camera" aria-hidden="true"></i></span><h3>Entry Detection</h3><p>ANPR camera automatically captures license plate as vehicle enters facility.</p></div>
@@ -116,7 +110,7 @@
     <section class="section section-ice" aria-labelledby="v2-title">
       <div class="container">
         <div class="section-head center reveal">
-          <h2 class="section-title" id="v2-title">Semi-Automated Flow</h2>
+          <h2 class="section-title" id="v2-title"><em class="pk-dual">Semi-Automated Flow</em></h2>
         </div>
         <div class="pk-split">
           <div class="reveal" aria-hidden="true">
@@ -142,7 +136,7 @@
     <section class="section" aria-labelledby="v3-title">
       <div class="container">
         <div class="section-head center reveal">
-          <h2 class="section-title" id="v3-title">AI Automated Excellence</h2>
+          <h2 class="section-title" id="v3-title"><em class="pk-dual">AI Automated Excellence</em></h2>
         </div>
         <div class="pk-alt">
           <div class="pk-alt-step up reveal"><div class="body"><h3>Automated Entry</h3><p>ANPR captures plate and records check-in time with zero human intervention.</p></div><span class="dot">01</span></div>
@@ -160,7 +154,7 @@
         <div class="pk-why">
           <div class="reveal">
             <p class="eyebrow">Why Pro-Parking</p>
-            <h2 class="section-title" id="why-title" style="margin-top:14px">Why Choose Pro-Parking?</h2>
+            <h2 class="section-title" id="why-title" style="margin-top:14px">Why Choose <em class="pk-dual">Pro-Parking</em>?</h2>
             <p class="section-lead">Transform your parking operations today with Pro-Parking's intelligent management system.</p>
             <img src="assets/pk-why.svg" alt="Parking lot with ANPR camera, boom barrier and parked cars" loading="lazy" style="width:100%;height:auto;display:block;margin-top:26px;border-radius:var(--r-lg)">
           </div>
@@ -180,13 +174,13 @@
         <div class="lead-band">
           <div class="lead-band-inner">
             <div class="lead-copy reveal">
-              <p class="eyebrow" style="color:#D7F2C6">Book a demo</p>
+              <p class="eyebrow" style="color:#CFFAFE">Book a demo</p>
               <h2 id="lead-title">Request a Parking Management Demo</h2>
               <p>Share your parking setup and we'll walk you through ANPR entry, barrier automation, and real-time dashboards on a live demo.</p>
-              <ul style="margin-top:28px;display:flex;flex-direction:column;gap:12px;color:rgba(255,255,255,.9);font-size:15px;list-style:none">
-                <li><i class="ico fa-solid fa-circle-check" style="color:#D7F2C6" aria-hidden="true"></i> Live demo for facility &amp; security teams</li>
-                <li><i class="ico fa-solid fa-circle-check" style="color:#D7F2C6" aria-hidden="true"></i> All three automation variants</li>
-                <li><i class="ico fa-solid fa-circle-check" style="color:#D7F2C6" aria-hidden="true"></i> Guidance on deployment &amp; pricing</li>
+              <ul class="lead-list">
+                <li><i class="ico fa-solid fa-circle-check" aria-hidden="true"></i> Live demo for facility &amp; security teams</li>
+                <li><i class="ico fa-solid fa-circle-check" aria-hidden="true"></i> All three automation variants</li>
+                <li><i class="ico fa-solid fa-circle-check" aria-hidden="true"></i> Guidance on deployment &amp; pricing</li>
               </ul>
             </div>
             <div class="lead-card reveal" style="--rd:.1s">
@@ -196,12 +190,12 @@
                 <input type="hidden" name="pageSource" value="Parking Management — Request Parking Demo">
                 <input type="hidden" name="product" value="Parking Management System">
                 <div class="form-grid">
-                  <div class="form-field span-2">
+                  <div class="form-field">
                     <label for="pk-fullName">Name <span class="req">*</span></label>
                     <input class="form-input" id="pk-fullName" name="fullName" type="text" autocomplete="name" placeholder="e.g. Meera Iyer" required>
                     <span class="form-error" data-error-for="fullName" role="alert"></span>
                   </div>
-                  <div class="form-field span-2">
+                  <div class="form-field">
                     <label for="pk-company">Company <span class="req">*</span></label>
                     <input class="form-input" id="pk-company" name="company" type="text" autocomplete="organization" placeholder="e.g. Acme Corp" required>
                     <span class="form-error" data-error-for="company" role="alert"></span>
@@ -231,29 +225,11 @@
       </div>
     </section>
 
-    <!-- ============ 7. FINAL CTA ============ -->
-    <section class="pk-cta" aria-labelledby="cta-title">
-      <div class="container pk-cta-inner">
-        <p class="eyebrow reveal">Ready to Revolutionize Your Parking</p>
-        <h2 class="reveal" id="cta-title">Transform Your Facility Today</h2>
-        <p class="reveal" style="--rd:.06s">Join forward-thinking facilities worldwide who've eliminated parking headaches while maximizing revenue and operational efficiency.</p>
-        <div class="pk-stats reveal" style="--rd:.1s">
-          <div class="pk-stat"><strong>Reduce operational costs by up to 60%</strong><span>Minimize staff requirements while maximizing throughput.</span></div>
-          <div class="pk-stat"><strong>Eliminate revenue leakage completely</strong><span>Transparent tracking and automated calculations.</span></div>
-          <div class="pk-stat"><strong>Scale seamlessly as you grow</strong><span>Future-proof technology that adapts to your expansion.</span></div>
-        </div>
-        <p class="reveal" style="--rd:.14s;max-width:60ch;margin-inline:auto;color:rgba(255,255,255,.85)">Contact us today to discover which Pro-Parking variant perfectly fits your facility's unique requirements.</p>
-        <div class="pk-cta-actions reveal" style="--rd:.18s;margin-top:26px">
-          <a class="btn btn-inverse btn-lg" href="#lead">Request Parking Demo<i class="ico fa-solid fa-arrow-right" aria-hidden="true"></i></a>
-          <a class="btn btn-outline-white btn-lg" href="contact.html">Contact Us</a>
-        </div>
-      </div>
-    </section>
-
   </main>
 <script defer src="js/site.js"></script>
   <script defer src="js/shell.js"></script>
   <script defer src="js/lead.js"></script>
+<script defer src="js/demo-modal.js"></script>
   <script defer src="js/main.js"></script>
 </body>
 </html>

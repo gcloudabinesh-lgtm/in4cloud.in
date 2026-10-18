@@ -92,8 +92,19 @@
     container.innerHTML = icon + '<span role="status" aria-live="polite">' + message + "</span>";
   }
 
-  function initLeadForms() {
-    document.querySelectorAll("[data-lead-form]").forEach(function (form) {
+  function initLeadForms(target) {
+    // Accepts a form, a container or nothing (defaults to the whole document),
+    // so the demo popup can bind its own form without re-binding the rest.
+    var scope = target || document;
+    var forms = scope.matches && scope.matches("[data-lead-form]")
+      ? [scope]
+      : Array.prototype.slice.call(scope.querySelectorAll("[data-lead-form]"));
+
+    forms.forEach(function (form) {
+      // Binding is idempotent: initLeadForms() is called again by the popup.
+      if (form.dataset.leadBound === "1") return;
+      form.dataset.leadBound = "1";
+
       const status = form.querySelector("[data-lead-status]");
       const statusLoading = form.querySelector('[data-lead-status-loading]');
 
@@ -253,4 +264,11 @@
   }
 
   window.IN4LeadForms = initLeadForms;
+
+  /* Bind every inline form on the page once the DOM is ready. */
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", function () { initLeadForms(); });
+  } else {
+    initLeadForms();
+  }
 })();

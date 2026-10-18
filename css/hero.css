@@ -1,4 +1,4 @@
-﻿/* ==========================================================================
+/* ==========================================================================
    Home hero (premium light lavender / white)
 
    Structure — the section is only a positioning context and a background:
@@ -11,8 +11,6 @@
    is absolute + pointer-events:none inside .hero-bg.
    ========================================================================== */
 .hero {
-  --hero-purple: #6C35FF;
-  --hero-green: #6DBE45;
   position: relative;
   width: 100%;
   isolation: isolate;

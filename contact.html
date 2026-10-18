@@ -34,6 +34,7 @@
   <link rel="stylesheet" href="css/responsive.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
   <link rel="stylesheet" href="css/fa.css">
+<link rel="stylesheet" href="css/demo-modal.css">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -81,13 +82,6 @@
 
     <!-- ============ PAGE HERO ============ -->
     <section class="page-hero" aria-labelledby="page-title">
-      <div class="page-hero-bg">
-        <div class="container">
-          <nav class="breadcrumbs" aria-label="Breadcrumb">
-            <a href="index.html">Home</a><i class="ico fa-solid fa-chevron-right" aria-hidden="true"></i><span aria-current="page">Contact</span>
-          </nav>
-        </div>
-      </div>
       <div class="container">
         <h1 id="page-title">Let's Discuss Your Digital Transformation Needs</h1>
         <p class="lead">Tell us about your organization and our team will arrange a focused demo of the IN4 product that fits your operations.</p>
@@ -150,12 +144,12 @@
               <input class="hp-field" id="hp-lead-c" name="website" data-hp tabindex="-1" autocomplete="off" aria-hidden="true">
               <input type="hidden" name="pageSource" value="Contact page — Book a Demo">
               <div class="form-grid">
-                <div class="form-field span-2">
+                <div class="form-field">
                   <label for="lead-fullName">Full Name <span class="req">*</span></label>
                   <input class="form-input" id="lead-fullName" name="fullName" type="text" autocomplete="name" placeholder="e.g. Meera Iyer" required>
                   <span class="form-error" data-error-for="fullName" role="alert"></span>
                 </div>
-                <div class="form-field span-2">
+                <div class="form-field">
                   <label for="lead-company">Company <span class="req">*</span></label>
                   <input class="form-input" id="lead-company" name="company" type="text" autocomplete="organization" placeholder="e.g. Acme Corp" required>
                   <span class="form-error" data-error-for="company" role="alert"></span>
@@ -196,6 +190,25 @@
       </div>
     </section>
 
+    <!-- ============ MAP ============ -->
+    <section class="section section-alt contact-map-section" aria-labelledby="map-title">
+      <div class="container">
+        <div class="section-head center reveal">
+          <p class="eyebrow">Find us</p>
+          <h2 class="section-title" id="map-title">Visit Our Chennai Office</h2>
+          <p class="section-lead">No-4, 2nd Floor, Pillaiyar Kovil street, Kasi City Park, Kasi Estate, Ashok Nagar, Chennai – 600 083</p>
+        </div>
+        <div class="contact-map reveal">
+          <iframe
+            title="Map showing the IN4 Solutions office in Ashok Nagar, Chennai"
+            src="https://maps.google.com/maps?q=Ashok%20Nagar%2C%20Chennai%2C%20Tamil%20Nadu%20600083&t=&z=15&ie=UTF8&iwloc=&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+
     <!-- ============ NEXT STEPS ============ -->
     <section class="section section-alt" aria-labelledby="response-title">
       <div class="container">
@@ -221,6 +234,7 @@
 <script defer src="js/site.js"></script>
   <script defer src="js/shell.js"></script>
   <script defer src="js/lead.js"></script>
+<script defer src="js/demo-modal.js"></script>
   <script defer src="js/main.js"></script>
 </body>
 </html>

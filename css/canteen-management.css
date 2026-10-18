@@ -1,0 +1,185 @@
+/* ==========================================================================
+   Canteen Management — page colour system
+   The same four devices used on the HRMS, Attendance and Leave pages:
+   dual-colour headings, a tapered gradient rule under every section title,
+   gradient icon plates, and a properly spaced lead band. The colour code is
+   this module's home page menu tab accent (--acc #F59E0B / soft #FEF6E7),
+   deepened at the start of the ramp.
+   Scoped to .page-canteen so no other product page is affected.
+   ========================================================================== */
+
+/* ---- Hero: no breadcrumb band, no photo strip ---------------------------
+   The breadcrumb band (which also carried the shared background photo) is
+   gone from the markup, so the hero keeps its own top spacing and gets a
+   painted brand background with soft blooms instead. */
+.page-canteen .page-hero {
+  padding-top: clamp(2.5rem, 5vw, 4rem);
+  background:
+    radial-gradient(720px 420px at 90% -12%, rgba(245, 158, 11, 0.16), transparent 70%),
+    radial-gradient(620px 420px at 4% 108%, rgba(101, 40, 247, 0.12), transparent 70%),
+    linear-gradient(180deg, #fffaf0 0%, #fdf7ff 58%, #ffffff 100%);
+}
+
+.page-canteen .page-hero::before {
+  background: radial-gradient(closest-side, rgba(245, 158, 11, 0.16), transparent 70%);
+}
+
+.page-canteen .page-hero::after {
+  background: radial-gradient(closest-side, rgba(101, 40, 247, 0.12), transparent 70%);
+}
+
+/* ---- Dual-colour headings: solid ink + ONE gradient accent phrase -------- */
+.page-canteen .section-title em.ct-dual,
+.page-canteen .inner-hero-copy h1 .grad-green {
+  background: linear-gradient(96deg, #b45309 0%, #f59e0b 55%, #fcd34d 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  font-style: normal;
+}
+
+/* ---- Tapered accent rule under every section title ---------------------- */
+.page-canteen .section-title { position: relative; }
+
+.page-canteen .section-title::after {
+  content: "";
+  display: block;
+  width: 148px;
+  max-width: 42%;
+  height: 3px;
+  margin-top: 14px;
+  border-radius: 999px;
+  background: linear-gradient(90deg,
+    #b45309 0%, #f59e0b 30%, #fbbf24 62%, #fde68a 100%);
+  -webkit-mask-image: linear-gradient(90deg, #000 0%, #000 58%, transparent 100%);
+  mask-image: linear-gradient(90deg, #000 0%, #000 58%, transparent 100%);
+  box-shadow: 0 6px 16px rgba(245, 158, 11, 0.28);
+}
+
+.page-canteen .section-head.center .section-title::after { margin-inline: auto; }
+
+/* ---- Feature card headings carry the same ramp ---------------------------
+   The body copy stays neutral so the page keeps one clear voice, but every
+   feature / step / chip heading is filled with the module gradient. */
+.page-canteen .feature-card h3,
+.page-canteen .process-step h3 {
+  background: linear-gradient(96deg, #b45309 0%, #f59e0b 55%, #fcd34d 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ---- How it works: step numbers in the page's primary colour ------------
+   The step discs pick up the same amber ramp as the headings, so the section
+   no longer switches to the shared purple used by other pages. */
+.page-canteen .process-step .step-num {
+  background: linear-gradient(135deg, #b45309 0%, #f59e0b 55%, #fcd34d 100%);
+  color: #ffffff;
+  box-shadow: 0 8px 18px rgba(245, 158, 11, 0.28);
+}
+
+.page-canteen .process-step .step-num:hover {
+  background: linear-gradient(135deg, #92400e 0%, #d97706 60%, #fbbf24 100%);
+}
+
+.page-canteen .process-arrow { color: #f59e0b; }
+
+/* ---- Use cases: full container width -------------------------------------
+   The shared chip row is a wrapping flex row capped at 820px, which leaves
+   ragged edges at container width. Here it becomes an even grid so all six
+   chips line up column for column across the section. */
+.page-canteen .use-case-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  max-width: none;
+  width: 100%;
+}
+
+.page-canteen .use-case-chip {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+  padding: 16px 22px;
+  border-radius: var(--r-lg);
+  font-size: 15px;
+  color: #92400e;
+  font-weight: 700;
+}
+
+@media (max-width: 900px) {
+  .page-canteen .use-case-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 600px) {
+  .page-canteen .use-case-grid { grid-template-columns: 1fr; }
+}
+
+/* ---- Icon plates: gradient tile, white glyph ---------------------------- */
+.page-canteen .icon-badge {
+  background-image: var(--plate, linear-gradient(135deg, #b45309 0%, #f59e0b 55%, #fcd34d 100%));
+  background-color: transparent;
+  border-color: transparent;
+  color: #ffffff;
+  box-shadow: var(--plate-shadow, 0 8px 18px rgba(245, 158, 11, 0.26));
+}
+
+.page-canteen .icon-badge .ico {
+  background-image: none;
+  color: #ffffff;
+  -webkit-text-fill-color: #ffffff;
+}
+
+/* ---- Glyph sizing and centring ------------------------------------------
+   FA glyphs scale with font-size, so a fixed width/height smaller than the
+   inherited 18px clips them and pushes them off centre. Inside a plate the
+   glyph is also a flex box, so it centres on the tile. */
+.page-canteen .ico {
+  width: 1em;
+  height: 1em;
+  line-height: 1;
+  vertical-align: middle;
+}
+
+.page-canteen .icon-badge .ico,
+.page-canteen .use-case-chip .ico {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  text-align: center;
+}
+
+/* ---- Lead band: checklist spacing + tinted tick (HRMS pattern) ---------- */
+.page-canteen .lead-band .lead-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin: 26px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.page-canteen .lead-band .lead-list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 15px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.page-canteen .lead-band .lead-list .ico {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  font-size: 16px;
+  line-height: 1;
+  color: #fde68a;
+}

@@ -1,4 +1,4 @@
-﻿/* ============ Visitor Management â€” page-specific layouts ============ */
+/* ============ Visitor Management â€” page-specific layouts ============ */
 
 /* --- Hero layered visual --- */
 .vm-hero-visual { position: relative; }
@@ -97,24 +97,9 @@
 .vm-stage h3 { font-size: 17px; margin-bottom: 6px; }
 .vm-stage > p { font-size: 14.5px; color: var(--text-muted); margin-bottom: 16px; }
 .vm-stage .benefit-list { margin-bottom: 0; }
-.vm-flow-arrow { align-self: center; color: var(--purple-300); font-size: 20px; }
 
 /* --- Section 4: benefits split --- */
-.vm-benefits { display: grid; grid-template-columns: 1fr 1.4fr; gap: clamp(2rem, 5vw, 4rem); align-items: start; }
-.vm-brow {
-  display: flex;
-  align-items: flex-start;
-  gap: 16px;
-  padding: 20px 0;
-  border-bottom: 1px solid var(--border-soft);
-  transition: padding-left .25s var(--ease);
-}
-.vm-brow:first-child { padding-top: 0; }
-.vm-brow:last-child { border-bottom: 0; }
-.vm-brow:hover { padding-left: 8px; }
 .vm-brow .icon-badge { width: 46px; height: 46px; border-radius: 13px; flex-shrink: 0; }
-.vm-brow h3 { font-size: 16.5px; margin-bottom: 4px; }
-.vm-brow p { font-size: 14.5px; color: var(--text-muted); }
 
 /* --- Section 5: integration split (visual left) --- */
 .vm-int-block + .vm-int-block { margin-top: 26px; padding-top: 26px; border-top: 1px solid var(--border-soft); }
@@ -140,7 +125,6 @@
   inset: 0;
   background: radial-gradient(closest-side at 70% 20%, rgba(101,40,247,.12), transparent 70%);
 }
-.vm-facility-icons { display: grid; grid-template-columns: repeat(2, 64px); gap: 18px; position: relative; }
 .vm-facility-icons .icon-badge { width: 64px; height: 64px; border-radius: 18px; background: #fff; color: var(--purple-600); box-shadow: var(--shadow-sm); }
 .vm-facility-icons .icon-badge .ico { width: 26px; height: 26px; }
 .vm-irow {
@@ -233,22 +217,10 @@
 }
 
 /* --- Full-width final CTA --- */
-.vm-cta { position: relative; overflow: hidden; padding: clamp(3.5rem, 7vw, 6rem) 0; background: linear-gradient(135deg, #4c1dc8 0%, #6528f7 45%, #8f6bff 100%); }
-.vm-cta-bg { position: absolute; inset: 0; background: radial-gradient(closest-side at 12% 20%, rgba(255,255,255,.18), transparent 60%), radial-gradient(closest-side at 88% 80%, rgba(151,215,95,.22), transparent 62%), repeating-linear-gradient(115deg, rgba(255,255,255,.05) 0 2px, transparent 2px 26px); }
-.vm-cta-inner { position: relative; z-index: 1; display: grid; grid-template-columns: 1.25fr 1fr; gap: clamp(2rem, 5vw, 4rem); align-items: center; }
 .vm-cta-copy .eyebrow { color: #FFFFFF; }
 .vm-cta-copy .eyebrow::before { background: #97d75f; }
-.vm-cta-copy h2 { color: #fff; font-size: clamp(1.9rem, 3vw, 3.1rem); font-weight: 800; letter-spacing: -0.025em; margin: 12px 0 16px; }
-.vm-cta-copy p { color: rgba(255,255,255,.85); font-size: 16.5px; max-width: 52ch; }
-.vm-cta-actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 30px; }
-.vm-cta-side { display: flex; flex-direction: column; gap: 14px; }
-.vm-cta-card { display: flex; align-items: center; gap: 14px; background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.2); backdrop-filter: blur(6px); border-radius: var(--r-lg); padding: 16px 18px; color: #fff; transition: transform .25s var(--ease), background .25s var(--ease); }
-.vm-cta-card:hover { transform: translateX(-6px); background: rgba(255,255,255,.16); }
 .vm-cta-card .icon-badge { width: 42px; height: 42px; border-radius: 12px; }
-.vm-cta-card strong { display: block; font-family: "Plus Jakarta Sans", sans-serif; font-size: 15px; }
-.vm-cta-card span { font-size: 13px; color: rgba(255,255,255,.75); }
 @media (max-width: 900px) {
-  .vm-cta-inner { grid-template-columns: 1fr; }
 }
 
 /* --- Tinted section variants --- */
@@ -259,7 +231,6 @@
 @media (max-width: 1023px) {
   .vm-journeys { grid-template-columns: 1fr; }
   .vm-flow { grid-template-columns: 1fr; }
-  .vm-benefits { grid-template-columns: 1fr; }
   .vm-showcase { grid-template-columns: 1fr; }
   .vm-asym { grid-template-columns: 1fr; }
   .vm-timeline { grid-template-columns: repeat(2, 1fr); }
@@ -273,4 +244,211 @@
   .vm-irow .icon-badge { width: 40px; height: 40px; }
   .vm-big-visual { grid-template-columns: 1fr; }
   .vm-steps::before { left: 21px; }
+}
+
+/* ==========================================================================
+   Visitor Management — brand colour system
+   Same devices as the HRMS / Attendance / Leave / Canteen / AI pages: dual
+   colour headings, a tapered gradient rule under every section title, pink
+   icon plates, glyph centring and a two-column lead form. The colour code is
+   this module's home page menu tab accent (--acc #EC4899 / soft #FDF2F8).
+   ========================================================================== */
+
+/* ---- Hero: no breadcrumb band, no photo strip ---------------------------
+   The breadcrumb band (which carried the shared background photo) is gone
+   from the markup, so the hero keeps its own top spacing and gets a painted
+   brand background with soft blooms instead. */
+.page-visitor .page-hero {
+  padding-top: clamp(2.5rem, 5vw, 4rem);
+  background:
+    radial-gradient(720px 420px at 90% -12%, rgba(236, 72, 153, 0.14), transparent 70%),
+    radial-gradient(620px 420px at 4% 108%, rgba(108, 53, 255, 0.12), transparent 70%),
+    linear-gradient(180deg, #fff7fb 0%, #fdf7ff 58%, #ffffff 100%);
+}
+
+.page-visitor .page-hero::before {
+  background: radial-gradient(closest-side, rgba(236, 72, 153, 0.14), transparent 70%);
+}
+
+.page-visitor .page-hero::after {
+  background: radial-gradient(closest-side, rgba(108, 53, 255, 0.12), transparent 70%);
+}
+
+/* ---- Dual-colour headings: solid ink + ONE gradient accent phrase -------- */
+.page-visitor .section-title em.vm-dual,
+.page-visitor .inner-hero-copy h1 .grad,
+.page-visitor .vm-brow h3,
+.page-visitor .vm-feature h3 {
+  background: linear-gradient(96deg, #be185d 0%, #ec4899 55%, #f9a8d4 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  font-style: normal;
+}
+
+/* ---- Tapered accent rule under every section title ---------------------- */
+.page-visitor .section-title { position: relative; }
+
+.page-visitor .section-title::after {
+  content: "";
+  display: block;
+  width: 148px;
+  max-width: 42%;
+  height: 3px;
+  margin-top: 14px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #be185d 0%, #ec4899 30%, #f472b6 62%, #fbcfe8 100%);
+  -webkit-mask-image: linear-gradient(90deg, #000 0%, #000 58%, transparent 100%);
+  mask-image: linear-gradient(90deg, #000 0%, #000 58%, transparent 100%);
+  box-shadow: 0 6px 16px rgba(236, 72, 153, 0.26);
+}
+
+.page-visitor .section-head.center .section-title::after { margin-inline: auto; }
+
+/* ---- Icon plates: gradient tile, white glyph ----------------------------
+   The CTA band sets its own inline colours on its badges, which win over
+   this rule, so the dark band keeps its translucent white tiles. */
+.page-visitor .icon-badge {
+  background-image: var(--plate, linear-gradient(135deg, #be185d 0%, #ec4899 55%, #f9a8d4 100%));
+  background-color: transparent;
+  border-color: transparent;
+  color: #ffffff;
+  box-shadow: var(--plate-shadow, 0 8px 18px rgba(236, 72, 153, 0.24));
+}
+
+.page-visitor .icon-badge .ico {
+  background-image: none;
+  color: #ffffff;
+  -webkit-text-fill-color: #ffffff;
+}
+
+/* step and row numbers in the page's primary colour */
+.page-visitor .vm-irow .num,
+.page-visitor .vm-step .num,
+.page-visitor .vm-tstep .num { color: #ec4899; }
+
+/* the numbered discs get the page's gradient plate, matching the icon tiles */
+.page-visitor .vm-tstep .num {
+  border-color: #f472b6;
+  background: #fdf2f8;
+}
+
+.page-visitor .vm-tstep:hover .num {
+  background: linear-gradient(135deg, #be185d 0%, #ec4899 55%, #f9a8d4 100%);
+  border-color: transparent;
+  color: #ffffff;
+  box-shadow: 0 8px 18px rgba(236, 72, 153, 0.30);
+}
+
+/* ---- Alternating image / text sides -------------------------------------
+   The interface section puts its visual on the left; this one flips it so the
+   visual sits on the right, giving the page the expected left/right rhythm.
+   The column ratio is mirrored too, so the copy still gets the wider track. */
+.page-visitor .vm-showcase--flip { grid-template-columns: 1.2fr 1fr; }
+.page-visitor .vm-showcase--flip > .reveal { order: 2; }
+.page-visitor .vm-showcase--flip > div:last-child { order: 1; }
+
+@media (max-width: 900px) {
+  /* single column: copy first, then the visual */
+  .page-visitor .vm-showcase--flip > .reveal { order: 2; }
+  .page-visitor .vm-showcase--flip > div:last-child { order: 1; }
+}
+
+/* ---- Retint: page components that were still on the shared purple -------
+   The section shell (header, footer, lead band) stays brand purple; only the
+   page's own components move to the module's pink ramp, so nothing clashes
+   with the site chrome. */
+.page-visitor .vm-float .ico { color: #ec4899; }
+.page-visitor .vm-journey-media {
+  background: linear-gradient(160deg, #fdf2f8, #fff);
+  border-color: #f9a8d4;
+}
+.page-visitor .vm-steps::before {
+  left: 22px;
+  background: linear-gradient(180deg, #fbcfe8, #fde2ee);
+}
+.page-visitor .vm-stage:hover { border-color: #f9a8d4; }
+.page-visitor .vm-stage::before {
+  background: linear-gradient(135deg, #be185d 0%, #ec4899 55%, #f9a8d4 100%);
+  box-shadow: 0 8px 18px rgba(236, 72, 153, 0.26);
+}
+.page-visitor .vm-flow-arrow { color: #f472b6; }
+.page-visitor .vm-facility {
+  background: linear-gradient(160deg, #fde7f3, #ffffff 55%, #fbe3ef);
+  border-color: #fbcfe8;
+}
+.page-visitor .vm-facility::before {
+  background: radial-gradient(closest-side at 70% 20%, rgba(236, 72, 153, 0.12), transparent 70%);
+}
+.page-visitor .vm-facility-icons .icon-badge { background: #fff; }
+.page-visitor .vm-irow:hover { border-color: #fbcfe8; }
+.page-visitor .vm-irow.active { border-color: #f9a8d4; }
+.page-visitor .vm-big {
+  background: linear-gradient(160deg, #fdf2f8, #ffffff 60%);
+  border-color: #fbcfe8;
+}
+.page-visitor .vm-big-visual span { border-color: #fbcfe8; color: #9d174d; }
+.page-visitor .vm-big-visual .ico { color: #ec4899; }
+.page-visitor .vm-timeline::before {
+  background: linear-gradient(90deg, #fbcfe8, #f472b6, #fbcfe8);
+}
+
+/* ---- Spacing pass -------------------------------------------------------
+   Component rows sit flush against each other on small screens; give the
+   stacked layouts room to breathe. */
+.page-visitor .vm-step { padding: 12px 0; }
+.page-visitor .vm-irow { padding: 18px 16px; gap: 14px; }
+.page-visitor .vm-srow { padding: 20px 0; }
+.page-visitor .vm-int-block + .vm-int-block { margin-top: 28px; padding-top: 28px; }
+.page-visitor .vm-big-visual { gap: 12px; }
+
+@media (max-width: 900px) {
+  .page-visitor .vm-step { padding: 14px 0; }
+  .page-visitor .vm-irow { padding: 16px 12px; }
+}
+
+/* ---- Glyph sizing and centring ------------------------------------------
+   FA glyphs scale with font-size, so a fixed width/height smaller than the
+   inherited size clipped them and pushed them off centre. */
+.page-visitor .ico {
+  width: 1em;
+  height: 1em;
+  line-height: 1;
+  vertical-align: middle;
+}
+
+.page-visitor .icon-badge .ico {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  text-align: center;
+}
+
+/* ---- Lead band: checklist spacing + tinted tick (HRMS pattern) ---------- */
+.page-visitor .lead-band .lead-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin: 26px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.page-visitor .lead-band .lead-list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 15px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.page-visitor .lead-band .lead-list .ico {
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  font-size: 16px;
+  color: #f9a8d4;
 }

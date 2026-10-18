@@ -15,11 +15,11 @@
   font-style: normal;
 }
 
-/* gradient plate + white glyph, exactly like the home page feature tiles.
-   The plate itself is scattered per tile by js/hrms-icon-palette.js, which
-   writes --plate / --plate-shadow; the values here are the safe default. */
+/* the page's dual brand gradient — identical to the .hr-dual title phrase —
+   as a solid plate with a white glyph. js/hrms-icon-palette.js writes the same
+   values into --plate / --plate-shadow; these are the no-JS defaults. */
 .page-hrms .icon-badge {
-  background-image: var(--plate, linear-gradient(135deg, #6C35FF, #8B5CF6));
+  background-image: var(--plate, linear-gradient(96deg, #6C35FF 0%, #8B5CF6 46%, #0E8C9B 100%));
   border-color: transparent;
   color: #ffffff;
   box-shadow: var(--plate-shadow, 0 8px 18px rgba(108, 53, 255, 0.22));
@@ -45,6 +45,8 @@
    language as the home page) instead of the shared .page-hero-bg photo
    strip used by the other inner pages. */
 .page-hrms .page-hero {
+  padding-top: clamp(3rem, 6vw, 4.75rem);
+  padding-bottom: clamp(3rem, 6vw, 4.75rem);
   background:
     radial-gradient(760px 420px at 88% -10%, rgba(101, 40, 247, 0.16), transparent 70%),
     radial-gradient(620px 420px at 6% 110%, rgba(114, 191, 68, 0.14), transparent 70%),
@@ -534,3 +536,14 @@ section[id], [id="modules"], [id="lead"], [id="features"] { scroll-margin-top: 9
   .hr-sizes-cta .btn { width: 100%; }
   .hr-sizes-cta p { font-size: 14.5px; }
 }
+
+/* ---- Hero spacing --------------------------------------------------------
+   The breadcrumb band was removed from this page, so the hero supplies its
+   own balanced top and bottom spacing instead of inheriting the shared strip.
+   Content is deliberately trimmed (badge, title, one lead, two CTAs) so the
+   copy column stays short and the carousel keeps the visual balance. */
+.page-hrms .inner-hero { align-items: center; }
+
+.page-hrms .inner-hero-copy .lead { margin-top: 16px; }
+
+.page-hrms .inner-hero-ctas { margin-top: 24px; }

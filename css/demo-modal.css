@@ -1,0 +1,109 @@
+/* ==========================================================================
+   Book a Demo popup
+   A modal dialog used by the header / mobile menu / sticky CTA. It reuses the
+   site lead form classes and the validation + submission handler in js/lead.js,
+   so a popup enquiry behaves exactly like the inline forms.
+   ========================================================================== */
+
+.demo-modal[hidden] { display: none; }
+
+.demo-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1200;
+  display: grid;
+  place-items: center;
+  padding: clamp(1rem, 3vw, 2rem);
+}
+
+.demo-modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(15, 14, 32, 0.62);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  animation: demoFade 0.2s var(--ease);
+}
+
+.demo-modal__panel {
+  position: relative;
+  width: min(720px, 100%);
+  max-height: calc(100vh - clamp(2rem, 6vw, 4rem));
+  overflow-y: auto;
+  background: #ffffff;
+  border-radius: var(--r-xl);
+  border: 1px solid var(--border);
+  box-shadow: 0 40px 90px -30px rgba(24, 22, 50, 0.45);
+  animation: demoPop 0.25s var(--ease);
+}
+
+@keyframes demoFade {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes demoPop {
+  from { opacity: 0; transform: translateY(18px) scale(0.98); }
+  to   { opacity: 1; transform: none; }
+}
+
+.demo-modal__head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 26px 28px 18px;
+  border-bottom: 1px solid var(--border-soft);
+}
+
+.demo-modal__head h2 {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: clamp(1.25rem, 1.6vw + 0.8rem, 1.6rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--in4-navy);
+  margin: 0 0 6px;
+}
+
+.demo-modal__head p {
+  font-size: 14.5px;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.demo-modal__close {
+  flex: 0 0 auto;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: #fff;
+  color: var(--text-muted);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: background-color 0.2s var(--ease), color 0.2s var(--ease), transform 0.2s var(--ease);
+}
+
+.demo-modal__close:hover {
+  background: var(--in4-bg-soft);
+  color: var(--in4-navy);
+  transform: rotate(90deg);
+}
+
+.demo-modal__body { padding: 24px 28px 28px; }
+
+.demo-modal .form-grid { row-gap: 16px; }
+
+body.demo-modal-open { overflow: hidden; }
+
+@media (max-width: 640px) {
+  .demo-modal { padding: 0; align-items: end; }
+  .demo-modal__panel {
+    width: 100%;
+    max-height: 92vh;
+    border-radius: var(--r-xl) var(--r-xl) 0 0;
+  }
+  .demo-modal__head { padding: 22px 20px 16px; }
+  .demo-modal__body { padding: 20px; }
+}

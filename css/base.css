@@ -6,7 +6,6 @@
 
 :root {
   /* Brand — purple */
-  --purple-900: #2b0d73;
   --purple-800: #3b169b;
   --purple-700: #4c1dc8;
   --purple-600: #6528f7;
@@ -23,7 +22,6 @@
   --green-500: #72bf44;
   --green-400: #88d55b;
   --green-300: #a7df80;
-  --green-200: #c5ecab;
   --green-100: #e3f4d5;
   --green-50: #f4faee;
 
@@ -45,7 +43,6 @@
   /* Gradients */
   --grad-purple: linear-gradient(135deg, #6528f7 0%, #7b4bff 55%, #9779ff 100%);
   --grad-green: linear-gradient(135deg, #72bf44 0%, #97d75f 100%);
-  --grad-hero: linear-gradient(180deg, #f6f2ff 0%, #ffffff 100%);
 
   /* Radii */
   --r-sm: 10px;
@@ -66,19 +63,13 @@
   --in4-green-dark: #3E8E2D;
   --in4-green-soft: #F1F9EC;
 
-  --in4-blue: #3B82F6;
   --in4-cyan: #22C7D6;
-  --in4-orange: #F59E0B;
-  --in4-pink: #EC4899;
-  --in4-violet: #8B5CF6;
 
   --in4-navy: #111827;
   --in4-text-muted: #5F6472;
 
   --in4-bg-soft: #F8F9FC;
   --in4-border: #E7E8EE;
-  --in4-dark: #15172E;
-  --in4-dark-purple: #211B46;
 
   /* Layout */
   --container: 1240px;
