@@ -16,6 +16,7 @@
     "attendance-management.html": "attendance",
     "canteen-management.html": "canteen",
     "leave-management.html": "leave",
+    "performance-management.html": "performance",
     "ai-video-analytics.html": "ai-video",
     "about.html": "company",
     "contact.html": "contact",
@@ -23,7 +24,7 @@
     "pricing.html": "pricing"
   }[currentFile] || "home";
 
-  const isProductPage = ["hrms", "visitor", "parking", "attendance", "leave", "ai-video", "ai-camera"].indexOf(pageKey) !== -1;
+  const isProductPage = ["hrms", "visitor", "parking", "attendance", "leave", "performance", "ai-video", "ai-camera"].indexOf(pageKey) !== -1;
 
   function active(href, key) {
     const isActive = (href && currentFile === href) || pageKey === key;
@@ -61,14 +62,17 @@
     '<div class="mega-inner">' +
     '<div class="mega-col"><span class="mega-title">HRMS &mdash; Cloud HR &amp; Payroll</span><div class="mega-links">' +
     '<a href="hrms.html"><i class="ico fa-solid fa-cloud" aria-hidden="true"></i> HRMS</a>' +
-    '<a href="attendance-management.html"><i class="ico fa-solid fa-fingerprint" aria-hidden="true"></i> Attendance Management</a>' +
-    '<a href="canteen-management.html"><i class="ico fa-solid fa-utensils" aria-hidden="true"></i> Canteen Management</a>' +
+    '<a href="attendance-management.html"><i class="ico fa-solid fa-fingerprint" aria-hidden="true"></i> Time &amp; Attendance Management</a>' +
     '<a href="leave-management.html"><i class="ico fa-solid fa-calendar-check" aria-hidden="true"></i> Leave Management</a>' +
     '<a href="hrms.html#modules"><i class="ico fa-solid fa-money-check-dollar" aria-hidden="true"></i> Payroll Processing</a>' +
     '<a href="hrms.html#modules"><i class="ico fa-solid fa-shield-halved" aria-hidden="true"></i> Compliance</a>' +
-    '<a href="hrms.html#modules"><i class="ico fa-solid fa-mobile-screen" aria-hidden="true"></i> Employee Self Service</a>' +
+    '<a href="hrms.html#ess"><i class="ico fa-solid fa-mobile-screen" aria-hidden="true"></i> ESS Mobile App</a>' +
+    '<a href="hrms.html#modules"><i class="ico fa-solid fa-user-plus" aria-hidden="true"></i> Recruitment</a>' +
+    '<a href="performance-management.html"><i class="ico fa-solid fa-chart-line" aria-hidden="true"></i> Performance Management</a>' +
+    '<a href="hrms.html#training"><i class="ico fa-solid fa-graduation-cap" aria-hidden="true"></i> Training &amp; Learning</a>' +
     "</div></div>" +
     '<div class="mega-col"><span class="mega-title">Workplace Modules</span><div class="mega-links">' +
+    '<a href="canteen-management.html"><i class="ico fa-solid fa-utensils" aria-hidden="true"></i> Canteen Management</a>' +
     '<a href="visitor-management.html"><i class="ico fa-solid fa-user-check" aria-hidden="true"></i> Visitor Management</a>' +
     '<a href="parking-management.html"><i class="ico fa-solid fa-square-parking" aria-hidden="true"></i> Parking Management</a>' +
     '<a href="ai-video-analytics.html"><i class="ico fa-solid fa-video" aria-hidden="true"></i> AI-Based Video Analytics</a>' +
@@ -99,7 +103,18 @@
     '<button class="mobile-nav-link acc-trigger" type="button" aria-expanded="false" aria-controls="m-acc-product">' +
     'Products<i class="ico ico-chev fa-solid fa-chevron-down" aria-hidden="true"></i></button>' +
     '<div class="mobile-sub" id="m-acc-product"><div class="mobile-sub-inner"><div class="mobile-sub-links">' +
-    '<a href="hrms.html"><i class="ico fa-solid fa-cloud" aria-hidden="true"></i> HRMS &mdash; Cloud HR &amp; Payroll</a>' +
+    '<span class="mobile-sub-title">HRMS &mdash; Cloud HR &amp; Payroll</span>' +
+    '<a href="hrms.html"><i class="ico fa-solid fa-cloud" aria-hidden="true"></i> HRMS</a>' +
+    '<a href="attendance-management.html"><i class="ico fa-solid fa-fingerprint" aria-hidden="true"></i> Time &amp; Attendance Management</a>' +
+    '<a href="leave-management.html"><i class="ico fa-solid fa-calendar-check" aria-hidden="true"></i> Leave Management</a>' +
+    '<a href="hrms.html#modules"><i class="ico fa-solid fa-money-check-dollar" aria-hidden="true"></i> Payroll Processing</a>' +
+    '<a href="hrms.html#modules"><i class="ico fa-solid fa-shield-halved" aria-hidden="true"></i> Compliance</a>' +
+    '<a href="hrms.html#ess"><i class="ico fa-solid fa-mobile-screen" aria-hidden="true"></i> ESS Mobile App</a>' +
+    '<a href="hrms.html#modules"><i class="ico fa-solid fa-user-plus" aria-hidden="true"></i> Recruitment</a>' +
+    '<a href="performance-management.html"><i class="ico fa-solid fa-chart-line" aria-hidden="true"></i> Performance Management</a>' +
+    '<a href="hrms.html#training"><i class="ico fa-solid fa-graduation-cap" aria-hidden="true"></i> Training &amp; Learning</a>' +
+    '<span class="mobile-sub-title">Workplace Modules</span>' +
+    '<a href="canteen-management.html"><i class="ico fa-solid fa-utensils" aria-hidden="true"></i> Canteen Management</a>' +
     '<a href="visitor-management.html"><i class="ico fa-solid fa-user-check" aria-hidden="true"></i> Visitor Management</a>' +
     '<a href="parking-management.html"><i class="ico fa-solid fa-square-parking" aria-hidden="true"></i> Parking Management</a>' +
     '<a href="ai-video-analytics.html"><i class="ico fa-solid fa-video" aria-hidden="true"></i> AI-Based Video Analytics</a>' +
@@ -145,7 +160,7 @@
     '<li><a href="visitor-management.html">Visitor Management</a></li>' +
     '<li><a href="parking-management.html">Parking Management</a></li>' +
     '<li><a href="leave-management.html">Leave Management</a></li>' +
-    '<li><a href="hrms.html#modules">Canteen Management</a></li>' +
+    '<li><a href="canteen-management.html">Canteen Management</a></li>' +
     '<li><a href="ai-video-analytics.html">AI-Based Video Analytics</a></li>' +
     "</ul></div>" +
     '<div class="footer-col"><h4 class="foot-trigger" role="button" tabindex="0" aria-expanded="false">Company<i class="ico fa-solid fa-chevron-down foot-caret" aria-hidden="true"></i></h4><ul>' +

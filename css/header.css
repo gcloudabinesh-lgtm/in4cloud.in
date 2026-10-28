@@ -486,6 +486,17 @@ a.nav-link.active::after {
 
 .mobile-sub-links a:hover { transform: translateX(4px); }
 
+.mobile-sub-title {
+  display: block;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--green-600);
+  padding: 12px 10px 4px;
+}
+
 .mobile-sub-links a .ico { width: 16px; height: 16px; color: var(--purple-500); }
 .mobile-sub-links a:hover { background: var(--purple-50); color: var(--purple-700); }
 
