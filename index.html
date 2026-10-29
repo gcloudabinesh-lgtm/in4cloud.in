@@ -456,56 +456,62 @@
             <p style="margin-top:26px"><a class="btn btn-primary" href="attendance-management.html">Explore Built-In Device Management <i class="ico fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
           </div>
 
-          <!-- Biometric showcase: face recognition + fingerprint scene, with
-               four pop-out cards placed in the image's empty corners. -->
+          <!-- Biometric showcase, dual concept: a face scan panel and a
+               fingerprint panel side by side on white, each with live scan
+               indicators, an icon bar across them and two pop-out cards. -->
           <div class="bx-stage reveal reveal-right" style="--rd:.1s">
-            <figure class="bx-shot">
-              <img src="assets/Biometric/bio.jpg" alt="Employee verified by a face recognition terminal while a colleague marks attendance on a fingerprint reader" width="1254" height="1254" loading="lazy" decoding="async">
-              <!-- animated scan indicators, drawn on the artwork's 1254px grid -->
-              <svg class="bx-fx" viewBox="0 0 1254 1254" aria-hidden="true" focusable="false">
-                <defs>
-                  <linearGradient id="bxLineGrad" x1="0" x2="1">
-                    <stop offset="0" stop-color="#22C7D6" stop-opacity="0" />
-                    <stop offset=".5" stop-color="#7DF9FF" />
-                    <stop offset="1" stop-color="#22C7D6" stop-opacity="0" />
-                  </linearGradient>
-                  <linearGradient id="bxTrailGrad" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="0" stop-color="#22C7D6" stop-opacity="0" />
-                    <stop offset="1" stop-color="#22C7D6" stop-opacity=".28" />
-                  </linearGradient>
-                  <clipPath id="bxFaceClip"><rect x="192" y="326" width="162" height="292" rx="10" /></clipPath>
-                </defs>
-
-                <!-- face scan: tracking brackets, sweeping line, status pill -->
-                <g class="bx-face">
-                  <path class="bx-face-box" d="M192 362 V326 H228 M318 326 H354 V362 M354 582 V618 H318 M228 618 H192 V582" />
-                  <g clip-path="url(#bxFaceClip)">
-                    <g class="bx-face-sweep">
-                      <rect x="192" y="-60" width="162" height="60" fill="url(#bxTrailGrad)" />
-                      <rect x="192" y="-3" width="162" height="5" rx="2.5" fill="url(#bxLineGrad)" />
+            <div class="bx-dual">
+              <figure class="bx-pane bx-pane--face">
+                <img src="assets/Biometric/bio-face.jpg" alt="Employee identified by a face recognition terminal" width="670" height="830" loading="lazy" decoding="async">
+                <span class="bx-pane-tag"><i class="ico fa-solid fa-face-smile" aria-hidden="true"></i>Face Scan</span>
+                <!-- face scan: tracking brackets and a sweeping line, on the photo's 670x830 grid -->
+                <svg class="bx-fx" viewBox="0 0 670 830" aria-hidden="true" focusable="false">
+                  <defs>
+                    <linearGradient id="bxLineGrad" x1="0" x2="1">
+                      <stop offset="0" stop-color="#22C7D6" stop-opacity="0" />
+                      <stop offset=".5" stop-color="#7DF9FF" />
+                      <stop offset="1" stop-color="#22C7D6" stop-opacity="0" />
+                    </linearGradient>
+                    <linearGradient id="bxTrailGrad" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0" stop-color="#22C7D6" stop-opacity="0" />
+                      <stop offset="1" stop-color="#22C7D6" stop-opacity=".28" />
+                    </linearGradient>
+                    <clipPath id="bxFaceClip"><rect x="190" y="140" width="155" height="295" rx="8" /></clipPath>
+                  </defs>
+                  <g class="bx-face">
+                    <path class="bx-face-box" d="M190 170 V140 H220 M315 140 H345 V170 M345 405 V435 H315 M220 435 H190 V405" />
+                    <g clip-path="url(#bxFaceClip)">
+                      <g class="bx-face-sweep">
+                        <rect x="190" y="-50" width="155" height="50" fill="url(#bxTrailGrad)" />
+                        <rect x="190" y="-3" width="155" height="5" rx="2.5" fill="url(#bxLineGrad)" />
+                      </g>
                     </g>
                   </g>
-                  <g class="bx-fx-tag" transform="translate(192 636)">
-                    <rect width="230" height="40" rx="20" />
-                    <circle class="bx-fx-dot is-cyan" cx="22" cy="20" r="6" />
-                    <text x="38" y="27">Scanning face&hellip;</text>
-                  </g>
-                </g>
+                </svg>
+              </figure>
 
-                <!-- fingerprint: ripples from the fingertip, matched pill -->
-                <g class="bx-finger">
-                  <circle class="bx-ripple" cx="1148" cy="690" r="34" />
-                  <circle class="bx-ripple" cx="1148" cy="690" r="34" />
-                  <circle class="bx-ripple" cx="1148" cy="690" r="34" />
-                  <circle class="bx-finger-core" cx="1148" cy="690" r="9" />
-                  <g class="bx-fx-tag is-green" transform="translate(936 470)">
-                    <rect width="290" height="40" rx="20" />
-                    <circle class="bx-fx-dot" cx="22" cy="20" r="6" />
-                    <text x="38" y="27">Fingerprint matched</text>
+              <figure class="bx-pane bx-pane--finger">
+                <img src="assets/Biometric/bio-man.jpg" alt="Employee marking attendance on a fingerprint reader" width="680" height="710" loading="lazy" decoding="async">
+                <span class="bx-pane-tag is-green"><i class="ico fa-solid fa-fingerprint" aria-hidden="true"></i>Fingerprint</span>
+                <!-- fingerprint: ripples from the fingertip, on the photo's 680x710 grid -->
+                <svg class="bx-fx" viewBox="0 0 680 710" aria-hidden="true" focusable="false">
+                  <g class="bx-finger">
+                    <circle class="bx-ripple" cx="572" cy="478" r="22" />
+                    <circle class="bx-ripple" cx="572" cy="478" r="22" />
+                    <circle class="bx-ripple" cx="572" cy="478" r="22" />
+                    <circle class="bx-finger-core" cx="572" cy="478" r="6" />
                   </g>
-                </g>
-              </svg>
-            </figure>
+                </svg>
+              </figure>
+
+              <!-- attendance methods -->
+              <ul class="bx-iconbar">
+                <li><span class="bx-card-ico is-green"><i class="ico fa-solid fa-fingerprint" aria-hidden="true"></i></span>Fingerprint</li>
+                <li><span class="bx-card-ico"><i class="ico fa-solid fa-face-smile" aria-hidden="true"></i></span>Face ID</li>
+                <li><span class="bx-card-ico is-amber"><i class="ico fa-solid fa-id-card" aria-hidden="true"></i></span>RFID Card</li>
+                <li><span class="bx-card-ico is-blue"><i class="ico fa-solid fa-door-open" aria-hidden="true"></i></span>Access Control</li>
+              </ul>
+            </div>
 
             <div class="bx-cards">
               <div class="bx-card bx-card--face">
@@ -513,25 +519,10 @@
                 <span class="bx-mini"><b>Face Recognition</b><em>Touchless, fast identification</em></span>
               </div>
 
-              <div class="bx-card bx-card--wifi">
-                <span class="bx-card-ico is-cyan"><i class="ico fa-solid fa-wifi" aria-hidden="true"></i></span>
-                <span class="bx-mini"><b>Wi-Fi Connectivity</b><em>Wireless, real-time sync</em></span>
-                <span class="bx-pill is-on"><span class="bx-pulse"></span>Live</span>
-              </div>
-
-              <div class="bx-card bx-card--access">
-                <span class="bx-card-ico is-blue"><i class="ico fa-solid fa-door-open" aria-hidden="true"></i></span>
-                <span class="bx-mini"><b>Access Control</b><em>Doors, gates &amp; turnstiles</em></span>
-              </div>
-
-              <div class="bx-card bx-card--rfid">
-                <span class="bx-card-ico is-amber"><i class="ico fa-solid fa-id-card" aria-hidden="true"></i></span>
-                <span class="bx-mini"><b>RFID</b><em>Card &amp; tag check-in</em></span>
-              </div>
-
               <div class="bx-card bx-card--finger">
-                <span class="bx-card-ico is-green"><i class="ico fa-solid fa-fingerprint" aria-hidden="true"></i></span>
-                <span class="bx-mini"><b>Fingerprint Attendance</b><em>Every punch synced instantly</em></span>
+                <img class="bx-device" src="assets/Biometric/K40-pro.png" alt="" width="219" height="219" loading="lazy" decoding="async">
+                <span class="bx-mini"><b>Fingerprint Machine</b><em>Punch synced instantly</em></span>
+                <span class="bx-pill is-on"><span class="bx-pulse"></span>Live</span>
               </div>
             </div>
           </div>

@@ -1261,8 +1261,8 @@
 .bx-face-sweep { animation: bxSweep 2.6s ease-in-out infinite alternate; }
 
 @keyframes bxSweep {
-  from { transform: translateY(330px); }
-  to   { transform: translateY(616px); }
+  from { transform: translateY(284px); }
+  to   { transform: translateY(496px); }
 }
 
 .bx-ripple {
@@ -2996,4 +2996,101 @@
   }
 
   .metric-note { padding: 0 6px; }
+}
+
+/* ---- biometric showcase, dual concept: a face scan panel and a
+   fingerprint panel side by side (staggered) on white, an icon bar under
+   them and two pop-outs. Every offset is a % of the stage so it scales. ---- */
+.bx-dual { position: relative; aspect-ratio: 1 / 0.76; }
+
+.bx-pane {
+  position: absolute;
+  width: 48.5%;
+  margin: 0;
+  overflow: hidden;
+  border: 5px solid #ffffff;
+  border-radius: 24px;
+  background: #ffffff;
+  box-shadow: 0 26px 56px rgba(75, 32, 200, 0.14), 0 8px 20px rgba(17, 24, 39, 0.08);
+}
+.bx-pane img { display: block; width: 100%; height: auto; border-radius: 19px; }
+.bx-pane--face   { top: 0; left: 0; }
+.bx-pane--face img { aspect-ratio: 670 / 830; }
+.bx-pane--finger { top: 15.8%; right: 0; }
+.bx-pane--finger img { aspect-ratio: 680 / 710; }
+
+.bx-pane-tag {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 11px 5px 9px;
+  border-radius: 999px;
+  background: rgba(15, 14, 32, 0.72);
+  backdrop-filter: blur(6px);
+  color: #ffffff;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 11.5px;
+  font-weight: 700;
+}
+.bx-pane-tag .ico { width: 1em; height: 1em; color: #7DF9FF; }
+.bx-pane-tag.is-green .ico { color: #A7F36B; }
+.bx-pane--finger .bx-pane-tag { left: auto; right: 12px; }
+
+.bx-pane .bx-face-sweep { animation-name: bxSweepFace; }
+@keyframes bxSweepFace {
+  from { transform: translateY(140px); }
+  to   { transform: translateY(435px); }
+}
+
+.bx-iconbar {
+  position: absolute;
+  left: 7%;
+  right: 7%;
+  bottom: 0;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 4px;
+  margin: 0;
+  padding: 10px 8px;
+  list-style: none;
+  border: 1px solid var(--in4-border);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 14px 30px rgba(17, 24, 39, 0.12);
+}
+.bx-iconbar li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--ink-800);
+  text-align: center;
+  line-height: 1.2;
+}
+.bx-iconbar .bx-card-ico { width: 34px; height: 34px; border-radius: 50%; font-size: 14px; }
+
+/* pop-outs sit in the two empty corners */
+.bx-stage .bx-card--face   { top: 63%; left: 0; right: auto; bottom: auto; z-index: 3; }
+.bx-stage .bx-card--finger { top: 0; right: 0; left: auto; bottom: auto; padding: 6px 14px 6px 6px; animation-delay: -3.2s; }
+.bx-device { width: 50px; height: 50px; flex-shrink: 0; object-fit: contain; filter: drop-shadow(0 4px 6px rgba(17, 24, 39, 0.18)); }
+
+@media (max-width: 640px) {
+  .bx-stage .bx-cards { margin-top: 14px; }
+  .bx-stage .bx-card--face, .bx-stage .bx-card--finger { inset: auto; }
+  .bx-card--finger .bx-pill { margin-left: auto; }
+  .bx-pane { border-width: 3px; border-radius: 16px; }
+  .bx-pane img { border-radius: 13px; }
+  .bx-pane-tag { top: 7px; left: 7px; padding: 3px 8px 3px 7px; font-size: 9.5px; }
+  .bx-pane--finger .bx-pane-tag { right: 7px; }
+  .bx-iconbar { left: 3%; right: 3%; padding: 8px 4px; }
+  .bx-iconbar li { font-size: 9.5px; gap: 4px; }
+  .bx-iconbar .bx-card-ico { width: 26px; height: 26px; font-size: 11px; }
 }
