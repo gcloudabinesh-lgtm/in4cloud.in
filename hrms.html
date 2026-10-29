@@ -134,7 +134,7 @@
           </div>
 
           <!-- main dashboard shot with real screenshots popping out around it -->
-          <div class="ch-visual reveal" style="--rd:.1s">
+          <div class="ch-visual ch-visual--core reveal" style="--rd:.1s">
             <figure class="ch-main">
               <img src="assets/modules/corehr.jpg" width="1600" height="781" alt="In4 CloudHR Core HR dashboard showing headcount, present, late and absent counts, the leave calendar, check-in/out and notifications" loading="lazy" decoding="async" />
             </figure>
@@ -144,20 +144,10 @@
               <img src="assets/hrms-shots/employees.png" width="1200" height="530" alt="Employee database list with names, employee codes, departments, designations and categories" loading="lazy" decoding="async" />
             </figure>
 
-            <figure class="ch-pop ch-pop--docs">
-              <figcaption><i class="ico fa-solid fa-folder-open" aria-hidden="true"></i>Documents</figcaption>
-              <img src="assets/hrms-shots/documents.png" width="526" height="531" alt="Company and employee documents list with published policies" loading="lazy" decoding="async" />
-            </figure>
-
             <figure class="ch-pop ch-pop--charts">
               <figcaption><i class="ico fa-solid fa-chart-line" aria-hidden="true"></i>Analytics</figcaption>
               <img src="assets/hrms-shots/gender-trends.png" width="1200" height="404" alt="Gender diversity ring and attendance trend chart for the last six working days" loading="lazy" decoding="async" />
             </figure>
-
-            <div class="ch-pop ch-pop--chip" aria-hidden="true">
-              <span class="ch-chip-ico"><i class="ico fa-solid fa-user-check"></i></span>
-              <span class="ch-chip-txt"><b>2 New Joiners</b><em>Onboarded this month</em></span>
-            </div>
           </div>
         </div>
       </div>
@@ -171,11 +161,11 @@
             <p class="eyebrow reveal">Time &amp; Attendance</p>
             <h2 class="section-title reveal" id="att-title" style="margin:14px 0 20px">Attendance Management</h2>
             <div class="at-sec-rows">
-              <div class="at-row reveal"><span class="icon-badge soft-purple"><i class="ico fa-solid fa-fingerprint" aria-hidden="true"></i></span><div><h3>Biometric integration</h3><p>Biometric punches captured at the device and synced to HRMS.</p></div></div>
-              <div class="at-row reveal" style="--rd:.04s"><span class="icon-badge soft-purple"><i class="ico fa-solid fa-calendar-days" aria-hidden="true"></i></span><div><h3>Policies, shifts &amp; rotation</h3><p>Time and attendance policies, multiple shifts and automatic shift rotation.</p></div></div>
-              <div class="at-row reveal" style="--rd:.08s"><span class="icon-badge soft-purple"><i class="ico fa-solid fa-location-dot" aria-hidden="true"></i></span><div><h3>Geo-fencing &amp; GPS tagging</h3><p>Field employee attendance with geo-fencing and GPS tagging.</p></div></div>
-              <div class="at-row reveal" style="--rd:.12s"><span class="icon-badge soft-purple"><i class="ico fa-solid fa-calendar-check" aria-hidden="true"></i></span><div><h3>Requests &amp; approvals</h3><p>Manual punch, approve/reject requests with daily, weekly and monthly summaries.</p></div></div>
-              <div class="at-row reveal" style="--rd:.16s"><span class="icon-badge soft-purple"><i class="ico fa-solid fa-chart-column" aria-hidden="true"></i></span><div><h3>Patterns</h3><p>Overtime and absenteeism patterns surfaced over time.</p></div></div>
+              <div class="at-row reveal"><span class="icon-badge soft-purple"><i class="ico fa-solid fa-sliders" aria-hidden="true"></i></span><div><h3>Attendance Policies</h3><p>Map punch status, work span, late, OT and comp-off policies to employee groups, or configure them individually.</p></div></div>
+              <div class="at-row reveal" style="--rd:.04s"><span class="icon-badge soft-purple"><i class="ico fa-solid fa-calendar-days" aria-hidden="true"></i></span><div><h3>Shift Management</h3><p>Automate shifts and cut manual work — create shift patterns, bulk-assign them to employee groups or map them to individuals, with shift rosters built in.</p></div></div>
+              <div class="at-row reveal" style="--rd:.08s"><span class="icon-badge soft-purple"><i class="ico fa-solid fa-business-time" aria-hidden="true"></i></span><div><h3>Overtime Module</h3><p>Configure OT slabs and set rules for week-off and holiday OT, integrated directly with payroll.</p></div></div>
+              <div class="at-row reveal" style="--rd:.12s"><span class="icon-badge soft-purple"><i class="ico fa-solid fa-hand-pointer" aria-hidden="true"></i></span><div><h3>Punch Request</h3><p>Regularise missed punches, with configurable approval hierarchies.</p></div></div>
+              <div class="at-row reveal" style="--rd:.16s"><span class="icon-badge soft-purple"><i class="ico fa-solid fa-map-location-dot" aria-hidden="true"></i></span><div><h3>Multi-Location Attendance</h3><p>Centralise attendance data from every location and stay up to date with attendance insights.</p></div></div>
             </div>
           </div>
 
@@ -190,21 +180,46 @@
               <img src="assets/hrms-shots/attendance-live.png" width="1200" height="382" alt="Attendance today showing present, on time, late and absent counts with a weekly bar chart" loading="lazy" decoding="async" />
             </figure>
 
-            <div class="ch-pop ch-pop--sync" aria-hidden="true">
-              <span class="ch-chip-ico"><i class="ico fa-solid fa-fingerprint"></i></span>
-              <span class="ch-chip-txt"><b>41 Present Today</b><em>Synced from biometrics</em></span>
-            </div>
-
-            <figure class="ch-pop ch-pop--dept">
-              <figcaption><i class="ico fa-solid fa-chart-column" aria-hidden="true"></i>Department-wise</figcaption>
-              <img src="assets/hrms-shots/dept-attendance.png" width="1200" height="496" alt="Department-wise attendance chart" loading="lazy" decoding="async" />
-            </figure>
-
             <figure class="ch-pop ch-pop--log">
               <figcaption><i class="ico fa-solid fa-clock" aria-hidden="true"></i>Biometric time log</figcaption>
               <img src="assets/hrms-shots/time-log.png" width="1200" height="400" alt="Time log report of today's biometric swipes with the workforce movement summary" loading="lazy" decoding="async" />
             </figure>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 5b. ATTENDANCE MARKING METHODS ============ -->
+    <section class="section" aria-labelledby="marking-title">
+      <div class="container">
+        <div class="section-head center reveal">
+          <h2 class="section-title" id="marking-title">Attendance <em class="hr-dual">Marking Methods</em></h2>
+        </div>
+        <div class="am-grid">
+          <figure class="am-card reveal">
+            <img src="assets/attendance-methods/biometric.jpg" width="720" height="640" alt="Employee pressing her finger on a face and fingerprint attendance terminal" loading="lazy" decoding="async" />
+            <figcaption><span>Biometric Integrations</span><i class="ico fa-solid fa-fingerprint" aria-hidden="true"></i></figcaption>
+          </figure>
+          <figure class="am-card reveal" style="--rd:.05s">
+            <img src="assets/attendance-methods/web-signin.jpg" width="720" height="640" alt="Employee at a desk signing in to the In4 CloudHR web portal" loading="lazy" decoding="async" />
+            <figcaption><span>Web Sign-in through In4 CloudHR Portal</span><i class="ico fa-solid fa-display" aria-hidden="true"></i></figcaption>
+          </figure>
+          <figure class="am-card reveal" style="--rd:.1s">
+            <img src="assets/attendance-methods/geo-fence.jpg" width="720" height="640" alt="Office campus with a geo-fence ring and location pin around the entrance" loading="lazy" decoding="async" />
+            <figcaption><span>Geo Tag / Geo Fence</span><i class="ico fa-solid fa-location-dot" aria-hidden="true"></i></figcaption>
+          </figure>
+          <figure class="am-card reveal">
+            <img src="assets/attendance-methods/gps-tracking.jpg" width="720" height="640" alt="Car leaving the office gate with its live GPS route traced on the road" loading="lazy" decoding="async" />
+            <figcaption><span>GPS Live Tracking</span><i class="ico fa-solid fa-route" aria-hidden="true"></i></figcaption>
+          </figure>
+          <figure class="am-card reveal" style="--rd:.05s">
+            <img src="assets/attendance-methods/selfie.jpg" width="720" height="640" alt="Employee's face captured and matched on an attendance terminal screen" loading="lazy" decoding="async" />
+            <figcaption><span>Real-time Selfie Attendance</span><i class="ico fa-solid fa-camera" aria-hidden="true"></i></figcaption>
+          </figure>
+          <figure class="am-card reveal" style="--rd:.1s">
+            <img src="assets/attendance-methods/ai-cctv.jpg" width="720" height="640" alt="Live CCTV feed with AI detecting workers on the shop floor" loading="lazy" decoding="async" />
+            <figcaption><span>AI-based CCTV Attendance</span><i class="ico fa-solid fa-video" aria-hidden="true"></i></figcaption>
+          </figure>
         </div>
       </div>
     </section>
@@ -222,25 +237,320 @@
           <div class="at-stage" style="--rd:.18s"><span class="num">04</span><span class="icon-badge"><i class="ico fa-solid fa-circle-info" aria-hidden="true"></i></span><h3>Status</h3><p>Real-time leave status updates for every request.</p></div>
         </div>
         <div class="hr-callouts" style="margin-top:30px">
-          <div class="hr-callout reveal"><h3>Leave Policy Management</h3><p>Define policies that match your organization, including group leave policy management.</p></div>
-          <div class="hr-callout reveal" style="--rd:.06s"><h3>Flexible Leave Options</h3><p>Casual, sick, earned and more — configured your way.</p></div>
-          <div class="hr-callout reveal" style="--rd:.12s"><h3>Leave Application &amp; Notifications</h3><p>Applications, approvals and balances always visible.</p></div>
+          <div class="hr-callout hr-callout--shot reveal">
+            <figure class="hr-callout-shot"><img src="assets/hrms-shots/leave-calendar.png" width="514" height="562" alt="Leave calendar for October 2026 marking holidays, week-offs, approved and pending leave" loading="lazy" decoding="async" /></figure>
+            <div class="hr-callout-body"><h3>Leave Policy Management</h3><p>Define policies that match your organization, including group leave policy management.</p></div>
+          </div>
+          <div class="hr-callout hr-callout--shot reveal" style="--rd:.06s">
+            <figure class="hr-callout-shot"><img src="assets/hrms-shots/leave-types.jpg" width="800" height="559" alt="Leave history listing sick leave, casual leave and on-duty requests with their period and days" loading="lazy" decoding="async" /></figure>
+            <div class="hr-callout-body"><h3>Flexible Leave Options</h3><p>Casual, sick, earned and more — configured your way.</p></div>
+          </div>
+          <div class="hr-callout hr-callout--shot reveal" style="--rd:.12s">
+            <figure class="hr-callout-shot"><img src="assets/hrms-shots/leave-status.jpg" width="800" height="485" alt="Leave applications with applied-on time, approved and rejected status and view and withdraw actions" loading="lazy" decoding="async" /></figure>
+            <div class="hr-callout-body"><h3>Leave Application &amp; Notifications</h3><p>Applications, approvals and balances always visible.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 6b. CENTRALIZED DEVICE MANAGEMENT ============ -->
+    <section class="section section-blue" id="devices" aria-labelledby="device-title">
+      <div class="container">
+        <div class="dv-split">
+          <!-- concept visual: a laptop running the Device Setup dashboard; the
+               screen slides through one view per capability (js/dv-demo.js)
+               and the matching item on the right lights up -->
+          <div class="dv-stage reveal">
+            <span class="dv-rings" aria-hidden="true"><i></i><i></i><i></i><b></b></span>
+
+            <div class="dv-laptop" aria-hidden="true">
+              <div class="dv-lid">
+                <span class="dv-cam"></span>
+                <div class="dv-screen">
+                  <div class="dv-app">
+                    <aside class="dv-side">
+                      <span class="dv-logo">In4</span>
+                      <i class="ico fa-solid fa-house"></i><i class="ico fa-solid fa-microchip on"></i><i class="ico fa-solid fa-users"></i><i class="ico fa-solid fa-chart-column"></i><i class="ico fa-solid fa-gear"></i>
+                    </aside>
+                    <div class="dv-main">
+                      <div class="dv-top"><span>Device Setup <em>›</em> <b class="dv-crumb">Device Registration</b></span><span class="dv-user">AD</span></div>
+                      <div class="dv-slides">
+
+                        <!-- 1. registration -->
+                        <div class="dv-slide is-active">
+                          <div class="dv-form">
+                            <div><small>Device name</small><b>Main Gate – Entry</b></div>
+                            <div><small>Serial number</small><b>CQZ7231060021</b></div>
+                            <div><small>IP address</small><b>192.168.1.21</b></div>
+                            <div><small>Device type</small><b>Attendance · Face + FP</b></div>
+                          </div>
+                          <div class="dv-row-end"><span class="dv-btn ghost">Cancel</span><span class="dv-btn">Activate Device</span></div>
+                        </div>
+
+                        <!-- 2. network -->
+                        <div class="dv-slide">
+                          <table class="dv-table">
+                            <tr><th>Device</th><th>IP / Port</th><th>Signal</th><th>Link</th></tr>
+                            <tr><td>Main Gate</td><td>192.168.1.21 : 4370</td><td><span class="dv-sig s4"><i></i><i></i><i></i><i></i></span></td><td><span class="dv-tag g">Connected</span></td></tr>
+                            <tr><td>Canteen</td><td>192.168.1.34 : 4370</td><td><span class="dv-sig s3"><i></i><i></i><i></i><i></i></span></td><td><span class="dv-tag g">Connected</span></td></tr>
+                            <tr><td>Plant B</td><td>10.0.4.12 : 4370</td><td><span class="dv-sig s1"><i></i><i></i><i></i><i></i></span></td><td><span class="dv-tag r">Timeout</span></td></tr>
+                          </table>
+                        </div>
+
+                        <!-- 3. area configuration -->
+                        <div class="dv-slide">
+                          <div class="dv-areas">
+                            <div><b><i class="ico fa-solid fa-building"></i>Head Office</b><span>Gate 1</span><span>Gate 2</span><span>Reception</span></div>
+                            <div><b><i class="ico fa-solid fa-industry"></i>Plant</b><span>Production A</span><span>Production B</span></div>
+                            <div><b><i class="ico fa-solid fa-utensils"></i>Canteen</b><span>Counter 1</span></div>
+                          </div>
+                        </div>
+
+                        <!-- 4. device type -->
+                        <div class="dv-slide">
+                          <div class="dv-tiles">
+                            <div><i class="ico fa-solid fa-fingerprint"></i><b>8</b><small>Attendance</small></div>
+                            <div><i class="ico fa-solid fa-door-open"></i><b>3</b><small>Turnstile</small></div>
+                            <div><i class="ico fa-solid fa-utensils"></i><b>2</b><small>Canteen</small></div>
+                            <div><i class="ico fa-solid fa-id-card"></i><b>4</b><small>Access</small></div>
+                          </div>
+                        </div>
+
+                        <!-- 5. user count -->
+                        <div class="dv-slide">
+                          <div class="dv-bars">
+                            <div><span>Main Gate</span><i style="--w:92%"></i><b>248</b></div>
+                            <div><span>Canteen</span><i style="--w:70%"></i><b>186</b></div>
+                            <div><span>Plant A</span><i style="--w:48%"></i><b>124</b></div>
+                            <div><span>Reception</span><i style="--w:22%"></i><b>58</b></div>
+                          </div>
+                        </div>
+
+                        <!-- 6. employee sync -->
+                        <div class="dv-slide">
+                          <div class="dv-sync">
+                            <div class="dv-sync-head"><b>Pushing employee master</b><span>248 / 248</span></div>
+                            <div class="dv-progress"><i></i></div>
+                            <ul><li><i class="ico fa-solid fa-circle-check"></i>Main Gate</li><li><i class="ico fa-solid fa-circle-check"></i>Canteen</li><li><i class="ico fa-solid fa-circle-check"></i>Plant A</li><li><i class="ico fa-solid fa-circle-check"></i>Reception</li></ul>
+                          </div>
+                        </div>
+
+                        <!-- 7. biometric templates -->
+                        <div class="dv-slide">
+                          <div class="dv-tpl">
+                            <span class="dv-donut"><span><b>1,050</b><small>templates</small></span></span>
+                            <ul><li><i class="p"></i>Fingerprint<b>612</b></li><li><i class="t"></i>Face<b>248</b></li><li><i class="o"></i>Card<b>190</b></li></ul>
+                          </div>
+                        </div>
+
+                        <!-- 8. device status -->
+                        <div class="dv-slide">
+                          <div class="dv-status">
+                            <div><i class="on"></i>Main Gate<small>Online</small></div>
+                            <div><i class="on"></i>Canteen<small>Online</small></div>
+                            <div><i class="on"></i>Reception<small>Online</small></div>
+                            <div><i class="off"></i>Plant B<small>Offline</small></div>
+                            <div><i class="on"></i>Plant A<small>Online</small></div>
+                            <div><i class="warn"></i>Store<small>Comm. error</small></div>
+                          </div>
+                        </div>
+
+                        <!-- 9. transaction logs -->
+                        <div class="dv-slide">
+                          <table class="dv-table">
+                            <tr><th>Employee</th><th>Device</th><th>Time</th><th>Type</th></tr>
+                            <tr><td>Arun K</td><td>Main Gate</td><td>09:01</td><td><span class="dv-tag g">IN</span></td></tr>
+                            <tr><td>Priya R</td><td>Reception</td><td>09:03</td><td><span class="dv-tag g">IN</span></td></tr>
+                            <tr><td>Ravi S</td><td>Canteen</td><td>09:05</td><td><span class="dv-tag o">OUT</span></td></tr>
+                          </table>
+                        </div>
+
+                        <!-- 10. real-time monitoring -->
+                        <div class="dv-slide">
+                          <div class="dv-live">
+                            <div class="dv-kpis"><div><b>1,284</b><small>Punches today</small></div><div><b>12/13</b><small>Devices live</small></div><div><b>0.8s</b><small>Avg. sync</small></div></div>
+                            <svg viewBox="0 0 300 70" preserveAspectRatio="none"><path class="dv-area" d="M0 60 L30 48 L60 52 L90 30 L120 36 L150 18 L180 26 L210 12 L240 22 L270 8 L300 14 L300 70 L0 70 Z"/><path class="dv-line" d="M0 60 L30 48 L60 52 L90 30 L120 36 L150 18 L180 26 L210 12 L240 22 L270 8 L300 14"/></svg>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="dv-base"></div>
+            </div>
+
+            <div class="dv-pop dv-pop--status" aria-hidden="true">
+              <b class="dv-pop-t"><i class="ico fa-solid fa-signal"></i>Device Status</b>
+              <div class="dv-stat"><span class="on"><i></i>12 Online</span><span class="off"><i></i>1 Offline</span></div>
+            </div>
+
+            <div class="dv-pop dv-pop--sync" aria-hidden="true">
+              <span class="ch-chip-ico"><i class="ico fa-solid fa-arrows-rotate"></i></span>
+              <span class="ch-chip-txt"><b>248 employees synced</b><em>Pushed to 8 devices</em></span>
+            </div>
+          </div>
+
+          <div>
+            <p class="eyebrow reveal">Device Setup</p>
+            <h2 class="section-title reveal" id="device-title" style="margin:14px 0 14px">Centralized <em class="hr-dual">Device Management</em></h2>
+            <p class="dv-lead reveal">Manage every connected device from one place in In4 CloudHR.</p>
+            <ul class="dv-list">
+              <li class="dv-step reveal"><i class="ico fa-solid fa-tablet-screen-button" aria-hidden="true"></i><b>Device Registration</b></li>
+              <li class="dv-step reveal" style="--rd:.03s"><i class="ico fa-solid fa-network-wired" aria-hidden="true"></i><b>Network Connectivity</b></li>
+              <li class="dv-step reveal" style="--rd:.06s"><i class="ico fa-solid fa-location-crosshairs" aria-hidden="true"></i><b>Area Configuration</b></li>
+              <li class="dv-step reveal" style="--rd:.09s"><i class="ico fa-solid fa-layer-group" aria-hidden="true"></i><b>Device Type</b></li>
+              <li class="dv-step reveal" style="--rd:.12s"><i class="ico fa-solid fa-users" aria-hidden="true"></i><b>User Count</b></li>
+              <li class="dv-step reveal" style="--rd:.15s"><i class="ico fa-solid fa-arrows-rotate" aria-hidden="true"></i><b>Employee Synchronization</b></li>
+              <li class="dv-step reveal" style="--rd:.18s"><i class="ico fa-solid fa-fingerprint" aria-hidden="true"></i><b>Biometric Templates</b></li>
+              <li class="dv-step reveal" style="--rd:.21s"><i class="ico fa-solid fa-signal" aria-hidden="true"></i><b>Device Status</b></li>
+              <li class="dv-step reveal" style="--rd:.24s"><i class="ico fa-solid fa-clock-rotate-left" aria-hidden="true"></i><b>Transaction Logs</b></li>
+              <li class="dv-step reveal" style="--rd:.27s"><i class="ico fa-solid fa-gauge-high" aria-hidden="true"></i><b>Real-Time Monitoring</b></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 6c. ESS MOBILE APP ============ -->
+    <section class="section" id="mobile-app" aria-labelledby="ma-title">
+      <div class="container">
+        <div class="ma-split">
+          <div>
+            <p class="eyebrow reveal">ESS Mobile App</p>
+            <h2 class="section-title reveal" id="ma-title" style="margin:14px 0 14px">HR in Every <em class="hr-dual">Employee's Pocket</em></h2>
+            <p class="ma-lead reveal">Employees chat, punch and pull payslips from one app — no HR desk visit needed.</p>
+            <ul class="ma-list">
+              <li class="reveal"><span class="icon-badge"><i class="ico fa-solid fa-comments" aria-hidden="true"></i></span><div><h3>Pro-Chat</h3><p>Ask the HR assistant about leave, attendance or policies and get instant answers in a chat.</p></div></li>
+              <li class="reveal" style="--rd:.06s"><span class="icon-badge"><i class="ico fa-solid fa-location-dot" aria-hidden="true"></i></span><div><h3>Check-In / Check-Out</h3><p>Punch in and out with GPS tracking, geo-fencing and geo-tagging for every location.</p></div></li>
+              <li class="reveal" style="--rd:.12s"><span class="icon-badge"><i class="ico fa-solid fa-file-invoice" aria-hidden="true"></i></span><div><h3>Access Payslip</h3><p>View monthly salary details and download payslips anytime.</p></div></li>
+            </ul>
+          </div>
+
+          <!-- three app screens fanned out, punch screen in front -->
+          <div class="ma-stage reveal" aria-hidden="true">
+            <span class="ma-glow"></span>
+
+            <!-- Pro-Chat -->
+            <div class="ma-phone ma-phone--chat">
+              <div class="ma-scr">
+                <div class="ma-bar"><b>10:00</b><span><i class="ico fa-solid fa-signal"></i><i class="ico fa-solid fa-wifi"></i><i class="ico fa-solid fa-battery-full"></i></span></div>
+                <div class="ma-head"><i class="ico fa-solid fa-chevron-left"></i>Pro-Chat<span class="ma-online">Online</span></div>
+                <div class="ma-chat">
+                  <div class="ma-msg bot"><span class="ma-bot"><i class="ico fa-solid fa-robot"></i></span><p>Hi Priya! How can I help you today?</p></div>
+                  <div class="ma-chips"><span>Leave balance</span><span>My payslip</span><span>Punch status</span></div>
+                  <div class="ma-msg me"><p>What's my leave balance?</p></div>
+                  <div class="ma-msg bot"><span class="ma-bot"><i class="ico fa-solid fa-robot"></i></span><p>You have <b>6 Casual</b>, <b>4 Sick</b> and <b>12 Earned</b> leave left.</p></div>
+                  <div class="ma-msg me"><p>Apply casual leave for 12 Nov</p></div>
+                  <div class="ma-msg bot"><span class="ma-bot"><i class="ico fa-solid fa-robot"></i></span><p>Done ✓ Sent to your manager for approval.</p></div>
+                </div>
+                <div class="ma-input"><span>Type a message…</span><i class="ico fa-solid fa-paper-plane"></i></div>
+              </div>
+            </div>
+
+            <!-- Payslip -->
+            <div class="ma-phone ma-phone--pay">
+              <div class="ma-scr">
+                <div class="ma-bar"><b>10:00</b><span><i class="ico fa-solid fa-signal"></i><i class="ico fa-solid fa-wifi"></i><i class="ico fa-solid fa-battery-full"></i></span></div>
+                <div class="ma-head"><i class="ico fa-solid fa-chevron-left"></i>Payslip</div>
+                <div class="ma-body">
+                  <div class="ma-fy">Financial year · 2026–27</div>
+                  <div class="ma-chart">
+                    <small>Net salary per month</small>
+                    <div class="ma-cols"><i style="--h:62%"></i><i style="--h:66%"></i><i style="--h:64%"></i><i style="--h:92%"></i><i style="--h:68%"></i><i style="--h:70%"></i><i style="--h:72%"></i></div>
+                  </div>
+                  <div class="ma-card">
+                    <b>Salary · Oct 2026</b>
+                    <div><span>Gross earning</span><em>51,250</em></div>
+                    <div><span>Deductions</span><em class="neg">−3,000</em></div>
+                    <div><span>LOP days</span><em>0</em></div>
+                    <div class="tot"><span>Net pay</span><em>48,250</em></div>
+                  </div>
+                  <span class="ma-btn"><i class="ico fa-solid fa-download"></i>Download Payslip</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Punch (front) -->
+            <div class="ma-phone ma-phone--punch">
+              <div class="ma-scr">
+                <div class="ma-bar"><b>10:00</b><span><i class="ico fa-solid fa-signal"></i><i class="ico fa-solid fa-wifi"></i><i class="ico fa-solid fa-battery-full"></i></span></div>
+                <div class="ma-head"><i class="ico fa-solid fa-chevron-left"></i>Punch<span class="ma-hist"><i class="ico fa-solid fa-clock-rotate-left"></i>History</span></div>
+                <div class="ma-body">
+                  <div class="ma-time"><b>09:02:14 AM</b><small>Thursday, 29 Oct 2026</small></div>
+                  <div class="ma-map">
+                    <svg viewBox="0 0 200 130" preserveAspectRatio="xMidYMid slice">
+                      <rect width="200" height="130" fill="#eef4ea"/>
+                      <path d="M150 0 C140 40 170 70 160 130 L200 130 L200 0 Z" fill="#cfe7f7"/>
+                      <path d="M10 95 C40 85 60 100 80 92 C95 86 100 110 70 118 C40 124 10 114 10 95 Z" fill="#d7efcf"/>
+                      <g stroke="#ffffff" fill="none" stroke-linecap="round">
+                        <path d="M-5 55 C60 48 110 62 205 50" stroke-width="9"/>
+                        <path d="M70 -5 C75 50 66 90 80 135" stroke-width="8"/>
+                        <path d="M-5 100 C60 96 120 108 205 98" stroke-width="5"/>
+                        <path d="M125 -5 C120 40 130 80 122 135" stroke-width="5"/>
+                      </g>
+                      <path d="M-5 55 C60 48 110 62 205 50" stroke="#f6c66b" stroke-width="2" fill="none"/>
+                      <g fill="#ffffff" fill-opacity="0.8"><rect x="85" y="20" width="26" height="20" rx="3"/><rect x="20" y="15" width="34" height="24" rx="3"/><rect x="88" y="70" width="24" height="18" rx="3"/></g>
+                      <circle cx="98" cy="58" r="34" fill="#6C35FF" fill-opacity="0.14" stroke="#6C35FF" stroke-width="1.6" stroke-dasharray="4 3"/>
+                      <path d="M98 60 C92 52 88 48 88 43 a10 10 0 0 1 20 0 C108 48 104 52 98 60 Z" fill="#6C35FF"/>
+                      <circle cx="98" cy="43" r="3.6" fill="#ffffff"/>
+                    </svg>
+                    <span class="ma-geo"><i class="ico fa-solid fa-circle-check"></i>Inside geo-fence</span>
+                  </div>
+                  <div class="ma-addr"><i class="ico fa-solid fa-location-dot"></i><span>In4 Office, Mount Road, Chennai · GPS tagged</span></div>
+                  <div class="ma-punch"><span class="in"><i class="ico fa-solid fa-right-to-bracket"></i>PUNCH IN</span><span class="out">PUNCH OUT</span></div>
+                  <div class="ma-note">Last punch: <b>IN · 09:02 AM</b></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="ma-pop" >
+              <span class="ch-chip-ico"><i class="ico fa-solid fa-location-crosshairs"></i></span>
+              <span class="ch-chip-txt"><b>GPS verified</b><em>Punched in at 09:02 AM</em></span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- ============ 7. DYNAMIC PAYROLL ============ -->
-    <section class="section" aria-labelledby="pay-title">
+    <section class="section" id="payroll" aria-labelledby="pay-title">
       <div class="container">
-        <div class="section-head center reveal">
-          <h2 class="section-title" id="pay-title">Dynamic <em class="hr-dual">Payroll</em></h2>
-        </div>
-        <div class="hr-pipe reveal">
-          <div class="hr-pipe-in"><h3>Input</h3><ul><li>Attendance</li><li>Leave</li><li>Overtime</li><li>Incentives</li></ul></div>
-          <span class="hr-pipe-arrow ico fa-solid fa-arrow-right" aria-hidden="true"></span>
-          <div class="hr-pipe-mid"><h3>Processing</h3><ul><li>Salary Calculation</li><li>Tax &amp; Compliance</li><li>Compensation</li><li>Reimbursements</li><li>Loans</li></ul></div>
-          <span class="hr-pipe-arrow ico fa-solid fa-arrow-right" aria-hidden="true"></span>
-          <div class="hr-pipe-out"><h3>Output</h3><ul><li>Payroll</li></ul></div>
+        <div class="ch-split ch-split--rev">
+          <div>
+            <p class="eyebrow reveal">Payroll</p>
+            <h2 class="section-title reveal" id="pay-title" style="margin:14px 0 14px">Dynamic <em class="hr-dual">Payroll</em></h2>
+            <p class="px-lead reveal">Attendance, leave and overtime flow straight in — salaries, tax and loans are calculated and the payroll is locked and published in a few clicks.</p>
+            <div class="px-flow">
+              <div class="px-stage reveal"><span class="px-tag">Input</span><div class="px-chips"><span>Attendance</span><span>Leave</span><span>Overtime</span><span>Incentives</span></div></div>
+              <div class="px-stage reveal" style="--rd:.06s"><span class="px-tag">Processing</span><div class="px-chips"><span>Salary Calculation</span><span>Tax &amp; Compliance</span><span>Compensation</span><span>Reimbursements</span><span>Loans</span></div></div>
+              <div class="px-stage reveal" style="--rd:.12s"><span class="px-tag px-tag--out">Output</span><div class="px-chips"><span>Payroll</span><span>Payslips</span><span>Statutory Reports</span></div></div>
+            </div>
+          </div>
+
+          <!-- real payroll register with screenshots popping out around it -->
+          <div class="ch-visual px-visual reveal" style="--rd:.1s">
+            <figure class="ch-main">
+              <img src="assets/modules/payroll.jpg" width="1600" height="787" alt="In4 CloudHR payroll register for October 2026 with earned basic, HRA, DA, total earnings, PF, PT, insurance and deductions per employee" loading="lazy" decoding="async" />
+            </figure>
+
+            <div class="ch-pop px-pop--loan" aria-hidden="true">
+              <b class="px-run-t"><i class="ico fa-solid fa-hand-holding-dollar"></i>Loan overview</b>
+              <div class="px-loan"><div class="c"><b>32</b><small>Active loans</small></div><div class="o"><b>0</b><small>Pending approval</small></div></div>
+              <div class="px-letter"><span>Outstanding balance</span><b class="red">₹30,49,470</b></div>
+            </div>
+
+            <div class="ch-pop px-pop--run" aria-hidden="true">
+              <b class="px-run-t"><i class="ico fa-solid fa-gears"></i>Payroll run · Oct 2026</b>
+              <ul class="px-run">
+                <li class="done">Attendance &amp; leave synced</li>
+                <li class="done">Salary &amp; tax calculated</li>
+                <li class="done">Payroll locked</li>
+                <li class="now">Publishing payslips · 51</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -248,34 +558,95 @@
     <!-- ============ 8. TRAINING MANAGEMENT ============ -->
     <section class="section section-ice" id="training" aria-labelledby="train-title">
       <div class="container">
-        <div class="section-head center reveal">
-          <h2 class="section-title" id="train-title">Training <em class="hr-dual">Management</em></h2>
+        <div class="ch-split">
+          <div>
+            <p class="eyebrow reveal">Learning</p>
+            <h2 class="section-title reveal" id="train-title" style="margin:14px 0 20px">Training <em class="hr-dual">Management</em></h2>
+            <div class="at-sec-rows">
+              <div class="at-row reveal"><span class="icon-badge soft-purple"><i class="ico fa-solid fa-user-plus" aria-hidden="true"></i></span><div><h3>Enrollment</h3><p>Easy enrollment and nomination for programs.</p></div></div>
+              <div class="at-row reveal" style="--rd:.04s"><span class="icon-badge soft-purple"><i class="ico fa-solid fa-calendar-days" aria-hidden="true"></i></span><div><h3>Schedule</h3><p>Automated scheduling and reminders, with trainer management built in.</p></div></div>
+              <div class="at-row reveal" style="--rd:.08s"><span class="icon-badge soft-purple"><i class="ico fa-solid fa-chart-line" aria-hidden="true"></i></span><div><h3>Learning Progress</h3><p>Track skill development across teams.</p></div></div>
+              <div class="at-row reveal" style="--rd:.12s"><span class="icon-badge soft-purple"><i class="ico fa-solid fa-award" aria-hidden="true"></i></span><div><h3>Certificate</h3><p>Certificate and feedback management.</p></div></div>
+            </div>
+          </div>
+
+          <!-- training programs screen with pop-outs -->
+          <div class="ch-visual px-visual reveal" style="--rd:.1s">
+            <figure class="ch-main mk" aria-hidden="true">
+              <div class="mk-app">
+                <div class="mk-top"><span class="mk-logo">In4 <b>CloudHR</b></span><span class="mk-crumb">Training › Programs</span><span class="mk-av">HR</span></div>
+                <div class="mk-body">
+                  <div class="mk-kpis"><div><b>12</b><small>Active programs</small></div><div><b>186</b><small>Enrolled</small></div><div><b>78%</b><small>Avg. completion</small></div></div>
+                  <div class="mk-rows">
+                    <div class="mk-row"><span class="mk-ico p"><i class="ico fa-solid fa-shield-halved"></i></span><div><b>Fire &amp; Safety Induction</b><small>Trainer · R. Kumar · 24 enrolled</small></div><span class="mk-bar"><i style="--w:92%"></i></span><em>92%</em></div>
+                    <div class="mk-row"><span class="mk-ico t"><i class="ico fa-solid fa-gears"></i></span><div><b>Lean Manufacturing</b><small>Trainer · S. Iyer · 40 enrolled</small></div><span class="mk-bar"><i style="--w:68%"></i></span><em>68%</em></div>
+                    <div class="mk-row"><span class="mk-ico o"><i class="ico fa-solid fa-comments"></i></span><div><b>Customer Communication</b><small>Trainer · A. Das · 32 enrolled</small></div><span class="mk-bar"><i style="--w:54%"></i></span><em>54%</em></div>
+                    <div class="mk-row"><span class="mk-ico g"><i class="ico fa-solid fa-laptop-code"></i></span><div><b>Excel for Supervisors</b><small>Trainer · M. Rao · 18 enrolled</small></div><span class="mk-bar"><i style="--w:81%"></i></span><em>81%</em></div>
+                  </div>
+                </div>
+              </div>
+            </figure>
+
+            <div class="ch-pop px-pop--cert" aria-hidden="true">
+              <span class="px-cert-ico"><i class="ico fa-solid fa-award"></i></span>
+              <span class="ch-chip-txt"><b>Certificate issued</b><em>Fire &amp; Safety · Priya R</em></span>
+            </div>
+
+            <div class="ch-pop px-pop--rem" aria-hidden="true">
+              <b class="px-run-t"><i class="ico fa-solid fa-bell"></i>Upcoming session</b>
+              <div class="px-rem"><span class="px-date"><b>04</b>NOV</span><div><b>Lean Manufacturing · Module 3</b><small>10:00 AM · Training Hall B</small></div></div>
+            </div>
+          </div>
         </div>
-        <div class="at-flow-h reveal">
-          <div class="at-stage"><span class="num">01</span><h3>Enrollment</h3><p>Easy enrollment &amp; nomination for programs.</p></div>
-          <div class="at-stage" style="--rd:.06s"><span class="num">02</span><h3>Schedule</h3><p>Automated scheduling &amp; reminders.</p></div>
-          <div class="at-stage" style="--rd:.12s"><span class="num">03</span><h3>Learning Progress</h3><p>Track skill development across teams.</p></div>
-          <div class="at-stage" style="--rd:.18s"><span class="num">04</span><h3>Certificate</h3><p>Certificate &amp; feedback management.</p></div>
-        </div>
-        <p class="reveal" style="--rd:.2s;text-align:center;max-width:60ch;margin:26px auto 0;color:var(--text-muted)">Plus: Trainer Management for scheduling and assigning instructors across sessions.</p>
       </div>
     </section>
 
     <!-- ============ 9. PERFORMANCE & APPRAISAL ============ -->
-    <section class="section" aria-labelledby="perf-title">
+    <section class="section" id="performance" aria-labelledby="perf-title">
       <div class="container">
-        <div class="hr-perf">
-          <div class="reveal">
-            <p class="eyebrow">Appraisals</p>
-            <h2 class="section-title" id="perf-title" style="margin-top:14px">Performance &amp; <em class="hr-dual">Appraisal</em></h2>
-            <p class="section-lead">A clear, structured appraisal journey from cycle setup to increment letters — with every review captured in the same employee record.</p>
+        <div class="ch-split ch-split--rev">
+          <div>
+            <p class="eyebrow reveal">Appraisals</p>
+            <h2 class="section-title reveal" id="perf-title" style="margin:14px 0 14px">Performance &amp; <em class="hr-dual">Appraisal</em></h2>
+            <div class="hr-tl">
+              <div class="hr-tl-step reveal"><span class="num">01</span><div><h3>Appraisal Cycle</h3></div></div>
+              <div class="hr-tl-step reveal" style="--rd:.04s"><span class="num">02</span><div><h3>KRA/KPI Setup</h3></div></div>
+              <div class="hr-tl-step reveal" style="--rd:.08s"><span class="num">03</span><div><h3>Self &amp; Manager Review</h3></div></div>
+              <div class="hr-tl-step reveal" style="--rd:.12s"><span class="num">04</span><div><h3>HR Finalization</h3></div></div>
+              <div class="hr-tl-step reveal" style="--rd:.16s"><span class="num">05</span><div><h3>Increment Letters &amp; History</h3></div></div>
+            </div>
           </div>
-          <div class="hr-tl">
-          <div class="hr-tl-step reveal"><span class="num">01</span><div><h3>Appraisal Cycle</h3><p>Define and run structured appraisal cycles.</p></div></div>
-          <div class="hr-tl-step reveal" style="--rd:.04s"><span class="num">02</span><div><h3>KRA/KPI Setup</h3><p>Set goals and metrics that reflect each role.</p></div></div>
-          <div class="hr-tl-step reveal" style="--rd:.08s"><span class="num">03</span><div><h3>Self &amp; Manager Review</h3><p>Two-way feedback captured in one place.</p></div></div>
-          <div class="hr-tl-step reveal" style="--rd:.12s"><span class="num">04</span><div><h3>HR Finalization</h3><p>HR reviews and locks in outcomes.</p></div></div>
-          <div class="hr-tl-step reveal" style="--rd:.16s"><span class="num">05</span><div><h3>Increment Letters &amp; History</h3><p>Increment letters issued with a complete appraisal history.</p></div></div>
+
+          <!-- appraisal review screen with pop-outs -->
+          <div class="ch-visual px-visual reveal" style="--rd:.1s">
+            <figure class="ch-main mk" aria-hidden="true">
+              <div class="mk-app">
+                <div class="mk-top"><span class="mk-logo">In4 <b>CloudHR</b></span><span class="mk-crumb">Appraisal › FY 2026 · Q3</span><span class="mk-av">HR</span></div>
+                <div class="mk-body">
+                  <div class="mk-steps"><span class="done">Cycle</span><span class="done">KRA</span><span class="now">Review</span><span>HR</span><span>Letter</span></div>
+                  <div class="mk-emp"><span class="mk-face">PR</span><div><b>Priya R</b><small>Senior Executive · Operations</small></div><span class="mk-pill">Manager review</span></div>
+                  <table class="mk-table">
+                    <tr><th>KRA</th><th>Weight</th><th>Self</th><th>Manager</th></tr>
+                    <tr><td>On-time dispatch</td><td>30%</td><td>4</td><td><b>4.5</b></td></tr>
+                    <tr><td>Quality score</td><td>25%</td><td>4</td><td><b>4.0</b></td></tr>
+                    <tr><td>Cost savings</td><td>25%</td><td>3</td><td><b>4.0</b></td></tr>
+                    <tr><td>Team training</td><td>20%</td><td>4</td><td><b>4.5</b></td></tr>
+                  </table>
+                </div>
+              </div>
+            </figure>
+
+            <div class="ch-pop px-pop--score" aria-hidden="true">
+              <span class="px-ring"><b>4.2</b></span>
+              <span class="ch-chip-txt"><b>Overall rating</b><em>Exceeds expectations</em></span>
+            </div>
+
+            <div class="ch-pop px-pop--letter" aria-hidden="true">
+              <b class="px-run-t"><i class="ico fa-solid fa-file-signature"></i>Increment letter</b>
+              <div class="px-letter"><span>Revised CTC</span><b>+12%</b></div>
+              <div class="px-letter"><span>Effective</span><b>01 Apr 2027</b></div>
+              <span class="px-sent"><i class="ico fa-solid fa-circle-check"></i>Issued to employee</span>
+            </div>
           </div>
         </div>
       </div>
@@ -303,27 +674,85 @@
     <section class="section section-rose" id="ess" aria-labelledby="ess-title">
       <div class="container">
         <div class="at-split">
-          <div class="reveal" aria-hidden="true">
-            <div class="at-dash" style="max-width:380px">
-              <div class="at-dash-grid" style="grid-template-columns:1fr 1fr">
-                <div><strong>Checkin</strong><span>Verified</span></div>
-                <div><strong>Leave</strong><span>2 requests</span></div>
-                <div><strong>Payslip</strong><span>Jun ready</span></div>
-                <div><strong>Arabic</strong><span>&amp; English</span></div>
+          <!-- phone walkthrough: plays each app flow in turn and highlights
+               the matching feature on the right (see the script below) -->
+          <div class="ess-demo reveal">
+            <div class="ess-stage">
+              <span class="ess-wave" aria-hidden="true"><i></i><i></i><i></i></span>
+            <div class="ess-phone" aria-hidden="true">
+              <span class="ess-notch"></span>
+              <div class="ess-status"><b>9:41</b><span><i class="ico fa-solid fa-signal"></i><i class="ico fa-solid fa-wifi"></i><i class="ico fa-solid fa-battery-full"></i></span></div>
+
+              <div class="ess-screens">
+                <!-- 1. check in -->
+                <div class="ess-screen is-active">
+                  <div class="ess-app-head"><span class="ess-av">PR</span><div><small>Good morning</small><b>Priya R</b></div><i class="ico fa-solid fa-bell"></i></div>
+                  <div class="ess-clock"><b>09:02</b><small>AM · Wed, 29 Oct</small></div>
+                  <div class="ess-geo"><i class="ico fa-solid fa-location-dot"></i>Head Office · inside geo-fence</div>
+                  <div class="ess-checkin">
+                    <span class="ess-ring"></span>
+                    <span class="ess-btn-in"><i class="ico fa-solid fa-fingerprint"></i><em class="ess-in-a">Check In</em><em class="ess-in-b">Checked In</em></span>
+                  </div>
+                  <div class="ess-toast"><i class="ico fa-solid fa-circle-check"></i>Attendance marked at 09:02 AM</div>
+                </div>
+
+                <!-- 2. leave -->
+                <div class="ess-screen">
+                  <div class="ess-title"><i class="ico fa-solid fa-chevron-left"></i>Apply Leave</div>
+                  <div class="ess-bal"><div><b>6</b><small>Casual</small></div><div><b>4</b><small>Sick</small></div><div><b>12</b><small>Earned</small></div></div>
+                  <div class="ess-field"><small>Leave type</small><b>Casual Leave</b></div>
+                  <div class="ess-field ess-field--2"><div><small>From</small><b>12 Nov</b></div><div><small>To</small><b>13 Nov</b></div></div>
+                  <div class="ess-field"><small>Reason</small><b>Family function</b></div>
+                  <div class="ess-cta"><span class="ess-cta-a">Submit Request</span><span class="ess-cta-b"><i class="ico fa-solid fa-clock"></i>Sent for approval</span></div>
+                </div>
+
+                <!-- 3. payslip -->
+                <div class="ess-screen">
+                  <div class="ess-title"><i class="ico fa-solid fa-chevron-left"></i>Payslip</div>
+                  <div class="ess-pay"><small>October 2026 · Net pay</small><b>48,250</b><span><i class="ico fa-solid fa-circle-check"></i>Credited 31 Oct</span></div>
+                  <div class="ess-lines">
+                    <div><span>Basic</span><b>32,000</b></div>
+                    <div><span>HRA</span><b>12,800</b></div>
+                    <div><span>Allowances</span><b>6,450</b></div>
+                    <div class="neg"><span>Deductions</span><b>−3,000</b></div>
+                  </div>
+                  <div class="ess-cta ess-cta--line"><span class="ess-cta-a"><i class="ico fa-solid fa-download"></i>Download PDF</span><span class="ess-cta-b"><i class="ico fa-solid fa-circle-check"></i>Saved to phone</span></div>
+                </div>
+
+                <!-- 4. performance -->
+                <div class="ess-screen">
+                  <div class="ess-title"><i class="ico fa-solid fa-chevron-left"></i>My Performance</div>
+                  <div class="ess-score"><span class="ess-donut"><b>4.2</b></span><div><b>Q3 review</b><small>Rated by Arun K</small><span class="ess-stars"><i class="ico fa-solid fa-star"></i><i class="ico fa-solid fa-star"></i><i class="ico fa-solid fa-star"></i><i class="ico fa-solid fa-star"></i><i class="ico fa-regular fa-star"></i></span></div></div>
+                  <div class="ess-goal"><div><span>Customer onboarding</span><b>90%</b></div><i style="--w:90%"></i></div>
+                  <div class="ess-goal"><div><span>Process training</span><b>65%</b></div><i style="--w:65%"></i></div>
+                  <div class="ess-goal"><div><span>Quality score</span><b>78%</b></div><i style="--w:78%"></i></div>
+                </div>
+
+                <!-- 5. notifications -->
+                <div class="ess-screen">
+                  <div class="ess-title"><i class="ico fa-solid fa-chevron-left"></i><span class="ess-t-en">Notifications</span><span class="ess-t-ar" lang="ar">الإشعارات</span><span class="ess-lang"><em class="on">EN</em><em lang="ar">ع</em></span></div>
+                  <div class="ess-notes">
+                    <div class="ess-note"><span class="g"><i class="ico fa-solid fa-calendar-check"></i></span><div><b class="ess-t-en">Leave approved</b><b class="ess-t-ar" lang="ar">تمت الموافقة على الإجازة</b><small>12–13 Nov · just now</small></div></div>
+                    <div class="ess-note"><span class="p"><i class="ico fa-solid fa-file-invoice"></i></span><div><b class="ess-t-en">Payslip ready</b><b class="ess-t-ar" lang="ar">قسيمة الراتب جاهزة</b><small>October 2026 · 2h ago</small></div></div>
+                    <div class="ess-note"><span class="o"><i class="ico fa-solid fa-repeat"></i></span><div><b class="ess-t-en">Shift updated</b><b class="ess-t-ar" lang="ar">تم تحديث المناوبة</b><small>From Mon · General</small></div></div>
+                  </div>
+                </div>
               </div>
-              <div class="at-bars"><i style="width:80%"></i></div>
-              <div class="at-dash-row"><span class="dot"></span>Real-time notifications enabled</div>
+
+              <div class="ess-tabbar"><i class="ico fa-solid fa-house"></i><i class="ico fa-solid fa-calendar-days"></i><i class="ico fa-solid fa-wallet"></i><i class="ico fa-solid fa-chart-line"></i><i class="ico fa-solid fa-bell"></i></div>
+              <span class="ess-tap"></span>
+            </div>
             </div>
           </div>
           <div>
             <p class="eyebrow reveal">Mobile</p>
             <h2 class="section-title reveal" id="ess-title" style="margin:14px 0 20px">Mobile Employee <em class="hr-dual">Self-Service</em></h2>
             <div class="at-sec-rows">
-              <div class="at-row reveal"><span class="icon-badge soft-purple"><i class="ico fa-solid fa-right-to-bracket"></i></span><div><h3>Checkin/Checkout</h3><p>Field and office check-ins from the app.</p></div></div>
-              <div class="at-row reveal" style="--rd:.05s"><span class="icon-badge soft-purple"><i class="ico fa-solid fa-calendar-check"></i></span><div><h3>Leave Management</h3><p>Apply, track and approve leave on the go.</p></div></div>
-              <div class="at-row reveal" style="--rd:.1s"><span class="icon-badge soft-purple"><i class="ico fa-solid fa-money-check-dollar"></i></span><div><h3>Access Payroll</h3><p>Payslips and salary details anytime.</p></div></div>
-              <div class="at-row reveal" style="--rd:.15s"><span class="icon-badge soft-purple"><i class="ico fa-solid fa-chart-line"></i></span><div><h3>Performance Insights</h3><p>Goals and reviews in your pocket.</p></div></div>
-              <div class="at-row reveal" style="--rd:.2s"><span class="icon-badge soft-purple"><i class="ico fa-solid fa-bell"></i></span><div><h3>Real-Time Notifications</h3><p>Alerts that keep everyone informed, in Arabic &amp; English.</p></div></div>
+              <div class="at-row ess-step reveal" data-step="0" tabindex="0" role="button"><span class="icon-badge soft-purple"><i class="ico fa-solid fa-right-to-bracket"></i></span><div><h3>Checkin/Checkout</h3><p>Field and office check-ins from the app.</p></div></div>
+              <div class="at-row ess-step reveal" style="--rd:.05s" data-step="1" tabindex="0" role="button"><span class="icon-badge soft-purple"><i class="ico fa-solid fa-calendar-check"></i></span><div><h3>Leave Management</h3><p>Apply, track and approve leave on the go.</p></div></div>
+              <div class="at-row ess-step reveal" style="--rd:.1s" data-step="2" tabindex="0" role="button"><span class="icon-badge soft-purple"><i class="ico fa-solid fa-money-check-dollar"></i></span><div><h3>Access Payroll</h3><p>Payslips and salary details anytime.</p></div></div>
+              <div class="at-row ess-step reveal" style="--rd:.15s" data-step="3" tabindex="0" role="button"><span class="icon-badge soft-purple"><i class="ico fa-solid fa-chart-line"></i></span><div><h3>Performance Insights</h3><p>Goals and reviews in your pocket.</p></div></div>
+              <div class="at-row ess-step reveal" style="--rd:.2s" data-step="4" tabindex="0" role="button"><span class="icon-badge soft-purple"><i class="ico fa-solid fa-bell"></i></span><div><h3>Real-Time Notifications</h3><p>Alerts that keep everyone informed, in Arabic &amp; English.</p></div></div>
             </div>
           </div>
         </div>
@@ -352,12 +781,12 @@
                 <input type="hidden" name="pageSource" value="HRMS — Book a Free Demo">
                 <input type="hidden" name="product" value="HRMS">
                 <div class="form-grid">
-                  <div class="form-field span-2">
+                  <div class="form-field">
                     <label for="hrm-fullName">Name <span class="req">*</span></label>
                     <input class="form-input" id="hrm-fullName" name="fullName" type="text" autocomplete="name" placeholder="e.g. Meera Iyer" required>
                     <span class="form-error" data-error-for="fullName" role="alert"></span>
                   </div>
-                  <div class="form-field span-2">
+                  <div class="form-field">
                     <label for="hrm-company">Company Name <span class="req">*</span></label>
                     <input class="form-input" id="hrm-company" name="company" type="text" autocomplete="organization" placeholder="e.g. Acme Corp" required>
                     <span class="form-error" data-error-for="company" role="alert"></span>
@@ -394,5 +823,7 @@
   <script defer src="js/lead.js"></script>
 <script defer src="js/demo-modal.js"></script>
   <script defer src="js/main.js"></script>
+  <script defer src="js/ess-demo.js"></script>
+  <script defer src="js/dv-demo.js"></script>
 </body>
 </html>

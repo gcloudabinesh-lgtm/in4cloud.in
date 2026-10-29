@@ -735,16 +735,11 @@
   min-height: var(--nav-h, auto);
   gap: 0;                           /* the shot runs edge to edge */
   padding: 4px 0 0;                 /* only the accent strip's own height */
-  overflow-y: auto;                 /* the card scrolls, never the image */
-  overscroll-behavior: contain;
-  scrollbar-width: thin;
-  scrollbar-color: #cbd5e1 transparent;
+  /* The shot row shrinks to fit (minmax(0, 1fr)), so the card never needs
+     to scroll. It must not be a scroll box: the mouse wheel over the image
+     would be caught by the card instead of scrolling the page. */
+  overflow: hidden;
 }
-
-.mod-showcase .mod-panel--shot::-webkit-scrollbar { width: 8px; }
-.mod-showcase .mod-panel--shot::-webkit-scrollbar-track { background: transparent; }
-.mod-showcase .mod-panel--shot::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 999px; }
-.mod-showcase .mod-panel--shot::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
 
 /* 70% copy, 30% action — the only padded row, since the shot is full bleed */
 .mod-shot-foot {
@@ -806,6 +801,16 @@
 .mod-showcase .mod-panel--shot.is-active .mod-visual--shot img {
   animation: shotReveal 9s cubic-bezier(0.45, 0.05, 0.35, 1) forwards;
 }
+
+/* shots wider than the card keep their left edge (the app sidebar) and
+   trim the right instead */
+@keyframes shotRevealLeft {
+  from { object-position: 0 0; }
+  to   { object-position: 0 100%; }
+}
+
+.mod-visual--left img { object-position: 0 0; }
+.mod-showcase .mod-panel--shot.is-active .mod-visual--left img { animation-name: shotRevealLeft; }
 
 @media (prefers-reduced-motion: reduce) {
   .mod-showcase .mod-panel--shot.is-active .mod-visual--shot img { animation: none; }
@@ -2173,6 +2178,7 @@
   /* stacked panels need more room than the selector: keep the height match
      but let the card scroll rather than clip its content */
   .mod-showcase .mod-panel { overflow-y: auto; }
+  .mod-showcase .mod-panel--shot { overflow: hidden; }
   .integrations-layout { grid-template-columns: 1fr; }
 }
 
