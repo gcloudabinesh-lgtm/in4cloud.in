@@ -550,32 +550,32 @@
         </div>
 
         <div class="pr-grid">
-          <a class="pr-card reveal" style="--acc:#6C35FF" href="https://in4solution.com/" target="_blank" rel="noopener">
-            <span class="pr-art"><img src="assets/Product/attendance.jpg" alt="" width="800" height="800" loading="lazy" decoding="async"></span>
+          <a class="pr-card reveal" style="--acc:#6C35FF" href="https://zktecochennai.com/Product/Time/ai.html" target="_blank" rel="noopener">
+            <span class="pr-art"><img src="assets/Product/attendance.jpg" alt="" width="800" height="800" loading="lazy" decoding="async"><span class="pr-tag">Speed Face Biometrics</span></span>
             <div class="pr-body">
               <h3>Attendance Management</h3>
               <span class="pr-btn">Explore More<i class="ico fa-solid fa-arrow-right" aria-hidden="true"></i><span class="pr-sr"> (opens in a new tab)</span></span>
             </div>
           </a>
 
-          <a class="pr-card reveal" style="--acc:#B45309;--rd:.06s" href="https://in4solution.com/" target="_blank" rel="noopener">
-            <span class="pr-art"><img src="assets/Product/canteen.jpg" alt="" width="800" height="800" loading="lazy" decoding="async"></span>
+          <a class="pr-card reveal" style="--acc:#B45309;--rd:.06s" href="https://in4solution.com/Canteen_Management_System_Face_Kiosk.html" target="_blank" rel="noopener">
+            <span class="pr-art"><img src="assets/Product/canteen.jpg" alt="" width="800" height="800" loading="lazy" decoding="async"><span class="pr-tag">Canteen Kiosk</span></span>
             <div class="pr-body">
               <h3>Canteen Management</h3>
               <span class="pr-btn">Explore More<i class="ico fa-solid fa-arrow-right" aria-hidden="true"></i><span class="pr-sr"> (opens in a new tab)</span></span>
             </div>
           </a>
 
-          <a class="pr-card reveal" style="--acc:#2563EB;--rd:.12s" href="https://in4solution.com/" target="_blank" rel="noopener">
-            <span class="pr-art"><img src="assets/Product/parking.jpg" alt="" width="800" height="800" loading="lazy" decoding="async"></span>
+          <a class="pr-card reveal" style="--acc:#2563EB;--rd:.12s" href="https://www.zkteco.in/armatura-entrance-control" target="_blank" rel="noopener">
+            <span class="pr-art"><img src="assets/Product/parking.jpg" alt="" width="800" height="800" loading="lazy" decoding="async"><span class="pr-tag">Entrance Control &amp; Boom Barriers</span></span>
             <div class="pr-body">
               <h3>Parking Management</h3>
               <span class="pr-btn">Explore More<i class="ico fa-solid fa-arrow-right" aria-hidden="true"></i><span class="pr-sr"> (opens in a new tab)</span></span>
             </div>
           </a>
 
-          <a class="pr-card reveal" style="--acc:#3E8E2D;--rd:.18s" href="https://in4solution.com/" target="_blank" rel="noopener">
-            <span class="pr-art"><img src="assets/Product/visitor.jpg" alt="" width="800" height="800" loading="lazy" decoding="async"></span>
+          <a class="pr-card reveal" style="--acc:#3E8E2D;--rd:.18s" href="https://zktecochennai.com/Product/Entrance/Pedestrain.html" target="_blank" rel="noopener">
+            <span class="pr-art"><img src="assets/Product/visitor.jpg" alt="" width="800" height="800" loading="lazy" decoding="async"><span class="pr-tag">Flap Barriers &amp; Turnstiles</span></span>
             <div class="pr-body">
               <h3>Visitor Management</h3>
               <span class="pr-btn">Explore More<i class="ico fa-solid fa-arrow-right" aria-hidden="true"></i><span class="pr-sr"> (opens in a new tab)</span></span>
@@ -968,6 +968,34 @@
         window.addEventListener('load', sync);
         if (desktop.addEventListener) desktop.addEventListener('change', sync);
         if (window.ResizeObserver) new ResizeObserver(sync).observe(nav);
+
+        /* Mobile strip: touch already swipes it, but a mouse wheel or
+           click-drag would otherwise do nothing, so map both to sideways
+           scrolling. The wheel only takes over while the strip can still
+           move in that direction, so the page keeps scrolling past it. */
+        nav.addEventListener('wheel', function (e) {
+          if (desktop.matches || Math.abs(e.deltaY) <= Math.abs(e.deltaX)) return;
+          var max = nav.scrollWidth - nav.clientWidth;
+          if ((e.deltaY < 0 && nav.scrollLeft <= 0) || (e.deltaY > 0 && nav.scrollLeft >= max - 1)) return;
+          e.preventDefault();
+          nav.scrollLeft += e.deltaY;
+        }, { passive: false });
+
+        var dragX = null, dragLeft = 0, dragged = false;
+        nav.addEventListener('pointerdown', function (e) {
+          if (desktop.matches || e.pointerType !== 'mouse' || e.button !== 0) return;
+          dragX = e.clientX; dragLeft = nav.scrollLeft; dragged = false;
+        });
+        window.addEventListener('pointermove', function (e) {
+          if (dragX === null) return;
+          var dx = e.clientX - dragX;
+          if (!dragged && Math.abs(dx) > 5) { dragged = true; nav.classList.add('is-dragging'); }
+          if (dragged) nav.scrollLeft = dragLeft - dx;
+        });
+        window.addEventListener('pointerup', function () {
+          dragX = null;
+          setTimeout(function () { nav.classList.remove('is-dragging'); }, 0);
+        });
       })();
 
       /* ---- Hero module slide deck ------------------------------------ */

@@ -1486,6 +1486,42 @@
   padding: 18px 20px 20px;
 }
 
+/* product-line tag over the image's bottom-left corner (the top of some
+   photos carries their own headline) — solid white pill so it reads on any
+   photo. On hover it hands the corner over to the Explore More button. */
+.pr-tag {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  transition: opacity 0.3s var(--ease), translate 0.3s var(--ease);
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  max-width: calc(100% - 32px);
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  line-height: 1.3;
+  color: color-mix(in srgb, var(--acc) 82%, #000000);
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid color-mix(in srgb, var(--acc) 22%, transparent);
+  box-shadow: 0 6px 18px rgba(15, 14, 32, 0.18);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+}
+
+.pr-tag::before {
+  content: "";
+  flex: 0 0 auto;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--acc);
+}
+
 .pr-body h3 {
   margin: 0;
   font-size: var(--fs-h3);
@@ -1519,10 +1555,16 @@
 .pr-card:focus-visible .pr-btn { opacity: 1; translate: 0 0; }
 .pr-card:hover .pr-btn .ico { transform: translateX(3px); }
 
-/* touch screens have no hover, so keep the button showing there */
+.pr-card:hover .pr-tag,
+.pr-card:focus-visible .pr-tag { opacity: 0; translate: 0 -8px; }
+
+/* touch screens have no hover, so keep the button showing there and lift
+   the tag to the top corner out of its way */
 @media (hover: none) {
   .pr-btn { opacity: 1; translate: 0 0; }
   .pr-art::after { opacity: 1; }
+  .pr-tag,
+  .pr-card:hover .pr-tag { top: 16px; bottom: auto; opacity: 1; translate: 0 0; }
 }
 
 .pr-sr {
@@ -2158,6 +2200,15 @@
 @media (max-width: 860px) {
   .mod-showcase { grid-template-columns: 1fr; }
 
+  /* The card grows to fit here, so it must not be a scroll box of its own:
+     otherwise a swipe that starts on the screenshot is trapped inside it
+     (overscroll-behavior: contain) and the page will not scroll. */
+  .mod-showcase .mod-panel,
+  .mod-showcase .mod-panel--shot {
+    overflow: visible;
+    overscroll-behavior: auto;
+  }
+
   /* the selector becomes a compact horizontal scroller */
   .mod-nav {
     flex-direction: row;
@@ -2171,12 +2222,21 @@
     scroll-snap-type: x proximity;
     padding: 8px;
     -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
+    overscroll-behavior-x: contain;
+    /* a thin visible scrollbar so mouse / trackpad users can scroll too */
+    scrollbar-width: thin;
+    scrollbar-color: #ddd3fb transparent;
     /* room for the right-edge fade so the last tab is not flush */
     padding-right: 20px;
+    cursor: grab;
   }
 
-  .mod-nav::-webkit-scrollbar { display: none; }
+  .mod-nav.is-dragging { cursor: grabbing; scroll-snap-type: none; user-select: none; }
+  .mod-nav.is-dragging .mod-tab { pointer-events: none; }
+
+  .mod-nav::-webkit-scrollbar { height: 4px; }
+  .mod-nav::-webkit-scrollbar-track { background: transparent; }
+  .mod-nav::-webkit-scrollbar-thumb { background: #ddd3fb; border-radius: 999px; }
 
   .mod-tab {
     flex: 0 0 auto;
