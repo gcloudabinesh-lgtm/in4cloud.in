@@ -115,6 +115,14 @@ section[id], [id="modules"], [id="lead"], [id="features"] { scroll-margin-top: 9
   display: flex;
 }
 
+/* static hero artwork: transparent PNG, sits straight on the hero */
+.page-hrms .inner-hero-visual .hr-hero-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  align-self: center;
+}
+
 .page-hrms .inner-hero-visual .hr-carousel {
   flex: 1 1 auto;
   width: 100%;
@@ -376,7 +384,7 @@ section[id], [id="modules"], [id="lead"], [id="features"] { scroll-margin-top: 9
 .hr-eco-index .hr-eco-item:hover { color: var(--purple-700); padding-left: 6px; }
 .hr-eco-index .hr-eco-item b { font-family: "Plus Jakarta Sans", sans-serif; color: var(--purple-300); font-size: 13px; min-width: 24px; }
 
-/* Video player that sits on the left of the ecosystem section */
+/* Login screenshot that sits on the left of the ecosystem section */
 .hr-eco-video { margin: 0; }
 
 .hr-eco-video-frame {
@@ -388,13 +396,10 @@ section[id], [id="modules"], [id="lead"], [id="features"] { scroll-margin-top: 9
   box-shadow: 0 24px 60px rgba(15, 23, 42, 0.16);
 }
 
-.hr-eco-video-frame video {
+.hr-eco-video-frame img {
   display: block;
   width: 100%;
   height: auto;
-  aspect-ratio: 16 / 9;
-  background: #ffffff;             /* no black letterbox behind the frames */
-  object-fit: contain;
 }
 
 .hr-eco-video figcaption {
@@ -547,3 +552,181 @@ section[id], [id="modules"], [id="lead"], [id="features"] { scroll-margin-top: 9
 .page-hrms .inner-hero-copy .lead { margin-top: 16px; }
 
 .page-hrms .inner-hero-ctas { margin-top: 24px; }
+
+/* --- Section 4: Core HR & employee lifecycle ---
+   Feature list on the left; on the right the live Core HR dashboard with
+   real product screenshots popping out around it. */
+.ch-split {
+  display: grid;
+  grid-template-columns: 1fr 1.25fr;
+  gap: clamp(2rem, 5vw, 4.5rem);
+  align-items: center;
+}
+
+.ch-visual {
+  position: relative;
+  padding: 100px 24px;           /* room above/below for the pop-outs */
+}
+
+/* soft brand glow behind the composition */
+.ch-visual::before {
+  content: "";
+  position: absolute;
+  inset: 8% 4%;
+  z-index: -1;
+  border-radius: 50%;
+  background: radial-gradient(closest-side, rgba(108, 53, 255, 0.16), rgba(34, 199, 214, 0.08) 60%, transparent 75%);
+  filter: blur(10px);
+}
+
+.ch-main {
+  margin: 0;
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid var(--border, #e6e4f1);
+  border-radius: 20px;
+  box-shadow: 0 30px 70px rgba(75, 32, 200, 0.18);
+}
+
+.ch-main { aspect-ratio: 1.6; }
+.ch-main img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: left top; }
+
+/* screenshot pop-outs */
+.ch-pop {
+  position: absolute;
+  z-index: 2;
+  margin: 0;
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid var(--border, #e6e4f1);
+  border-radius: 14px;
+  box-shadow: 0 20px 44px rgba(17, 24, 39, 0.16);
+  animation: chFloat 7s ease-in-out infinite;
+}
+
+.ch-pop img { display: block; width: 100%; height: auto; }
+
+.ch-pop figcaption {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 7px 11px;
+  border-bottom: 1px solid var(--border-soft, #eceaf6);
+  background: #fbfaff;
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--ink-800, #181632);
+}
+
+.ch-pop figcaption .ico { width: 1em; height: 1em; font-size: 11px; color: var(--purple-600, #6528f7); }
+
+.ch-pop--emp    { top: 0;    left: 0;  width: 46%; }
+.ch-pop--docs   { top: 0;    right: 0; width: 24%; animation-delay: -2.4s; }
+.ch-pop--charts { bottom: 0; left: 0;  width: 50%; animation-delay: -4.6s; }
+
+/* small stat chip */
+.ch-pop--chip {
+  bottom: 34px;
+  right: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 14px 9px 9px;
+  animation-delay: -1.2s;
+}
+
+.ch-chip-ico {
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+  border-radius: 9px;
+  background: linear-gradient(135deg, #6DBE45, #3E8E2D);
+  color: #ffffff;
+  font-size: 13px;
+  line-height: 1;
+}
+
+.ch-chip-ico .ico { width: 1em; height: 1em; }
+
+.ch-chip-txt { display: flex; flex-direction: column; line-height: 1.3; }
+.ch-chip-txt b { font-family: "Plus Jakarta Sans", sans-serif; font-size: 12.5px; font-weight: 700; color: var(--ink-800, #181632); white-space: nowrap; }
+.ch-chip-txt em { font-style: normal; font-size: 11px; color: var(--text-muted, #56527a); white-space: nowrap; }
+
+@keyframes chFloat {
+  0%, 100% { translate: 0 0; }
+  50% { translate: 0 -6px; }
+}
+
+
+/* Pop-outs zoom out from the dashboard once the visual is revealed: each
+   grows from its inner corner (the side facing the main image) with a small
+   overshoot, staggered after the main image has faded in. */
+.ch-pop {
+  opacity: 0;
+  scale: 0.35;
+  transition:
+    opacity 0.5s var(--ease),
+    scale 0.75s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.ch-pop--emp    { transform-origin: 100% 100%; }
+.ch-pop--docs   { transform-origin: 0 100%; }
+.ch-pop--charts { transform-origin: 100% 0; }
+.ch-pop--chip   { transform-origin: 0 0; }
+
+.ch-visual.is-visible .ch-pop { opacity: 1; scale: 1; }
+.ch-visual.is-visible .ch-pop--emp    { transition-delay: 0.75s; }
+.ch-visual.is-visible .ch-pop--docs   { transition-delay: 0.95s; }
+.ch-visual.is-visible .ch-pop--charts { transition-delay: 1.15s; }
+.ch-visual.is-visible .ch-pop--chip   { transition-delay: 1.35s; }
+
+/* --- Section 5: Attendance — same composition, mirrored: image left,
+   content right. Text stays first in the markup so it leads on mobile. */
+.ch-split--rev { grid-template-columns: 1.25fr 1fr; }
+.ch-split--rev > .ch-visual { order: -1; }
+
+.ch-pop--today { top: 0;    left: 0;  width: 46%; transform-origin: 100% 100%; }
+.ch-pop--sync  {
+  top: 34px;
+  right: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 14px 9px 9px;
+  transform-origin: 0 100%;
+  animation-delay: -2.4s;
+}
+.ch-pop--dept  { bottom: 0; left: 0;  width: 40%; transform-origin: 100% 0; animation-delay: -4.6s; }
+.ch-pop--log   { bottom: 0; right: 0; width: 50%; transform-origin: 0 0;    animation-delay: -1.2s; }
+
+.ch-visual.is-visible .ch-pop--today { transition-delay: 0.75s; }
+.ch-visual.is-visible .ch-pop--sync  { transition-delay: 0.95s; }
+.ch-visual.is-visible .ch-pop--dept  { transition-delay: 1.15s; }
+.ch-visual.is-visible .ch-pop--log   { transition-delay: 1.35s; }
+@media (max-width: 960px) {
+  .ch-split,
+  .ch-split--rev { grid-template-columns: 1fr; }
+  .ch-split--rev > .ch-visual { order: 0; }
+  .ch-visual { max-width: 640px; width: 100%; margin-inline: auto; }
+  .ch-main { aspect-ratio: auto; }
+  .ch-main img { height: auto; }
+}
+
+@media (max-width: 640px) {
+  .ch-visual { padding: 44px 6px 64px; }
+  .ch-pop figcaption { padding: 5px 8px; font-size: 10px; }
+  .ch-pop--emp    { left: 0; width: 52%; }
+  .ch-pop--docs   { width: 32%; }
+  .ch-pop--charts { left: 0; width: 58%; }
+  .ch-pop--chip,
+  .ch-pop--sync,
+  .ch-pop--dept   { display: none; }
+  .ch-pop--today  { width: 54%; }
+  .ch-pop--log    { width: 54%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ch-pop { animation: none; transition: none; opacity: 1; scale: 1; }
+}
