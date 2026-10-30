@@ -1,8 +1,9 @@
 /* IN4 Solutions — lead form handler + service layer.
    - Validate client-side (name >= 2 chars, company, phone, email)
    - Honeypot spam field
-   - POST to LEAD_WEBHOOK_URL when configured (architecture ready for
-     Zoho CRM / webhook / email integration)
+   - Email every enquiry to the inbox set in js/site.js (leads), through the
+     Google Apps Script mailer when appsScriptUrl is set, else FormSubmit
+   - Success is shown only when the mail service confirms it sent the email
    - If no endpoint is configured, surface an explicit development
      warning instead of pretending the enquiry was submitted.
 */
@@ -15,6 +16,12 @@
 
   function str(v) {
     return (v || "").replace(/\s+/g, " ").trim();
+  }
+
+  function escapeHtml(v) {
+    return String(v).replace(/[&<>"']/g, function (c) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+    });
   }
 
   function validate(values) {
@@ -59,109 +66,61 @@
     }) + " IST";
   }
 
-  // EmailJS REST API — the email layout lives in the EmailJS template, which
-  // reads these {{variables}} (see the template text in js/site.js).
-  function sendEmailJS(payload, ejs) {
+  const FAIL_MESSAGE = "We could not submit your enquiry right now. Please try again in a moment.";
+
+  // Builds the enquiry email: readable field labels (the mail services print
+  // them as row titles) plus the subject, e.g.
+  // "New Demo Request: HRMS | Meera Iyer, Acme Corp".
+  function buildEnquiry(payload) {
     const info = formInfo(payload.pageSource);
     const topic = payload.product || info.page;
-
-    return fetch("https://api.emailjs.com/api/v1.0/email/send", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        service_id: ejs.serviceId,
-        template_id: ejs.templateId,
-        user_id: ejs.publicKey,
-        template_params: {
-          subject: "New " + info.type + ": " + topic + " | " + payload.fullName + ", " + payload.company,
-          enquiry_type: info.type,
-          interested_in: topic,
-          name: payload.fullName,
-          company: payload.company,
-          phone: payload.phone,
-          email: payload.email,
-          company_size: payload.companySize || "-",
-          message: payload.message || "(no message)",
-          page: info.page,
-          page_url: window.location.href,
-          submitted_on: submittedOn()
-        }
-      })
-    }).then(function (res) {
-      // EmailJS answers 200 "OK" when the mail is sent.
-      if (res.ok) return { status: "submitted" };
-      return {
-        status: "error",
-        message: "We could not submit your enquiry right now. Please try again or email " + S.contact.email + "."
-      };
-    }).catch(function () {
-      return {
-        status: "error",
-        message: "We could not submit your enquiry right now. Please try again or email " + S.contact.email + "."
-      };
-    });
-  }
-
-  function leadService(payload) {
-    const leads = S.leads || {};
-    const ejs = leads.emailjs || {};
-    if (ejs.serviceId && ejs.templateId && ejs.publicKey) {
-      return sendEmailJS(payload, ejs);
-    }
-    // Web3Forms (when an access key is set) takes priority over FormSubmit.
-    const web3Key = leads.web3formsKey || "";
-    const url = web3Key ? "https://api.web3forms.com/submit" : (leads.webhookUrl || "");
-
-    if (!url) {
-      // No backend configured — explicit development warning, never fake success.
-      return Promise.resolve({
-        status: "not-configured",
-        message:
-          "Lead submission is not configured yet. Please contact " +
-          S.contact.email +
-          " to schedule your demo."
-      });
-    }
-
-    const info = formInfo(payload.pageSource);
-    const topic = payload.product || info.page;
-
-    // Readable labels: the mail service prints field names as row titles.
-    // "email" stays lower-case so FormSubmit can reply and auto-respond to it.
-    const body = {
+    const fields = {
       "Enquiry Type": info.type,
       "Interested In": topic,
       "Name": payload.fullName,
       "Company": payload.company,
       "Phone": payload.phone,
-      "email": payload.email
+      "Email": payload.email
     };
-    if (payload.companySize) body["Company Size"] = payload.companySize;
-    body["Message"] = payload.message || "(no message)";
-    body["Submitted From"] = info.page + " page";
-    body["Page URL"] = window.location.href;
-    body["Submitted On"] = submittedOn();
+    if (payload.companySize) fields["Company Size"] = payload.companySize;
+    fields["Message"] = payload.message || "(no message)";
+    fields["Submitted From"] = info.page + " page";
+    fields["Page URL"] = window.location.href;
+    fields["Submitted On"] = submittedOn();
+    return {
+      info: info,
+      topic: topic,
+      fields: fields,
+      subject: "New " + info.type + ": " + topic + " | " + payload.fullName + ", " + payload.company
+    };
+  }
 
-    // e.g. "New Demo Request: HRMS | Meera Iyer, Acme Corp"
-    const subject = "New " + info.type + ": " + topic + " | " + payload.fullName + ", " + payload.company;
+  // Google Apps Script web app (tools/form-mailer.gs) — sends the email from
+  // the owner's own Gmail. text/plain keeps the request "simple", so the
+  // browser needs no CORS preflight.
+  function sendAppsScript(url, enquiry) {
+    const body = Object.assign({ subject: enquiry.subject }, enquiry.fields);
+    return fetch(url, {
+      method: "POST",
+      headers: { "Content-Type": "text/plain;charset=utf-8" },
+      body: JSON.stringify(body)
+    }).then(function (res) {
+      return res.json().catch(function () { return {}; }).then(function (data) {
+        return res.ok && data.success === true ? { status: "submitted" } : { status: "error", message: FAIL_MESSAGE };
+      });
+    });
+  }
 
-    if (web3Key) {
-      body.access_key = web3Key;
-      body.subject = subject;
-      body.from_name = S.name + " Website";
-      body.replyto = payload.email;
-    } else {
-      body._subject = subject;
-      body._replyto = payload.email;
-      body._template = "table";
-      body._captcha = "false";
-      // Confirmation mail sent to the person who filled in the form.
-      body._autoresponse =
-        "Hi " + payload.fullName + ", thank you for your interest in " + topic + ". " +
-        "We have received your " + info.type.toLowerCase() + " and our team will contact you within one business day. " +
-        "For anything urgent, call " + S.contact.phoneDisplay + " or email " + S.contact.email + ". " +
-        "— Team " + S.name;
-    }
+  // FormSubmit (keyless) — https://formsubmit.co/ajax/<email>. The first
+  // live submission emails an "Activate Form" link to that inbox.
+  function sendFormSubmit(url, enquiry) {
+    const body = Object.assign({}, enquiry.fields);
+    // lower-case "email" lets FormSubmit set the reply-to address
+    body.email = body.Email;
+    delete body.Email;
+    body._subject = enquiry.subject;
+    body._template = "table";
+    body._captcha = "false";
 
     return fetch(url, {
       method: "POST",
@@ -171,37 +130,42 @@
       // FormSubmit answers 200 even when it refuses to send (e.g. the address
       // is not activated yet), so trust only its "success" flag.
       return res.json().catch(function () { return {}; }).then(function (data) {
-        if (res.ok && String(data.success) === "true") {
-          return { status: "submitted" };
-        }
+        if (res.ok && String(data.success) === "true") return { status: "submitted" };
         if (/activat/i.test(data.message || "")) {
-          // One-time step: FormSubmit has emailed an "Activate Form" link.
           return {
             status: "error",
             message: "This form is awaiting one-time activation. An “Activate Form” email has been sent to the receiving inbox — click Activate, then submit again."
           };
         }
-        return mailtoResult(subject, body);
+        return { status: "error", message: FAIL_MESSAGE };
       });
-    }).catch(function () {
-      // Network failure or the mail service is down.
-      return mailtoResult(subject, body);
     });
   }
 
-  // Keyless fallback: a mailto: link that opens the visitor's email app with
-  // the enquiry already written; the visitor only presses Send.
-  function mailtoResult(subject, fields) {
-    const to = (S.leads && S.leads.mailTo) || S.contact.email;
-    const lines = Object.keys(fields)
-      .filter(function (k) { return k.charAt(0) !== "_" && k !== "access_key" && k !== "subject" && k !== "from_name" && k !== "replyto"; })
-      .map(function (k) { return (k === "email" ? "Email" : k) + ": " + fields[k]; });
-    return {
-      status: "mailto",
-      href: "mailto:" + to +
-        "?subject=" + encodeURIComponent(subject) +
-        "&body=" + encodeURIComponent("New enquiry from the " + S.name + " website\n\n" + lines.join("\n"))
-    };
+  function leadService(payload) {
+    const leads = S.leads || {};
+    const enquiry = buildEnquiry(payload);
+    let request;
+
+    if (leads.appsScriptUrl) {
+      request = sendAppsScript(leads.appsScriptUrl, enquiry);
+    } else if (leads.webhookUrl) {
+      request = sendFormSubmit(leads.webhookUrl, enquiry);
+    } else {
+      // No backend configured — explicit development warning, never fake success.
+      return Promise.resolve({
+        status: "not-configured",
+        message: "Lead submission is not configured yet."
+      });
+    }
+
+    return request.then(function (result) {
+      result.enquiry = enquiry;
+      return result;
+    }).catch(function () {
+      // Network failure or the mail service is down.
+      return { status: "error", message: FAIL_MESSAGE };
+    });
   }
 
   function setStatus(container, type, message) {
@@ -327,22 +291,17 @@
           if (statusLoading) statusLoading.hidden = true;
 
           if (result.status === "submitted") {
+            // e.g. "Thank you, Meera! Your demo request for HRMS has been
+            // received. Our team will contact you shortly."
+            const e = result.enquiry;
+            const firstName = values.fullName.split(" ")[0];
             form.reset();
             setStatus(
               status,
               "success",
-              "Thank you. Your enquiry has been received. Our team will contact you shortly."
+              "Thank you, " + escapeHtml(firstName) + "! Your " + e.info.type.toLowerCase() +
+                " for " + escapeHtml(e.topic) + " has been received. Our team will contact you shortly."
             );
-          } else if (result.status === "mailto") {
-            // Hand the prepared enquiry to the visitor's email app.
-            window.location.href = result.href;
-            setStatus(
-              status,
-              "success",
-              "Your email app has opened with your enquiry filled in — just press Send. If nothing opened, email us at " + S.contact.email + "."
-            );
-          } else if (result.status === "not-configured") {
-            setStatus(status, "error", result.message);
           } else {
             setStatus(status, "error", result.message);
           }
