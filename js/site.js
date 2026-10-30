@@ -1,6 +1,10 @@
 /* IN4 Solutions — site-wide configuration (single source of truth).
-   LEAD_WEBHOOK_URL is optional; set it to a real CRM/webhook endpoint
-   when integrating (e.g. Zoho CRM). Leave blank in development. */
+   leads.webhookUrl: every enquiry form posts here (js/lead.js). It is a
+   FormSubmit endpoint — https://formsubmit.co/ajax/<receiving email> — so
+   each submission is emailed to that address. The first live submission
+   sends an "Activate Form" email to it; click Activate once. To change the
+   inbox, replace the email after /ajax/ (or the random alias FormSubmit
+   gives you after activation, which hides the address). */
 (function () {
   "use strict";
 

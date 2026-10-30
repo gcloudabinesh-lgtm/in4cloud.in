@@ -39,6 +39,20 @@
     return errors;
   }
 
+  // Page name and enquiry type from the form's pageSource, which reads like
+  // "HRMS — Book a Free Demo", "Contact page — Book a Demo" or "Demo popup".
+  function formInfo(pageSource) {
+    const src = pageSource || document.title;
+    if (/^demo popup$/i.test(src)) {
+      const title = document.title.split(/\s+[—|-]\s+/)[0];
+      return { page: title, type: "Demo Request" };
+    }
+    const page = src.split(/\s+[—-]\s+/)[0].replace(/\s+page$/i, "").trim();
+    if (/^contact$/i.test(page)) return { page: "Contact", type: "Contact Enquiry" };
+    if (/^homepage$/i.test(page)) return { page: "Homepage", type: "Website Enquiry" };
+    return { page: page, type: "Demo Request" };
+  }
+
   function leadService(payload) {
     const url = (S.leads && S.leads.webhookUrl) || "";
 
@@ -53,23 +67,62 @@
       });
     }
 
-    const formData = new FormData();
-    Object.keys(payload).forEach(function (key) {
-      formData.append(key, payload[key]);
-    });
-    formData.append("_subject", "New Enquiry: " + (payload.product || payload.pageSource || "Website Form"));
+    const info = formInfo(payload.pageSource);
+    const topic = payload.product || info.page;
+
+    // Readable labels: the mail service prints field names as row titles.
+    // "email" stays lower-case so FormSubmit can reply and auto-respond to it.
+    const body = {
+      "Enquiry Type": info.type,
+      "Interested In": topic,
+      "Name": payload.fullName,
+      "Company": payload.company,
+      "Phone": payload.phone,
+      "email": payload.email
+    };
+    if (payload.companySize) body["Company Size"] = payload.companySize;
+    body["Message"] = payload.message || "(no message)";
+    body["Submitted From"] = info.page + " page";
+    body["Page URL"] = window.location.href;
+    body["Submitted On"] = new Date().toLocaleString("en-IN", {
+      dateStyle: "medium", timeStyle: "short", timeZone: "Asia/Kolkata"
+    }) + " IST";
+
+    // e.g. "New Demo Request: HRMS | Meera Iyer, Acme Corp"
+    body._subject = "New " + info.type + ": " + topic + " | " + payload.fullName + ", " + payload.company;
+    body._replyto = payload.email;
+    body._template = "table";
+    body._captcha = "false";
+    // Confirmation mail sent to the person who filled in the form.
+    body._autoresponse =
+      "Hi " + payload.fullName + ", thank you for your interest in " + topic + ". " +
+      "We have received your " + info.type.toLowerCase() + " and our team will contact you within one business day. " +
+      "For anything urgent, call " + S.contact.phoneDisplay + " or email " + S.contact.email + ". " +
+      "— Team " + S.name;
 
     return fetch(url, {
       method: "POST",
-      body: formData
+      headers: { "Content-Type": "application/json", Accept: "application/json" },
+      body: JSON.stringify(body)
     }).then(function (res) {
-      if (!res.ok) {
+      // FormSubmit answers 200 even when it refuses to send (e.g. the address
+      // is not activated yet), so trust only its "success" flag.
+      return res.json().catch(function () { return {}; }).then(function (data) {
+        if (res.ok && String(data.success) === "true") {
+          return { status: "submitted" };
+        }
+        if (/activat/i.test(data.message || "")) {
+          // One-time step: FormSubmit has emailed an "Activate Form" link.
+          return {
+            status: "error",
+            message: "This form is awaiting one-time activation. An “Activate Form” email has been sent to the receiving inbox — click Activate, then submit again."
+          };
+        }
         return {
           status: "error",
-          message: "We could not submit your enquiry right now. Please try again."
+          message: "We could not submit your enquiry right now. Please try again or email " + S.contact.email + "."
         };
-      }
-      return { status: "submitted" };
+      });
     }).catch(function () {
       return {
         status: "error",
