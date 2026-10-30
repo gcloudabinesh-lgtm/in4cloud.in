@@ -1,0 +1,31 @@
+EmailJS template for the IN4 website forms (js/lead.js fills the {{...}} values)
+==========================================================================
+
+Settings (right-hand side of the template editor)
+  Subject   : {{subject}}
+  To Email  : gcloud.abinesh@gmail.com
+  From Name : IN4 Website
+  Reply To  : {{email}}
+
+Content (paste into the body)
+----------------------------------------------------------------------------
+New enquiry from the IN4 website
+
+Enquiry Type   : {{enquiry_type}}
+Interested In  : {{interested_in}}
+
+Name           : {{name}}
+Company        : {{company}}
+Phone          : {{phone}}
+Email          : {{email}}
+Company Size   : {{company_size}}
+
+Message:
+{{message}}
+
+Submitted From : {{page}}
+Page URL       : {{page_url}}
+Submitted On   : {{submitted_on}}
+
+Reply to this email to answer the customer directly.
+----------------------------------------------------------------------------

@@ -28,6 +28,14 @@
 
     leads: {
       // Every enquiry is emailed to gcloud.abinesh@gmail.com.
+      // emailjs: used first when all three values are set (emailjs.com →
+      // Email Services = serviceId, Email Templates = templateId,
+      // Account → General = publicKey). Template: tools/emailjs-template.txt.
+      emailjs: {
+        serviceId: "service_hp3wsfa",
+        templateId: "",
+        publicKey: ""
+      },
       // appsScriptUrl: the Google Apps Script mailer (tools/form-mailer.gs),
       // deployed from that Gmail account as a web app — paste its /exec URL
       // here. While it is empty, forms send through FormSubmit instead.

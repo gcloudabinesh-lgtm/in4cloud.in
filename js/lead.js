@@ -95,6 +95,38 @@
     };
   }
 
+  // EmailJS REST API. The email layout lives in the EmailJS template, which
+  // reads these {{variables}} (template text: tools/emailjs-template.txt).
+  // EmailJS answers 200 "OK" only when the mail was sent.
+  function sendEmailJS(ejs, enquiry) {
+    const f = enquiry.fields;
+    return fetch("https://api.emailjs.com/api/v1.0/email/send", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        service_id: ejs.serviceId,
+        template_id: ejs.templateId,
+        user_id: ejs.publicKey,
+        template_params: {
+          subject: enquiry.subject,
+          enquiry_type: f["Enquiry Type"],
+          interested_in: f["Interested In"],
+          name: f["Name"],
+          company: f["Company"],
+          phone: f["Phone"],
+          email: f["Email"],
+          company_size: f["Company Size"] || "-",
+          message: f["Message"],
+          page: f["Submitted From"],
+          page_url: f["Page URL"],
+          submitted_on: f["Submitted On"]
+        }
+      })
+    }).then(function (res) {
+      return res.ok ? { status: "submitted" } : { status: "error", message: FAIL_MESSAGE };
+    });
+  }
+
   // Google Apps Script web app (tools/form-mailer.gs) — sends the email from
   // the owner's own Gmail. text/plain keeps the request "simple", so the
   // browser needs no CORS preflight.
@@ -147,7 +179,10 @@
     const enquiry = buildEnquiry(payload);
     let request;
 
-    if (leads.appsScriptUrl) {
+    const ejs = leads.emailjs || {};
+    if (ejs.serviceId && ejs.templateId && ejs.publicKey) {
+      request = sendEmailJS(ejs, enquiry);
+    } else if (leads.appsScriptUrl) {
       request = sendAppsScript(leads.appsScriptUrl, enquiry);
     } else if (leads.webhookUrl) {
       request = sendFormSubmit(leads.webhookUrl, enquiry);
