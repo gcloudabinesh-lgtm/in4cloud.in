@@ -28,13 +28,16 @@
 
     leads: {
       // Every enquiry is emailed to gcloud.abinesh@gmail.com.
-      // emailjs: used first when all three values are set (emailjs.com →
+      // web3formsKey: Web3Forms access key (web3forms.com → enter that email;
+      // the key is emailed to it). Used first whenever it is set.
+      web3formsKey: "5029946c-e60e-43ab-ad90-c0e9fb276c7e",
+      // emailjs: used next when all three values are set (emailjs.com →
       // Email Services = serviceId, Email Templates = templateId,
       // Account → General = publicKey). Template: tools/emailjs-template.txt.
       emailjs: {
-        serviceId: "service_hp3wsfa",
+        serviceId: "service_a9m84pj",
         templateId: "",
-        publicKey: ""
+        publicKey: "BOsQyD6TWdv_Fb89i"
       },
       // appsScriptUrl: the Google Apps Script mailer (tools/form-mailer.gs),
       // deployed from that Gmail account as a web app — paste its /exec URL

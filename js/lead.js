@@ -95,6 +95,29 @@
     };
   }
 
+  // Web3Forms — one access key, emailed to the inbox it was created for.
+  // Sent as FormData (a "simple" request, so no CORS preflight). Answers
+  // JSON { success: true } only when the mail was sent.
+  function sendWeb3Forms(accessKey, enquiry) {
+    const body = new FormData();
+    body.append("access_key", accessKey);
+    body.append("subject", enquiry.subject);
+    body.append("from_name", S.name + " Website");
+    body.append("replyto", enquiry.fields["Email"]);
+    Object.keys(enquiry.fields).forEach(function (k) {
+      body.append(k, enquiry.fields[k]);
+    });
+    return fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: { Accept: "application/json" },
+      body: body
+    }).then(function (res) {
+      return res.json().catch(function () { return {}; }).then(function (data) {
+        return res.ok && data.success === true ? { status: "submitted" } : { status: "error", message: FAIL_MESSAGE };
+      });
+    });
+  }
+
   // EmailJS REST API. The email layout lives in the EmailJS template, which
   // reads these {{variables}} (template text: tools/emailjs-template.txt).
   // EmailJS answers 200 "OK" only when the mail was sent.
@@ -180,7 +203,9 @@
     let request;
 
     const ejs = leads.emailjs || {};
-    if (ejs.serviceId && ejs.templateId && ejs.publicKey) {
+    if (leads.web3formsKey) {
+      request = sendWeb3Forms(leads.web3formsKey, enquiry);
+    } else if (ejs.serviceId && ejs.templateId && ejs.publicKey) {
       request = sendEmailJS(ejs, enquiry);
     } else if (leads.appsScriptUrl) {
       request = sendAppsScript(leads.appsScriptUrl, enquiry);
