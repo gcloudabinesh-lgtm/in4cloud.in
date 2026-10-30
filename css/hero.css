@@ -202,15 +202,6 @@
   50%, 100% { opacity: 0; }
 }
 
-.hero-trust {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px 22px;
-  margin-top: 34px;
-  padding-top: 26px;
-  border-top: 1px solid var(--border);
-}
-
 /* ==========================================================================
    Hero scene - dark premium environment
    L0 glow field + the one animated micro-grid ("mgrid")

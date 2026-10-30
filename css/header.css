@@ -42,33 +42,6 @@
   object-fit: contain;
 }
 
-.logo-text {
-  font-family: "Plus Jakarta Sans", sans-serif;
-  line-height: 1;
-  display: flex;
-  flex-direction: column;
-}
-
-.logo-text .logo-text-top {
-  font-size: 17px;
-  font-weight: 800;
-  letter-spacing: -0.02em;
-  display: flex;
-  align-items: baseline;
-  gap: 3px;
-}
-
-.logo-text .logo-text-top b { color: var(--purple-600); }
-
-.logo-text .logo-text-sub {
-  font-size: 9.5px;
-  font-weight: 600;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: var(--green-600);
-  margin-top: 3px;
-}
-
 .nav { display: flex; align-items: center; }
 
 .nav-list {
@@ -326,75 +299,6 @@ a.nav-link.active::after {
 /* ---- Dropdown menu (Company) ---- */
 .has-dropdown { position: relative; }
 
-.dropdown-menu {
-  position: absolute;
-  top: calc(100% + 10px);
-  right: 0;
-  min-width: 200px;
-  background: #fff;
-  border: 1px solid var(--border-soft);
-  border-radius: var(--r-lg);
-  box-shadow: var(--shadow-lg);
-  padding: 10px;
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(10px) scale(0.985);
-  transform-origin: top right;
-  transition: opacity 0.24s var(--ease), transform 0.24s var(--ease),
-    visibility 0.24s var(--ease);
-  z-index: 70;
-}
-
-.dropdown-menu::before {
-  content: "";
-  position: absolute;
-  top: -11px;
-  left: 0;
-  right: 0;
-  height: 11px;
-}
-
-.has-dropdown.open .dropdown-menu {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-}
-
-@media (hover: hover) and (pointer: fine) {
-  .has-dropdown:hover .dropdown-menu,
-  .has-dropdown:focus-within .dropdown-menu {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-  }
-}
-
-.dropdown-menu a {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 10px 14px;
-  border-radius: 10px;
-  color: var(--text-body);
-  font-size: 14.5px;
-  font-weight: 500;
-  transition: background-color 0.18s var(--ease), color 0.18s var(--ease),
-    transform 0.18s var(--ease);
-}
-
-.dropdown-menu a:hover { transform: translateX(3px); }
-
-.dropdown-menu a .ico {
-  width: 16px;
-  height: 16px;
-  color: var(--purple-500);
-}
-
-.dropdown-menu a:hover {
-  background: var(--purple-50);
-  color: var(--purple-700);
-}
-
 /* ---- Mobile menu ---- */
 .mobile-menu {
   position: fixed;
@@ -532,7 +436,6 @@ a.nav-link.active::after {
 
 .breadcrumbs a { color: var(--text-muted); }
 .breadcrumbs a:hover { color: var(--purple-600); }
-.breadcrumbs .sep { color: var(--purple-200); }
 .breadcrumbs [aria-current="page"] { color: var(--purple-700); font-weight: 700; }
 
 /* ---- Page hero (inner pages) ---- */
@@ -572,31 +475,11 @@ a.nav-link.active::after {
 
 /* Inner pages hero background image — breadcrumb area only */
 .page-hero-bg {
-  background-image: url('../assets/about us.png');
+  background-image: url('../assets/page-hero-bg.jpg');
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
   padding-block: clamp(2.5rem, 5vw, 4rem);
-}
-
-/* About page — same background image as other inner pages */
-.page-company .page-hero-bg {
-  background-image: url('../assets/about us.png');
-}
-
-/* Contact page — unique background image */
-.contact-page .page-hero-bg {
-  background-image: url('../assets/contact.png');
-}
-
-/* Pricing page — unique background image */
-.page-pricing .page-hero-bg {
-  background-image: url('../assets/pricing.png');
-}
-
-/* Resources page — unique background image */
-.page-resources .page-hero-bg {
-  background-image: url('../assets/resources.png');
 }
 
 .page-hero-bg .breadcrumbs {
@@ -622,11 +505,6 @@ a.nav-link.active::after {
 
 .page-hero-bg .breadcrumbs a:hover {
   color: #fff;
-}
-
-.page-hero-bg .breadcrumbs .sep {
-  color: rgba(255, 255, 255, 0.5);
-  font-size: 10px;
 }
 
 .page-hero-bg .breadcrumbs [aria-current="page"] {

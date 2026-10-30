@@ -82,8 +82,6 @@
 .pk-frow p { font-size: 14.5px; color: var(--text-muted); margin: 0; }
 
 /* --- Final CTA band --- */
-.pk-cta-inner .eyebrow { color: #FFFFFF; }
-.pk-cta-inner .eyebrow::before { background: #97d75f; }
 
 /* --- Responsive --- */
 @media (max-width: 1023px) {
@@ -130,7 +128,6 @@
 /* ---- Dual-colour headings: solid ink + ONE gradient accent phrase -------- */
 .page-parking .section-title em.pk-dual,
 .page-parking .inner-hero-copy h1 .grad,
-.page-parking .pk-why-media + .pk-frow h3,
 .page-parking .pk-variant h3 {
   background: linear-gradient(96deg, #0e7490 0%, #22c7d6 55%, #a5f3fc 100%);
   -webkit-background-clip: text;
@@ -150,11 +147,8 @@
   max-width: 42%;
   height: 3px;
   margin-top: 14px;
-  border-radius: 999px;
-  background: linear-gradient(90deg, #0e7490 0%, #22c7d6 30%, #67e8f9 62%, #cffafe 100%);
-  -webkit-mask-image: linear-gradient(90deg, #000 0%, #000 58%, transparent 100%);
-  mask-image: linear-gradient(90deg, #000 0%, #000 58%, transparent 100%);
-  box-shadow: 0 6px 16px rgba(34, 199, 214, 0.28);
+  border-radius: 999px;
+  background: #6C35FF;
 }
 
 .page-parking .section-head.center .section-title::after { margin-inline: auto; }
@@ -252,4 +246,13 @@
   height: 18px;
   font-size: 16px;
   color: #a5f3fc;
+}
+
+/* section title accent phrase: one solid colour (no gradient) */
+.page-parking .section-title em.pk-dual {
+  background: none;
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
+  color: #0E7490;
+  -webkit-text-fill-color: #0E7490;
 }

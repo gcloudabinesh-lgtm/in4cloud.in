@@ -30,117 +30,8 @@
 .feature-card:hover .icon-badge { transform: scale(1.06) rotate(-4deg); }
 
 /* Module grid */
-.module-card {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  padding: 26px 24px;
-  text-decoration: none;
-  color: var(--text-body);
-  overflow: hidden;
-}
-
-.module-card .icon-badge {
-  width: 46px;
-  height: 46px;
-  border-radius: 13px;
-  background: var(--purple-50);
-  color: var(--purple-600);
-  transition: color 0.3s var(--ease), background 0.3s var(--ease), transform 0.3s var(--ease);
-}
-
-.module-card:hover .icon-badge {
-  background: var(--grad-purple);
-  color: #fff;
-  transform: scale(1.05);
-}
-
-.module-card h3 { font-size: 17.5px; margin-bottom: 0; }
-.module-card p { font-size: 14.5px; flex: 1; }
-
-.module-arrow {
-  position: absolute;
-  top: 24px;
-  right: 24px;
-  width: 26px;
-  height: 26px;
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-  color: var(--purple-600);
-  background: var(--purple-50);
-  opacity: 0;
-  transform: translateX(-6px);
-  transition: opacity 0.3s var(--ease), transform 0.3s var(--ease);
-}
-
-.module-card:hover .module-arrow { opacity: 1; transform: translateX(0); }
-.module-arrow .ico { width: 14px; height: 14px; }
 
 /* Industry grid */
-.section-dark {
-  background: linear-gradient(160deg, #0f0e20 0%, #1a1833 50%, #0f0e20 100%);
-}
-
-.eyebrow-light { color: var(--purple-300); }
-.section-title-light { color: #fff; }
-.section-lead-light { color: rgba(255,255,255,0.6); }
-
-.industries-masonry {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-}
-
-.industry-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding: 36px 24px;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 16px;
-  backdrop-filter: blur(12px);
-  transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease), border-color 0.3s var(--ease), background 0.3s var(--ease);
-}
-
-.industry-card:hover {
-  transform: translateY(-4px);
-  background: rgba(255, 255, 255, 0.07);
-  border-color: rgba(255, 255, 255, 0.15);
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.05);
-}
-
-.card-icon {
-  width: 56px;
-  height: 56px;
-  border-radius: 14px;
-  display: grid;
-  place-items: center;
-  font-size: 22px;
-  color: #fff;
-  margin-bottom: 18px;
-  box-shadow: 0 4px 16px rgba(101, 40, 247, 0.3);
-  transition: transform 0.3s var(--ease);
-}
-
-.industry-card:hover .card-icon {
-  transform: scale(1.08);
-}
-
-.industry-card h3 {
-  font-size: 17px;
-  font-weight: 700;
-  color: #fff;
-  margin-bottom: 8px;
-}
-
-.industry-card p {
-  font-size: 13px;
-  color: rgba(255, 255, 255, 0.5);
-  line-height: 1.5;
-}
 
 /* Feature directory cards */
 .feature-card { display: flex; flex-direction: column; gap: 10px; }
@@ -148,63 +39,12 @@
 .feature-card h3 { font-size: 17px; }
 
 /* ---- Core areas (alternating blocks) ---- */
-.core-block {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: clamp(2rem, 5vw, 4.5rem);
-  align-items: center;
-  padding-block: clamp(2.5rem, 5vw, 4rem);
-}
-
-.core-block + .core-block { border-top: 1px solid var(--border-soft); }
-
-.core-block.reverse .core-media { order: -1; }
-
-.core-copy .core-label {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 12.5px;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--green-600);
-  margin-bottom: 14px;
-}
-
-.core-copy .core-label .icon-badge { width: 30px; height: 30px; border-radius: 9px; }
-
-.core-copy h2 {
-  font-size: clamp(1.6rem, 2.2vw + 0.8rem, 2.5rem);
-  font-weight: 800;
-  letter-spacing: -0.025em;
-  margin-bottom: 16px;
-}
-
-.core-copy > p { margin-bottom: 22px; }
 
 .benefit-list { display: flex; flex-direction: column; gap: 12px; margin-bottom: 28px; }
 
 .benefit-list li { display: flex; align-items: flex-start; gap: 12px; font-size: 15.5px; color: var(--text-body); }
 .benefit-list li .ico { width: 18px; height: 18px; color: var(--purple-600); flex-shrink: 0; margin-top: 3px; }
 .benefit-list li strong { color: var(--ink-800); font-weight: 700; }
-
-.core-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
-
-.tag {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 7px 13px;
-  border-radius: 999px;
-  background: var(--purple-50);
-  border: 1px solid var(--purple-100);
-  color: var(--purple-700);
-  font-size: 13px;
-  font-weight: 600;
-}
-
-.tag.green { background: var(--green-50); border-color: var(--green-100); color: var(--green-700); }
 
 /* ---- Split layout ---- */
 .split {
@@ -229,24 +69,6 @@
 .check-grid li .ico { width: 18px; height: 18px; color: var(--purple-600); flex-shrink: 0; margin-top: 3px; }
 
 /* ---- Marquee-free logo cloud ---- */
-.logo-cloud { display: grid; gap: 16px; }
-
-.logo-placeholder {
-  display: grid;
-  place-items: center;
-  min-height: 88px;
-  padding: 18px;
-  border: 1.5px dashed var(--border);
-  border-radius: var(--r-md);
-  background: var(--bg-soft);
-  text-align: center;
-  font-size: 13px;
-  font-weight: 600;
-  color: var(--text-muted);
-  transition: border-color 0.3s var(--ease), background 0.3s var(--ease), color 0.3s var(--ease);
-}
-
-.logo-placeholder:hover { border-color: var(--purple-300); color: var(--purple-700); background: var(--purple-50); }
 
 /* ---- CTA band ---- */
 .cta-band {
@@ -295,8 +117,6 @@
 
 .cta-band .cta-actions { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; margin-top: 32px; }
 
-.cta-band .demo-tag { background: rgba(255, 255, 255, 0.12); border-color: rgba(255, 255, 255, 0.35); color: #fff; margin-top: 4px; }
-
 /* ---- Inline CTA divider ---- */
 .cta-divider {
   display: flex;
@@ -317,61 +137,12 @@
 .cta-divider .cta-actions { display: flex; gap: 12px; flex-wrap: wrap; }
 
 /* ---- Strip band (light gradient divider) ---- */
-.strip-band {
-  position: relative;
-  background: linear-gradient(180deg, #fff, var(--bg-lav) 40%, var(--bg-lav) 60%, #fff);
-  border-block: 1px solid var(--border-soft);
-  text-align: center;
-}
-
-.strip-inner { display: flex; flex-direction: column; align-items: center; gap: 16px; }
-.strip-inner p { font-size: 18px; font-weight: 600; color: var(--charcoal); }
-.strip-inner span { font-size: 14.5px; color: var(--text-muted); }
 
 /* ---- Journey / timeline ---- */
-.journey { display: flex; flex-wrap: wrap; align-items: stretch; gap: 10px; justify-content: center; }
-.journey-step {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
-  text-align: center;
-  flex: 1;
-  min-width: 140px;
-  padding: 18px 12px;
-}
-.journey-step .icon-badge { width: 52px; height: 52px; border-radius: 16px; }
-.journey-step strong { font-family: "Plus Jakarta Sans", sans-serif; font-size: 14.5px; color: var(--ink-800); }
-.journey-arrow { align-self: center; color: var(--purple-400); width: 22px; height: 22px; flex-shrink: 0; }
 
 /* ---- Brand stats strip ---- */
-.stat-strip { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
-.stat-cell { text-align: center; padding: 26px 18px; }
-.stat-cell strong { display: block; font-family: "Plus Jakarta Sans", sans-serif; font-size: clamp(2rem, 3vw, 2.9rem); font-weight: 800; color: var(--purple-600); letter-spacing: -0.03em; }
-.stat-cell span { font-size: 14px; color: var(--text-muted); font-weight: 500; }
 
 /* ---- Animated counters (Why IN4) ---- */
-.counter-grid { display: flex; flex-direction: column; align-items: center; gap: 12px; }
-
-.counter-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  text-align: center;
-  width: 100%;
-  max-width: 300px;
-  background: linear-gradient(180deg, #fff, var(--bg-lav));
-  border: 1px solid var(--border);
-  border-radius: var(--r-lg);
-  box-shadow: var(--shadow-sm);
-  padding: 18px 16px;
-}
-
-.counter-card .icon-badge { width: 44px; height: 44px; border-radius: 13px; flex-shrink: 0; }
-
-.counter-ctx { display: flex; flex-direction: column; align-items: center; gap: 3px; }
 
 .counter-num {
   display: block;
@@ -386,10 +157,3 @@
   background-clip: text;
 }
 
-.counter-card:nth-child(even) .counter-num {
-  background: var(--grad-green);
-  -webkit-background-clip: text;
-  background-clip: text;
-}
-
-.counter-sub { font-size: 12.5px; color: var(--text-muted); font-weight: 600; line-height: 1.4; }

@@ -56,10 +56,7 @@
   height: 3px;
   margin-top: 14px;
   border-radius: 999px;
-  background: linear-gradient(90deg, #3e8e2d 0%, #6dbe45 30%, #a5d96f 62%, #e2f5cf 100%);
-  -webkit-mask-image: linear-gradient(90deg, #000 0%, #000 58%, transparent 100%);
-  mask-image: linear-gradient(90deg, #000 0%, #000 58%, transparent 100%);
-  box-shadow: 0 6px 16px rgba(109, 190, 69, 0.28);
+  background: #6C35FF;
 }
 
 .page-performance .section-head.center .section-title::after { margin-inline: auto; }
@@ -165,4 +162,12 @@
   height: 18px;
   font-size: 16px;
   color: #d7f2c6;
+}
+/* section title accent phrase: one solid colour (no gradient) */
+.page-performance .section-title em.pr-dual {
+  background: none;
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
+  color: #3E8E2D;
+  -webkit-text-fill-color: #3E8E2D;
 }

@@ -11,7 +11,6 @@
 .ca-card .icon-badge { width: 48px; height: 48px; border-radius: 14px; }
 
 .ca-grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
-.ca-grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
 
 /* 4-step timeline */
 .ca-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; position: relative; }
@@ -112,7 +111,8 @@
   .ca-step::before { display: none; }
 }
 @media (max-width: 768px) {
-  .ca-grid-3, .ca-grid-4, .ca-grid-2 { grid-template-columns: 1fr; }
+  .ca-grid-3,
+.ca-grid-4 { grid-template-columns: 1fr; }
   .ca-steps { grid-template-columns: 1fr; }
   .ca-dash-grid { grid-template-columns: 1fr; }
   .ca-table th, .ca-table td { padding: 13px 14px; font-size: 13.5px; }

@@ -29,12 +29,8 @@
   max-width: 42%;
   height: 3px;
   margin-top: 14px;
-  border-radius: 999px;
-  background: linear-gradient(90deg,
-    #4c1dc8 0%, #6528f7 26%, #7b4bff 55%, #a98fff 78%, #cbb8ff 100%);
-  -webkit-mask-image: linear-gradient(90deg, #000 0%, #000 58%, transparent 100%);
-  mask-image: linear-gradient(90deg, #000 0%, #000 58%, transparent 100%);
-  box-shadow: 0 6px 16px rgba(101, 40, 247, 0.28);
+  border-radius: 999px;
+  background: #6C35FF;
 }
 
 .page-attendance .section-head.center .section-title::after { margin-inline: auto; }
@@ -137,8 +133,6 @@
 .at-big h3 { font-size: clamp(1.3rem, 1.6vw, 1.6rem); margin: 18px 0 10px; }
 .at-big p { font-size: 15.5px; color: var(--text-body); margin: 0; }
 
-
-
 @media (max-width: 1023px) {
   .at-split { grid-template-columns: 1fr; }
   .at-flow-h { grid-template-columns: repeat(2, 1fr); }
@@ -240,3 +234,12 @@
 .page-attendance .at-row .icon-badge,
 .page-attendance .at-vstep .icon-badge,
 .page-attendance .at-matrix-row .icon-badge { flex-shrink: 0; }
+
+/* section title accent phrase: one solid colour (no gradient) */
+.page-attendance .section-title em.at-dual {
+  background: none;
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
+  color: #6528F7;
+  -webkit-text-fill-color: #6528F7;
+}

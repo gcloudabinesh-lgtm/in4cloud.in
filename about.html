@@ -20,6 +20,7 @@
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/buttons.css">
@@ -63,28 +64,28 @@
       </div>
     </section>
 
-    <!-- ============ STATS ============ -->
-    <section class="ab-stats-section" aria-labelledby="stats-title">
+    <!-- ============ WHO WE ARE ============ -->
+    <section class="ab-section" aria-labelledby="who-title">
       <div class="container">
-        <h2 class="ab-stats-title" id="stats-title">Proven <span>at Scale</span></h2>
-        <div class="ab-stats reveal">
-          <div class="ab-stat-cell reveal">
-            <span class="ab-stat-cell-icon"><i class="ico fa-solid fa-fingerprint" aria-hidden="true"></i></span>
-            <span class="ab-stat-cell-num counter-num" data-count="18" data-suffix="+">18+</span>
-            <span class="ab-stat-cell-label">Years of automation expertise</span>
+        <div class="ab-grid">
+
+          <div class="ab-copy reveal">
+            <p class="eyebrow">Who We Are</p>
+            <h2 id="who-title">18+ Years of Trust in <span class="ab-hl">Biometric Innovation</span></h2>
+            <p>For over 18 years, In4 Solution Pvt Ltd has been at the forefront of biometric attendance automation and workforce authentication — building deep expertise in attendance, access control and workforce management.</p>
+            <p>On that foundation we introduced the In4 Cloud Suite: a scalable family of cloud solutions that digitizes HRMS, Visitor Management, Canteen, CRM and Billing — improving accuracy, security, efficiency and workforce visibility through one connected digital ecosystem.</p>
           </div>
 
-          <div class="ab-stat-cell green reveal" style="--rd:.08s">
-            <span class="ab-stat-cell-icon green"><i class="ico fa-solid fa-layer-group" aria-hidden="true"></i></span>
-            <span class="ab-stat-cell-num green counter-num" data-count="3">3</span>
-            <span class="ab-stat-cell-label">Business automation platforms</span>
+          <div class="ab-visual reveal" style="--rd:.12s">
+            <!-- Empty image slot. Add the file at the src below and the frame
+                 fills automatically; until then the empty placeholder shows. -->
+            <figure class="ab-photo">
+              <span class="ab-photo-ring" aria-hidden="true"></span>
+              <img src="assets/about-us-team.jpg" alt="IN4 Solutions team and biometric attendance deployments" loading="lazy" />
+              <span class="ab-photo-empty" aria-hidden="true"><i class="ico fa-regular fa-image" aria-hidden="true"></i></span>
+            </figure>
           </div>
 
-          <div class="ab-stat-cell cyan reveal" style="--rd:.16s">
-            <span class="ab-stat-cell-icon cyan"><i class="ico fa-solid fa-handshake-angle" aria-hidden="true"></i></span>
-            <span class="ab-stat-cell-num cyan counter-num" data-count="1">1</span>
-            <span class="ab-stat-cell-label">Trusted technology partner</span>
-          </div>
         </div>
       </div>
     </section>
@@ -115,42 +116,9 @@
 
           <figure class="ab-story-media reveal reveal-right" style="--rd:.1s">
             <span class="ab-story-ring" aria-hidden="true"></span>
-            <img src="assets/our story.png" alt="IN4 Solutions story — biometric attendance and access control on a factory floor" loading="lazy" />
+            <img src="assets/our-story-about.jpg" width="1100" height="1100" alt="IN4 Solutions story — biometric attendance and access control on a factory floor" loading="lazy" decoding="async" />
             <figcaption>Biometric attendance and access control on the factory floor — where IN4 began.</figcaption>
           </figure>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ WHO WE ARE · 18+ · MISSION & VISION ============ -->
-    <section class="ab-section" aria-labelledby="who-title">
-      <div class="container">
-        <div class="ab-grid">
-
-          <div class="ab-copy reveal">
-            <p class="eyebrow">Who We Are</p>
-            <h2 id="who-title">18+ Years of Trust in <span class="ab-hl">Biometric Innovation</span></h2>
-            <p>For over 18 years, In4 Solution Pvt Ltd has been at the forefront of biometric attendance automation and workforce authentication — building deep expertise in attendance, access control and workforce management.</p>
-            <p>On that foundation we introduced the In4 Cloud Suite: a scalable family of cloud solutions that digitizes HRMS, Visitor Management, Canteen, CRM and Billing — improving accuracy, security, efficiency and workforce visibility through one connected digital ecosystem.</p>
-          </div>
-
-          <div class="ab-visual reveal" style="--rd:.12s">
-            <div class="ab-stat">
-              <span class="ab-stat-num counter-num" data-count="18" data-suffix="+">18+</span>
-              <span class="ab-stat-label">Years of Biometric Innovation</span>
-              <span class="ab-stat-line" aria-hidden="true"></span>
-              <span class="ab-stat-micro">From attendance hardware to connected cloud platforms.</span>
-            </div>
-
-            <!-- Empty image slot. Add the file at the src below and the frame
-                 fills automatically; until then the empty placeholder shows. -->
-            <figure class="ab-photo">
-              <span class="ab-photo-ring" aria-hidden="true"></span>
-              <img src="assets/about-us-team.jpg" alt="IN4 Solutions team and biometric attendance deployments" loading="lazy" />
-              <span class="ab-photo-empty" aria-hidden="true"><i class="ico fa-regular fa-image" aria-hidden="true"></i></span>
-            </figure>
-          </div>
-
         </div>
       </div>
     </section>
@@ -176,6 +144,26 @@
             <p>We envision a future where organizations of every size and industry can access intelligent solutions that make workforce management seamless, transparent and secure — leading this transformation through continuous innovation, trust and technology.</p>
           </article>
 
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SAAS FOR DIFFERENT BUSINESS SIZES (moved from hrms.html) ============ -->
+    <section class="section section-mint ab-sizes-section" aria-labelledby="sizes-title">
+      <div class="container">
+        <div class="section-head center reveal">
+          <h2 class="section-title" id="sizes-title">SaaS for Different <em class="ab-dual">Business Sizes</em></h2>
+        </div>
+        <div class="hr-sizes">
+          <div class="hr-size reveal"><span>SMBs</span><h3>Small &amp; Mid Businesses</h3><p>Lightweight, easy-to-deploy SaaS that covers attendance, leave and payroll without a big HR team.</p></div>
+          <div class="hr-size reveal" style="--rd:.06s"><span>Growing</span><h3>Growing Businesses</h3><p>Add sites, shifts and policies as headcount grows — the same employee record scales with you.</p></div>
+          <div class="hr-size reveal" style="--rd:.12s"><span>Enterprise</span><h3>Large Enterprises</h3><p>Multi-location, multi-shift, complex payroll structures and strong reporting for specific industries.</p></div>
+        </div>
+
+        <!-- Single centred CTA below the three size cards -->
+        <div class="hr-sizes-cta reveal" style="--rd:.18s">
+          <p>Find the right IN4 CloudHR plan for your business.</p>
+          <a class="btn btn-primary" href="pricing.html">See Pricing<i class="ico fa-solid fa-arrow-right" aria-hidden="true"></i></a>
         </div>
       </div>
     </section>
@@ -288,8 +276,8 @@
     </section>
 
   </main>
-<script defer src="js/site.js?v=20261030d"></script>
-  <script defer src="js/shell.js"></script>
+<script defer src="js/site.js?v=20261030f"></script>
+  <script defer src="js/shell.js?v=20261031"></script>
   <script defer src="js/lead.js?v=20261030d"></script>
 <script defer src="js/demo-modal.js?v=20261030"></script>
   <script defer src="js/main.js"></script>

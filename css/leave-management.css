@@ -754,10 +754,6 @@
 
 .page-leave .leave-why .section-lead { color: var(--text-muted); }
 
-.page-leave .leave-why .section-title::after {
-  box-shadow: 0 6px 16px rgba(236, 72, 153, 0.30);
-}
-
 /* the bento board is now six equal cards: a fixed 3-across board (two rows)
    that steps down to 2 and then 1, so the cards stay equal at every width */
 .page-leave .leave-why-grid {
@@ -1276,12 +1272,8 @@
   max-width: 42%;
   height: 3px;
   margin-top: 14px;
-  border-radius: 999px;
-  background: linear-gradient(90deg,
-    #be185d 0%, #ec4899 30%, #f472b6 62%, #fbcfe8 100%);
-  -webkit-mask-image: linear-gradient(90deg, #000 0%, #000 58%, transparent 100%);
-  mask-image: linear-gradient(90deg, #000 0%, #000 58%, transparent 100%);
-  box-shadow: 0 6px 16px rgba(236, 72, 153, 0.26);
+  border-radius: 999px;
+  background: #6C35FF;
 }
 
 .page-leave .section-head.center .section-title::after { margin-inline: auto; }
@@ -1308,7 +1300,6 @@
 .page-leave .ap-icon,
 .page-leave .lrg-icon,
 .page-leave .ldc-icon,
-.page-leave .lw-icon,
 .page-leave .af-node {
   background-image: var(--plate, linear-gradient(135deg, #be185d 0%, #ec4899 55%, #f9a8d4 100%));
   background-color: transparent;
@@ -1320,7 +1311,6 @@
 .page-leave .ap-icon .ico,
 .page-leave .lrg-icon .ico,
 .page-leave .ldc-icon .ico,
-.page-leave .lw-icon .ico,
 .page-leave .af-node .ico {
   background-image: none;
   color: #ffffff;
@@ -1348,7 +1338,6 @@
 .page-leave .lrg-icon .ico,
 .page-leave .ldc-icon .ico,
 .page-leave .ap-icon .ico,
-.page-leave .lw-icon .ico,
 .page-leave .af-node .ico,
 .page-leave .at-stage .icon-badge .ico {
   display: flex;
@@ -1369,7 +1358,6 @@
 
 .page-leave .af-node .ico { font-size: 18px; }
 
-.page-leave .lw-icon .ico,
 .page-leave .lrg-icon .ico,
 .page-leave .lwl-item .ico,
 .page-leave .ap-icon .ico { font-size: 20px; }
@@ -1394,3 +1382,12 @@
 .page-leave .leave-dash-card .ico,
 .page-leave .leave-compare-col li .ico,
 .page-leave .leave-mini .ico { margin-right: 2px; }
+
+/* section title accent phrase: one solid colour (no gradient) */
+.page-leave .section-title em.lv-dual {
+  background: none;
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
+  color: #DB2777;
+  -webkit-text-fill-color: #DB2777;
+}

@@ -37,7 +37,7 @@
   }
 
   const logoMark =
-    '<img class="logo-mark" src="assets/logo-trim.png" alt="IN4 Solutions" width="1824" height="408">';
+    '<img class="logo-mark" src="assets/logo-trim-600.png" alt="IN4 Solutions" width="600" height="134">';
 
   function navLink(href, label, key) {
     return (
@@ -176,7 +176,7 @@
     "</ul></div>" +
     "</div>" +
     '<div class="container footer-bottom">' +
-    "<p>Â© 2026 " + S.name + '. All rights reserved.</p>' +
+    "<p>&copy; 2026 " + S.name + '. All rights reserved.</p>' +
     '<p class="footer-prod"><span class="dot"></span>A business automation brand of ' + S.company + ".</p>" +
     "</div></footer>";
 
@@ -185,7 +185,6 @@
     '<div class="float-pop" id="float-pop">' +
     "<span class=\"pop-title\">Reach IN4 Solutions</span>" +
     '<a href="' + S.contact.phoneHref + '"><i class="ico fa-solid fa-phone" aria-hidden="true"></i> Call us</a>' +
-    '<a href="' + S.contact.emailHref + '"><i class="ico fa-solid fa-envelope" aria-hidden="true"></i> Send email</a>' +
     '<a href="contact.html#lead" data-demo-open><i class="ico fa-solid fa-calendar-day" aria-hidden="true"></i> Book a Demo</a>' +
     "</div>" +
     '<button class="fc-toggle" id="fc-toggle" type="button" aria-label="Contact options" aria-expanded="false">' +

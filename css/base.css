@@ -172,8 +172,6 @@ kbd, code, pre { font-family: ui-monospace, "Cascadia Code", Menlo, monospace; }
   padding-inline: clamp(20px, 4vw, 32px);
 }
 
-.container-wide { max-width: 1320px; }
-
 .section { padding-block: var(--space-section); position: relative; }
 .section-sm { padding-block: var(--space-section-sm); }
 .section-alt { background: var(--bg-soft); }
@@ -186,12 +184,6 @@ kbd, code, pre { font-family: ui-monospace, "Cascadia Code", Menlo, monospace; }
 .section-rose { background: #fef5f7; }
 
 /* Section icon accent colors */
-.icon-purple { color: var(--purple-600); }
-.icon-green { color: var(--green-600); }
-.icon-blue { color: #3b82f6; }
-.icon-orange { color: #f97316; }
-.icon-teal { color: #14b8a6; }
-.icon-rose { color: #e11d48; }
 
 .eyebrow {
   display: inline-flex;
@@ -242,12 +234,12 @@ kbd, code, pre { font-family: ui-monospace, "Cascadia Code", Menlo, monospace; }
 
 .section-title em.a1 { color: #6C35FF; }  /* purple      5.9:1 */
 .section-title em.a2 { color: #8B5CF6; }  /* violet      4.2:1 */
-.section-title em.a3 { color: #3B82F6; }  /* blue        3.7:1 */
-.section-title em.a4 { color: #0E8C9B; }  /* teal        4.0:1 */
-.section-title em.a5 { color: #EC4899; }  /* pink        3.5:1 */
+  /* blue        3.7:1 */
+  /* teal        4.0:1 */
+  /* pink        3.5:1 */
 .section-title em.a6 { color: #C2410C; }  /* burnt orange 5.2:1 */
 .section-title em.a7 { color: #4B20C8; }  /* deep purple 9.0:1 */
-.section-title em.a8 { color: #0891B2; }  /* cyan-blue   3.7:1 */
+  /* cyan-blue   3.7:1 */
 
 .section-lead {
   margin-top: clamp(0.875rem, 1.6vw, 1.125rem);
@@ -257,30 +249,12 @@ kbd, code, pre { font-family: ui-monospace, "Cascadia Code", Menlo, monospace; }
   max-width: 58ch;
 }
 
-.pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 8px 16px;
-  border-radius: 999px;
-  background: var(--bg);
-  border: 1px solid var(--border);
-  font-size: 13.5px;
-  font-weight: 600;
-  color: var(--text);
-  box-shadow: var(--shadow-sm);
-}
-
-.pill .ico { color: var(--purple-600); }
-
 .grid {
   display: grid;
   gap: 24px;
 }
 
-.grid-2 { grid-template-columns: repeat(2, 1fr); }
 .grid-3 { grid-template-columns: repeat(3, 1fr); }
-.grid-4 { grid-template-columns: repeat(4, 1fr); }
 
 /* Inline icon (Font Awesome base sizing; fa.css refines per-size overrides) */
 .ico {

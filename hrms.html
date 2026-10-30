@@ -20,6 +20,7 @@
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/buttons.css">
@@ -55,28 +56,8 @@
             </div>
           </div>
           <div class="inner-hero-visual hr-hero-visual reveal" style="--rd:.16s">
-            <img class="hr-hero-img" src="assets/hrms-shots/hrms-hero.png" width="1152" height="768" alt="HR professional with a laptop, surrounded by In4 CloudHR cards for last month<img class="hr-hero-img" src="assets/hrms-shots/hrms-hero.jpg" width="1536" height="1024" alt="HR professional beside the In4 CloudHR dashboard, with live updates for 41 employees present, October payroll processed and a leave approval"rsquo;s attendance and an employee<img class="hr-hero-img" src="assets/hrms-shots/hrms-hero.jpg" width="1536" height="1024" alt="HR professional beside the In4 CloudHR dashboard, with live updates for 41 employees present, October payroll processed and a leave approval"rsquo;s reporting and approving managers" decoding="async" fetchpriority="high" />
+            <img class="hr-hero-img" src="assets/hrms-shots/hrms-hero.webp" width="1152" height="768" alt="HR professional with a laptop, surrounded by In4 CloudHR cards for last month&rsquo;s attendance and an employee&rsquo;s reporting and approving managers" decoding="async" fetchpriority="high" />
           </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ 2. HRMS FOR DIFFERENT BUSINESS SIZES ============ -->
-    <section class="section section-mint" aria-labelledby="sizes-title">
-      <div class="container">
-        <div class="section-head center reveal">
-          <h2 class="section-title" id="sizes-title">HRMS for Different <em class="hr-dual">Business Sizes</em></h2>
-        </div>
-        <div class="hr-sizes">
-          <div class="hr-size reveal"><span>SMBs</span><h3>Small &amp; Mid Businesses</h3><p>Lightweight, easy to deploy HRMS that covers attendance, leave and payroll without a big HR team.</p></div>
-          <div class="hr-size reveal" style="--rd:.06s"><span>Growing</span><h3>Growing Businesses</h3><p>Add sites, shifts and policies as headcount grows — the same employee record scales with you.</p></div>
-          <div class="hr-size reveal" style="--rd:.12s"><span>Enterprise</span><h3>Large Enterprises</h3><p>Multi-location, multi-shift, complex payroll structures and strong reporting for specific industries.</p></div>
-        </div>
-
-        <!-- Single centred CTA below the three size cards -->
-        <div class="hr-sizes-cta reveal" style="--rd:.18s">
-          <p>Find the right IN4 CloudHR plan for your business.</p>
-          <a class="btn btn-primary" href="pricing.html">See Pricing<i class="ico fa-solid fa-arrow-right" aria-hidden="true"></i></a>
         </div>
       </div>
     </section>
@@ -124,17 +105,18 @@
           <div>
             <p class="eyebrow reveal">Core HR</p>
             <h2 class="section-title reveal" id="core-title" style="margin:14px 0 20px">Core HR &amp; <em class="hr-dual">Employee Lifecycle</em></h2>
-            <div class="at-sec-rows">
-              <div class="at-row reveal"><span class="icon-badge soft-purple"><i class="ico fa-solid fa-sitemap" aria-hidden="true"></i></span><div><h3>Core HR</h3><p>Real-time workforce data with live software views of headcount, attendance and HR activity.</p></div></div>
-              <div class="at-row reveal" style="--rd:.04s"><span class="icon-badge soft-purple"><i class="ico fa-solid fa-user-plus" aria-hidden="true"></i></span><div><h3>Onboarding</h3><p>Simple onboarding that takes new joiners from offer to first day in a few guided steps.</p></div></div>
-              <div class="at-row reveal" style="--rd:.08s"><span class="icon-badge soft-purple"><i class="ico fa-solid fa-person-walking-arrow-right" aria-hidden="true"></i></span><div><h3>Offboarding</h3><p>Exit formalities handled end to end, with an offboarding clearance checklist.</p></div></div>
-              <div class="at-row reveal" style="--rd:.12s"><span class="icon-badge soft-purple"><i class="ico fa-solid fa-users" aria-hidden="true"></i></span><div><h3>Employee Management</h3><p>A centralised employee database with document management for every record.</p></div></div>
-              <div class="at-row reveal" style="--rd:.16s"><span class="icon-badge soft-purple"><i class="ico fa-solid fa-chart-pie" aria-hidden="true"></i></span><div><h3>Dashboard Analytics</h3><p>Insights through graphs and a range of MIS reports.</p></div></div>
+            <!-- accordion: one item open at a time (shared name), first open -->
+            <div class="hr-acc">
+              <details class="hr-acc-item reveal" name="core-acc" open><summary><span class="icon-badge soft-purple"><i class="ico fa-solid fa-sitemap" aria-hidden="true"></i></span><h3>Core HR</h3><i class="ico fa-solid fa-chevron-down hr-acc-caret" aria-hidden="true"></i></summary><p>Real-time workforce data with live software views of headcount, attendance and HR activity.</p></details>
+              <details class="hr-acc-item reveal" name="core-acc" style="--rd:.04s"><summary><span class="icon-badge soft-purple"><i class="ico fa-solid fa-user-plus" aria-hidden="true"></i></span><h3>Onboarding</h3><i class="ico fa-solid fa-chevron-down hr-acc-caret" aria-hidden="true"></i></summary><p>Simple onboarding that takes new joiners from offer to first day in a few guided steps.</p></details>
+              <details class="hr-acc-item reveal" name="core-acc" style="--rd:.08s"><summary><span class="icon-badge soft-purple"><i class="ico fa-solid fa-person-walking-arrow-right" aria-hidden="true"></i></span><h3>Offboarding</h3><i class="ico fa-solid fa-chevron-down hr-acc-caret" aria-hidden="true"></i></summary><p>Exit formalities handled end to end, with an offboarding clearance checklist.</p></details>
+              <details class="hr-acc-item reveal" name="core-acc" style="--rd:.12s"><summary><span class="icon-badge soft-purple"><i class="ico fa-solid fa-users" aria-hidden="true"></i></span><h3>Employee Management</h3><i class="ico fa-solid fa-chevron-down hr-acc-caret" aria-hidden="true"></i></summary><p>A centralised employee database with document management for every record.</p></details>
+              <details class="hr-acc-item reveal" name="core-acc" style="--rd:.16s"><summary><span class="icon-badge soft-purple"><i class="ico fa-solid fa-chart-pie" aria-hidden="true"></i></span><h3>Dashboard Analytics</h3><i class="ico fa-solid fa-chevron-down hr-acc-caret" aria-hidden="true"></i></summary><p>Insights through graphs and a range of MIS reports.</p></details>
             </div>
           </div>
 
           <!-- main dashboard shot with real screenshots popping out around it -->
-          <div class="ch-visual ch-visual--core reveal" style="--rd:.1s">
+          <div class="ch-visual ch-visual--core ch-visual--framed reveal" style="--rd:.1s">
             <figure class="ch-main">
               <img src="assets/modules/corehr.jpg" width="1600" height="781" alt="In4 CloudHR Core HR dashboard showing headcount, present, late and absent counts, the leave calendar, check-in/out and notifications" loading="lazy" decoding="async" />
             </figure>
@@ -160,17 +142,18 @@
           <div>
             <p class="eyebrow reveal">Time &amp; Attendance</p>
             <h2 class="section-title reveal" id="att-title" style="margin:14px 0 20px">Attendance Management</h2>
-            <div class="at-sec-rows">
-              <div class="at-row reveal"><span class="icon-badge soft-purple"><i class="ico fa-solid fa-sliders" aria-hidden="true"></i></span><div><h3>Attendance Policies</h3><p>Map punch status, work span, late, OT and comp-off policies to employee groups, or configure them individually.</p></div></div>
-              <div class="at-row reveal" style="--rd:.04s"><span class="icon-badge soft-purple"><i class="ico fa-solid fa-calendar-days" aria-hidden="true"></i></span><div><h3>Shift Management</h3><p>Automate shifts and cut manual work — create shift patterns, bulk-assign them to employee groups or map them to individuals, with shift rosters built in.</p></div></div>
-              <div class="at-row reveal" style="--rd:.08s"><span class="icon-badge soft-purple"><i class="ico fa-solid fa-business-time" aria-hidden="true"></i></span><div><h3>Overtime Module</h3><p>Configure OT slabs and set rules for week-off and holiday OT, integrated directly with payroll.</p></div></div>
-              <div class="at-row reveal" style="--rd:.12s"><span class="icon-badge soft-purple"><i class="ico fa-solid fa-hand-pointer" aria-hidden="true"></i></span><div><h3>Punch Request</h3><p>Regularise missed punches, with configurable approval hierarchies.</p></div></div>
-              <div class="at-row reveal" style="--rd:.16s"><span class="icon-badge soft-purple"><i class="ico fa-solid fa-map-location-dot" aria-hidden="true"></i></span><div><h3>Multi-Location Attendance</h3><p>Centralise attendance data from every location and stay up to date with attendance insights.</p></div></div>
+            <!-- accordion: one item open at a time (shared name), first open -->
+            <div class="hr-acc">
+              <details class="hr-acc-item reveal" name="att-acc" open><summary><span class="icon-badge soft-purple"><i class="ico fa-solid fa-sliders" aria-hidden="true"></i></span><h3>Attendance Policies</h3><i class="ico fa-solid fa-chevron-down hr-acc-caret" aria-hidden="true"></i></summary><p>Map punch status, work span, late, OT and comp-off policies to employee groups, or configure them individually.</p></details>
+              <details class="hr-acc-item reveal" name="att-acc" style="--rd:.04s"><summary><span class="icon-badge soft-purple"><i class="ico fa-solid fa-calendar-days" aria-hidden="true"></i></span><h3>Shift Management</h3><i class="ico fa-solid fa-chevron-down hr-acc-caret" aria-hidden="true"></i></summary><p>Automate shifts and cut manual work — create shift patterns, bulk-assign them to employee groups or map them to individuals, with shift rosters built in.</p></details>
+              <details class="hr-acc-item reveal" name="att-acc" style="--rd:.08s"><summary><span class="icon-badge soft-purple"><i class="ico fa-solid fa-business-time" aria-hidden="true"></i></span><h3>Overtime Module</h3><i class="ico fa-solid fa-chevron-down hr-acc-caret" aria-hidden="true"></i></summary><p>Configure OT slabs and set rules for week-off and holiday OT, integrated directly with payroll.</p></details>
+              <details class="hr-acc-item reveal" name="att-acc" style="--rd:.12s"><summary><span class="icon-badge soft-purple"><i class="ico fa-solid fa-hand-pointer" aria-hidden="true"></i></span><h3>Punch Request</h3><i class="ico fa-solid fa-chevron-down hr-acc-caret" aria-hidden="true"></i></summary><p>Regularise missed punches, with configurable approval hierarchies.</p></details>
+              <details class="hr-acc-item reveal" name="att-acc" style="--rd:.16s"><summary><span class="icon-badge soft-purple"><i class="ico fa-solid fa-map-location-dot" aria-hidden="true"></i></span><h3>Multi-Location Attendance</h3><i class="ico fa-solid fa-chevron-down hr-acc-caret" aria-hidden="true"></i></summary><p>Centralise attendance data from every location and stay up to date with attendance insights.</p></details>
             </div>
           </div>
 
           <!-- attendance register with real screenshots popping out around it -->
-          <div class="ch-visual reveal" style="--rd:.1s">
+          <div class="ch-visual ch-visual--att ch-visual--framed reveal" style="--rd:.1s">
             <figure class="ch-main">
               <img src="assets/modules/attendance.jpg" width="1600" height="787" alt="In4 CloudHR monthly attendance register with daily present, week-off, holiday and leave status for each employee" loading="lazy" decoding="async" />
             </figure>
@@ -530,7 +513,7 @@
           </div>
 
           <!-- real payroll register with screenshots popping out around it -->
-          <div class="ch-visual px-visual reveal" style="--rd:.1s">
+          <div class="ch-visual px-visual ch-visual--framed reveal" style="--rd:.1s">
             <figure class="ch-main">
               <img src="assets/modules/payroll.jpg" width="1600" height="787" alt="In4 CloudHR payroll register for October 2026 with earned basic, HRA, DA, total earnings, PF, PT, insurance and deductions per employee" loading="lazy" decoding="async" />
             </figure>
@@ -571,7 +554,7 @@
           </div>
 
           <!-- training programs screen with pop-outs -->
-          <div class="ch-visual px-visual reveal" style="--rd:.1s">
+          <div class="ch-visual px-visual ch-visual--framed reveal" style="--rd:.1s">
             <figure class="ch-main mk" aria-hidden="true">
               <div class="mk-app">
                 <div class="mk-top"><span class="mk-logo">In4 <b>CloudHR</b></span><span class="mk-crumb">Training › Programs</span><span class="mk-av">HR</span></div>
@@ -618,7 +601,7 @@
           </div>
 
           <!-- appraisal review screen with pop-outs -->
-          <div class="ch-visual px-visual reveal" style="--rd:.1s">
+          <div class="ch-visual px-visual ch-visual--framed reveal" style="--rd:.1s">
             <figure class="ch-main mk" aria-hidden="true">
               <div class="mk-app">
                 <div class="mk-top"><span class="mk-logo">In4 <b>CloudHR</b></span><span class="mk-crumb">Appraisal › FY 2026 · Q3</span><span class="mk-av">HR</span></div>
@@ -818,8 +801,8 @@
 
   </main>
 <script defer src="js/hrms-icon-palette.js"></script>
-<script defer src="js/site.js?v=20261030d"></script>
-  <script defer src="js/shell.js"></script>
+<script defer src="js/site.js?v=20261030f"></script>
+  <script defer src="js/shell.js?v=20261031"></script>
   <script defer src="js/lead.js?v=20261030d"></script>
 <script defer src="js/demo-modal.js?v=20261030"></script>
   <script defer src="js/main.js"></script>

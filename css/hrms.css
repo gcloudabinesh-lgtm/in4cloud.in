@@ -26,10 +26,7 @@
   height: 3px;
   margin: 16px 0 0;
   border-radius: 999px;
-  background: linear-gradient(90deg, #6C35FF 0%, #8B5CF6 46%, #0E8C9B 100%);
-  -webkit-mask-image: linear-gradient(90deg, #000 0%, #000 62%, transparent 100%);
-  mask-image: linear-gradient(90deg, #000 0%, #000 62%, transparent 100%);
-  box-shadow: 0 6px 16px rgba(108, 53, 255, 0.24);
+  background: #6C35FF;
 }
 
 .page-hrms .section-head.center .section-title::after { margin-inline: auto; }
@@ -56,8 +53,6 @@
 }
 
 /* inline glyphs follow the plate colour of their tile */
-.page-hrms .hr-pointer .ico { color: #6C35FF; }
-
 
 /* ---- Page colour: no breadcrumb band, no photo background --------------
    The hero is a painted brand gradient with soft brand blooms (the same
@@ -103,10 +98,10 @@
 section[id], [id="modules"], [id="lead"], [id="features"] { scroll-margin-top: 92px; }
 
 /* Interactive lift on hoverable editorial blocks */
-.hr-size, .hr-pipe-in, .hr-pipe-out, .hr-pipe-mid, .hr-erp-list span {
+.hr-erp-list span {
   transition: transform .25s var(--ease), box-shadow .25s var(--ease), border-color .25s var(--ease);
 }
-.hr-size:hover, .hr-pipe-in:hover, .hr-pipe-mid:hover, .hr-pipe-out:hover, .hr-erp-list span:hover {
+.hr-erp-list span:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow-md);
   border-color: var(--purple-200);
@@ -117,8 +112,6 @@ section[id], [id="modules"], [id="lead"], [id="features"] { scroll-margin-top: 9
 .hr-tl-step { padding: 22px 0; }
 
 .hr-hero-visual { position: relative; }
-.hr-hero-stack { display: grid; gap: 14px; }
-.hr-hero-wrap { position: relative; }
 
 /* Hero alignment: both columns are pinned to the top and stretched to the
    same height, so the screenshot card is exactly as tall as the description
@@ -142,13 +135,6 @@ section[id], [id="modules"], [id="lead"], [id="features"] { scroll-margin-top: 9
   align-self: center;
 }
 
-.page-hrms .inner-hero-visual .hr-carousel {
-  flex: 1 1 auto;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
 .page-hrms .inner-hero-visual .hr-carousel-viewport { flex: 1 1 auto; min-height: 0; }
 
 .page-hrms .inner-hero-visual .hr-carousel-slide {
@@ -167,48 +153,16 @@ section[id], [id="modules"], [id="lead"], [id="features"] { scroll-margin-top: 9
 /* ---- Real product screenshots (assets/hrms-shots) --------------------
    One reusable frame so every screenshot on the page sits in the same
    white "browser card", scales fluidly and stays legible on any device. */
-.hr-shot {
-  margin: 0;
-  background: #fff;
-  border: 1px solid var(--border, #e6e4f1);
-  border-radius: var(--r-lg, 20px);
-  box-shadow: 0 18px 44px rgba(17, 24, 39, 0.10);
-  overflow: hidden;
-}
-
-.hr-shot img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
 
 /* Captions sit under the frame, never over the UI */
-.hr-shot figcaption {
-  padding: 10px 14px;
-  border-top: 1px solid var(--border-soft, #eceaf6);
-  background: #fbfaff;
-  font-size: 12.5px;
-  font-weight: 600;
-  color: var(--text-muted, #5b6478);
-}
 
 /* Two stacked shots with a soft overlap — used in the hero and the
    dashboard section so it reads like a real product surface. */
-.hr-shot-stack {
-  display: grid;
-  gap: clamp(0.75rem, 1.6vw, 1.1rem);
-}
-
-.hr-shot-stack .hr-shot:last-child {
-  width: min(100%, 88%);
-  margin-inline: auto;
-}
 
 /* ---- Auto slider for the two-shot sections -----------------------------
    Slides share one grid cell, so the frame never jumps height while the
    active shot cross-fades: it rises in with a soft scale and a slow
    Ken Burns drift, while the outgoing shot lifts away. */
-.hr-carousel { position: relative; }
 
 .hr-carousel-viewport {
   display: grid;                 /* every slide occupies the same cell */
@@ -302,31 +256,16 @@ section[id], [id="modules"], [id="lead"], [id="features"] { scroll-margin-top: 9
   animation-play-state: var(--play, running);
 }
 
-.hr-carousel.is-paused .hr-carousel-dot.is-active::after {
-  animation-play-state: paused;
-}
-
 @keyframes hrDotProgress {
   from { transform: scaleX(0); }
   to   { transform: scaleX(1); }
 }
 
 /* Split layout used by the attendance / insights sections */
-.hr-shot-split {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: clamp(1rem, 2.4vw, 2rem);
-  align-items: center;
-}
-
-.hr-shot-split--reverse .hr-shot-split-media { order: -1; }
-.hr-shot-split-media { min-width: 0; }
 
 /* Small screens: everything stacks, and nothing overflows sideways */
 @media (max-width: 1023px) {
-  .hr-shot-split { grid-template-columns: 1fr; }
-  .hr-shot-split--reverse .hr-shot-split-media { order: 0; }
-
+    
   /* stacked hero: the copy keeps its rhythm, the carousel follows with a
      clear gap and returns to its natural height (no matching column) */
   .page-hrms .inner-hero-visual { margin-top: clamp(1.5rem, 4vw, 2.5rem); }
@@ -335,13 +274,9 @@ section[id], [id="modules"], [id="lead"], [id="features"] { scroll-margin-top: 9
 }
 
 @media (max-width: 560px) {
-  .hr-shot,
   .hr-carousel-viewport { border-radius: 14px; }
-  .hr-shot { box-shadow: 0 10px 26px rgba(17, 24, 39, 0.09); }
-  .hr-carousel-viewport { box-shadow: 0 12px 30px rgba(17, 24, 39, 0.10); }
-  .hr-shot figcaption { font-size: 12px; padding: 9px 12px; }
-  .hr-shot-stack .hr-shot:last-child { width: 100%; }
-  .hr-carousel-dots { gap: 6px; margin-top: 12px; }
+    .hr-carousel-viewport { box-shadow: 0 12px 30px rgba(17, 24, 39, 0.10); }
+      .hr-carousel-dots { gap: 6px; margin-top: 12px; }
   .hr-carousel-dot { width: 16px; height: 5px; }
   .hr-carousel-dot.is-active { width: 34px; }
 }
@@ -428,74 +363,9 @@ section[id], [id="modules"], [id="lead"], [id="features"] { scroll-margin-top: 9
   color: var(--text-muted, #5b6478);
 }
 
-/* --- Section 4: sizes ---
-   Each tier gets its own brand hue on a soft tint, so the three cards read as
-   distinct stages at a glance instead of three identical white boxes. The
-   ramp (green -> violet -> teal) is the same one the onboarding steps use, so
-   the page keeps a single colour language. Hues are set in CSS via nth-child
-   rather than inline styles, so hrms.html and the homepage stay in sync with
-   no markup on either page. */
-.hr-sizes { display: grid; grid-template-columns: 1fr 1.15fr 1.3fr; gap: 18px; align-items: end; }
-
-.hr-size {
-  position: relative;
-  overflow: hidden;
-  border: 1px solid color-mix(in srgb, var(--acc) 20%, transparent);
-  border-radius: var(--r-lg);
-  padding: 22px 20px;
-  background: linear-gradient(168deg, var(--acc-soft) 0%, #ffffff 64%);
-  box-shadow: var(--shadow-sm);
-  transition: transform .3s var(--ease), box-shadow .3s var(--ease), border-color .3s var(--ease);
-}
-
-/* accent bar across the top edge, fading off to the right */
-.hr-size::before {
-  content: "";
-  position: absolute;
-  inset: 0 0 auto;
-  height: 4px;
-  background: linear-gradient(90deg, var(--acc) 0%, color-mix(in srgb, var(--acc) 42%, #ffffff) 100%);
-}
-
-.hr-size:nth-child(1) { --acc: #378223; --acc-soft: #eaf7e3; }
-.hr-size:nth-child(2) { --acc: #7c3aed; --acc-soft: #f1edfe; padding-block: 30px; }
-.hr-size:nth-child(3) { --acc: #0e7490; --acc-soft: #e3f5f9; padding-block: 38px; box-shadow: var(--shadow-md); }
-
-/* hover lifts the card and tints its shadow with its own hue */
-.hr-size:hover {
-  transform: translateY(-4px);
-  border-color: color-mix(in srgb, var(--acc) 42%, transparent);
-  box-shadow: 0 2px 6px rgba(24, 22, 50, .04), 0 18px 40px color-mix(in srgb, var(--acc) 22%, transparent);
-}
-
-.hr-size span { font-family: "Plus Jakarta Sans", sans-serif; font-weight: 800; color: var(--acc); font-size: 13px; letter-spacing: .1em; text-transform: uppercase; }
-.hr-size h3 { font-size: 17px; margin: 10px 0 8px; }
-.hr-size p { font-size: 14px; color: var(--text-muted); margin: 0; }
-
-/* Centred CTA under the three size cards. Deliberately plain markup — the
-   button reuses the site-wide .btn-primary gradient, so only the block needs
-   styling here. Compact on purpose: a small supporting line plus a standard
-   (not .btn-lg) button, so it reads as an aside to the cards, not a
-   competing call to action. */
-.hr-sizes-cta {
-  margin-top: clamp(1.75rem, 3vw, 2.25rem);
-  margin-bottom: clamp(0.25rem, 1vw, 0.75rem);
-  text-align: center;
-}
-
-.hr-sizes-cta p {
-  max-width: 46ch;
-  margin: 0 auto clamp(1rem, 1.6vw, 1.125rem);
-  font-size: 15px;
-  line-height: 1.6;
-  color: var(--text-muted);
-}
-
 /* --- Section 5/6/12: dashboard moments --- */
-.hr-dash-moment { background: linear-gradient(160deg, #ece4ff, #fff 60%, #e9efff); border: 1px solid var(--purple-100); border-radius: var(--r-xl); padding: clamp(1.6rem, 3vw, 2.6rem); display: grid; gap: clamp(1rem, 2vw, 1.6rem); }
 
 /* Inside that tinted panel the shots read as cards, so flatten their own frame */
-.hr-dash-moment .hr-shot { box-shadow: 0 14px 34px rgba(17, 24, 39, 0.10); }
 .hr-callouts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 22px; }
 .hr-callout { background: #fff; border: 1px solid var(--border); border-radius: var(--r-lg); padding: 18px 20px; box-shadow: var(--shadow-sm); }
 .hr-callout h3 { font-size: 15.5px; margin-bottom: 4px; }
@@ -910,16 +780,16 @@ section[id], [id="modules"], [id="lead"], [id="features"] { scroll-margin-top: 9
 .am-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: clamp(14px, 2vw, 24px);
-  margin-top: clamp(1.75rem, 3vw, 2.5rem);
+  gap: clamp(12px, 1.6vw, 18px);
+  margin-top: clamp(1.5rem, 2.6vw, 2.25rem);
 }
 
 .am-card {
   position: relative;
   margin: 0;
-  aspect-ratio: 9 / 8;
+  aspect-ratio: 3 / 2;
   overflow: hidden;
-  border-radius: 20px;
+  border-radius: 16px;
   background: var(--purple-50, #f1ecff);
   box-shadow: 0 14px 34px rgba(17, 24, 39, 0.1);
   transition: transform 0.35s var(--ease), box-shadow 0.35s var(--ease);
@@ -939,22 +809,22 @@ section[id], [id="modules"], [id="lead"], [id="features"] { scroll-margin-top: 9
 
 .am-card figcaption {
   position: absolute;
-  left: 10px;
-  right: 10px;
-  bottom: 10px;
+  left: 8px;
+  right: 8px;
+  bottom: 8px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 12px;
-  min-height: 62px;
-  padding: 12px 14px 12px 16px;
+  gap: 10px;
+  min-height: 48px;
+  padding: 8px 10px 8px 12px;
   border: 1px solid rgba(255, 255, 255, 0.7);
-  border-radius: 14px;
+  border-radius: 12px;
   background: rgba(255, 255, 255, 0.78);
   -webkit-backdrop-filter: blur(10px) saturate(1.2);
   backdrop-filter: blur(10px) saturate(1.2);
   font-family: "Plus Jakarta Sans", sans-serif;
-  font-size: 15px;
+  font-size: 13.5px;
   font-weight: 700;
   line-height: 1.3;
   color: var(--ink-800, #181632);
@@ -964,9 +834,9 @@ section[id], [id="modules"], [id="lead"], [id="features"] { scroll-margin-top: 9
   display: grid;
   place-items: center;
   flex-shrink: 0;
-  width: 34px;
-  height: 34px;
-  border-radius: 10px;
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
   background: linear-gradient(135deg, #6C35FF, #8B5CF6);
   color: #ffffff;
   font-size: 14px;
@@ -1021,26 +891,10 @@ section[id], [id="modules"], [id="lead"], [id="features"] { scroll-margin-top: 9
 .hr-callout--shot:hover .hr-callout-shot img { transform: scale(1.04); }
 
 /* --- Section 7: chatbot --- */
-.hr-chat { max-width: 440px; background: #fff; border: 1px solid var(--border); border-radius: var(--r-xl); box-shadow: var(--shadow-md); overflow: hidden; }
-.hr-chat-head { background: var(--grad-purple); color: #fff; padding: 16px 18px; display: flex; align-items: center; gap: 12px; }
-.hr-chat-head .avatar { width: 38px; height: 38px; border-radius: 50%; background: rgba(255,255,255,.2); display: grid; place-items: center; }
-.hr-chat-head strong { font-family: "Plus Jakarta Sans", sans-serif; font-size: 15px; display: block; }
-.hr-chat-head span { font-size: 12px; color: rgba(255,255,255,.8); }
-.hr-msg { padding: 18px; display: grid; gap: 12px; }
-.hr-bubble { max-width: 82%; padding: 12px 14px; border-radius: 16px; font-size: 14px; line-height: 1.5; }
-.hr-bubble.user { justify-self: end; background: var(--purple-50); color: var(--ink-800); border-bottom-right-radius: 6px; }
-.hr-bubble.bot { justify-self: start; background: var(--bg-soft); border: 1px solid var(--border-soft); color: var(--text-body); border-bottom-left-radius: 6px; }
 
 /* --- Section 9: payroll pipeline --- */
-.hr-pipe { display: grid; grid-template-columns: 1fr auto 1fr auto 1fr; gap: 14px; align-items: stretch; }
-.hr-pipe-in, .hr-pipe-mid, .hr-pipe-out { background: #fff; border: 1px solid var(--border); border-radius: var(--r-lg); padding: 20px; box-shadow: var(--shadow-sm); }
-.hr-pipe-in h3, .hr-pipe-mid h3, .hr-pipe-out h3 { font-size: 14px; text-transform: uppercase; letter-spacing: .1em; color: var(--purple-600); margin-bottom: 12px; }
-.hr-pipe-in ul, .hr-pipe-mid ul, .hr-pipe-out ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; }
-.hr-pipe-in li, .hr-pipe-mid li, .hr-pipe-out li { padding: 8px 12px; background: var(--purple-50); border-radius: var(--r-md); font-size: 14px; font-weight: 600; color: var(--purple-700); }
-.hr-pipe-arrow { align-self: center; color: var(--purple-300); font-size: 22px; padding: 0 2px; }
 
 /* --- Section 11: appraisal editorial two-column --- */
-.hr-perf { display: grid; grid-template-columns: 1fr 1.4fr; gap: clamp(2rem, 5vw, 4rem); align-items: start; }
 .hr-tl { position: relative; display: grid; gap: 0; }
 .hr-tl::before { content: ""; position: absolute; left: 23px; top: 10px; bottom: 10px; width: 2px; background: linear-gradient(180deg, var(--purple-200), var(--purple-100)); }
 .hr-tl-step { display: grid; grid-template-columns: 48px 1fr; gap: 18px; padding: 18px 0; }
@@ -1051,9 +905,6 @@ section[id], [id="modules"], [id="lead"], [id="features"] { scroll-margin-top: 9
 /* Performance & Appraisal: title-only steps, compact and centred on the dot */
 #performance .hr-tl-step { align-items: center; padding: 10px 0; }
 #performance .hr-tl-step h3 { margin: 0; }
-@media (max-width: 1023px) {
-  .hr-perf { grid-template-columns: 1fr; }
-}
 
 /* --- Section 13: ERP architecture --- */
 .hr-erp { display: grid; grid-template-columns: 1fr auto 1.4fr; gap: 22px; align-items: center; background: linear-gradient(160deg, #ece4ff, #fff 60%, #e9efff); border: 1px solid var(--purple-100); border-radius: var(--r-xl); padding: clamp(1.6rem, 3vw, 2.6rem); }
@@ -1062,26 +913,17 @@ section[id], [id="modules"], [id="lead"], [id="features"] { scroll-margin-top: 9
 .hr-erp-list span { background: #fff; border: 1px solid var(--purple-100); border-radius: var(--r-md); padding: 10px 14px; font-size: 14px; font-weight: 600; color: var(--ink-800); }
 
 /* --- Section 6 pointers --- */
-.hr-pointers { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 20px; }
-.hr-pointer { display: flex; align-items: center; gap: 10px; font-size: 14px; font-weight: 600; color: var(--text-body); }
-.hr-pointer .ico { color: var(--purple-600); }
 
 @media (max-width: 1023px) {
   .hr-eco, .hr-erp { grid-template-columns: 1fr; }
-  .hr-sizes { grid-template-columns: 1fr; align-items: stretch; }
-  .hr-pipe { grid-template-columns: 1fr; }
-  .hr-pipe-arrow { transform: rotate(90deg); justify-self: center; }
-  .hr-callouts { grid-template-columns: 1fr; }
-  .hr-pointers { grid-template-columns: 1fr; }
-
+      .hr-callouts { grid-template-columns: 1fr; }
+  
   /* Tablet: the CTA stays centred and compact — an inline button is already
      only as wide as its label, so no cap is needed here. */
 }
 
 @media (max-width: 640px) {
   /* Phone: nearly full width, with the container's side padding as margins */
-  .hr-sizes-cta .btn { width: 100%; }
-  .hr-sizes-cta p { font-size: 14.5px; }
 }
 
 /* ---- Hero spacing --------------------------------------------------------
@@ -1163,19 +1005,9 @@ section[id], [id="modules"], [id="lead"], [id="features"] { scroll-margin-top: 9
 .ch-pop figcaption .ico { width: 1em; height: 1em; font-size: 11px; color: var(--purple-600, #6528f7); }
 
 .ch-pop--emp    { top: 0;    left: 0;  width: 46%; }
-.ch-pop--docs   { top: 0;    right: 0; width: 24%; animation-delay: -2.4s; }
 .ch-pop--charts { bottom: 0; left: 0;  width: 50%; animation-delay: -4.6s; }
 
 /* small stat chip */
-.ch-pop--chip {
-  bottom: 34px;
-  right: 0;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 9px 14px 9px 9px;
-  animation-delay: -1.2s;
-}
 
 .ch-chip-ico {
   display: grid;
@@ -1201,7 +1033,6 @@ section[id], [id="modules"], [id="lead"], [id="features"] { scroll-margin-top: 9
   50% { translate: 0 -6px; }
 }
 
-
 /* Pop-outs zoom out from the dashboard once the visual is revealed: each
    grows from its inner corner (the side facing the main image) with a small
    overshoot, staggered after the main image has faded in. */
@@ -1214,15 +1045,11 @@ section[id], [id="modules"], [id="lead"], [id="features"] { scroll-margin-top: 9
 }
 
 .ch-pop--emp    { transform-origin: 100% 100%; }
-.ch-pop--docs   { transform-origin: 0 100%; }
 .ch-pop--charts { transform-origin: 100% 0; }
-.ch-pop--chip   { transform-origin: 0 0; }
 
 .ch-visual.is-visible .ch-pop { opacity: 1; scale: 1; }
 .ch-visual.is-visible .ch-pop--emp    { transition-delay: 0.75s; }
-.ch-visual.is-visible .ch-pop--docs   { transition-delay: 0.95s; }
 .ch-visual.is-visible .ch-pop--charts { transition-delay: 1.15s; }
-.ch-visual.is-visible .ch-pop--chip   { transition-delay: 1.35s; }
 
 /* --- Section 5: Attendance — same composition, mirrored: image left,
    content right. Text stays first in the markup so it leads on mobile. */
@@ -1230,16 +1057,16 @@ section[id], [id="modules"], [id="lead"], [id="features"] { scroll-margin-top: 9
 .ch-split--rev > .ch-visual { order: -1; }
 
 /* two shots on opposite corners, same as Core HR */
-.ch-pop--today { top: 0;    left: 0;  width: 46%; transform-origin: 100% 100%; }
-.ch-pop--log   { bottom: 0; right: 0; width: 50%; transform-origin: 0 0;    animation-delay: -1.2s; }
+.ch-pop--today { top: 0;    left: 0;  width: 38%; transform-origin: 100% 100%; }
+.ch-pop--log   { bottom: 0; right: 0; width: 42%; transform-origin: 0 0;    animation-delay: -1.2s; }
 
 .ch-visual.is-visible .ch-pop--today { transition-delay: 0.75s; }
 .ch-visual.is-visible .ch-pop--log   { transition-delay: 1s; }
 
 /* Core HR: Attendance's frame and card style, with just two shots on
    opposite corners — large one top-left, wide one bottom-right. */
-.ch-visual--core .ch-pop--emp    { top: 0;    left: 0;    right: auto; width: 46%; transform-origin: 100% 100%; }
-.ch-visual--core .ch-pop--charts { bottom: 0; left: auto; right: 0;    width: 50%; transform-origin: 0 0; animation-delay: -1.2s; }
+.ch-visual--core .ch-pop--emp    { top: 0;    left: 0;    right: auto; width: 38%; transform-origin: 100% 100%; }
+.ch-visual--core .ch-pop--charts { bottom: 0; left: auto; right: 0;    width: 42%; transform-origin: 0 0; animation-delay: -1.2s; }
 
 .ch-visual--core.is-visible .ch-pop--emp    { transition-delay: 0.75s; }
 .ch-visual--core.is-visible .ch-pop--charts { transition-delay: 1s; }
@@ -1257,10 +1084,8 @@ section[id], [id="modules"], [id="lead"], [id="features"] { scroll-margin-top: 9
   .ch-visual { padding: 44px 6px 64px; }
   .ch-pop figcaption { padding: 5px 8px; font-size: 10px; }
   .ch-pop--emp    { left: 0; width: 52%; }
-  .ch-pop--docs   { width: 32%; }
-  .ch-pop--charts { left: 0; width: 58%; }
-  .ch-pop--chip   { display: none; }
-  .ch-pop--today  { width: 54%; }
+    .ch-pop--charts { left: 0; width: 58%; }
+    .ch-pop--today  { width: 54%; }
   .ch-pop--log    { width: 54%; }
 
   .ch-visual--core .ch-pop--emp    { width: 54%; }
@@ -2147,4 +1972,187 @@ section[id], [id="modules"], [id="lead"], [id="features"] { scroll-margin-top: 9
   #payroll .px-loan small { white-space: nowrap; }
   #payroll .px-loan .o small { font-size: 0; }
   #payroll .px-loan .o small::after { content: "Pending"; font-size: 8.5px; }
+}
+
+/* ==========================================================================
+   Attendance Management — accordion list (native <details>; the shared
+   name attribute keeps one item open at a time). Shorter than the old
+   always-open rows.
+   ========================================================================== */
+.hr-acc { display: flex; flex-direction: column; gap: 8px; }
+
+.hr-acc-item {
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: #ffffff;
+  box-shadow: 0 6px 16px rgba(17, 24, 39, 0.04);
+  transition: border-color 0.25s var(--ease), box-shadow 0.25s var(--ease);
+}
+.hr-acc-item[open] {
+  border-color: rgba(108, 53, 255, 0.35);
+  box-shadow: 0 14px 30px rgba(75, 32, 200, 0.1);
+}
+
+.hr-acc-item summary {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  cursor: pointer;
+  list-style: none;
+}
+.hr-acc-item summary::-webkit-details-marker { display: none; }
+.hr-acc-item summary:focus-visible { outline: 2px solid #6C35FF; outline-offset: 2px; border-radius: 14px; }
+
+.hr-acc-item .icon-badge { width: 36px; height: 36px; flex-shrink: 0; border-radius: 11px; }
+.hr-acc-item h3 { flex: 1; margin: 0; font-size: 16px; }
+
+.hr-acc-caret {
+  width: 1em;
+  height: 1em;
+  flex-shrink: 0;
+  font-size: 13px;
+  color: var(--text-muted);
+  transition: transform 0.3s var(--ease), color 0.3s var(--ease);
+}
+.hr-acc-item[open] .hr-acc-caret { transform: rotate(180deg); color: #6C35FF; }
+
+.hr-acc-item p {
+  margin: 0;
+  padding: 0 14px 12px 62px;
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: var(--text-muted);
+  animation: hrAccIn 0.3s var(--ease);
+}
+@keyframes hrAccIn { from { opacity: 0; transform: translateY(-4px); } }
+
+@media (max-width: 640px) {
+  .hr-acc-item p { padding-left: 16px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hr-acc-item p { animation: none; }
+}
+
+/* ==========================================================================
+   Core HR and Attendance visuals — the dashboard shots are white on pale
+   sections, so each sits in a solid purple frame with a tilted colour card
+   behind it (mirrored when the image is on the left).
+   ========================================================================== */
+.ch-visual--framed { isolation: isolate; padding: 84px 60px; }
+
+.ch-visual--framed .ch-main {
+  padding: 4px;
+  border: 0;
+  border-radius: 24px;
+  background: #6C35FF;
+  box-shadow: 0 30px 70px rgba(75, 32, 200, 0.24);
+}
+.ch-visual--framed .ch-main img {
+  border-radius: 20px;
+  background: #ffffff;
+}
+
+/* tilted card behind the frame, gently rocking */
+.ch-visual--framed::after {
+  content: "";
+  position: absolute;
+  inset: 70px 40px 70px 80px;
+  z-index: -1;
+  border-radius: 28px;
+  background: linear-gradient(135deg, rgba(108, 53, 255, 0.28), rgba(34, 199, 214, 0.22) 55%, rgba(109, 190, 69, 0.22));
+  transform: rotate(4deg);
+  animation: chCardRock 8s ease-in-out infinite;
+}
+
+@keyframes chCardRock {
+  0%, 100% { transform: rotate(4deg) translateY(0); }
+  50% { transform: rotate(6deg) translateY(-8px); }
+}
+
+/* image on the left (Attendance): the card leans the other way */
+.ch-split--rev .ch-visual--framed::after {
+  inset: 70px 80px 70px 40px;
+  animation-name: chCardRockRev;
+}
+@keyframes chCardRockRev {
+  0%, 100% { transform: rotate(-4deg) translateY(0); }
+  50% { transform: rotate(-6deg) translateY(-8px); }
+}
+
+@media (max-width: 1023px) {
+  .ch-visual--framed { padding: 84px 32px; }
+  .ch-visual--framed::after { inset: 70px 16px 70px 48px; }
+  .ch-split--rev .ch-visual--framed::after { inset: 70px 48px 70px 16px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ch-visual--framed::after { animation: none; }
+}
+@media (max-width: 640px) {
+  .ch-visual--framed { padding: 44px 6px 64px; }
+  .ch-visual--framed::after { inset: 36px 0 52px 16px; }
+  .ch-split--rev .ch-visual--framed::after { inset: 36px 16px 52px 0; }
+}
+
+/* Payroll: same purple frame and tilted card; its pop-outs are HTML cards,
+   so they shrink by width rather than percentage */
+.px-visual.ch-visual--framed { padding: 70px 60px 78px; }
+@media (min-width: 641px) {
+  #payroll .px-pop--loan { width: 222px; padding: 10px 12px; font-size: 11px; }
+  #payroll .px-pop--run  { width: 212px; padding: 10px 12px; font-size: 11px; }
+  #training .px-pop--rem,
+  #performance .px-pop--letter { width: 212px; padding: 10px 12px; font-size: 11px; }
+}
+@media (max-width: 1023px) {
+  .px-visual.ch-visual--framed { padding: 70px 32px 78px; }
+}
+
+/* Training and Appraisal use app screens built in HTML (.mk) — inside the
+   purple frame the screen gets its own rounded, tinted surface */
+.ch-visual--framed .ch-main.mk .mk-app {
+  overflow: hidden;
+  border-radius: 20px;
+  background: #f7f6fd;
+}
+
+/* ==========================================================================
+   Leave Management cards — the screenshots are white, so each card gets its
+   own accent: a tinted outline, the shot inset on a coloured panel with its
+   own border, and a matching tint behind the copy.
+   ========================================================================== */
+.hr-callout--shot { --acc: #6C35FF; --acc-soft: #f1ecff; border: 1.5px solid color-mix(in srgb, var(--acc) 30%, transparent); }
+.hr-callout--shot:nth-child(2) { --acc: #0E8C9B; --acc-soft: #e3f5f8; }
+.hr-callout--shot:nth-child(3) { --acc: #3E8E2D; --acc-soft: #eaf6e4; }
+
+.hr-callout--shot .hr-callout-shot {
+  padding: 14px 14px 0;
+  border-bottom: 0;
+  background: linear-gradient(160deg, color-mix(in srgb, var(--acc) 20%, #ffffff), var(--acc-soft));
+}
+.hr-callout--shot .hr-callout-shot img {
+  border: 1px solid color-mix(in srgb, var(--acc) 28%, transparent);
+  border-bottom: 0;
+  border-radius: 12px 12px 0 0;
+  background: #ffffff;
+  box-shadow: 0 -2px 18px color-mix(in srgb, var(--acc) 18%, transparent);
+}
+
+.hr-callout--shot .hr-callout-body {
+  border-top: 3px solid var(--acc);
+  background: var(--acc-soft);
+}
+.hr-callout--shot .hr-callout-body h3 { color: color-mix(in srgb, var(--acc) 70%, #181632); }
+
+.hr-callout--shot:hover {
+  border-color: var(--acc);
+  box-shadow: 0 18px 40px color-mix(in srgb, var(--acc) 22%, transparent);
+}
+
+/* section title accent phrase: one solid colour (no gradient) */
+.page-hrms .section-title em.hr-dual {
+  background: none;
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
+  color: #6C35FF;
+  -webkit-text-fill-color: #6C35FF;
 }

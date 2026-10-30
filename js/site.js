@@ -10,12 +10,10 @@
     url: "https://www.in4solution.com",
 
     contact: {
-      person: "Priya",
-      role: "Senior Business Consultant",
       phoneDisplay: "+91 89258 14088",
       phoneHref: "tel:+918925814088",
-      email: "Priya@in4solution.com",
-      emailHref: "mailto:Priya@in4solution.com",
+      email: "info@in4solution.com",
+      emailHref: "mailto:info@in4solution.com",
       addressLines: [
         "No-4, 2nd Floor, Pillaiyar Kovil street,",
         "Kasi City Park, Kasi Estate, Ashok Nagar,",

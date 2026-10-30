@@ -137,18 +137,7 @@
 
 /* Module cards grid */
 
-
-
-
-
-
-
-
-
 /* Biometric integrations */
-
-
-
 
 .text-success {
   color: var(--purple-600);
@@ -608,8 +597,6 @@
   color: var(--in4-navy);
 }
 
-
-
 .mod-panels {
   position: relative;
   border-radius: var(--r-xl);
@@ -645,23 +632,6 @@
   display: flex;
 }
 
-.mod-showcase .mod-panel > .mod-visual > .mock {
-  width: 100%;
-  max-height: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
-.mod-showcase .mock-dash-body,
-.mod-showcase .mock-rows-body,
-.mod-showcase .mock-cal-body,
-.mod-showcase .mock-ring-body,
-.mod-showcase .mock-pipe-body,
-.mod-showcase .mock-course-body {
-  min-height: 0;
-  overflow: hidden;
-}
-
 /* each module carries its own accent strip — one brand rule, many colours */
 .mod-panel::before {
   content: "";
@@ -678,44 +648,10 @@
   to   { opacity: 1; transform: none; }
 }
 
-.mod-panel-eyebrow {
-  display: inline-block;
-  padding: 6px 12px;
-  border-radius: 999px;
-  background: var(--acc-soft, var(--in4-purple-soft));
-  color: var(--acc, #6C35FF);
-  font-size: 11.5px;
-  font-weight: 800;
-  letter-spacing: 0.11em;
-  text-transform: uppercase;
-}
-
-.mod-panel-copy h3 {
-  margin: 16px 0 12px;
-  font-size: clamp(1.35rem, 1.4vw + 0.9rem, 1.75rem);
-  font-weight: 800;
-  color: var(--in4-navy);
-}
-
 /* Dual-colour module title, the same device the inner product pages use for
    their headings: the accent phrase is filled with the module's own gradient
    (#6528f7 -> #7b4bff -> #9779ff here, the attendance page palette) instead
    of flat ink. Add .mod-title-grad to the h3 of the panel. */
-.mod-panel-copy h3.mod-title-grad {
-  background: linear-gradient(96deg, #6528f7 0%, #7b4bff 55%, #9779ff 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  -webkit-text-fill-color: transparent;
-}
-
-.mod-panel-copy p {
-  font-size: 16px;
-  color: var(--in4-text-muted);
-  max-width: 40ch;
-}
-
-.mod-cta { margin-top: 24px; }
 
 /* ---- Product UI mockup (decorative, drawn in CSS) ---- */
 .mod-visual { min-width: 0; }
@@ -861,325 +797,11 @@
   color: var(--in4-text-muted);
 }
 
-.mock {
-  position: relative;
-  background: #ffffff;
-  border: 1px solid var(--in4-border);
-  border-radius: 18px;
-  box-shadow: 0 18px 40px rgba(17, 24, 39, 0.09);
-  overflow: hidden;
-}
-
-.mock-chrome {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  padding: 12px 14px;
-  background: var(--in4-bg-soft);
-  border-bottom: 1px solid var(--in4-border);
-}
-
-.mock-chrome span {
-  width: 9px;
-  height: 9px;
-  border-radius: 50%;
-  background: var(--in4-border);
-}
-
-.mock-chrome span:first-child { background: color-mix(in srgb, var(--acc, #6C35FF) 55%, #ffffff); }
-.mock-chrome span:nth-child(2) { background: color-mix(in srgb, var(--acc, #6C35FF) 28%, #ffffff); }
-
-.mock-chrome b {
-  margin-left: auto;
-  width: 62px;
-  height: 7px;
-  border-radius: 999px;
-  background: var(--in4-border);
-}
-
-.mock-dash-body,
-.mock-rows-body,
-.mock-cal-body,
-.mock-ring-body {
-  padding: 18px;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.mock-kpis {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
-}
-
-.mock-kpis i {
-  height: 40px;
-  width: var(--w, 60%);
-  border-radius: 10px;
-  background: linear-gradient(90deg, color-mix(in srgb, var(--acc, #6C35FF) 22%, #ffffff), color-mix(in srgb, var(--acc, #6C35FF) 10%, #ffffff));
-  border: 1px solid color-mix(in srgb, var(--acc, #6C35FF) 18%, transparent);
-}
-
-.mock-chart {
-  display: flex;
-  align-items: flex-end;
-  gap: 10px;
-  height: 116px;
-  padding: 12px 12px 0;
-  border-radius: 12px;
-  background: var(--in4-bg-soft);
-}
-
-.mock-chart span {
-  flex: 1;
-  height: var(--h, 50%);
-  border-radius: 6px 6px 0 0;
-  background: linear-gradient(180deg, var(--acc, #6C35FF), color-mix(in srgb, var(--acc, #6C35FF) 30%, #ffffff));
-}
-
-.mock-legend {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 10px;
-}
-
-.mock-legend i {
-  height: 8px;
-  border-radius: 999px;
-  background: var(--in4-border);
-}
-
-.mock-legend i:nth-child(1) { background: color-mix(in srgb, var(--acc, #6C35FF) 45%, #ffffff); }
-
-.mock-row {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 11px 12px;
-  border-radius: 12px;
-  background: var(--in4-bg-soft);
-  border: 1px solid var(--in4-border);
-}
-
-.mock-av {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  flex: 0 0 auto;
-  background: linear-gradient(140deg, color-mix(in srgb, var(--acc, #6C35FF) 65%, #ffffff), color-mix(in srgb, var(--acc, #6C35FF) 22%, #ffffff));
-}
-
-.mock-line {
-  height: 9px;
-  width: var(--w, 55%);
-  border-radius: 999px;
-  background: var(--in4-border);
-}
-
-.mock-pill {
-  margin-left: auto;
-  width: 54px;
-  height: 16px;
-  border-radius: 999px;
-  background: color-mix(in srgb, var(--acc, #6C35FF) 20%, #ffffff);
-}
-
-.mock-cal-body {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  gap: 8px;
-}
-
-.mock-cal-body span {
-  aspect-ratio: 1 / 1;
-  border-radius: 7px;
-  background: var(--in4-bg-soft);
-  border: 1px solid var(--in4-border);
-}
-
-.mock-cal-body span.on {
-  background: color-mix(in srgb, var(--acc, #6C35FF) 24%, #ffffff);
-  border-color: color-mix(in srgb, var(--acc, #6C35FF) 32%, transparent);
-}
-
-.mock-ring-body {
-  flex-direction: row;
-  align-items: center;
-  gap: 22px;
-}
-
-.mock-ring {
-  flex: 0 0 auto;
-  width: 128px;
-  height: 128px;
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-  background: conic-gradient(var(--acc, #6C35FF) calc(var(--p, 70) * 1%), var(--in4-bg-soft) 0);
-  position: relative;
-}
-
-.mock-ring::after {
-  content: "";
-  position: absolute;
-  inset: 14px;
-  border-radius: 50%;
-  background: #ffffff;
-}
-
-.mock-ring b { position: relative; z-index: 1; }
-
-.mock-legend-list {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  flex: 1;
-}
-
-.mock-legend-list i {
-  height: 10px;
-  border-radius: 999px;
-  background: var(--in4-border);
-}
-
-.mock-legend-list i:nth-child(2) { width: 72%; }
-.mock-legend-list i:nth-child(3) { width: 54%; }
-
 /* ---- Org chart body (Core HR / HRIS) ---- */
 
-
-
-
-
-
-
-
-
 /* ---- Hiring pipeline body (Recruitment) ---- */
-.mock-pipe-body {
-  padding: 16px;
-  display: flex;
-  gap: 10px;
-  align-items: flex-start;
-}
-
-.mock-col {
-  flex: 1 1 0;
-  min-width: 0;
-  padding: 10px;
-  border-radius: 14px;
-  background: var(--in4-bg-soft);
-  border: 1px solid var(--in4-border);
-}
-
-.mock-col-head {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 6px;
-  margin-bottom: 9px;
-}
-
-.mock-col-head i {
-  width: 34px;
-  height: 7px;
-  border-radius: 4px;
-  background: #ded7f6;
-}
-
-.mock-col-head em {
-  font-style: normal;
-  font-size: 10px;
-  font-weight: 700;
-  color: var(--acc, #6C35FF);
-}
-
-.mock-card {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 8px;
-  margin-bottom: 7px;
-  border-radius: 11px;
-  background: #ffffff;
-  border: 1px solid var(--in4-border);
-}
-
-.mock-card:last-child { margin-bottom: 0; }
-
-.mock-card u {
-  flex: 0 0 auto;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background: color-mix(in srgb, var(--acc, #6C35FF) 26%, #ffffff);
-}
-
-.mock-card s {
-  flex: 1;
-  height: 6px;
-  border-radius: 3px;
-  background: #e6e1f7;
-  text-decoration: none;
-}
-
-.mock-col.win {
-  background: color-mix(in srgb, var(--acc, #6C35FF) 12%, #ffffff);
-  border-color: color-mix(in srgb, var(--acc, #6C35FF) 30%, transparent);
-}
 
 /* ---- Course body (Training & Learning) ---- */
-.mock-course-body {
-  padding: 16px;
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 12px;
-}
-
-.mock-course {
-  padding: 13px;
-  border-radius: 15px;
-  background: #ffffff;
-  border: 1px solid var(--in4-border);
-}
-
-.mock-course-top {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 11px;
-}
-
-.mock-course-top u {
-  flex: 0 0 auto;
-  width: 28px;
-  height: 28px;
-  border-radius: 9px;
-  background: color-mix(in srgb, var(--acc, #6C35FF) 20%, #ffffff);
-}
-
-.mock-course-top b {
-  flex: 1;
-  height: 7px;
-  border-radius: 4px;
-  background: #ded7f6;
-}
-
-.mock-bar {
-  height: 7px;
-  border-radius: 999px;
-  background: #efeafd;
-  overflow: hidden;
-}
-
-.mock-bar b {
-  display: block;
-  height: 100%;
-  width: var(--w, 60%);
-  border-radius: inherit;
-  background: linear-gradient(90deg, var(--acc, #6C35FF), #4B20C8);
-}
 
 /* ==========================================================================
    Biometric integrations — device images + floating UI showcase
@@ -1222,16 +844,7 @@
   margin-inline: auto;
 }
 
-.bx-shot { position: relative; margin: 0; }
-
 /* the artwork sits on white; multiply lets the section's grid show through */
-.bx-shot img {
-  display: block;
-  width: 100%;
-  height: auto;
-  aspect-ratio: 1 / 1;
-  mix-blend-mode: multiply;
-}
 
 /* ---- scan indicators over the artwork ---- */
 .bx-fx {
@@ -1289,28 +902,6 @@
   animation: bxGlow 1.2s ease-in-out infinite;
 }
 
-.bx-fx-tag rect {
-  fill: rgba(15, 14, 32, 0.78);
-  stroke: rgba(125, 249, 255, 0.55);
-  stroke-width: 1;
-  vector-effect: non-scaling-stroke;
-}
-.bx-fx-tag.is-green rect { stroke: rgba(109, 190, 69, 0.7); }
-
-.bx-fx-tag text {
-  fill: #ffffff;
-  font-family: "Plus Jakarta Sans", sans-serif;
-  font-size: 21px;
-  font-weight: 700;
-  letter-spacing: 0.01em;
-}
-
-.bx-fx-dot {
-  fill: var(--in4-green);
-  animation: bxGlow 1.2s ease-in-out infinite;
-}
-.bx-fx-dot.is-cyan { fill: #7DF9FF; }
-
 @keyframes bxFloat {
   0%, 100% { translate: 0 0; }
   50% { translate: 0 -6px; }
@@ -1335,11 +926,7 @@
 }
 
 .bx-card--face   { top: 2%; left: 0; }
-.bx-card--wifi   { top: 5%; right: 0; animation-delay: -2.4s; }
-.bx-card--access { top: 20%; right: 0; animation-delay: -5.2s; }
-.bx-card--rfid   { bottom: 9%; left: 0; animation-delay: -4.6s; }
 .bx-card--finger { bottom: 2%; right: 0; animation-delay: -1.2s; }
-
 
 .bx-card-ico {
   display: grid;
@@ -1354,7 +941,6 @@
   line-height: 1;
 }
 
-.bx-card-ico.is-cyan  { background: linear-gradient(135deg, #22C7D6, #3B82F6); }
 .bx-card-ico.is-green { background: linear-gradient(135deg, #6DBE45, #3E8E2D); }
 .bx-card-ico.is-blue  { background: linear-gradient(135deg, #3B82F6, #2563EB); }
 .bx-card-ico.is-amber { background: linear-gradient(135deg, #F59E0B, #EA580C); }
@@ -1491,42 +1077,6 @@
   padding: 18px 20px 20px;
 }
 
-/* product-line tag over the image's bottom-left corner (the top of some
-   photos carries their own headline) — solid white pill so it reads on any
-   photo. On hover it hands the corner over to the Explore More button. */
-.pr-tag {
-  position: absolute;
-  bottom: 16px;
-  left: 16px;
-  transition: opacity 0.3s var(--ease), translate 0.3s var(--ease);
-  z-index: 1;
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-  max-width: calc(100% - 32px);
-  padding: 6px 12px;
-  border-radius: 999px;
-  font-size: 11.5px;
-  font-weight: 700;
-  letter-spacing: 0.02em;
-  line-height: 1.3;
-  color: color-mix(in srgb, var(--acc) 82%, #000000);
-  background: rgba(255, 255, 255, 0.94);
-  border: 1px solid color-mix(in srgb, var(--acc) 22%, transparent);
-  box-shadow: 0 6px 18px rgba(15, 14, 32, 0.18);
-  -webkit-backdrop-filter: blur(6px);
-  backdrop-filter: blur(6px);
-}
-
-.pr-tag::before {
-  content: "";
-  flex: 0 0 auto;
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: var(--acc);
-}
-
 .pr-body h3 {
   margin: 0;
   font-size: var(--fs-h3);
@@ -1560,16 +1110,10 @@
 .pr-card:focus-visible .pr-btn { opacity: 1; translate: 0 0; }
 .pr-card:hover .pr-btn .ico { transform: translateX(3px); }
 
-.pr-card:hover .pr-tag,
-.pr-card:focus-visible .pr-tag { opacity: 0; translate: 0 -8px; }
-
-/* touch screens have no hover, so keep the button showing there and lift
-   the tag to the top corner out of its way */
+/* touch screens have no hover, so keep the button showing there */
 @media (hover: none) {
   .pr-btn { opacity: 1; translate: 0 0; }
   .pr-art::after { opacity: 1; }
-  .pr-tag,
-  .pr-card:hover .pr-tag { top: 16px; bottom: auto; opacity: 1; translate: 0 0; }
 }
 
 .pr-sr {
@@ -1600,23 +1144,9 @@
   .pr-card:hover .pr-art img { transform: none; }
 }
 
-
 /* ==========================================================================
    Industries — pill selector + large content panel
    ========================================================================== */
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* ==========================================================================
    Deployment — dark contrast section
@@ -2173,8 +1703,7 @@
 
   .mod-showcase { grid-template-columns: minmax(190px, 230px) 1fr; }
   .mod-panel { grid-template-columns: 1fr; gap: 1.5rem; }
-  .mod-panel-copy p { max-width: none; }
-
+  
   /* stacked panels need more room than the selector: keep the height match
      but let the card scroll rather than clip its content */
   .mod-showcase .mod-panel { overflow-y: auto; }
@@ -2255,7 +1784,6 @@
 
   .mod-tab-name { white-space: nowrap; }
 
-
   /* fade hint on the trailing edge so it reads as scrollable */
   .mod-showcase { position: relative; }
 
@@ -2310,16 +1838,11 @@
   /* the demo form returns to a single column on small screens */
   #lead .lead-grid { grid-template-columns: 1fr; }
 
-  .mock-kpis i { height: 34px; }
-  .mock-chart { height: 92px; }
-  .mock-ring { width: 104px; height: 104px; }
-  /* biometric showcase: the pop-outs settle into a neat stack under the
+        /* biometric showcase: the pop-outs settle into a neat stack under the
      image so nothing covers the face */
   .bx-cards { display: grid; gap: 10px; margin-top: -4%; position: relative; }
   .bx-card { position: relative; inset: auto; width: auto; animation: none; box-shadow: 0 8px 20px rgba(17, 24, 39, 0.07); }
-  .bx-card--wifi .bx-pill { margin-left: auto; }
-  .bx-fx-tag { display: none; }
-  .bio-list .info-list, .bio-list { gap: 14px; }
+      .bio-list .info-list, .bio-list { gap: 14px; }
   .integrations-copy .btn { width: 100%; justify-content: center; white-space: normal; text-align: center; }
   .integrations-layout > * { min-width: 0; }
 
@@ -2338,12 +1861,11 @@
   .marquee-track { animation: none; }
   .mod-panel { animation: none; }
   .bx-card,
-  .bx-face-box,
-  .bx-face-sweep,
-  .bx-ripple,
-  .bx-finger-core,
-  .bx-fx-dot,
-  .bx-pulse { animation: none; }
+.bx-face-box,
+.bx-face-sweep,
+.bx-ripple,
+.bx-finger-core,
+.bx-pulse { animation: none; }
   .tech-node,
   .tech-hub-art img { transition: none; }
   .tech-spoke,
@@ -2745,7 +2267,6 @@
    at every width. Scoped to .industries.
    ========================================================================== */
 
-
 .industries .section-title::after {
   content: "";
   display: block;
@@ -2754,22 +2275,10 @@
   height: 3px;
   margin: 16px auto 0;
   border-radius: 999px;
-  background: linear-gradient(90deg, #be185d 0%, #ec4899 30%, #f472b6 62%, #fbcfe8 100%);
-  -webkit-mask-image: linear-gradient(90deg, #000 0%, #000 58%, transparent 100%);
-  mask-image: linear-gradient(90deg, #000 0%, #000 58%, transparent 100%);
-  box-shadow: 0 6px 16px rgba(236, 72, 153, 0.26);
+  background: #6C35FF;
 }
-
 
 /* the pill rail and the panel it drives get real separation */
-
-
-
-
-
-
-@media (max-width: 640px) {
-}
 
 /* ==========================================================================
    Tech hub — "Everything Connected. Everything Intelligent."
@@ -2793,8 +2302,7 @@
   height: 3px;
   margin: 16px auto 0;
   border-radius: 999px;
-  background: #F97316;
-  box-shadow: 0 6px 16px rgba(249, 115, 22, 0.28);
+  background: #6C35FF;
 }
 
 /* ==========================================================================
@@ -2818,8 +2326,7 @@
   height: 3px;
   margin: 16px auto 0;
   border-radius: 999px;
-  background: var(--in4-green, #6DBE45);
-  box-shadow: 0 6px 16px rgba(109, 190, 69, 0.28);
+  background: #6C35FF;
 }
 
 /* ==========================================================================
@@ -2843,8 +2350,7 @@
   height: 3px;
   margin: 16px auto 0;
   border-radius: 999px;
-  background: #EC4899;
-  box-shadow: 0 6px 16px rgba(236, 72, 153, 0.28);
+  background: #6C35FF;
 }
 
 /* ==========================================================================
