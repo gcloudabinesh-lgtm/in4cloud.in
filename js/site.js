@@ -32,6 +32,28 @@
     },
 
     leads: {
+      // Inbox for the keyless mailto fallback — used when the mail service
+      // below is unreachable: the visitor's email app opens with the enquiry
+      // filled in, addressed here.
+      mailTo: "gcloud.abinesh@gmail.com",
+      // EmailJS (https://www.emailjs.com, free 200 emails/month). When all
+      // three values are set, forms send through EmailJS first.
+      //   serviceId  — Email Services → your Gmail service → Service ID
+      //   templateId — Email Templates → your template → Template ID
+      //   publicKey  — Account → General → Public Key
+      // Template: Subject "{{subject}}", Reply To "{{email}}", body uses
+      // {{enquiry_type}} {{interested_in}} {{name}} {{company}} {{phone}}
+      // {{email}} {{company_size}} {{message}} {{page}} {{page_url}}
+      // {{submitted_on}}.
+      emailjs: {
+        serviceId: "",
+        templateId: "",
+        publicKey: ""
+      },
+      // Web3Forms access key (free at https://web3forms.com — enter the
+      // receiving email, the key is emailed to it). When set, forms send
+      // through Web3Forms instead of FormSubmit.
+      web3formsKey: "",
       webhookUrl: window.__IN4_LEAD_WEBHOOK__ || "https://formsubmit.co/ajax/gcloud.abinesh@gmail.com"
     }
   };

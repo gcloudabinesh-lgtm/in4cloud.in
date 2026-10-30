@@ -53,8 +53,64 @@
     return { page: page, type: "Demo Request" };
   }
 
+  function submittedOn() {
+    return new Date().toLocaleString("en-IN", {
+      dateStyle: "medium", timeStyle: "short", timeZone: "Asia/Kolkata"
+    }) + " IST";
+  }
+
+  // EmailJS REST API — the email layout lives in the EmailJS template, which
+  // reads these {{variables}} (see the template text in js/site.js).
+  function sendEmailJS(payload, ejs) {
+    const info = formInfo(payload.pageSource);
+    const topic = payload.product || info.page;
+
+    return fetch("https://api.emailjs.com/api/v1.0/email/send", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        service_id: ejs.serviceId,
+        template_id: ejs.templateId,
+        user_id: ejs.publicKey,
+        template_params: {
+          subject: "New " + info.type + ": " + topic + " | " + payload.fullName + ", " + payload.company,
+          enquiry_type: info.type,
+          interested_in: topic,
+          name: payload.fullName,
+          company: payload.company,
+          phone: payload.phone,
+          email: payload.email,
+          company_size: payload.companySize || "-",
+          message: payload.message || "(no message)",
+          page: info.page,
+          page_url: window.location.href,
+          submitted_on: submittedOn()
+        }
+      })
+    }).then(function (res) {
+      // EmailJS answers 200 "OK" when the mail is sent.
+      if (res.ok) return { status: "submitted" };
+      return {
+        status: "error",
+        message: "We could not submit your enquiry right now. Please try again or email " + S.contact.email + "."
+      };
+    }).catch(function () {
+      return {
+        status: "error",
+        message: "We could not submit your enquiry right now. Please try again or email " + S.contact.email + "."
+      };
+    });
+  }
+
   function leadService(payload) {
-    const url = (S.leads && S.leads.webhookUrl) || "";
+    const leads = S.leads || {};
+    const ejs = leads.emailjs || {};
+    if (ejs.serviceId && ejs.templateId && ejs.publicKey) {
+      return sendEmailJS(payload, ejs);
+    }
+    // Web3Forms (when an access key is set) takes priority over FormSubmit.
+    const web3Key = leads.web3formsKey || "";
+    const url = web3Key ? "https://api.web3forms.com/submit" : (leads.webhookUrl || "");
 
     if (!url) {
       // No backend configured — explicit development warning, never fake success.
@@ -84,21 +140,28 @@
     body["Message"] = payload.message || "(no message)";
     body["Submitted From"] = info.page + " page";
     body["Page URL"] = window.location.href;
-    body["Submitted On"] = new Date().toLocaleString("en-IN", {
-      dateStyle: "medium", timeStyle: "short", timeZone: "Asia/Kolkata"
-    }) + " IST";
+    body["Submitted On"] = submittedOn();
 
     // e.g. "New Demo Request: HRMS | Meera Iyer, Acme Corp"
-    body._subject = "New " + info.type + ": " + topic + " | " + payload.fullName + ", " + payload.company;
-    body._replyto = payload.email;
-    body._template = "table";
-    body._captcha = "false";
-    // Confirmation mail sent to the person who filled in the form.
-    body._autoresponse =
-      "Hi " + payload.fullName + ", thank you for your interest in " + topic + ". " +
-      "We have received your " + info.type.toLowerCase() + " and our team will contact you within one business day. " +
-      "For anything urgent, call " + S.contact.phoneDisplay + " or email " + S.contact.email + ". " +
-      "— Team " + S.name;
+    const subject = "New " + info.type + ": " + topic + " | " + payload.fullName + ", " + payload.company;
+
+    if (web3Key) {
+      body.access_key = web3Key;
+      body.subject = subject;
+      body.from_name = S.name + " Website";
+      body.replyto = payload.email;
+    } else {
+      body._subject = subject;
+      body._replyto = payload.email;
+      body._template = "table";
+      body._captcha = "false";
+      // Confirmation mail sent to the person who filled in the form.
+      body._autoresponse =
+        "Hi " + payload.fullName + ", thank you for your interest in " + topic + ". " +
+        "We have received your " + info.type.toLowerCase() + " and our team will contact you within one business day. " +
+        "For anything urgent, call " + S.contact.phoneDisplay + " or email " + S.contact.email + ". " +
+        "— Team " + S.name;
+    }
 
     return fetch(url, {
       method: "POST",
@@ -118,17 +181,27 @@
             message: "This form is awaiting one-time activation. An “Activate Form” email has been sent to the receiving inbox — click Activate, then submit again."
           };
         }
-        return {
-          status: "error",
-          message: "We could not submit your enquiry right now. Please try again or email " + S.contact.email + "."
-        };
+        return mailtoResult(subject, body);
       });
     }).catch(function () {
-      return {
-        status: "error",
-        message: "We could not submit your enquiry right now. Please try again."
-      };
+      // Network failure or the mail service is down.
+      return mailtoResult(subject, body);
     });
+  }
+
+  // Keyless fallback: a mailto: link that opens the visitor's email app with
+  // the enquiry already written; the visitor only presses Send.
+  function mailtoResult(subject, fields) {
+    const to = (S.leads && S.leads.mailTo) || S.contact.email;
+    const lines = Object.keys(fields)
+      .filter(function (k) { return k.charAt(0) !== "_" && k !== "access_key" && k !== "subject" && k !== "from_name" && k !== "replyto"; })
+      .map(function (k) { return (k === "email" ? "Email" : k) + ": " + fields[k]; });
+    return {
+      status: "mailto",
+      href: "mailto:" + to +
+        "?subject=" + encodeURIComponent(subject) +
+        "&body=" + encodeURIComponent("New enquiry from the " + S.name + " website\n\n" + lines.join("\n"))
+    };
   }
 
   function setStatus(container, type, message) {
@@ -259,6 +332,14 @@
               status,
               "success",
               "Thank you. Your enquiry has been received. Our team will contact you shortly."
+            );
+          } else if (result.status === "mailto") {
+            // Hand the prepared enquiry to the visitor's email app.
+            window.location.href = result.href;
+            setStatus(
+              status,
+              "success",
+              "Your email app has opened with your enquiry filled in — just press Send. If nothing opened, email us at " + S.contact.email + "."
             );
           } else if (result.status === "not-configured") {
             setStatus(status, "error", result.message);
