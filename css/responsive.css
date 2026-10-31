@@ -124,7 +124,7 @@ h3,
 h4,
 .section-title,
 .eyebrow,
-.tech-tag {
+.tb-tile h3 {
     overflow-wrap: break-word;
     word-break: break-word;
     hyphens: auto;
