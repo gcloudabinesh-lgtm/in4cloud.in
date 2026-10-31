@@ -149,9 +149,9 @@
     '<a href="https://www.youtube.com/@in4solution" target="_blank" rel="noopener" aria-label="YouTube"><i class="ico fa-brands fa-youtube" aria-hidden="true"></i></a>' +
     "</div>" +
     '<div class="footer-apps">' +
-    '<a href="https://play.google.com/store/apps/details?id=com.in4solution" target="_blank" rel="noopener" class="app-badge" aria-label="Get it on Google Play">' +
+    '<a href="https://play.google.com/store/apps/details?id=com.in4.in4cloud" target="_blank" rel="noopener" class="app-badge" aria-label="Get it on Google Play">' +
     '<i class="ico fa-brands fa-google-play" aria-hidden="true"></i><span><small>GET IT ON</small>Google Play</span></a>' +
-    '<a href="https://apps.apple.com/app/in4-solution/id1234567890" target="_blank" rel="noopener" class="app-badge" aria-label="Download on the App Store">' +
+    '<a href="https://apps.apple.com/in/app/in4-cloudhr/id6809781235" target="_blank" rel="noopener" class="app-badge" aria-label="Download on the App Store">' +
     '<i class="ico fa-brands fa-apple" aria-hidden="true"></i><span><small>Download on the</small>App Store</span></a>' +
     "</div>" +
     "</div>" +

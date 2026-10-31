@@ -661,3 +661,12 @@
   color: #0E8C9B;
   -webkit-text-fill-color: #0E8C9B;
 }
+
+/* Our Story: one composed image (its tiles, shadows and light background are
+   part of the picture), sitting left of the copy */
+.ab-story-single { animation: none; }
+.ab-story-single img {
+  height: auto;
+  border-radius: 0;
+  box-shadow: none;
+}
