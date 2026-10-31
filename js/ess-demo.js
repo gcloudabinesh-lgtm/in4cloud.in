@@ -19,7 +19,7 @@
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   /* the control the finger taps on each HTML screen */
-  var targets = ['.ess-btn-in', '.ess-cta', '.ess-cta', '.ess-goal', '.ess-lang'];
+  var targets = ['.ess-btn-in', '.ess-cta', '.ess-cta', '.ess-cta', '.ess-track', '.ess-lang'];
 
   var STEP_MS = 5200;
   var TAP_AT = 1500;

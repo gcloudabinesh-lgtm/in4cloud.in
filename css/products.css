@@ -304,7 +304,7 @@
 
 /* ==========================================================================
    Contact — branch offices: four cards (head office highlighted), each with
-   address, tap-to-call numbers, the shared info@ email and directions.
+   address and directions.
    ========================================================================== */
 .branch-grid {
   display: grid;
@@ -358,20 +358,6 @@
   color: var(--text-body);
 }
 
-.branch-lines {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin: 0;
-  padding: 14px 0 0;
-  border-top: 1px dashed var(--border);
-  list-style: none;
-}
-.branch-lines li { display: flex; gap: 10px; align-items: flex-start; font-size: 13.5px; line-height: 1.45; }
-.branch-lines .ico { width: 1em; height: 1em; flex-shrink: 0; margin-top: 3px; font-size: 13px; color: #6C35FF; }
-.branch-lines b { display: block; font-size: 11.5px; font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.04em; }
-.branch-lines a { color: var(--ink-800); font-weight: 600; text-decoration: none; overflow-wrap: anywhere; }
-.branch-lines a:hover { color: #6C35FF; }
 
 .branch-dir {
   display: inline-flex;
@@ -442,7 +428,7 @@
 
 /* ---- branch cards: hover animation ----
    the border turns solid purple, a light sheen sweeps across,
-   the icon wobbles with a pulse ring, the detail rows slide in one by one,
+   the icon wobbles with a pulse ring,
    the map lifts and the directions button fills. */
 .branch-card { overflow: hidden; isolation: isolate; }
 .branch-card > * { position: relative; z-index: 1; }
@@ -479,11 +465,6 @@
   100% { box-shadow: 0 0 0 12px rgba(108, 53, 255, 0); }
 }
 
-.branch-lines li { transition: transform 0.35s var(--ease); }
-.branch-card:hover .branch-lines li { transform: translateX(5px); }
-.branch-card:hover .branch-lines li:nth-child(2) { transition-delay: 0.05s; }
-.branch-card:hover .branch-lines li:nth-child(3) { transition-delay: 0.1s; }
-.branch-card:hover .branch-lines li:nth-child(4) { transition-delay: 0.15s; }
 
 .branch-map { transition: transform 0.45s var(--ease), box-shadow 0.45s var(--ease), border-color 0.45s var(--ease); }
 .branch-card:hover .branch-map {
@@ -499,6 +480,5 @@
 @media (prefers-reduced-motion: reduce) {
   .branch-card:hover::after,
   .branch-card:hover .branch-head .icon-badge { animation: none; }
-  .branch-card:hover .branch-lines li,
   .branch-card:hover .branch-map { transform: none; }
 }

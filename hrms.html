@@ -396,39 +396,6 @@
       </div>
     </section>
 
-    <!-- ============ 6c. ESS MOBILE APP ============ -->
-    <section class="section" id="mobile-app" aria-labelledby="ma-title">
-      <div class="container">
-        <div class="ma-split">
-          <div>
-            <p class="eyebrow reveal">ESS Mobile App</p>
-            <h2 class="section-title reveal" id="ma-title" style="margin:14px 0 14px">HR in Every <em class="hr-dual">Employee's Pocket</em></h2>
-            <p class="ma-lead reveal">Employees punch in and pull payslips from one app — no HR desk visit needed.</p>
-            <ul class="ma-list">
-              <li class="reveal"><span class="icon-badge"><i class="ico fa-solid fa-location-dot" aria-hidden="true"></i></span><div><h3>Check-In / Check-Out</h3><p>Punch in and out with GPS tracking, geo-fencing and geo-tagging for every location.</p></div></li>
-              <li class="reveal" style="--rd:.06s"><span class="icon-badge"><i class="ico fa-solid fa-file-invoice" aria-hidden="true"></i></span><div><h3>Access Payslip</h3><p>View monthly salary details and download payslips anytime.</p></div></li>
-              <li class="reveal" style="--rd:.12s"><span class="icon-badge"><i class="ico fa-solid fa-chart-column" aria-hidden="true"></i></span><div><h3>Reports</h3><p>View attendance, leave and salary reports on the go, anytime.</p></div></li>
-            </ul>
-          </div>
-
-          <!-- the real app, recorded on a phone, playing inside a phone frame -->
-          <div class="ma-stage ma-stage--video reveal">
-            <span class="ma-glow" aria-hidden="true"></span>
-            <div class="ma-phone ma-phone--video">
-              <span class="ma-key ma-key--power" aria-hidden="true"></span>
-              <span class="ma-key ma-key--vol" aria-hidden="true"></span>
-              <div class="ma-screen">
-                <!-- js/ma-video.js loads the clip when the phone scrolls into view -->
-                <video class="ma-video" data-src="assets/Videos/mb.mp4" poster="assets/Videos/mb-poster.jpg" muted loop playsinline preload="none" aria-label="In4 CloudHR mobile app walkthrough: home screen with check in and check out, attendance and menus"></video>
-                <span class="ma-island" aria-hidden="true"></span>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- ============ 7. DYNAMIC PAYROLL ============ -->
     <section class="section" id="payroll" aria-labelledby="pay-title">
       <div class="container">
@@ -634,16 +601,41 @@
                   <div class="ess-cta ess-cta--line"><span class="ess-cta-a"><i class="ico fa-solid fa-download"></i>Download PDF</span><span class="ess-cta-b"><i class="ico fa-solid fa-circle-check"></i>Saved to phone</span></div>
                 </div>
 
-                <!-- 4. performance -->
+                <!-- 4. expense -->
                 <div class="ess-screen">
-                  <div class="ess-title"><i class="ico fa-solid fa-chevron-left"></i>My Performance</div>
-                  <div class="ess-score"><span class="ess-donut"><b>4.2</b></span><div><b>Q3 review</b><small>Rated by Arun K</small><span class="ess-stars"><i class="ico fa-solid fa-star"></i><i class="ico fa-solid fa-star"></i><i class="ico fa-solid fa-star"></i><i class="ico fa-solid fa-star"></i><i class="ico fa-regular fa-star"></i></span></div></div>
-                  <div class="ess-goal"><div><span>Customer onboarding</span><b>90%</b></div><i style="--w:90%"></i></div>
-                  <div class="ess-goal"><div><span>Process training</span><b>65%</b></div><i style="--w:65%"></i></div>
-                  <div class="ess-goal"><div><span>Quality score</span><b>78%</b></div><i style="--w:78%"></i></div>
+                  <div class="ess-title"><i class="ico fa-solid fa-chevron-left"></i>Expense Claim</div>
+                  <div class="ess-field"><small>Category</small><b>Travel · Client visit</b></div>
+                  <div class="ess-field ess-field--2"><div><small>Date</small><b>28 Oct</b></div><div><small>Amount</small><b>₹1,850</b></div></div>
+                  <div class="ess-receipt"><i class="ico fa-solid fa-receipt"></i><div><b>Cab_receipt.jpg</b><small>Receipt attached</small></div><i class="ico fa-solid fa-circle-check"></i></div>
+                  <div class="ess-cta"><span class="ess-cta-a">Submit Claim</span><span class="ess-cta-b"><i class="ico fa-solid fa-clock"></i>Sent for approval</span></div>
                 </div>
 
-                <!-- 5. notifications -->
+                <!-- 5. gps live tracking -->
+                <div class="ess-screen">
+                  <div class="ess-title"><i class="ico fa-solid fa-chevron-left"></i>Live Tracking</div>
+                  <div class="ess-map">
+                    <svg viewBox="0 0 200 150" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+                      <rect width="200" height="150" fill="#eef4ea"/>
+                      <path d="M150 0 C140 45 172 80 160 150 L200 150 L200 0 Z" fill="#cfe7f7"/>
+                      <g stroke="#ffffff" fill="none" stroke-linecap="round">
+                        <path d="M-5 60 C60 52 110 68 205 56" stroke-width="9"/>
+                        <path d="M70 -5 C76 55 64 100 80 155" stroke-width="8"/>
+                        <path d="M-5 112 C60 106 120 118 205 108" stroke-width="5"/>
+                      </g>
+                      <path class="ess-route" d="M28 128 C50 112 62 96 74 70 C86 46 112 48 132 36" fill="none" stroke="#6C35FF" stroke-width="3" stroke-linecap="round" stroke-dasharray="5 4"/>
+                      <circle cx="28" cy="128" r="5" fill="#6DBE45" stroke="#ffffff" stroke-width="2"/>
+                      <circle cx="74" cy="70" r="4" fill="#6C35FF" stroke="#ffffff" stroke-width="2"/>
+                      <circle class="ess-live" cx="132" cy="36" r="6" fill="#6C35FF" stroke="#ffffff" stroke-width="2"/>
+                    </svg>
+                    <span class="ess-track"><i class="ico fa-solid fa-satellite-dish"></i>Live · 2 min ago</span>
+                  </div>
+                  <div class="ess-stops">
+                    <div><span class="g"></span><b>Head Office</b><small>09:02 AM</small></div>
+                    <div><span class="p"></span><b>Client site · Guindy</b><small>11:40 AM</small></div>
+                  </div>
+                </div>
+
+                <!-- 6. notifications -->
                 <div class="ess-screen">
                   <div class="ess-title"><i class="ico fa-solid fa-chevron-left"></i><span class="ess-t-en">Notifications</span><span class="ess-t-ar" lang="ar">الإشعارات</span><span class="ess-lang"><em class="on">EN</em><em lang="ar">ع</em></span></div>
                   <div class="ess-notes">
@@ -654,20 +646,21 @@
                 </div>
               </div>
 
-              <div class="ess-tabbar"><i class="ico fa-solid fa-house"></i><i class="ico fa-solid fa-calendar-days"></i><i class="ico fa-solid fa-wallet"></i><i class="ico fa-solid fa-chart-line"></i><i class="ico fa-solid fa-bell"></i></div>
+              <div class="ess-tabbar"><i class="ico fa-solid fa-house"></i><i class="ico fa-solid fa-calendar-days"></i><i class="ico fa-solid fa-wallet"></i><i class="ico fa-solid fa-location-dot"></i><i class="ico fa-solid fa-bell"></i></div>
               <span class="ess-tap"></span>
             </div>
             </div>
           </div>
           <div>
             <p class="eyebrow reveal">Mobile</p>
-            <h2 class="section-title reveal" id="ess-title" style="margin:14px 0 20px">Mobile Employee <em class="hr-dual">Self-Service</em></h2>
+            <h2 class="section-title reveal" id="ess-title" style="margin:14px 0 20px">Employee <em class="hr-dual">Self-Service</em></h2>
             <div class="at-sec-rows">
-              <div class="at-row ess-step reveal" data-step="0" tabindex="0" role="button"><span class="icon-badge soft-purple"><i class="ico fa-solid fa-right-to-bracket"></i></span><div><h3>Checkin/Checkout</h3><p>Field and office check-ins from the app.</p></div></div>
-              <div class="at-row ess-step reveal" style="--rd:.05s" data-step="1" tabindex="0" role="button"><span class="icon-badge soft-purple"><i class="ico fa-solid fa-calendar-check"></i></span><div><h3>Leave Management</h3><p>Apply, track and approve leave on the go.</p></div></div>
-              <div class="at-row ess-step reveal" style="--rd:.1s" data-step="2" tabindex="0" role="button"><span class="icon-badge soft-purple"><i class="ico fa-solid fa-money-check-dollar"></i></span><div><h3>Access Payroll</h3><p>Payslips and salary details anytime.</p></div></div>
-              <div class="at-row ess-step reveal" style="--rd:.15s" data-step="3" tabindex="0" role="button"><span class="icon-badge soft-purple"><i class="ico fa-solid fa-chart-line"></i></span><div><h3>Performance Insights</h3><p>Goals and reviews in your pocket.</p></div></div>
-              <div class="at-row ess-step reveal" style="--rd:.2s" data-step="4" tabindex="0" role="button"><span class="icon-badge soft-purple"><i class="ico fa-solid fa-bell"></i></span><div><h3>Real-Time Notifications</h3><p>Alerts that keep everyone informed, in Arabic &amp; English.</p></div></div>
+              <div class="at-row ess-step reveal" data-step="0" tabindex="0" role="button"><span class="icon-badge soft-purple"><i class="ico fa-solid fa-right-to-bracket"></i></span><div><h3>Attendance</h3><p>Check in and check out from the app.</p></div></div>
+              <div class="at-row ess-step reveal" style="--rd:.04s" data-step="1" tabindex="0" role="button"><span class="icon-badge soft-purple"><i class="ico fa-solid fa-calendar-check"></i></span><div><h3>Leave</h3><p>Apply for leave and track approvals.</p></div></div>
+              <div class="at-row ess-step reveal" style="--rd:.08s" data-step="2" tabindex="0" role="button"><span class="icon-badge soft-purple"><i class="ico fa-solid fa-file-invoice"></i></span><div><h3>Payslip</h3><p>View and download monthly payslips.</p></div></div>
+              <div class="at-row ess-step reveal" style="--rd:.12s" data-step="3" tabindex="0" role="button"><span class="icon-badge soft-purple"><i class="ico fa-solid fa-receipt"></i></span><div><h3>Expense</h3><p>Submit claims with receipts on the go.</p></div></div>
+              <div class="at-row ess-step reveal" style="--rd:.16s" data-step="4" tabindex="0" role="button"><span class="icon-badge soft-purple"><i class="ico fa-solid fa-location-crosshairs"></i></span><div><h3>GPS Live Tracking</h3><p>Real-time location for field staff.</p></div></div>
+              <div class="at-row ess-step reveal" style="--rd:.2s" data-step="5" tabindex="0" role="button"><span class="icon-badge soft-purple"><i class="ico fa-solid fa-bell"></i></span><div><h3>Notifications</h3><p>Instant alerts for approvals and updates.</p></div></div>
             </div>
           </div>
         </div>
@@ -740,6 +733,5 @@
   <script defer src="js/main.js"></script>
   <script defer src="js/ess-demo.js"></script>
   <script defer src="js/dv-demo.js"></script>
-  <script defer src="js/ma-video.js"></script>
 </body>
 </html>

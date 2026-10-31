@@ -1418,44 +1418,29 @@ section[id], [id="modules"], [id="lead"], [id="features"] { scroll-margin-top: 9
 
 .ess-cta--line { background: #ffffff; box-shadow: inset 0 0 0 1.5px #6C35FF; color: #6C35FF; }
 
-/* 4. performance */
-.ess-score { display: flex; align-items: center; gap: 14px; padding: 12px; border-radius: 16px; background: #ffffff; border: 1px solid #ebe7fb; }
-.ess-score b { display: block; font-size: 12.5px; }
-.ess-score small { display: block; font-size: 10px; color: var(--ess-muted); }
+/* 4. expense: receipt attachment row */
+.ess-receipt { display: flex; align-items: center; gap: 10px; padding: 9px 12px; border-radius: 12px; background: #ffffff; border: 1px dashed #c9bdf6; font-size: 11px; }
+.ess-receipt > .ico:first-child { width: 1em; height: 1em; font-size: 16px; color: var(--ess-pri); }
+.ess-receipt b { display: block; font-size: 11.5px; }
+.ess-receipt small { display: block; font-size: 10px; color: var(--ess-muted); }
+.ess-receipt > .ico:last-child { width: 1em; height: 1em; margin-left: auto; color: #3E8E2D; }
 
-.ess-donut {
-  display: grid;
-  place-items: center;
-  flex-shrink: 0;
-  width: 58px;
-  height: 58px;
-  border-radius: 50%;
-  background: conic-gradient(#6C35FF 0 84%, #ece7ff 84% 100%);
-}
+/* 5. gps live tracking: route map with a pulsing live point */
+.ess-map { position: relative; overflow: hidden; height: 168px; border-radius: 16px; border: 1px solid #ebe7fb; }
+.ess-map svg { display: block; width: 100%; height: 100%; }
+.ess-live { transform-box: fill-box; transform-origin: center; animation: essLive 1.6s ease-out infinite; }
+@keyframes essLive { 0% { stroke-width: 2; } 50% { stroke-width: 7; stroke-opacity: 0.35; } 100% { stroke-width: 2; } }
+.ess-track { position: absolute; left: 8px; top: 8px; display: inline-flex; align-items: center; gap: 5px; padding: 4px 9px; border-radius: 999px; background: #ffffff; box-shadow: 0 4px 12px rgba(17, 24, 39, 0.12); color: #3E8E2D; font-size: 10px; font-weight: 700; transition: box-shadow 0.3s var(--ease); }
+.ess-track .ico { width: 1em; height: 1em; }
+.is-done .ess-track { box-shadow: 0 0 0 2px rgba(62, 142, 45, 0.35); }
+.ess-stops { display: flex; flex-direction: column; gap: 6px; }
+.ess-stops div { display: flex; align-items: center; gap: 8px; padding: 8px 10px; border-radius: 12px; background: #ffffff; border: 1px solid #ebe7fb; font-size: 11px; }
+.ess-stops span { width: 9px; height: 9px; flex-shrink: 0; border-radius: 50%; }
+.ess-stops span.g { background: #6DBE45; }
+.ess-stops span.p { background: #6C35FF; }
+.ess-stops small { margin-left: auto; color: var(--ess-muted); font-size: 10px; }
 
-.ess-score .ess-donut b {
-  display: grid;
-  place-items: center;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background: #ffffff;
-  font-family: "Plus Jakarta Sans", sans-serif;
-  font-size: 15px;
-  font-weight: 800;
-}
-
-.ess-stars { display: flex; gap: 2px; margin-top: 3px; color: #F59E0B; font-size: 10px; }
-
-.ess-goal { padding: 9px 12px; border-radius: 12px; background: #ffffff; border: 1px solid #ebe7fb; transition: box-shadow 0.3s var(--ease); }
-.ess-goal div { display: flex; justify-content: space-between; margin-bottom: 6px; font-size: 11px; }
-.ess-goal div b { color: var(--ess-pri); }
-.ess-goal > i { display: block; height: 6px; border-radius: 999px; background: #ece7ff; overflow: hidden; }
-.ess-goal > i::before { content: ""; display: block; width: 0; height: 100%; border-radius: inherit; background: linear-gradient(90deg, #6C35FF, #8B5CF6); transition: width 1.1s var(--ease) 0.3s; }
-.is-active .ess-goal > i::before { width: var(--w); }
-.is-done .ess-score + .ess-goal { box-shadow: 0 0 0 2px rgba(108, 53, 255, 0.35); }
-
-/* 5. notifications: the tap flips the screen to Arabic */
+/* 6. notifications: the tap flips the screen to Arabic */
 .ess-lang { display: inline-flex; margin-left: auto; padding: 2px; border-radius: 999px; background: #f1ecff; font-size: 10px; }
 .ess-lang em { padding: 3px 8px; border-radius: 999px; font-style: normal; font-weight: 700; color: var(--ess-muted); transition: background 0.3s, color 0.3s; }
 .ess-lang em.on { background: #6C35FF; color: #ffffff; }
@@ -1542,7 +1527,8 @@ section[id], [id="modules"], [id="lead"], [id="features"] { scroll-margin-top: 9
 .ess-step.is-current .icon-badge { transform: scale(1.08); box-shadow: 0 10px 22px rgba(108, 53, 255, 0.3); }
 
 @media (prefers-reduced-motion: reduce) {
-  .ess-screen, .ess-tap, .ess-goal > i::before { transition: none; }
+  .ess-screen, .ess-tap { transition: none; }
+  .ess-live { animation: none; }
   .ess-ring, .ess-note { animation: none; }
   .ess-wave i { animation: none; opacity: 0.6; }
   .ess-wave i:nth-child(1) { scale: 0.7; }

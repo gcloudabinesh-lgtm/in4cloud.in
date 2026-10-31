@@ -2501,3 +2501,17 @@
   text-align: center;
 }
 .pricing-note strong { color: var(--ink-800); }
+
+/* Mobile App section (shared with the HRMS layout in hrms.css): purple accent
+   phrase and the page's solid title rule */
+#mobile-app .section-title em.app-dual { font-style: normal; color: #6C35FF; }
+#mobile-app .section-title::after {
+  content: "";
+  display: block;
+  width: 148px;
+  max-width: 42%;
+  height: 3px;
+  margin: 16px 0 0;
+  border-radius: 999px;
+  background: #6C35FF;
+}

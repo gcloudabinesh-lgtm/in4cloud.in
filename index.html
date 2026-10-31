@@ -606,6 +606,38 @@
       </div>
     </section>
 
+    <!-- ============ MOBILE APP (moved from hrms.html) ============ -->
+    <section class="section" id="mobile-app" aria-labelledby="ma-title">
+      <div class="container">
+        <div class="ma-split">
+          <div>
+            <p class="eyebrow reveal">Mobile App</p>
+            <h2 class="section-title reveal" id="ma-title" style="margin:14px 0 14px">Your Workplace in <em class="app-dual">Every Pocket</em></h2>
+            <p class="ma-lead reveal">One In4 CloudHR app for every employee — attendance, payslips, reports and workplace services, wherever they are.</p>
+            <ul class="ma-list">
+              <li class="reveal"><span class="icon-badge"><i class="ico fa-solid fa-location-dot" aria-hidden="true"></i></span><div><h3>Check-In / Check-Out</h3><p>Punch in and out with GPS tracking, geo-fencing and geo-tagging for every location.</p></div></li>
+              <li class="reveal" style="--rd:.06s"><span class="icon-badge"><i class="ico fa-solid fa-file-invoice" aria-hidden="true"></i></span><div><h3>Access Payslip</h3><p>View monthly salary details and download payslips anytime.</p></div></li>
+              <li class="reveal" style="--rd:.12s"><span class="icon-badge"><i class="ico fa-solid fa-chart-column" aria-hidden="true"></i></span><div><h3>Reports</h3><p>View attendance, leave and salary reports on the go, anytime.</p></div></li>
+            </ul>
+          </div>
+
+          <!-- the real app, recorded on a phone, playing inside a phone frame -->
+          <div class="ma-stage ma-stage--video reveal">
+            <span class="ma-glow" aria-hidden="true"></span>
+            <div class="ma-phone ma-phone--video">
+              <span class="ma-key ma-key--power" aria-hidden="true"></span>
+              <span class="ma-key ma-key--vol" aria-hidden="true"></span>
+              <div class="ma-screen">
+                <!-- js/ma-video.js loads the clip when the phone scrolls into view -->
+                <video class="ma-video" data-src="assets/Videos/mb.mp4" poster="assets/Videos/mb-poster.jpg" muted loop playsinline preload="none" aria-label="In4 CloudHR mobile app walkthrough: home screen with check in and check out, attendance and menus"></video>
+                <span class="ma-island" aria-hidden="true"></span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
     <!-- ============ ONBOARDING ============ -->
     <section class="section onboarding" id="onboarding" aria-labelledby="onboarding-title">
       <div class="container">
@@ -777,6 +809,7 @@
   <script defer src="js/lead.js?v=20261030d"></script>
 <script defer src="js/demo-modal.js?v=20261030"></script>
   <script defer src="js/main.js"></script>
+  <script defer src="js/ma-video.js"></script>
   <script>
     /* ------------------------------------------------------------------
        Homepage showcase behaviour:
