@@ -59,7 +59,7 @@
    language as the home page) instead of the shared .page-hero-bg photo
    strip used by the other inner pages. */
 .page-hrms .page-hero {
-  padding-top: clamp(3rem, 6vw, 4.75rem);
+  padding-top: clamp(1.25rem, 3vw, 2rem);
   padding-bottom: clamp(3rem, 6vw, 4.75rem);
   background:
     radial-gradient(760px 420px at 88% -10%, rgba(101, 40, 247, 0.16), transparent 70%),
@@ -122,8 +122,8 @@ section[id], [id="modules"], [id="lead"], [id="features"] { scroll-margin-top: 9
 
 .page-hrms .inner-hero-visual {
   min-height: 0;
-  margin-top: 56px;                 /* == badge block height, so the card top
-                                       lines up with the h1 */
+  margin-top: 0;                    /* sit higher, level with the badge; was 56px to
+                                       line up with the h1 */
   display: flex;
 }
 
@@ -131,8 +131,15 @@ section[id], [id="modules"], [id="lead"], [id="features"] { scroll-margin-top: 9
 .page-hrms .inner-hero-visual .hr-hero-img {
   display: block;
   width: 100%;
+  max-width: min(460px, 100%);      /* square artwork: keep it from towering
+                                       over the copy */
   height: auto;
+  margin-inline: auto;
   align-self: center;
+}
+
+@media (max-width: 600px) {
+  .page-hrms .inner-hero-visual .hr-hero-img { max-width: min(340px, 100%); }
 }
 
 .page-hrms .inner-hero-visual .hr-carousel-viewport { flex: 1 1 auto; min-height: 0; }
