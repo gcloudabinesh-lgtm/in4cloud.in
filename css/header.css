@@ -192,6 +192,13 @@ a.nav-link.active::after {
   }
 }
 
+/* set by main.js after a link is clicked; wins over the hover rule above */
+.has-mega.menu-dismissed .mega-menu {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px) scale(0.985);
+}
+
 .mega-inner {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));

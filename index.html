@@ -37,6 +37,7 @@
   <link rel="stylesheet" href="css/responsive.css">
   <link rel="stylesheet" href="css/hrms.css">
   <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/hero-eco.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
   <link rel="stylesheet" href="css/fa.css">
 <link rel="stylesheet" href="css/demo-modal.css">
@@ -80,9 +81,8 @@
         <span class="hero-mote hero-mote--c"></span>
       </div>
 
-      <!-- Left: hero copy.  Right: a slide deck of the platform modules.
-           The illustrations repeat the module names used across the page; the
-           same modules are listed with full detail in Platform Modules below. -->
+      <!-- Left: hero copy.  Right: the connected platform visual (css/hero-eco.css,
+           js/hero-eco.js). Its numbers are sample data for illustration. -->
       <div class="hero-inner hero-grid">
         <div class="hero-content">
           <p class="hero-eyebrow reveal">Cloud HRMS &amp; Workplace Platform</p>
@@ -94,47 +94,76 @@
           </div>
         </div>
 
-        <div class="hero-stage hero-visual reveal" style="--rd:.12s" id="heroStage">
-          <div class="hero-slides" id="heroSlides" data-dir="fwd" aria-live="off">
-            <figure class="hero-slide is-active" style="--acc:#6C35FF">
-              <span class="hero-slide-tag"><i class="ico fa-solid fa-file-invoice-dollar" aria-hidden="true"></i>HRMS &amp; Payroll</span>
-              <div class="hero-slide-art"><img src="assets/mod-hrms-payroll.svg" alt="IN4 HRMS and payroll dashboard showing an employee roster, a payslip with deductions and payroll cost charts" /></div>
-              <figcaption class="hero-slide-note">Payroll, PF, ESI and payslips on one screen — run the cycle and disburse in a single click.</figcaption>
-            </figure>
-            <figure class="hero-slide" style="--acc:#8B5CF6">
-              <span class="hero-slide-tag"><i class="ico fa-solid fa-fingerprint" aria-hidden="true"></i>Attendance</span>
-              <div class="hero-slide-art"><img src="assets/mod-attendance.svg" alt="IN4 attendance with a wall biometric terminal recognising an employee face and syncing the shift to HRMS" /></div>
-              <figcaption class="hero-slide-note">Face, RFID and mobile QR check-in with geo-fencing, auto late flags and live shift hours.</figcaption>
-            </figure>
-            <figure class="hero-slide" style="--acc:#F0871E">
-              <span class="hero-slide-tag"><i class="ico fa-solid fa-utensils" aria-hidden="true"></i>Canteen</span>
-              <div class="hero-slide-art"><img src="assets/mod-canteen.svg" alt="IN4 canteen management with a menu board, meal tray, nutrition tracking and token queue" /></div>
-              <figcaption class="hero-slide-note">Menu, tokens, nutrition and wallet payments — with allergen data on every meal.</figcaption>
-            </figure>
-            <figure class="hero-slide" style="--acc:#22C7D6">
-              <span class="hero-slide-tag"><i class="ico fa-solid fa-user-check" aria-hidden="true"></i>Visitor</span>
-              <div class="hero-slide-art"><img src="assets/mod-visitor.svg" alt="IN4 visitor management issuing a pre-approved QR pass at reception with escort checklist" /></div>
-              <figcaption class="hero-slide-note">Pre-approve, scan and host — every visit logged with ID, agreement and escort.</figcaption>
-            </figure>
-            <figure class="hero-slide" style="--acc:#4B20C8">
-              <span class="hero-slide-tag"><i class="ico fa-solid fa-square-parking" aria-hidden="true"></i>Parking</span>
-              <div class="hero-slide-art"><img src="assets/mod-parking.svg" alt="IN4 parking management with an ANPR camera reading a number plate at a boom barrier and live bay map" /></div>
-              <figcaption class="hero-slide-note">ANPR entry, auto slot assignment and live occupancy across every basement level.</figcaption>
-            </figure>
-            <figure class="hero-slide" style="--acc:#6528F7">
-              <span class="hero-slide-tag"><i class="ico fa-solid fa-camera-retro" aria-hidden="true"></i>AI Video Analytics</span>
-              <div class="hero-slide-art"><img src="assets/mod-ai-video.svg" alt="IN4 AI video analytics camera wall with object detection boxes, crowd heat map and live alert timeline" /></div>
-              <figcaption class="hero-slide-note">24/7 detection of people, vehicles, crowd density and intrusions — alerted in seconds.</figcaption>
-            </figure>
-            <figure class="hero-slide" style="--acc:#6DBE45">
-              <span class="hero-slide-tag"><i class="ico fa-solid fa-robot" aria-hidden="true"></i>Workplace Automation</span>
-              <div class="hero-slide-art"><img src="assets/mod-automation.svg" alt="IN4 workplace automation workflow routing a leave request through rules to approvals, calendar and payroll" /></div>
-              <figcaption class="hero-slide-note">Build no-code workflows that trigger across HR, access and payroll — and escalate only what matters.</figcaption>
-            </figure>
+        <div class="hx-stage" id="heroStage">
+            <div class="hx" role="img" aria-label="The In4 CloudHR dashboard, moving through attendance, payroll, leave, visitor, parking and AI analytics">
+              <div class="hx-layer hx-layer--bg" data-depth="2" aria-hidden="true">
+                <span class="hx-glow hx-glow--a"></span><span class="hx-glow hx-glow--b"></span><span class="hx-glow hx-glow--c"></span>
+                <svg class="hx-links" viewBox="0 0 580 460" preserveAspectRatio="none">
+                  <path id="hxp0" d="M290 227 Q 150 90 70 38" data-m="0" class="is-active"/>
+                  <path id="hxp1" d="M290 227 Q 420 90 472 32" data-m="1"/>
+                  <path id="hxp3" d="M290 227 Q 150 350 90 426" data-m="3"/>
+                  <circle r="2.6"><animateMotion dur="6.4s" begin="-0.0s" repeatCount="indefinite"><mpath href="#hxp0"/></animateMotion></circle>
+                  <circle r="2.6"><animateMotion dur="5.6s" begin="-0.9s" repeatCount="indefinite"><mpath href="#hxp1"/></animateMotion></circle>
+                  <circle r="2.6"><animateMotion dur="6s" begin="-2.7s" repeatCount="indefinite"><mpath href="#hxp3"/></animateMotion></circle>
+                </svg>
+              </div>
+              <div class="hx-layer hx-layer--nodes" data-depth="6" aria-hidden="true">
+                <div class="hx-node is-active" data-m="0" style="left:calc(var(--u)*16);top:calc(var(--u)*20);--i:0"><div class="hx-pill" style="--t:5.4s;--r:-0.3deg;--dl:0s"><span class="hx-pill-ico"><i class="fa-solid fa-fingerprint"></i></span>Attendance</div></div>
+                <div class="hx-node" data-m="1" style="left:calc(var(--u)*424);top:calc(var(--u)*14);--i:1"><div class="hx-pill" style="--t:4.8s;--r:0.3deg;--dl:-1.2s"><span class="hx-pill-ico"><i class="fa-solid fa-money-check-dollar"></i></span>Payroll</div></div>
+                <div class="hx-node" data-m="3" style="left:calc(var(--u)*36);top:calc(var(--u)*408);--i:2"><div class="hx-pill" style="--t:5.4s;--r:-0.4deg;--dl:-3s"><span class="hx-pill-ico"><i class="fa-solid fa-user-check"></i></span>Visitor</div></div>
+              </div>
+              <div class="hx-layer hx-layer--dash" data-depth="4" aria-hidden="true">
+                <div class="hx-dash">
+                  <div class="hx-window">
+                    <div class="hx-bar"><img src="assets/logo-trim-600.png" alt="" width="600" height="134"><span class="hx-crumb"><span data-m="0" class="is-active">Attendance</span><span data-m="1">Payroll</span><span data-m="2">Leave</span><span data-m="3">Visitor</span><span data-m="4">Parking</span><span data-m="5">AI Analytics</span></span><span class="hx-bar-ico"><i class="fa-solid fa-bell"></i></span><span class="hx-bar-ico"><i class="fa-solid fa-user"></i></span></div>
+                    <div class="hx-rail"><span data-m="0" class="is-active"><i class="fa-solid fa-fingerprint"></i></span><span data-m="1"><i class="fa-solid fa-money-check-dollar"></i></span><span data-m="2"><i class="fa-solid fa-calendar-check"></i></span><span data-m="3"><i class="fa-solid fa-user-check"></i></span><span data-m="4"><i class="fa-solid fa-square-parking"></i></span><span data-m="5"><i class="fa-solid fa-video"></i></span></div>
+                    <div class="hx-views">
+                    <div class="hx-view is-active" data-m="0">
+<div class="hx-head"><div><b>Attendance</b><small>Today, 28 Oct</small></div><span class="hx-tag hx-tag--ok">Live</span></div>
+<div class="hx-stats"><div class="hx-stat hx-stat--ok">Present Today<b>41</b></div><div class="hx-stat">Active Employees<b>51</b></div><div class="hx-stat hx-stat--warn">Absent<b>8</b></div></div>
+<div class="hx-cols"><div class="hx-card"><h5>Check In / Out</h5><div class="hx-time">09:02 <small>AM</small></div><div class="hx-btns"><span class="hx-btn">Check In</span><span class="hx-btn hx-btn--ghost">Check Out</span></div><div class="hx-note"><span class="hx-dot"></span>Biometric Sync</div></div><div class="hx-card"><h5>Attendance Calendar</h5><div class="hx-cal"><i></i><i></i><i></i><i></i><i class="p">1</i><i class="h">2</i><i class="w">3</i><i class="w">4</i><i class="p">5</i><i class="p">6</i><i class="p">7</i><i class="p">8</i><i class="p">9</i><i class="w">10</i><i class="w">11</i><i class="p">12</i><i class="p">13</i><i class="l">14</i><i class="p">15</i><i class="p">16</i><i class="w">17</i><i class="w">18</i><i class="p">19</i><i class="p">20</i><i class="p">21</i><i class="p">22</i><i class="p">23</i><i class="w">24</i><i class="w">25</i><i class="p">26</i><i class="p">27</i><i class="t">28</i><i>29</i><i>30</i><i class="w">31</i></div></div></div>
+                    </div>
+                    <div class="hx-view" data-m="1">
+<div class="hx-head"><div><b>Payroll Processed</b><small>October · 51 employees</small></div><span class="hx-tag hx-tag--ok"><i class="fa-solid fa-check"></i> Done</span></div>
+<div class="hx-rows"><div class="hx-row"><span class="hx-tick"><i class="fa-solid fa-check"></i></span>Salary Calculation<em class="ok">Complete</em></div><div class="hx-row"><span class="hx-tick"><i class="fa-solid fa-check"></i></span>Attendance &amp; Leave Synced<em class="ok">Complete</em></div><div class="hx-row"><span class="hx-tick"><i class="fa-solid fa-lock"></i></span>Payroll Locked<em class="ok">Complete</em></div></div>
+<div class="hx-card" style="margin-top:calc(var(--u)*8)"><div class="hx-note" style="margin:0;font-size:calc(var(--u)*11.5);font-weight:600;color:#1a1733"><span class="hx-tick hx-tick--p"><i class="fa-solid fa-file-invoice"></i></span>Payslips<em style="margin-left:auto;font-style:normal;font-size:calc(var(--u)*10);color:#6e6b85">51 / 51</em></div><div class="hx-meter"><i style="width:100%"></i></div></div>
+                    </div>
+                    <div class="hx-view" data-m="2">
+<div class="hx-head"><div><b>Leave Calendar</b><small>October</small></div><span class="hx-btn" style="flex:none;padding-inline:calc(var(--u)*11)">Apply Leave</span></div>
+<div class="hx-cols"><div class="hx-card"><div class="hx-cal"><i></i><i></i><i></i><i></i><i>1</i><i class="h">2</i><i>3</i><i>4</i><i>5</i><i>6</i><i>7</i><i>8</i><i class="p">9</i><i>10</i><i>11</i><i>12</i><i>13</i><i class="l">14</i><i class="l">15</i><i>16</i><i>17</i><i>18</i><i>19</i><i>20</i><i>21</i><i class="t">22</i><i>23</i><i>24</i><i>25</i><i>26</i><i>27</i><i>28</i><i>29</i><i>30</i><i>31</i></div></div><div class="hx-rows" style="align-content:start"><div class="hx-row">Casual Leave<em>6 left</em></div><div class="hx-row">Sick Leave<em>4 left</em></div><div class="hx-row">Earned Leave<em>9 left</em></div></div></div>
+<div class="hx-row" style="margin-top:calc(var(--u)*8)"><span class="hx-tick"><i class="fa-solid fa-check"></i></span>Approval Status<em class="ok">Approved</em></div>
+                    </div>
+                    <div class="hx-view" data-m="3">
+<div class="hx-head"><div><b>Visitor Check-in</b><small>Reception</small></div><span class="hx-tag hx-tag--ok" style="background:#eaf6e4;color:#3e8e2d">Pass issued</span></div>
+<div class="hx-flow"><span>Check-in</span><i class="fa-solid fa-chevron-right"></i><span>QR validation</span><i class="fa-solid fa-chevron-right"></i><span>Host approval</span><i class="fa-solid fa-chevron-right"></i><span>Badge</span></div>
+<div class="hx-cols"><div class="hx-card hx-badge"><div><span class="hx-face"><i class="fa-solid fa-user"></i></span><b style="font-size:calc(var(--u)*11.5)">Visitor Badge</b><div class="hx-note" style="margin-top:calc(var(--u)*2)"><span class="hx-dot" style="background:#3e8e2d"></span>Valid today</div></div><svg class="hx-qr" viewBox="0 0 11 11"><path d="M0 0h1v1h-1zM1 0h1v1h-1zM2 0h1v1h-1zM3 0h1v1h-1zM6 0h1v1h-1zM8 0h1v1h-1zM9 0h1v1h-1zM10 0h1v1h-1zM0 1h1v1h-1zM2 1h1v1h-1zM4 1h1v1h-1zM7 1h1v1h-1zM8 1h1v1h-1zM10 1h1v1h-1zM0 2h1v1h-1zM1 2h1v1h-1zM2 2h1v1h-1zM8 2h1v1h-1zM9 2h1v1h-1zM10 2h1v1h-1zM0 3h1v1h-1zM3 3h1v1h-1zM6 3h1v1h-1zM9 3h1v1h-1zM1 4h1v1h-1zM4 4h1v1h-1zM7 4h1v1h-1zM10 4h1v1h-1zM0 6h1v1h-1zM3 6h1v1h-1zM6 6h1v1h-1zM9 6h1v1h-1zM1 7h1v1h-1zM4 7h1v1h-1zM7 7h1v1h-1zM10 7h1v1h-1zM0 8h1v1h-1zM1 8h1v1h-1zM2 8h1v1h-1zM0 9h1v1h-1zM2 9h1v1h-1zM3 9h1v1h-1zM6 9h1v1h-1zM9 9h1v1h-1zM0 10h1v1h-1zM1 10h1v1h-1zM2 10h1v1h-1zM4 10h1v1h-1zM7 10h1v1h-1zM10 10h1v1h-1z" fill="#1f3d18"/></svg></div><div class="hx-card"><h5>Visitor Log</h5><div class="hx-rows"><div class="hx-row" style="padding:calc(var(--u)*5) calc(var(--u)*8)"><span class="hx-tick hx-tick--g"><i class="fa-solid fa-arrow-right-to-bracket"></i></span>10:24<em class="ok" style="color:#3e8e2d">In</em></div><div class="hx-row" style="padding:calc(var(--u)*5) calc(var(--u)*8)"><span class="hx-tick hx-tick--g"><i class="fa-solid fa-arrow-right-to-bracket"></i></span>09:50<em class="ok" style="color:#3e8e2d">In</em></div><div class="hx-row" style="padding:calc(var(--u)*5) calc(var(--u)*8)"><span class="hx-tick" style="background:#f3f2f8;color:#8a86a3"><i class="fa-solid fa-arrow-right-from-bracket"></i></span>09:12<em>Out</em></div></div></div></div>
+                    </div>
+                    <div class="hx-view" data-m="4">
+<div class="hx-head"><div><b>Live Availability</b><small>81 of 96 slots free</small></div><span class="hx-tag">Basement 2</span></div>
+<div class="hx-cols"><div class="hx-card"><h5>Vehicle Entry</h5><span class="hx-plate">TN 09 AB 1234</span><div class="hx-gate"></div><div class="hx-note"><span class="hx-dot"></span>Gate Access granted</div></div><div class="hx-card"><h5>Parking Slots</h5><div class="hx-slots"><i class="o"></i><i></i><i></i><i class="o"></i><i></i><i class="o"></i><i class="o"></i><i></i><i></i><i class="o"></i><i></i><i></i><i></i><i class="v"></i><i></i><i class="o"></i><i></i><i></i><i class="o"></i><i class="o"></i><i></i><i></i><i></i><i class="o"></i><i></i><i class="v"></i><i></i><i></i><i class="o"></i><i></i><i></i><i class="o"></i></div><div class="hx-legend"><span style="--c:#e7f7ec;">Free</span><span style="--c:#c7b4fb;">Taken</span><span style="--c:#ffd9a0;">Visitor</span></div></div></div>
+<div class="hx-row" style="margin-top:calc(var(--u)*8)"><span class="hx-tick hx-tick--p"><i class="fa-solid fa-car-side"></i></span>Visitor Vehicle<em>Slot V-04</em></div>
+                    </div>
+                    <div class="hx-view" data-m="5">
+<div class="hx-head"><div><b>Camera Analytics</b><small>Gate 2 · Live</small></div><span class="hx-tag">Real-time</span></div>
+<div class="hx-cols"><div class="hx-card" style="padding:calc(var(--u)*5)"><div class="hx-cam"><span class="hx-cam-tag">Live</span><span class="hx-person" style="--x:18%"></span><span class="hx-person" style="--x:46%"></span><span class="hx-person hx-person--alert" style="--x:74%"></span></div></div><div class="hx-stats" style="grid-template-columns:1fr 1fr;margin:0;align-content:start"><div class="hx-stat">Occupancy<b>68%</b></div><div class="hx-stat">People Count<b>124</b></div><div class="hx-stat hx-stat--warn" style="grid-column:1/-1">Safety Alert<b style="font-size:calc(var(--u)*13)">Helmet check</b></div></div></div>
+<div class="hx-row" style="margin-top:calc(var(--u)*8)"><span class="hx-tick hx-tick--p"><i class="fa-solid fa-bolt"></i></span>Real-time Event<em>Gate 2 · just now</em></div>
+                    </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="hx-layer hx-layer--fg" data-depth="8" aria-hidden="true">
+                <div class="hx-widgets">
+                    <div class="hx-widget is-active" data-m="0" style="--w:#1f8a43;--w-bg:#e7f7ec"><span class="hx-widget-ico"><i class="fa-solid fa-fingerprint"></i></span><div><b>41 Present Today</b><small>Synced from biometrics</small></div></div>
+                    <div class="hx-widget" data-m="1" style="--w:#6528f7;--w-bg:#f1ecff"><span class="hx-widget-ico"><i class="fa-solid fa-circle-check"></i></span><div><b>Payroll Processed</b><small>✓ Done</small></div></div>
+                    <div class="hx-widget" data-m="2" style="--w:#d6338f;--w-bg:#fde8f3"><span class="hx-widget-ico"><i class="fa-solid fa-plane-departure"></i></span><div><b>Leave Approved</b><small>Casual Leave · 1 day</small></div></div>
+                    <div class="hx-widget" data-m="3" style="--w:#3e8e2d;--w-bg:#eaf6e4"><span class="hx-widget-ico"><i class="fa-solid fa-qrcode"></i></span><div><b>Visitor Checked In</b><small>QR validated</small></div></div>
+                    <div class="hx-widget" data-m="4" style="--w:#6528f7;--w-bg:#f1ecff"><span class="hx-widget-ico"><i class="fa-solid fa-car-side"></i></span><div><b>Vehicle Entered</b><small>Slot B-12 assigned</small></div></div>
+                    <div class="hx-widget" data-m="5" style="--w:#3b6ff0;--w-bg:#e9efff"><span class="hx-widget-ico"><i class="fa-solid fa-triangle-exclamation"></i></span><div><b>Safety Alert</b><small>Helmet check · Gate 2</small></div></div>
+                </div>
+              </div>
+            </div>
           </div>
-
-          <div class="hero-slide-dots" id="heroSlideDots" role="tablist" aria-label="Platform module previews"></div>
-        </div>
       </div>
     </section>
 
@@ -342,7 +371,7 @@
               </figure>
               <div class="mod-shot-foot">
                 <p>Statutory payroll with PF, ESI, TDS and professional tax, payslips generated on auto, and every filing tracked to its due date.</p>
-                <a class="btn btn-primary" href="hrms.html">Explore More<i class="ico fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                <a class="btn btn-primary" href="hrms.html#payroll">Explore More<i class="ico fa-solid fa-arrow-right" aria-hidden="true"></i></a>
               </div>
             </div>
             <!-- 5. ESS Mobile App -->
@@ -353,7 +382,7 @@
               </figure>
               <div class="mod-shot-foot">
                 <p>Attendance, leave, payslips, approvals and helpdesk in one mobile app — with geo-fenced check-ins for tamper-proof time tracking.</p>
-                <a class="btn btn-primary" href="contact.html#lead">Request a Demo<i class="ico fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                <a class="btn btn-primary" href="hrms.html#ess">Explore More<i class="ico fa-solid fa-arrow-right" aria-hidden="true"></i></a>
               </div>
             </div>
             <!-- 6. Canteen Management -->
@@ -408,14 +437,14 @@
               </figure>
               <div class="mod-shot-foot">
                 <p>Post roles, screen applicants, schedule interviews and convert offers into employee records — without re-keying anything.</p>
-                <a class="btn btn-primary" href="contact.html#lead">Request a Demo<i class="ico fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                <a class="btn btn-primary" href="#">Explore More<i class="ico fa-solid fa-arrow-right" aria-hidden="true"></i></a>
               </div>
             </div>
             <!-- 11. Performance Management -->
             <div class="mod-panel mod-panel--shot" role="tabpanel" id="modpanel-11" aria-labelledby="modtab-11" tabindex="0" hidden style="--acc:#6DBE45;--acc-soft:#F1F9EC">
-              <figure class="mod-visual mod-visual--shot">
-                <img src="assets/modules/performance-review.jpg" width="1600" height="753" alt="In4 CloudHR performance module on the Manager Review screen, listing employees with self rating, manager rating, review status and a Review action" loading="lazy" decoding="async" />
-                <figcaption class="shot-bar"><span></span><span></span><span></span><b>Performance — manager review</b></figcaption>
+              <figure class="mod-visual mod-visual--shot mod-visual--left">
+                <img src="assets/modules/performance-self-assessment.jpg" width="1600" height="783" alt="In4 CloudHR performance module on the Self Assessment screen, showing employee information and a star rating with comments for each goal" loading="lazy" decoding="async" />
+                <figcaption class="shot-bar"><span></span><span></span><span></span><b>Performance — self assessment</b></figcaption>
               </figure>
               <div class="mod-shot-foot">
                 <p>Goal tracking, reviews and appraisals to build a high-performance culture.</p>
@@ -430,7 +459,7 @@
               </figure>
               <div class="mod-shot-foot">
                 <p>Assign learning, track certifications and mandatory compliance training, and close skill gaps against performance goals.</p>
-                <a class="btn btn-primary" href="contact.html#lead">Request a Demo<i class="ico fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                <a class="btn btn-primary" href="hrms.html#training">Explore More<i class="ico fa-solid fa-arrow-right" aria-hidden="true"></i></a>
               </div>
             </div>
           </div>
@@ -544,7 +573,7 @@
 
         <div class="pr-grid">
           <a class="pr-card reveal" style="--acc:#6C35FF" href="https://zktecochennai.com/Product/Time/ai.html" target="_blank" rel="noopener">
-            <span class="pr-art pr-art--slides3"><img src="assets/Product/speedface.jpg" alt="" width="800" height="800" loading="lazy" decoding="async"><img src="assets/Product/speedface-2.jpg" alt="" width="800" height="800" loading="lazy" decoding="async"><img src="assets/Product/speedface-3.jpg" alt="" width="800" height="800" loading="lazy" decoding="async"></span>
+            <span class="pr-art pr-art--slides3"><img src="assets/Product/range/speedface.jpg" alt="" width="800" height="800" loading="lazy" decoding="async"><img src="assets/Product/range/speedface-2.jpg" alt="" width="800" height="800" loading="lazy" decoding="async"><img src="assets/Product/range/speedface-3.jpg" alt="" width="800" height="800" loading="lazy" decoding="async"></span>
             <div class="pr-body">
               <h3>Speed Face Biometrics</h3>
               <span class="pr-btn">Explore More<i class="ico fa-solid fa-arrow-right" aria-hidden="true"></i><span class="pr-sr"> (opens in a new tab)</span></span>
@@ -560,15 +589,15 @@
           </a>
 
           <a class="pr-card reveal" style="--acc:#2563EB;--rd:.12s" href="https://www.zkteco.in/armatura-entrance-control" target="_blank" rel="noopener">
-            <span class="pr-art pr-art--slides"><img src="assets/Product/boom-barrier.jpg" alt="" width="800" height="800" loading="lazy" decoding="async"><img src="assets/Product/full-turnstile.jpg" alt="" width="800" height="800" loading="lazy" decoding="async"></span>
+            <span class="pr-art pr-art--slides"><img src="assets/Product/range/boom-barrier.jpg" alt="" width="800" height="800" loading="lazy" decoding="async"><img src="assets/Product/range/full-turnstile.jpg" alt="" width="800" height="800" loading="lazy" decoding="async"></span>
             <div class="pr-body">
               <h3>Entrance Control &amp; Boom Barriers</h3>
               <span class="pr-btn">Explore More<i class="ico fa-solid fa-arrow-right" aria-hidden="true"></i><span class="pr-sr"> (opens in a new tab)</span></span>
             </div>
           </a>
 
-          <a class="pr-card reveal" style="--acc:#3E8E2D;--rd:.18s" href="https://zktecochennai.com/Product/Entrance/Pedestrain.html" target="_blank" rel="noopener">
-            <span class="pr-art pr-art--slides"><img src="assets/Product/flap-barrier.jpg" alt="" width="800" height="800" loading="lazy" decoding="async"><img src="assets/Product/turnstile.jpg" alt="" width="800" height="800" loading="lazy" decoding="async"></span>
+          <a class="pr-card reveal" style="--acc:#EC4899;--rd:.18s" href="https://zktecochennai.com/Product/Entrance/Pedestrain.html" target="_blank" rel="noopener">
+            <span class="pr-art pr-art--slides"><img src="assets/Product/range/flap-barrier.jpg" alt="" width="800" height="800" loading="lazy" decoding="async"><img src="assets/Product/range/turnstile.jpg" alt="" width="800" height="800" loading="lazy" decoding="async"></span>
             <div class="pr-body">
               <h3>Flap Barriers &amp; Turnstiles</h3>
               <span class="pr-btn">Explore More<i class="ico fa-solid fa-arrow-right" aria-hidden="true"></i><span class="pr-sr"> (opens in a new tab)</span></span>
@@ -623,19 +652,29 @@
             </ul>
           </div>
 
-          <!-- the real app, recorded on a phone, playing inside a phone frame -->
-          <div class="ma-stage ma-stage--video reveal">
+          <!-- real app screens (from the recording, personal details removed) in three phone frames -->
+          <div class="ma-stage ma-stage--trio reveal">
             <span class="ma-glow" aria-hidden="true"></span>
-            <div class="ma-phone ma-phone--video">
-              <span class="ma-key ma-key--power" aria-hidden="true"></span>
-              <span class="ma-key ma-key--vol" aria-hidden="true"></span>
+            <div class="ma-phone ma-phone--shot ma-phone--left">
               <div class="ma-screen">
-                <!-- js/ma-video.js loads the clip when the phone scrolls into view -->
-                <video class="ma-video" data-src="assets/Videos/mb.mp4" poster="assets/Videos/mb-poster.jpg" muted loop playsinline preload="none" aria-label="In4 CloudHR mobile app walkthrough: home screen with check in and check out, attendance and menus"></video>
+                <img class="ma-shot" src="assets/mobile-app/attendance.jpg" width="480" height="1076" alt="In4 CloudHR app attendance screen with daily check-in, check-out and work hours" loading="lazy" decoding="async">
                 <span class="ma-island" aria-hidden="true"></span>
               </div>
             </div>
-
+            <div class="ma-phone ma-phone--shot ma-phone--center">
+              <span class="ma-key ma-key--power" aria-hidden="true"></span>
+              <span class="ma-key ma-key--vol" aria-hidden="true"></span>
+              <div class="ma-screen">
+                <img class="ma-shot" src="assets/mobile-app/home.jpg" width="480" height="1076" alt="In4 CloudHR app home screen with Check In and Check Out buttons and recent attendance" loading="lazy" decoding="async">
+                <span class="ma-island" aria-hidden="true"></span>
+              </div>
+            </div>
+            <div class="ma-phone ma-phone--shot ma-phone--right">
+              <div class="ma-screen">
+                <img class="ma-shot" src="assets/mobile-app/monthly-report.jpg" width="480" height="1076" alt="In4 CloudHR app monthly attendance report with a summary of present days, week offs, holidays and work from home" loading="lazy" decoding="async">
+                <span class="ma-island" aria-hidden="true"></span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -811,7 +850,7 @@
   <script defer src="js/lead.js?v=20261030d"></script>
 <script defer src="js/demo-modal.js?v=20261030"></script>
   <script defer src="js/main.js"></script>
-  <script defer src="js/ma-video.js"></script>
+  <script defer src="js/hero-eco.js"></script>
   <script>
     /* ------------------------------------------------------------------
        Homepage showcase behaviour:
@@ -978,121 +1017,6 @@
         });
       })();
 
-      /* ---- Hero module slide deck ------------------------------------ */
-      (function () {
-        var stage = document.getElementById('heroStage');
-        var deck = document.getElementById('heroSlides');
-        var dotsWrap = document.getElementById('heroSlideDots');
-        if (!deck || !dotsWrap) return;
-
-        var DURATION = 4200;
-        var slides = [].slice.call(deck.querySelectorAll('.hero-slide'));
-        var dots = [];
-        var index = 0;
-        var timer = null;
-        var x0 = null;
-
-        function render(resetProgress) {
-          slides.forEach(function (s, i) {
-            s.classList.toggle('is-active', i === index);
-          });
-          dots.forEach(function (d, i) {
-            var on = i === index;
-            d.setAttribute('aria-selected', on ? 'true' : 'false');
-            if (on && resetProgress) {
-              /* force the progress wipe to replay from zero */
-              d.classList.remove('active');
-              void d.offsetWidth;
-              d.classList.add('active');
-            } else {
-              d.classList.toggle('active', on);
-            }
-          });
-        }
-
-        function go(i) {
-          var next = (i + slides.length) % slides.length;
-          /* step backwards only when the user really asked for it, so the
-             wrap from last -> first still plays forward */
-          deck.dataset.dir = (next === index - 1 && index !== 0) ? 'back' : 'fwd';
-          index = next;
-          render(true);
-        }
-
-        function pause() {
-          if (timer) { clearInterval(timer); timer = null; }
-          dotsWrap.classList.add('is-paused');
-        }
-
-        function restart() {
-          pause();
-          if (reduceMotion) return;
-          /* resume the wipe from where the JS clock resumes */
-          dotsWrap.classList.remove('is-paused');
-          timer = setInterval(function () { go(index + 1); }, DURATION);
-        }
-
-        slides.forEach(function (slide, i) {
-          var b = document.createElement('button');
-          var label = slide.querySelector('.hero-slide-tag');
-          var name = label ? label.textContent.trim() : 'Module ' + (i + 1);
-          b.type = 'button';
-          b.className = 'hero-slide-dot';
-          b.setAttribute('role', 'tab');
-          b.setAttribute('aria-label', 'Show ' + name);
-          b.setAttribute('data-label', name);
-          b.addEventListener('click', function () { go(i); restart(); });
-          dots.push(b);
-          dotsWrap.appendChild(b);
-        });
-
-        deck.style.setProperty('--hero-dur', DURATION + 'ms');
-
-        if (stage) {
-          stage.addEventListener('mouseenter', pause);
-          stage.addEventListener('mouseleave', restart);
-          stage.addEventListener('focusin', pause);
-          stage.addEventListener('focusout', restart);
-          stage.addEventListener('keydown', function (e) {
-            if (e.key === 'ArrowLeft') { go(index - 1); restart(); }
-            if (e.key === 'ArrowRight') { go(index + 1); restart(); }
-          });
-          stage.addEventListener('touchstart', function (e) {
-            x0 = e.touches[0].clientX;
-            pause();
-          }, { passive: true });
-          stage.addEventListener('touchend', function (e) {
-            if (x0 === null) return;
-            var dx = e.changedTouches[0].clientX - x0;
-            if (Math.abs(dx) > 40) go(index + (dx < 0 ? 1 : -1));
-            x0 = null;
-            restart();
-          });
-
-          /* pointer parallax — the deck leans toward the cursor */
-          if (!reduceMotion && window.matchMedia('(hover: hover)').matches) {
-            var frame = 0;
-            stage.addEventListener('pointermove', function (e) {
-              if (frame) return;
-              frame = requestAnimationFrame(function () {
-                frame = 0;
-                var r = stage.getBoundingClientRect();
-                var px = (e.clientX - r.left) / r.width - 0.5;
-                var py = (e.clientY - r.top) / r.height - 0.5;
-                deck.style.setProperty('--ty', (px * 5).toFixed(2) + 'deg');
-                deck.style.setProperty('--tx', (-py * 4).toFixed(2) + 'deg');
-              });
-            });
-            stage.addEventListener('pointerleave', function () {
-              deck.style.setProperty('--ty', '0deg');
-              deck.style.setProperty('--tx', '0deg');
-            });
-          }
-        }
-
-        render(true);
-        restart();
-      })();
     })();
   </script>
 </body>

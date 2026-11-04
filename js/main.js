@@ -22,6 +22,22 @@
     });
   });
 
+  /* Close the menu after picking a link. Same-page links do not reload, so
+     hover and focus would otherwise hold it open until the pointer moves in again */
+  document.querySelectorAll(".has-mega").forEach(function (item) {
+    item.querySelectorAll(".mega-menu a").forEach(function (link) {
+      link.addEventListener("click", function () {
+        item.classList.add("menu-dismissed");
+        link.blur();
+      });
+    });
+    ["mouseenter", "mouseleave"].forEach(function (type) {
+      item.addEventListener(type, function () {
+        item.classList.remove("menu-dismissed");
+      });
+    });
+  });
+
   /* Close menus when clicking outside */
   document.addEventListener("click", function () {
     document.querySelectorAll(".has-dropdown.open, .has-mega.open").forEach(function (el) {

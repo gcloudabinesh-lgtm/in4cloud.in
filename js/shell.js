@@ -24,8 +24,6 @@
     "pricing.html": "pricing"
   }[currentFile] || "home";
 
-  const isProductPage = ["hrms", "visitor", "parking", "attendance", "leave", "performance", "ai-video", "ai-camera"].indexOf(pageKey) !== -1;
-
   function active(href, key) {
     const isActive = (href && currentFile === href) || pageKey === key;
     return isActive ? ' class="nav-link active" aria-current="page"' : ' class="nav-link"';
@@ -55,7 +53,7 @@
     '<a class="logo" href="index.html" aria-label="IN4 Solutions â€” Home">' + logoMark + "</a>" +
     '<nav class="nav" aria-label="Primary">' +
     '<ul class="nav-list">' +
-    '<li class="has-mega' + (isProductPage ? " open" : "") + '">' +
+    '<li class="has-mega">' +
     '<button class="nav-link nav-trigger" type="button" aria-haspopup="true" aria-expanded="false">' +
     'Products<i class="ico fa-solid fa-chevron-down" aria-hidden="true"></i></button>' +
     '<div class="mega-menu" role="menu">' +
@@ -64,10 +62,10 @@
     '<a href="hrms.html"><i class="ico fa-solid fa-cloud" aria-hidden="true"></i> HRMS</a>' +
     '<a href="attendance-management.html"><i class="ico fa-solid fa-fingerprint" aria-hidden="true"></i> Time &amp; Attendance Management</a>' +
     '<a href="leave-management.html"><i class="ico fa-solid fa-calendar-check" aria-hidden="true"></i> Leave Management</a>' +
-    '<a href="hrms.html#modules"><i class="ico fa-solid fa-money-check-dollar" aria-hidden="true"></i> Payroll Processing</a>' +
-    '<a href="hrms.html#modules"><i class="ico fa-solid fa-shield-halved" aria-hidden="true"></i> Compliance</a>' +
+    '<a href="hrms.html#payroll"><i class="ico fa-solid fa-money-check-dollar" aria-hidden="true"></i> Payroll Processing</a>' +
+    '<a href="#"><i class="ico fa-solid fa-shield-halved" aria-hidden="true"></i> Compliance</a>' +
     '<a href="hrms.html#ess"><i class="ico fa-solid fa-mobile-screen" aria-hidden="true"></i> ESS Mobile App</a>' +
-    '<a href="hrms.html#modules"><i class="ico fa-solid fa-user-plus" aria-hidden="true"></i> Recruitment</a>' +
+    '<a href="#"><i class="ico fa-solid fa-user-plus" aria-hidden="true"></i> Recruitment</a>' +
     '<a href="performance-management.html"><i class="ico fa-solid fa-chart-line" aria-hidden="true"></i> Performance Management</a>' +
     '<a href="hrms.html#training"><i class="ico fa-solid fa-graduation-cap" aria-hidden="true"></i> Training &amp; Learning</a>' +
     "</div></div>" +
@@ -107,10 +105,10 @@
     '<a href="hrms.html"><i class="ico fa-solid fa-cloud" aria-hidden="true"></i> HRMS</a>' +
     '<a href="attendance-management.html"><i class="ico fa-solid fa-fingerprint" aria-hidden="true"></i> Time &amp; Attendance Management</a>' +
     '<a href="leave-management.html"><i class="ico fa-solid fa-calendar-check" aria-hidden="true"></i> Leave Management</a>' +
-    '<a href="hrms.html#modules"><i class="ico fa-solid fa-money-check-dollar" aria-hidden="true"></i> Payroll Processing</a>' +
-    '<a href="hrms.html#modules"><i class="ico fa-solid fa-shield-halved" aria-hidden="true"></i> Compliance</a>' +
+    '<a href="hrms.html#payroll"><i class="ico fa-solid fa-money-check-dollar" aria-hidden="true"></i> Payroll Processing</a>' +
+    '<a href="#"><i class="ico fa-solid fa-shield-halved" aria-hidden="true"></i> Compliance</a>' +
     '<a href="hrms.html#ess"><i class="ico fa-solid fa-mobile-screen" aria-hidden="true"></i> ESS Mobile App</a>' +
-    '<a href="hrms.html#modules"><i class="ico fa-solid fa-user-plus" aria-hidden="true"></i> Recruitment</a>' +
+    '<a href="#"><i class="ico fa-solid fa-user-plus" aria-hidden="true"></i> Recruitment</a>' +
     '<a href="performance-management.html"><i class="ico fa-solid fa-chart-line" aria-hidden="true"></i> Performance Management</a>' +
     '<a href="hrms.html#training"><i class="ico fa-solid fa-graduation-cap" aria-hidden="true"></i> Training &amp; Learning</a>' +
     '<span class="mobile-sub-title">Workplace Modules</span>' +
