@@ -1,4 +1,4 @@
-/* Attendance marking methods: the square cards slide one step every 3s and
+/* Attendance marking methods: the square cards slide one step every 2s and
    rewind at the end. Pauses while hovered, focused, touched, offscreen or in
    a hidden tab; with reduced motion it never moves on its own. The dots under
    the row jump to a position. */
@@ -6,7 +6,7 @@
   var track = document.querySelector('[data-am-slider]');
   if (!track) return;
 
-  var DELAY = 3000;
+  var DELAY = 2000;
   var cards = [].slice.call(track.children);
   var dotsWrap = document.querySelector('[data-am-dots]');
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
