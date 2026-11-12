@@ -78,22 +78,22 @@
         </div>
         <div class="hr-eco">
           <div class="hr-eco-index reveal">
-            <span class="hr-eco-item"><b>01</b>Dashboard</span>
-            <span class="hr-eco-item"><b>02</b>Onboarding</span>
-            <span class="hr-eco-item"><b>03</b>Attendance Management</span>
-            <span class="hr-eco-item"><b>04</b>Leave Management</span>
-            <span class="hr-eco-item"><b>05</b>Dynamic Payroll</span>
-            <span class="hr-eco-item"><b>06</b>Geomarking &amp; Fencing</span>
-            <span class="hr-eco-item"><b>07</b>Shift Scheduling</span>
-            <span class="hr-eco-item"><b>08</b>Appraisal Management</span>
-            <span class="hr-eco-item"><b>09</b>Performance Management</span>
-            <span class="hr-eco-item"><b>10</b>Employee Self Service</span>
-            <span class="hr-eco-item"><b>11</b>Training &amp; Development</span>
-            <span class="hr-eco-item"><b>12</b>Exit Management</span>
-            <span class="hr-eco-item"><b>13</b>Notification Alerts</span>
+            <a class="hr-eco-item" href="#core-hr"><b>01</b>Dashboard</a>
+            <a class="hr-eco-item" href="#core-hr"><b>02</b>Onboarding</a>
+            <a class="hr-eco-item" href="#attendance"><b>03</b>Attendance Management</a>
+            <a class="hr-eco-item" href="#leave"><b>04</b>Leave Management</a>
+            <a class="hr-eco-item" href="#payroll"><b>05</b>Dynamic Payroll</a>
+            <a class="hr-eco-item" href="#attendance"><b>06</b>Geomarking &amp; Fencing</a>
+            <a class="hr-eco-item" href="#attendance"><b>07</b>Shift Scheduling</a>
+            <a class="hr-eco-item" href="#performance"><b>08</b>Appraisal Management</a>
+            <a class="hr-eco-item" href="#performance"><b>09</b>Performance Management</a>
+            <a class="hr-eco-item" href="#ess"><b>10</b>Employee Self Service</a>
+            <a class="hr-eco-item" href="#training"><b>11</b>Training &amp; Development</a>
+            <a class="hr-eco-item" href="#core-hr"><b>12</b>Exit Management</a>
+            <a class="hr-eco-item" href="#ess"><b>13</b>Notification Alerts</a>
             <span class="hr-eco-item"><b>14</b>Recruitment</span>
-            <span class="hr-eco-item"><b>15</b>Mobile App</span>
-            <span class="hr-eco-item"><b>16</b>Reports &amp; Analytics</span>
+            <a class="hr-eco-item" href="#ess"><b>15</b>Mobile App</a>
+            <a class="hr-eco-item" href="#core-hr"><b>16</b>Reports &amp; Analytics</a>
           </div>
           <figure class="hr-eco-video reveal" style="--rd:.1s">
             <div class="hr-eco-video-frame">
@@ -143,7 +143,7 @@
     </section>
 
     <!-- ============ 5. ATTENDANCE MANAGEMENT ============ -->
-    <section class="section section-lav" aria-labelledby="att-title">
+    <section class="section section-lav" id="attendance" aria-labelledby="att-title">
       <div class="container">
         <div class="ch-split ch-split--rev">
           <div>
@@ -216,7 +216,7 @@
     </section>
 
     <!-- ============ 6. LEAVE MANAGEMENT ============ -->
-    <section class="section section-peach" aria-labelledby="leave-title">
+    <section class="section section-peach" id="leave" aria-labelledby="leave-title">
       <div class="container">
         <div class="section-head center reveal">
           <h2 class="section-title" id="leave-title">Leave <em class="hr-dual">Management</em></h2>
@@ -239,6 +239,24 @@
           <div class="hr-callout hr-callout--shot reveal" style="--rd:.12s">
             <figure class="hr-callout-shot"><img src="assets/hrms-shots/leave-status.jpg" width="800" height="485" alt="Leave applications with applied-on time, approved and rejected status and view and withdraw actions" loading="lazy" decoding="async" /></figure>
             <div class="hr-callout-body"><h3>Leave Application &amp; Notifications</h3><p>Applications, approvals and balances always visible.</p></div>
+          </div>
+        </div>
+
+        <!-- year-end rules, approval chain and holiday calendars (from leave-management.html);
+             the screen is a sample with employee codes only -->
+        <div class="lv-more reveal">
+          <figure class="lv-more-shot">
+            <img src="assets/hrms-shots/leave-year-end.jpg" width="1200" height="560" alt="Year-end leave processing screen showing each leave type's entitlement, used days, balance and year-end rule — lapse, carry forward or encashment — beside the approval chain and region-wise holiday calendars" loading="lazy" decoding="async" />
+          </figure>
+          <div class="lv-more-copy">
+            <p class="lv-more-eyebrow">Year-end &amp; approvals</p>
+            <h3>Your leave rules, applied automatically</h3>
+            <ul class="lv-tiles">
+              <li style="--c:#6C35FF;--cs:#f1ecff"><span><i class="ico fa-solid fa-scale-balanced" aria-hidden="true"></i></span><b>Quotas &amp; pro-rata</b><small>By role, grade or policy</small></li>
+              <li style="--c:#0E8C9B;--cs:#e3f5f8"><span><i class="ico fa-solid fa-rotate" aria-hidden="true"></i></span><b>Year-end rules</b><small>Carry forward, lapse or encash</small></li>
+              <li style="--c:#3E8E2D;--cs:#eaf6e4"><span><i class="ico fa-solid fa-route" aria-hidden="true"></i></span><b>Multi-level approval</b><small>Manager, then HR</small></li>
+              <li style="--c:#DB2777;--cs:#fdf0f7"><span><i class="ico fa-solid fa-calendar-days" aria-hidden="true"></i></span><b>Region holidays</b><small>A calendar per location</small></li>
+            </ul>
           </div>
         </div>
       </div>
@@ -645,11 +663,11 @@
 
                 <!-- 6. notifications -->
                 <div class="ess-screen">
-                  <div class="ess-title"><i class="ico fa-solid fa-chevron-left"></i><span class="ess-t-en">Notifications</span><span class="ess-t-ar" lang="ar">الإشعارات</span><span class="ess-lang"><em class="on">EN</em><em lang="ar">ع</em></span></div>
+                  <div class="ess-title"><i class="ico fa-solid fa-chevron-left"></i>Notifications</div>
                   <div class="ess-notes">
-                    <div class="ess-note"><span class="g"><i class="ico fa-solid fa-calendar-check"></i></span><div><b class="ess-t-en">Leave approved</b><b class="ess-t-ar" lang="ar">تمت الموافقة على الإجازة</b><small>12–13 Nov · just now</small></div></div>
-                    <div class="ess-note"><span class="p"><i class="ico fa-solid fa-file-invoice"></i></span><div><b class="ess-t-en">Payslip ready</b><b class="ess-t-ar" lang="ar">قسيمة الراتب جاهزة</b><small>October 2026 · 2h ago</small></div></div>
-                    <div class="ess-note"><span class="o"><i class="ico fa-solid fa-repeat"></i></span><div><b class="ess-t-en">Shift updated</b><b class="ess-t-ar" lang="ar">تم تحديث المناوبة</b><small>From Mon · General</small></div></div>
+                    <div class="ess-note"><span class="g"><i class="ico fa-solid fa-calendar-check"></i></span><div><b>Leave approved</b><small>12–13 Nov · just now</small></div></div>
+                    <div class="ess-note"><span class="p"><i class="ico fa-solid fa-file-invoice"></i></span><div><b>Payslip ready</b><small>October 2026 · 2h ago</small></div></div>
+                    <div class="ess-note"><span class="o"><i class="ico fa-solid fa-repeat"></i></span><div><b>Shift updated</b><small>From Mon · General</small></div></div>
                   </div>
                 </div>
               </div>
@@ -735,7 +753,7 @@
   </main>
 <script defer src="js/hrms-icon-palette.js"></script>
 <script defer src="js/site.js?v=20261030f"></script>
-  <script defer src="js/shell.js?v=20261031b"></script>
+  <script defer src="js/shell.js?v=20261112"></script>
   <script defer src="js/lead.js?v=20261030d"></script>
 <script defer src="js/demo-modal.js?v=20261030"></script>
   <script defer src="js/main.js"></script>

@@ -997,11 +997,11 @@
 .bio-list .icon-badge { box-shadow: 0 8px 18px rgba(17, 24, 39, 0.1); }
 
 /* ==========================================================================
-   Biometric product range — three box banners linking to in4solution.com
+   Biometric product range — four box banners linking to in4solution.com
    ========================================================================== */
 .pr-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: clamp(1rem, 2vw, 1.5rem);
   margin-top: clamp(2rem, 4vw, 3rem);
 }
@@ -1125,8 +1125,12 @@
   white-space: nowrap;
 }
 
-@media (max-width: 760px) {
-  .pr-grid { grid-template-columns: 1fr; max-width: 420px; margin-inline: auto; }
+@media (max-width: 1100px) {
+  .pr-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 600px) {
+  .pr-grid { grid-template-columns: 1fr; }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -2325,7 +2329,7 @@
   .bx-iconbar .bx-card-ico { width: 26px; height: 26px; font-size: 11px; }
 }
 
-/* Entrance Control and Flap Barrier cards: two product shots cross-fading in turn */
+/* Speed Face, Entrance Control and Flap Barrier cards: two product shots cross-fading in turn */
 .pr-art--slides img + img {
   position: absolute;
   inset: 0;
@@ -2479,6 +2483,90 @@
   text-align: center;
 }
 .pricing-note strong { color: var(--ink-800); }
+
+/* Pricing page: hero sub-line and points, plan number, slab instead of a price */
+.pricing-hero-sub {
+  margin-top: 10px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: clamp(1.15rem, 0.6vw + 1rem, 1.4rem);
+  font-weight: 700;
+  color: #5a23e0;
+}
+.pricing-hero-points {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 22px;
+  margin: 18px 0 0;
+  padding: 0;
+  list-style: none;
+  font-size: 14.5px;
+  font-weight: 600;
+  color: var(--ink-800);
+}
+.pricing-hero-points li { display: flex; align-items: center; gap: 8px; }
+.pricing-hero-points .ico { width: 16px; height: 16px; font-size: 13px; color: var(--in4-green-dark, #3e8e2d); }
+.pricing-tier {
+  margin: 0 0 6px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  color: var(--purple-600, #6528f7);
+}
+.pricing-card.premium .pricing-tier { color: var(--in4-green-dark); }
+.pricing-amount--slab { flex-direction: column; align-items: center; gap: 6px; }
+.pricing-amount--slab .price { font-size: 34px; }
+.pricing-features li.pricing-plus { color: var(--ink-800); }
+/* Pricing add-ons: a full-width table, each module with its colour icon and
+   the price as the strongest text in the row */
+.addon-table .compare-table th:last-child,
+.addon-table .compare-table td:last-child { text-align: right; }
+.addon-table .compare-table th:nth-child(2),
+.addon-table .compare-table td:nth-child(2) { text-align: left; }
+.addon-table tbody tr { transition: background-color 0.25s var(--ease); }
+.addon-table tbody tr:hover { background: var(--acc-soft); }
+.addon-table tbody td { padding-block: 16px; }
+.addon-mod { display: inline-flex; align-items: center; gap: 12px; font-weight: 700; color: var(--ink-800); }
+.addon-ico {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: var(--acc-soft);
+  color: var(--acc);
+}
+.addon-ico .ico { width: 16px; height: 16px; font-size: 16px; }
+.addon-table tbody tr:hover .addon-ico { background: #ffffff; }
+.addon-basis { font-size: 13.5px; color: var(--text-muted); }
+.addon-price { white-space: nowrap; }
+.addon-price small { font-size: 12.5px; font-weight: 600; color: var(--text-muted); }
+.addon-price b { font-family: "Plus Jakarta Sans", sans-serif; font-size: 19px; font-weight: 800; color: var(--ink-900); }
+.addon-price span { font-size: 13px; color: var(--text-muted); }
+.addon-note { display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 22px; }
+.addon-note .ico { width: 15px; height: 15px; font-size: 14px; color: var(--purple-600, #6528f7); }
+@media (max-width: 760px) {
+  .addon-table .compare-table th:nth-child(2),
+  .addon-table .compare-table td:nth-child(2) { display: none; }
+  .addon-price { white-space: normal; }
+  .addon-price span { display: block; white-space: nowrap; }
+  .addon-price small { display: block; }
+  .addon-table .compare-table th,
+  .addon-table .compare-table td { padding-inline: 14px; }
+  .addon-mod { gap: 10px; }
+  .addon-ico { width: 32px; height: 32px; }
+}
+
+.faq-cols {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px clamp(14px, 2vw, 24px);
+  align-items: start;
+}
+.faq-cols .faq-list { max-width: none; margin: 0; }
+@media (max-width: 760px) {
+  .faq-cols { grid-template-columns: 1fr; }
+}
 
 /* Mobile App section (shared with the HRMS layout in hrms.css): purple accent
    phrase and the page's solid title rule */

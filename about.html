@@ -44,23 +44,17 @@
   <main id="main">
 
     <!-- ============ PAGE HERO ============ -->
-    <section class="page-hero ab-hero" aria-labelledby="hero-title">
-      <div class="hero-bg" aria-hidden="true">
-        <span class="hero-mgrid"></span>
-        <span class="hero-bg-sheen"></span>
-        <span class="hero-orb hero-orb--tr"></span>
-        <span class="hero-orb hero-orb--bl"></span>
-        <span class="hero-orb hero-orb--br"></span>
-        <span class="hero-mote hero-mote--a"></span>
-        <span class="hero-mote hero-mote--b"></span>
-        <span class="hero-mote hero-mote--c"></span>
+    <section class="page-hero ab-hero ab-hero--video" aria-labelledby="hero-title">
+      <!-- office walk-through behind the headline (js/about-hero.js) -->
+      <div class="ab-hero-media" aria-hidden="true">
+        <video class="ab-hero-video" src="assets/About/av1.mp4" poster="assets/About/av1-poster.webp" muted loop playsinline autoplay preload="auto"></video>
       </div>
       <div class="container">
         <div class="inner-hero" style="grid-template-columns:1fr;justify-items:center;text-align:center">
           <div class="inner-hero-copy" style="max-width:880px">
             <p class="hero-eyebrow reveal">About Us</p>
             <h1 class="reveal" id="hero-title" style="--rd:.06s">Business Automation, Built on <span class="grad">Real-World Expertise</span></h1>
-            <p class="lead reveal" style="--rd:.12s">The business automation division of In4 Solution Pvt Ltd — turning 18 years of biometric and access control expertise into connected cloud software.</p>
+            <p class="lead reveal" style="--rd:.12s">The business automation division of In4 Solution Pvt Ltd — turning two decades of biometric and access control expertise into connected cloud software.</p>
           </div>
         </div>
       </div>
@@ -73,15 +67,16 @@
 
           <div class="ab-copy reveal">
             <p class="eyebrow">Who We Are</p>
-            <h2 id="who-title">18+ Years of Trust in <span class="ab-hl">Biometric Innovation</span></h2>
-            <p>For over 18 years, In4 Solution Pvt Ltd has been at the forefront of biometric attendance automation and workforce authentication — building deep expertise in attendance, access control and workforce management.</p>
-            <p>On that foundation we introduced the In4 Cloud Suite: a scalable family of cloud solutions that digitizes HRMS, Visitor Management, Canteen, CRM and Billing — improving accuracy, security, efficiency and workforce visibility through one connected digital ecosystem.</p>
+            <h2 id="who-title">Technology Built on Experience. <span class="ab-hl">Designed for What&rsquo;s Next.</span></h2>
+            <p>IN4 Solutions is an enterprise technology company with two decades of experience delivering integrated business automation, workforce management and intelligent security solutions.</p>
+            <p>From biometric systems and access control to cloud-based HRMS, workplace automation and AI-driven intelligence, we bring people, processes and technology together through one connected ecosystem.</p>
+            <p>Our approach is simple: understand real-world business challenges, simplify complex operations and build technology that grows with your business.</p>
           </div>
 
           <div class="ab-visual reveal" style="--rd:.12s">
             <figure class="ab-photo">
               <span class="ab-photo-ring" aria-hidden="true"></span>
-              <img src="assets/about-office.jpg" width="1600" height="1000" alt="Illustration of a modern In4 CloudHR office with rows of desks showing the HR dashboard, large windows and branded wall" loading="lazy" decoding="async" />
+              <img src="assets/About/team-office.webp" width="1400" height="789" alt="The IN4 Solutions team at the office in front of the In4 CloudHR wall" loading="lazy" decoding="async" />
               <span class="ab-photo-empty" aria-hidden="true"><i class="ico fa-regular fa-image" aria-hidden="true"></i></span>
             </figure>
           </div>
@@ -90,34 +85,210 @@
       </div>
     </section>
 
-    <!-- ============ STORY ============ -->
+    <!-- ============ OUR JOURNEY ============ -->
     <section class="section ab-story" aria-labelledby="story-title">
       <div class="container">
         <div class="split ab-story-split">
-          <!-- one image: the three signals from the story (attendance, visitors, vehicles) joined by the cloud -->
-          <figure class="ab-story-media ab-story-single reveal" style="--rd:.1s">
-            <img src="assets/our-story-connected.jpg" width="1100" height="1010" alt="Employee punching attendance on a fingerprint reader, a visitor checking in at a connected reception desk and an operator at a parking gate, joined by the IN4 Cloud" loading="lazy" decoding="async" />
-          </figure>
+          <!-- three views of the IN4 office: corridor, glass cabin and cafe -->
+          <div class="ab-journey-mosaic reveal" style="--rd:.1s">
+            <img class="ab-jm-tall" src="assets/About/office-corridor.webp" width="720" height="1040" alt="Corridor at the IN4 Solutions office lined with black-framed glass cabins and wood panelling" loading="lazy" decoding="async" />
+            <img src="assets/About/office-cabin.webp" width="720" height="720" alt="Glass-walled cabin with a desk and office chairs beside a window" loading="lazy" decoding="async" />
+            <img src="assets/About/office-cafe.webp" width="720" height="720" alt="Office cafe with a wooden counter, yellow and green bar stools and pendant lights" loading="lazy" decoding="async" />
+          </div>
           <div class="split-copy reveal">
-            <p class="eyebrow">Our Story</p>
+            <p class="eyebrow">Our Journey</p>
             <h2 class="section-title" id="story-title">From the floor <em>to the cloud</em></h2>
             <p class="ab-story-lead">We started where the data lives — factory floors, reception desks and parking gates. Hardware worked, but the paperwork around it didn't. IN4 Solutions closes that gap by turning the signals your site already generates — attendance punches, visitor visits, vehicle movements — into clean, connected digital operations.</p>
             <ul class="info-list ab-story-list">
               <li>
-                <span class="ab-badge purple"><i class="ico fa-solid fa-building" aria-hidden="true"></i></span>
-                <div><strong>Business Automation Division</strong><p>Part of In4 Solution Pvt Ltd with two decades of on-ground implementation experience.</p></div>
+                <span class="ab-badge purple"><i class="ico fa-solid fa-utensils" aria-hidden="true"></i></span>
+                <div><strong>Canteen Management</strong><p>Digital meal ordering, token tracking and billing for a smooth employee dining experience.</p></div>
               </li>
               <li>
-                <span class="ab-badge green"><i class="ico fa-solid fa-diagram-project" aria-hidden="true"></i></span>
-                <div><strong>One Connected Ecosystem</strong><p>Workforce, visitor and parking operations managed through a single partner.</p></div>
+                <span class="ab-badge green"><i class="ico fa-solid fa-square-parking" aria-hidden="true"></i></span>
+                <div><strong>Parking Management</strong><p>Vehicle entry, slot allocation and live occupancy across every parking level.</p></div>
               </li>
               <li>
-                <span class="ab-badge teal"><i class="ico fa-solid fa-bolt" aria-hidden="true"></i></span>
-                <div><strong>Built Around Physical Operations</strong><p>Every product accounts for sites, shifts, security desks and facility realities.</p></div>
+                <span class="ab-badge teal"><i class="ico fa-solid fa-video" aria-hidden="true"></i></span>
+                <div><strong>AI Video Analytics</strong><p>Camera feeds turned into real-time alerts for safety, occupancy and attendance.</p></div>
               </li>
             </ul>
           </div>
 
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PLATFORM MODULES (mirrors the home page module list) ============ -->
+    <section class="section section-alt ab-modules-section" id="products" aria-labelledby="products-title">
+      <div class="container">
+        <div class="section-head center reveal">
+          <p class="eyebrow">Platform Modules</p>
+          <h2 class="section-title" id="products-title">One Platform. <em class="ab-dual">Every Workplace Need.</em></h2>
+          <p class="section-lead">Twenty connected modules covering HR, attendance, payroll, talent, employee services and the workplace.</p>
+        </div>
+
+        <ul class="ab-modules-grid">
+          <li class="reveal ab-mod-featured" style="--acc:#6C35FF;--acc-soft:#F3EEFF">
+            <a href="hrms.html#core-hr">
+              <span class="ab-mod-ico"><i class="ico fa-solid fa-sitemap" aria-hidden="true"></i></span>
+              <span class="ab-mod-name">Core HR &amp; HRIS</span>
+              <span class="ab-mod-sub">Core HR Module</span>
+            </a>
+          </li>
+          <li class="reveal" style="--rd:0.05s;--acc:#5B24E6;--acc-soft:#F1ECFF">
+            <a href="hrms.html#core-hr">
+              <span class="ab-mod-ico"><i class="ico fa-solid fa-users" aria-hidden="true"></i></span>
+              <span class="ab-mod-name">Employee Management</span>
+              <span class="ab-mod-sub">Core HR Module</span>
+            </a>
+          </li>
+          <li class="reveal" style="--rd:0.1s;--acc:#14B8A6;--acc-soft:#E7F9F5">
+            <a href="#">
+              <span class="ab-mod-ico"><i class="ico fa-solid fa-user-plus" aria-hidden="true"></i></span>
+              <span class="ab-mod-name">Recruitment</span>
+              <span class="ab-mod-sub">Talent Module</span>
+            </a>
+          </li>
+          <li class="reveal" style="--rd:0.15s;--acc:#0E8C9B;--acc-soft:#E3F5F8">
+            <a href="hrms.html#core-hr">
+              <span class="ab-mod-ico"><i class="ico fa-solid fa-handshake" aria-hidden="true"></i></span>
+              <span class="ab-mod-name">Onboarding</span>
+              <span class="ab-mod-sub">Core HR Module</span>
+            </a>
+          </li>
+          <li class="reveal" style="--acc:#8B5CF6;--acc-soft:#F5F3FF">
+            <a href="attendance-management.html">
+              <span class="ab-mod-ico"><i class="ico fa-solid fa-clock-rotate-left" aria-hidden="true"></i></span>
+              <span class="ab-mod-name">Time &amp; Attendance</span>
+              <span class="ab-mod-sub">Attendance Module</span>
+            </a>
+          </li>
+          <li class="reveal" style="--rd:0.05s;--acc:#EC4899;--acc-soft:#FDF2F8">
+            <a href="leave-management.html">
+              <span class="ab-mod-ico"><i class="ico fa-solid fa-calendar-check" aria-hidden="true"></i></span>
+              <span class="ab-mod-name">Leave Management</span>
+              <span class="ab-mod-sub">Attendance Module</span>
+            </a>
+          </li>
+          <li class="reveal" style="--rd:0.1s;--acc:#0EA5E9;--acc-soft:#E8F6FE">
+            <a href="geo-fencing.html">
+              <span class="ab-mod-ico"><i class="ico fa-solid fa-location-dot" aria-hidden="true"></i></span>
+              <span class="ab-mod-name">Geo Fencing</span>
+              <span class="ab-mod-sub">Attendance Module</span>
+            </a>
+          </li>
+          <li class="reveal" style="--rd:0.15s;--acc:#4B20C8;--acc-soft:#F1EDFF">
+            <a href="hrms.html#payroll">
+              <span class="ab-mod-ico"><i class="ico fa-solid fa-file-invoice-dollar" aria-hidden="true"></i></span>
+              <span class="ab-mod-name">Payroll &amp; Compliance</span>
+              <span class="ab-mod-sub">Payroll Module</span>
+            </a>
+          </li>
+          <li class="reveal" style="--acc:#2563EB;--acc-soft:#EEF3FF">
+            <a href="hrms.html#payroll">
+              <span class="ab-mod-ico"><i class="ico fa-solid fa-receipt" aria-hidden="true"></i></span>
+              <span class="ab-mod-name">Expense &amp; Reimbursement</span>
+              <span class="ab-mod-sub">Payroll Module</span>
+            </a>
+          </li>
+          <li class="reveal" style="--rd:0.05s;--acc:#6DBE45;--acc-soft:#F1F9EC">
+            <a href="performance-management.html">
+              <span class="ab-mod-ico"><i class="ico fa-solid fa-arrow-trend-up" aria-hidden="true"></i></span>
+              <span class="ab-mod-name">Performance Management</span>
+              <span class="ab-mod-sub">Talent Module</span>
+            </a>
+          </li>
+          <li class="reveal" style="--rd:0.1s;--acc:#F97316;--acc-soft:#FFF1E8">
+            <a href="hrms.html#training">
+              <span class="ab-mod-ico"><i class="ico fa-solid fa-graduation-cap" aria-hidden="true"></i></span>
+              <span class="ab-mod-name">Training &amp; Learning</span>
+              <span class="ab-mod-sub">Talent Module</span>
+            </a>
+          </li>
+          <li class="reveal" style="--rd:0.15s;--acc:#0891B2;--acc-soft:#E6F6FA">
+            <a href="hrms.html#ess">
+              <span class="ab-mod-ico"><i class="ico fa-solid fa-mobile-screen" aria-hidden="true"></i></span>
+              <span class="ab-mod-name">Employee Self Service</span>
+              <span class="ab-mod-sub">Employee Module</span>
+            </a>
+          </li>
+          <li class="reveal" style="--acc:#7C3AED;--acc-soft:#F4EEFF">
+            <a href="hrms.html#modules">
+              <span class="ab-mod-ico"><i class="ico fa-solid fa-envelope-open-text" aria-hidden="true"></i></span>
+              <span class="ab-mod-name">Letter Management</span>
+              <span class="ab-mod-sub">Core HR Module</span>
+            </a>
+          </li>
+          <li class="reveal" style="--rd:0.05s;--acc:#E11D48;--acc-soft:#FFF0F3">
+            <a href="hrms.html#modules">
+              <span class="ab-mod-ico"><i class="ico fa-solid fa-bell" aria-hidden="true"></i></span>
+              <span class="ab-mod-name">Notification Centre</span>
+              <span class="ab-mod-sub">Employee Module</span>
+            </a>
+          </li>
+          <li class="reveal" style="--rd:0.1s;--acc:#3E8E2D;--acc-soft:#EEF7EA">
+            <a href="hrms.html#modules">
+              <span class="ab-mod-ico"><i class="ico fa-solid fa-chart-pie" aria-hidden="true"></i></span>
+              <span class="ab-mod-name">Reports &amp; Analytics</span>
+              <span class="ab-mod-sub">Analytics Module</span>
+            </a>
+          </li>
+          <li class="reveal" style="--rd:0.15s;--acc:#64748B;--acc-soft:#F1F4F8">
+            <a href="hrms.html#modules">
+              <span class="ab-mod-ico"><i class="ico fa-solid fa-person-walking-arrow-right" aria-hidden="true"></i></span>
+              <span class="ab-mod-name">Exit Management</span>
+              <span class="ab-mod-sub">Core HR Module</span>
+            </a>
+          </li>
+          <li class="reveal" style="--acc:#F59E0B;--acc-soft:#FEF6E7">
+            <a href="canteen-management.html">
+              <span class="ab-mod-ico"><i class="ico fa-solid fa-utensils" aria-hidden="true"></i></span>
+              <span class="ab-mod-name">Canteen Management</span>
+              <span class="ab-mod-sub">Workplace Module</span>
+            </a>
+          </li>
+          <li class="reveal" style="--rd:0.05s;--acc:#EC4899;--acc-soft:#FDF2F8">
+            <a href="visitor-management.html">
+              <span class="ab-mod-ico"><i class="ico fa-solid fa-user-check" aria-hidden="true"></i></span>
+              <span class="ab-mod-name">Visitor Management</span>
+              <span class="ab-mod-sub">Workplace Module</span>
+            </a>
+          </li>
+          <li class="reveal" style="--rd:0.1s;--acc:#22C7D6;--acc-soft:#ECFCFE">
+            <a href="parking-management.html">
+              <span class="ab-mod-ico"><i class="ico fa-solid fa-square-parking" aria-hidden="true"></i></span>
+              <span class="ab-mod-name">Parking Management</span>
+              <span class="ab-mod-sub">Workplace Module</span>
+            </a>
+          </li>
+          <li class="reveal" style="--rd:0.15s;--acc:#3B82F6;--acc-soft:#EFF5FF">
+            <a href="ai-video-analytics.html">
+              <span class="ab-mod-ico"><i class="ico fa-solid fa-video" aria-hidden="true"></i></span>
+              <span class="ab-mod-name">AI Video Analytics</span>
+              <span class="ab-mod-sub">Analytics Module</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ SAAS FOR DIFFERENT BUSINESS SIZES (moved from hrms.html) ============ -->
+    <section class="section section-mint ab-sizes-section" aria-labelledby="sizes-title">
+      <div class="container">
+        <div class="section-head center reveal">
+          <h2 class="section-title" id="sizes-title">SaaS for Different <em class="ab-dual">Business Sizes</em></h2>
+        </div>
+        <div class="hr-sizes">
+          <div class="hr-size reveal"><span>SMBs</span><h3>Small &amp; Mid Businesses</h3><p>Lightweight, easy-to-deploy SaaS that covers attendance, leave and payroll without a big HR team.</p></div>
+          <div class="hr-size reveal" style="--rd:.06s"><span>Growing</span><h3>Growing Businesses</h3><p>Add sites, shifts and policies as headcount grows — the same employee record scales with you.</p></div>
+          <div class="hr-size reveal" style="--rd:.12s"><span>Enterprise</span><h3>Large Enterprises</h3><p>Multi-location, multi-shift, complex payroll structures and strong reporting for specific industries.</p></div>
+        </div>
+
+        <!-- Single centred CTA below the three size cards -->
+        <div class="hr-sizes-cta reveal" style="--rd:.18s">
+          <p>Find the right IN4 CloudHR plan for your business.</p>
+          <a class="btn btn-primary" href="pricing.html">See Pricing<i class="ico fa-solid fa-arrow-right" aria-hidden="true"></i></a>
         </div>
       </div>
     </section>
@@ -147,117 +318,6 @@
       </div>
     </section>
 
-    <!-- ============ SAAS FOR DIFFERENT BUSINESS SIZES (moved from hrms.html) ============ -->
-    <section class="section section-mint ab-sizes-section" aria-labelledby="sizes-title">
-      <div class="container">
-        <div class="section-head center reveal">
-          <h2 class="section-title" id="sizes-title">SaaS for Different <em class="ab-dual">Business Sizes</em></h2>
-        </div>
-        <div class="hr-sizes">
-          <div class="hr-size reveal"><span>SMBs</span><h3>Small &amp; Mid Businesses</h3><p>Lightweight, easy-to-deploy SaaS that covers attendance, leave and payroll without a big HR team.</p></div>
-          <div class="hr-size reveal" style="--rd:.06s"><span>Growing</span><h3>Growing Businesses</h3><p>Add sites, shifts and policies as headcount grows — the same employee record scales with you.</p></div>
-          <div class="hr-size reveal" style="--rd:.12s"><span>Enterprise</span><h3>Large Enterprises</h3><p>Multi-location, multi-shift, complex payroll structures and strong reporting for specific industries.</p></div>
-        </div>
-
-        <!-- Single centred CTA below the three size cards -->
-        <div class="hr-sizes-cta reveal" style="--rd:.18s">
-          <p>Find the right IN4 CloudHR plan for your business.</p>
-          <a class="btn btn-primary" href="pricing.html">See Pricing<i class="ico fa-solid fa-arrow-right" aria-hidden="true"></i></a>
-        </div>
-      </div>
-    </section>
-
-<!-- ============ PLATFORM MODULES (mirrors the home page module list) ============ -->
-    <section class="section section-alt ab-modules-section" id="products" aria-labelledby="products-title">
-      <div class="container">
-        <div class="section-head center reveal">
-          <p class="eyebrow">Platform Modules</p>
-          <h2 class="section-title" id="products-title">One Platform. <em class="ab-dual">Every Workplace Need.</em></h2>
-          <p class="section-lead">Eleven connected modules covering attendance, HR, payroll, workplace and talent.</p>
-        </div>
-
-        <ul class="ab-modules-grid">
-          <li class="reveal" style="--acc:#8B5CF6;--acc-soft:#F5F3FF">
-            <a href="attendance-management.html">
-              <span class="ab-mod-ico"><i class="ico fa-solid fa-clock-rotate-left" aria-hidden="true"></i></span>
-              <span class="ab-mod-name">Time &amp; Attendance</span>
-              <span class="ab-mod-sub">Attendance Module</span>
-            </a>
-          </li>
-          <li class="reveal" style="--rd:.05s;--acc:#6C35FF;--acc-soft:#F3EEFF">
-            <a href="hrms.html">
-              <span class="ab-mod-ico"><i class="ico fa-solid fa-sitemap" aria-hidden="true"></i></span>
-              <span class="ab-mod-name">Core HR &amp; HRIS</span>
-              <span class="ab-mod-sub">Core HR Module</span>
-            </a>
-          </li>
-          <li class="reveal" style="--rd:.1s;--acc:#4B20C8;--acc-soft:#F1EDFF">
-            <a href="hrms.html#payroll">
-              <span class="ab-mod-ico"><i class="ico fa-solid fa-file-invoice-dollar" aria-hidden="true"></i></span>
-              <span class="ab-mod-name">Payroll &amp; Compliance</span>
-              <span class="ab-mod-sub">Payroll Module</span>
-            </a>
-          </li>
-          <li class="reveal" style="--rd:.15s;--acc:#F59E0B;--acc-soft:#FEF6E7">
-            <a href="canteen-management.html">
-              <span class="ab-mod-ico"><i class="ico fa-solid fa-utensils" aria-hidden="true"></i></span>
-              <span class="ab-mod-name">Canteen Management</span>
-              <span class="ab-mod-sub">Workplace Module</span>
-            </a>
-          </li>
-          <li class="reveal" style="--rd:.2s;--acc:#EC4899;--acc-soft:#FDF2F8">
-            <a href="visitor-management.html">
-              <span class="ab-mod-ico"><i class="ico fa-solid fa-user-check" aria-hidden="true"></i></span>
-              <span class="ab-mod-name">Visitor Management</span>
-              <span class="ab-mod-sub">Workplace Module</span>
-            </a>
-          </li>
-          <li class="reveal" style="--rd:.25s;--acc:#22C7D6;--acc-soft:#ECFCFE">
-            <a href="parking-management.html">
-              <span class="ab-mod-ico"><i class="ico fa-solid fa-square-parking" aria-hidden="true"></i></span>
-              <span class="ab-mod-name">Parking Management</span>
-              <span class="ab-mod-sub">Workplace Module</span>
-            </a>
-          </li>
-          <li class="reveal" style="--rd:.3s;--acc:#3B82F6;--acc-soft:#EFF5FF">
-            <a href="ai-video-analytics.html">
-              <span class="ab-mod-ico"><i class="ico fa-solid fa-video" aria-hidden="true"></i></span>
-              <span class="ab-mod-name">AI Analytics</span>
-              <span class="ab-mod-sub">Analytics Module</span>
-            </a>
-          </li>
-          <li class="reveal" style="--rd:.35s;--acc:#14B8A6;--acc-soft:#E7F9F5">
-            <a href="#">
-              <span class="ab-mod-ico"><i class="ico fa-solid fa-user-plus" aria-hidden="true"></i></span>
-              <span class="ab-mod-name">Recruitment</span>
-              <span class="ab-mod-sub">Talent Module</span>
-            </a>
-          </li>
-          <li class="reveal" style="--rd:.4s;--acc:#6DBE45;--acc-soft:#F1F9EC">
-            <a href="performance-management.html">
-              <span class="ab-mod-ico"><i class="ico fa-solid fa-arrow-trend-up" aria-hidden="true"></i></span>
-              <span class="ab-mod-name">Performance Management</span>
-              <span class="ab-mod-sub">Talent Module</span>
-            </a>
-          </li>
-          <li class="reveal" style="--rd:.45s;--acc:#F97316;--acc-soft:#FFF1E8">
-            <a href="hrms.html#training">
-              <span class="ab-mod-ico"><i class="ico fa-solid fa-graduation-cap" aria-hidden="true"></i></span>
-              <span class="ab-mod-name">Training &amp; Learning</span>
-              <span class="ab-mod-sub">Talent Module</span>
-            </a>
-          </li>
-          <li class="reveal" style="--rd:.5s;--acc:#0EA5E9;--acc-soft:#E8F6FE">
-            <a href="geo-fencing.html">
-              <span class="ab-mod-ico"><i class="ico fa-solid fa-location-dot" aria-hidden="true"></i></span>
-              <span class="ab-mod-name">Geo Fencing</span>
-              <span class="ab-mod-sub">Attendance Module</span>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </section>
-
     <!-- ============ CTA ============ -->
     <section class="section">
       <div class="container">
@@ -276,9 +336,10 @@
 
   </main>
 <script defer src="js/site.js?v=20261030f"></script>
-  <script defer src="js/shell.js?v=20261031b"></script>
+  <script defer src="js/shell.js?v=20261112"></script>
   <script defer src="js/lead.js?v=20261030d"></script>
 <script defer src="js/demo-modal.js?v=20261030"></script>
   <script defer src="js/main.js"></script>
+  <script defer src="js/about-hero.js"></script>
 </body>
 </html>

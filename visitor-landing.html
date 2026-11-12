@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IN4 Pro-Visit | Visitor Management System for Secure, Fast Check-ins</title>
+  <meta name="description" content="IN4 Pro-Visit replaces the paper visitor register with QR check-in, instant host approvals, digital passes and a complete visitor log for offices, plants, campuses and hospitals.">
+  <link rel="canonical" href="https://www.in4solution.com/visitor-landing">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="IN4 Solutions">
+  <meta property="og:title" content="IN4 Pro-Visit | Visitor Management System">
+  <meta property="og:description" content="Every visitor known, approved and on record, from the gate to check-out.">
+  <meta name="theme-color" content="#1a0d22">
+  <link rel="icon" href="assets/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="icon" href="assets/favicon-192.png" type="image/png" sizes="192x192">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="css/vm-landing.css">
+</head>
+<body>
+  <a class="vl-skip" href="#main">Skip to content</a>
+
+  <!-- ============ HEADER ============ -->
+  <header class="vl-header" data-vl-header>
+    <div class="vl-wrap vl-header-row">
+      <a class="vl-logo" href="index.html" aria-label="IN4 CloudHR home">
+        <img src="assets/logo-trim-600.png" alt="IN4 CloudHR" width="600" height="134">
+        <span class="vl-logo-tag">Pro-Visit</span>
+      </a>
+      <nav class="vl-nav" aria-label="Page sections" data-vl-nav>
+        <a href="#how">How it works</a>
+        <a href="#features">Features</a>
+        <a href="#industries">Industries</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <div class="vl-header-actions">
+        <a class="vl-call vl-hide-sm" href="tel:+918925814088"><i class="fa-solid fa-phone" aria-hidden="true"></i> +91 89258 14088</a>
+        <a class="vl-btn vl-btn--primary vl-btn--sm vl-hide-sm" href="#demo">Book a demo</a>
+        <button class="vl-burger" type="button" data-vl-burger aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+    <span class="vl-progress" aria-hidden="true"><i data-vl-progress></i></span>
+  </header>
+
+  <main id="main">
+
+    <!-- ============ 01 HERO (the only dark section) ============ -->
+    <section class="vl-hero" id="demo" aria-labelledby="vl-hero-title">
+      <div class="vl-hero-bg" aria-hidden="true"><span></span><span></span><i></i><b class="vl-beam"></b><em class="vl-mote vl-mote--a"></em><em class="vl-mote vl-mote--b"></em><em class="vl-mote vl-mote--c"></em></div>
+      <div class="vl-wrap vl-hero-grid">
+        <div class="vl-hero-copy">
+          <p class="vl-pill"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i> IN4 Pro-Visit · Visitor Management</p>
+          <h1 id="vl-hero-title">Know every visitor <span class="vl-grad">before they reach the door.</span></h1>
+          <p class="vl-lead">QR check-in, instant host approvals and a complete visitor log, in place of the paper register.</p>
+          <ul class="vl-ticks">
+            <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Pre-approved QR entry</li>
+            <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i> One-tap host approval</li>
+            <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Works with your turnstiles</li>
+          </ul>
+          <a class="vl-hero-link" href="#how">See how it works <i class="fa-solid fa-arrow-down" aria-hidden="true"></i></a>
+        </div>
+
+        <form class="vl-form lead-form" data-lead-form novalidate aria-labelledby="vl-form-title">
+          <h2 id="vl-form-title">See Pro-Visit with your own visitor flows</h2>
+          <label class="hp-field" for="vl-hp" aria-hidden="true">Website</label>
+          <input class="hp-field" id="vl-hp" name="website" data-hp tabindex="-1" autocomplete="off" aria-hidden="true">
+          <input type="hidden" name="pageSource" value="Visitor Management landing — Book a Demo">
+          <input type="hidden" name="product" value="Visitor Management">
+          <div class="vl-form-grid">
+            <div class="form-field">
+              <label for="vl-name">Full name <span class="req">*</span></label>
+              <input class="form-input" id="vl-name" name="fullName" type="text" autocomplete="name" placeholder="Your name" required>
+              <span class="form-error" data-error-for="fullName" role="alert"></span>
+            </div>
+            <div class="form-field">
+              <label for="vl-company">Company <span class="req">*</span></label>
+              <input class="form-input" id="vl-company" name="company" type="text" autocomplete="organization" placeholder="Company name" required>
+              <span class="form-error" data-error-for="company" role="alert"></span>
+            </div>
+            <div class="form-field">
+              <label for="vl-phone">Phone <span class="req">*</span></label>
+              <input class="form-input" id="vl-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+91" required>
+              <span class="form-error" data-error-for="phone" role="alert"></span>
+            </div>
+            <div class="form-field">
+              <label for="vl-email">Work email <span class="req">*</span></label>
+              <input class="form-input" id="vl-email" name="email" type="email" autocomplete="email" placeholder="you@company.com" required>
+              <span class="form-error" data-error-for="email" role="alert"></span>
+            </div>
+            <div class="form-field vl-span-2">
+              <label for="vl-message">Sites and visitor volume <span class="optional">(optional)</span></label>
+              <textarea class="form-input" id="vl-message" name="message" rows="1" placeholder="e.g. 2 offices, about 80 visitors a day"></textarea>
+            </div>
+          </div>
+          <button type="submit" class="vl-btn vl-btn--primary vl-btn--lg vl-btn--block" data-submit>Book my demo <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
+          <div class="form-status" data-lead-status aria-live="polite"></div>
+          <p class="vl-form-note"><i class="fa-solid fa-lock" aria-hidden="true"></i> Your details are only used to respond to your enquiry.</p>
+        </form>
+      </div>
+
+      <div class="vl-wrap">
+        <ul class="vl-trust" aria-label="Highlights">
+          <li><i class="fa-solid fa-qrcode" aria-hidden="true"></i>QR &amp; kiosk check-in</li>
+          <li><i class="fa-solid fa-bell" aria-hidden="true"></i>Instant host alerts</li>
+          <li><i class="fa-solid fa-helmet-safety" aria-hidden="true"></i>Contractor passes</li>
+          <li><i class="fa-solid fa-door-open" aria-hidden="true"></i>Turnstile ready</li>
+          <li><i class="fa-solid fa-server" aria-hidden="true"></i>Cloud or on-premise</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ 02 WHY SWITCH ============ -->
+    <section class="vl-section" aria-labelledby="vl-why-title">
+      <div class="vl-wrap">
+        <div class="vl-head">
+          <p class="vl-eyebrow">Why switch</p>
+          <h2 id="vl-why-title">The paper register was never a security system</h2>
+          <p>A notebook at the gate records a name. It can't check who someone is, tell their host they've arrived or show you who is still inside.</p>
+        </div>
+        <div class="vl-compare">
+          <div class="vl-compare-col vl-compare-col--old">
+            <h3><i class="fa-solid fa-book" aria-hidden="true"></i> The register book</h3>
+            <ul>
+              <li><i class="fa-solid fa-xmark" aria-hidden="true"></i> Handwriting nobody can read later</li>
+              <li><i class="fa-solid fa-xmark" aria-hidden="true"></i> Queues at the desk during peak hours</li>
+              <li><i class="fa-solid fa-xmark" aria-hidden="true"></i> Hosts walk down to find their guests</li>
+              <li><i class="fa-solid fa-xmark" aria-hidden="true"></i> No idea who is still on the premises</li>
+              <li><i class="fa-solid fa-xmark" aria-hidden="true"></i> Hours of searching for one past visit</li>
+            </ul>
+          </div>
+          <div class="vl-compare-vs" aria-hidden="true">VS</div>
+          <div class="vl-compare-col vl-compare-col--new">
+            <h3><i class="fa-solid fa-shield-halved" aria-hidden="true"></i> With Pro-Visit</h3>
+            <ul>
+              <li><i class="fa-solid fa-check" aria-hidden="true"></i> Clean digital records with photo and ID</li>
+              <li><i class="fa-solid fa-check" aria-hidden="true"></i> Pre-approved guests walk straight in by QR</li>
+              <li><i class="fa-solid fa-check" aria-hidden="true"></i> Hosts are alerted and approve in a tap</li>
+              <li><i class="fa-solid fa-check" aria-hidden="true"></i> A live view of everyone on site right now</li>
+              <li><i class="fa-solid fa-check" aria-hidden="true"></i> Any visit found in seconds, with filters</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 03 HOW IT WORKS ============ -->
+    <section class="vl-section vl-section--tint" id="how" aria-labelledby="vl-how-title">
+      <div class="vl-wrap">
+        <div class="vl-head">
+          <p class="vl-eyebrow">How it works</p>
+          <h2 id="vl-how-title">From invite to exit in four simple steps</h2>
+        </div>
+        <figure class="vl-art"><div class="vl-art-scroll"><img src="assets/illustrations/visitor-journey.svg" width="1280" height="540" alt="A visit with IN4 Pro-Visit: the visitor arrives with a QR invite on their phone, scans it at the lobby kiosk, the host is notified and approves on their phone, the turnstile opens, and the visitor walks in with a digital pass while the visit is logged." loading="lazy" decoding="async"></div></figure>
+        <ol class="vl-steps">
+          <li class="vl-step">
+            <span class="vl-step-num">Step 1</span>
+            <span class="vl-step-ico"><i class="fa-solid fa-envelope-open-text" aria-hidden="true"></i></span>
+            <h3>Invite or register</h3>
+            <p>Hosts pre-register guests online, or walk-ins register at the desk or kiosk.</p>
+          </li>
+          <li class="vl-step">
+            <span class="vl-step-num">Step 2</span>
+            <span class="vl-step-ico"><i class="fa-solid fa-qrcode" aria-hidden="true"></i></span>
+            <h3>Check in at the gate</h3>
+            <p>A QR code, photo and ID capture complete check-in in moments.</p>
+          </li>
+          <li class="vl-step">
+            <span class="vl-step-num">Step 3</span>
+            <span class="vl-step-ico"><i class="fa-solid fa-user-check" aria-hidden="true"></i></span>
+            <h3>Host approves</h3>
+            <p>The host is notified instantly and approves or declines from anywhere.</p>
+          </li>
+          <li class="vl-step">
+            <span class="vl-step-num">Step 4</span>
+            <span class="vl-step-ico"><i class="fa-solid fa-id-badge" aria-hidden="true"></i></span>
+            <h3>Pass, access &amp; check-out</h3>
+            <p>A visitor pass opens the turnstile; check-out closes the record and asks for feedback.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ 04 FEATURES ============ -->
+    <section class="vl-section" id="features" aria-labelledby="vl-feat-title">
+      <div class="vl-wrap">
+        <div class="vl-head">
+          <p class="vl-eyebrow">Features</p>
+          <h2 id="vl-feat-title">Everything your front desk and security team need</h2>
+        </div>
+        <div class="vl-bento">
+          <article class="vl-card vl-card--wide">
+            <span class="vl-card-ico"><i class="fa-solid fa-calendar-check" aria-hidden="true"></i></span>
+            <h3>Pre-approved visitors</h3>
+            <p>Hosts register guests ahead of time, approvals happen online and the visitor receives a QR pass, so the gate already expects them.</p>
+            <ul class="vl-mini">
+              <li>Online registration &amp; approval</li>
+              <li>QR pass before arrival</li>
+              <li>Optional parking reservation</li>
+            </ul>
+          </article>
+          <article class="vl-card">
+            <span class="vl-card-ico"><i class="fa-solid fa-person-walking-arrow-right" aria-hidden="true"></i></span>
+            <h3>Walk-in check-in</h3>
+            <p>Unscheduled guests register in moments while their host is alerted to approve.</p>
+          </article>
+          <article class="vl-card">
+            <span class="vl-card-ico"><i class="fa-solid fa-bell" aria-hidden="true"></i></span>
+            <h3>Instant host alerts</h3>
+            <p>Hosts know the moment a guest arrives and approve or decline with one tap.</p>
+          </article>
+          <article class="vl-card">
+            <span class="vl-card-ico"><i class="fa-solid fa-id-card" aria-hidden="true"></i></span>
+            <h3>Photo &amp; ID capture</h3>
+            <p>Every visit is tied to a photo and ID proof, not just a handwritten name.</p>
+          </article>
+          <article class="vl-card vl-card--wide">
+            <span class="vl-card-ico"><i class="fa-solid fa-helmet-safety" aria-hidden="true"></i></span>
+            <h3>Contractor &amp; vendor management</h3>
+            <p>Register contracting companies once, then issue time-bound passes to their staff after safety training and a signed declaration.</p>
+            <ul class="vl-mini">
+              <li>Company registration</li>
+              <li>Host &amp; facility manager approval</li>
+              <li>Contract validity periods</li>
+            </ul>
+          </article>
+          <article class="vl-card">
+            <span class="vl-card-ico"><i class="fa-solid fa-id-badge" aria-hidden="true"></i></span>
+            <h3>Passes &amp; badges</h3>
+            <p>Digital or printed visitor passes, with badge tracking until they are returned.</p>
+          </article>
+          <article class="vl-card vl-card--wide">
+            <span class="vl-card-ico"><i class="fa-solid fa-list-check" aria-hidden="true"></i></span>
+            <h3>Searchable visitor log</h3>
+            <p>Filter every visit by location, type, status or date and export it in seconds.</p>
+          </article>
+          <article class="vl-card vl-card--wide">
+            <span class="vl-card-ico"><i class="fa-solid fa-comment-dots" aria-hidden="true"></i></span>
+            <h3>Exit feedback</h3>
+            <p>Visitors rate their experience at check-out, so you can keep improving.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 05 PRODUCT VIEW ============ -->
+    <section class="vl-section vl-section--tint" aria-labelledby="vl-view-title">
+      <div class="vl-wrap vl-split">
+        <!-- illustrative reception console; the names and numbers are sample data -->
+        <div class="vl-console-stage" aria-hidden="true">
+          <div class="vl-toast">
+            <span class="vl-toast-ico"><i class="fa-solid fa-bell"></i></span>
+            <div><b>Your visitor has arrived</b><small>Reception · Main entrance</small></div>
+            <span class="vl-toast-act"><i class="fa-solid fa-check"></i> Approve</span>
+          </div>
+          <div class="vl-console">
+            <div class="vl-console-bar"><span class="vl-dots"><i></i><i></i><i></i></span><b>Pro-Visit · Reception</b><em class="vl-live">Live</em></div>
+            <div class="vl-console-body">
+              <div class="vl-pass">
+                <div class="vl-pass-head">
+                  <span class="vl-avatar"><i class="fa-solid fa-user"></i></span>
+                  <div><b>Visitor pass</b><small>Valid today · 10:00 – 13:00</small></div>
+                </div>
+                <dl class="vl-pass-meta">
+                  <div><dt>Purpose</dt><dd>Vendor meeting</dd></div>
+                  <div><dt>Host</dt><dd>Facilities team</dd></div>
+                  <div><dt>Gate</dt><dd>Main entrance</dd></div>
+                </dl>
+                <div class="vl-pass-foot">
+                  <span class="vl-chip"><i class="fa-solid fa-id-card"></i> ID verified</span>
+                  <span class="vl-chip"><i class="fa-solid fa-user-check"></i> Host approved</span>
+                </div>
+                <svg class="vl-qr" viewBox="0 0 21 21"><path d="M1 1h7v7H1zM13 1h7v7h-7zM1 13h7v7H1zM3 3v3h3V3zM15 3v3h3V3zM3 15v3h3v-3zM10 1h2v2h-2zM10 5h1v3h-1zM9 9h3v1H9zM13 10h2v2h-2zM17 9h3v2h-3zM10 12h2v2h-2zM13 13h2v3h-2zM16 13h4v1h-4zM16 16h2v2h-2zM19 17h1v3h-1zM10 16h2v4h-2zM13 18h2v2h-2zM1 9h3v2H1zM5 10h2v2H5z"/></svg>
+              </div>
+              <div class="vl-today">
+                <div class="vl-today-stat"><small>On-site now</small><b>12</b></div>
+                <div class="vl-today-stat"><small>Expected today</small><b>27</b></div>
+                <ul class="vl-today-log">
+                  <li><i class="fa-solid fa-arrow-right-to-bracket"></i>Courier delivery<em>10:24</em></li>
+                  <li><i class="fa-solid fa-arrow-right-to-bracket"></i>Interview candidate<em>09:50</em></li>
+                  <li class="out"><i class="fa-solid fa-arrow-right-from-bracket"></i>Maintenance crew<em>09:12</em></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="vl-gate">
+            <span class="vl-gate-ico"><i class="fa-solid fa-door-open"></i></span>
+            <div><b>Turnstile opened</b><small>QR pass scanned</small></div>
+          </div>
+        </div>
+        <div class="vl-split-copy">
+          <p class="vl-eyebrow">Built for every desk</p>
+          <h2 id="vl-view-title">One system for reception, security and hosts</h2>
+          <p>Each person in the visit sees exactly what they need, on whatever screen is in front of them.</p>
+          <ul class="vl-roles">
+            <li><span class="vl-role-ico"><i class="fa-solid fa-desktop" aria-hidden="true"></i></span><div><h3>Reception &amp; kiosk</h3><p>A clear check-in screen for staffed desks or self-service kiosks.</p></div></li>
+            <li><span class="vl-role-ico"><i class="fa-solid fa-mobile-screen" aria-hidden="true"></i></span><div><h3>Hosts on mobile</h3><p>Arrival alerts and one-tap approvals on a mobile-friendly interface.</p></div></li>
+            <li><span class="vl-role-ico"><i class="fa-solid fa-user-shield" aria-hidden="true"></i></span><div><h3>Security &amp; admins</h3><p>Live on-site view, approval status and the full history across locations.</p></div></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 06 INTEGRATIONS ============ -->
+    <section class="vl-section" aria-labelledby="vl-int-title">
+      <div class="vl-wrap vl-split vl-split--rev">
+        <div class="vl-split-copy">
+          <p class="vl-eyebrow">Connected</p>
+          <h2 id="vl-int-title">Plugs into the gates and systems you already run</h2>
+          <p>Pro-Visit is part of the IN4 platform, so visitor entry works hand in hand with your physical access and the rest of your workplace.</p>
+          <div class="vl-int-grid">
+            <div class="vl-int"><i class="fa-solid fa-door-open" aria-hidden="true"></i><b>Turnstiles &amp; flap barriers</b><small>Passes open the gate</small></div>
+            <div class="vl-int"><i class="fa-solid fa-square-parking" aria-hidden="true"></i><b>IN4 Parking</b><small>Reserved bays on arrival</small></div>
+            <div class="vl-int"><i class="fa-solid fa-calendar-days" aria-hidden="true"></i><b>Calendars</b><small>Meetings become invites</small></div>
+            <div class="vl-int"><i class="fa-solid fa-lock" aria-hidden="true"></i><b>Access control</b><small>One security picture</small></div>
+          </div>
+        </div>
+        <div class="vl-split-media">
+          <img src="assets/Product/visitor.jpg" width="800" height="800" alt="Visitor checking in at a reception desk with a QR pass while connected screens show the visitor badge, host approval and printed pass" loading="lazy" decoding="async">
+          <span class="vl-media-chip"><i class="fa-solid fa-bolt" aria-hidden="true"></i> Check-in, approval and pass in one flow</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 07 INDUSTRIES ============ -->
+    <section class="vl-section vl-section--tint" id="industries" aria-labelledby="vl-ind-title">
+      <div class="vl-wrap">
+        <div class="vl-head">
+          <p class="vl-eyebrow">Industries</p>
+          <h2 id="vl-ind-title">Made for every kind of front gate</h2>
+        </div>
+        <div class="vl-ind-grid">
+          <div class="vl-ind"><i class="fa-solid fa-building" aria-hidden="true"></i><h3>Corporate offices</h3><p>Guests, interviews and vendor meetings.</p></div>
+          <div class="vl-ind"><i class="fa-solid fa-industry" aria-hidden="true"></i><h3>Factories &amp; plants</h3><p>Contractors, safety declarations and shifts.</p></div>
+          <div class="vl-ind"><i class="fa-solid fa-hospital" aria-hidden="true"></i><h3>Hospitals</h3><p>Patient visitors and staff access.</p></div>
+          <div class="vl-ind"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i><h3>Schools &amp; campuses</h3><p>Parents, guests and campus security.</p></div>
+          <div class="vl-ind"><i class="fa-solid fa-landmark" aria-hidden="true"></i><h3>Government buildings</h3><p>Controlled, fully recorded entry.</p></div>
+          <div class="vl-ind"><i class="fa-solid fa-warehouse" aria-hidden="true"></i><h3>Warehouses</h3><p>Drivers, deliveries and vehicles.</p></div>
+          <div class="vl-ind"><i class="fa-solid fa-city" aria-hidden="true"></i><h3>IT parks</h3><p>Many tenants, one secure lobby.</p></div>
+          <div class="vl-ind"><i class="fa-solid fa-people-roof" aria-hidden="true"></i><h3>Co-working spaces</h3><p>Members' guests and day passes.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 08 SECURITY ============ -->
+    <section class="vl-section" aria-labelledby="vl-sec-title">
+      <div class="vl-wrap">
+        <div class="vl-security">
+          <div class="vl-security-copy">
+            <p class="vl-eyebrow">Security first</p>
+            <h2 id="vl-sec-title">Visitor data, handled with care</h2>
+            <p>Built by a team with two decades in access control and workforce security, Pro-Visit treats every visitor record as sensitive information.</p>
+          </div>
+          <ul class="vl-security-list">
+            <li><i class="fa-solid fa-user-lock" aria-hidden="true"></i><div><b>Role-based access</b><span>Reception, hosts and admins see only what they need.</span></div></li>
+            <li><i class="fa-solid fa-clock-rotate-left" aria-hidden="true"></i><div><b>Complete audit trail</b><span>Every check-in, approval and exit is time-stamped.</span></div></li>
+            <li><i class="fa-solid fa-server" aria-hidden="true"></i><div><b>Cloud or on-premise</b><span>Deploy the way your IT policy requires.</span></div></li>
+            <li><i class="fa-solid fa-headset" aria-hidden="true"></i><div><b>Ongoing support</b><span>A dedicated team for installation and maintenance.</span></div></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 09 PRICING ============ -->
+    <section class="vl-section vl-section--tint" id="pricing" aria-labelledby="vl-price-title">
+      <div class="vl-wrap">
+        <div class="vl-price">
+          <div>
+            <p class="vl-eyebrow">Pricing</p>
+            <h2 id="vl-price-title">Simple pricing, per location</h2>
+            <p>One location fee covers the reception, kiosk and host workflow at that site. Add more locations as you grow.</p>
+            <ul class="vl-mini vl-mini--inline">
+              <li>Pre-approved &amp; walk-in visitors</li>
+              <li>Host alerts &amp; approvals</li>
+              <li>Contractor passes</li>
+              <li>Visitor log &amp; reports</li>
+            </ul>
+          </div>
+          <div class="vl-price-card">
+            <small>Starting from</small>
+            <b>₹1,499</b>
+            <span>per location / month</span>
+            <a class="vl-btn vl-btn--primary vl-btn--block" href="#demo">Get a quote <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            <p>Indicative, subject to commercial confirmation. Exclusive of GST. <a href="pricing.html">All pricing</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 10 FAQ ============ -->
+    <section class="vl-section" id="faq" aria-labelledby="vl-faq-title">
+      <div class="vl-wrap">
+        <div class="vl-head">
+          <p class="vl-eyebrow">FAQ</p>
+          <h2 id="vl-faq-title">Questions, answered</h2>
+        </div>
+        <div class="vl-faq">
+          <details>
+            <summary>Do visitors need to install an app?<i class="fa-solid fa-plus" aria-hidden="true"></i></summary>
+            <p>No. Pre-approved visitors receive a QR pass, and walk-ins check in at the reception desk or kiosk. Only hosts and staff use the system.</p>
+          </details>
+          <details>
+            <summary>Can it handle contractors and vendors?<i class="fa-solid fa-plus" aria-hidden="true"></i></summary>
+            <p>Yes. Contracting companies are registered once, and their staff get time-bound passes after safety training, a declaration and approval from the host and facility manager.</p>
+          </details>
+          <details>
+            <summary>Does it work with our turnstiles or access control?<i class="fa-solid fa-plus" aria-hidden="true"></i></summary>
+            <p>Pro-Visit integrates with access control and security systems, including turnstiles and flap barriers. Our team confirms compatibility with your hardware during the demo.</p>
+          </details>
+          <details>
+            <summary>Can we run it across several sites?<i class="fa-solid fa-plus" aria-hidden="true"></i></summary>
+            <p>Yes. Each location has its own desk and rules, while admins see visitors across every site in one place.</p>
+          </details>
+          <details>
+            <summary>Is it available on-premise?<i class="fa-solid fa-plus" aria-hidden="true"></i></summary>
+            <p>Pro-Visit is available as cloud or on-premise deployment, subject to the selected package and commercial arrangement.</p>
+          </details>
+          <details>
+            <summary>How long does it take to go live?<i class="fa-solid fa-plus" aria-hidden="true"></i></summary>
+            <p>It depends on your number of locations and integrations. We share a clear rollout plan after understanding your setup in the demo.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CLOSING CTA ============ -->
+    <section class="vl-section vl-section--tint vl-cta-section" aria-labelledby="vl-cta-title">
+      <div class="vl-wrap">
+        <div class="vl-cta">
+          <div>
+            <h2 id="vl-cta-title">Ready to retire the register book?</h2>
+            <p>Book a free demo and see your new front desk working with your own visitor flows.</p>
+          </div>
+          <div class="vl-cta-actions">
+            <a class="vl-btn vl-btn--primary vl-btn--lg" href="#demo">Book a free demo <i class="fa-solid fa-arrow-up" aria-hidden="true"></i></a>
+            <a class="vl-btn vl-btn--ghost vl-btn--lg" href="tel:+918925814088"><i class="fa-solid fa-phone" aria-hidden="true"></i> +91 89258 14088</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER (dark) ============ -->
+  <footer class="vl-footer">
+    <div class="vl-footer-bg" aria-hidden="true"><span></span><span></span><i></i></div>
+    <div class="vl-wrap">
+      <div class="vl-footer-top">
+        <div class="vl-footer-brand">
+          <a class="vl-logo" href="index.html" aria-label="IN4 CloudHR home"><img src="assets/logo-trim-600.png" alt="IN4 CloudHR" width="600" height="134"></a>
+          <p>Pro-Visit is the visitor management module of IN4 CloudHR, the HR and workplace platform from In4 Solution Pvt Ltd.</p>
+          <div class="vl-social">
+            <a href="https://www.facebook.com/in4solution" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+            <a href="https://www.linkedin.com/company/in4solution" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
+            <a href="https://twitter.com/in4solution" target="_blank" rel="noopener" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
+            <a href="https://www.instagram.com/in4solution" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+            <a href="https://www.youtube.com/@in4solution" target="_blank" rel="noopener" aria-label="YouTube"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a>
+          </div>
+        </div>
+        <nav class="vl-footer-col" aria-label="Pro-Visit">
+          <h3>Pro-Visit</h3>
+          <a href="#how">How it works</a>
+          <a href="#features">Features</a>
+          <a href="#industries">Industries</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#faq">FAQ</a>
+        </nav>
+        <nav class="vl-footer-col" aria-label="IN4 products">
+          <h3>IN4 Products</h3>
+          <a href="hrms.html">HRMS &amp; Payroll</a>
+          <a href="visitor-management.html">Visitor Management</a>
+          <a href="parking-management.html">Parking Management</a>
+          <a href="canteen-management.html">Canteen Management</a>
+          <a href="ai-video-analytics.html">AI Video Analytics</a>
+        </nav>
+        <div class="vl-footer-col vl-footer-contact">
+          <h3>Contact</h3>
+          <a href="tel:+918925814088"><i class="fa-solid fa-phone" aria-hidden="true"></i> +91 89258 14088</a>
+          <a href="mailto:info@in4solution.com"><i class="fa-solid fa-envelope" aria-hidden="true"></i> info@in4solution.com</a>
+          <address><i class="fa-solid fa-location-dot" aria-hidden="true"></i> No-4, 2nd Floor, Pillaiyar Kovil Street, Kasi City Park, Kasi Estate, Ashok Nagar, Chennai–600 083</address>
+        </div>
+      </div>
+      <div class="vl-footer-bottom">
+        <p>&copy; 2026 IN4 Solutions · A business automation brand of In4 Solution Pvt Ltd.</p>
+        <div class="vl-footer-legal"><a href="about.html">About</a><a href="contact.html">Contact</a><a href="pricing.html">Pricing</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- back to top: the ring fills as the page scrolls -->
+  <button class="vl-top" type="button" data-vl-top aria-label="Back to top">
+    <svg viewBox="0 0 44 44" aria-hidden="true"><circle class="vl-top-track" cx="22" cy="22" r="20"/><circle class="vl-top-ring" cx="22" cy="22" r="20" data-vl-ring/></svg>
+    <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+  </button>
+
+  <script defer src="js/site.js?v=20261030f"></script>
+  <script defer src="js/lead.js?v=20261030d"></script>
+  <script defer src="js/vm-landing.js"></script>
+</body>
+</html>

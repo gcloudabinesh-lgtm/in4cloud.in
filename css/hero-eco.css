@@ -19,10 +19,11 @@
 @media (min-width: 1200px) {
   .hero-inner.hero-grid {
     grid-template-columns: minmax(0, 0.78fr) minmax(0, 1fr);
-    gap: 40px;
+    gap: 28px;
   }
-  /* keeps "Growing Enterprises" on one line in the narrower column */
-  .hero-title { font-size: clamp(38px, 4vw, 52px); }
+  /* keeps "for Growing Enterprises" on one line in the narrower column; the
+     extra class outranks the short-screen rule in hero.css */
+  .hero-content .hero-title { font-size: clamp(33px, calc(4vw - 5px), 47px); }
 }
 
 .hx-stage {

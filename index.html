@@ -37,7 +37,7 @@
   <link rel="stylesheet" href="css/responsive.css">
   <link rel="stylesheet" href="css/hrms.css">
   <link rel="stylesheet" href="css/home.css">
-  <link rel="stylesheet" href="css/hero-eco.css">
+  <link rel="stylesheet" href="css/hero-showcase.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
   <link rel="stylesheet" href="css/fa.css">
 <link rel="stylesheet" href="css/demo-modal.css">
@@ -81,8 +81,8 @@
         <span class="hero-mote hero-mote--c"></span>
       </div>
 
-      <!-- Left: hero copy.  Right: the connected platform visual (css/hero-eco.css,
-           js/hero-eco.js). Its numbers are sample data for illustration. -->
+      <!-- Left: hero copy.  Right: the module showcase (css/hero-showcase.css,
+           js/hero-showcase.js). Its numbers are sample data for illustration. -->
       <div class="hero-inner hero-grid">
         <div class="hero-content">
           <p class="hero-eyebrow reveal">Cloud HRMS &amp; Workplace Platform</p>
@@ -94,73 +94,56 @@
           </div>
         </div>
 
-        <div class="hx-stage" id="heroStage">
-            <div class="hx" role="img" aria-label="The In4 CloudHR dashboard, moving through attendance, payroll, leave, visitor, parking and AI analytics">
-              <div class="hx-layer hx-layer--bg" data-depth="2" aria-hidden="true">
-                <span class="hx-glow hx-glow--a"></span><span class="hx-glow hx-glow--b"></span><span class="hx-glow hx-glow--c"></span>
-                <svg class="hx-links" viewBox="0 0 580 460" preserveAspectRatio="none">
-                  <path id="hxp0" d="M290 227 Q 150 90 70 38" data-m="0" class="is-active"/>
-                  <path id="hxp1" d="M290 227 Q 420 90 472 32" data-m="1"/>
-                  <path id="hxp3" d="M290 227 Q 150 350 90 426" data-m="3"/>
-                  <circle r="2.6"><animateMotion dur="6.4s" begin="-0.0s" repeatCount="indefinite"><mpath href="#hxp0"/></animateMotion></circle>
-                  <circle r="2.6"><animateMotion dur="5.6s" begin="-0.9s" repeatCount="indefinite"><mpath href="#hxp1"/></animateMotion></circle>
-                  <circle r="2.6"><animateMotion dur="6s" begin="-2.7s" repeatCount="indefinite"><mpath href="#hxp3"/></animateMotion></circle>
-                </svg>
-              </div>
-              <div class="hx-layer hx-layer--nodes" data-depth="6" aria-hidden="true">
-                <div class="hx-node is-active" data-m="0" style="left:calc(var(--u)*16);top:calc(var(--u)*20);--i:0"><div class="hx-pill" style="--t:5.4s;--r:-0.3deg;--dl:0s"><span class="hx-pill-ico"><i class="fa-solid fa-fingerprint"></i></span>Attendance</div></div>
-                <div class="hx-node" data-m="1" style="left:calc(var(--u)*424);top:calc(var(--u)*14);--i:1"><div class="hx-pill" style="--t:4.8s;--r:0.3deg;--dl:-1.2s"><span class="hx-pill-ico"><i class="fa-solid fa-money-check-dollar"></i></span>Payroll</div></div>
-                <div class="hx-node" data-m="3" style="left:calc(var(--u)*36);top:calc(var(--u)*408);--i:2"><div class="hx-pill" style="--t:5.4s;--r:-0.4deg;--dl:-3s"><span class="hx-pill-ico"><i class="fa-solid fa-user-check"></i></span>Visitor</div></div>
-              </div>
-              <div class="hx-layer hx-layer--dash" data-depth="4" aria-hidden="true">
-                <div class="hx-dash">
-                  <div class="hx-window">
-                    <div class="hx-bar"><img src="assets/logo-trim-600.png" alt="" width="600" height="134"><span class="hx-crumb"><span data-m="0" class="is-active">Attendance</span><span data-m="1">Payroll</span><span data-m="2">Leave</span><span data-m="3">Visitor</span><span data-m="4">Parking</span><span data-m="5">AI Analytics</span></span><span class="hx-bar-ico"><i class="fa-solid fa-bell"></i></span><span class="hx-bar-ico"><i class="fa-solid fa-user"></i></span></div>
-                    <div class="hx-rail"><span data-m="0" class="is-active"><i class="fa-solid fa-fingerprint"></i></span><span data-m="1"><i class="fa-solid fa-money-check-dollar"></i></span><span data-m="2"><i class="fa-solid fa-calendar-check"></i></span><span data-m="3"><i class="fa-solid fa-user-check"></i></span><span data-m="4"><i class="fa-solid fa-square-parking"></i></span><span data-m="5"><i class="fa-solid fa-video"></i></span></div>
-                    <div class="hx-views">
-                    <div class="hx-view is-active" data-m="0">
-<div class="hx-head"><div><b>Attendance</b><small>Today, 28 Oct</small></div><span class="hx-tag hx-tag--ok">Live</span></div>
-<div class="hx-stats"><div class="hx-stat hx-stat--ok">Present Today<b>41</b></div><div class="hx-stat">Active Employees<b>51</b></div><div class="hx-stat hx-stat--warn">Absent<b>8</b></div></div>
-<div class="hx-cols"><div class="hx-card"><h5>Check In / Out</h5><div class="hx-time">09:02 <small>AM</small></div><div class="hx-btns"><span class="hx-btn">Check In</span><span class="hx-btn hx-btn--ghost">Check Out</span></div><div class="hx-note"><span class="hx-dot"></span>Biometric Sync</div></div><div class="hx-card"><h5>Attendance Calendar</h5><div class="hx-cal"><i></i><i></i><i></i><i></i><i class="p">1</i><i class="h">2</i><i class="w">3</i><i class="w">4</i><i class="p">5</i><i class="p">6</i><i class="p">7</i><i class="p">8</i><i class="p">9</i><i class="w">10</i><i class="w">11</i><i class="p">12</i><i class="p">13</i><i class="l">14</i><i class="p">15</i><i class="p">16</i><i class="w">17</i><i class="w">18</i><i class="p">19</i><i class="p">20</i><i class="p">21</i><i class="p">22</i><i class="p">23</i><i class="w">24</i><i class="w">25</i><i class="p">26</i><i class="p">27</i><i class="t">28</i><i>29</i><i>30</i><i class="w">31</i></div></div></div>
-                    </div>
-                    <div class="hx-view" data-m="1">
-<div class="hx-head"><div><b>Payroll Processed</b><small>October · 51 employees</small></div><span class="hx-tag hx-tag--ok"><i class="fa-solid fa-check"></i> Done</span></div>
-<div class="hx-rows"><div class="hx-row"><span class="hx-tick"><i class="fa-solid fa-check"></i></span>Salary Calculation<em class="ok">Complete</em></div><div class="hx-row"><span class="hx-tick"><i class="fa-solid fa-check"></i></span>Attendance &amp; Leave Synced<em class="ok">Complete</em></div><div class="hx-row"><span class="hx-tick"><i class="fa-solid fa-lock"></i></span>Payroll Locked<em class="ok">Complete</em></div></div>
-<div class="hx-card" style="margin-top:calc(var(--u)*8)"><div class="hx-note" style="margin:0;font-size:calc(var(--u)*11.5);font-weight:600;color:#1a1733"><span class="hx-tick hx-tick--p"><i class="fa-solid fa-file-invoice"></i></span>Payslips<em style="margin-left:auto;font-style:normal;font-size:calc(var(--u)*10);color:#6e6b85">51 / 51</em></div><div class="hx-meter"><i style="width:100%"></i></div></div>
-                    </div>
-                    <div class="hx-view" data-m="2">
-<div class="hx-head"><div><b>Leave Calendar</b><small>October</small></div><span class="hx-btn" style="flex:none;padding-inline:calc(var(--u)*11)">Apply Leave</span></div>
-<div class="hx-cols"><div class="hx-card"><div class="hx-cal"><i></i><i></i><i></i><i></i><i>1</i><i class="h">2</i><i>3</i><i>4</i><i>5</i><i>6</i><i>7</i><i>8</i><i class="p">9</i><i>10</i><i>11</i><i>12</i><i>13</i><i class="l">14</i><i class="l">15</i><i>16</i><i>17</i><i>18</i><i>19</i><i>20</i><i>21</i><i class="t">22</i><i>23</i><i>24</i><i>25</i><i>26</i><i>27</i><i>28</i><i>29</i><i>30</i><i>31</i></div></div><div class="hx-rows" style="align-content:start"><div class="hx-row">Casual Leave<em>6 left</em></div><div class="hx-row">Sick Leave<em>4 left</em></div><div class="hx-row">Earned Leave<em>9 left</em></div></div></div>
-<div class="hx-row" style="margin-top:calc(var(--u)*8)"><span class="hx-tick"><i class="fa-solid fa-check"></i></span>Approval Status<em class="ok">Approved</em></div>
-                    </div>
-                    <div class="hx-view" data-m="3">
-<div class="hx-head"><div><b>Visitor Check-in</b><small>Reception</small></div><span class="hx-tag hx-tag--ok" style="background:#eaf6e4;color:#3e8e2d">Pass issued</span></div>
-<div class="hx-flow"><span>Check-in</span><i class="fa-solid fa-chevron-right"></i><span>QR validation</span><i class="fa-solid fa-chevron-right"></i><span>Host approval</span><i class="fa-solid fa-chevron-right"></i><span>Badge</span></div>
-<div class="hx-cols"><div class="hx-card hx-badge"><div><span class="hx-face"><i class="fa-solid fa-user"></i></span><b style="font-size:calc(var(--u)*11.5)">Visitor Badge</b><div class="hx-note" style="margin-top:calc(var(--u)*2)"><span class="hx-dot" style="background:#3e8e2d"></span>Valid today</div></div><svg class="hx-qr" viewBox="0 0 11 11"><path d="M0 0h1v1h-1zM1 0h1v1h-1zM2 0h1v1h-1zM3 0h1v1h-1zM6 0h1v1h-1zM8 0h1v1h-1zM9 0h1v1h-1zM10 0h1v1h-1zM0 1h1v1h-1zM2 1h1v1h-1zM4 1h1v1h-1zM7 1h1v1h-1zM8 1h1v1h-1zM10 1h1v1h-1zM0 2h1v1h-1zM1 2h1v1h-1zM2 2h1v1h-1zM8 2h1v1h-1zM9 2h1v1h-1zM10 2h1v1h-1zM0 3h1v1h-1zM3 3h1v1h-1zM6 3h1v1h-1zM9 3h1v1h-1zM1 4h1v1h-1zM4 4h1v1h-1zM7 4h1v1h-1zM10 4h1v1h-1zM0 6h1v1h-1zM3 6h1v1h-1zM6 6h1v1h-1zM9 6h1v1h-1zM1 7h1v1h-1zM4 7h1v1h-1zM7 7h1v1h-1zM10 7h1v1h-1zM0 8h1v1h-1zM1 8h1v1h-1zM2 8h1v1h-1zM0 9h1v1h-1zM2 9h1v1h-1zM3 9h1v1h-1zM6 9h1v1h-1zM9 9h1v1h-1zM0 10h1v1h-1zM1 10h1v1h-1zM2 10h1v1h-1zM4 10h1v1h-1zM7 10h1v1h-1zM10 10h1v1h-1z" fill="#1f3d18"/></svg></div><div class="hx-card"><h5>Visitor Log</h5><div class="hx-rows"><div class="hx-row" style="padding:calc(var(--u)*5) calc(var(--u)*8)"><span class="hx-tick hx-tick--g"><i class="fa-solid fa-arrow-right-to-bracket"></i></span>10:24<em class="ok" style="color:#3e8e2d">In</em></div><div class="hx-row" style="padding:calc(var(--u)*5) calc(var(--u)*8)"><span class="hx-tick hx-tick--g"><i class="fa-solid fa-arrow-right-to-bracket"></i></span>09:50<em class="ok" style="color:#3e8e2d">In</em></div><div class="hx-row" style="padding:calc(var(--u)*5) calc(var(--u)*8)"><span class="hx-tick" style="background:#f3f2f8;color:#8a86a3"><i class="fa-solid fa-arrow-right-from-bracket"></i></span>09:12<em>Out</em></div></div></div></div>
-                    </div>
-                    <div class="hx-view" data-m="4">
-<div class="hx-head"><div><b>Live Availability</b><small>81 of 96 slots free</small></div><span class="hx-tag">Basement 2</span></div>
-<div class="hx-cols"><div class="hx-card"><h5>Vehicle Entry</h5><span class="hx-plate">TN 09 AB 1234</span><div class="hx-gate"></div><div class="hx-note"><span class="hx-dot"></span>Gate Access granted</div></div><div class="hx-card"><h5>Parking Slots</h5><div class="hx-slots"><i class="o"></i><i></i><i></i><i class="o"></i><i></i><i class="o"></i><i class="o"></i><i></i><i></i><i class="o"></i><i></i><i></i><i></i><i class="v"></i><i></i><i class="o"></i><i></i><i></i><i class="o"></i><i class="o"></i><i></i><i></i><i></i><i class="o"></i><i></i><i class="v"></i><i></i><i></i><i class="o"></i><i></i><i></i><i class="o"></i></div><div class="hx-legend"><span style="--c:#e7f7ec;">Free</span><span style="--c:#c7b4fb;">Taken</span><span style="--c:#ffd9a0;">Visitor</span></div></div></div>
-<div class="hx-row" style="margin-top:calc(var(--u)*8)"><span class="hx-tick hx-tick--p"><i class="fa-solid fa-car-side"></i></span>Visitor Vehicle<em>Slot V-04</em></div>
-                    </div>
-                    <div class="hx-view" data-m="5">
-<div class="hx-head"><div><b>Camera Analytics</b><small>Gate 2 · Live</small></div><span class="hx-tag">Real-time</span></div>
-<div class="hx-cols"><div class="hx-card" style="padding:calc(var(--u)*5)"><div class="hx-cam"><span class="hx-cam-tag">Live</span><span class="hx-person" style="--x:18%"></span><span class="hx-person" style="--x:46%"></span><span class="hx-person hx-person--alert" style="--x:74%"></span></div></div><div class="hx-stats" style="grid-template-columns:1fr 1fr;margin:0;align-content:start"><div class="hx-stat">Occupancy<b>68%</b></div><div class="hx-stat">People Count<b>124</b></div><div class="hx-stat hx-stat--warn" style="grid-column:1/-1">Safety Alert<b style="font-size:calc(var(--u)*13)">Helmet check</b></div></div></div>
-<div class="hx-row" style="margin-top:calc(var(--u)*8)"><span class="hx-tick hx-tick--p"><i class="fa-solid fa-bolt"></i></span>Real-time Event<em>Gate 2 · just now</em></div>
-                    </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="hx-layer hx-layer--fg" data-depth="8" aria-hidden="true">
-                <div class="hx-widgets">
-                    <div class="hx-widget is-active" data-m="0" style="--w:#1f8a43;--w-bg:#e7f7ec"><span class="hx-widget-ico"><i class="fa-solid fa-fingerprint"></i></span><div><b>41 Present Today</b><small>Synced from biometrics</small></div></div>
-                    <div class="hx-widget" data-m="1" style="--w:#6528f7;--w-bg:#f1ecff"><span class="hx-widget-ico"><i class="fa-solid fa-circle-check"></i></span><div><b>Payroll Processed</b><small>✓ Done</small></div></div>
-                    <div class="hx-widget" data-m="2" style="--w:#d6338f;--w-bg:#fde8f3"><span class="hx-widget-ico"><i class="fa-solid fa-plane-departure"></i></span><div><b>Leave Approved</b><small>Casual Leave · 1 day</small></div></div>
-                    <div class="hx-widget" data-m="3" style="--w:#3e8e2d;--w-bg:#eaf6e4"><span class="hx-widget-ico"><i class="fa-solid fa-qrcode"></i></span><div><b>Visitor Checked In</b><small>QR validated</small></div></div>
-                    <div class="hx-widget" data-m="4" style="--w:#6528f7;--w-bg:#f1ecff"><span class="hx-widget-ico"><i class="fa-solid fa-car-side"></i></span><div><b>Vehicle Entered</b><small>Slot B-12 assigned</small></div></div>
-                    <div class="hx-widget" data-m="5" style="--w:#3b6ff0;--w-bg:#e9efff"><span class="hx-widget-ico"><i class="fa-solid fa-triangle-exclamation"></i></span><div><b>Safety Alert</b><small>Helmet check · Gate 2</small></div></div>
-                </div>
+        <div class="hs-stage" id="heroStage">
+            <div class="hs" data-hs role="group" tabindex="0" aria-roledescription="carousel" aria-label="In4 CloudHR modules: Payroll, Attendance, Performance, Canteen, Visitor, Parking, AI Analytics. Pauses on hover or focus; the left and right arrow keys change module.">
+              <span class="hs-glow hs-glow--a" aria-hidden="true"></span><span class="hs-glow hs-glow--b" aria-hidden="true"></span><span class="hs-glow hs-glow--c" aria-hidden="true"></span>
+              <span class="hs-aurora hs-aurora--a" aria-hidden="true"></span><span class="hs-aurora hs-aurora--b" aria-hidden="true"></span><span class="hs-dots" aria-hidden="true"></span>
+              <span class="hs-orbit" aria-hidden="true"></span><span class="hs-orbit hs-orbit--b" aria-hidden="true"></span>
+              <div class="hs-beams" aria-hidden="true"><span class="hs-beam hs-beam--h" style="--p:4%;--l:calc(var(--u)*150);--t:6.5s;--d:-1s"></span><span class="hs-beam hs-beam--h" style="--p:97%;--l:calc(var(--u)*120);--t:8s;--d:-4.5s"></span><span class="hs-beam hs-beam--v" style="--p:-2%;--l:calc(var(--u)*130);--t:7s;--d:-2.5s"></span><span class="hs-beam hs-beam--v" style="--p:101%;--l:calc(var(--u)*150);--t:9s;--d:-6s"></span><span class="hs-beam hs-beam--h" style="--p:50%;--l:calc(var(--u)*90);--t:11s;--d:-8s"></span></div>
+              <div class="hs-card">
+                <span class="hs-wash" aria-hidden="true"></span><span class="hs-bar" aria-hidden="true"><i></i></span><span class="hs-shine" aria-hidden="true"></span>
+                <article class="hs-panel is-active" style="--c:#6528f7" aria-hidden="false">
+                  <header class="hs-ph"><span class="hs-ico" aria-hidden="true"><i class="fa-solid fa-money-check-dollar"></i></span><div><b>HRMS &amp; Payroll</b></div><span class="hs-live" aria-hidden="true">Live</span></header>
+                  <div class="hs-body" aria-hidden="true"><div class="hs-box"><h6>Payslip · Oct 2026</h6><div class="pay-row hs-in" style="--d:.15s">Basic<b>₹30,000</b></div><div class="pay-row hs-in" style="--d:.25s">HRA<b>₹12,000</b></div><div class="pay-row hs-in" style="--d:.35s">Allowances<b>₹9,500</b></div><div class="pay-row neg hs-in" style="--d:.45s">PF<b>− ₹3,600</b></div><div class="pay-row neg hs-in" style="--d:.55s">Tax (TDS)<b>− ₹1,250</b></div><div class="pay-net hs-pop" style="--d:.8s">Net pay<b data-to="46650" data-pre="₹" data-inr data-delay="800" data-dur="900">₹46,650</b></div></div><div class="hs-box"><h6>Payroll cost</h6><div class="pay-big" data-to="2845250" data-pre="₹" data-inr data-dur="1400">₹28,45,250</div><div class="pay-up">▲ 8% vs last month</div><div class="pay-bars"><i class="hs-rise" style="--h:52%;--d:.3s"></i><i class="hs-rise" style="--h:60%;--d:.4s"></i><i class="hs-rise" style="--h:56%;--d:.5s"></i><i class="hs-rise" style="--h:70%;--d:.6s"></i><i class="hs-rise" style="--h:66%;--d:.7s"></i><i class="hs-rise" style="--h:92%;--d:.85s"></i></div><div class="pay-months"><span>May</span><span>Jun</span><span>Jul</span><span>Aug</span><span>Sep</span><span>Oct</span></div></div></div>
+                  <p class="hs-desc">Payroll, PF, ESI and payslips on one screen — run the monthly cycle and disburse salaries in a click.</p>
+                  <div class="hs-toast" aria-hidden="true"><i class="fa-solid fa-check"></i><div>Salaries disbursed<small>51 employees · Oct 2026</small></div></div>
+                </article>
+                <article class="hs-panel" style="--c:#0EA5E9" aria-hidden="true">
+                  <header class="hs-ph"><span class="hs-ico" aria-hidden="true"><i class="fa-solid fa-fingerprint"></i></span><div><b>Time &amp; Attendance</b></div><span class="hs-live" aria-hidden="true">Live</span></header>
+                  <div class="hs-body" aria-hidden="true"><div class="att-dev"><div class="att-screen"><i class="fa-solid fa-user"></i><span class="att-frame"></span><span class="att-scan"></span><span class="att-ok hs-pop" style="--d:1.5s"><i class="fa-solid fa-check"></i> Verified · EMP-1042</span></div><div class="att-modes"><span>Face</span><span>Fingerprint</span><span>RFID</span><span>Mobile QR</span></div></div><div class="hs-box"><h6>Live check-ins</h6><div class="att-row hs-in" style="--d:1.6s"><i class="fa-solid fa-user"></i><div>EMP-1042<small>Check-in · 09:15 AM</small></div><i class="fa-solid fa-circle-check"></i></div><div class="att-row hs-in" style="--d:.3s"><i class="fa-solid fa-user"></i><div>EMP-1187<small>Check-in · 09:12 AM</small></div><i class="fa-solid fa-circle-check"></i></div><div class="att-row hs-in" style="--d:.45s"><i class="fa-solid fa-user"></i><div>EMP-2051<small>Check-in · 09:05 AM</small></div><i class="fa-solid fa-circle-check"></i></div><div class="att-sum hs-in" style="--d:.6s"><div>Present today<b data-to="179" data-from="172" data-delay="1600" data-dur="700">179</b></div><em>70% of 256</em></div></div></div>
+                  <p class="hs-desc">Face, fingerprint, RFID and mobile check-ins with geo-fencing, late flags and live shift hours.</p>
+                  <div class="hs-toast" aria-hidden="true"><i class="fa-solid fa-rotate"></i><div>Synced to payroll<small>Today’s punches · 09:20 AM</small></div></div>
+                </article>
+                <article class="hs-panel" style="--c:#6DBE45" aria-hidden="true">
+                  <header class="hs-ph"><span class="hs-ico" aria-hidden="true"><i class="fa-solid fa-chart-line"></i></span><div><b>Performance Management</b></div><span class="hs-live" aria-hidden="true">Live</span></header>
+                  <div class="hs-body" aria-hidden="true"><div class="hs-box"><h6>KRA progress</h6><div class="perf-kra hs-in" style="--d:.15s"><p>Sales target<b data-to="82" data-suf="%" data-delay="300">82%</b></p><div class="perf-track"><i class="hs-grow" style="--w:82%;--d:.3s"></i></div></div><div class="perf-kra hs-in" style="--d:.3s"><p>Customer rating<b data-to="68" data-suf="%" data-delay="450">68%</b></p><div class="perf-track"><i class="hs-grow" style="--w:68%;--d:.45s"></i></div></div><div class="perf-kra hs-in" style="--d:.45s"><p>Training hours<b data-to="90" data-suf="%" data-delay="600">90%</b></p><div class="perf-track"><i class="hs-grow" style="--w:90%;--d:.6s"></i></div></div></div><div class="hs-box"><h6>Appraisal · 2026</h6><div class="perf-stars"><i class="fa-solid fa-star hs-pop" style="--d:.5s"></i><i class="fa-solid fa-star hs-pop" style="--d:.65s"></i><i class="fa-solid fa-star hs-pop" style="--d:.8s"></i><i class="fa-solid fa-star hs-pop" style="--d:.95s"></i><i class="fa-solid fa-star off"></i><b>4.0</b></div><p class="perf-note">Manager rating</p><div class="perf-step hs-in" style="--d:1.1s"><i class="fa-solid fa-check"></i>Self review<small>Done</small></div><div class="perf-step hs-in" style="--d:1.3s"><i class="fa-solid fa-check"></i>Manager review<small>Done</small></div><div class="perf-step wait hs-in" style="--d:1.5s"><i class="fa-solid fa-hourglass-half"></i>HR finalisation<small>In progress</small></div></div></div>
+                  <p class="hs-desc">Goals, KRAs and appraisal cycles — self, manager and HR reviews move through one flow.</p>
+                  <div class="hs-toast" aria-hidden="true"><i class="fa-solid fa-award"></i><div>Appraisal submitted<small>Cycle 2026 · EMP-1042</small></div></div>
+                </article>
+                <article class="hs-panel" style="--c:#F59E0B" aria-hidden="true">
+                  <header class="hs-ph"><span class="hs-ico" aria-hidden="true"><i class="fa-solid fa-utensils"></i></span><div><b>Canteen Management</b></div><span class="hs-live" aria-hidden="true">Live</span></header>
+                  <div class="hs-body" aria-hidden="true"><div class="hs-box"><h6>Today’s menu · Lunch</h6><div class="cn-item hs-in" style="--d:.15s"><i class="fa-solid fa-bowl-rice"></i><div>Veg Thali<small>620 kcal</small></div><em class="v">Veg</em></div><div class="cn-item hs-in" style="--d:.3s"><i class="fa-solid fa-drumstick-bite"></i><div>Chicken Bowl<small>540 kcal</small></div><em>Contains dairy</em></div><div class="cn-item hs-in" style="--d:.45s"><i class="fa-solid fa-leaf"></i><div>Millet Salad<small>320 kcal</small></div><em class="v">Vegan</em></div><div class="cn-item hs-in" style="--d:.6s"><i class="fa-solid fa-mug-hot"></i><div>Filter Coffee<small>90 kcal</small></div><em class="v">Veg</em></div></div><div class="hs-box"><h6 style="text-align:center">Now serving</h6><div class="cn-ring"><svg viewBox="0 0 110 110"><circle class="bg" cx="55" cy="55" r="46"/><circle class="fg" cx="55" cy="55" r="46"/></svg><b data-to="43" data-from="38" data-pad="3" data-dur="1500" data-delay="300">043</b></div><div class="cn-cap">Token queue<b>6 orders ahead</b></div></div></div>
+                  <p class="hs-desc">Digital menus, meal tokens and wallet billing for a smooth employee dining experience.</p>
+                  <div class="hs-toast" aria-hidden="true"><i class="fa-solid fa-wallet"></i><div>Meal paid from wallet<small>Token 043 · ₹60</small></div></div>
+                </article>
+                <article class="hs-panel" style="--c:#EC4899" aria-hidden="true">
+                  <header class="hs-ph"><span class="hs-ico" aria-hidden="true"><i class="fa-solid fa-id-card-clip"></i></span><div><b>Visitor Management</b></div><span class="hs-live" aria-hidden="true">Live</span></header>
+                  <div class="hs-body" aria-hidden="true"><div class="vp-pass hs-in" style="--d:.1s"><div class="vp-top">VISITOR PASS<span>VIS-0418</span></div><div class="vp-in"><div><b>Guest Visitor</b><small>Host · EMP 001</small><small>12 Nov · 10:30 AM · Gate 1</small><em class="hs-pop" style="--d:1.7s"><i class="fa-solid fa-check"></i> Pre-approved</em></div><div class="vp-qr"><svg viewBox="0 0 21 21" fill="#17142e" fill-rule="evenodd"><path d="M12 0h1v1h-1zM9 1h1v1h-1zM9 2h1v1h-1zM12 2h1v1h-1zM8 3h1v1h-1zM12 3h1v1h-1zM8 4h1v1h-1zM9 4h1v1h-1zM8 5h1v1h-1zM11 5h1v1h-1zM12 5h1v1h-1zM10 6h1v1h-1zM11 6h1v1h-1zM8 7h1v1h-1zM9 7h1v1h-1zM11 7h1v1h-1zM0 8h1v1h-1zM1 8h1v1h-1zM2 8h1v1h-1zM5 8h1v1h-1zM6 8h1v1h-1zM7 8h1v1h-1zM8 8h1v1h-1zM9 8h1v1h-1zM12 8h1v1h-1zM14 8h1v1h-1zM15 8h1v1h-1zM17 8h1v1h-1zM19 8h1v1h-1zM20 8h1v1h-1zM0 9h1v1h-1zM1 9h1v1h-1zM2 9h1v1h-1zM3 9h1v1h-1zM5 9h1v1h-1zM6 9h1v1h-1zM8 9h1v1h-1zM9 9h1v1h-1zM13 9h1v1h-1zM16 9h1v1h-1zM1 10h1v1h-1zM2 10h1v1h-1zM3 10h1v1h-1zM5 10h1v1h-1zM6 10h1v1h-1zM7 10h1v1h-1zM8 10h1v1h-1zM10 10h1v1h-1zM11 10h1v1h-1zM12 10h1v1h-1zM14 10h1v1h-1zM16 10h1v1h-1zM17 10h1v1h-1zM18 10h1v1h-1zM0 11h1v1h-1zM1 11h1v1h-1zM3 11h1v1h-1zM5 11h1v1h-1zM7 11h1v1h-1zM10 11h1v1h-1zM11 11h1v1h-1zM13 11h1v1h-1zM15 11h1v1h-1zM20 11h1v1h-1zM1 12h1v1h-1zM3 12h1v1h-1zM4 12h1v1h-1zM6 12h1v1h-1zM8 12h1v1h-1zM13 12h1v1h-1zM17 12h1v1h-1zM19 12h1v1h-1zM20 12h1v1h-1zM9 13h1v1h-1zM11 13h1v1h-1zM14 13h1v1h-1zM17 13h1v1h-1zM18 13h1v1h-1zM8 14h1v1h-1zM9 14h1v1h-1zM10 14h1v1h-1zM15 14h1v1h-1zM16 14h1v1h-1zM17 14h1v1h-1zM19 14h1v1h-1zM8 15h1v1h-1zM10 15h1v1h-1zM11 15h1v1h-1zM13 15h1v1h-1zM15 15h1v1h-1zM17 15h1v1h-1zM18 15h1v1h-1zM19 15h1v1h-1zM11 16h1v1h-1zM12 16h1v1h-1zM15 16h1v1h-1zM16 16h1v1h-1zM17 16h1v1h-1zM8 17h1v1h-1zM9 17h1v1h-1zM11 17h1v1h-1zM12 17h1v1h-1zM13 17h1v1h-1zM17 17h1v1h-1zM18 17h1v1h-1zM20 17h1v1h-1zM9 18h1v1h-1zM10 18h1v1h-1zM12 18h1v1h-1zM13 18h1v1h-1zM14 18h1v1h-1zM15 18h1v1h-1zM18 18h1v1h-1zM19 18h1v1h-1zM8 19h1v1h-1zM9 19h1v1h-1zM12 19h1v1h-1zM15 19h1v1h-1zM16 19h1v1h-1zM17 19h1v1h-1zM18 19h1v1h-1zM19 19h1v1h-1zM20 19h1v1h-1zM9 20h1v1h-1zM11 20h1v1h-1zM12 20h1v1h-1zM13 20h1v1h-1zM15 20h1v1h-1zM18 20h1v1h-1zM19 20h1v1h-1zM20 20h1v1h-1zM0 0h7v7h-7zM1 1v5h5v-5zM2 2h3v3h-3zM14 0h7v7h-7zM15 1v5h5v-5zM16 2h3v3h-3zM0 14h7v7h-7zM1 15v5h5v-5zM2 16h3v3h-3z"/></svg></div></div><div class="vp-today"><span><b data-to="12" data-delay="400">12</b>Expected</span><span><b data-to="9" data-delay="600">9</b>Checked in</span><span><b data-to="6" data-delay="800">6</b>On site</span></div></div><div class="hs-box"><h6>Visit flow</h6><div class="vp-step hs-in" style="--d:.3s"><i class="fa-solid fa-paper-plane"></i><div>Invite sent<small>From the employee app</small></div><i class="fa-solid fa-circle-check ok hs-pop" style="--d:.6s"></i></div><div class="vp-step hs-in" style="--d:.7s"><i class="fa-solid fa-qrcode"></i><div>QR pass issued<small>Shared with the guest</small></div><i class="fa-solid fa-circle-check ok hs-pop" style="--d:1s"></i></div><div class="vp-step hs-in" style="--d:1.1s"><i class="fa-solid fa-address-card"></i><div>ID scanned<small>Verified at reception</small></div><i class="fa-solid fa-circle-check ok hs-pop" style="--d:1.4s"></i></div><div class="vp-step hs-in" style="--d:1.5s"><i class="fa-solid fa-door-open"></i><div>Checked in<small>10:28 AM</small></div><i class="fa-solid fa-circle-check ok hs-pop" style="--d:1.8s"></i></div></div></div>
+                  <p class="hs-desc">Invite, pre-approve and check in every guest with a QR pass — every visit logged.</p>
+                  <div class="hs-toast" aria-hidden="true"><i class="fa-solid fa-bell"></i><div>Host notified<small>Guest arrived at Gate 1</small></div></div>
+                </article>
+                <article class="hs-panel" style="--c:#22C7D6" aria-hidden="true">
+                  <header class="hs-ph"><span class="hs-ico" aria-hidden="true"><i class="fa-solid fa-square-parking"></i></span><div><b>Parking Management</b></div><span class="hs-live" aria-hidden="true">Live</span></header>
+                  <div class="hs-body" aria-hidden="true"><div class="hs-box"><h6>ANPR · Entry gate 2</h6><div class="pk-plate"><span>TN 09 AB 1234</span></div><span class="pk-ok hs-pop" style="--d:1.4s"><i class="fa-solid fa-check"></i> Plate recognised</span><div class="pk-foot"><div class="pk-gate"><span class="pk-arm"></span></div><div class="pk-bay hs-in" style="--d:2s">Auto slot assignment<b>Level B2 · Bay 14</b></div></div></div><div class="hs-box"><h6>Basement B2 · Live</h6><div class="pk-grid"><i class="on hs-pop" style="--d:0.30s"></i><i class="on hs-pop" style="--d:0.37s"></i><i></i><i class="on hs-pop" style="--d:0.51s"></i><i class="on hs-pop" style="--d:0.58s"></i><i class="on hs-pop" style="--d:0.65s"></i><i class="on hs-pop" style="--d:0.44s"></i><i></i><i class="on hs-pop" style="--d:0.58s"></i><i class="on hs-pop" style="--d:0.65s"></i><i class="on hs-pop" style="--d:0.72s"></i><i></i><i class="on hs-pop" style="--d:0.58s"></i><i class="me hs-pop" style="--d:2.2s"></i><i class="on hs-pop" style="--d:0.72s"></i><i class="on hs-pop" style="--d:0.79s"></i><i></i><i class="on hs-pop" style="--d:0.93s"></i><i class="on hs-pop" style="--d:0.72s"></i><i class="on hs-pop" style="--d:0.79s"></i><i></i><i class="on hs-pop" style="--d:0.93s"></i><i></i><i class="on hs-pop" style="--d:1.07s"></i></div><div class="pk-occ"><b data-to="75" data-suf="%" data-delay="300" data-dur="1800">75%</b>occupancy</div></div></div>
+                  <p class="hs-desc">Plate recognition at the gate, automatic slot assignment and live occupancy for every level.</p>
+                  <div class="hs-toast" aria-hidden="true"><i class="fa-solid fa-car-side"></i><div>Gate opened<small>Bay 14 assigned · Level B2</small></div></div>
+                </article>
+                <article class="hs-panel" style="--c:#3B82F6" aria-hidden="true">
+                  <header class="hs-ph"><span class="hs-ico" aria-hidden="true"><i class="fa-solid fa-video"></i></span><div><b>AI Video Analytics</b></div><span class="hs-live" aria-hidden="true">Live</span></header>
+                  <div class="hs-body" aria-hidden="true"><div class="ai-cams"><div class="ai-cam"><small>CAM 01</small><i class="fa-solid fa-person ai-fig" style="left:40%"></i><span class="ai-box hs-pop" style="left:32%;top:34%;width:30%;height:54%;--d:.4s"><em>Person 98%</em></span></div><div class="ai-cam"><small>CAM 02</small><i class="fa-solid fa-truck ai-fig" style="left:28%;font-size:calc(var(--u)*30)"></i><span class="ai-box hs-pop" style="left:20%;top:40%;width:56%;height:46%;--d:.7s;--b:#facc15"><em>Vehicle 96%</em></span></div><div class="ai-cam"><small>CAM 03</small><i class="fa-solid fa-people-group ai-fig" style="left:26%;font-size:calc(var(--u)*30)"></i><span class="ai-box hs-pop" style="left:16%;top:38%;width:66%;height:50%;--d:1s;--b:#fb923c"><em>Crowd · high</em></span></div><div class="ai-cam"><small>CAM 04</small><i class="fa-solid fa-person-walking ai-fig" style="left:46%"></i><span class="ai-box alert hs-pop" style="left:36%;top:30%;width:34%;height:58%;--d:1.3s"><em>Intrusion</em></span></div></div><div class="hs-box"><h6>Alert timeline</h6><div class="ai-ev hs-in" style="--e:#f43f5e;--d:1.4s"><div>Intrusion<small>Gate 3 · restricted zone</small></div><em>2s</em></div><div class="ai-ev hs-in" style="--e:#f59e0b;--d:1.1s"><div>Crowd limit<small>Lobby · density high</small></div><em>5s</em></div><div class="ai-ev hs-in" style="--e:#8b5cf6;--d:.8s"><div>Vehicle<small>Dock 1 · after hours</small></div><em>8s</em></div><div class="ai-ev hs-in" style="--e:#10b981;--d:.5s"><div>PPE check<small>Plant floor · cleared</small></div><em>12s</em></div></div></div>
+                  <p class="hs-desc">Cameras that detect people, vehicles, crowding and intrusions — and alert your team in seconds.</p>
+                  <div class="hs-toast" aria-hidden="true"><i class="fa-solid fa-shield-halved"></i><div>Alert sent to security<small>Gate 3 · restricted zone</small></div></div>
+                </article>
               </div>
             </div>
           </div>
@@ -261,6 +244,18 @@
                 <span class="mod-tab-name">Core HR &amp; HRIS</span>
               </span>
             </button>
+            <button class="mod-tab" type="button" role="tab" id="modtab-13" aria-controls="modpanel-13" aria-selected="false" tabindex="-1" style="--acc:#5B24E6;--acc-soft:#F1ECFF">
+              <span class="mod-tab-ico"><i class="ico fa-solid fa-users" aria-hidden="true"></i></span>
+              <span class="mod-tab-text">
+                <span class="mod-tab-name">Employee Management</span>
+              </span>
+            </button>
+            <button class="mod-tab" type="button" role="tab" id="modtab-14" aria-controls="modpanel-14" aria-selected="false" tabindex="-1" style="--acc:#0E8C9B;--acc-soft:#E3F5F8">
+              <span class="mod-tab-ico"><i class="ico fa-solid fa-handshake" aria-hidden="true"></i></span>
+              <span class="mod-tab-text">
+                <span class="mod-tab-name">Onboarding</span>
+              </span>
+            </button>
             <button class="mod-tab mod-tab--grad" type="button" role="tab" id="modtab-2" aria-controls="modpanel-2" aria-selected="false" tabindex="-1" style="--acc:#6528f7;--acc-soft:#F6F2FF">
               <span class="mod-tab-ico"><i class="ico fa-solid fa-clock-rotate-left" aria-hidden="true"></i></span>
               <span class="mod-tab-text">
@@ -273,16 +268,70 @@
                 <span class="mod-tab-name">Leave Management</span>
               </span>
             </button>
+            <button class="mod-tab" type="button" role="tab" id="modtab-15" aria-controls="modpanel-15" aria-selected="false" tabindex="-1" style="--acc:#0EA5E9;--acc-soft:#E8F6FE">
+              <span class="mod-tab-ico"><i class="ico fa-solid fa-location-dot" aria-hidden="true"></i></span>
+              <span class="mod-tab-text">
+                <span class="mod-tab-name">Geo Fencing</span>
+              </span>
+            </button>
             <button class="mod-tab" type="button" role="tab" id="modtab-4" aria-controls="modpanel-4" aria-selected="false" tabindex="-1" style="--acc:#4B20C8;--acc-soft:#F1EDFF">
               <span class="mod-tab-ico"><i class="ico fa-solid fa-file-invoice-dollar" aria-hidden="true"></i></span>
               <span class="mod-tab-text">
                 <span class="mod-tab-name">Payroll &amp; Compliance</span>
               </span>
             </button>
+            <button class="mod-tab" type="button" role="tab" id="modtab-16" aria-controls="modpanel-16" aria-selected="false" tabindex="-1" style="--acc:#2563EB;--acc-soft:#EEF3FF">
+              <span class="mod-tab-ico"><i class="ico fa-solid fa-receipt" aria-hidden="true"></i></span>
+              <span class="mod-tab-text">
+                <span class="mod-tab-name">Expense &amp; Reimbursement</span>
+              </span>
+            </button>
             <button class="mod-tab is-active" type="button" role="tab" id="modtab-5" aria-controls="modpanel-5" aria-selected="true" tabindex="0" style="--acc:#0EA5E9;--acc-soft:#E8F6FE">
               <span class="mod-tab-ico"><i class="ico fa-solid fa-mobile-screen" aria-hidden="true"></i></span>
               <span class="mod-tab-text">
                 <span class="mod-tab-name">ESS Mobile App</span>
+              </span>
+            </button>
+            <button class="mod-tab" type="button" role="tab" id="modtab-17" aria-controls="modpanel-17" aria-selected="false" tabindex="-1" style="--acc:#7C3AED;--acc-soft:#F4EEFF">
+              <span class="mod-tab-ico"><i class="ico fa-solid fa-envelope-open-text" aria-hidden="true"></i></span>
+              <span class="mod-tab-text">
+                <span class="mod-tab-name">Letter Management</span>
+              </span>
+            </button>
+            <button class="mod-tab" type="button" role="tab" id="modtab-18" aria-controls="modpanel-18" aria-selected="false" tabindex="-1" style="--acc:#E11D48;--acc-soft:#FFF0F3">
+              <span class="mod-tab-ico"><i class="ico fa-solid fa-bell" aria-hidden="true"></i></span>
+              <span class="mod-tab-text">
+                <span class="mod-tab-name">Notification Centre</span>
+              </span>
+            </button>
+            <button class="mod-tab" type="button" role="tab" id="modtab-19" aria-controls="modpanel-19" aria-selected="false" tabindex="-1" style="--acc:#3E8E2D;--acc-soft:#EEF7EA">
+              <span class="mod-tab-ico"><i class="ico fa-solid fa-chart-pie" aria-hidden="true"></i></span>
+              <span class="mod-tab-text">
+                <span class="mod-tab-name">Reports &amp; Analytics</span>
+              </span>
+            </button>
+            <button class="mod-tab" type="button" role="tab" id="modtab-10" aria-controls="modpanel-10" aria-selected="false" tabindex="-1" style="--acc:#14B8A6;--acc-soft:#E7F9F5">
+              <span class="mod-tab-ico"><i class="ico fa-solid fa-user-plus" aria-hidden="true"></i></span>
+              <span class="mod-tab-text">
+                <span class="mod-tab-name">Recruitment</span>
+              </span>
+            </button>
+            <button class="mod-tab" type="button" role="tab" id="modtab-11" aria-controls="modpanel-11" aria-selected="false" tabindex="-1" style="--acc:#6DBE45;--acc-soft:#F1F9EC">
+              <span class="mod-tab-ico"><i class="ico fa-solid fa-arrow-trend-up" aria-hidden="true"></i></span>
+              <span class="mod-tab-text">
+                <span class="mod-tab-name">Performance Management</span>
+              </span>
+            </button>
+            <button class="mod-tab" type="button" role="tab" id="modtab-12" aria-controls="modpanel-12" aria-selected="false" tabindex="-1" style="--acc:#F97316;--acc-soft:#FFF1E8">
+              <span class="mod-tab-ico"><i class="ico fa-solid fa-graduation-cap" aria-hidden="true"></i></span>
+              <span class="mod-tab-text">
+                <span class="mod-tab-name">Training &amp; Learning</span>
+              </span>
+            </button>
+            <button class="mod-tab" type="button" role="tab" id="modtab-20" aria-controls="modpanel-20" aria-selected="false" tabindex="-1" style="--acc:#64748B;--acc-soft:#F1F4F8">
+              <span class="mod-tab-ico"><i class="ico fa-solid fa-person-walking-arrow-right" aria-hidden="true"></i></span>
+              <span class="mod-tab-text">
+                <span class="mod-tab-name">Exit Management</span>
               </span>
             </button>
             <button class="mod-tab" type="button" role="tab" id="modtab-6" aria-controls="modpanel-6" aria-selected="false" tabindex="-1" style="--acc:#F59E0B;--acc-soft:#FEF6E7">
@@ -307,24 +356,6 @@
               <span class="mod-tab-ico"><i class="ico fa-solid fa-video" aria-hidden="true"></i></span>
               <span class="mod-tab-text">
                 <span class="mod-tab-name">AI Analytics</span>
-              </span>
-            </button>
-            <button class="mod-tab" type="button" role="tab" id="modtab-10" aria-controls="modpanel-10" aria-selected="false" tabindex="-1" style="--acc:#14B8A6;--acc-soft:#E7F9F5">
-              <span class="mod-tab-ico"><i class="ico fa-solid fa-user-plus" aria-hidden="true"></i></span>
-              <span class="mod-tab-text">
-                <span class="mod-tab-name">Recruitment</span>
-              </span>
-            </button>
-            <button class="mod-tab" type="button" role="tab" id="modtab-11" aria-controls="modpanel-11" aria-selected="false" tabindex="-1" style="--acc:#6DBE45;--acc-soft:#F1F9EC">
-              <span class="mod-tab-ico"><i class="ico fa-solid fa-arrow-trend-up" aria-hidden="true"></i></span>
-              <span class="mod-tab-text">
-                <span class="mod-tab-name">Performance Management</span>
-              </span>
-            </button>
-            <button class="mod-tab" type="button" role="tab" id="modtab-12" aria-controls="modpanel-12" aria-selected="false" tabindex="-1" style="--acc:#F97316;--acc-soft:#FFF1E8">
-              <span class="mod-tab-ico"><i class="ico fa-solid fa-graduation-cap" aria-hidden="true"></i></span>
-              <span class="mod-tab-text">
-                <span class="mod-tab-name">Training &amp; Learning</span>
               </span>
             </button>
           </div>
@@ -462,6 +493,94 @@
                 <a class="btn btn-primary" href="hrms.html#training">Explore More<i class="ico fa-solid fa-arrow-right" aria-hidden="true"></i></a>
               </div>
             </div>
+            <!-- 13. Employee Management -->
+            <div class="mod-panel mod-panel--shot" role="tabpanel" id="modpanel-13" aria-labelledby="modtab-13" tabindex="0" hidden style="--acc:#5B24E6;--acc-soft:#F1ECFF">
+              <figure class="mod-visual mod-visual--shot mod-visual--left">
+                <img src="assets/modules/employee-management.jpg" width="1600" height="800" alt="In4 CloudHR employee directory with total, active and probation counts and a table of employee codes, departments, designations and locations" loading="lazy" decoding="async" />
+                <figcaption class="shot-bar"><span></span><span></span><span></span><b>Employee Management — directory</b></figcaption>
+              </figure>
+              <div class="mod-shot-foot">
+                <p>One searchable directory for every employee — profiles, departments, locations and status, with export in a click.</p>
+                <a class="btn btn-primary" href="hrms.html#core-hr">Explore More<i class="ico fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+              </div>
+            </div>
+            <!-- 14. Onboarding -->
+            <div class="mod-panel mod-panel--shot" role="tabpanel" id="modpanel-14" aria-labelledby="modtab-14" tabindex="0" hidden style="--acc:#0E8C9B;--acc-soft:#E3F5F8">
+              <figure class="mod-visual mod-visual--shot mod-visual--left">
+                <img src="assets/modules/onboarding.jpg" width="1600" height="800" alt="In4 CloudHR onboarding screen tracking each new joiner through offer, documents, bank and PF details, IT assets and induction" loading="lazy" decoding="async" />
+                <figcaption class="shot-bar"><span></span><span></span><span></span><b>Onboarding — new joiner checklist</b></figcaption>
+              </figure>
+              <div class="mod-shot-foot">
+                <p>Offer, documents, bank and PF details, IT assets and induction — every new joiner's first days tracked step by step.</p>
+                <a class="btn btn-primary" href="hrms.html#core-hr">Explore More<i class="ico fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+              </div>
+            </div>
+            <!-- 15. Geo Fencing -->
+            <div class="mod-panel mod-panel--shot" role="tabpanel" id="modpanel-15" aria-labelledby="modtab-15" tabindex="0" hidden style="--acc:#0EA5E9;--acc-soft:#E8F6FE">
+              <figure class="mod-visual mod-visual--shot">
+                <img src="assets/modules/geo-fencing.jpg" width="1200" height="543" alt="In4 CloudHR geo-fencing view with active, inside-campus, outside-campus and absent counts and a department-wise chart" loading="lazy" decoding="async" />
+                <figcaption class="shot-bar"><span></span><span></span><span></span><b>Geo Fencing — campus attendance</b></figcaption>
+              </figure>
+              <div class="mod-shot-foot">
+                <p>Attendance marked only inside approved campus boundaries, with live inside, outside and absent counts by department.</p>
+                <a class="btn btn-primary" href="geo-fencing.html">Explore More<i class="ico fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+              </div>
+            </div>
+            <!-- 16. Expense & Reimbursement -->
+            <div class="mod-panel mod-panel--shot" role="tabpanel" id="modpanel-16" aria-labelledby="modtab-16" tabindex="0" hidden style="--acc:#2563EB;--acc-soft:#EEF3FF">
+              <figure class="mod-visual mod-visual--shot mod-visual--left">
+                <img src="assets/modules/expense-reimbursement.jpg" width="1600" height="800" alt="In4 CloudHR expense claims with submitted, approved, pending and paid totals and a list of claims with receipts and status" loading="lazy" decoding="async" />
+                <figcaption class="shot-bar"><span></span><span></span><span></span><b>Expense &amp; Reimbursement — claims</b></figcaption>
+              </figure>
+              <div class="mod-shot-foot">
+                <p>Employees submit claims with receipts, managers approve them and approved amounts flow straight into payroll.</p>
+                <a class="btn btn-primary" href="hrms.html#payroll">Explore More<i class="ico fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+              </div>
+            </div>
+            <!-- 17. Letter Management -->
+            <div class="mod-panel mod-panel--shot" role="tabpanel" id="modpanel-17" aria-labelledby="modtab-17" tabindex="0" hidden style="--acc:#7C3AED;--acc-soft:#F4EEFF">
+              <figure class="mod-visual mod-visual--shot mod-visual--left">
+                <img src="assets/modules/letter-management.jpg" width="1600" height="800" alt="In4 CloudHR letter templates for offer, appointment, confirmation, experience and relieving letters beside an appointment letter preview" loading="lazy" decoding="async" />
+                <figcaption class="shot-bar"><span></span><span></span><span></span><b>Letter Management — templates</b></figcaption>
+              </figure>
+              <div class="mod-shot-foot">
+                <p>Offer, appointment, confirmation, experience and relieving letters generated from templates, ready to download and share.</p>
+                <a class="btn btn-primary" href="hrms.html#modules">Explore More<i class="ico fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+              </div>
+            </div>
+            <!-- 18. Notification Centre -->
+            <div class="mod-panel mod-panel--shot" role="tabpanel" id="modpanel-18" aria-labelledby="modtab-18" tabindex="0" hidden style="--acc:#E11D48;--acc-soft:#FFF0F3">
+              <figure class="mod-visual mod-visual--shot mod-visual--left">
+                <img src="assets/modules/notification-centre.jpg" width="1600" height="800" alt="In4 CloudHR notification centre listing leave, payslip, shift and expense alerts beside email, push and in-app delivery settings" loading="lazy" decoding="async" />
+                <figcaption class="shot-bar"><span></span><span></span><span></span><b>Notification Centre — alerts</b></figcaption>
+              </figure>
+              <div class="mod-shot-foot">
+                <p>Approvals, payslips, shift changes and policy updates reach the right people as email, push and in-app alerts.</p>
+                <a class="btn btn-primary" href="hrms.html#modules">Explore More<i class="ico fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+              </div>
+            </div>
+            <!-- 19. Reports & Analytics -->
+            <div class="mod-panel mod-panel--shot" role="tabpanel" id="modpanel-19" aria-labelledby="modtab-19" tabindex="0" hidden style="--acc:#3E8E2D;--acc-soft:#EEF7EA">
+              <figure class="mod-visual mod-visual--shot">
+                <img src="assets/modules/reports-analytics.jpg" width="1200" height="496" alt="In4 CloudHR department-wise attendance chart showing present, absent, late, leave and week-off counts for each department" loading="lazy" decoding="async" />
+                <figcaption class="shot-bar"><span></span><span></span><span></span><b>Reports &amp; Analytics — department attendance</b></figcaption>
+              </figure>
+              <div class="mod-shot-foot">
+                <p>Department-wise attendance, workforce trends and ready-made reports, filtered by designation, location and shift.</p>
+                <a class="btn btn-primary" href="hrms.html#modules">Explore More<i class="ico fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+              </div>
+            </div>
+            <!-- 20. Exit Management -->
+            <div class="mod-panel mod-panel--shot" role="tabpanel" id="modpanel-20" aria-labelledby="modtab-20" tabindex="0" hidden style="--acc:#64748B;--acc-soft:#F1F4F8">
+              <figure class="mod-visual mod-visual--shot mod-visual--left">
+                <img src="assets/modules/exit-management.jpg" width="1600" height="800" alt="In4 CloudHR exit workflow from resignation to experience letter, with a department clearance checklist and full and final settlement" loading="lazy" decoding="async" />
+                <figcaption class="shot-bar"><span></span><span></span><span></span><b>Exit Management — resignation to F&amp;F</b></figcaption>
+              </figure>
+              <div class="mod-shot-foot">
+                <p>Resignation approval, notice period, department clearances and full &amp; final settlement, closed with the experience letter.</p>
+                <a class="btn btn-primary" href="hrms.html#modules">Explore More<i class="ico fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -572,7 +691,15 @@
         </div>
 
         <div class="pr-grid">
-          <a class="pr-card reveal" style="--acc:#B45309" href="https://in4solution.com/Canteen_Management_System_Face_Kiosk.html" target="_blank" rel="noopener">
+          <a class="pr-card reveal" style="--acc:#6C35FF" href="https://zktecochennai.com/Product/Time/ai.html" target="_blank" rel="noopener">
+            <span class="pr-art pr-art--slides"><img src="assets/Product/range/speedface.jpg" alt="" width="800" height="800" loading="lazy" decoding="async"><img src="assets/Product/range/speedface-2.jpg" alt="" width="800" height="800" loading="lazy" decoding="async"></span>
+            <div class="pr-body">
+              <h3>Speed Face Biometrics</h3>
+              <span class="pr-btn">Explore More<i class="ico fa-solid fa-arrow-right" aria-hidden="true"></i><span class="pr-sr"> (opens in a new tab)</span></span>
+            </div>
+          </a>
+
+          <a class="pr-card reveal" style="--acc:#B45309;--rd:.06s" href="https://in4solution.com/Canteen_Management_System_Face_Kiosk.html" target="_blank" rel="noopener">
             <span class="pr-art"><img src="assets/Product/canteen-kiosk.jpg" alt="" width="900" height="900" loading="lazy" decoding="async"></span>
             <div class="pr-body">
               <h3>Canteen Kiosk</h3>
@@ -580,7 +707,7 @@
             </div>
           </a>
 
-          <a class="pr-card reveal" style="--acc:#2563EB;--rd:.06s" href="https://www.zkteco.in/armatura-entrance-control" target="_blank" rel="noopener">
+          <a class="pr-card reveal" style="--acc:#2563EB;--rd:.12s" href="https://www.zkteco.in/armatura-entrance-control" target="_blank" rel="noopener">
             <span class="pr-art pr-art--slides"><img src="assets/Product/range/boom-barrier.jpg" alt="" width="800" height="800" loading="lazy" decoding="async"><img src="assets/Product/range/full-turnstile.jpg" alt="" width="800" height="800" loading="lazy" decoding="async"></span>
             <div class="pr-body">
               <h3>Entrance Control &amp; Boom Barriers</h3>
@@ -588,7 +715,7 @@
             </div>
           </a>
 
-          <a class="pr-card reveal" style="--acc:#EC4899;--rd:.12s" href="https://zktecochennai.com/Product/Entrance/Pedestrain.html" target="_blank" rel="noopener">
+          <a class="pr-card reveal" style="--acc:#EC4899;--rd:.18s" href="https://zktecochennai.com/Product/Entrance/Pedestrain.html" target="_blank" rel="noopener">
             <span class="pr-art pr-art--slides"><img src="assets/Product/range/flap-barrier.jpg" alt="" width="800" height="800" loading="lazy" decoding="async"><img src="assets/Product/range/turnstile.jpg" alt="" width="800" height="800" loading="lazy" decoding="async"></span>
             <div class="pr-body">
               <h3>Flap Barriers &amp; Turnstiles</h3>
@@ -637,19 +764,36 @@
             <p class="eyebrow reveal">Mobile App</p>
             <h2 class="section-title reveal" id="ma-title" style="margin:14px 0 14px">Your Workplace in <em class="app-dual">Every Pocket</em></h2>
             <p class="ma-lead reveal">One In4 CloudHR app for every employee — attendance, payslips, reports and workplace services, wherever they are.</p>
-            <ul class="ma-list">
-              <li class="reveal"><span class="icon-badge"><i class="ico fa-solid fa-location-dot" aria-hidden="true"></i></span><div><h3>Check-In / Check-Out</h3><p>Punch in and out with GPS tracking, geo-fencing and geo-tagging for every location.</p></div></li>
-              <li class="reveal" style="--rd:.06s"><span class="icon-badge"><i class="ico fa-solid fa-file-invoice" aria-hidden="true"></i></span><div><h3>Access Payslip</h3><p>View monthly salary details and download payslips anytime.</p></div></li>
-              <li class="reveal" style="--rd:.12s"><span class="icon-badge"><i class="ico fa-solid fa-chart-column" aria-hidden="true"></i></span><div><h3>Reports</h3><p>View attendance, leave and salary reports on the go, anytime.</p></div></li>
-            </ul>
+            <div class="ma-acc" data-ma-acc>
+              <div class="ma-acc-item reveal is-open">
+                <h3 class="ma-acc-h"><button class="ma-acc-btn" type="button" id="ma-accb-1" aria-expanded="true" aria-controls="ma-accp-1"><span class="icon-badge"><i class="ico fa-solid fa-location-dot" aria-hidden="true"></i></span><span class="ma-acc-title">Check-In / Check-Out</span><span class="ma-acc-chev" aria-hidden="true"><i class="fa-solid fa-chevron-down"></i></span></button></h3>
+                <div class="ma-acc-panel" id="ma-accp-1" role="region" aria-labelledby="ma-accb-1"><div><p>Punch in and out with GPS tracking, geo-fencing and geo-tagging for every location.</p></div></div>
+              </div>
+              <div class="ma-acc-item reveal" style="--rd:.06s">
+                <h3 class="ma-acc-h"><button class="ma-acc-btn" type="button" id="ma-accb-2" aria-expanded="false" aria-controls="ma-accp-2"><span class="icon-badge"><i class="ico fa-solid fa-file-invoice" aria-hidden="true"></i></span><span class="ma-acc-title">Access Payslip</span><span class="ma-acc-chev" aria-hidden="true"><i class="fa-solid fa-chevron-down"></i></span></button></h3>
+                <div class="ma-acc-panel" id="ma-accp-2" role="region" aria-labelledby="ma-accb-2" inert><div><p>View monthly salary details and download payslips anytime.</p></div></div>
+              </div>
+              <div class="ma-acc-item reveal" style="--rd:.12s">
+                <h3 class="ma-acc-h"><button class="ma-acc-btn" type="button" id="ma-accb-3" aria-expanded="false" aria-controls="ma-accp-3"><span class="icon-badge"><i class="ico fa-solid fa-chart-column" aria-hidden="true"></i></span><span class="ma-acc-title">Reports</span><span class="ma-acc-chev" aria-hidden="true"><i class="fa-solid fa-chevron-down"></i></span></button></h3>
+                <div class="ma-acc-panel" id="ma-accp-3" role="region" aria-labelledby="ma-accb-3" inert><div><p>View attendance, leave and salary reports on the go, anytime.</p></div></div>
+              </div>
+              <div class="ma-acc-item reveal" style="--rd:.18s">
+                <h3 class="ma-acc-h"><button class="ma-acc-btn" type="button" id="ma-accb-4" aria-expanded="false" aria-controls="ma-accp-4"><span class="icon-badge"><i class="ico fa-solid fa-user-plus" aria-hidden="true"></i></span><span class="ma-acc-title">Invite Visitors</span><span class="ma-acc-chev" aria-hidden="true"><i class="fa-solid fa-chevron-down"></i></span></button></h3>
+                <div class="ma-acc-panel" id="ma-accp-4" role="region" aria-labelledby="ma-accb-4" inert><div><p>Send a visitor invite from your phone in a few taps — no calls to reception.</p></div></div>
+              </div>
+              <div class="ma-acc-item reveal" style="--rd:.24s">
+                <h3 class="ma-acc-h"><button class="ma-acc-btn" type="button" id="ma-accb-5" aria-expanded="false" aria-controls="ma-accp-5"><span class="icon-badge"><i class="ico fa-solid fa-qrcode" aria-hidden="true"></i></span><span class="ma-acc-title">Digital Visitor Pass</span><span class="ma-acc-chev" aria-hidden="true"><i class="fa-solid fa-chevron-down"></i></span></button></h3>
+                <div class="ma-acc-panel" id="ma-accp-5" role="region" aria-labelledby="ma-accb-5" inert><div><p>Guests get a QR pass to show when they enter your office — quick, paperless entry at the gate.</p></div></div>
+              </div>
+            </div>
           </div>
 
-          <!-- real app screens (from the recording, personal details removed) in three phone frames -->
+          <!-- app screens in three phone frames: payslip and visitor pass are sample screens (no personal data); the monthly report is from the app recording -->
           <div class="ma-stage ma-stage--trio reveal">
             <span class="ma-glow" aria-hidden="true"></span>
             <div class="ma-phone ma-phone--shot ma-phone--left">
               <div class="ma-screen">
-                <img class="ma-shot" src="assets/mobile-app/attendance.jpg" width="480" height="1076" alt="In4 CloudHR app attendance screen with daily check-in, check-out and work hours" loading="lazy" decoding="async">
+                <img class="ma-shot" src="assets/mobile-app/payslip.jpg" width="480" height="1076" alt="In4 CloudHR app payslip screen showing net pay with earnings and deductions, and a Download PDF button" loading="lazy" decoding="async">
                 <span class="ma-island" aria-hidden="true"></span>
               </div>
             </div>
@@ -657,7 +801,7 @@
               <span class="ma-key ma-key--power" aria-hidden="true"></span>
               <span class="ma-key ma-key--vol" aria-hidden="true"></span>
               <div class="ma-screen">
-                <img class="ma-shot" src="assets/mobile-app/home.jpg" width="480" height="1076" alt="In4 CloudHR app home screen with Check In and Check Out buttons and recent attendance" loading="lazy" decoding="async">
+                <img class="ma-shot" src="assets/mobile-app/visitor-pass.jpg" width="480" height="1076" alt="In4 CloudHR app digital visitor pass with a QR code, host, visit date and entry gate, after the invite was sent" loading="lazy" decoding="async">
                 <span class="ma-island" aria-hidden="true"></span>
               </div>
             </div>
@@ -838,11 +982,11 @@
 
   </main>
   <script defer src="js/site.js?v=20261030f"></script>
-  <script defer src="js/shell.js?v=20261031b"></script>
+  <script defer src="js/shell.js?v=20261112"></script>
   <script defer src="js/lead.js?v=20261030d"></script>
 <script defer src="js/demo-modal.js?v=20261030"></script>
   <script defer src="js/main.js"></script>
-  <script defer src="js/hero-eco.js"></script>
+  <script defer src="js/hero-showcase.js"></script>
   <script>
     /* ------------------------------------------------------------------
        Homepage showcase behaviour:
@@ -859,8 +1003,11 @@
       function initTabs(root, opts) {
         if (!root) return null;
         var tabs = [].slice.call(root.querySelectorAll('[role="tab"]'));
-        var panels = [].slice.call(root.querySelectorAll('[role="tabpanel"]'));
-        if (!tabs.length || !panels.length) return null;
+        /* each tab's own panel (by aria-controls), so tab order can differ from panel order */
+        var panels = tabs.map(function (t) {
+          return document.getElementById(t.getAttribute("aria-controls"));
+        });
+        if (!tabs.length || panels.some(function (p) { return !p; })) return null;
 
         var index = 0;
         var timer = null;
@@ -1011,5 +1158,25 @@
 
     })();
   </script>
-</body>
+    <script>
+      /* Mobile App accordion: one point open at a time */
+      (function () {
+        var acc = document.querySelector("[data-ma-acc]");
+        if (!acc) return;
+        var items = [].slice.call(acc.querySelectorAll(".ma-acc-item"));
+        function set(item, open) {
+          item.classList.toggle("is-open", open);
+          item.querySelector(".ma-acc-btn").setAttribute("aria-expanded", open ? "true" : "false");
+          var panel = item.querySelector(".ma-acc-panel");
+          if (open) panel.removeAttribute("inert"); else panel.setAttribute("inert", "");
+        }
+        items.forEach(function (item) {
+          item.querySelector(".ma-acc-btn").addEventListener("click", function () {
+            var open = !item.classList.contains("is-open");
+            items.forEach(function (o) { set(o, o === item ? open : false); });
+          });
+        });
+      })();
+    </script>
+  </body>
 </html>
