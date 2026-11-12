@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>IN4 Canteen Management | Digital Canteen Ordering &amp; Billing</title>
-  <meta name="description" content="IN4 Canteen Management System digitizes canteen ordering, tracking and billing — seamless employee dining with automated subsidy management.">
+  <meta name="description" content="IN4 Canteen Management replaces paper coupons with face, fingerprint and card meal check-in, instant meal slips, employee and employer cost split, digital ordering, billing, inventory and reports.">
   <link rel="canonical" href="https://www.in4solution.com/canteen-management">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="IN4 Solutions">
@@ -16,7 +16,7 @@
   <meta name="twitter:title" content="IN4 Canteen Management | Digital Canteen Ordering & Billing">
   <meta name="twitter:description" content="Smart canteen management for modern workplaces.">
   <meta name="twitter:image" content="assets/og-cover.svg">
-  <meta name="theme-color" content="#72BF44">
+  <meta name="theme-color" content="#F59E0B">
   <link rel="icon" href="assets/favicon-32.png" type="image/png" sizes="32x32">
   <link rel="icon" href="assets/favicon-192.png" type="image/png" sizes="192x192">
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
@@ -43,117 +43,237 @@
 <body class="page-canteen">
 <main id="main">
 
-    <!-- ============ PAGE HERO ============ -->
-    <section class="page-hero" aria-labelledby="hero-title">
-      <div class="container">
-        <div class="inner-hero">
-          <div class="inner-hero-copy">
-            <p class="hero-badge reveal"><i class="ico fa-solid fa-utensils" aria-hidden="true"></i>IN4 Canteen Management</p>
-            <h1 class="reveal" id="hero-title">Smart Canteen Management for <span class="grad-green">Modern Workplaces</span></h1>
-            <p class="lead reveal" style="--rd:.08s">Digitize canteen ordering, tracking and billing — from menu to payment in one seamless system.</p>
-            <div class="inner-hero-ctas reveal" style="--rd:.14s">
-              <a class="btn btn-primary btn-lg" href="#lead">Request Demo<i class="ico fa-solid fa-arrow-right" aria-hidden="true"></i></a>
-              <a class="btn btn-ghost btn-lg" href="#features">See How It Helps</a>
-            </div>
-            <ul class="inner-hero-trust reveal" style="--rd:.2s">
-              <li class="trust-item"><i class="ico fa-solid fa-mobile-screen" aria-hidden="true"></i>Digital ordering</li>
-              <li class="trust-item"><i class="ico fa-solid fa-receipt" aria-hidden="true"></i>Automated billing</li>
-              <li class="trust-item"><i class="ico fa-solid fa-boxes-stacked" aria-hidden="true"></i>Inventory tracking</li>
-              <li class="trust-item"><i class="ico fa-solid fa-wallet" aria-hidden="true"></i>Subsidy management</li>
-            </ul>
+    <!-- ============ HERO: the counter, animated ============ -->
+    <section class="cm-hero" aria-labelledby="hero-title">
+      <span class="cm-blob cm-blob--a" aria-hidden="true"></span><span class="cm-blob cm-blob--b" aria-hidden="true"></span>
+      <div class="container cm-hero-grid">
+        <div class="cm-hero-copy">
+          <p class="cm-badge reveal"><i class="ico fa-solid fa-utensils" aria-hidden="true"></i>IN4 Canteen Management</p>
+          <h1 class="reveal" id="hero-title">No coupons. No queues. <span class="cm-grad">Every meal counted.</span></h1>
+          <p class="cm-lead reveal" style="--rd:.08s">A face, fingerprint or card at the counter, a meal slip in seconds, and the cost split between employee and employer automatically.</p>
+          <div class="cm-ctas reveal" style="--rd:.14s">
+            <a class="btn btn-primary btn-lg" href="#lead">Request Demo<i class="ico fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            <a class="btn btn-ghost btn-lg" href="#journey">See a meal, start to finish</a>
           </div>
-          <div class="inner-hero-visual reveal" style="--rd:.16s" aria-hidden="true">
-            <div class="panel-shell">
-              <div class="panel-bar"><i class="ico fa-solid fa-circle text-danger" style="color:#e05b5b;font-size:8px"></i><i class="ico fa-solid fa-circle" style="color:#f0b45b;font-size:8px"></i><i class="ico fa-solid fa-circle" style="color:#72bf44;font-size:8px"></i><span class="panel-title">IN4 Canteen · Ordering Dashboard</span></div>
-              <div style="padding:20px;display:grid;gap:16px">
-                <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
-                  <div style="background:var(--green-50);border-radius:var(--r-md);padding:14px;border:1px solid var(--border-soft)">
-                    <p style="font-size:11px;font-weight:700;color:var(--green-700);text-transform:uppercase;letter-spacing:.08em">Orders Today</p>
-                    <strong style="font-family:'Plus Jakarta Sans',sans-serif;font-size:22px;color:var(--ink-900)">342</strong>
-                  </div>
-                  <div style="background:var(--purple-50);border-radius:var(--r-md);padding:14px;border:1px solid var(--border-soft)">
-                    <p style="font-size:11px;font-weight:700;color:var(--purple-700);text-transform:uppercase;letter-spacing:.08em">Revenue</p>
-                    <strong style="font-family:'Plus Jakarta Sans',sans-serif;font-size:22px;color:var(--ink-900)">₹48.2K</strong>
-                  </div>
-                </div>
-                <div class="dash-list">
-                  <div class="dl-row">
-                    <span class="dl-name"><span class="dl-avatar">B</span>Breakfast Combo</span>
-                    <span class="dl-meta">128 orders</span>
-                    <span class="dl-status"><i class="ico fa-solid fa-check" aria-hidden="true"></i> Active</span>
-                  </div>
-                  <div class="dl-row">
-                    <span class="dl-name"><span class="dl-avatar" style="background:var(--purple-50);color:var(--purple-600)">L</span>Lunch Thali</span>
-                    <span class="dl-meta">156 orders</span>
-                    <span class="dl-status"><i class="ico fa-solid fa-check" aria-hidden="true"></i> Active</span>
-                  </div>
-                  <div class="dl-row">
-                    <span class="dl-name"><span class="dl-avatar" style="background:var(--green-50);color:var(--green-700)">S</span>Snacks &amp; Beverages</span>
-                    <span class="dl-meta">58 orders</span>
-                    <span class="dl-status soft"><i class="ico fa-solid fa-clock" aria-hidden="true"></i> Low stock</span>
-                  </div>
-                </div>
+          <ul class="cm-hero-points reveal" style="--rd:.2s">
+            <li><i class="ico fa-solid fa-face-smile" aria-hidden="true"></i>Face, fingerprint or card</li>
+            <li><i class="ico fa-solid fa-print" aria-hidden="true"></i>Instant meal slips</li>
+            <li><i class="ico fa-solid fa-scale-balanced" aria-hidden="true"></i>Subsidy split</li>
+          </ul>
+        </div>
+
+        <!-- illustrative counter scene; codes and figures are sample data -->
+        <div class="cm-counter reveal" style="--rd:.16s" aria-hidden="true">
+          <div class="cm-kiosk">
+            <span class="cm-kiosk-led"></span>
+            <div class="cm-kiosk-screen">
+              <span class="cm-face"><i class="fa-solid fa-user"></i></span>
+              <span class="cm-scan"></span>
+              <span class="cm-ok"><i class="fa-solid fa-check"></i> Verified</span>
+              <small>EMP-1042 · Lunch</small>
+            </div>
+            <div class="cm-kiosk-printer"><span class="cm-slot"></span></div>
+            <div class="cm-slip">
+              <b>MEAL SLIP</b>
+              <span>Lunch · 12:41 PM</span>
+              <span>Token 043</span>
+              <i></i>
+              <span>Employee <em>₹10</em></span>
+              <span>Employer <em>₹10</em></span>
+            </div>
+          </div>
+          <div class="cm-float cm-float--count"><small>Lunch served today</small><b data-cm-count>186</b></div>
+          <div class="cm-float cm-float--slots"><span>Breakfast</span><span class="is-on">Lunch</span><span>Dinner</span></div>
+          <div class="cm-float cm-float--split"><small>Cost split</small><div class="cm-split"><i style="--w:50%">Employee</i><i style="--w:50%">Employer</i></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ BEFORE / AFTER ============ -->
+    <section class="section" id="features" aria-labelledby="ba-title">
+      <div class="container cm-ba">
+        <div class="cm-ba-copy reveal">
+          <p class="eyebrow">Why switch</p>
+          <h2 class="section-title" id="ba-title">Paper coupons were never <em class="ct-dual">a system</em></h2>
+          <p class="section-lead">Flip the switch and see what changes at your counter.</p>
+          <div class="cm-switch" role="tablist" aria-label="Compare">
+            <button type="button" role="tab" id="cm-t-old" aria-controls="cm-p-old" aria-selected="false" tabindex="-1"><i class="ico fa-solid fa-ticket" aria-hidden="true"></i>Paper coupons</button>
+            <button type="button" role="tab" id="cm-t-new" aria-controls="cm-p-new" aria-selected="true"><i class="ico fa-solid fa-face-smile" aria-hidden="true"></i>IN4 Canteen</button>
+            <span class="cm-switch-thumb" aria-hidden="true"></span>
+          </div>
+        </div>
+        <div class="cm-ba-card reveal" style="--rd:.08s">
+          <ul class="cm-ba-list cm-ba-list--old" role="tabpanel" id="cm-p-old" aria-labelledby="cm-t-old" hidden>
+            <li><i class="ico fa-solid fa-xmark" aria-hidden="true"></i>Coupons printed, sold and counted by hand</li>
+            <li><i class="ico fa-solid fa-xmark" aria-hidden="true"></i>Shared or copied coupons, meals no one can trace</li>
+            <li><i class="ico fa-solid fa-xmark" aria-hidden="true"></i>Long queues at the counter every lunch hour</li>
+            <li><i class="ico fa-solid fa-xmark" aria-hidden="true"></i>A month-end tally of who ate what</li>
+            <li><i class="ico fa-solid fa-xmark" aria-hidden="true"></i>Tomorrow's cooking planned by guesswork</li>
+          </ul>
+          <ul class="cm-ba-list cm-ba-list--new" role="tabpanel" id="cm-p-new" aria-labelledby="cm-t-new">
+            <li><i class="ico fa-solid fa-check" aria-hidden="true"></i>Face, fingerprint or card at the kiosk</li>
+            <li><i class="ico fa-solid fa-check" aria-hidden="true"></i>Every meal tied to a verified employee or approved guest</li>
+            <li><i class="ico fa-solid fa-check" aria-hidden="true"></i>A slip prints in seconds, with auto cut</li>
+            <li><i class="ico fa-solid fa-check" aria-hidden="true"></i>Daily and monthly food counts, already done</li>
+            <li><i class="ico fa-solid fa-check" aria-hidden="true"></i>Real counts to plan the next day's cooking</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ A MEAL, START TO FINISH ============ -->
+    <section class="section section-alt" id="journey" aria-labelledby="how-title">
+      <div class="container">
+        <div class="section-head center reveal">
+          <p class="eyebrow">How it works</p>
+          <h2 class="section-title" id="how-title">A meal, <em class="ct-dual">start to finish</em></h2>
+          <p class="section-lead">Five things happen in the few seconds an employee stands at the counter.</p>
+        </div>
+        <ol class="cm-receipts">
+          <li class="reveal"><span class="cm-r-ico"><i class="ico fa-solid fa-fingerprint" aria-hidden="true"></i></span><h3>Identify</h3><p>Face, fingerprint or card at the kiosk.</p></li>
+          <li class="reveal" style="--rd:.06s"><span class="cm-r-ico"><i class="ico fa-solid fa-mug-hot" aria-hidden="true"></i></span><h3>Meal slot</h3><p>Breakfast, lunch or dinner, by the time of day.</p></li>
+          <li class="reveal" style="--rd:.12s"><span class="cm-r-ico"><i class="ico fa-solid fa-print" aria-hidden="true"></i></span><h3>Slip prints</h3><p>Fast printing with auto cut, ready to hand over.</p></li>
+          <li class="reveal" style="--rd:.18s"><span class="cm-r-ico"><i class="ico fa-solid fa-scale-balanced" aria-hidden="true"></i></span><h3>Cost splits</h3><p>Employee and employer share applied; guests at their own rate.</p></li>
+          <li class="reveal" style="--rd:.24s"><span class="cm-r-ico"><i class="ico fa-solid fa-chart-column" aria-hidden="true"></i></span><h3>Counted</h3><p>Added to the daily and monthly food count.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ MEAL PRICING EXPLORER ============ -->
+    <section class="section" id="pricing-rules" aria-labelledby="mp-title">
+      <div class="container cm-mp">
+        <div class="cm-mp-copy reveal">
+          <p class="eyebrow">Meal pricing</p>
+          <h2 class="section-title" id="mp-title">Who pays what, <em class="ct-dual">set once</em></h2>
+          <p class="section-lead">Set a price for each meal and how it splits between the employee and the employer. Guests get their own rates.</p>
+          <div class="cm-explorer" data-cm-explorer>
+            <div class="cm-seg" role="radiogroup" aria-label="Meal">
+              <button type="button" role="radio" aria-checked="false" data-meal="b">Breakfast</button>
+              <button type="button" role="radio" aria-checked="true" data-meal="l">Lunch</button>
+              <button type="button" role="radio" aria-checked="false" data-meal="d">Dinner</button>
+            </div>
+            <div class="cm-seg cm-seg--who" role="radiogroup" aria-label="Diner">
+              <button type="button" role="radio" aria-checked="true" data-who="emp">Employee</button>
+              <button type="button" role="radio" aria-checked="false" data-who="guest">Guest</button>
+            </div>
+            <div class="cm-result" aria-live="polite">
+              <div class="cm-result-row"><span>Meal price</span><b data-cm-price>₹20</b></div>
+              <div class="cm-bar"><i class="cm-bar-a" data-cm-bar-a style="--w:50%"></i><i class="cm-bar-b" data-cm-bar-b style="--w:50%"></i></div>
+              <div class="cm-result-split">
+                <span><i class="cm-dot cm-dot--a"></i><em data-cm-who-label>Employee pays</em><b data-cm-a>₹10</b></span>
+                <span><i class="cm-dot cm-dot--b"></i><em>Employer pays</em><b data-cm-b>₹10</b></span>
               </div>
+              <p class="cm-result-note">Sample rates, as configured in the screen beside.</p>
             </div>
+          </div>
+        </div>
+        <figure class="cm-shot reveal" style="--rd:.08s">
+          <div class="cm-shot-bar"><span></span><span></span><span></span><b>IN4 Canteen · Meal pricing</b></div>
+          <img src="assets/modules/canteen.jpg" width="1600" height="883" alt="Meal pricing screen in IN4 Canteen with breakfast, lunch and dinner prices and the employee and employer contribution for each, plus a separate guest pricing table" loading="lazy" decoding="async">
+        </figure>
+      </div>
+    </section>
+
+    <!-- ============ HARDWARE AT THE COUNTER ============ -->
+    <section class="section cm-hw-sec" aria-labelledby="hw-title">
+      <div class="container cm-hw">
+        <figure class="cm-hw-photo reveal">
+          <img src="assets/Product/canteen.jpg" width="800" height="800" alt="IN4 canteen Face Kiosk with a slip printer beside a canteen counter, with a tablet showing the canteen menu" loading="lazy" decoding="async">
+          <figcaption><i class="ico fa-solid fa-circle-check" aria-hidden="true"></i>Face Kiosk · Face Print R5</figcaption>
+        </figure>
+        <div class="cm-hw-copy reveal" style="--rd:.08s">
+          <p class="eyebrow">At the counter</p>
+          <h2 class="section-title" id="hw-title">Built for the <em class="ct-dual">lunch rush</em></h2>
+          <p class="section-lead">A floor-standing Face Kiosk or the wall-mounted Face Print R5, both with a built-in slip printer.</p>
+          <ul class="cm-specs">
+            <li><span><i class="ico fa-solid fa-fingerprint" aria-hidden="true"></i></span><div><b>Multi-biometric</b>Face, fingerprint and card.</div></li>
+            <li><span><i class="ico fa-solid fa-print" aria-hidden="true"></i></span><div><b>Fast printing &amp; auto cut</b>A meal slip in seconds.</div></li>
+            <li><span><i class="ico fa-solid fa-calendar-check" aria-hidden="true"></i></span><div><b>Daily &amp; monthly food count</b>Counted as meals are served.</div></li>
+            <li><span><i class="ico fa-solid fa-hand-pointer" aria-hidden="true"></i></span><div><b>Easy to operate</b>Simple for counter staff.</div></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TODAY'S MENU: the full feature set ============ -->
+    <section class="section section-alt" aria-labelledby="menu-title">
+      <div class="container">
+        <div class="cm-menu reveal">
+          <div class="cm-menu-head">
+            <p class="cm-menu-kicker">Today's menu</p>
+            <h2 id="menu-title">Everything else, <span class="cm-grad">digitized</span></h2>
+          </div>
+          <div class="cm-menu-cols">
+            <div class="cm-menu-item"><i class="ico fa-solid fa-mobile-screen" aria-hidden="true"></i><div><h3><span>Digital ordering</span></h3><p>Order from a phone or the kiosk, with no paper.</p></div></div>
+            <div class="cm-menu-item"><i class="ico fa-solid fa-utensils" aria-hidden="true"></i><div><h3><span>Menu management</span></h3><p>Categories, pricing and availability, updated live.</p></div></div>
+            <div class="cm-menu-item"><i class="ico fa-solid fa-receipt" aria-hidden="true"></i><div><h3><span>Automated billing</span></h3><p>Bills generated with subsidy deductions applied.</p></div></div>
+            <div class="cm-menu-item"><i class="ico fa-solid fa-wallet" aria-hidden="true"></i><div><h3><span>Subsidy management</span></h3><p>Set per employee, department or role.</p></div></div>
+            <div class="cm-menu-item"><i class="ico fa-solid fa-boxes-stacked" aria-hidden="true"></i><div><h3><span>Inventory tracking</span></h3><p>Stock levels, low-stock alerts and suppliers.</p></div></div>
+            <div class="cm-menu-item"><i class="ico fa-solid fa-chart-pie" aria-hidden="true"></i><div><h3><span>Reports &amp; analytics</span></h3><p>Daily sales, popular items, revenue and cost.</p></div></div>
+            <div class="cm-menu-item"><i class="ico fa-solid fa-user-tag" aria-hidden="true"></i><div><h3><span>Guest meals</span></h3><p>Separate guest rates with the employer's share.</p></div></div>
+            <div class="cm-menu-item"><i class="ico fa-solid fa-right-left" aria-hidden="true"></i><div><h3><span>Device data sync</span></h3><p>Import and export canteen device data.</p></div></div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ============ FEATURES ============ -->
-    <section class="section" id="features" aria-labelledby="features-title">
+    <!-- ============ BENEFITS BAND ============ -->
+    <section class="cm-band" aria-label="What changes">
+      <div class="container cm-band-grid">
+        <div class="cm-benefit reveal"><i class="ico fa-solid fa-person-walking-arrow-right" aria-hidden="true"></i><b>Shorter queues</b><span>Diners move through faster.</span></div>
+        <div class="cm-benefit reveal" style="--rd:.06s"><i class="ico fa-solid fa-user-shield" aria-hidden="true"></i><b>Only verified diners</b><span>No shared or copied coupons.</span></div>
+        <div class="cm-benefit reveal" style="--rd:.12s"><i class="ico fa-solid fa-scale-balanced" aria-hidden="true"></i><b>Accurate subsidy</b><span>Every split on record.</span></div>
+        <div class="cm-benefit reveal" style="--rd:.18s"><i class="ico fa-solid fa-leaf" aria-hidden="true"></i><b>Less food waste</b><span>Cook to real counts.</span></div>
+      </div>
+    </section>
+
+    <!-- ============ WHERE IT FITS ============ -->
+    <section class="section" aria-labelledby="usecases-title">
       <div class="container">
         <div class="section-head center reveal">
-          <p class="eyebrow">Features</p>
-          <h2 class="section-title" id="features-title">Everything your canteen needs, <em class="ct-dual">digitized</em></h2>
-          <p class="section-lead">From ordering to billing — a complete canteen management system for your workplace.</p>
+          <p class="eyebrow">Where it fits</p>
+          <h2 class="section-title" id="usecases-title">Any canteen that <em class="ct-dual">feeds a team</em></h2>
         </div>
-        <div class="solution-grid">
-          <article class="card feature-card reveal"><span class="icon-badge soft-purple"><i class="ico fa-solid fa-mobile-screen" aria-hidden="true"></i></span><h3>Digital Ordering</h3><p>Employees order meals from their phone or kiosk — no queues, no paper.</p></article>
-          <article class="card feature-card reveal" style="--rd:.06s"><span class="icon-badge soft-green"><i class="ico fa-solid fa-utensils" aria-hidden="true"></i></span><h3>Menu Management</h3><p>Create and update menus with categories, pricing and availability in real time.</p></article>
-          <article class="card feature-card reveal" style="--rd:.12s"><span class="icon-badge soft-purple"><i class="ico fa-solid fa-receipt" aria-hidden="true"></i></span><h3>Automated Billing</h3><p>Automatic bill generation with subsidy deductions and payment integration.</p></article>
-          <article class="card feature-card reveal" style="--rd:.18s"><span class="icon-badge soft-green"><i class="ico fa-solid fa-boxes-stacked" aria-hidden="true"></i></span><h3>Inventory Tracking</h3><p>Track stock levels, set low-stock alerts and manage suppliers efficiently.</p></article>
-          <article class="card feature-card reveal" style="--rd:.24s"><span class="icon-badge soft-purple"><i class="ico fa-solid fa-wallet" aria-hidden="true"></i></span><h3>Subsidy Management</h3><p>Configure meal subsidies per employee, department or role with ease.</p></article>
-          <article class="card feature-card reveal" style="--rd:.3s"><span class="icon-badge soft-green"><i class="ico fa-solid fa-chart-pie" aria-hidden="true"></i></span><h3>Reports &amp; Analytics</h3><p>Daily sales, popular items, revenue trends and cost analysis at a glance.</p></article>
+        <div class="cm-fits">
+          <div class="cm-fit reveal"><i class="ico fa-solid fa-building" aria-hidden="true"></i><h3>Corporate offices</h3><p>Daily lunch for staff and visiting guests.</p></div>
+          <div class="cm-fit reveal" style="--rd:.05s"><i class="ico fa-solid fa-industry" aria-hidden="true"></i><h3>Manufacturing plants</h3><p>Meals across shifts, breakfast to dinner.</p></div>
+          <div class="cm-fit reveal" style="--rd:.1s"><i class="ico fa-solid fa-code" aria-hidden="true"></i><h3>IT parks &amp; tech hubs</h3><p>High-volume counters at peak hours.</p></div>
+          <div class="cm-fit reveal" style="--rd:.15s"><i class="ico fa-solid fa-heart-pulse" aria-hidden="true"></i><h3>Hospitals &amp; clinics</h3><p>Staff meals around the clock.</p></div>
+          <div class="cm-fit reveal" style="--rd:.2s"><i class="ico fa-solid fa-graduation-cap" aria-hidden="true"></i><h3>Educational campuses</h3><p>Hostels, messes and staff canteens.</p></div>
+          <div class="cm-fit reveal" style="--rd:.25s"><i class="ico fa-solid fa-landmark" aria-hidden="true"></i><h3>Government canteens</h3><p>Fully recorded, subsidised meals.</p></div>
         </div>
       </div>
     </section>
 
-    <!-- ============ HOW IT WORKS ============ -->
-    <section class="section section-alt" aria-labelledby="how-title">
-      <div class="container">
-        <div class="section-head center reveal">
-          <p class="eyebrow">How It Works</p>
-          <h2 class="section-title" id="how-title">From order to serving in <em class="ct-dual">four steps</em></h2>
-          <p class="section-lead">A streamlined canteen workflow that saves time for everyone.</p>
+    <!-- ============ FAQ ============ -->
+    <section class="section section-alt" aria-labelledby="faq-title">
+      <div class="container cm-faq-grid">
+        <div class="reveal">
+          <p class="eyebrow">FAQ</p>
+          <h2 class="section-title" id="faq-title">Questions canteen teams <em class="ct-dual">ask us</em></h2>
+          <p class="cm-price-note"><i class="ico fa-solid fa-tag" aria-hidden="true"></i>From <b>₹2,499</b> per location / month <small>Indicative, exclusive of GST. <a href="pricing.html">All pricing</a></small></p>
         </div>
-        <div class="process-grid">
-          <div class="process-step reveal"><span class="step-num">1</span><h3>Browse Menu</h3><p>Employees view the daily menu with prices and availability.</p></div>
-          <i class="ico fa-solid fa-chevron-right process-arrow reveal" style="--rd:.05s" aria-hidden="true"></i>
-          <div class="process-step reveal" style="--rd:.1s"><span class="step-num">2</span><h3>Place Order</h3><p>Order from mobile app or kiosk with meal preferences.</p></div>
-          <i class="ico fa-solid fa-chevron-right process-arrow reveal" style="--rd:.15s" aria-hidden="true"></i>
-          <div class="process-step reveal" style="--rd:.2s"><span class="step-num">3</span><h3>Auto Billing</h3><p>Bill generated with subsidy applied and payment processed.</p></div>
-          <i class="ico fa-solid fa-chevron-right process-arrow reveal" style="--rd:.25s" aria-hidden="true"></i>
-          <div class="process-step reveal" style="--rd:.3s"><span class="step-num">4</span><h3>Serve &amp; Track</h3><p>Kitchen prepares order; inventory and sales tracked live.</p></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ USE CASES ============ -->
-    <section class="section section-lav" aria-labelledby="usecases-title">
-      <div class="container">
-        <div class="section-head center reveal">
-          <p class="eyebrow">Use Cases</p>
-          <h2 class="section-title" id="usecases-title">Where Canteen Management <em class="ct-dual">Fits</em></h2>
-          <p class="section-lead">Any workplace canteen that wants to go digital.</p>
-        </div>
-        <div class="use-case-grid">
-          <span class="use-case-chip reveal"><span class="icon-badge soft-purple"><i class="ico fa-solid fa-building" aria-hidden="true"></i></span>Corporate Offices</span>
-          <span class="use-case-chip reveal" style="--rd:.05s"><span class="icon-badge soft-green"><i class="ico fa-solid fa-industry" aria-hidden="true"></i></span>Manufacturing Plants</span>
-          <span class="use-case-chip reveal" style="--rd:.1s"><span class="icon-badge soft-purple"><i class="ico fa-solid fa-graduation-cap" aria-hidden="true"></i></span>Educational Campuses</span>
-          <span class="use-case-chip reveal" style="--rd:.15s"><span class="icon-badge soft-green"><i class="ico fa-solid fa-heart" aria-hidden="true"></i></span>Hospitals &amp; Clinics</span>
-          <span class="use-case-chip reveal" style="--rd:.2s"><span class="icon-badge soft-purple"><i class="ico fa-solid fa-code" aria-hidden="true"></i></span>IT Parks &amp; Tech Hubs</span>
-          <span class="use-case-chip reveal" style="--rd:.25s"><span class="icon-badge soft-green"><i class="ico fa-solid fa-landmark" aria-hidden="true"></i></span>Government Canteens</span>
+        <div class="cm-faq reveal" style="--rd:.06s">
+          <details>
+            <summary>Do employees need an app?<i class="ico fa-solid fa-plus" aria-hidden="true"></i></summary>
+            <p>No. They identify at the kiosk with their face, fingerprint or card. Digital ordering from a phone is available as well.</p>
+          </details>
+          <details>
+            <summary>Can guests eat at the canteen too?<i class="ico fa-solid fa-plus" aria-hidden="true"></i></summary>
+            <p>Yes. Guest meals have their own rates, and the employer's share is recorded separately from employee meals.</p>
+          </details>
+          <details>
+            <summary>How are subsidies handled?<i class="ico fa-solid fa-plus" aria-hidden="true"></i></summary>
+            <p>Set the meal price and the employee and employer contribution for breakfast, lunch and dinner. Subsidies can be configured per employee, department or role.</p>
+          </details>
+          <details>
+            <summary>Which devices do we need?<i class="ico fa-solid fa-plus" aria-hidden="true"></i></summary>
+            <p>A Face Kiosk or Face Print R5 at the counter. Both read face, fingerprint and card and print meal slips. We confirm the right setup for your counters in the demo.</p>
+          </details>
+          <details>
+            <summary>What reports do we get?<i class="ico fa-solid fa-plus" aria-hidden="true"></i></summary>
+            <p>Daily and monthly food counts, sales, popular items, revenue trends and cost analysis.</p>
+          </details>
         </div>
       </div>
     </section>
@@ -237,5 +357,6 @@
   <script defer src="js/lead.js?v=20261030d"></script>
 <script defer src="js/demo-modal.js?v=20261030"></script>
   <script defer src="js/main.js"></script>
+  <script defer src="js/canteen.js"></script>
 </body>
 </html>
