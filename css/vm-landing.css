@@ -706,3 +706,61 @@ img { display: block; max-width: 100%; height: auto; }
 .vl-art { margin: 0 0 clamp(28px, 4vw, 44px); }
 .vl-art-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: thin; }
 .vl-art img { display: block; width: 100%; min-width: 860px; height: auto; }
+
+/* hero background scene (assets/illustrations/hero-bg-visitor.svg) under a dark overlay */
+.vl-hero {
+  background:
+    linear-gradient(90deg, rgba(20, 10, 28, 0.9) 0%, rgba(20, 10, 28, 0.76) 50%, rgba(20, 10, 28, 0.62) 100%),
+    url("../assets/illustrations/hero-bg-visitor.svg") center bottom / cover no-repeat,
+    var(--hero);
+}
+@media (max-width: 900px) {
+  .vl-hero { background: linear-gradient(180deg, rgba(20, 10, 28, 0.82), rgba(20, 10, 28, 0.9)), url("../assets/illustrations/hero-bg-visitor.svg") center top / cover no-repeat, var(--hero); }
+}
+
+/* hero background photo (assets/hero-bg/visitor.webp) under a dark overlay; replaces the line-art scene */
+.vl-hero {
+  background:
+    linear-gradient(90deg, rgba(20, 10, 28, 0.93) 0%, rgba(20, 10, 28, 0.82) 48%, rgba(20, 10, 28, 0.68) 100%),
+    url("../assets/hero-bg/visitor.webp") center / cover no-repeat,
+    var(--hero);
+}
+@media (max-width: 960px) {
+  .vl-hero { background: linear-gradient(180deg, rgba(20, 10, 28, 0.86), rgba(20, 10, 28, 0.93)), url("../assets/hero-bg/visitor.webp") center / cover no-repeat, var(--hero); }
+}
+
+/* generated scene: a lighter overlay so more of it shows */
+.vl-hero {
+  background:
+    linear-gradient(90deg, rgba(20, 10, 28, 0.86) 0%, rgba(20, 10, 28, 0.66) 48%, rgba(20, 10, 28, 0.5) 100%),
+    url("../assets/hero-bg/visitor.webp") center / cover no-repeat,
+    var(--hero);
+}
+@media (max-width: 960px) {
+  .vl-hero { background: linear-gradient(180deg, rgba(20, 10, 28, 0.78), rgba(20, 10, 28, 0.9)), url("../assets/hero-bg/visitor.webp") center / cover no-repeat, var(--hero); }
+}
+
+/* sharp generated scene, shown lightly: the overlay only lowers its opacity (no blur) */
+.vl-hero {
+  background:
+    linear-gradient(90deg, rgba(20, 10, 28, 0.88) 0%, rgba(20, 10, 28, 0.72) 48%, rgba(20, 10, 28, 0.58) 100%),
+    url("../assets/hero-bg/visitor.webp") center / cover no-repeat,
+    var(--hero);
+}
+@media (max-width: 960px) {
+  .vl-hero { background: linear-gradient(180deg, rgba(20, 10, 28, 0.8), rgba(20, 10, 28, 0.9)), url("../assets/hero-bg/visitor.webp") center / cover no-repeat, var(--hero); }
+}
+
+.vl-photo-credit { width: 100%; margin: 4px 0 0; font-size: 11.5px; opacity: 0.6; }
+.vl-photo-credit a { color: inherit; }
+
+/* visitors-arriving photo: anchored low so the entrance and visitors sit above the feature strip */
+.vl-hero {
+  background:
+    linear-gradient(90deg, rgba(20, 10, 28, 0.88) 0%, rgba(20, 10, 28, 0.72) 48%, rgba(20, 10, 28, 0.58) 100%),
+    url("../assets/hero-bg/visitor.webp") center bottom / cover no-repeat,
+    var(--hero);
+}
+@media (max-width: 960px) {
+  .vl-hero { background: linear-gradient(180deg, rgba(20, 10, 28, 0.8), rgba(20, 10, 28, 0.9)), url("../assets/hero-bg/visitor.webp") 35% bottom / cover no-repeat, var(--hero); }
+}
