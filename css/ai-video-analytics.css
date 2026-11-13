@@ -226,7 +226,7 @@
   max-width: 42%;
   height: 3px;
   margin-top: 16px;
-  border-radius: 999px;
+  border-radius: 999px;
   background: #6C35FF;
 }
 
@@ -316,3 +316,138 @@
   color: #1D4ED8;
   -webkit-text-fill-color: #1D4ED8;
 }
+
+/* ==== Camera shots: real photos + animated detection overlays ==============
+   Replaces the demo vector scenes. Boxes are placed in % of the frame
+   (--x, --y, --w, --h) so they stay on target at every width. */
+@keyframes vaBoxIn { from { opacity: 0; transform: scale(1.25); } to { opacity: 1; transform: none; } }
+@keyframes vaScan { 0% { top: -4%; } 100% { top: 104%; } }
+@keyframes vaBlink { 0%, 100% { opacity: 1; } 50% { opacity: .35; } }
+@keyframes vaPopIn { from { opacity: 0; transform: translateY(10px) scale(.95); } to { opacity: 1; transform: none; } }
+@keyframes vaBreath { 0%, 100% { box-shadow: 0 0 0 1px rgba(0,0,0,.35), 0 0 10px -2px var(--c); } 50% { box-shadow: 0 0 0 1px rgba(0,0,0,.35), 0 0 18px 1px var(--c); } }
+@keyframes vaDash { to { background-position: 40px 0; } }
+
+.va-shot { position: relative; width: 100%; aspect-ratio: 16 / 10; overflow: hidden; background: #141226; container-type: inline-size; }
+.va-wide-visual .va-shot { aspect-ratio: 1600 / 611; }
+.va-shot > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; filter: saturate(.9) contrast(1.04); }
+.va-shot::after { /* CCTV feel: soft vignette + faint scanlines */
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background: radial-gradient(ellipse at center, transparent 55%, rgba(10,8,24,.45)), repeating-linear-gradient(180deg, rgba(255,255,255,.035) 0 1px, transparent 1px 3px);
+}
+.va-scanline {
+  position: absolute; left: 0; right: 0; height: 18%; top: -4%; z-index: 1; pointer-events: none;
+  background: linear-gradient(180deg, transparent, rgba(124,110,255,.16) 85%, rgba(160,150,255,.5) 100%);
+  animation: vaScan 5.5s linear infinite;
+}
+
+.va-bx {
+  --c: #3DD68C;
+  position: absolute; z-index: 2;
+  left: calc(var(--x) * 1%); top: calc(var(--y) * 1%); width: calc(var(--w) * 1%); height: calc(var(--h) * 1%);
+  border: 2px solid var(--c); border-radius: 4px;
+  animation: vaBoxIn .5s cubic-bezier(.2,.8,.2,1) both, vaBreath 2.8s ease-in-out infinite;
+  animation-delay: calc(.35s + var(--i) * .25s), calc(1s + var(--i) * .3s);
+}
+.va-bx.warn { --c: #F5A623; }
+.va-bx.bad { --c: #F4536E; }
+.va-bx.info { --c: #9D93FF; }
+.va-bx.bad::before { content: ""; position: absolute; inset: -6px; border: 1px dashed var(--c); border-radius: 6px; animation: vaBlink 1.2s ease-in-out infinite; }
+.va-bx em {
+  position: absolute; left: -2px; bottom: 100%; margin-bottom: 3px;
+  padding: 2px 6px; border-radius: 4px; white-space: nowrap;
+  background: var(--c); color: #0d0b1d;
+  font: 700 clamp(8px, 1.7cqi, 11px)/1.25 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-style: normal; letter-spacing: .03em;
+}
+.va-shot .va-bx[style*="--y:5;"] em, .va-shot .va-bx[style*="--y:6;"] em, .va-shot .va-bx[style*="--y:7;"] em { bottom: auto; top: 3px; left: 3px; }
+
+/* HUD labels */
+.va-hud {
+  position: absolute; z-index: 3; top: 10px; right: 10px; display: inline-flex; align-items: center; gap: 6px;
+  padding: 3px 9px; border-radius: 20px; background: rgba(14,12,32,.7); color: #E6E2FF;
+  font: 700 clamp(8px, 1.6cqi, 11px)/1.3 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; letter-spacing: .08em;
+}
+.va-hud i { width: 7px; height: 7px; border-radius: 50%; background: #F4536E; animation: vaBlink 1.4s ease-in-out infinite; }
+.va-hud.tl { right: auto; left: 10px; }
+.va-hud.tm { right: auto; left: calc(50% + 10px); }
+.va-hud.bl { top: auto; right: auto; bottom: 10px; left: 10px; letter-spacing: .02em; font-weight: 600; }
+
+/* counting line */
+.va-countline {
+  position: absolute; z-index: 2; left: 4%; right: 4%; top: calc(var(--y) * 1%); height: 2px;
+  background: repeating-linear-gradient(90deg, #7C6EFF 0 10px, transparent 10px 16px); background-size: 40px 2px;
+  animation: vaDash 1s linear infinite;
+}
+.va-countline b {
+  position: absolute; right: 0; top: -10px; padding: 2px 8px; border-radius: 6px; background: #7C6EFF; color: #fff;
+  font: 700 clamp(8px, 1.6cqi, 11px)/1.3 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+.va-counter {
+  position: absolute; z-index: 3; left: 3%; top: 4%; padding: 10px 14px; border-radius: 10px;
+  background: rgba(20,18,38,.82); border: 1px solid #4A4670; color: #fff; display: grid; gap: 2px;
+}
+.va-counter small { font: 600 clamp(8px, 1.6cqi, 11px) ui-monospace, Menlo, Consolas, monospace; color: #B9B2E0; letter-spacing: .06em; }
+.va-counter b { font: 800 clamp(18px, 4.6cqi, 30px)/1.1 "Plus Jakarta Sans", sans-serif; }
+.va-counter em { font: 600 clamp(8px, 1.6cqi, 11px) ui-monospace, Menlo, Consolas, monospace; font-style: normal; color: #3DD68C; }
+
+/* restricted zone tint */
+.va-zonefill {
+  position: absolute; z-index: 1; left: 0; right: 0; top: 52%; bottom: 0;
+  background: linear-gradient(180deg, rgba(244,83,110,.22), rgba(244,83,110,.06));
+  border-top: 2px dashed #F4536E; animation: vaBlink 2.4s ease-in-out infinite;
+}
+
+/* alert pop cards */
+.va-pop {
+  --c: #3DD68C;
+  position: absolute; z-index: 4; display: flex; align-items: center; gap: 9px; max-width: calc(100% - 24px);
+  padding: 8px 12px 8px 8px; border-radius: 12px;
+  background: rgba(20,18,38,.86); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,.12); box-shadow: 0 14px 30px -12px rgba(0,0,0,.6);
+  color: #fff; line-height: 1.25;
+  animation: vaPopIn .6s cubic-bezier(.2,.8,.2,1) 1.4s both;
+}
+.va-pop.bad { --c: #F4536E; } .va-pop.warn { --c: #F5A623; } .va-pop.info { --c: #9D93FF; }
+.va-pop b { display: block; font-size: 12.5px; font-weight: 700; }
+.va-pop small { display: block; font-size: 11px; color: #B9B2E0; }
+.va-pop-ic { flex: none; display: grid; place-items: center; width: 30px; height: 30px; border-radius: 9px; background: var(--c); color: #0d0b1d; font-size: 13px; }
+.va-pop.bad .va-pop-ic i { animation: vaBlink 1.2s ease-in-out infinite; }
+.va-pop.br { right: 12px; bottom: 12px; }
+.va-pop.bl { left: 12px; bottom: 12px; }
+.va-pop.tl { left: 12px; top: 12px; }
+.va-pop.tr2 { right: 12px; top: 44px; }
+
+/* hero camera wall */
+.va-cam .va-shot { position: absolute; inset: 0; aspect-ratio: auto; height: 100%; }
+.va-cam .cam-tag, .va-cam .alert-tag { z-index: 5; }
+.va-cam .va-bx em { font-size: 8px; padding: 1px 4px; }
+.va-cam .va-bx { border-width: 1.5px; }
+.va-cam .alert-tag { animation: vaBlink 1.4s ease-in-out infinite; }
+
+/* capability stage: one photo per tab, cross-fade */
+.va-stage-stack { position: relative; aspect-ratio: 16 / 10; }
+.va-stage-shot { position: absolute; inset: 0; opacity: 0; visibility: hidden; transition: opacity .45s ease, visibility 0s .45s; }
+.va-stage-shot.on { opacity: 1; visibility: visible; transition: opacity .45s ease; }
+.va-stage-shot .va-shot { height: 100%; }
+.va-stage-shot:not(.on) .va-bx { animation: none; opacity: 0; }
+.va-stage-stack > .va-hud { z-index: 6; }
+
+/* boxes wait until the frame scrolls into view */
+.reveal:not(.is-visible) .va-bx, .reveal:not(.is-visible) .va-pop { animation-play-state: paused; }
+
+@media (max-width: 560px) {
+  .va-pop { padding: 6px 9px 6px 6px; gap: 7px; }
+  .va-pop-ic { width: 24px; height: 24px; font-size: 11px; border-radius: 7px; }
+  .va-pop b { font-size: 11px; } .va-pop small { font-size: 9.5px; }
+  .va-pop.br, .va-pop.bl { bottom: 8px; } .va-pop.br { right: 8px; } .va-pop.bl, .va-pop.tl { left: 8px; } .va-pop.tl { top: 8px; }
+  .va-pop.tr2 { right: 8px; top: 34px; }
+  .va-hud { top: 7px; right: 7px; padding: 2px 7px; }
+  .va-hud.tl { left: 7px; } .va-hud.bl { bottom: 7px; left: 7px; display: none; }
+  .va-counter { padding: 6px 9px; }
+  .va-wide-visual .va-pop { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .va-scanline { display: none; }
+  .va-bx, .va-bx::before, .va-pop, .va-pop i, .va-hud i, .va-countline, .va-zonefill, .va-cam .alert-tag { animation: none !important; opacity: 1; }
+  .va-stage-shot { transition: none; }
+}
+.va-cam .va-bx[style*="--y:5;"] em { display: none; }

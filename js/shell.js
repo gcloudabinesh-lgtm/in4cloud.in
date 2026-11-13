@@ -63,7 +63,6 @@
     '<a href="hrms.html#attendance"><i class="ico fa-solid fa-fingerprint" aria-hidden="true"></i> Time &amp; Attendance Management</a>' +
     '<a href="hrms.html#leave"><i class="ico fa-solid fa-calendar-check" aria-hidden="true"></i> Leave Management</a>' +
     '<a href="hrms.html#payroll"><i class="ico fa-solid fa-money-check-dollar" aria-hidden="true"></i> Payroll Processing</a>' +
-    '<a href="#"><i class="ico fa-solid fa-shield-halved" aria-hidden="true"></i> Compliance</a>' +
     '<a href="hrms.html#ess"><i class="ico fa-solid fa-mobile-screen" aria-hidden="true"></i> ESS Mobile App</a>' +
     '<a href="#"><i class="ico fa-solid fa-user-plus" aria-hidden="true"></i> Recruitment</a>' +
     '<a href="hrms.html#performance"><i class="ico fa-solid fa-chart-line" aria-hidden="true"></i> Performance Management</a>' +
@@ -106,7 +105,6 @@
     '<a href="hrms.html#attendance"><i class="ico fa-solid fa-fingerprint" aria-hidden="true"></i> Time &amp; Attendance Management</a>' +
     '<a href="hrms.html#leave"><i class="ico fa-solid fa-calendar-check" aria-hidden="true"></i> Leave Management</a>' +
     '<a href="hrms.html#payroll"><i class="ico fa-solid fa-money-check-dollar" aria-hidden="true"></i> Payroll Processing</a>' +
-    '<a href="#"><i class="ico fa-solid fa-shield-halved" aria-hidden="true"></i> Compliance</a>' +
     '<a href="hrms.html#ess"><i class="ico fa-solid fa-mobile-screen" aria-hidden="true"></i> ESS Mobile App</a>' +
     '<a href="#"><i class="ico fa-solid fa-user-plus" aria-hidden="true"></i> Recruitment</a>' +
     '<a href="hrms.html#performance"><i class="ico fa-solid fa-chart-line" aria-hidden="true"></i> Performance Management</a>' +

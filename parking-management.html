@@ -64,7 +64,15 @@
             </ul>
           </div>
           <div class="inner-hero-visual reveal" style="--rd:.18s">
-            <img src="assets/parking-hero.svg" alt="ANPR camera scanning a vehicle number plate at a parking gate with a boom barrier" style="width:100%;height:auto;display:block;border-radius:var(--r-xl);box-shadow:var(--shadow-md)">
+            <div class="pk-hero-stack">
+              <div class="pk-photo-frame">
+                <img src="assets/parking/hero.webp" width="800" height="800" alt="ANPR camera scanning a vehicle number plate at a parking gate with a boom barrier">
+                <span class="pk-scan" aria-hidden="true"></span>
+              </div>
+              <div class="pk-pop pk-pop--a" aria-hidden="true"><span class="pk-pop-ic"><i class="ico fa-solid fa-camera"></i></span><span><b>ANPR detection</b><small><span class="pk-plate">TN 09 •• 4821</span> read at Gate A</small></span><span class="pk-live"></span></div>
+              <div class="pk-pop pk-pop--b" aria-hidden="true"><span class="pk-pop-ic"><i class="ico fa-solid fa-road-barrier"></i></span><span><b>Barrier automation</b><small>Gate A · boom raised</small></span><i class="ico fa-solid fa-circle-check pk-ok"></i></div>
+              <div class="pk-pop pk-pop--c" aria-hidden="true"><span class="pk-pop-ic"><i class="ico fa-solid fa-qrcode"></i></span><span><b>QR token flow</b><small>Token A-1042 · in 10:24</small></span></div>
+            </div>
           </div>
         </div>
       </div>
@@ -83,11 +91,17 @@
             <div class="pk-variant"><span class="num">02</span><div><h3>Semi-Automated Flow</h3><p>Reduced manual work with automated detection and app-based notifications. Ideal for corporate campuses and gated communities.</p></div></div>
             <div class="pk-variant"><span class="num">03</span><div><h3>AI Automated Flow</h3><p>Complete automation with self-service payment kiosks and whitelisting capabilities. Built for airports, smart cities, and large-scale facilities.</p></div></div>
           </div>
-          <div class="pk-panel reveal" style="--rd:.1s" aria-hidden="true">
-            <div class="pk-panel-row"><span class="icon-badge soft-purple"><i class="ico fa-solid fa-camera"></i></span><div><strong>ANPR cameras</strong><span>Automatic number plate recognition at entry &amp; exit</span></div></div>
-            <div class="pk-panel-row"><span class="icon-badge soft-purple"><i class="ico fa-solid fa-road-barrier"></i></span><div><strong>Boom barrier control</strong><span>Entrance and exit gates respond automatically</span></div></div>
-            <div class="pk-panel-row"><span class="icon-badge soft-purple"><i class="ico fa-solid fa-gauge-high"></i></span><div><strong>Real-time dashboards</strong><span>Live occupancy, fees and vehicle tracking</span></div></div>
-            <div class="pk-panel-row"><span class="icon-badge soft-purple"><i class="ico fa-solid fa-mobile-screen"></i></span><div><strong>Pro-Parking app</strong><span>Smart notifications and stay-duration popups</span></div></div>
+          <div class="pk-panel pk-panel--shot reveal" style="--rd:.1s" aria-hidden="true">
+            <div class="pk-screen">
+              <div class="pk-screen-bar"><i></i><i></i><i></i><span>Pro-Parking · Live gates</span></div>
+              <img src="assets/parking/dashboard.webp" width="1200" height="560" alt="" loading="lazy">
+            </div>
+            <div class="pk-chips">
+              <div class="pk-chip"><span class="pk-pop-ic"><i class="ico fa-solid fa-camera"></i></span><div><strong>ANPR cameras</strong><span>Automatic number plate recognition at entry &amp; exit</span></div></div>
+              <div class="pk-chip"><span class="pk-pop-ic"><i class="ico fa-solid fa-road-barrier"></i></span><div><strong>Boom barrier control</strong><span>Entrance and exit gates respond automatically</span></div></div>
+              <div class="pk-chip"><span class="pk-pop-ic"><i class="ico fa-solid fa-gauge-high"></i></span><div><strong>Real-time dashboards</strong><span>Live occupancy, fees and vehicle tracking</span></div></div>
+              <div class="pk-chip"><span class="pk-pop-ic"><i class="ico fa-solid fa-mobile-screen"></i></span><div><strong>Pro-Parking app</strong><span>Smart notifications and stay-duration popups</span></div></div>
+            </div>
           </div>
         </div>
       </div>
@@ -117,10 +131,11 @@
         </div>
         <div class="pk-split">
           <div class="reveal" aria-hidden="true">
-            <div class="pk-panel">
-              <div class="pk-panel-row"><span class="icon-badge soft-purple"><i class="ico fa-solid fa-tv"></i></span><div><strong>Android TV welcome</strong><span>Custom message on entry display</span></div></div>
-              <div class="pk-panel-row"><span class="icon-badge soft-purple"><i class="ico fa-solid fa-mobile-screen"></i></span><div><strong>Pro-Parking app popup</strong><span>Stay duration and charges on exit</span></div></div>
-              <div class="pk-panel-row"><span class="icon-badge soft-purple"><i class="ico fa-solid fa-hand-holding-dollar"></i></span><div><strong>Staff payment desk</strong><span>Reduced, supervised workload</span></div></div>
+            <div class="pk-photo-card">
+              <img src="assets/parking/entry-lanes.webp" width="1280" height="800" alt="" loading="lazy">
+              <div class="pk-mpop pk-mpop--tv"><div class="pk-tv"><small>Welcome</small><b class="pk-plate">TN 09 •• 4821</b><em>Entry 10:24 · Gate A</em></div><div><strong>Android TV welcome</strong><span>Custom message on entry display</span></div></div>
+              <div class="pk-mpop pk-mpop--app"><span class="pk-pop-ic"><i class="ico fa-solid fa-mobile-screen"></i></span><div><strong>Pro-Parking app popup</strong><span>Stay duration and charges on exit</span><em class="pk-fee">Stay 2h 05m · ₹60</em></div></div>
+              <div class="pk-mpop pk-mpop--desk"><span class="pk-pop-ic"><i class="ico fa-solid fa-hand-holding-dollar"></i></span><div><strong>Staff payment desk</strong><span>Reduced, supervised workload</span></div><i class="ico fa-solid fa-circle-check pk-ok"></i></div>
             </div>
           </div>
           <div>
@@ -159,7 +174,11 @@
             <p class="eyebrow">Why Pro-Parking</p>
             <h2 class="section-title" id="why-title" style="margin-top:14px">Why Choose <em class="pk-dual">Pro-Parking</em>?</h2>
             <p class="section-lead">Transform your parking operations today with Pro-Parking's intelligent management system.</p>
-            <img src="assets/pk-why.svg" alt="Parking lot with ANPR camera, boom barrier and parked cars" loading="lazy" style="width:100%;height:auto;display:block;margin-top:26px;border-radius:var(--r-lg)">
+            <div class="pk-photo-card pk-photo-card--why">
+              <img src="assets/parking/mall-parking.webp" width="1280" height="800" alt="Shopper walking to a parked car in a mall car park" loading="lazy">
+              <div class="pk-mpop pk-mpop--tl" aria-hidden="true"><span class="pk-pop-ic"><i class="ico fa-solid fa-square-parking"></i></span><div><strong>182 / 240 bays in use</strong><span>Level 1 · 58 free</span></div><span class="pk-live"></span></div>
+              <div class="pk-mpop pk-mpop--br" aria-hidden="true"><span class="pk-pop-ic"><i class="ico fa-solid fa-indian-rupee-sign"></i></span><div><strong>₹60 paid · UPI</strong><span>Stay 2h 05m · barrier open</span></div><i class="ico fa-solid fa-circle-check pk-ok"></i></div>
+            </div>
           </div>
           <div>
             <div class="pk-frow reveal"><span class="icon-badge purple"><i class="ico fa-solid fa-sliders" aria-hidden="true"></i></span><div><h3>Ultimate Flexibility</h3><p>Choose from normal, semi-automated, or fully automated flows to match your operational requirements and budget constraints.</p></div></div>
@@ -230,7 +249,7 @@
 
   </main>
 <script defer src="js/site.js?v=20261030f"></script>
-  <script defer src="js/shell.js?v=20261112"></script>
+  <script defer src="js/shell.js?v=20261113"></script>
   <script defer src="js/lead.js?v=20261030d"></script>
 <script defer src="js/demo-modal.js?v=20261030"></script>
   <script defer src="js/main.js"></script>

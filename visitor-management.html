@@ -63,11 +63,14 @@
             </ul>
           </div>
           <div class="inner-hero-visual vm-hero-visual reveal" style="--rd:.16s" aria-hidden="true">
-            <div class="vm-hero-stack">
-              <img src="assets/visitor-hero.svg" alt="Visitor check-in at a reception desk with a QR pass and parking access" style="width:100%;height:auto;display:block;border-radius:var(--r-xl);box-shadow:var(--shadow-md)">
-              <div class="vm-float qr"><i class="ico fa-solid fa-qrcode" aria-hidden="true"></i>QR visitor check-in</div>
-              <div class="vm-float pass"><i class="ico fa-solid fa-id-card" aria-hidden="true"></i>Visitor pass issued</div>
-              <div class="vm-float park"><i class="ico fa-solid fa-square-parking" aria-hidden="true"></i>Parking access granted</div>
+            <div class="vm-hero-stack vm-photo">
+              <div class="vm-photo-frame">
+                <img src="assets/visitor/hero.webp" width="800" height="800" alt="Visitor check-in at a reception desk with a QR pass and parking access">
+                <span class="vm-scan" aria-hidden="true"></span>
+              </div>
+              <div class="vm-float vm-pop qr"><span class="vm-pop-ic"><i class="ico fa-solid fa-qrcode" aria-hidden="true"></i></span><span><b>QR visitor check-in</b><small>VIS-0422 · Gate 1 · 10:52</small></span><span class="vm-live" aria-hidden="true"></span></div>
+              <div class="vm-float vm-pop pass"><span class="vm-pop-ic"><i class="ico fa-solid fa-id-card" aria-hidden="true"></i></span><span><b>Visitor pass issued</b><small>Valid today · 11:00–13:00</small></span></div>
+              <div class="vm-float vm-pop park"><span class="vm-pop-ic"><i class="ico fa-solid fa-square-parking" aria-hidden="true"></i></span><span><b>Parking access granted</b><small>Bay B-14 reserved</small></span><i class="ico fa-solid fa-circle-check vm-ok" aria-hidden="true"></i></div>
             </div>
           </div>
         </div>
@@ -84,7 +87,10 @@
           <div class="vm-journey reveal">
             <h3>Pre-Approved Visitors</h3>
             <p>Streamlined check-in for scheduled visitors</p>
-            <div class="vm-journey-media"><img src="assets/vm-pre-approved.svg" alt="Pre-approved visitor scanning a QR code at the reception desk" loading="lazy"></div>
+            <div class="vm-journey-media vm-photo"><img src="assets/visitor/pre-approved.webp?v=2" width="1280" height="800" alt="Pre-approved visitor being welcomed at the reception desk" loading="lazy">
+              <div class="vm-mpop vm-mpop--tl" aria-hidden="true"><span class="vm-pop-ic"><i class="ico fa-solid fa-calendar-check"></i></span><span><b>Invite approved</b><small>VIS-0422 · Client visit</small></span></div>
+              <div class="vm-mpop vm-mpop--br" aria-hidden="true"><span class="vm-qr"><i class="ico fa-solid fa-qrcode"></i><span class="vm-qr-line"></span></span><span><b>QR pass scanned</b><small>Checked in · 10:52</small></span><i class="ico fa-solid fa-circle-check vm-ok"></i></div>
+            </div>
             <div class="vm-steps">
               <div class="vm-step"><span class="icon-badge soft-purple"><i class="ico fa-solid fa-user-plus" aria-hidden="true"></i></span><div><strong>Online registration and approval workflow</strong><span>Pre-Approved Visitor → Approval</span></div></div>
               <div class="vm-step"><span class="icon-badge purple"><i class="ico fa-solid fa-qrcode" aria-hidden="true"></i></span><div><strong>QR code access and check-in</strong><span>QR Code → Check-In</span></div></div>
@@ -94,7 +100,10 @@
           <div class="vm-journey reveal" style="--rd:.08s">
             <h3>Walk-In Visitors</h3>
             <p>Efficient entry process for unscheduled guests</p>
-            <div class="vm-journey-media"><img src="assets/vm-walk-in.svg" alt="Walk-in visitor arriving while the host receives an instant notification" loading="lazy"></div>
+            <div class="vm-journey-media vm-photo"><img src="assets/visitor/walk-in.webp" width="1280" height="800" alt="Walk-in visitors arriving at an office entrance" loading="lazy">
+              <div class="vm-mpop vm-mpop--tl" aria-hidden="true"><span class="vm-pop-ic vm-bell"><i class="ico fa-solid fa-bell"></i></span><span><b>Host notified</b><small>Walk-in at Gate 2 · EMP 014</small></span></div>
+              <div class="vm-mpop vm-mpop--br vm-mpop--act" aria-hidden="true"><span><b>Allow entry?</b><small>VIS-0419 · Vendor delivery</small></span><span class="vm-btns"><span class="vm-btn-no">Decline</span><span class="vm-btn-yes">Approve</span></span></div>
+            </div>
             <div class="vm-steps">
               <div class="vm-step"><span class="icon-badge soft-purple"><i class="ico fa-solid fa-bell" aria-hidden="true"></i></span><div><strong>Host notification and registration</strong><span>Arrival → Host notified</span></div></div>
               <div class="vm-step"><span class="icon-badge soft-green"><i class="ico fa-solid fa-right-to-bracket" aria-hidden="true"></i></span><div><strong>Quick check-in and check-out</strong><span>Fast entry and exit</span></div></div>
@@ -149,32 +158,11 @@
       <div class="container">
         <div class="split">
           <div class="reveal" aria-hidden="true">
-            <div class="panel-shell">
+            <div class="vm-screen vm-photo">
               <div class="panel-bar"><i class="ico fa-solid fa-circle" style="color:#e05b5b;font-size:8px"></i><i class="ico fa-solid fa-circle" style="color:#f0b45b;font-size:8px"></i><i class="ico fa-solid fa-circle" style="color:#72bf44;font-size:8px"></i><span class="panel-title">Pro-Visit · Visitor Management</span></div>
-              <div style="padding:20px;display:grid;gap:16px">
-                <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
-                  <div style="background:var(--purple-50);border-radius:var(--r-md);padding:14px;border:1px solid var(--border-soft)">
-                    <p style="font-size:11px;font-weight:700;color:var(--purple-700);text-transform:uppercase;letter-spacing:.08em">On-site now</p>
-                    <strong style="font-family:'Plus Jakarta Sans',sans-serif;font-size:22px;color:var(--ink-900)">12 visitors</strong>
-                  </div>
-                  <div style="background:var(--green-50);border-radius:var(--r-md);padding:14px;border:1px solid var(--border-soft)">
-                    <p style="font-size:11px;font-weight:700;color:var(--green-700);text-transform:uppercase;letter-spacing:.08em">Access granted</p>
-                    <strong style="font-family:'Plus Jakarta Sans',sans-serif;font-size:22px;color:var(--ink-900)">96.4%</strong>
-                  </div>
-                </div>
-                <div class="dash-list">
-                  <div class="dl-row">
-                    <span class="dl-name"><span class="dl-avatar">Q</span>QR check-in</span>
-                    <span class="dl-meta">Reception kiosk</span>
-                    <span class="dl-status"><i class="ico fa-solid fa-check" aria-hidden="true"></i> Synced</span>
-                  </div>
-                  <div class="dl-row">
-                    <span class="dl-name"><span class="dl-avatar" style="background:var(--purple-50);color:var(--purple-600)">A</span>Access control</span>
-                    <span class="dl-meta">Gate &amp; turnstiles</span>
-                    <span class="dl-status"><i class="ico fa-solid fa-check" aria-hidden="true"></i> Integrated</span>
-                  </div>
-                </div>
-              </div>
+              <img src="assets/visitor/dashboard.webp" width="1200" height="560" alt="Visitor log dashboard showing visitors on site, expected today and recent check-ins" loading="lazy">
+              <div class="vm-mpop vm-mpop--tr"><span class="vm-pop-ic"><i class="ico fa-solid fa-door-open"></i></span><span><b>Access control</b><small>Gate &amp; turnstiles · Integrated</small></span><i class="ico fa-solid fa-circle-check vm-ok"></i></div>
+              <div class="vm-mpop vm-mpop--bl"><span class="vm-pop-ic"><i class="ico fa-solid fa-calendar-check"></i></span><span><b>Calendar synced</b><small>3 meetings · invites sent</small></span></div>
             </div>
           </div>
           <div class="reveal" style="--rd:.1s">
@@ -205,8 +193,11 @@
       <div class="container">
         <div class="vm-showcase vm-showcase--flip">
           <div class="reveal">
-            <div class="vm-facility" aria-hidden="true">
-              <img src="assets/vm-applications.svg" alt="Corporate office, healthcare facility, educational institution and government building illustrations" loading="lazy" style="width:100%;height:auto;display:block">
+            <div class="vm-facility vm-venues" aria-hidden="true">
+              <figure class="vm-venue is-on"><img src="assets/visitor/venue-corp.webp" width="640" height="440" alt="" loading="lazy"><figcaption><i class="ico fa-solid fa-building"></i>Corporate Offices</figcaption><span class="vm-vchip"><i class="ico fa-solid fa-user-check"></i>12 on-site</span></figure>
+              <figure class="vm-venue"><img src="assets/visitor/venue-health.webp" width="640" height="440" alt="" loading="lazy"><figcaption><i class="ico fa-solid fa-hospital"></i>Healthcare Facilities</figcaption><span class="vm-vchip"><i class="ico fa-solid fa-id-card"></i>Ward pass</span></figure>
+              <figure class="vm-venue"><img src="assets/visitor/venue-edu.webp" width="640" height="440" alt="" loading="lazy"><figcaption><i class="ico fa-solid fa-graduation-cap"></i>Educational Institutions</figcaption><span class="vm-vchip"><i class="ico fa-solid fa-qrcode"></i>Gate QR</span></figure>
+              <figure class="vm-venue"><img src="assets/visitor/venue-gov.webp" width="640" height="440" alt="" loading="lazy"><figcaption><i class="ico fa-solid fa-landmark"></i>Government Buildings</figcaption><span class="vm-vchip"><i class="ico fa-solid fa-shield-halved"></i>ID verified</span></figure>
             </div>
           </div>
           <div>
@@ -324,7 +315,8 @@
 
   </main>
 <script defer src="js/site.js?v=20261030f"></script>
-  <script defer src="js/shell.js?v=20261112"></script>
+  <script defer src="js/vm-media.js"></script>
+  <script defer src="js/shell.js?v=20261113"></script>
   <script defer src="js/lead.js?v=20261030d"></script>
 <script defer src="js/demo-modal.js?v=20261030"></script>
   <script defer src="js/main.js"></script>
