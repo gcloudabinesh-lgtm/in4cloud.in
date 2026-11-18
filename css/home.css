@@ -2746,3 +2746,19 @@
 @media (prefers-reduced-motion: reduce) {
   .pr-art--slides3 img + img { animation: none; opacity: 0; }
 }
+/* plan cards: employee cap under the group-package price */
+.pricing-cap {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin: 12px auto 0;
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: #e7f6e0;
+  color: #2f6f23;
+  font-size: 13px;
+  font-weight: 700;
+}
+.pricing-cap .ico { font-size: 12px; width: 1em; height: 1em; }
+.pricing-head:has(.pricing-cap) { display: flex; flex-direction: column; align-items: center; }
+.pricing-head:has(.pricing-cap) .pricing-extra { margin-top: 10px; }
