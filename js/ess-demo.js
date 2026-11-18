@@ -19,7 +19,9 @@
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   /* the control the finger taps on each HTML screen */
-  var targets = ['.ess-btn-in', '.ess-cta', '.ess-cta', '.ess-cta', '.ess-track', '.ess-note'];
+  var targets = ['.ess-btn-in', '.ess-cta', '.ess-cta', '.ess-cta', '.ess-cta', '.ess-cta', '.ess-cta', '.ess-track', '.ess-cta', '.ess-cta', '.ess-note'];
+  /* order: check in, selfie, leave, payslip, expense, approvals, reports,
+     live tracking, invite visitor, helpdesk, notifications */
 
   var STEP_MS = 5200;
   var TAP_AT = 1500;

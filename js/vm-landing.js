@@ -1,4 +1,4 @@
-/* IN4 Pro-Visit landing page: header shadow and reading progress on scroll,
+/* IN4 Visiting landing page: header shadow and reading progress on scroll,
    the menu link for the section in view, back to top, mobile menu and
    scroll-in reveals. */
 (function () {

@@ -579,3 +579,69 @@
   .page-visitor .vm-scan { display: none; }
   .page-visitor .reveal .vm-pop, .page-visitor .reveal .vm-mpop { opacity: 1; animation: none !important; }
 }
+
+/* ---- FAQ: two columns of three (one column on phones) ---- */
+.vm-faq {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px 24px;
+  align-items: start;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+.vm-faq-col { display: grid; gap: 16px; }
+.vm-faq-item {
+  background: #fff;
+  border: 1px solid #fbcfe8;
+  border-radius: var(--r-md);
+  box-shadow: 0 8px 22px -16px rgba(190, 24, 93, 0.35);
+  transition: border-color .25s var(--ease), box-shadow .25s var(--ease);
+}
+.vm-faq-item:hover { border-color: #f9a8d4; }
+.vm-faq-item[open] { border-color: #ec4899; box-shadow: 0 14px 30px -18px rgba(190, 24, 93, 0.45); }
+.vm-faq-item summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 18px 20px;
+  cursor: pointer;
+  list-style: none;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 15.5px;
+  font-weight: 700;
+  line-height: 1.35;
+  color: var(--ink-900);
+}
+.vm-faq-item summary::-webkit-details-marker { display: none; }
+.vm-faq-item summary:focus-visible { outline: 2px solid #ec4899; outline-offset: 3px; border-radius: var(--r-md); }
+.vm-faq-item summary .ico {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #fdf2f8;
+  color: #db2777;
+  font-size: 13px;
+  transition: transform .3s var(--ease), background .3s var(--ease), color .3s var(--ease);
+}
+.vm-faq-item[open] summary .ico { transform: rotate(45deg); background: #ec4899; color: #fff; }
+.vm-faq-item p {
+  margin: 0;
+  padding: 0 20px 18px;
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: var(--text-muted);
+}
+@media (max-width: 860px) {
+  .vm-faq { grid-template-columns: 1fr; }
+}
+@media (max-width: 520px) {
+  .vm-faq-item summary { padding: 15px 16px; font-size: 14.5px; }
+  .vm-faq-item p { padding: 0 16px 15px; font-size: 14px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .vm-faq-item summary .ico { transition: none; }
+}

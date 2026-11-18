@@ -64,7 +64,7 @@
     '<a href="hrms.html#leave"><i class="ico fa-solid fa-calendar-check" aria-hidden="true"></i> Leave Management</a>' +
     '<a href="hrms.html#payroll"><i class="ico fa-solid fa-money-check-dollar" aria-hidden="true"></i> Payroll Processing</a>' +
     '<a href="hrms.html#ess"><i class="ico fa-solid fa-mobile-screen" aria-hidden="true"></i> ESS Mobile App</a>' +
-    '<a href="#"><i class="ico fa-solid fa-user-plus" aria-hidden="true"></i> Recruitment</a>' +
+    '<a href="hrms.html#recruitment"><i class="ico fa-solid fa-user-plus" aria-hidden="true"></i> Recruitment</a>' +
     '<a href="hrms.html#performance"><i class="ico fa-solid fa-chart-line" aria-hidden="true"></i> Performance Management</a>' +
     '<a href="hrms.html#training"><i class="ico fa-solid fa-graduation-cap" aria-hidden="true"></i> Training &amp; Learning</a>' +
     "</div></div>" +
@@ -106,7 +106,7 @@
     '<a href="hrms.html#leave"><i class="ico fa-solid fa-calendar-check" aria-hidden="true"></i> Leave Management</a>' +
     '<a href="hrms.html#payroll"><i class="ico fa-solid fa-money-check-dollar" aria-hidden="true"></i> Payroll Processing</a>' +
     '<a href="hrms.html#ess"><i class="ico fa-solid fa-mobile-screen" aria-hidden="true"></i> ESS Mobile App</a>' +
-    '<a href="#"><i class="ico fa-solid fa-user-plus" aria-hidden="true"></i> Recruitment</a>' +
+    '<a href="hrms.html#recruitment"><i class="ico fa-solid fa-user-plus" aria-hidden="true"></i> Recruitment</a>' +
     '<a href="hrms.html#performance"><i class="ico fa-solid fa-chart-line" aria-hidden="true"></i> Performance Management</a>' +
     '<a href="hrms.html#training"><i class="ico fa-solid fa-graduation-cap" aria-hidden="true"></i> Training &amp; Learning</a>' +
     '<span class="mobile-sub-title">Workplace Modules</span>' +
@@ -138,11 +138,11 @@
     "<p>Modern HR &amp; Workplace Platform for Growing Enterprises.</p>" +
     '<p style="margin-top:10px;font-size:13px">A business automation division of ' + S.company + ".</p>" +
     '<div class="footer-social">' +
-    '<a href="https://www.facebook.com/in4solution" target="_blank" rel="noopener" aria-label="Facebook"><i class="ico fa-brands fa-facebook-f" aria-hidden="true"></i></a>' +
-    '<a href="https://www.linkedin.com/company/in4solution" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="ico fa-brands fa-linkedin-in" aria-hidden="true"></i></a>' +
-    '<a href="https://twitter.com/in4solution" target="_blank" rel="noopener" aria-label="Twitter / X"><i class="ico fa-brands fa-x-twitter" aria-hidden="true"></i></a>' +
-    '<a href="https://www.instagram.com/in4solution" target="_blank" rel="noopener" aria-label="Instagram"><i class="ico fa-brands fa-instagram" aria-hidden="true"></i></a>' +
-    '<a href="https://www.youtube.com/@in4solution" target="_blank" rel="noopener" aria-label="YouTube"><i class="ico fa-brands fa-youtube" aria-hidden="true"></i></a>' +
+    '<a href="https://www.facebook.com/profile.php?id=61596114989984" target="_blank" rel="noopener" aria-label="Facebook"><i class="ico fa-brands fa-facebook-f" aria-hidden="true"></i></a>' +
+    '<a href="https://www.linkedin.com/company/91528656/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="ico fa-brands fa-linkedin-in" aria-hidden="true"></i></a>' +
+    '<a href="https://x.com/in4cloudhr" target="_blank" rel="noopener" aria-label="Twitter / X"><i class="ico fa-brands fa-x-twitter" aria-hidden="true"></i></a>' +
+    '<a href="https://www.instagram.com/in4cloudhr/" target="_blank" rel="noopener" aria-label="Instagram"><i class="ico fa-brands fa-instagram" aria-hidden="true"></i></a>' +
+    '<a href="https://www.youtube.com/@In4CloudHR" target="_blank" rel="noopener" aria-label="YouTube"><i class="ico fa-brands fa-youtube" aria-hidden="true"></i></a>' +
     "</div>" +
     '<div class="footer-apps">' +
     '<a href="https://play.google.com/store/apps/details?id=com.in4.in4cloud" target="_blank" rel="noopener" class="app-badge" aria-label="Get it on Google Play">' +

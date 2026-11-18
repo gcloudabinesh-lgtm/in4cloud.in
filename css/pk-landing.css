@@ -1,5 +1,5 @@
 /* ==========================================================================
-   IN4 Pro-Parking — Parking Management landing page (parking-landing.html)
+   IN4 Parking — Parking Management landing page (parking-landing.html)
    A standalone page with its own layout: a road / parking-lot theme.
    Colours follow the Parking module (cyan #22C7D6, deep #0E7490,
    light #A5F3FC — the same code as its Platform Modules tab) with the IN4
@@ -238,8 +238,8 @@ p { margin: 0; }
 }
 /* the car */
 .pl-car { position: absolute; left: 0; bottom: 16%; width: 30%; animation: plCar 7s var(--ease) infinite; }
-.pl-car svg { display: block; width: 100%; height: auto; filter: drop-shadow(0 10px 14px rgba(0, 0, 0, 0.45)); }
-.pl-car .pl-plate { position: absolute; right: 5%; bottom: 26%; padding: 1px 4px; border-radius: 3px; background: #fff; color: #0f1f26; font: 800 clamp(6px, 1.7cqw, 10px)/1.2 "Plus Jakarta Sans", sans-serif; white-space: nowrap; }
+.pl-car svg { display: block; width: 100%; height: auto; filter: drop-shadow(0 10px 14px rgba(0, 0, 0, 0.45)); transform: scaleX(-1); } /* car drawn mirrored: front and back swapped */
+.pl-car .pl-plate { position: absolute; left: 5%; bottom: 26%; padding: 1px 4px; border-radius: 3px; background: #fff; color: #0f1f26; font: 800 clamp(6px, 1.7cqw, 10px)/1.2 "Plus Jakarta Sans", sans-serif; white-space: nowrap; }
 /* readouts that pop over the scene */
 .pl-read {
   position: absolute;

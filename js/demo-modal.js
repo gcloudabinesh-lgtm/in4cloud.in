@@ -39,7 +39,7 @@
             '<div class="form-grid">' +
               '<div class="form-field">' +
                 '<label for="demo-fullName">Full Name <span class="req">*</span></label>' +
-                '<input class="form-input" id="demo-fullName" name="fullName" type="text" autocomplete="name" placeholder="e.g. Meera Iyer" required>' +
+                '<input class="form-input" id="demo-fullName" name="fullName" type="text" autocomplete="name" placeholder="Your name" required>' +
                 '<span class="form-error" data-error-for="fullName" role="alert"></span>' +
               "</div>" +
               '<div class="form-field">' +

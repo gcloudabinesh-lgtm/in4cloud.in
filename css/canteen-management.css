@@ -520,3 +520,4 @@
   .cm-counter { margin-inline: auto; }
 }
 @media (max-width: 600px) { .cm-float--split { display: none; } }
+.cm-price-note b sup { font-size: .5em; vertical-align: super; margin-left: 1px; }

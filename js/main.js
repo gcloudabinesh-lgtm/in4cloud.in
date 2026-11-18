@@ -317,3 +317,21 @@
     }
   }
 })();
+
+/* Deep links to an expandable item (<details id="...">), e.g.
+   hrms.html#core-onboarding: open that item (its group closes the others)
+   and bring it into view. */
+(function () {
+  function openTarget() {
+    var id = decodeURIComponent(location.hash.slice(1));
+    if (!id) return;
+    var el = document.getElementById(id);
+    if (!el || el.tagName !== 'DETAILS') return;
+    el.open = true;
+    el.classList.add('is-visible');
+    setTimeout(function () { el.scrollIntoView({ block: 'center' }); }, 60);
+  }
+  window.addEventListener('hashchange', openTarget);
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', openTarget);
+  else openTarget();
+})();

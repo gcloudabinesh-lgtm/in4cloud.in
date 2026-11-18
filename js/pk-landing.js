@@ -1,4 +1,4 @@
-/* IN4 Pro-Parking landing page (parking-landing.html):
+/* IN4 Parking landing page (parking-landing.html):
    - floating header turns light once the dark hero is behind it, with a
      reading-progress line; the menu link for the section in view is marked
    - mobile menu, back to top (its ring fills as the page scrolls)

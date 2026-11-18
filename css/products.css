@@ -248,7 +248,7 @@
 
 .contact-map-card .icon-badge { width: 32px; height: 32px; flex-shrink: 0; border-radius: 10px; font-size: 13px; }
 
-.contact-map-text { display: flex; flex-direction: column; min-width: 0; line-height: 1.35; }
+.contact-map-text { display: flex; flex-direction: column; min-width: 0; line-height: 1.35; font-style: normal; }
 .contact-map-text b { font-family: "Plus Jakarta Sans", sans-serif; font-size: 13px; color: var(--ink-800); }
 .contact-map-text em { font-style: normal; font-size: 11.5px; color: var(--text-muted); }
 
