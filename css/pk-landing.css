@@ -1030,3 +1030,33 @@ p { margin: 0; }
 @media (max-width: 960px) {
   .pl-hero { background: linear-gradient(180deg, rgba(4, 22, 29, 0.8), rgba(4, 22, 29, 0.9)), url("../assets/hero-bg/parking.webp") center / cover no-repeat, var(--asphalt); }
 }
+
+/* ---- Pricing: price-enquiry form in place of the ticket ---- */
+.pl-price-form { align-self: center; }
+.pl-pf-tag { display: inline-flex; align-items: center; gap: 7px; margin-bottom: 12px; padding: 5px 12px; border-radius: 999px; background: var(--pk-soft); color: var(--pk-deep); font-size: 12.5px; font-weight: 700; }
+.pl-price-form select.form-input { appearance: auto; }
+/* compact, to sit level with the gate scene card beside it (desktop) */
+@media (min-width: 761px) {
+  .pl-price-form { padding: 22px 26px; }
+  .pl-price-form .pl-pf-tag { margin-bottom: 8px; padding: 4px 10px; font-size: 11.5px; }
+  .pl-price-form h2 { font-size: 20px; }
+  .pl-price-form > p:not(.pl-form-note) { margin-top: 4px; font-size: 13.5px; }
+  .pl-price-form .pl-form-grid { gap: 0 12px; margin-top: 12px; }
+  .pl-price-form .form-field { gap: 4px; }
+  .pl-price-form label { font-size: 12.5px; }
+  .pl-price-form .form-input { padding: 8px 12px; font-size: 14px; border-radius: 10px; }
+  .pl-price-form .form-error { min-height: 13px; font-size: 11px; }
+  .pl-price-form .pl-span-2 .form-input { margin-bottom: 10px; }
+  .pl-price-form .pl-btn { padding-block: 11px; }
+  .pl-price-form .pl-form-note { margin-top: 8px; font-size: 12px; }
+}
+@media (min-width: 761px) {
+  .pl-price-form { padding-block: 20px; }
+  .pl-price-form .pl-pf-tag { margin-bottom: 6px; }
+  .pl-price-form .pl-span-2 .form-input { margin-bottom: 6px; }
+  .pl-price-form .form-error { min-height: 12px; }
+}
+@media (min-width: 761px) {
+  .pl-book:has(.pl-price-form) { align-items: start; }
+  .pl-book .pl-price-form { align-self: start; }
+}

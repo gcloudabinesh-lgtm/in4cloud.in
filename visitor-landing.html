@@ -379,12 +379,48 @@
               <li>Visitor log &amp; reports</li>
             </ul>
           </div>
-          <div class="vl-price-card">
-            <small>Starting from</small>
-            <b>₹1,499</b>
-            <span>per location / month</span>
-            <a class="vl-btn vl-btn--primary vl-btn--block" href="#demo">Get a quote <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
-            <p>Indicative, subject to commercial confirmation. Exclusive of GST. <a href="pricing.html">All pricing</a></p>
+          <form class="vl-price-card vl-price-form lead-form" data-lead-form novalidate aria-labelledby="vl-pf-title">
+            <h3 id="vl-pf-title">Get your price</h3>
+            <p class="vl-pf-sub">Tell us about your sites and we&rsquo;ll send a quote.</p>
+            <label class="hp-field" for="vl-pf-hp" aria-hidden="true">Website</label>
+            <input class="hp-field" id="vl-pf-hp" name="website" data-hp tabindex="-1" autocomplete="off" aria-hidden="true">
+            <input type="hidden" name="pageSource" value="Visitor Management landing — Price Enquiry">
+            <input type="hidden" name="product" value="Visitor Management">
+            <div class="vl-pf-grid">
+              <div class="form-field">
+                <label for="vl-pf-name">Full name <span class="req">*</span></label>
+                <input class="form-input" id="vl-pf-name" name="fullName" type="text" autocomplete="name" placeholder="Your name" required>
+                <span class="form-error" data-error-for="fullName" role="alert"></span>
+              </div>
+              <div class="form-field">
+                <label for="vl-pf-company">Company <span class="req">*</span></label>
+                <input class="form-input" id="vl-pf-company" name="company" type="text" autocomplete="organization" placeholder="Company name" required>
+                <span class="form-error" data-error-for="company" role="alert"></span>
+              </div>
+              <div class="form-field">
+                <label for="vl-pf-phone">Phone <span class="req">*</span></label>
+                <input class="form-input" id="vl-pf-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+91" required>
+                <span class="form-error" data-error-for="phone" role="alert"></span>
+              </div>
+              <div class="form-field">
+                <label for="vl-pf-email">Work email <span class="req">*</span></label>
+                <input class="form-input" id="vl-pf-email" name="email" type="email" autocomplete="email" placeholder="you@company.com" required>
+                <span class="form-error" data-error-for="email" role="alert"></span>
+              </div>
+              <div class="form-field vl-span-2">
+                <label for="vl-pf-sites">Number of locations</label>
+                <select class="form-input" id="vl-pf-sites" name="message">
+                  <option value="Price enquiry: 1 location">1 location</option>
+                  <option value="Price enquiry: 2–5 locations">2–5 locations</option>
+                  <option value="Price enquiry: 6–10 locations">6–10 locations</option>
+                  <option value="Price enquiry: more than 10 locations">More than 10 locations</option>
+                </select>
+              </div>
+            </div>
+            <button type="submit" class="vl-btn vl-btn--primary vl-btn--block" data-submit>Get my quote <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
+            <div class="form-status" data-lead-status aria-live="polite"></div>
+            <p class="vl-pf-note"><i class="fa-solid fa-lock" aria-hidden="true"></i> Your details are only used to respond to your enquiry.</p>
+          </form>
           </div>
         </div>
       </div>
@@ -497,7 +533,7 @@
   </button>
 
   <script defer src="js/site.js?v=20261030f"></script>
-  <script defer src="js/lead.js?v=20261030d"></script>
+  <script defer src="js/lead.js?v=20261118"></script>
   <script defer src="js/vm-landing.js"></script>
 </body>
 </html>

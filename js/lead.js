@@ -47,7 +47,8 @@
   }
 
   // Page name and enquiry type from the form's pageSource, which reads like
-  // "HRMS — Book a Free Demo", "Contact page — Book a Demo" or "Demo popup".
+  // "HRMS — Book a Free Demo", "Contact page — Book a Demo", "… — Price Enquiry"
+  // or "Demo popup".
   function formInfo(pageSource) {
     const src = pageSource || document.title;
     if (/^demo popup$/i.test(src)) {
@@ -57,6 +58,7 @@
     const page = src.split(/\s+[—-]\s+/)[0].replace(/\s+page$/i, "").trim();
     if (/^contact$/i.test(page)) return { page: "Contact", type: "Contact Enquiry" };
     if (/^homepage$/i.test(page)) return { page: "Homepage", type: "Website Enquiry" };
+    if (/price enquiry/i.test(src)) return { page: page, type: "Price Enquiry" };
     return { page: page, type: "Demo Request" };
   }
 

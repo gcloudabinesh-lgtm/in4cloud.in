@@ -298,11 +298,11 @@ img { display: block; max-width: 100%; height: auto; }
 .vl-form h2 { margin-bottom: 14px; font-size: clamp(1.2rem, 0.5vw + 1.05rem, 1.4rem); }
 .vl-form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px 12px; margin-bottom: 12px; }
 .vl-span-2 { grid-column: 1 / -1; }
-.vl-form .form-field { display: flex; flex-direction: column; gap: 5px; }
-.vl-form label { font-size: 13.5px; font-weight: 600; }
-.vl-form .req { color: var(--vm); }
-.vl-form .optional { font-weight: 500; color: var(--muted); }
-.vl-form .form-input {
+.vl-form .form-field, .vl-price-form .form-field { display: flex; flex-direction: column; gap: 5px; }
+.vl-form label, .vl-price-form label { font-size: 13.5px; font-weight: 600; }
+.vl-form .req, .vl-price-form .req { color: var(--vm); }
+.vl-form .optional, .vl-price-form .optional { font-weight: 500; color: var(--muted); }
+.vl-form .form-input, .vl-price-form .form-input {
   width: 100%;
   padding: 9px 13px;
   border: 1.5px solid var(--line);
@@ -312,16 +312,16 @@ img { display: block; max-width: 100%; height: auto; }
   font: 500 15px/1.4 "Inter", sans-serif;
   transition: border-color 0.2s, box-shadow 0.2s, background-color 0.2s;
 }
-.vl-form .form-input::placeholder { color: var(--muted); opacity: 0.7; }
-.vl-form .form-input:focus { outline: none; border-color: var(--vm); background: #ffffff; box-shadow: 0 0 0 4px rgba(236, 72, 153, 0.15); }
-.vl-form .form-input.has-error { border-color: #e5484d; box-shadow: 0 0 0 4px rgba(229, 72, 77, 0.12); }
+.vl-form .form-input::placeholder, .vl-price-form .form-input::placeholder { color: var(--muted); opacity: 0.7; }
+.vl-form .form-input:focus, .vl-price-form .form-input:focus { outline: none; border-color: var(--vm); background: #ffffff; box-shadow: 0 0 0 4px rgba(236, 72, 153, 0.15); }
+.vl-form .form-input.has-error, .vl-price-form .form-input.has-error { border-color: #e5484d; box-shadow: 0 0 0 4px rgba(229, 72, 77, 0.12); }
 .vl-form textarea.form-input { resize: vertical; min-height: 48px; }
-.vl-form .form-error { min-height: 14px; font-size: 12px; font-weight: 600; color: #e5484d; }
-.vl-form .form-status { display: none; gap: 10px; margin-top: 14px; padding: 13px 15px; border-radius: 12px; font-size: 14.5px; align-items: flex-start; }
-.vl-form .form-status.success { display: flex; background: var(--ok-soft); color: var(--ok); }
-.vl-form .form-status.error { display: flex; background: #fff1f1; color: #c62f35; }
-.vl-form .form-status.loading { display: flex; background: var(--vm-soft); color: var(--vm-deep); }
-.vl-form .form-status .spinner { width: 16px; height: 16px; flex: none; border: 2px solid var(--vm-light); border-top-color: var(--vm); border-radius: 50%; animation: vlSpin 0.8s linear infinite; }
+.vl-form .form-error, .vl-price-form .form-error { min-height: 14px; font-size: 12px; font-weight: 600; color: #e5484d; }
+.vl-form .form-status , .vl-price-form .form-status { display: none; gap: 10px; margin-top: 14px; padding: 13px 15px; border-radius: 12px; font-size: 14.5px; align-items: flex-start; }
+.vl-form .form-status.success , .vl-price-form .form-status.success { display: flex; background: var(--ok-soft); color: var(--ok); }
+.vl-form .form-status.error , .vl-price-form .form-status.error { display: flex; background: #fff1f1; color: #c62f35; }
+.vl-form .form-status.loading , .vl-price-form .form-status.loading { display: flex; background: var(--vm-soft); color: var(--vm-deep); }
+.vl-form .form-status .spinner , .vl-price-form .form-status .spinner { width: 16px; height: 16px; flex: none; border: 2px solid var(--vm-light); border-top-color: var(--vm); border-radius: 50%; animation: vlSpin 0.8s linear infinite; }
 @keyframes vlSpin { to { transform: rotate(360deg); } }
 .vl-form-note { margin-top: 10px; font-size: 12.5px; color: var(--muted); text-align: center; }
 .vl-form-note i { margin-right: 5px; color: var(--vm); }
@@ -763,4 +763,20 @@ img { display: block; max-width: 100%; height: auto; }
 }
 @media (max-width: 960px) {
   .vl-hero { background: linear-gradient(180deg, rgba(20, 10, 28, 0.8), rgba(20, 10, 28, 0.9)), url("../assets/hero-bg/visitor.webp") 35% bottom / cover no-repeat, var(--hero); }
+}
+
+/* ---- Pricing: small price-enquiry form in place of the price card ---- */
+.vl-price-form { text-align: left; padding: 26px; }
+.vl-price-form h3 { font: 800 20px/1.25 "Plus Jakarta Sans", sans-serif; color: var(--ink, #1b1830); }
+.vl-price-form .vl-pf-sub { margin: 4px 0 16px; font-size: 14px; color: var(--muted); }
+.vl-pf-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 16px; }
+.vl-pf-grid .vl-span-2 { grid-column: 1 / -1; }
+.vl-price-form .form-field label { font-size: 12.5px; }
+.vl-price-form .form-input { padding-block: 10px; font-size: 14px; }
+.vl-price-form select.form-input { appearance: auto; }
+.vl-price-form .vl-pf-note { margin-top: 12px; font-size: 12px; color: var(--muted); }
+.vl-price-form .vl-pf-note i { color: var(--vm-deep); }
+@media (max-width: 480px) {
+  .vl-pf-grid { grid-template-columns: 1fr; }
+  .vl-price-form { padding: 20px; }
 }

@@ -444,20 +444,49 @@
     <!-- ============ PRICING: ticket + the gate, animated ============ -->
     <section class="pl-section pl-section--tint" id="pricing" aria-labelledby="pl-price-title">
       <div class="pl-wrap pl-book">
-        <div class="pl-ticket">
-          <div class="pl-ticket-top"><span>IN4 Parking · Pricing</span><b>P</b></div>
-          <h2 id="pl-price-title">One fee per location</h2>
-          <p class="pl-price">₹1,499<small>per location / month · starting price</small></p>
-          <ul>
-            <li><i class="fa-solid fa-check" aria-hidden="true"></i>ANPR entry &amp; exit</li>
-            <li><i class="fa-solid fa-check" aria-hidden="true"></i>Barrier automation</li>
-            <li><i class="fa-solid fa-check" aria-hidden="true"></i>Automatic fee calculation</li>
-            <li><i class="fa-solid fa-check" aria-hidden="true"></i>Live dashboard &amp; reports</li>
-          </ul>
-          <div class="pl-ticket-cut" aria-hidden="true"></div>
-          <div class="pl-barcode" aria-hidden="true"></div>
-          <p class="pl-ticket-note">Indicative, subject to commercial confirmation. Exclusive of GST. Cameras, barriers and kiosks are quoted for your layout. <a href="pricing.html">All pricing</a></p>
-        </div>
+        <form class="pl-form pl-price-form lead-form" data-lead-form novalidate aria-labelledby="pl-price-title">
+          <span class="pl-pf-tag"><i class="fa-solid fa-square-parking" aria-hidden="true"></i>IN4 Parking · Pricing</span>
+          <h2 id="pl-price-title">Get your parking price</h2>
+          <p>Tell us about your site and gates for a quote.</p>
+          <label class="hp-field" for="pl-pf-hp" aria-hidden="true">Website</label>
+          <input class="hp-field" id="pl-pf-hp" name="website" data-hp tabindex="-1" autocomplete="off" aria-hidden="true">
+          <input type="hidden" name="pageSource" value="Parking Management landing — Price Enquiry">
+          <input type="hidden" name="product" value="Parking Management">
+          <div class="pl-form-grid">
+            <div class="form-field">
+              <label for="pl-pf-name">Full name <span class="req">*</span></label>
+              <input class="form-input" id="pl-pf-name" name="fullName" type="text" autocomplete="name" placeholder="Your name" required>
+              <span class="form-error" data-error-for="fullName" role="alert"></span>
+            </div>
+            <div class="form-field">
+              <label for="pl-pf-company">Company <span class="req">*</span></label>
+              <input class="form-input" id="pl-pf-company" name="company" type="text" autocomplete="organization" placeholder="Company name" required>
+              <span class="form-error" data-error-for="company" role="alert"></span>
+            </div>
+            <div class="form-field">
+              <label for="pl-pf-phone">Phone <span class="req">*</span></label>
+              <input class="form-input" id="pl-pf-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+91" required>
+              <span class="form-error" data-error-for="phone" role="alert"></span>
+            </div>
+            <div class="form-field">
+              <label for="pl-pf-email">Work email <span class="req">*</span></label>
+              <input class="form-input" id="pl-pf-email" name="email" type="email" autocomplete="email" placeholder="you@company.com" required>
+              <span class="form-error" data-error-for="email" role="alert"></span>
+            </div>
+            <div class="form-field pl-span-2">
+              <label for="pl-pf-sites">Locations and gates</label>
+              <select class="form-input" id="pl-pf-sites" name="message">
+                <option value="Price enquiry: 1 location, 1–2 gates">1 location · 1–2 gates</option>
+                <option value="Price enquiry: 1 location, 3+ gates">1 location · 3+ gates</option>
+                <option value="Price enquiry: 2–5 locations">2–5 locations</option>
+                <option value="Price enquiry: more than 5 locations">More than 5 locations</option>
+              </select>
+            </div>
+          </div>
+          <button type="submit" class="pl-btn pl-btn--primary pl-btn--block" data-submit>Get my quote <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
+          <div class="form-status" data-lead-status aria-live="polite"></div>
+          <p class="pl-form-note"><i class="fa-solid fa-lock" aria-hidden="true"></i>Your details are only used to respond to your enquiry.</p>
+        </form>
 
         <!-- illustrative gate scene; plate, bay and figures are sample data -->
         <div class="pl-scene pl-scene--book" aria-hidden="true">
@@ -582,7 +611,7 @@
   </button>
 
   <script defer src="js/site.js?v=20261030f"></script>
-  <script defer src="js/lead.js?v=20261030d"></script>
+  <script defer src="js/lead.js?v=20261118"></script>
   <script defer src="js/pk-landing.js"></script>
 </body>
 </html>

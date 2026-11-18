@@ -4,6 +4,10 @@
 (function () {
   "use strict";
 
+  /* Resources menu is hidden for now; set to true to show it again in the
+     desktop menu, the mobile menu and the footer. The page itself is kept. */
+  const SHOW_RESOURCES = false;
+
   const S = window.IN4Site;
   const currentFile = (window.location.pathname.split("/").pop() || "index.html").toLowerCase();
 
@@ -78,7 +82,7 @@
     '<div class="mega-foot"><p>Modular cloud platform. One technology partner.</p>' +
     '<a class="text-link" href="contact.html#lead">Request a demo<i class="ico fa-solid fa-arrow-right" aria-hidden="true"></i></a></div>' +
     "</div></li>" +
-    navLink("resources.html", "Resources", "resources") +
+    (SHOW_RESOURCES ? navLink("resources.html", "Resources", "resources") : "") +
     navLink("pricing.html", "Pricing", "pricing") +
     navLink("about.html", "About Us", "company") +
     navLink("contact.html", "Contact", "contact") +
@@ -115,8 +119,8 @@
     '<a href="parking-management.html"><i class="ico fa-solid fa-square-parking" aria-hidden="true"></i> Parking Management</a>' +
     '<a href="ai-video-analytics.html"><i class="ico fa-solid fa-video" aria-hidden="true"></i> AI-Based Video Analytics</a>' +
     "</div></div></div>" +
-    '<a class="mobile-nav-link"' + mlActive("resources.html", "resources") + ' href="resources.html">' +
-    '<i class="ico fa-solid fa-book-open" aria-hidden="true"></i> Resources</a>' +
+    (SHOW_RESOURCES ? '<a class="mobile-nav-link"' + mlActive("resources.html", "resources") + ' href="resources.html">' +
+    '<i class="ico fa-solid fa-book-open" aria-hidden="true"></i> Resources</a>' : "") +
     '<a class="mobile-nav-link"' + mlActive("pricing.html", "pricing") + ' href="pricing.html">' +
     '<i class="ico fa-solid fa-tag" aria-hidden="true"></i> Pricing</a>' +
     '<a class="mobile-nav-link"' + mlActive("about.html", "company") + ' href="about.html">' +
@@ -161,7 +165,7 @@
     "</ul></div>" +
     '<div class="footer-col"><h4 class="foot-trigger" role="button" tabindex="0" aria-expanded="false">Company<i class="ico fa-solid fa-chevron-down foot-caret" aria-hidden="true"></i></h4><ul>' +
     '<li><a href="about.html">About</a></li>' +
-    '<li><a href="resources.html">Resources</a></li>' +
+    (SHOW_RESOURCES ? '<li><a href="resources.html">Resources</a></li>' : "") +
     '<li><a href="pricing.html">Pricing</a></li>' +
     '<li><a href="contact.html">Contact</a></li>' +
     "</ul></div>" +
