@@ -16,6 +16,33 @@
   var screens = [].slice.call(demo.querySelectorAll('.ess-screen'));
   var tap = demo.querySelector('.ess-tap');
   var steps = [].slice.call(document.querySelectorAll('.ess-step'));
+  /* desktop portal beside the phone (optional) */
+  var desk = demo.querySelector('.ess-desk');
+  var deskNav = desk ? [].slice.call(desk.querySelectorAll('.ess-web-nav')) : [];
+  var deskCard = desk && desk.querySelector('[data-ess-web-card]');
+  var deskTitle = desk && desk.querySelector('[data-ess-web-title]');
+  var cursor = desk && desk.querySelector('.ess-cursor');
+
+  /* mirror the active phone screen on the desktop and point the cursor at it */
+  function showDesk(i) {
+    if (!desk) return;
+    deskNav.forEach(function (n, k) { n.classList.toggle('is-on', k === i); });
+    if (deskTitle && steps[i]) deskTitle.textContent = steps[i].querySelector('h3').textContent;
+    if (deskCard) {
+      deskCard.classList.remove('is-done');
+      deskCard.innerHTML = screens[i].innerHTML;
+    }
+    var nav = deskNav[i];
+    if (cursor && nav) {
+      var d = desk.getBoundingClientRect(), r = nav.getBoundingClientRect();
+      cursor.style.left = ((r.left - d.left + r.width * 0.55) / d.width * 100) + '%';
+      cursor.style.top = ((r.top - d.top + r.height * 0.6) / d.height * 100) + '%';
+      cursor.classList.remove('is-click');
+      void cursor.offsetWidth;
+      cursor.classList.add('is-click');
+    }
+  }
+  function deskDone() { if (deskCard) deskCard.classList.add('is-done'); }
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   /* the control the finger taps on each HTML screen */
@@ -64,10 +91,12 @@
     });
 
     if (tap) tap.classList.remove('is-tapping');
+    showDesk(index);
 
     var target = targets[index] && screens[index].querySelector(targets[index]);
     if (reduce || !target) {
       screens[index].classList.add('is-done');
+      deskDone();
     } else {
       timers.push(setTimeout(function () {
         placeTap(target);
@@ -76,6 +105,7 @@
         tap.classList.add('is-tapping');
         timers.push(setTimeout(function () {
           screens[index].classList.add('is-done');
+          deskDone();
         }, 320));
       }, TAP_AT));
     }
@@ -100,6 +130,8 @@
       }
     });
   });
+
+  deskNav.forEach(function (n, k) { n.addEventListener('click', function () { show(k); }); });
 
   /* swipe the phone left / right */
   var x0 = null;
