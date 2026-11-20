@@ -26,16 +26,16 @@
     "contact.html": "contact",
     "resources.html": "resources",
     "pricing.html": "pricing"
-  }[currentFile] || "home";
+  }[currentFile] || "";
 
   function active(href, key) {
-    const isActive = (href && currentFile === href) || pageKey === key;
+    const isActive = (href && currentFile === href) || (key && pageKey === key);
     return isActive ? ' class="nav-link active" aria-current="page"' : ' class="nav-link"';
   }
 
   function mlActive(href, key) {
-    const isActive = (href && currentFile === href) || pageKey === key;
-    return isActive ? ' class="mobile-nav-link active"' : ' class="mobile-nav-link"';
+    const isActive = (href && currentFile === href) || (key && pageKey === key);
+    return isActive ? " active" : "";
   }
 
   /* Product logo per page (assets/logo/web): HR pages show In4 CloudHR,
@@ -81,6 +81,7 @@
     '<a class="logo" href="index.html" aria-label="IN4 Solutions â€” Home">' + logoMark + "</a>" +
     '<nav class="nav" aria-label="Primary">' +
     '<ul class="nav-list">' +
+    navLink("index.html", "Home", "home") +
     '<li class="has-mega">' +
     '<button class="nav-link nav-trigger" type="button" aria-haspopup="true" aria-expanded="false">' +
     'Products<i class="ico fa-solid fa-chevron-down" aria-hidden="true"></i></button>' +
@@ -125,6 +126,8 @@
     '<i class="ico fa-solid fa-xmark" aria-hidden="true"></i></button>' +
     "</div>" +
     '<div class="mobile-menu-body">' +
+    '<a class="mobile-nav-link' + mlActive("index.html", "home") + '" href="index.html">' +
+    '<i class="ico fa-solid fa-house" aria-hidden="true"></i> Home</a>' +
     '<button class="mobile-nav-link acc-trigger" type="button" aria-expanded="false" aria-controls="m-acc-product">' +
     'Products<i class="ico ico-chev fa-solid fa-chevron-down" aria-hidden="true"></i></button>' +
     '<div class="mobile-sub" id="m-acc-product"><div class="mobile-sub-inner"><div class="mobile-sub-links">' +
@@ -143,13 +146,13 @@
     '<a href="parking-management.html"><i class="ico fa-solid fa-square-parking" aria-hidden="true"></i> Parking Management</a>' +
     '<a href="ai-video-analytics.html"><i class="ico fa-solid fa-video" aria-hidden="true"></i> AI-Based Video Analytics</a>' +
     "</div></div></div>" +
-    (SHOW_RESOURCES ? '<a class="mobile-nav-link"' + mlActive("resources.html", "resources") + ' href="resources.html">' +
+    (SHOW_RESOURCES ? '<a class="mobile-nav-link' + mlActive("resources.html", "resources") + '" href="resources.html">' +
     '<i class="ico fa-solid fa-book-open" aria-hidden="true"></i> Resources</a>' : "") +
-    '<a class="mobile-nav-link"' + mlActive("pricing.html", "pricing") + ' href="pricing.html">' +
+    '<a class="mobile-nav-link' + mlActive("pricing.html", "pricing") + '" href="pricing.html">' +
     '<i class="ico fa-solid fa-tag" aria-hidden="true"></i> Pricing</a>' +
-    '<a class="mobile-nav-link"' + mlActive("about.html", "company") + ' href="about.html">' +
+    '<a class="mobile-nav-link' + mlActive("about.html", "company") + '" href="about.html">' +
     '<i class="ico fa-solid fa-building" aria-hidden="true"></i> About Us</a>' +
-    '<a class="mobile-nav-link"' + mlActive("contact.html", "contact") + ' href="contact.html">' +
+    '<a class="mobile-nav-link' + mlActive("contact.html", "contact") + '" href="contact.html">' +
     '<i class="ico fa-solid fa-envelope" aria-hidden="true"></i> Contact</a>' +
     "</div>" +
     '<div class="mobile-menu-cta">' +
