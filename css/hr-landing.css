@@ -570,3 +570,7 @@ p { margin: 0; }
 @media (max-width: 960px) {
   .hl-hero { background: linear-gradient(180deg, rgba(18, 11, 46, 0.8), rgba(18, 11, 46, 0.9)), url("../assets/hero-bg/hrms.webp") center / cover no-repeat, var(--night); }
 }
+/* product logo, sized by height so every product logo matches */
+.hl-logo img { width: auto; height: 44px; }
+.hl-footer-brand img { width: auto; height: 52px; }
+@media (max-width: 640px) { .hl-logo img { height: 36px; } }

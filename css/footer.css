@@ -228,3 +228,4 @@
 @media (max-width: 560px) {
   .footer-top { grid-template-columns: 1fr; }
 }
+.footer-brand .logo-mark { height: 64px; }

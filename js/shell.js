@@ -38,8 +38,32 @@
     return isActive ? ' class="mobile-nav-link active"' : ' class="mobile-nav-link"';
   }
 
-  const logoMark =
-    '<img class="logo-mark" src="assets/logo-trim-600.png" alt="IN4 Solutions" width="600" height="134">';
+  /* Product logo per page (assets/logo/web): HR pages show In4 CloudHR,
+     parking In4 CloudParking, visitor In4 CloudVisit, AI pages In4 CloudAI,
+     canteen In4 CloudCafe; every other page, and the footer, show In4 Cloud. */
+  const LOGOS = {
+    cloud:   ["in4cloud.png", "In4 Cloud", 455],
+    hr:      ["in4cloud-hr.png", "In4 CloudHR", 607],
+    parking: ["in4cloud-parking.png", "In4 CloudParking", 840],
+    visit:   ["in4cloud-visit.png", "In4 CloudVisit", 690],
+    ai:      ["in4cloud-ai.png", "In4 CloudAI", 560],
+    cafe:    ["in4cloud-cafe.png", "In4 CloudCafe", 683]
+  };
+  const pageFile = decodeURIComponent(currentFile);
+  const pageLogo = {
+    "hrms.html": "hr", "attendance-management.html": "hr", "leave-management.html": "hr",
+    "performance-management.html": "hr", "geo-fencing.html": "hr", "cloudhr.html": "hr",
+    "parking-management.html": "parking",
+    "visitor-management.html": "visit",
+    "ai-video-analytics.html": "ai", "ai-analytics.html": "ai", "ai camera attendance.html": "ai",
+    "canteen-management.html": "cafe"
+  }[pageFile] || "cloud";
+  function logoImg(key) {
+    const l = LOGOS[key];
+    return '<img class="logo-mark" src="assets/logo/web/' + l[0] + '" alt="' + l[1] + '" width="' + l[2] + '" height="150">';
+  }
+  const logoMark = logoImg(pageLogo);
+  const footerLogo = logoImg("cloud");
 
   function navLink(href, label, key) {
     return (
@@ -138,7 +162,7 @@
     '<footer class="site-footer">' +
     '<div class="container footer-top">' +
     '<div class="footer-brand">' +
-    '<a class="logo" href="index.html">' + logoMark + "</a>" +
+    '<a class="logo" href="index.html">' + footerLogo + "</a>" +
     "<p>Modern HR &amp; Workplace Platform for Growing Enterprises.</p>" +
     '<p style="margin-top:10px;font-size:13px">A business automation division of ' + S.company + ".</p>" +
     '<div class="footer-social">' +

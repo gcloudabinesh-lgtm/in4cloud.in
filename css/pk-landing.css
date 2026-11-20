@@ -1,5 +1,5 @@
 /* ==========================================================================
-   IN4 Parking — Parking Management landing page (parking-landing.html)
+   In4 CloudParking — Parking Management landing page (parking-landing.html)
    A standalone page with its own layout: a road / parking-lot theme.
    Colours follow the Parking module (cyan #22C7D6, deep #0E7490,
    light #A5F3FC — the same code as its Platform Modules tab) with the IN4
@@ -1060,3 +1060,6 @@ p { margin: 0; }
   .pl-book:has(.pl-price-form) { align-items: start; }
   .pl-book .pl-price-form { align-self: start; }
 }
+.pl-logo img { width: auto; height: 46px; }
+.pl-footer-brand img { width: auto; height: 52px; }
+@media (max-width: 640px) { .pl-logo img { height: 38px; } }

@@ -12,7 +12,30 @@
 
   const S = window.IN4Site;
 
-  const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  // local part @ domain . TLD (2+ letters); no spaces, no ".." anywhere
+  const EMAIL_RE = /^[A-Za-z0-9._%+'-]+@[A-Za-z0-9-]+(\.[A-Za-z0-9-]+)*\.[A-Za-z]{2,}$/;
+  // letters in any language, spaces and . ' - (e.g. "R. D'Souza-Iyer")
+  const NAME_RE = /^[\p{L}\p{M}][\p{L}\p{M} .'’-]*$/u;
+  const PHONE_CHARS_RE = /^\+?[0-9\s().-]+$/;
+  const LIMITS = { fullName: 80, company: 120, phone: 20, email: 254, message: 1000 };
+
+  // Readable page name for the lead email, from the page's file name, so
+  // forms and the demo popup report the same page wherever they appear.
+  const PAGE_NAMES = {
+    "index.html": "Home", "": "Home",
+    "about.html": "About", "contact.html": "Contact", "pricing.html": "Pricing", "resources.html": "Resources",
+    "hrms.html": "HRMS", "hrms-landing.html": "HRMS Landing", "cloudhr.html": "CloudHR",
+    "attendance-management.html": "Attendance Management", "leave-management.html": "Leave Management",
+    "performance-management.html": "Performance Management", "geo-fencing.html": "Geo-fencing",
+    "ai camera attendance.html": "AI Camera Attendance", "ai-analytics.html": "AI Analytics",
+    "ai-video-analytics.html": "AI Video Analytics", "canteen-management.html": "Canteen Management",
+    "parking-management.html": "Parking Management", "parking-landing.html": "Parking Landing",
+    "visitor-management.html": "Visitor Management", "visitor-landing.html": "Visitor Landing"
+  };
+  function pageName() {
+    const file = decodeURIComponent(window.location.pathname.split("/").pop() || "").toLowerCase();
+    return PAGE_NAMES[file] || document.title.split(/\s+[—|-]\s+|\s*\|\s*/)[0].trim() || "Website";
+  }
 
   function str(v) {
     return (v || "").replace(/\s+/g, " ").trim();
@@ -26,19 +49,43 @@
 
   function validate(values) {
     const errors = {};
-    if (!values.fullName || values.fullName.length < 2) {
+    const name = values.fullName || "";
+    if (name.length < 2) {
       errors.fullName = "Please enter your full name (at least 2 characters).";
+    } else if (name.length > LIMITS.fullName) {
+      errors.fullName = "Please keep your name under " + LIMITS.fullName + " characters.";
+    } else if (!NAME_RE.test(name) || (name.match(/\p{L}/gu) || []).length < 2) {
+      errors.fullName = "Please use letters only in your name (spaces, . ' - allowed).";
     }
-    if (!values.company) {
+
+    const company = values.company || "";
+    if (!company) {
       errors.company = "Please enter your company name.";
+    } else if (company.length < 2) {
+      errors.company = "Please enter your full company name.";
+    } else if (company.length > LIMITS.company) {
+      errors.company = "Please keep the company name under " + LIMITS.company + " characters.";
+    } else if (!/[\p{L}0-9]/u.test(company)) {
+      errors.company = "Please enter a valid company name.";
     }
-    if (!values.phone) {
+
+    const phone = values.phone || "";
+    const digits = phone.replace(/\D/g, "");
+    if (!phone) {
       errors.phone = "Please enter a phone number.";
-    } else if ((values.phone.replace(/\D/g, "") || "").length < 7) {
-      errors.phone = "Please enter a valid phone number (at least 7 digits).";
+    } else if (!PHONE_CHARS_RE.test(phone)) {
+      errors.phone = "Please use digits only (spaces, + ( ) - allowed).";
+    } else if (digits.length < 7 || digits.length > 15) {
+      errors.phone = "Please enter a valid phone number (7 to 15 digits).";
     }
-    if (!values.email || !EMAIL_RE.test(values.email)) {
+
+    const email = values.email || "";
+    if (!email || email.length > LIMITS.email || !EMAIL_RE.test(email) || email.indexOf("..") !== -1) {
       errors.email = "Please enter a valid work email address.";
+    }
+
+    if ((values.message || "").length > LIMITS.message) {
+      errors.message = "Please keep your message under " + LIMITS.message + " characters.";
     }
     if (values.productRequired && !values.product) {
       errors.product = "Please select an interested module.";
@@ -49,17 +96,19 @@
   // Page name and enquiry type from the form's pageSource, which reads like
   // "HRMS — Book a Free Demo", "Contact page — Book a Demo", "… — Price Enquiry"
   // or "Demo popup".
+  // The page always comes from the page's file (pageName), so the lead email
+  // names the page the visitor was on, popup included. The form label is the
+  // part after " — " in pageSource (e.g. "Price Enquiry", "Book a Demo").
   function formInfo(pageSource) {
     const src = pageSource || document.title;
-    if (/^demo popup$/i.test(src)) {
-      const title = document.title.split(/\s+[—|-]\s+/)[0];
-      return { page: title, type: "Demo Request" };
-    }
-    const page = src.split(/\s+[—-]\s+/)[0].replace(/\s+page$/i, "").trim();
-    if (/^contact$/i.test(page)) return { page: "Contact", type: "Contact Enquiry" };
-    if (/^homepage$/i.test(page)) return { page: "Homepage", type: "Website Enquiry" };
-    if (/price enquiry/i.test(src)) return { page: page, type: "Price Enquiry" };
-    return { page: page, type: "Demo Request" };
+    const page = pageName();
+    const popup = /^demo popup$/i.test(src);
+    const form = popup ? "Book a Demo popup" : (src.split(/\s+[—-]\s+/)[1] || "Enquiry form").trim();
+    let type = "Demo Request";
+    if (/price enquiry/i.test(src)) type = "Price Enquiry";
+    else if (!popup && page === "Contact") type = "Contact Enquiry";
+    else if (!popup && page === "Home") type = "Website Enquiry";
+    return { page: page, form: form, type: type };
   }
 
   function submittedOn() {
@@ -71,12 +120,14 @@
   const FAIL_MESSAGE = "We could not submit your enquiry right now. Please try again in a moment.";
 
   // Builds the enquiry email: readable field labels (the mail services print
-  // them as row titles) plus the subject, e.g.
-  // "New Demo Request: HRMS | Meera Iyer, Acme Corp".
+  // them as row titles) plus a subject that names the lead's page, e.g.
+  // "New Demo Request — HRMS page | Name, Company".
   function buildEnquiry(payload) {
     const info = formInfo(payload.pageSource);
     const topic = payload.product || info.page;
     const fields = {
+      "Lead Page": info.page + " page",
+      "Form": info.form,
       "Enquiry Type": info.type,
       "Interested In": topic,
       "Name": payload.fullName,
@@ -86,14 +137,13 @@
     };
     if (payload.companySize) fields["Company Size"] = payload.companySize;
     fields["Message"] = payload.message || "(no message)";
-    fields["Submitted From"] = info.page + " page";
     fields["Page URL"] = window.location.href;
     fields["Submitted On"] = submittedOn();
     return {
       info: info,
       topic: topic,
       fields: fields,
-      subject: "New " + info.type + ": " + topic + " | " + payload.fullName + ", " + payload.company
+      subject: "New " + info.type + " — " + info.page + " page | " + payload.fullName + ", " + payload.company
     };
   }
 
@@ -260,7 +310,13 @@
       const status = form.querySelector("[data-lead-status]");
       const statusLoading = form.querySelector('[data-lead-status-loading]');
 
-      const FIELDS = ["fullName", "company", "phone", "email", "product"];
+      const FIELDS = ["fullName", "company", "phone", "email", "product", "message"];
+
+      // Length caps so nobody can type past what validation allows.
+      Object.keys(LIMITS).forEach(function (k) {
+        const inp = form.elements[k];
+        if (inp && inp.tagName !== "SELECT" && !inp.getAttribute("maxlength")) inp.setAttribute("maxlength", LIMITS[k]);
+      });
       let submitted = false;
 
       function errBoxFor(inp) {
@@ -392,7 +448,8 @@
             phone: str(form.elements.phone.value),
             email: str(form.elements.email.value),
             product: str(form.elements.product ? form.elements.product.value : ""),
-            productRequired: !!(form.elements.product && form.elements.product.required)
+            productRequired: !!(form.elements.product && form.elements.product.required),
+            message: str(form.elements.message ? form.elements.message.value : "")
           });
           if (single[k]) {
             setFieldError(inp, single[k]);
@@ -409,7 +466,8 @@
             phone: str(form.elements.phone.value),
             email: str(form.elements.email.value),
             product: str(form.elements.product ? form.elements.product.value : ""),
-            productRequired: !!(form.elements.product && form.elements.product.required)
+            productRequired: !!(form.elements.product && form.elements.product.required),
+            message: str(form.elements.message ? form.elements.message.value : "")
           });
           if (single[k]) setFieldError(inp, single[k]);
           else clearFieldError(inp);

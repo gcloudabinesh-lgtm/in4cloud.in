@@ -549,3 +549,8 @@ a.nav-link.active::after {
   padding-top: 22px;
   border-top: 1px solid var(--border);
 }
+
+/* product logos (assets/logo/web) share one height band, which includes room
+   for descenders, so they sit a little taller than the old wordmark */
+.logo-mark { height: 46px; }
+@media (max-width: 640px) { .logo-mark { height: 38px; } }

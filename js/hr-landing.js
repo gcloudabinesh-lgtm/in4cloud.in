@@ -122,9 +122,17 @@
     var next = cycle.querySelector('[data-hl-next]');
     if (prev) prev.addEventListener('click', function () { select(index - 1, false); restart(); });
     if (next) next.addEventListener('click', function () { select(index + 1, false); restart(); });
-    cycle.addEventListener('pointerenter', function (e) { if (e.pointerType === 'mouse') { held = true; sync(); } });
-    cycle.addEventListener('pointerleave', function () { held = false; sync(); });
-    cycle.addEventListener('focusin', function () { held = true; sync(); });
+    /* pause only while the mouse is on the ring itself (not the whole section,
+       where it would rest while reading), and only for keyboard focus, so a
+       click or tap jumps to a stage and the rotation carries on from there */
+    var ring = cycle.querySelector('.hl-ring') || cycle;
+    ring.addEventListener('pointerenter', function (e) { if (e.pointerType === 'mouse') { held = true; sync(); } });
+    ring.addEventListener('pointerleave', function () { held = false; sync(); });
+    cycle.addEventListener('focusin', function (e) {
+      var kb = true;
+      try { kb = e.target.matches(':focus-visible'); } catch (err) {}
+      if (kb) { held = true; sync(); }
+    });
     cycle.addEventListener('focusout', function (e) { if (!cycle.contains(e.relatedTarget)) { held = false; sync(); } });
     document.addEventListener('visibilitychange', sync);
     if ('IntersectionObserver' in window) {

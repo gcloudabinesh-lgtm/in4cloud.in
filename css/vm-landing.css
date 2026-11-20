@@ -1,5 +1,5 @@
 /* ==========================================================================
-   IN4 Visiting — Visitor Management landing page (visitor-landing.html)
+   In4 CloudVisit — Visitor Management landing page (visitor-landing.html)
    Standalone page with its own header and footer. Only the hero is dark;
    every section after it alternates white and a light pink shade. Colours
    follow the Visitor module accent (pink #EC4899, deep #BE185D) with the
@@ -780,3 +780,6 @@ img { display: block; max-width: 100%; height: auto; }
   .vl-pf-grid { grid-template-columns: 1fr; }
   .vl-price-form { padding: 20px; }
 }
+.vl-logo img { height: 44px; }
+.vl-footer .vl-logo img { height: 54px; }
+@media (max-width: 640px) { .vl-logo img { height: 36px; } }
