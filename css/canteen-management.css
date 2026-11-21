@@ -521,3 +521,21 @@
 }
 @media (max-width: 600px) { .cm-float--split { display: none; } }
 .cm-price-note b sup { font-size: .5em; vertical-align: super; margin-left: 1px; }
+
+/* ---- In4 CloudCafe colours: site purple tokens re-hued to the CloudCafe logo amber (#f59e0b) ---- */
+body.page-canteen {
+  --purple-800: #9b6c16;
+  --purple-700: #c88b1d;
+  --purple-600: #f59e0b;
+  --purple-500: #ffbd4b;
+  --purple-400: #ffc879;
+  --purple-300: #ffdd9c;
+  --purple-200: #ffe5b8;
+  --purple-100: #fff4dc;
+  --purple-50: #fffbf2;
+  --grad-purple: linear-gradient(135deg, #f59e0b 0%, #ffbd4b 55%, #ffc879 100%);
+  --in4-purple: #f59e0b;
+  --in4-purple-dark: #c88920;
+  --in4-purple-soft: #fff9ee;
+  --shadow-purple: 0 12px 30px rgba(247, 177, 40, 0.28);
+}

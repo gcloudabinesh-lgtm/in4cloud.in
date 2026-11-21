@@ -251,12 +251,16 @@
 
   function leadService(payload) {
     const leads = S.leads || {};
+    // live key on the live domain only; the test key everywhere else
+    const host = (window.location.hostname || "").toLowerCase();
+    const isLive = (leads.liveHosts || []).indexOf(host) !== -1;
+    const web3Key = isLive ? leads.web3formsKeyLive : (leads.web3formsKeyTest || leads.web3formsKey);
     const enquiry = buildEnquiry(payload);
     let request;
 
     const ejs = leads.emailjs || {};
-    if (leads.web3formsKey) {
-      request = sendWeb3Forms(leads.web3formsKey, enquiry);
+    if (web3Key) {
+      request = sendWeb3Forms(web3Key, enquiry);
     } else if (ejs.serviceId && ejs.templateId && ejs.publicKey) {
       request = sendEmailJS(ejs, enquiry);
     } else if (leads.appsScriptUrl) {

@@ -7,7 +7,7 @@
     name: "IN4 Solutions",
     company: "In4 Solution Pvt Ltd",
     tagline: "Smart Digital Solutions for Modern Businesses",
-    url: "https://www.in4solution.com",
+    url: "https://in4cloud.in",
 
     contact: {
       phoneDisplay: "+91 89258 14088",
@@ -25,10 +25,14 @@
     },
 
     leads: {
-      // Every enquiry is emailed to gcloud.abinesh@gmail.com.
-      // web3formsKey: Web3Forms access key (web3forms.com → enter that email;
-      // the key is emailed to it). Used first whenever it is set.
-      web3formsKey: "5029946c-e60e-43ab-ad90-c0e9fb276c7e",
+      // Web3Forms keys (web3forms.com). The live key is used only on the live
+      // site (liveHosts); everywhere else (the GitHub Pages test site, local
+      // files) uses the test key, so test enquiries never reach the live inbox.
+      //   live: emails priya@in4solution.com  (live site https://in4cloud.in)
+      //   test: emails gcloud.abinesh@gmail.com
+      liveHosts: ["in4cloud.in", "www.in4cloud.in"],
+      web3formsKeyLive: "1b844a65-0b9e-4364-804a-60304e57b19b",
+      web3formsKeyTest: "5029946c-e60e-43ab-ad90-c0e9fb276c7e",
       // emailjs: used next when all three values are set (emailjs.com →
       // Email Services = serviceId, Email Templates = templateId,
       // Account → General = publicKey). Template: tools/emailjs-template.txt.

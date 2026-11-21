@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.in4solution.com/sitemap.xml
+Sitemap: https://in4cloud.in/sitemap.xml
